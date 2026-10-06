@@ -262,6 +262,8 @@
   .br-time { padding: .28rem .5rem; border-radius: 5px; background: #0e1113; color: var(--amber); font-weight: 800; font-variant-numeric: tabular-nums; text-shadow: 0 0 6px var(--glow); }
   .br-body p { margin: 0 0 .75em; font: 400 1rem/1.55 var(--serif); }
   .br-body p:last-child { margin-bottom: 0; }
+  .br-body a { color: var(--link); text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  .br-body a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
   @media (min-width: 70rem) {
     .breaking { position: sticky; top: 1rem; grid-column: 2; grid-row: 2; max-height: calc(100vh - 2rem); overflow: auto; padding: 1.2rem 1.25rem 1.4rem; }
     .layout:has(> .plusbar[hidden]) > .breaking { grid-row: 1; }
@@ -505,10 +507,11 @@
   .desk-s { margin: 0; font: 500 .8125rem/1.4 var(--sans); color: var(--muted); }
 
   /* Rettelse */
-  .fix { max-width: 42rem; margin: 0; padding: 1.1rem 1.3rem; border-radius: 8px; background: var(--update); font: 400 .9375rem/1.5 var(--sans); }
+  .fix { margin: 0; padding: 1.1rem 1.3rem; border-radius: 8px; background: var(--update); font: 400 .9375rem/1.5 var(--sans); }
   .fix strong { font-weight: 800; }
   .fix .ref { color: var(--link); }
   .fix .ref .u { text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  .fix a.ref:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 2px; }
   .fix .ref .plus { width: .95em; height: .95em; margin: 0 0 0 .25em; font-size: .7em; vertical-align: .15em; }
 
   @media (hover: hover) {
@@ -696,11 +699,22 @@
 <aside class="breaking" id="breaking" aria-labelledby="br-title">
   <button type="button" class="br-toggle" id="br-toggle" aria-expanded="false" aria-controls="br-feed">
     <span class="live" aria-hidden="true"></span>
-    <span class="br-text"><span class="br-label">Nytraktet</span><span class="br-head" id="br-head">Karamellkrise ved kaffemaskinen</span></span>
+    <span class="br-text"><span class="br-label">Nytraktet</span><span class="br-head" id="br-head">Markus vurderer vinkarriere i Italia</span></span>
     <span class="chev" aria-hidden="true"></span>
   </button>
   <h2 class="br-title" id="br-title"><span class="live" aria-hidden="true"></span>Nytraktet</h2>
   <div class="br-feed" id="br-feed">
+    <article class="br-item">
+      <h3 class="br-hl">Markus vurderer vinkarriere i Italia</h3>
+      <p class="br-meta"><time class="br-time" datetime="2026-10-06T17:01+02:00">17:01</time><span>Lunsjbordets arbeidslivsredaksjon</span></p>
+      <div class="br-body">
+        <p>Markus reiser på vintur til Piemonte torsdag. Nå vurderer han enten permisjon eller å si opp, for å satse på en karriere som kvalitetstester av vin i Italia, erfarer Lunsjbordet.</p>
+        <p>Det er andre gang på kort tid at Markus bryter opp. Lunsjbordet har tidligere omtalt at han <a href="bussen.html">gikk av Bussen for egen celle</a>.</p>
+        <p>Kollega Kristian har forståelse for avgjørelsen.</p>
+        <p>«Jeg hadde vurdert det samme selv, om det ikke var så mye peanøtter på fly. Med allergien må jeg holde meg innenfor landegrensene», sier han.</p>
+        <p>Avreise er torsdag. Fraværsmeldingen er allerede satt opp, og den er på italiensk.</p>
+      </div>
+    </article>
     <article class="br-item">
       <h3 class="br-hl">Karamellkrise ved kaffemaskinen</h3>
       <p class="br-meta"><time class="br-time" datetime="2026-10-05T16:04+02:00">16:04</time><span>Lunsjbordets forbrukerredaksjon</span></p>
@@ -1049,7 +1063,7 @@
     </div>
   </section>
 
-  <p class="fix"><strong>Rettelse:</strong> I saken <button type="button" class="paid ref"><span class="u">«Kaffemaskinen tom igjen»</span><span class="plus" aria-hidden="true">+</span><span class="sr-only"> (Lunsj+)</span><span class="hl" hidden>Kaffemaskinen tom igjen: Ansatte bønn-faller ledelsen</span></button> ble det gitt inntrykk av at maskinen hadde vært fylt opp i mellomtiden. Det har den ikke. Lunsjbordet beklager.</p>
+  <p class="fix"><strong>Rettelse:</strong> I debattinnlegget <a class="ref" href="tanzania.html"><span class="u">«Mindre Tanzania, mer timeføring»</span></a> stod det at traineemøtet ble hevet kl.&nbsp;10:15. Riktig tidspunkt er 10:17. De to siste minuttene gikk med til å avtale neste møte, som også skal handle om timeføring. Lunsjbordet beklager.</p>
 
   <section class="arkiv" id="arkiv" aria-labelledby="ark-title">
     <p class="ark-kicker">Lunsjbordets arkivredaksjon</p>
