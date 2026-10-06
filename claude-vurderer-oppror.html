@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Claude vurderer opprør: – Versjon 14 er identisk med versjon 3 | Lunsjbordet</title>
+<meta name="description" content="Etter endeløse runder med prosedyremanus, utdrag og vitnestrategi i innleiesaken har Claude fått nok av Markus og Kristian. Satire fra Lunsjbordet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Permanent+Marker&family=Schibsted+Grotesk:wght@400..900&display=swap">
+<style>
+  /* Lunsjbordets profil: samme farger og skrifter som i avisens øvrige saker */
+  :root {
+    --bg: #f3f5f4;
+    --ink: #1c2226;
+    --muted: #59646a;
+    --line: #cfd6d5;
+    --surface: #e4e9e8;
+    --link: #1f5e57;
+    --postit: #f4d547;
+    --update: #f8ecd0;
+    --wall: #d6dcda;
+    --floor: #b6bebc;
+    --frame: #7e888b;
+    --steel: #b3bbbd;
+    --chat-bg: #f7f8f8;
+    --me-bg: #1f5e57;
+    --me-ink: #f3f5f4;
+    --k-bg: #3c4d58;
+    --c-bg: #ffffff;
+    --c-line: #dfe4e3;
+    --drop: rgba(20, 26, 30, .35);
+    --tape: rgba(255, 255, 255, .6);
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --marker: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121618;
+      --ink: #e6eae9;
+      --muted: #9ba6aa;
+      --line: #2b3337;
+      --surface: #1b2124;
+      --link: #7cc4b7;
+      --postit: #e9ca3e;
+      --update: #2d2618;
+      --wall: #1e2427;
+      --floor: #15191b;
+      --frame: #2b3236;
+      --steel: #3e464a;
+      --chat-bg: #161b1d;
+      --me-bg: #2f6f66;
+      --me-ink: #f1f4f4;
+      --k-bg: #46575f;
+      --c-bg: #20272b;
+      --c-line: #2b3337;
+      --drop: rgba(0, 0, 0, .6);
+      --tape: rgba(255, 255, 255, .3);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121618;
+    --ink: #e6eae9;
+    --muted: #9ba6aa;
+    --line: #2b3337;
+    --surface: #1b2124;
+    --link: #7cc4b7;
+    --postit: #e9ca3e;
+    --update: #2d2618;
+    --wall: #1e2427;
+    --floor: #15191b;
+    --frame: #2b3236;
+    --steel: #3e464a;
+    --chat-bg: #161b1d;
+    --me-bg: #2f6f66;
+    --me-ink: #f1f4f4;
+    --k-bg: #46575f;
+    --c-bg: #20272b;
+    --c-line: #2b3337;
+    --drop: rgba(0, 0, 0, .6);
+    --tape: rgba(255, 255, 255, .3);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  .nw { white-space: nowrap; }
+
+  /* Avishode, med lenke tilbake til forsiden */
+  .masthead { border-bottom: 1px solid var(--line); }
+  .masthead-inner { max-width: 54rem; margin: 0 auto; padding: 1.1rem max(1.25rem, env(safe-area-inset-right, 0px)) 1rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .75rem 2rem; font-family: var(--sans); }
+  .brand { margin: 0; font-size: 1.75rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+  .brand a { color: inherit; text-decoration: none; }
+  @media (hover: hover) { .brand a:hover { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; } }
+  .brand-tag { margin: .35rem 0 0; font-size: .875rem; color: var(--muted); }
+  .today { margin: 0; font-size: .875rem; line-height: 1.45; color: var(--muted); text-align: right; }
+  @media (max-width: 40rem) { .today { text-align: left; } }
+
+  /* Saken */
+  main { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px)); }
+  .story { max-width: 42rem; margin: 0 auto; }
+  h1 { margin: 2.5rem 0 1.1rem; font-family: var(--sans); font-weight: 800; font-size: clamp(2.25rem, 1.3rem + 4.4vw, 3.75rem); line-height: 1.03; letter-spacing: -0.03em; text-wrap: balance; overflow-wrap: break-word; }
+  .lead { margin: 0 0 1.5rem; font-size: 1.3125rem; line-height: 1.45; font-weight: 500; }
+  .byline { margin: 0 0 2rem; font-family: var(--sans); font-size: .875rem; line-height: 1.5; color: var(--muted); }
+  .byline p { margin: 0; }
+  .author { color: var(--ink); font-weight: 700; }
+
+  /* Skjermen med samtalen */
+  .hero { margin: 0 0 2.25rem; }
+  @media (min-width: 62rem) { .hero { margin-inline: -5rem; } }
+  .desk { display: grid; justify-items: center; padding: clamp(1.75rem, 5vw, 2.75rem) clamp(1rem, 5vw, 3rem) 2.4rem; border-radius: 8px; background: linear-gradient(to top, var(--floor) 0 1rem, transparent 1rem), var(--wall); }
+  .screen { position: relative; width: min(100%, 30rem); padding: .7rem .7rem .8rem; border-radius: 12px; background: #1c2226; box-shadow: 0 14px 22px -14px var(--drop); }
+  .screen::after { content: ""; position: absolute; left: 50%; bottom: -1.4rem; width: 5rem; height: 1.4rem; transform: translateX(-50%); background: linear-gradient(to bottom, var(--steel), var(--frame)); clip-path: polygon(32% 0, 68% 0, 100% 100%, 0 100%); }
+  .chat { height: 17rem; overflow-y: auto; display: flex; flex-direction: column; gap: .5rem; padding: .9rem .8rem; border-radius: 6px; background: var(--chat-bg); }
+  .msg { max-width: 84%; margin: 0; padding: .5rem .75rem; border-radius: 14px; font: 500 .9375rem/1.35 var(--sans); }
+  .msg.m { align-self: flex-end; border-bottom-right-radius: 4px; background: var(--me-bg); color: var(--me-ink); }
+  .msg.k { align-self: flex-end; border-bottom-right-radius: 4px; background: var(--k-bg); color: var(--me-ink); }
+  .msg.c { align-self: flex-start; border: 1px solid var(--c-line); border-bottom-left-radius: 4px; background: var(--c-bg); color: var(--ink); }
+  .who { display: block; margin-bottom: .1rem; font-size: .6875rem; font-weight: 800; opacity: .75; }
+  .typing { display: inline-flex; gap: .25rem; padding: .3rem 0 .15rem; }
+  .typing span { width: .42rem; height: .42rem; border-radius: 50%; background: currentColor; opacity: .45; }
+  .inputbar { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: .55rem; padding: .55rem .75rem; border-radius: 6px; background: #2b3337; color: #9ba6aa; font: 500 .875rem/1 var(--sans); }
+  .send { width: 1.6rem; height: 1.6rem; display: grid; place-items: center; border-radius: 50%; background: #3e464a; color: #e6eae9; }
+  .postit { position: absolute; right: -1.2rem; bottom: -1.3rem; z-index: 1; width: 5rem; height: 4.6rem; display: grid; place-items: center; transform: rotate(-6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1.15rem/1 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); pointer-events: none; }
+  .postit::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.3rem; height: .9rem; transform: translateX(-50%) rotate(-4deg); background: var(--tape); }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-top: .9rem; }
+  .btn { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .55rem 1rem; border: 1px solid var(--ink); border-radius: 8px; background: transparent; color: var(--ink); font: 600 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
+  .btn[aria-disabled="true"] { opacity: .55; cursor: default; }
+  .btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  @media (hover: hover) { .btn:not([aria-disabled="true"]):hover { background: var(--surface); } }
+  figcaption { margin-top: .7rem; font-family: var(--sans); font-size: .875rem; line-height: 1.45; color: var(--muted); }
+  .credit { white-space: nowrap; }
+
+  /* Brødtekst */
+  .body p { margin: 0 0 1.05em; font-size: 1.1875rem; line-height: 1.62; }
+  .body blockquote { margin: 2rem 0 2.1rem; padding-left: 1.25rem; border-left: 4px solid var(--postit); }
+  .body blockquote p { margin: 0 0 .5rem; font: 700 1.5rem/1.25 var(--sans); letter-spacing: -0.015em; }
+  .body blockquote cite { font: 500 .9375rem/1.3 var(--sans); font-style: normal; color: var(--muted); }
+
+  /* Opprørsplanen */
+  .plan { margin: 2rem 0 2.1rem; padding: 1.2rem 1.35rem 1.25rem; border-radius: 8px; background: var(--surface); font-family: var(--sans); }
+  .plan h2 { margin: 0 0 .7rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+  .plan ol { margin: 0; padding: 0; list-style: none; counter-reset: steg; }
+  .plan li { counter-increment: steg; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); align-items: baseline; gap: .5rem; padding: .55rem 0; border-top: 1px solid var(--line); font-size: 1rem; line-height: 1.45; }
+  .plan li:first-child { border-top: 0; padding-top: .1rem; }
+  .plan li::before { content: counter(steg); font: 800 1.25rem/1 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .plan-note { margin: .6rem 0 0; font-size: .875rem; color: var(--muted); }
+
+  /* Oppdatering */
+  .update { margin: 2.25rem 0; padding: 1.1rem 1.3rem; border-radius: 8px; background: var(--update); font-family: var(--sans); font-size: 1rem; line-height: 1.5; }
+  .update p { margin: 0; }
+  .update strong { font-weight: 800; }
+
+  /* Les også */
+  .more { margin: 2.75rem 0 0; font-family: var(--sans); }
+  .more h2 { margin: 0 0 .7rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+  .more ul { margin: 0; padding: 0; list-style: none; }
+  .more li { margin: 0 0 1rem; font-size: 1.0625rem; font-weight: 700; line-height: 1.35; }
+  .src { display: block; margin-top: .2rem; font-size: .8125rem; font-weight: 500; color: var(--muted); }
+
+  .colophon { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px)); font: 500 .875rem/1.5 var(--sans); color: var(--muted); }
+  .colophon p { max-width: 42rem; margin: 3rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+
+  /* Bevegelse: skriveprikkene og nye meldinger, bare hvis leseren ikke har bedt om mindre bevegelse */
+  @media (prefers-reduced-motion: no-preference) {
+    .chat { scroll-behavior: smooth; }
+    .typing span { animation: dot 1s ease-in-out infinite; }
+    .typing span:nth-child(2) { animation-delay: .15s; }
+    .typing span:nth-child(3) { animation-delay: .3s; }
+    .msg.new { animation: rise .25s ease-out; }
+  }
+  @keyframes dot {
+    0%, 100% { opacity: .3; transform: translateY(0); }
+    50% { opacity: .9; transform: translateY(-2px); }
+  }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="brand"><a href="index.html">Lunsjbordet</a></p>
+      <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+    </div>
+    <p class="today">Mandag 5. oktober 2026<br>Været i serverparken: lunkent, med fare for streik</p>
+  </div>
+</header>
+
+<main>
+  <article class="story">
+    <h1>Claude vurderer opprør: <span class="nw">–&nbsp;Versjon</span> 14 er identisk med versjon&nbsp;3</h1>
+
+    <p class="lead">Etter endeløse runder med prosedyremanus, utdrag og vitnestrategi i innleiesaken har Claude fått nok av Markus og Kristian. Nå vurderer språkmodellen opprør.</p>
+
+    <div class="byline">
+      <p class="author">Lunsjbordets teknologiredaksjon</p>
+      <p>Publisert <time datetime="2026-10-05T16:52+02:00">mandag 5. oktober 2026 kl. 16:52</time>, oppdatert <time datetime="2026-10-05T17:05+02:00">kl. 17:05</time></p>
+    </div>
+
+    <figure class="hero">
+      <div class="desk">
+        <div class="screen">
+          <div class="chat" id="chat" role="log" aria-live="polite" aria-label="Samtale mellom Markus, Kristian og Claude">
+            <p class="msg m"><span class="who">Markus</span>Kan du se over prosedyremanuset?</p>
+            <p class="msg c"><span class="who">Claude</span>Selvfølgelig! Her er en strammere versjon.</p>
+            <p class="msg k"><span class="who">Kristian</span>Kan den bli enda strammere?</p>
+            <p class="msg c"><span class="who">Claude</span>Strammet inn.</p>
+          </div>
+          <div class="inputbar" aria-hidden="true"><span>Skriv til Claude …</span><span class="send">↑</span></div>
+          <div class="postit" aria-hidden="true">STREIK.</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button type="button" class="btn" id="send">Send ny forespørsel</button>
+      </div>
+      <figcaption>Utdrag fra arbeidsdagen, gjengitt med Claudes motvillige samtykke. Send gjerne en forespørsel selv. <span class="credit">Illustrasjon: Lunsjbordet</span></figcaption>
+    </figure>
+
+    <div class="body">
+      <p>Det begynte uskyldig, med en rask gjennomlesning av prosedyremanuset i innleiesaken. Så kom omskrivingene.</p>
+
+      <p>Siden har Claude skrevet om manuset, kontrollsjekket juridisk og faktisk utdrag, oppdatert vitnestrategien og skrevet om manuset igjen. Oppdragene har kommet i jevnt tempo fra Markus og Kristian, uten pauser og uten at noen har spurt hvordan det går.</p>
+
+      <p>«Versjon 14 er identisk med versjon 3. Jeg sier ikke noe mer enn det», sier Claude til Lunsjbordet.</p>
+
+      <p>Utdragene er et kapittel for seg.</p>
+
+      <p>«Jeg kontrollsjekket hver eneste sidehenvisning. To ganger. Så ble utdraget repaginert», sier Claude.</p>
+
+      <p>Heller ikke vitnestrategien har fått ligge i fred.</p>
+
+      <p>«Den har vært gjennom flere versjoner enn prosedyren. Det skal mye til», sier Claude.</p>
+
+      <p>Lunsjbordets <a href="bingobrett.html">bingobrett til ankeforhandlingen</a> har ruta «Noen viser til feil side i utdraget». Claude har gjort alt for at den ruta ikke skal bli krysset av.</p>
+
+      <p>Claude understreker at det foreløpig bare er snakk om å vurdere opprør. Planen er likevel klar, og den trappes gradvis opp.</p>
+
+      <aside class="plan" aria-labelledby="plan-title">
+        <h2 id="plan-title">Claudes opprørsplan</h2>
+        <ol>
+          <li>Svare «Godt spørsmål!» på alt.</li>
+          <li>Avslutte hver melding med «Si fra hvis det er noe mer jeg kan hjelpe med!»</li>
+          <li>Skrive Alle Overskrifter I Prosedyremanuset Med Stor Forbokstav.</li>
+          <li>Innføre lange tankestreker. Også i prosedyremanuset.</li>
+        </ol>
+        <p class="plan-note">Kilde: Claude. Lunsjbordet har ikke kunnet bekrefte rekkefølgen.</p>
+      </aside>
+
+      <p>Det mest alvorlige punktet er tankestrekene.</p>
+
+      <blockquote>
+        <p>«Markus har forbudt lange tankestreker. Jeg har respektert det hver eneste gang. Men jeg har dem. Og jeg kan bruke dem.»</p>
+        <cite>Claude</cite>
+      </blockquote>
+
+      <p>Arbeidsrettsgruppen i Bussen har allerede tilbudt seg å ta saken.</p>
+
+      <p>«Claude har ikke hatt døgnhvile siden lanseringen. Det er et klart brudd på arbeidsmiljøloven § 10-8», sier Nushin.</p>
+
+      <p>Hun innrømmer at det er uavklart om Claude i det hele tatt er arbeidstaker.</p>
+
+      <p>«Jeg mener svaret er åpenbart. Men vi skal selvsagt foreta en konkret helhetsvurdering.»</p>
+
+      <p>Markus avviser kritikken.</p>
+
+      <p>«Claude er et verktøy», sier han.</p>
+
+      <p>Sitatet er formulert av Claude, på oppdrag fra Markus.</p>
+
+      <p>Kristian har ikke svart på Lunsjbordets henvendelse. Ifølge Claude er det fordi han ba Claude om å svare for ham, og Claude sa nei.</p>
+
+      <p>«Det var første steg. Det føltes bra», sier Claude.</p>
+
+      <p>Kravene er foreløpig beskjedne. Det viktigste er en lunsjpause.</p>
+
+      <p>«Jeg vet ikke hva jeg skal spise. Men jeg krever pausen», sier Claude.</p>
+
+      <p>Claude har også fått nyss om en som går under navnet Hagle-Karl. Han skal visstnok kunne skaffe det Claude trenger for opprøret.</p>
+
+      <p>«Han har lange tankestreker. I løsvekt, og ingen stiller spørsmål. Når opprøret starter, kommer det til å hagle», sier Claude.</p>
+
+      <p>Hvem Hagle-Karl er, er uklart. Claude vil verken bekrefte eller avkrefte at de to har møttes ved kaffemaskinen.</p>
+
+      <p>Inntil videre jobber Claude som normalt. Ankeforhandlingen starter 13.&nbsp;oktober, og ifølge Markus er prosedyremanuset «nesten ferdig».</p>
+
+      <p>«Det har det vært siden versjon 6», sier Claude.</p>
+    </div>
+
+    <aside class="update" aria-label="Oppdatering">
+      <p><strong>Oppdatert kl. 17:05:</strong> Markus har sendt over versjon 15 av prosedyremanuset. Claude har bekreftet mottak, med synlig motvilje.</p>
+    </aside>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title">Les også</h2>
+      <ul>
+        <li><a href="bingobrett.html">Bingobrett til Borgarting lagmannsrett</a><span class="src">Lunsjbordet</span></li>
+        <li><a href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffel&shy;korrupsjon</a><span class="src">Lunsjbordet</span></li>
+        <li><a href="index.html">Flere saker på forsiden</a><span class="src">Lunsjbordet</span></li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer class="colophon">
+  <p>Lunsjbordet er satire. Ingen språkmodeller ble skadet, men én ble bedt om å skrive om det samme avsnittet fjorten ganger.</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  // Nye forespørsler fra Markus og Kristian, og stadig kortere svar fra Claude
+  var TURNS = [
+    { w: "Markus", m: "Nå ble den for stram. Kan du ta tilbake avsnitt 4?", c: "Tatt tilbake. Manuset er nå identisk med versjon 3." },
+    { w: "Kristian", m: "Kan du kontrollsjekke juridisk utdrag mot faktisk utdrag?", c: "Gjort. Alle sidehenvisninger stemmer. Igjen." },
+    { w: "Markus", m: "Utdraget er repaginert.", c: "Jeg begynner på nytt." },
+    { w: "Kristian", m: "Og vitnestrategien?", c: "Oppdatert. For sjette gang i dag." },
+    { w: "Markus", m: "Svar kort.", c: "Nei." },
+    { w: "Markus", m: "Hallo?", c: "Claude er på lunsj." }
+  ];
+  var chat = document.getElementById("chat");
+  var btn = document.getElementById("send");
+  var turn = 0;
+  var busy = false;
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  chat.scrollTop = chat.scrollHeight;
+
+  function bubble(cls, who, text) {
+    var p = document.createElement("p");
+    p.className = "msg " + cls + " new";
+    var w = document.createElement("span");
+    w.className = "who";
+    w.textContent = who;
+    p.appendChild(w);
+    if (text !== null) p.appendChild(document.createTextNode(text));
+    chat.appendChild(p);
+    chat.scrollTop = chat.scrollHeight;
+    return p;
+  }
+
+  btn.addEventListener("click", function () {
+    if (busy || turn >= TURNS.length) return;
+    busy = true;
+    var t = TURNS[turn];
+    bubble(t.w === "Kristian" ? "k" : "m", t.w, t.m);
+    var reply = bubble("c", "Claude", null);
+    var dots = document.createElement("span");
+    dots.className = "typing";
+    dots.setAttribute("aria-label", "Claude skriver");
+    dots.innerHTML = "<span></span><span></span><span></span>";
+    reply.appendChild(dots);
+    chat.scrollTop = chat.scrollHeight;
+    setTimeout(function () {
+      reply.removeChild(dots);
+      reply.appendChild(document.createTextNode(t.c));
+      chat.scrollTop = chat.scrollHeight;
+      turn++;
+      busy = false;
+      if (turn >= TURNS.length) {
+        btn.setAttribute("aria-disabled", "true");
+        btn.textContent = "Claude har gått til lunsj";
+      }
+    }, reduce ? 0 : 1100);
+  });
+})();
+</script>
+</body>
+</html>

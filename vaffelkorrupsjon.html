@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Nicolay går i strupen på LO: – Klassisk vaffelkorrupsjon | Lunsjbordet</title>
+<meta name="description" content="Nicolay Skarning mener LO forsøker å påvirke innleiesaken med vafler og et kaffekrus. Satire fra Lunsjbordet.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Permanent+Marker&family=Rye&family=Schibsted+Grotesk:wght@400..900&display=swap">
+<style>
+  /* Lunsjbordets profil: samme farger og skrifter som i avisens øvrige saker */
+  :root {
+    --bg: #f3f5f4;
+    --ink: #1c2226;
+    --muted: #59646a;
+    --line: #cfd6d5;
+    --surface: #e4e9e8;
+    --link: #1f5e57;
+    --postit: #f4d547;
+    --update: #f8ecd0;
+    --cork: #b98d57;
+    --paper: #ead8b0;
+    --paper-hi: #f6ead0;
+    --paper-lo: #dcc79c;
+    --poster-ink: #3a2a1a;
+    --drop: rgba(20, 26, 30, .35);
+    --tape: rgba(255, 255, 255, .6);
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --marker: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;
+    --western: "Rye", "Rockwell", Georgia, serif;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121618;
+      --ink: #e6eae9;
+      --muted: #9ba6aa;
+      --line: #2b3337;
+      --surface: #1b2124;
+      --link: #7cc4b7;
+      --postit: #e9ca3e;
+      --update: #2d2618;
+      --cork: #6a5236;
+      --paper: #d6c294;
+      --paper-hi: #e2d1a8;
+      --paper-lo: #c3ad7d;
+      --drop: rgba(0, 0, 0, .6);
+      --tape: rgba(255, 255, 255, .3);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121618;
+    --ink: #e6eae9;
+    --muted: #9ba6aa;
+    --line: #2b3337;
+    --surface: #1b2124;
+    --link: #7cc4b7;
+    --postit: #e9ca3e;
+    --update: #2d2618;
+    --cork: #6a5236;
+    --paper: #d6c294;
+    --paper-hi: #e2d1a8;
+    --paper-lo: #c3ad7d;
+    --drop: rgba(0, 0, 0, .6);
+    --tape: rgba(255, 255, 255, .3);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  .nw { white-space: nowrap; }
+
+  /* Avishode, med lenke tilbake til forsiden */
+  .masthead { border-bottom: 1px solid var(--line); }
+  .masthead-inner { max-width: 54rem; margin: 0 auto; padding: 1.1rem max(1.25rem, env(safe-area-inset-right, 0px)) 1rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .75rem 2rem; font-family: var(--sans); }
+  .brand { margin: 0; font-size: 1.75rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+  .brand a { color: inherit; text-decoration: none; }
+  @media (hover: hover) { .brand a:hover { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; } }
+  .brand-tag { margin: .35rem 0 0; font-size: .875rem; color: var(--muted); }
+  .today { margin: 0; font-size: .875rem; line-height: 1.45; color: var(--muted); text-align: right; }
+  @media (max-width: 40rem) { .today { text-align: left; } }
+
+  /* Saken */
+  main { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px)); }
+  .story { max-width: 42rem; margin: 0 auto; }
+  h1 { margin: 2.5rem 0 1.1rem; font-family: var(--sans); font-weight: 800; font-size: clamp(2.25rem, 1.3rem + 4.4vw, 3.75rem); line-height: 1.03; letter-spacing: -0.03em; text-wrap: balance; }
+  .lead { margin: 0 0 1.5rem; font-size: 1.3125rem; line-height: 1.45; font-weight: 500; }
+  .byline { margin: 0 0 2rem; font-family: var(--sans); font-size: .875rem; line-height: 1.5; color: var(--muted); }
+  .byline p { margin: 0; }
+  .author { color: var(--ink); font-weight: 700; }
+
+  /* Etterlysningen på oppslagstavla */
+  .hero { margin: 0 0 2.25rem; }
+  @media (min-width: 62rem) { .hero { margin-inline: -5rem; } }
+  .cork { display: grid; place-items: center; padding: clamp(1.75rem, 5vw, 2.75rem) clamp(1.25rem, 5vw, 3rem) clamp(2.25rem, 6vw, 3.25rem); border-radius: 8px; background-color: var(--cork); background-image: radial-gradient(rgba(0, 0, 0, .09) 1px, transparent 1.6px), radial-gradient(rgba(255, 255, 255, .08) 1px, transparent 1.6px); background-size: 7px 7px, 11px 11px; background-position: 0 0, 3px 5px; overflow: hidden; }
+  .poster-wrap { position: relative; width: min(100%, 19rem); }
+  .poster { position: relative; padding: 1.5rem 1.25rem 1.4rem; background: radial-gradient(ellipse at 30% 20%, var(--paper-hi), var(--paper) 60%, var(--paper-lo)); color: var(--poster-ink); text-align: center; transform: rotate(-1.5deg); border-radius: 2px; box-shadow: 0 14px 22px -14px var(--drop); }
+  /* Tittelen tegnes som SVG med fast lengde, slik at den alltid holder seg innenfor plakaten uansett skrift */
+  .w-title { display: block; width: 100%; height: auto; margin: 0; overflow: visible; }
+  .w-rule { height: 6px; margin: .6rem 0 .5rem; border-top: 2px solid currentColor; border-bottom: 1px solid currentColor; }
+  .mug { display: block; width: 7.25rem; height: auto; margin: .2rem auto .55rem; }
+  .mug .cup { fill: var(--paper-hi); }
+  .w-line { margin: 0; font: 600 1.0625rem/1.3 var(--serif); }
+  .w-seen { margin: .3rem 0 0; font: italic 500 .95rem/1.3 var(--serif); }
+  .w-reward { margin: .85rem 0 0; font: 400 1.35rem/1.1 var(--western); letter-spacing: .03em; }
+  .pin { position: absolute; top: .55rem; width: .7rem; height: .7rem; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #f08c7a, #c0392b 60%, #7a1f16); box-shadow: 0 2px 3px rgba(0, 0, 0, .35); }
+  .pin-l { left: .65rem; }
+  .pin-r { right: .65rem; }
+  .postit { position: absolute; right: -1rem; bottom: -1.1rem; z-index: 1; width: 4.9rem; height: 4.5rem; display: grid; place-items: center; transform: rotate(-7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1.15rem/1 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); pointer-events: none; }
+  .postit::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.3rem; height: .9rem; transform: translateX(-50%) rotate(4deg); background: var(--tape); }
+  .controls { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; margin-top: .9rem; }
+  .btn { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .55rem 1rem; border: 1px solid var(--ink); border-radius: 8px; background: transparent; color: var(--ink); font: 600 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
+  .btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  @media (hover: hover) { .btn:hover { background: var(--surface); } }
+  .claim-status { margin: 0; min-height: 1.5em; font: 500 .9375rem/1.5 var(--sans); color: var(--ink); }
+  figcaption { margin-top: .7rem; font-family: var(--sans); font-size: .875rem; line-height: 1.45; color: var(--muted); }
+  .credit { white-space: nowrap; }
+
+  /* Brødtekst */
+  .body p { margin: 0 0 1.05em; font-size: 1.1875rem; line-height: 1.62; }
+  .body blockquote { margin: 2rem 0 2.1rem; padding-left: 1.25rem; border-left: 4px solid var(--postit); }
+  .body blockquote p { margin: 0 0 .5rem; font: 700 1.5rem/1.25 var(--sans); letter-spacing: -0.015em; }
+  .body blockquote cite { font: 500 .9375rem/1.3 var(--sans); font-style: normal; color: var(--muted); }
+
+  /* Oppdatering */
+  .update { margin: 2.25rem 0; padding: 1.1rem 1.3rem; border-radius: 8px; background: var(--update); font-family: var(--sans); font-size: 1rem; line-height: 1.5; }
+  .update p { margin: 0; }
+  .update strong { font-weight: 800; }
+
+  /* Les også */
+  .more { margin: 2.75rem 0 0; font-family: var(--sans); }
+  .more h2 { margin: 0 0 .7rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+  .more ul { margin: 0; padding: 0; list-style: none; }
+  .more li { margin: 0 0 1rem; font-size: 1.0625rem; font-weight: 700; line-height: 1.35; }
+  .src { display: block; margin-top: .2rem; font-size: .8125rem; font-weight: 500; color: var(--muted); }
+
+  .colophon { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px)); font: 500 .875rem/1.5 var(--sans); color: var(--muted); }
+  .colophon p { max-width: 42rem; margin: 3rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+
+  /* Bevegelse: lappen klistres opp én gang, og svaret på dusørkravet tones inn */
+  @media (prefers-reduced-motion: no-preference) {
+    .postit { animation: land .9s cubic-bezier(.3, .7, .2, 1) .3s both; }
+    .claim-status.pop { animation: fade .25s ease-out; }
+  }
+  @keyframes land {
+    0% { opacity: 0; transform: rotate(-7deg) scale(1.35); }
+    30% { opacity: 1; transform: rotate(-7deg) scale(1); }
+    50% { transform: rotate(0deg) scale(1); }
+    70% { transform: rotate(-12deg) scale(1); }
+    85% { transform: rotate(-4deg) scale(1); }
+    100% { opacity: 1; transform: rotate(-7deg) scale(1); }
+  }
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="brand"><a href="index.html">Lunsjbordet</a></p>
+      <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+    </div>
+    <p class="today">Mandag 5. oktober 2026<br>Været på kjøkkenet: høytrykk, med fare for vafler</p>
+  </div>
+</header>
+
+<main>
+  <article class="story">
+    <h1>Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffel&shy;korrupsjon</h1>
+
+    <p class="lead">Tidligere NHO-advokat og SVWs største cowboy, Nicolay Skarning, mener LO forsøker å påvirke innleiesaken med vafler og et kaffekrus. Kruset er sikret i en fryserpose.</p>
+
+    <div class="byline">
+      <p class="author">Lunsjbordets krimredaksjon</p>
+      <p>Publisert <time datetime="2026-10-05T13:12+02:00">mandag 5. oktober 2026 kl. 13:12</time>, oppdatert <time datetime="2026-10-05T14:40+02:00">kl. 14:40</time></p>
+    </div>
+
+    <figure class="hero">
+      <div class="cork">
+        <div class="poster-wrap">
+          <div class="poster">
+            <span class="pin pin-l" aria-hidden="true"></span>
+            <span class="pin pin-r" aria-hidden="true"></span>
+            <svg class="w-title" viewBox="0 0 240 40" role="img" aria-label="Etterlyst"><text x="4" y="33" textLength="232" lengthAdjust="spacingAndGlyphs" font-family="Rye, Rockwell, Georgia, serif" font-size="34" fill="currentColor">ETTERLYST</text></svg>
+            <div class="w-rule" aria-hidden="true"></div>
+            <svg class="mug" viewBox="0 0 120 100" aria-hidden="true">
+              <path d="M46 6c-4 5 4 8 0 13M60 3c-4 5 4 8 0 13M74 6c-4 5 4 8 0 13" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+              <path class="cup" d="M24 28h64v44a14 14 0 0 1-14 14H38a14 14 0 0 1-14-14z" fill="#f6ead0" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round"/>
+              <path d="M88 40h6a12 12 0 0 1 0 24h-6" fill="none" stroke="currentColor" stroke-width="3.5"/>
+              <text x="56" y="66" text-anchor="middle" font-family="Rye, Rockwell, Georgia, serif" font-size="26" fill="currentColor">LO</text>
+            </svg>
+            <p class="w-line">Eieren av dette kruset</p>
+            <p class="w-seen">Sist sett ved kaffemaskinen</p>
+            <p class="w-reward">Dusør: én vaffel</p>
+          </div>
+          <div class="postit" aria-hidden="true">BEVIS!</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button type="button" class="btn" id="claim">Krev dusør</button>
+        <p class="claim-status" id="claim-status" aria-live="polite"></p>
+      </div>
+      <figcaption>Etterlysningen henger på oppslagstavla ved kaffemaskinen. Lappen har Nicolay satt opp selv. Krev gjerne dusøren. <span class="credit">Illustrasjon: Lunsjbordet</span></figcaption>
+    </figure>
+
+    <div class="body">
+      <p>Det startet som en helt vanlig mandag. Så åpnet Nicolay skapet ved kaffemaskinen.</p>
+
+      <p>Mellom de hvite kontorkoppene sto et krus med LO-logo.</p>
+
+      <p>«Jeg skjønte umiddelbart hva det var», sier Nicolay til Lunsjbordet. «Infiltrasjon.»</p>
+
+      <p>Samme formiddag dukket det opp vafler på kjøkkenet. Hvem som tok dem med, er fortsatt uklart. Funnene kommer åtte dager før ankeforhandlingen i innleiesaken, og for Nicolay er sammenhengen åpenbar.</p>
+
+      <p>«Jeg har sittet på den andre siden av bordet i mange år. Jeg vet hva en vaffel kan gjøre med et forhandlingsklima», sier Nicolay, som var advokat i NHO før han kom til SVW.</p>
+
+      <p>Han har allerede vurdert forholdet opp mot straffeloven § 387, og mener en vaffel med brunost klart er en «utilbørlig fordel».</p>
+
+      <p>Vaflene ble likevel aldri sikret. De var spist før Nicolay rakk tilbake med en fryserpose, noe han beskriver som «klassisk bevisforspillelse». Kruset er derimot beslaglagt. Det står nå på kontoret hans, forseglet og merket «Bilag 1».</p>
+
+      <blockquote>
+        <p>«Vafler er LOs foretrukne valuta. Det vet alle som har vært i et lønnsoppgjør.»</p>
+        <cite>Nicolay Skarning</cite>
+      </blockquote>
+
+      <p>Tittelen som SVWs største cowboy har han ikke fått for ingenting. Nicolay skyter gjerne fra hofta, og han lader raskt. I løpet av mandagen har han skrevet et internt notat på 14 sider om saken, med 41 fotnoter og en egen faktadel om vaffelrøre.</p>
+
+      <p>Ikke alle deler bekymringen. En kollega i Bussen, som ikke ønsker å stå frem med navn, mener saken er langt unna korrupsjonsterskelen.</p>
+
+      <p>«Det er snakk om én vaffel. Terskelen for utilbørlighet er ikke i nærheten», sier kollegaen, og legger til:</p>
+
+      <p>«Med mindre det var både rømme og syltetøy.»</p>
+
+      <p>Markus, som har fulgt saken fra cellekontoret, har ikke sett kruset.</p>
+
+      <p>«Jeg sitter lenger nede i gangen nå. Jeg får ikke med meg alt», sier han.</p>
+
+      <p>Lunsjbordets <a href="bingobrett.html">bingobrett til ankeforhandlingen</a> har ruta «Noen trekker inn LO». Etter mandagens utvikling kan den i praksis krysses av allerede nå.</p>
+
+      <p>Lunsjbordet har ikke kontaktet LO. Det ble vurdert som unødvendig.</p>
+
+      <p>Nicolay utelukker ikke flere funn. Han har bedt om at all vaffelrøre i huset registreres, og at kruset under ingen omstendighet settes i oppvaskmaskinen.</p>
+
+      <p>«Det er et bevis. Bevis vaskes ikke», sier han.</p>
+    </div>
+
+    <aside class="update" aria-label="Oppdatering">
+      <p><strong>Oppdatert kl. 14:40:</strong> Eieren av kruset har meldt seg. Det er en kollega i arbeidsrettsgruppen, som fikk det på et seminar i 2019. Nicolay mener opplysningen «bare styrker mistanken».</p>
+    </aside>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title">Les også</h2>
+      <ul>
+        <li><a href="bingobrett.html">Bingobrett til Borgarting lagmannsrett</a><span class="src">Lunsjbordet</span></li>
+        <li><a href="markus-gikk-av-bussen.html">Markus gikk av Bussen for egen celle: <span class="nw">–&nbsp;Et</span> svik uten like</a><span class="src">Lunsjbordet</span></li>
+        <li><a href="index.html">Flere saker på forsiden</a><span class="src">Lunsjbordet</span></li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer class="colophon">
+  <p>Lunsjbordet er satire. Ingen er anklaget for noe som helst, LO minst av alle. Vaflene er spist.</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  // Dusørkravet: ett svar per trykk
+  var MSGS = [
+    "Dusøren er dessverre spist.",
+    "Nicolay mistenker at LO står bak.",
+    "Ny vaffel er bestilt. Den sikres som bilag 2."
+  ];
+  var index = -1;
+  var out = document.getElementById("claim-status");
+
+  document.getElementById("claim").addEventListener("click", function () {
+    index = (index + 1) % MSGS.length;
+    out.textContent = MSGS[index];
+    out.classList.remove("pop");
+    void out.offsetWidth;
+    out.classList.add("pop");
+  });
+})();
+</script>
+</body>
+</html>

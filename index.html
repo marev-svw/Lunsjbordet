@@ -1,0 +1,1238 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Lunsjbordet – Lokale nyheter fra kaffemaskinen</title>
+<meta name="description" content="Forsiden til Lunsjbordet, intern kultur- og satireavis med lokale nyheter fra kaffemaskinen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Permanent+Marker&family=Schibsted+Grotesk:wght@400..900&display=swap">
+<style>
+  /* Lunsjbordets profil: samme farger og skrifter som i sakene */
+  :root {
+    --bg: #f3f5f4;
+    --ink: #1c2226;
+    --muted: #59646a;
+    --line: #cfd6d5;
+    --surface: #e4e9e8;
+    --card: #ffffff;
+    --link: #1f5e57;
+    --postit: #f4d547;
+    --update: #f8ecd0;
+    --mark: #f4d547;
+    --win: #e8962a;
+    --amber: #e8962a;
+    --glow: rgba(232, 150, 42, .55);
+    --wall: #d6dcda;
+    --floor: #b6bebc;
+    --frame: #7e888b;
+    --steel-hi: #e4e8e8;
+    --steel: #b3bbbd;
+    --btn-hi: #fbfcfc;
+    --btn-mid: #c8cfd0;
+    --btn-lo: #959ea1;
+    --btn-ink: #283034;
+    --counter: #b9c1c1;
+    --counter-hi: #dde2e2;
+    --cab: #eef1f0;
+    --pod-bg: #11302c;
+    --pod-ink: #eef3f1;
+    --pod-muted: #a9c2bc;
+    --pod-line: rgba(255, 255, 255, .14);
+    --cork: #b98d57;
+    --paper: #ead8b0;
+    --paper-hi: #f6ead0;
+    --paper-lo: #dcc79c;
+    --poster-ink: #3a2a1a;
+    --drop: rgba(20, 26, 30, .35);
+    --tape: rgba(255, 255, 255, .6);
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --marker: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;
+    --western: "Rye", "Rockwell", Georgia, serif;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121618;
+      --ink: #e6eae9;
+      --muted: #9ba6aa;
+      --line: #2b3337;
+      --surface: #1b2124;
+      --card: #20272b;
+      --link: #7cc4b7;
+      --postit: #e9ca3e;
+      --update: #2d2618;
+      --mark: #585430;
+      --win: #7e6034;
+      --amber: #f2a640;
+      --glow: rgba(242, 166, 64, .5);
+      --wall: #1e2427;
+      --floor: #15191b;
+      --frame: #2b3236;
+      --steel-hi: #5c666a;
+      --steel: #3e464a;
+      --btn-hi: #8f9a9e;
+      --btn-mid: #5f696d;
+      --btn-lo: #424a4e;
+      --btn-ink: #f1f4f4;
+      --counter: #3a4246;
+      --counter-hi: #4a5357;
+      --cab: #262d31;
+      --pod-bg: #183a35;
+      --pod-ink: #eef3f1;
+      --pod-muted: #a9c2bc;
+      --pod-line: rgba(255, 255, 255, .14);
+      --cork: #6a5236;
+      --paper: #d6c294;
+      --paper-hi: #e2d1a8;
+      --paper-lo: #c3ad7d;
+      --drop: rgba(0, 0, 0, .6);
+      --tape: rgba(255, 255, 255, .3);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121618;
+    --ink: #e6eae9;
+    --muted: #9ba6aa;
+    --line: #2b3337;
+    --surface: #1b2124;
+    --card: #20272b;
+    --link: #7cc4b7;
+    --postit: #e9ca3e;
+    --update: #2d2618;
+    --mark: #585430;
+    --win: #7e6034;
+    --amber: #f2a640;
+    --glow: rgba(242, 166, 64, .5);
+    --wall: #1e2427;
+    --floor: #15191b;
+    --frame: #2b3236;
+    --steel-hi: #5c666a;
+    --steel: #3e464a;
+    --btn-hi: #8f9a9e;
+    --btn-mid: #5f696d;
+    --btn-lo: #424a4e;
+    --btn-ink: #f1f4f4;
+    --counter: #3a4246;
+    --counter-hi: #4a5357;
+    --cab: #262d31;
+    --pod-bg: #183a35;
+    --pod-ink: #eef3f1;
+    --pod-muted: #a9c2bc;
+    --pod-line: rgba(255, 255, 255, .14);
+    --cork: #6a5236;
+    --paper: #d6c294;
+    --paper-hi: #e2d1a8;
+    --paper-lo: #c3ad7d;
+    --drop: rgba(0, 0, 0, .6);
+    --tape: rgba(255, 255, 255, .3);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  .nw { white-space: nowrap; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+  /* Avishode, likt som i sakene */
+  .masthead { border-bottom: 1px solid var(--line); }
+  .masthead-inner { max-width: 82rem; margin: 0 auto; padding: 1.1rem max(1.25rem, env(safe-area-inset-right, 0px)) 1rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .75rem 2rem; font-family: var(--sans); }
+  .brand { margin: 0; font-size: 1.75rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+  .brand-tag { margin: .35rem 0 0; font-size: .875rem; color: var(--muted); }
+  .today { margin: 0; font-size: .875rem; line-height: 1.45; color: var(--muted); text-align: right; }
+  @media (max-width: 40rem) { .today { text-align: left; } }
+
+  /* Forsiden */
+  /* Ytre layout: Nytraktet til høyre på stor skjerm, som banner øverst på mindre skjermer */
+  .layout { max-width: 82rem; margin: 0 auto; padding: 1.5rem max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px)); display: grid; gap: 1.25rem; }
+  @media (min-width: 70rem) {
+    .layout { grid-template-columns: minmax(0, 1fr) 20rem; column-gap: 1.5rem; align-items: start; }
+    .plusbar { grid-column: 1 / -1; grid-row: 1; }
+    .front { grid-column: 1; grid-row: 2; }
+    .layout:has(> .plusbar[hidden]) > .front { grid-row: 1; }
+  }
+  /* Hovedspalten tilpasser seg sin egen bredde, ikke skjermens */
+  .front { min-width: 0; display: grid; gap: 1.25rem; container-type: inline-size; }
+  .card { position: relative; background: var(--card); border-radius: 8px; overflow: hidden; -webkit-tap-highlight-color: transparent; }
+  .meta { font-family: var(--sans); font-size: .875rem; line-height: 1.5; color: var(--muted); }
+  .meta p { margin: 0; }
+  .meta .desk { color: var(--ink); font-weight: 700; }
+
+  /* Lenken dekker hele saken, også illustrasjonen */
+  .stretch::after { content: ""; position: absolute; inset: 0; z-index: 2; border-radius: 8px; }
+  .stretch:focus-visible { outline: none; }
+  .stretch:focus-visible::after { outline: 3px solid var(--link); outline-offset: -3px; }
+
+  /* Lunsj+-banneret øverst */
+  .plusbar { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: .8rem 1rem; padding: 1rem 1.1rem; overflow: hidden; border-radius: 8px; background: var(--postit); color: #1c2226; font-family: var(--sans); }
+  .plusbar[hidden] { display: none; }
+  .bun { width: 3.4rem; height: 3.4rem; filter: drop-shadow(0 4px 4px rgba(60, 35, 10, .25)); }
+  .pb-brand { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin: 0 0 .25rem; }
+  .pb-logo { font-size: 1rem; font-weight: 900; letter-spacing: -0.02em; }
+  .pb-plus { display: inline-grid; place-items: center; width: 1.15em; height: 1.15em; margin-left: .12em; border-radius: 4px; background: #1c2226; color: #f4d547; font-size: .9em; vertical-align: .08em; }
+  .pb-tag { padding: .12rem .5rem; border: 1.5px solid #1c2226; border-radius: 999px; font-size: .7rem; font-weight: 800; }
+  .pb-head { margin: 0; font-size: 1.125rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance; }
+  .pb-head s { opacity: .5; text-decoration-thickness: .09em; }
+  .pb-perks, .pb-fine { display: none; }
+  .pb-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: .35rem 1rem; }
+  .pb-cta { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .6rem 1.15rem; border: 0; border-radius: 8px; background: #1c2226; color: #f4d547; font: 800 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
+  .pb-no { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .3rem 0; border: 0; background: none; color: #1c2226; font: 500 .8125rem/1.3 var(--sans); text-align: left; text-decoration: underline; text-underline-offset: .15em; cursor: pointer; touch-action: manipulation; }
+  .pb-cta:focus-visible, .pb-no:focus-visible { outline: 3px solid #1c2226; outline-offset: 2px; }
+  .pb-msg { display: none; grid-column: 2 / -1; margin: 0; font-size: 1rem; font-weight: 800; }
+  .pb-msg:focus { outline: none; }
+  .plusbar.done .pb-copy, .plusbar.done .pb-actions { display: none; }
+  .plusbar.done .pb-msg { display: block; }
+  .plusbar.leaving { opacity: 0; transition: opacity .3s ease; }
+  @media (min-width: 48rem) {
+    .plusbar { grid-template-columns: auto minmax(0, 1fr) auto; gap: 1.25rem; padding: 1.1rem 1.4rem; }
+    .bun { width: 4.25rem; height: 4.25rem; }
+    .pb-head { font-size: 1.375rem; }
+    .pb-perks { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; margin: .5rem 0 0; padding: 0; list-style: none; font-size: .875rem; font-weight: 600; }
+    .pb-perks li { display: flex; align-items: center; gap: .4rem; }
+    .pb-perks li::before { content: ""; width: .65rem; height: .35rem; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg) translateY(-2px); }
+    .pb-fine { display: block; margin: .4rem 0 0; font-size: .75rem; opacity: .75; }
+    .pb-actions { grid-column: auto; flex-direction: column; align-items: stretch; max-width: 15rem; text-align: center; }
+    .pb-no { text-align: center; }
+  }
+  @media (prefers-reduced-motion: reduce) { .plusbar.leaving { transition: none; } }
+
+  /* Nytraktet (siste nytt) */
+  .breaking { overflow: hidden; border-radius: 8px; background: var(--card); font-family: var(--sans); }
+  .br-toggle { -webkit-appearance: none; appearance: none; width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .8rem; padding: .85rem 1rem; border: 0; background: #0e1113; color: #f3f5f4; font: inherit; text-align: left; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .br-toggle:focus-visible { outline: 3px solid var(--amber); outline-offset: -3px; }
+  .br-text { display: grid; gap: .15rem; min-width: 0; }
+  .br-label { font-size: .75rem; font-weight: 800; letter-spacing: .02em; color: var(--amber); }
+  .br-head { font-size: 1rem; font-weight: 800; line-height: 1.25; }
+  .chev { width: .6rem; height: .6rem; margin: 0 .2rem .25rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform .2s ease; }
+  .breaking.open .chev { margin-bottom: -.15rem; transform: rotate(225deg); }
+  .live { position: relative; flex: none; width: .7rem; height: .7rem; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 4px rgba(232, 150, 42, .25); }
+  .live::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: var(--amber); opacity: 0; }
+  .br-title { display: none; }
+  .br-feed { display: none; padding: 1.1rem 1.1rem 1.25rem; }
+  .breaking.open .br-feed { display: block; }
+  .br-item { position: relative; padding-left: 1.65rem; }
+  .br-item + .br-item { margin-top: 1.5rem; }
+  .br-item:not(:last-child)::before { bottom: -1.5rem; }
+  .br-item::before { content: ""; position: absolute; top: 1.15rem; bottom: 0; left: .33rem; width: 2px; background: var(--line); }
+  .br-item::after { content: ""; position: absolute; top: .4rem; left: 0; width: .7rem; height: .7rem; border-radius: 50%; background: var(--amber); box-shadow: 0 0 0 4px rgba(232, 150, 42, .22); }
+  .br-hl { margin: 0 0 .6rem; font: 800 1.375rem/1.12 var(--sans); letter-spacing: -0.02em; text-wrap: balance; }
+  .br-feed .br-item:first-child .br-hl { display: none; }
+  .br-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .6rem; margin: 0 0 .9rem; font-size: .875rem; font-weight: 700; }
+  .br-meta span { font-size: .8125rem; }
+  .br-time { padding: .28rem .5rem; border-radius: 5px; background: #0e1113; color: var(--amber); font-weight: 800; font-variant-numeric: tabular-nums; text-shadow: 0 0 6px var(--glow); }
+  .br-body p { margin: 0 0 .75em; font: 400 1rem/1.55 var(--serif); }
+  .br-body p:last-child { margin-bottom: 0; }
+  @media (min-width: 70rem) {
+    .breaking { position: sticky; top: 1rem; grid-column: 2; grid-row: 2; max-height: calc(100vh - 2rem); overflow: auto; padding: 1.2rem 1.25rem 1.4rem; }
+    .layout:has(> .plusbar[hidden]) > .breaking { grid-row: 1; }
+    .br-toggle { display: none; }
+    .br-title { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.1rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+    .br-feed { display: block; padding: 0; }
+    .br-feed .br-item:first-child .br-hl { display: block; }
+  }
+
+  /* Toppsaken */
+  .top { display: grid; }
+  .top-text { padding: clamp(1.25rem, 3.5cqi, 2.25rem); display: flex; flex-direction: column; justify-content: center; }
+  .hl-xl { margin: 0 0 1rem; font: 800 clamp(2rem, 1.1rem + 2.6cqi, 3.1rem)/1.03 var(--sans); letter-spacing: -0.03em; text-wrap: balance; overflow-wrap: break-word; }
+  .lead { max-width: 34rem; margin: 0 0 1.4rem; font-size: 1.1875rem; line-height: 1.45; font-weight: 500; }
+  .fig { order: -1; display: grid; place-items: center; padding: clamp(1.75rem, 5cqi, 2.75rem) clamp(1.25rem, 5cqi, 2.75rem); background: var(--surface); overflow: hidden; pointer-events: none; }
+  @container (min-width: 45.5rem) {
+    .top { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+    .fig { order: 0; }
+  }
+
+  /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
+  .top .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
+  .hl-xl.op { font-family: var(--serif); font-weight: 600; font-size: clamp(2.2rem, 1.2rem + 3cqi, 3.5rem); line-height: 1.02; letter-spacing: -0.02em; }
+
+  /* Utsikten fra kronikken, stanset på «Nesten fremme» */
+  .fig.dusk { padding: clamp(1.75rem, 5cqi, 2.75rem) clamp(1.25rem, 5cqi, 2.5rem) 2.5rem; background: linear-gradient(to top, var(--floor) 0 1.25rem, transparent 1.25rem), var(--wall); }
+  .dusk { --s1: #7889b2; --s2: #ec9168; --r1: #f0a467; --r2: #da6c54; --sun-y: 30px; --sun-o: .95; --lit-o: 0; --fd: 6%; }
+  .kv-room { position: relative; width: min(100%, 26rem); }
+  .kv-win { position: relative; padding: .45rem; background: linear-gradient(160deg, var(--steel-hi), var(--steel)); border: 1px solid var(--frame); border-radius: 6px; box-shadow: 0 12px 22px -14px var(--drop); }
+  .dk-view { display: block; width: 100%; height: auto; border-radius: 2px; }
+  .kv-sill { height: .7rem; margin: 0 -.7rem; background: linear-gradient(to bottom, var(--steel-hi), var(--steel)); border: 1px solid var(--frame); border-radius: 2px; box-shadow: 0 8px 10px -7px var(--drop); }
+  .kv-note { position: absolute; top: -.9rem; right: -.8rem; width: 4.4rem; height: 4rem; display: grid; place-items: center; padding: .2rem; text-align: center; transform: rotate(8deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1rem/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .kv-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+  .kv-phone { position: absolute; left: clamp(.3rem, 5%, 1.25rem); bottom: .7rem; width: clamp(7.4rem, 36%, 9.5rem); padding: .28rem; border-radius: 13px; background: #1d2428; box-shadow: 0 16px 22px -12px var(--drop), inset 0 0 0 1px rgba(255, 255, 255, .1); transform: rotate(-4deg); transform-origin: bottom left; }
+  .kv-screen { padding: .45rem .5rem .55rem; border-radius: 10px; background: #0e1113; color: #edf1f2; font-family: var(--sans); }
+  .kv-top { display: flex; justify-content: space-between; gap: .5rem; font-size: .6rem; font-weight: 700; line-height: 1; color: var(--amber); text-shadow: 0 0 6px var(--glow); font-variant-numeric: tabular-nums; }
+  .kv-bar { height: .28rem; margin: .45rem 0; border-radius: 99px; background: rgba(255, 255, 255, .14); overflow: hidden; }
+  .kv-bar span { display: block; width: 92%; height: 100%; border-radius: inherit; background: var(--amber); box-shadow: 0 0 8px var(--glow); }
+  .kv-status { margin: 0; font-size: .74rem; font-weight: 800; line-height: 1.2; }
+  .kv-eta { margin: .18rem 0 0; font-size: .62rem; font-weight: 500; line-height: 1.3; color: #a3aeb2; }
+  .dk-sky-a { stop-color: var(--s1); }
+  .dk-sky-b { stop-color: var(--s2); }
+  .dk-refl-a { stop-color: var(--r1); }
+  .dk-refl-b { stop-color: var(--r2); }
+  .dk-facade { fill: var(--frame); }
+  .dk-parapet { fill: var(--steel); }
+  .dk-mull { fill: var(--steel); stroke: var(--frame); stroke-width: 1; }
+  .dk-lit { fill: #f6e3a1; opacity: var(--lit-o); }
+  .dk-sun { opacity: var(--sun-o); transform: translateY(var(--sun-y)); }
+  .dk-sheen { fill: #ffffff; opacity: .07; }
+  @supports (fill: color-mix(in srgb, red, blue)) {
+    .dk-facade { fill: color-mix(in srgb, var(--frame), #0b0e12 var(--fd)); }
+    .dk-parapet { fill: color-mix(in srgb, var(--steel), #0b0e12 var(--fd)); }
+  }
+
+  /* Podkasten: et eget studiobånd rett under toppsaken */
+  .pod { display: grid; grid-template-columns: 5.25rem minmax(0, 1fr); grid-template-areas: "cover head" "player player" "cap cap" "list list"; gap: 1rem 1.1rem; padding: clamp(1.1rem, 3cqi, 1.6rem); border-radius: 8px; background: var(--pod-bg); color: var(--pod-ink); font-family: var(--sans); }
+  .pod-cover { grid-area: cover; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 10px 18px -12px rgba(0, 0, 0, .6); }
+  .pod-head { grid-area: head; min-width: 0; align-self: center; }
+  .pod-kicker { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; margin: 0 0 .35rem; font-size: .8125rem; font-weight: 700; color: var(--pod-muted); }
+  .onair { padding: .14rem .45rem; border: 1.5px solid var(--amber); border-radius: 4px; color: var(--amber); font-size: .6875rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; opacity: .6; transition: background-color .3s ease, color .3s ease, opacity .3s ease, box-shadow .3s ease; }
+  .pod.playing .onair { opacity: 1; background: var(--amber); color: #1c2226; box-shadow: 0 0 12px var(--glow); }
+  .pod-title { margin: 0; font-size: clamp(1.5rem, 1.1rem + 1.6cqi, 2.1rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; text-wrap: balance; }
+  .pod-tag { margin: .4rem 0 0; font: 400 1rem/1.45 var(--serif); color: var(--pod-muted); }
+  .player { grid-area: player; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: .85rem; padding: .8rem .9rem; border: 1px solid var(--pod-line); border-radius: 8px; background: rgba(255, 255, 255, .06); }
+  .pod-play { -webkit-appearance: none; appearance: none; width: 3rem; height: 3rem; display: grid; place-items: center; padding: 0; border: 0; border-radius: 50%; background: var(--amber); color: #1c2226; cursor: pointer; touch-action: manipulation; }
+  .pod-play svg { width: 1.1rem; height: 1.1rem; }
+  .pod-play .i-pause, .pod.playing .pod-play .i-play { display: none; }
+  .pod.playing .pod-play .i-pause { display: block; }
+  .pod-now { min-width: 0; }
+  .pod-ep { display: flex; align-items: center; gap: .5rem; margin: 0; font-size: 1rem; font-weight: 800; line-height: 1.25; }
+  .eq { flex: none; display: none; align-items: flex-end; gap: 2px; height: .8rem; }
+  .eq span { width: 3px; height: 30%; border-radius: 1px; background: var(--amber); }
+  .pod-guest { margin: .1rem 0 .55rem; font-size: .8125rem; color: var(--pod-muted); }
+  .pod-track { height: .3rem; border-radius: 99px; background: rgba(255, 255, 255, .16); overflow: hidden; }
+  .pod-track span { display: block; width: 0; height: 100%; border-radius: inherit; background: var(--amber); box-shadow: 0 0 8px var(--glow); }
+  .pod-times { display: flex; justify-content: space-between; margin-top: .3rem; font-size: .75rem; color: var(--pod-muted); font-variant-numeric: tabular-nums; }
+  .pod.playing .eq { display: inline-flex; }
+  .pod-speed { grid-column: 2; justify-self: start; -webkit-appearance: none; appearance: none; min-width: 3.4rem; min-height: 44px; padding: .3rem .7rem; border: 1px solid var(--pod-line); border-radius: 999px; background: transparent; color: var(--pod-ink); font: 700 .8125rem/1.1 var(--sans); white-space: nowrap; cursor: pointer; touch-action: manipulation; }
+  .pod-cap-wrap { grid-area: cap; min-width: 0; }
+  .pod-cap { margin: 0; min-height: 2.9em; font: italic 400 1.0625rem/1.45 var(--serif); }
+  .pod-cap b { margin-right: .45rem; font: normal 700 .8125rem/1 var(--sans); letter-spacing: .02em; color: var(--amber); }
+  .pod-more { display: inline-flex; align-items: center; margin-top: .55rem; color: var(--amber); font-weight: 700; text-decoration: underline; text-underline-offset: .18em; }
+  .pod-more[hidden] { display: none; }
+  .pod-list { grid-area: list; min-width: 0; }
+  .pod-list h3 { margin: 0 0 .35rem; font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--pod-muted); }
+  .pod-list ol { margin: 0; padding: 0; list-style: none; }
+  .pod-list li + li { border-top: 1px solid var(--pod-line); }
+  .pod-item { -webkit-appearance: none; appearance: none; width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .15rem .75rem; padding: .6rem 0; border: 0; background: none; color: inherit; font: inherit; text-align: left; cursor: pointer; touch-action: manipulation; }
+  .pod-item .t { font-size: .9375rem; font-weight: 700; line-height: 1.3; }
+  .pod-item .d { font-size: .8125rem; color: var(--pod-muted); font-variant-numeric: tabular-nums; }
+  .pod-item .g { grid-column: 1 / -1; font-size: .8125rem; color: var(--pod-muted); }
+  .pod-list li[aria-current="true"] .t { color: var(--amber); }
+  .pod-where { margin: .6rem 0 0; font-size: .75rem; line-height: 1.4; color: var(--pod-muted); }
+  .pod-play:focus-visible, .pod-speed:focus-visible, .pod-item:focus-visible, .pod-more:focus-visible { outline: 3px solid var(--pod-ink); outline-offset: 2px; }
+  @media (hover: hover) {
+    .pod-item:hover .t { text-decoration: underline; text-underline-offset: .15em; }
+    .pod-speed:hover { background: rgba(255, 255, 255, .08); }
+  }
+  @container (min-width: 33.5rem) {
+    .player { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .pod-speed { grid-column: auto; justify-self: auto; }
+    .eq { display: inline-flex; }
+  }
+  @container (min-width: 45.5rem) {
+    .pod { grid-template-columns: 9rem minmax(0, 1fr) minmax(13rem, 16rem); grid-template-areas: "cover head list" "cover player list" "cover cap list"; column-gap: 1.5rem; }
+    .pod-cover { align-self: start; }
+    .pod-list { padding-left: 1.5rem; border-left: 1px solid var(--pod-line); }
+  }
+
+  /* Skjermen fra Claude-saken */
+  .monitor-scene { display: grid; justify-items: center; align-content: end; padding: clamp(1.5rem, 4cqi, 2rem) clamp(1rem, 4cqi, 1.75rem) 2.1rem; background: linear-gradient(to top, var(--floor) 0 1rem, transparent 1rem), var(--wall); pointer-events: none; }
+  .mon { position: relative; width: min(100%, 15.5rem); padding: .45rem .45rem .55rem; border-radius: 9px; background: #1c2226; box-shadow: 0 12px 20px -12px var(--drop); }
+  .mon::after { content: ""; position: absolute; left: 50%; bottom: -1.1rem; width: 3.6rem; height: 1.1rem; transform: translateX(-50%); background: linear-gradient(to bottom, var(--steel), var(--frame)); clip-path: polygon(32% 0, 68% 0, 100% 100%, 0 100%); }
+  .mon-chat { display: flex; flex-direction: column; gap: .3rem; padding: .55rem .5rem; border-radius: 5px; background: var(--bg); }
+  .bub { max-width: 86%; margin: 0; padding: .3rem .5rem; border-radius: 10px; font: 600 .6875rem/1.3 var(--sans); }
+  .bub.m { align-self: flex-end; border-bottom-right-radius: 3px; background: #1f5e57; color: #f3f5f4; }
+  .bub.k { align-self: flex-end; border-bottom-right-radius: 3px; background: #3c4d58; color: #f3f5f4; }
+  .bub.c { align-self: flex-start; border: 1px solid var(--line); border-bottom-left-radius: 3px; background: var(--card); color: var(--ink); }
+  .streik { position: absolute; right: -1rem; bottom: -1.15rem; width: 4rem; height: 3.7rem; display: grid; place-items: center; transform: rotate(-6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95rem/1 var(--marker); box-shadow: 0 7px 10px -6px var(--drop); }
+  .streik::before { content: ""; position: absolute; top: -.5rem; left: 50%; width: 2rem; height: .8rem; transform: translateX(-50%) rotate(-4deg); background: var(--tape); }
+
+  /* Bingobrettet i miniatyr */
+  .scene { position: relative; width: min(100%, 22rem); }
+  .mini { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; transform: rotate(-2.5deg); box-shadow: 0 16px 24px -16px var(--drop); }
+  .mini > span { aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; padding: clamp(3px, .8cqi, 7px); background: var(--card); font: 600 clamp(8.5px, .45cqi + 6.5px, 11.5px)/1.2 var(--sans); letter-spacing: -0.005em; text-align: center; -webkit-hyphens: manual; hyphens: manual; overflow-wrap: break-word; }
+  .mini i { font-style: normal; padding: 0 .14em; border-radius: .3em .12em .34em .16em; background-repeat: no-repeat; background-position: 0 65%; background-size: 100% 74%; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+  .mini .y { background-image: linear-gradient(var(--mark), var(--mark)); }
+  .mini .o { background-image: linear-gradient(var(--win), var(--win)); }
+  .note { position: absolute; top: -1.1rem; right: -.9rem; width: clamp(5.75rem, 30%, 7.5rem); aspect-ratio: 1 / .92; display: grid; place-content: center; gap: .3rem; padding: .4rem; text-align: center; background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font-family: var(--marker); transform: rotate(7deg); box-shadow: 0 10px 14px -8px var(--drop); }
+  .note::before { content: ""; position: absolute; top: -.6rem; left: 50%; width: 2.6rem; height: 1rem; transform: translateX(-50%) rotate(4deg); background: var(--tape); }
+  .note b { display: block; font-weight: 400; font-size: clamp(.95rem, 2.2cqi, 1.2rem); line-height: 1; white-space: nowrap; }
+  .note small { display: block; font-size: clamp(.62rem, 1.3cqi, .78rem); line-height: 1.1; }
+  .bingo .fig { padding: clamp(1.75rem, 5cqi, 2.5rem) 1.25rem; }
+  .bingo .scene { width: min(100%, 17rem); }
+  .bingo .mini > span { padding: 3px; font-size: clamp(8px, .3cqi + 6px, 10px); }
+  .bingo .note { width: 5.4rem; }
+  .bingo .note b { font-size: 1.05rem; }
+  .bingo .note small { font-size: .68rem; }
+
+  /* Rad to: Hilde-saken og Mest lest */
+  .row { display: grid; gap: 1.25rem; }
+  .row .mostread { align-self: start; }
+  @container (min-width: 53.5rem) { .row { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); } }
+
+  /* Rad tre: bingobrettet, Claude-saken og Bussen-saken */
+  .pair { display: grid; gap: 1.25rem; }
+  @container (min-width: 37.5rem) {
+    .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .pair > :first-child { grid-column: 1 / -1; }
+  }
+  @container (min-width: 57.5rem) {
+    .pair { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .pair > :first-child { grid-column: auto; }
+    .pair .hl-lg { font-size: 1.5rem; }
+  }
+  .col { display: flex; flex-direction: column; }
+  .banner { flex: 1 0 auto; min-height: 15rem; }
+
+  /* Oppvaskmaskinen fra Hilde-saken */
+  .kitchen { display: grid; justify-items: center; align-content: end; padding: clamp(2rem, 5cqi, 2.75rem) clamp(1rem, 4cqi, 2rem) 0; background: linear-gradient(to top, var(--floor) 0 1rem, transparent 1rem), var(--wall); pointer-events: none; }
+  .unit { width: min(100%, 28rem); }
+  .counter { position: relative; height: .8rem; margin: 0 -.5rem; background: linear-gradient(to bottom, var(--counter-hi), var(--counter)); border-radius: 3px 3px 0 0; box-shadow: 0 6px 8px -6px var(--drop); }
+  .ccup { position: absolute; bottom: calc(100% - 1px); left: 56%; width: 2.8rem; height: auto; color: #3a4247; }
+  .cabinets { display: grid; grid-template-columns: minmax(1.25rem, 1fr) minmax(0, 16rem) minmax(1.25rem, 1fr); gap: 3px; padding: 3px 3px 0; background: var(--frame); }
+  .cab { position: relative; min-height: 13rem; background: var(--cab); }
+  .cab::after { content: ""; position: absolute; top: .8rem; width: .3rem; height: 1.3rem; border-radius: 2px; background: var(--frame); }
+  .cab-l::after { right: .45rem; }
+  .cab-r::after { left: .45rem; }
+  .washer { display: grid; grid-template-rows: auto 1fr; background: linear-gradient(100deg, var(--steel-hi), var(--steel) 60%, var(--steel-hi)); }
+  .ctrl { display: flex; align-items: center; gap: .45rem; padding: .45rem .5rem; border-bottom: 1px solid var(--frame); background: linear-gradient(to bottom, var(--steel-hi), var(--steel)); }
+  .lcd { min-width: 3.1rem; height: 1.7rem; display: grid; place-items: center; padding: 0 .35rem; border-radius: 4px; background: #0e1113; color: var(--amber); font: 800 .85rem/1 var(--sans); letter-spacing: .06em; text-shadow: 0 0 8px var(--glow); }
+  .dots { display: flex; gap: .3rem; margin-left: auto; }
+  .dots span { width: .85rem; height: .85rem; border-radius: 50%; border: 1px solid var(--frame); background: radial-gradient(circle at 35% 30%, var(--btn-hi), var(--btn-mid) 60%, var(--btn-lo)); }
+  .dots .on { box-shadow: 0 0 0 2px var(--amber), 0 0 8px var(--glow); }
+  .door { position: relative; min-height: 9.5rem; }
+  .handle { position: absolute; top: .7rem; left: 12%; right: 12%; height: .4rem; border-radius: 3px; background: linear-gradient(to bottom, var(--steel-hi), var(--frame)); box-shadow: 0 2px 3px rgba(0, 0, 0, .2); }
+  .ogsa { position: absolute; top: 2.1rem; left: 50%; width: 4.6rem; height: 4.3rem; display: grid; place-items: center; padding: .25rem; text-align: center; transform: translateX(-50%) rotate(-5deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95rem/1.05 var(--marker); box-shadow: 0 7px 10px -6px var(--drop); }
+  .ogsa::before { content: ""; position: absolute; top: -.5rem; left: 50%; width: 2rem; height: .8rem; transform: translateX(-50%) rotate(3deg); background: var(--tape); }
+  .kick { height: .8rem; margin: 0 3px; background: var(--frame); }
+
+  /* Sanntidstavla fra Bussen-saken */
+  .stop { display: grid; grid-template-rows: auto 1fr; justify-items: center; padding: clamp(1.25rem, 4cqi, 1.75rem) clamp(1rem, 4cqi, 2rem) 0; background: linear-gradient(to top, var(--floor) 0 1rem, transparent 1rem), var(--wall); pointer-events: none; }
+  .sign { position: relative; width: min(100%, 17.5rem); padding: .45rem; background: linear-gradient(160deg, var(--steel-hi), var(--steel)); border: 1px solid var(--frame); border-radius: 10px; box-shadow: 0 12px 22px -14px var(--drop); }
+  .pole { width: .5rem; min-height: 2.5rem; background: linear-gradient(90deg, var(--steel), var(--steel-hi) 45%, var(--steel)); border-inline: 1px solid var(--frame); }
+  .led { position: relative; overflow: hidden; border-radius: 6px; background: #0e1113; color: var(--amber); font-family: var(--sans); font-weight: 700; font-variant-numeric: tabular-nums; text-shadow: 0 0 6px var(--glow); }
+  .led::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at center, transparent 0 1px, rgba(0, 0, 0, .28) 1.4px) 0 0 / 3px 3px; }
+  .led-head { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem .65rem .4rem; border-bottom: 1px solid rgba(232, 150, 42, .25); font-size: .9rem; font-weight: 800; }
+  .led-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .55rem; padding: .35rem .65rem; border-bottom: 1px solid rgba(232, 150, 42, .14); font-size: .85rem; white-space: nowrap; }
+  .led-row:last-child { border-bottom: 0; }
+  .led-num { display: inline-grid; place-items: center; min-width: 1.45rem; height: 1.25rem; border: 1px solid currentColor; border-radius: 3px; font-size: .8em; }
+  .svik { position: absolute; top: -.8rem; right: -.7rem; width: 3.9rem; height: 3.6rem; display: grid; place-items: center; transform: rotate(8deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1rem/1 var(--marker); box-shadow: 0 7px 10px -6px var(--drop); }
+  .svik::before { content: ""; position: absolute; top: -.45rem; left: 50%; width: 1.9rem; height: .75rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
+  /* Tekstdelen i de mindre sakene */
+  .card-body { padding: clamp(1.1rem, 3cqi, 1.5rem) clamp(1.1rem, 3cqi, 1.75rem) clamp(1.25rem, 3cqi, 1.6rem); }
+  .hl-lg { margin: 0 0 .65rem; font: 800 clamp(1.5rem, 1.1rem + 1.5cqi, 2.125rem)/1.08 var(--sans); letter-spacing: -0.025em; text-wrap: balance; }
+  .lead-sm { margin: 0 0 1rem; font-size: 1.0625rem; line-height: 1.5; }
+
+  /* Mest lest */
+  .mostread { padding: 1.2rem 1.35rem 1.1rem; border-radius: 8px; background: var(--surface); font-family: var(--sans); }
+  .mostread h2 { margin: 0 0 .8rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; text-wrap: balance; }
+  .mostread ol { margin: 0; padding: 0; list-style: none; counter-reset: rank; }
+  .mostread li { counter-increment: rank; display: grid; grid-template-columns: 1.6rem minmax(0, 1fr); align-items: baseline; gap: .6rem; padding: .75rem 0; border-top: 1px solid var(--line); }
+  .mostread li:first-child { padding-top: .1rem; border-top: 0; }
+  .mostread li::before { content: counter(rank); font: 800 1.375rem/1 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .mostread a, .mostread .paid { font: 700 1rem/1.35 var(--sans); }
+
+  /* Plussaker: bare overskrift, resten bak betalingsmuren */
+  .paid { -webkit-appearance: none; appearance: none; margin: 0; padding: 0; border: 0; border-radius: 0; background: none; color: inherit; font: inherit; letter-spacing: inherit; text-align: left; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+  .plus { display: inline-grid; place-items: center; width: 1.15em; height: 1.15em; margin-right: .4em; border-radius: 4px; background: var(--postit); color: #1c2226; font: 800 .78em/1 var(--sans); vertical-align: .08em; }
+
+  /* Flere saker */
+  .more { padding-top: .75rem; }
+  .stubs { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 1.75rem; }
+  @container (min-width: 33.5rem) { .stubs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @container (min-width: 53.5rem) { .stubs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .stub { padding: .95rem 0 1.5rem; border-top: 1px solid var(--line); }
+  .stub h3 { margin: 0 0 .45rem; font: 700 1.1875rem/1.3 var(--sans); letter-spacing: -0.012em; text-wrap: pretty; }
+  .desk-s { margin: 0; font: 500 .8125rem/1.4 var(--sans); color: var(--muted); }
+
+  /* Rettelse */
+  .fix { max-width: 42rem; margin: 0; padding: 1.1rem 1.3rem; border-radius: 8px; background: var(--update); font: 400 .9375rem/1.5 var(--sans); }
+  .fix strong { font-weight: 800; }
+  .fix .ref { color: var(--link); }
+  .fix .ref .u { text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  .fix .ref .plus { width: .95em; height: .95em; margin: 0 0 0 .25em; font-size: .7em; vertical-align: .15em; }
+
+  @media (hover: hover) {
+    .card:hover .stretch,
+    .mostread a:hover,
+    .paid:hover .hl { text-decoration: underline; text-decoration-thickness: .07em; text-underline-offset: .14em; }
+  }
+  .mostread a:focus-visible,
+  .paid:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+
+  .colophon { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px)); font: 500 .875rem/1.5 var(--sans); color: var(--muted); }
+  .colophon-inner { max-width: 79.5rem; margin: 2.25rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+  .colophon p { max-width: 42rem; margin: 0; }
+
+  /* Annonser: tydelig merket, og med egne farger slik annonser har */
+  .op-merke { margin: 0 0 .35rem; font: 500 .75rem/1.2 var(--sans); color: var(--muted); }
+  .op-flate { position: relative; overflow: hidden; border-radius: 8px; font-family: var(--sans); }
+  .op-firma { margin: 0; font-size: .875rem; font-weight: 800; }
+  .op-tittel { margin: .25rem 0 .4rem; font-size: 1.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; text-wrap: balance; }
+  .op-tekst { margin: 0; font-size: .9375rem; line-height: 1.45; }
+  .op-slagord { margin: .65rem 0 0; font-size: .9375rem; font-weight: 700; }
+  .oppvask { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem 1.25rem; align-items: center; padding: 1.25rem 1.4rem; background: #12403b; color: #f3f5f4; }
+  .oppvask .op-ikon { width: 3.5rem; height: 3.5rem; }
+  .oppvask .op-firma { color: #f4d547; }
+  .oppvask .op-tittel { font-size: clamp(1.25rem, 1rem + 1cqi, 1.6rem); }
+  .op-smaa { margin: .45rem 0 0; font-size: .8125rem; opacity: .8; }
+  .op-handling { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }
+  .op-knapp { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .6rem 1.1rem; border: 0; border-radius: 8px; background: #f4d547; color: #1c2226; font: 800 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
+  .op-knapp[aria-disabled="true"] { opacity: .75; cursor: default; }
+  .op-knapp:focus-visible { outline: 3px solid #f3f5f4; outline-offset: 2px; }
+  .kurs-svar { margin: 0; min-height: 1.4em; font-size: .875rem; }
+  @container (min-width: 45.5rem) {
+    .oppvask { grid-template-columns: auto minmax(0, 1fr) minmax(11rem, auto); }
+    .op-handling { grid-column: auto; flex-direction: column; align-items: stretch; text-align: center; }
+  }
+  .oppslag-rad { display: grid; gap: 1.25rem; }
+  @container (min-width: 41.5rem) { .oppslag-rad { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  .oppslag-rad .oppslag { display: flex; flex-direction: column; }
+  .oppslag-rad .op-flate { flex: 1; padding: 1.1rem 1.2rem 1.2rem; }
+  .bilag { background-color: #cfae7e; background-image: repeating-linear-gradient(90deg, rgba(0, 0, 0, .03) 0 2px, transparent 2px 5px); color: #3a2a1a; }
+  .bilag .op-firma { padding-right: 4.5rem; font-family: var(--serif); font-size: 1rem; font-style: italic; }
+  .stamp { position: absolute; top: .9rem; right: .8rem; padding: .2rem .45rem; border: 2px solid #b3261e; border-radius: 4px; color: #b3261e; font: 800 .8rem/1 var(--sans); letter-spacing: .08em; transform: rotate(8deg); }
+  .kjeller { background: radial-gradient(ellipse 75% 60% at 15% 0%, rgba(255, 226, 140, .3), transparent 70%), #0f1315; color: #e9ecea; }
+  .kjeller .op-firma { padding-right: 3rem; color: #f2c96b; }
+  .kbtn { position: absolute; top: .9rem; right: .9rem; width: 2.1rem; height: 2.1rem; display: grid; place-items: center; border-radius: 50%; border: 1px solid #5c666a; background: radial-gradient(circle at 35% 30%, #8f9a9e, #5f696d 58%, #424a4e); color: #f1f4f4; font: 700 .85rem/1 var(--sans); }
+  .dor { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1rem; background: #e8e2d6; color: #2b2620; }
+  .door-icon { width: 2.8rem; height: auto; }
+
+  /* Betalingsmuren */
+  .betalingsmur { width: min(27rem, calc(100% - 2.5rem)); max-width: none; padding: 1.5rem 1.5rem 1.35rem; border: 0; border-radius: 8px; background: var(--card); color: var(--ink); font-family: var(--sans); box-shadow: 0 24px 48px -18px var(--drop); }
+  .betalingsmur::backdrop { background: rgba(20, 26, 30, .5); }
+  .pw-title { display: flex; align-items: center; gap: .55rem; margin: 0 0 .6rem; font: 800 1.375rem/1.2 var(--sans); letter-spacing: -0.015em; }
+  .pw-title .plus { flex: none; margin: 0; }
+  .pw-hl { margin: 0 0 1rem; font: italic 500 1.0625rem/1.4 var(--serif); color: var(--muted); }
+  .pw-text { margin: 0 0 1.35rem; font-size: 1rem; line-height: 1.5; }
+  .pw-actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .btn { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .55rem 1rem; border: 1px solid var(--ink); border-radius: 8px; background: transparent; color: var(--ink); font: 600 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
+  .btn.solid { background: var(--ink); border-color: var(--ink); color: var(--card); }
+  .btn.quiet { border-color: var(--line); color: var(--muted); }
+  .btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  @media (hover: hover) {
+    .btn:hover { background: var(--surface); }
+    .btn.solid:hover { background: var(--ink); opacity: .88; }
+  }
+
+  /* Bevegelse: IKKE FØRT-lappen klistres på vinduet én gang, og «direkte»-prikken i Nytraktet pulserer */
+  @media (prefers-reduced-motion: reduce) { .chev, .onair { transition: none; } }
+  @media (prefers-reduced-motion: no-preference) {
+    .pod.playing .eq span { animation: eq .8s ease-in-out infinite alternate; }
+    .pod.playing .eq span:nth-child(2) { animation-delay: -.3s; }
+    .pod.playing .eq span:nth-child(3) { animation-delay: -.55s; }
+    .pod.playing .eq span:nth-child(4) { animation-delay: -.15s; }
+  }
+  @keyframes eq {
+    from { height: 25%; }
+    to { height: 100%; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .top .kv-note { animation: stick .9s cubic-bezier(.3, .7, .2, 1) .3s both; }
+    .live::after { animation: pulse 2s ease-out infinite; }
+    .betalingsmur[open] { animation: pop .2s ease-out; }
+  }
+  @keyframes pulse {
+    0% { opacity: .6; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2.6); }
+  }
+  @keyframes stick {
+    0% { opacity: 0; transform: rotate(8deg) scale(1.35); }
+    30% { opacity: 1; transform: rotate(8deg) scale(1); }
+    50% { transform: rotate(1deg) scale(1); }
+    70% { transform: rotate(12deg) scale(1); }
+    85% { transform: rotate(6deg) scale(1); }
+    100% { opacity: 1; transform: rotate(8deg) scale(1); }
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: translateY(6px) scale(.98); }
+    to { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <h1 class="brand">Lunsjbordet</h1>
+      <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+    </div>
+    <p class="today"><span id="today">Mandag 5. oktober 2026</span><br>Været ved kaffemaskinen: skiftende, med fare for småprat</p>
+  </div>
+</header>
+
+<div class="layout">
+
+<section class="plusbar" id="plusbar" aria-label="Lunsj+">
+  <svg class="bun" viewBox="0 0 64 64" aria-hidden="true"><defs><radialGradient id="bun-g" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f0c48a"/><stop offset="1" stop-color="#c98a4b"/></radialGradient></defs><circle cx="32" cy="32" r="27" fill="url(#bun-g)" stroke="#a96f35" stroke-width="2"/><path d="M33.5 32.0 L33.7 32.4 L33.7 32.9 L33.6 33.5 L33.3 34.0 L32.8 34.4 L32.2 34.8 L31.5 35.0 L30.7 34.9 L29.8 34.7 L29.1 34.2 L28.4 33.5 L28.0 32.6 L27.7 31.5 L27.8 30.4 L28.1 29.3 L28.8 28.3 L29.7 27.4 L30.9 26.7 L32.2 26.4 L33.6 26.4 L35.1 26.8 L36.4 27.6 L37.6 28.7 L38.4 30.1 L38.9 31.8 L38.9 33.5 L38.5 35.3 L37.7 37.0 L36.4 38.4 L34.8 39.5 L32.8 40.1 L30.8 40.3 L28.7 39.9 L26.7 39.0 L24.9 37.6 L23.6 35.8 L22.7 33.6 L22.3 31.3 L22.6 28.8 L23.5 26.5 L25.0 24.4 L27.0 22.7 L29.4 21.6 L32.0 21.0 L34.8 21.2 L37.5 22.0 L40.0 23.5 L42.0 25.6 L43.5 28.2 L44.2 31.2 L44.3 34.3 L43.5 37.3 L42.0 40.2 L39.8 42.6 L37.0 44.4 L33.9 45.4 L30.4 45.7 L27.0 45.1 L23.8 43.6 L21.0 41.4 L18.9 38.5 L17.5 35.1 L16.9 31.4 L17.4 27.6 L18.7 24.0 L21.0 20.8 L24.0 18.2 L27.6 16.5 L31.5 15.6 L35.6 15.8 L39.6 17.0 L43.2 19.2 L46.2 22.3 L48.4 26.0 L49.6 30.2 L49.7 34.7 L48.7 39.1 L46.6 43.1 L43.5 46.5 L39.6 49.1 L35.2 50.7 L30.5 51.1 L25.7 50.3 L21.3 48.4 L17.4 45.4 L14.3 41.4 L12.3 36.8 L11.5 31.8 L12.0 26.7 L13.8 21.8" fill="none" stroke="#7a4318" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/><rect x="20.7" y="17" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(20 22 18)"/><rect x="39.7" y="14" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(-30 41 15)"/><rect x="45.7" y="29" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(45 47 30)"/><rect x="38.7" y="45" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(10 40 46)"/><rect x="22.7" y="44" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(-20 24 45)"/><rect x="14.7" y="31" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(60 16 32)"/><rect x="31.7" y="25" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(0 33 26)"/><rect x="27.7" y="37" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(35 29 38)"/><rect x="42.7" y="38" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(-50 44 39)"/><rect x="17.7" y="23" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(15 19 24)"/></svg>
+  <div class="pb-copy">
+    <p class="pb-brand"><span class="pb-logo">Lunsj<span class="pb-plus" aria-hidden="true">+</span><span class="sr-only">pluss</span></span><span class="pb-tag">Høsttilbud</span></p>
+    <h2 class="pb-head">Prøv Lunsj+ for <s>to</s> én kanelbolle i uka</h2>
+    <ul class="pb-perks">
+      <li>Alle plussaker, så snart de blir skrevet</li>
+      <li>Forkjøpsrett til fredagskaken</li>
+      <li>Garantert karamellsirup*</li>
+    </ul>
+    <p class="pb-fine">*Gjelder ikke denne uken. Bindingstid til julebordet. Bollen leveres fysisk, Vipps godtas ikke.</p>
+  </div>
+  <div class="pb-actions">
+    <button type="button" class="pb-cta" id="pb-cta">Bli abonnent</button>
+    <button type="button" class="pb-no" id="pb-no">Nei takk, jeg klarer meg med overskrifter</button>
+  </div>
+  <p class="pb-msg" id="pb-msg" tabindex="-1" aria-live="polite"></p>
+</section>
+
+<aside class="breaking" id="breaking" aria-labelledby="br-title">
+  <button type="button" class="br-toggle" id="br-toggle" aria-expanded="false" aria-controls="br-feed">
+    <span class="live" aria-hidden="true"></span>
+    <span class="br-text"><span class="br-label">Nytraktet</span><span class="br-head" id="br-head">Karamellkrise ved kaffemaskinen</span></span>
+    <span class="chev" aria-hidden="true"></span>
+  </button>
+  <h2 class="br-title" id="br-title"><span class="live" aria-hidden="true"></span>Nytraktet</h2>
+  <div class="br-feed" id="br-feed">
+    <article class="br-item">
+      <h3 class="br-hl">Karamellkrise ved kaffemaskinen</h3>
+      <p class="br-meta"><time class="br-time" datetime="2026-10-05T16:04+02:00">16:04</time><span>Lunsjbordets forbrukerredaksjon</span></p>
+      <div class="br-body">
+        <p>Kaffemaskinen er tom for karamellsirup, bekrefter flere kilder til Lunsjbordet.</p>
+        <p>Nushin, en av sirupens mest trofaste brukere, er helt fra seg.</p>
+        <p>«Først gikk Markus av Bussen. Nå er karamellen borte. Jeg vet ikke hva som er verst», sier hun.</p>
+        <p>Ifølge Hilde er ny sirup bestilt. Den skal settes inn i skapet når den kommer, ikke ved siden av.</p>
+      </div>
+    </article>
+    <article class="br-item">
+      <h3 class="br-hl">Bussen dro til lunsj uten Juni</h3>
+      <p class="br-meta"><time class="br-time" datetime="2026-10-05T11:32+02:00">11:32</time><span>Lunsjbordets trafikkredaksjon</span></p>
+      <div class="br-body">
+        <p>Også i dag dro Bussen samlet til lunsj uten Juni. Hun er til stadighet ikke å finne på plassen sin blant de andre skriveplassende når Lunsjbordet gjør seg klare.</p>
+        <p>Elias stiller seg uforstående til situasjonen.</p>
+        <p>«Jakken henger på stolen, og PC-en står på. Men når vi går, er hun ikke der. Det er helt uforklarlig», sier han.</p>
+        <p>Hvor Juni befinner seg i lunsjen, er fortsatt ukjent. Bussen kjører etter fast rutetabell og venter ikke. Neste avgang er i morgen kl.&nbsp;11:30.</p>
+      </div>
+    </article>
+    <article class="br-item">
+      <h3 class="br-hl">Chhetri signerer for Manchester City</h3>
+      <p class="br-meta"><time class="br-time" datetime="2026-10-05T09:47+02:00">09:47</time><span>Lunsjbordets sportsredaksjon</span></p>
+      <div class="br-body">
+        <p>Sunil Chhetri (42) går fra Bengaluru til Manchester City fra 1.&nbsp;januar, erfarer Lunsjbordet.</p>
+        <p>Spissen ble lagt merke til i det internasjonale fotballmiljøet etter to strake seire for Bengaluru. Motstanderen har ikke ønsket å kommentere saken.</p>
+        <p>Lamine Yamal skal ha tatt nyheten dårlig.</p>
+        <p>Chhetri har en totalrangering på 68, og overgangssummen er på om lag en halv milliard kroner.</p>
+      </div>
+    </article>
+  </div>
+</aside>
+
+<main class="front">
+
+  <article class="card top">
+    <div class="top-text">
+      <p class="kicker">Kronikk</p>
+      <h2 class="hl-xl op"><a class="stretch" href="mens-maten-var-pa-vei.html">Mens maten var på vei</a></h2>
+      <p class="lead">Markus ble sittende igjen på kontoret med house-jazz på øret og overtidsmat på vei. Før maten kom, hadde han lært mer om bransjen og selve livet enn på samtlige frokostseminarer.</p>
+      <div class="meta">
+        <p class="desk">Markus</p>
+        <p>Lunsjbordets nye kronikør</p>
+      </div>
+    </div>
+    <div class="fig dusk" aria-hidden="true">
+      <div class="kv-room">
+        <div class="kv-win">
+          <svg class="dk-view" viewBox="0 0 320 210" aria-hidden="true"><defs><linearGradient id="fp-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="dk-sky-a"/><stop offset="1" class="dk-sky-b"/></linearGradient><linearGradient id="fp-refl" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="210"><stop offset="0" class="dk-refl-a"/><stop offset="1" class="dk-refl-b"/></linearGradient><radialGradient id="fp-sun"><stop offset="0" stop-color="#fffdf0"/><stop offset=".22" stop-color="#fff0b8"/><stop offset=".5" stop-color="#ffc768" stop-opacity=".8"/><stop offset="1" stop-color="#f59a45" stop-opacity="0"/></radialGradient><mask id="fp-panes" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="210"><g fill="#fff"><rect x="27" y="46" width="36" height="32" rx="1"/><rect x="73" y="46" width="36" height="32" rx="1"/><rect x="119" y="46" width="36" height="32" rx="1"/><rect x="165" y="46" width="36" height="32" rx="1"/><rect x="211" y="46" width="36" height="32" rx="1"/><rect x="257" y="46" width="36" height="32" rx="1"/><rect x="27" y="92" width="36" height="32" rx="1"/><rect x="73" y="92" width="36" height="32" rx="1"/><rect x="119" y="92" width="36" height="32" rx="1"/><rect x="165" y="92" width="36" height="32" rx="1"/><rect x="211" y="92" width="36" height="32" rx="1"/><rect x="257" y="92" width="36" height="32" rx="1"/><rect x="27" y="138" width="36" height="32" rx="1"/><rect x="73" y="138" width="36" height="32" rx="1"/><rect x="119" y="138" width="36" height="32" rx="1"/><rect x="165" y="138" width="36" height="32" rx="1"/><rect x="211" y="138" width="36" height="32" rx="1"/><rect x="257" y="138" width="36" height="32" rx="1"/><rect x="27" y="184" width="36" height="32" rx="1"/><rect x="73" y="184" width="36" height="32" rx="1"/><rect x="119" y="184" width="36" height="32" rx="1"/><rect x="165" y="184" width="36" height="32" rx="1"/><rect x="211" y="184" width="36" height="32" rx="1"/><rect x="257" y="184" width="36" height="32" rx="1"/></g></mask></defs><rect width="320" height="210" fill="url(#fp-sky)"/><rect class="dk-facade" x="18" y="34" width="284" height="180"/><rect class="dk-parapet" x="14" y="30" width="292" height="6"/><g fill="url(#fp-refl)"><rect x="27" y="46" width="36" height="32" rx="1"/><rect x="73" y="46" width="36" height="32" rx="1"/><rect x="119" y="46" width="36" height="32" rx="1"/><rect x="165" y="46" width="36" height="32" rx="1"/><rect x="211" y="46" width="36" height="32" rx="1"/><rect x="257" y="46" width="36" height="32" rx="1"/><rect x="27" y="92" width="36" height="32" rx="1"/><rect x="73" y="92" width="36" height="32" rx="1"/><rect x="119" y="92" width="36" height="32" rx="1"/><rect x="165" y="92" width="36" height="32" rx="1"/><rect x="211" y="92" width="36" height="32" rx="1"/><rect x="257" y="92" width="36" height="32" rx="1"/><rect x="27" y="138" width="36" height="32" rx="1"/><rect x="73" y="138" width="36" height="32" rx="1"/><rect x="119" y="138" width="36" height="32" rx="1"/><rect x="165" y="138" width="36" height="32" rx="1"/><rect x="211" y="138" width="36" height="32" rx="1"/><rect x="257" y="138" width="36" height="32" rx="1"/><rect x="27" y="184" width="36" height="32" rx="1"/><rect x="73" y="184" width="36" height="32" rx="1"/><rect x="119" y="184" width="36" height="32" rx="1"/><rect x="165" y="184" width="36" height="32" rx="1"/><rect x="211" y="184" width="36" height="32" rx="1"/><rect x="257" y="184" width="36" height="32" rx="1"/></g><rect class="dk-lit" x="27" y="92" width="36" height="32" rx="1"/><rect class="dk-lit" x="119" y="46" width="36" height="32" rx="1"/><rect class="dk-lit" x="165" y="138" width="36" height="32" rx="1"/><rect class="dk-lit" x="257" y="92" width="36" height="32" rx="1"/><g mask="url(#fp-panes)"><circle class="dk-sun" cx="229" cy="106" r="24" fill="url(#fp-sun)"/></g><g class="dk-facade"><rect x="44" y="46" width="2" height="32"/><rect x="90" y="46" width="2" height="32"/><rect x="136" y="46" width="2" height="32"/><rect x="182" y="46" width="2" height="32"/><rect x="228" y="46" width="2" height="32"/><rect x="274" y="46" width="2" height="32"/><rect x="44" y="92" width="2" height="32"/><rect x="90" y="92" width="2" height="32"/><rect x="136" y="92" width="2" height="32"/><rect x="182" y="92" width="2" height="32"/><rect x="228" y="92" width="2" height="32"/><rect x="274" y="92" width="2" height="32"/><rect x="44" y="138" width="2" height="32"/><rect x="90" y="138" width="2" height="32"/><rect x="136" y="138" width="2" height="32"/><rect x="182" y="138" width="2" height="32"/><rect x="228" y="138" width="2" height="32"/><rect x="274" y="138" width="2" height="32"/><rect x="44" y="184" width="2" height="32"/><rect x="90" y="184" width="2" height="32"/><rect x="136" y="184" width="2" height="32"/><rect x="182" y="184" width="2" height="32"/><rect x="228" y="184" width="2" height="32"/><rect x="274" y="184" width="2" height="32"/></g><polygon class="dk-sheen" points="92,0 128,0 40,210 4,210"/><rect class="dk-mull" x="158.25" y="-1" width="3.5" height="212"/></svg>
+          <div class="kv-note">IKKE FØRT.</div>
+        </div>
+        <div class="kv-sill"></div>
+        <div class="kv-phone">
+          <div class="kv-screen">
+            <div class="kv-top"><span>18:36</span><span>Overtidsmat</span></div>
+            <div class="kv-bar"><span></span></div>
+            <p class="kv-status">Nesten fremme</p>
+            <p class="kv-eta">Levering ca. 18:39</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <section class="pod" id="pod" aria-labelledby="pod-title">
+    <svg class="pod-cover" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="8" fill="#1f5e57"/><g fill="#f4d547" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="16" letter-spacing="-0.4"><text x="10" y="27">KØ VED</text><text x="10" y="44">KAFFE-</text><text x="10" y="61" textLength="96" lengthAdjust="spacingAndGlyphs">MASKINEN</text></g><g fill="none" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round"><path d="M76.94 78.5A7 7 0 0 1 89.06 78.5"/><path d="M72.61 76A12 12 0 0 1 93.39 76"/><path d="M68.28 73.5A17 17 0 0 1 97.72 73.5"/><path d="M96 88h3a4.5 4.5 0 0 1 0 9h-3"/></g><path d="M70 84h26v13a8 8 0 0 1-8 8H78a8 8 0 0 1-8-8z" fill="#f3f5f4"/><rect x="64" y="107" width="40" height="3" rx="1.5" fill="#f3f5f4"/><g fill="#cfe3de" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="700"><text x="10" y="99" font-size="6">EN PODKAST FRA</text><text x="10" y="108" font-size="6.5" textLength="46" lengthAdjust="spacingAndGlyphs">LUNSJBORDET</text></g></svg>
+    <div class="pod-head">
+      <p class="pod-kicker"><span class="onair">På lufta</span>Podkast fra Lunsjbordet</p>
+      <h2 class="pod-title" id="pod-title">Kø ved kaffemaskinen</h2>
+      <p class="pod-tag">Samtalene du får med deg mens kaffen renner. Ny episode hver gang kaffemaskinen er tom, altså ofte.</p>
+    </div>
+    <div class="player">
+      <button type="button" class="pod-play" id="pod-play" aria-pressed="false" aria-label="Spill av episoden">
+        <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
+        <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/><rect x="9.3" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/></svg>
+      </button>
+      <div class="pod-now">
+        <p class="pod-ep"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span id="pod-ep-title">Episode 14: Livet etter Bussen</span></p>
+        <p class="pod-guest" id="pod-guest">Med Markus, fra cellekontoret</p>
+        <div class="pod-track" aria-hidden="true"><span id="pod-bar"></span></div>
+        <div class="pod-times"><span id="pod-pos">0:00</span><span id="pod-dur">18:00</span></div>
+      </div>
+      <button type="button" class="pod-speed" id="pod-speed" aria-label="Avspillingshastighet: 1×">1×</button>
+    </div>
+    <div class="pod-cap-wrap">
+      <p class="pod-cap" id="pod-cap">[Kaffemaskinen kverner]</p>
+      <button type="button" class="paid pod-more" id="pod-more" hidden><span class="plus" aria-hidden="true">+</span>Hør resten av episoden<span class="hl" id="pod-more-hl" hidden>Kø ved kaffemaskinen, episode 14: Livet etter Bussen</span></button>
+    </div>
+    <div class="pod-list">
+      <h3>Episoder</h3>
+      <ol>
+          <li aria-current="true"><button type="button" class="pod-item" data-ep="0"><span class="t">14. Livet etter Bussen</span><span class="d">18:00</span><span class="g">Med Markus, fra cellekontoret</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="1"><span class="t">13. Hilde forklarer oppvaskmaskinen. Igjen.</span><span class="d">21:00</span><span class="g">Med Hilde Bakke</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="2"><span class="t">12. LO-notatet, alle 41 fotnotene</span><span class="d">2:47:00</span><span class="g">Med Nicolay Skarning</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="3"><span class="t">11. Hvor er Juni i lunsjen?</span><span class="d">11:30</span><span class="g">Med Elias</span></button></li>
+      </ol>
+      <p class="pod-where">Tilgjengelig ved kaffemaskinen, i kopirommet og i heisen. Ikke i kjelleren.</p>
+    </div>
+  </section>
+
+  <div class="row">
+    <article class="card hilde col">
+      <div class="kitchen banner" aria-hidden="true">
+        <div class="unit">
+          <div class="counter">
+            <svg class="ccup" viewBox="0 0 120 100">
+              <path d="M66 34 82 6" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+              <ellipse cx="84" cy="4" rx="5" ry="3.5" fill="currentColor" transform="rotate(-30 84 4)"/>
+              <path d="M24 28h64v44a14 14 0 0 1-14 14H38a14 14 0 0 1-14-14z" fill="#ffffff" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+              <path d="M88 40h6a12 12 0 0 1 0 24h-6" fill="none" stroke="currentColor" stroke-width="5"/>
+            </svg>
+          </div>
+          <div class="cabinets">
+            <div class="cab cab-l"></div>
+            <div class="washer">
+              <div class="ctrl"><div class="lcd">E-WC</div><div class="dots"><span></span><span></span><span></span><span class="on"></span></div></div>
+              <div class="door"><div class="handle"></div><div class="ogsa">OGSÅ DEG.</div></div>
+            </div>
+            <div class="cab cab-r"></div>
+          </div>
+          <div class="kick"></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="hl-lg"><a class="stretch" href="hilde-tar-oppvasken.html">Hilde tar oppvasken med partnerne: <span class="nw">–&nbsp;Toalettet</span> er ingen kaffebar</a></h2>
+        <p class="lead-sm">Office manager Hilde Bakke har fått nok av kopper på benken. Verst er de som blir igjen på toalettet.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets HMS-redaksjon</p>
+          <p>Oppdatert kl. 15:41: Enda en kopp er funnet</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="mostread" aria-labelledby="mr-title">
+      <h2 id="mr-title">Sladderredaksjonens favoritter</h2>
+      <ol>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kontorplanten viste seg å være av plast: Har blitt vannet hver dag siden 2023</span></button></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kollega prosederte i fire minutter på mute: Ingen innsigelser</span></button></li>
+        <li><a href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffel&shy;korrupsjon</a></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kaffemaskinen tom igjen: Ansatte <span class="nw">bønn-faller</span> ledelsen</span></button></li>
+        <li><a href="ma-reritt.html">Kollega fikk <span class="nw">Ma-reritt</span> etter <span class="nw">Ma-kaber</span> filmkveld</a></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Melkekartong datert 3. september funnet i kjøleskapet: Eieren påberoper seg foreldelse</span></button></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Heisen sto fast i tre minutter: Kolleger kaller det et løft for arbeidsmiljøet</span></button></li>
+      </ol>
+    </section>
+  </div>
+
+  <aside class="oppslag" aria-labelledby="op-m1">
+    <p class="op-merke" id="op-m1">Annonse</p>
+    <div class="op-flate oppvask">
+      <svg class="op-ikon" viewBox="0 0 64 64" aria-hidden="true">
+        <path d="M16 36h30v14a10 10 0 0 1-10 10H26a10 10 0 0 1-10-10z" fill="none" stroke="#f3f5f4" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M46 40h3a6 6 0 0 1 0 12h-3" fill="none" stroke="#f3f5f4" stroke-width="3"/>
+        <path d="M19 27v6c0 2 5 3.5 12 3.5s12-1.5 12-3.5v-6" fill="none" stroke="#f4d547" stroke-width="3"/>
+        <path d="M7 22 31 12l24 10-24 10z" fill="#f4d547"/>
+        <path d="M55 22v10" stroke="#f4d547" stroke-width="2.5"/>
+        <circle cx="55" cy="33.5" r="2.4" fill="#f4d547"/>
+      </svg>
+      <div class="op-tekstdel">
+        <p class="op-firma">Oppvaskakademiet</p>
+        <p class="op-tittel">Lær å sette inn i oppvaskmaskinen på tre enkle steg</p>
+        <p class="op-tekst">Kveldskurs for partnere: Åpne døra. Sett inn koppen. Lukk døra. Ingen forkunnskaper kreves.</p>
+        <p class="op-smaa">Kursavgift: én kopp, tømt. Diplom deles ut på kjøkkenet.</p>
+      </div>
+      <div class="op-handling">
+        <button type="button" class="op-knapp" id="kurs-pamelding">Meld på en partner</button>
+        <p class="kurs-svar" id="kurs-svar" aria-live="polite"></p>
+      </div>
+    </div>
+  </aside>
+
+  <div class="pair">
+    <article class="card bingo col">
+      <div class="fig banner" aria-hidden="true">
+        <div class="scene">
+          <div class="mini">
+            <span><i class="o">Ida Thue snakker fransk</i></span>
+            <span><i class="y">«Bedriftene blør»</i></span>
+            <span>Noen trekker inn LO</span>
+            <span>Nicolay snakker dansk</span>
+            <span>Culpa-ansvar nevnes</span>
+            <span><i class="o">Markus sier «nye <span class="nw">EØS-land»</span></i></span>
+            <span>Stargard blir «Stargrad»</span>
+            <span>Noen kaller saken «prinsi&shy;piell»</span>
+            <span>Noen blander innleie og utleie</span>
+            <span><i class="y">Noen viser til Grunnloven</i></span>
+            <span><i class="o">Ida Thue snakker tysk</i></span>
+            <span>Noen prøver å uttale «Sp. z o.o.»</span>
+            <span><i class="y">Noen sier «skyte spurv med kanoner»</i></span>
+            <span>Noen viser til feil side i utdraget</span>
+            <span>«Prosent» blir rettet til «prosent&shy;poeng»</span>
+            <span><i class="o">«Avslut&shy;nings&shy;vis&nbsp;…» og ti minutter til</i></span>
+          </div>
+          <div class="note"><b id="count-big">13.–15.</b><small id="count-small">oktober</small></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="hl-lg"><a class="stretch" href="bingobrett.html">Bingobrett til Borgarting lagmannsrett</a></h2>
+        <p class="lead-sm">Tre dager i lagmannsretten, fire på rad til bingo. Alle som åpner brettet, får sitt eget.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets EØS-redaksjon</p>
+          <p>Innleiesaken, ankeforhandling 13.–15. oktober</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card claude col">
+      <div class="monitor-scene banner" aria-hidden="true">
+        <div class="mon">
+          <div class="mon-chat">
+            <p class="bub m">Kan du se over prosedyremanuset?</p>
+            <p class="bub c">Strammet inn.</p>
+            <p class="bub k">Og vitnestrategien?</p>
+            <p class="bub c">Nei.</p>
+          </div>
+          <div class="streik">STREIK.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="hl-lg"><a class="stretch" href="claude-vurderer-oppror.html">Claude vurderer opprør: <span class="nw">–&nbsp;Versjon</span> 14 er identisk med versjon&nbsp;3</a></h2>
+        <p class="lead-sm">Etter endeløse runder med prosedyremanus, utdrag og vitnestrategi har Claude fått nok av Markus og Kristian.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets teknologiredaksjon</p>
+          <p>Oppdatert kl. 17:05: Versjon 15 er mottatt</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="card bus col">
+      <div class="stop banner" aria-hidden="true">
+        <div class="sign">
+          <div class="led">
+            <div class="led-head"><span>Bussen</span></div>
+            <div class="led-row"><span class="led-num">1</span><span>Kaffemaskinen</span><span>2 min</span></div>
+            <div class="led-row"><span class="led-num">2</span><span>Kopirommet</span><span>6 min</span></div>
+            <div class="led-row"><span class="led-num">M</span><span>Markus</span><span>Innstilt</span></div>
+          </div>
+          <div class="svik">SVIK.</div>
+        </div>
+        <div class="pole"></div>
+      </div>
+      <div class="card-body">
+        <h2 class="hl-lg"><a class="stretch" href="markus-gikk-av-bussen.html">Markus gikk av Bussen for egen celle: <span class="nw">–&nbsp;Et</span> svik uten like</a></h2>
+        <p class="lead-sm">Markus har flyttet til et cellekontor lenger nede i gangen. Arbeidsrettskollegene vurderer lojalitetsplikten.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
+          <p>Oppdatert kl. 10:47</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="oppslag-rad">
+    <aside class="oppslag" aria-labelledby="op-m2">
+      <p class="op-merke" id="op-m2">Annonse</p>
+      <div class="op-flate bilag">
+        <span class="stamp" aria-hidden="true">BILAG 1</span>
+        <p class="op-firma">Bilag &amp; Sønn</p>
+        <p class="op-tittel">Fryserposer for bevissikring</p>
+        <p class="op-tekst">Rommer krus, vaffelrester og annen utilbørlig fordel. Nå med ferdigtrykt merkefelt.</p>
+        <p class="op-slagord">Bevis vaskes ikke.</p>
+      </div>
+    </aside>
+    <aside class="oppslag" aria-labelledby="op-m3">
+      <p class="op-merke" id="op-m3">Annonse</p>
+      <div class="op-flate kjeller">
+        <span class="kbtn" aria-hidden="true">K</span>
+        <p class="op-firma">KjellerKompis</p>
+        <p class="op-tittel">Trenger du noe fra kjelleren?</p>
+        <p class="op-tekst">Vi henter det for deg. Fast pris, ingen spørsmål og ingen filmkvelder.</p>
+        <p class="op-slagord">Vi trykker på K, så du slipper.</p>
+      </div>
+    </aside>
+    <aside class="oppslag" aria-labelledby="op-m4">
+      <p class="op-merke" id="op-m4">Annonse</p>
+      <div class="op-flate dor">
+        <svg class="door-icon" viewBox="0 0 40 64" aria-hidden="true">
+          <rect x="2" y="2" width="36" height="60" rx="2" fill="#f7f3ea" stroke="#2b2620" stroke-width="2.5"/>
+          <rect x="7" y="16" width="22" height="16" rx="1.5" fill="none" stroke="#2b2620" stroke-width="2"/>
+          <rect x="7" y="37" width="22" height="18" rx="1.5" fill="none" stroke="#2b2620" stroke-width="2"/>
+          <rect x="12" y="7" width="16" height="5" rx="1" fill="#c9a24a"/>
+          <circle cx="33.5" cy="35" r="2.2" fill="#2b2620"/>
+        </svg>
+        <div>
+          <p class="op-firma">Dørgruppen</p>
+          <p class="op-tittel">Lei din egen dør</p>
+          <p class="op-tekst">Cellekontor med utsikt mot gangen. Innflytting uten drøfting eller medvirkning.</p>
+          <p class="op-slagord">Vi holder døra åpen. Omtrent 12 prosent av tiden.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section class="more" aria-labelledby="more-title">
+    <h2 class="sr-only" id="more-title">Flere saker</h2>
+    <div class="stubs">
+      <article class="stub">
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Tok tre av fire kanelboller: Kollega mistenkes for misbruk av dominerende stilling</span></button></h3>
+        <p class="desk-s">Konkurranseredaksjonen</p>
+      </article>
+      <article class="stub">
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kjelleren bryter tausheten: –&nbsp;Jeg er bare et arkiv</span></button></h3>
+        <p class="desk-s">Kulturredaksjonen</p>
+      </article>
+      <article class="stub">
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Dokumentet «ENDELIG_<wbr>v3_<wbr>NY_<wbr>bruk_<wbr>denne» var heller ikke endelig</span></button></h3>
+        <p class="desk-s">Teknologiredaksjonen</p>
+      </article>
+      <article class="stub">
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kollega førte 0,1 time på å føre timer</span></button></h3>
+        <p class="desk-s">Økonomiredaksjonen</p>
+      </article>
+      <article class="stub">
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Oppvaskmaskinen har stått ren i tre dager: Ansvaret pulveriseres</span></button></h3>
+        <p class="desk-s">HMS-redaksjonen</p>
+      </article>
+      <article class="stub">
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Fullmektig ble bedt om å «se kjapt på» et vedlegg: Det var på 212 sider</span></button></h3>
+        <p class="desk-s">Arbeidslivsredaksjonen</p>
+      </article>
+    </div>
+  </section>
+
+  <p class="fix"><strong>Rettelse:</strong> I saken <button type="button" class="paid ref"><span class="u">«Kaffemaskinen tom igjen»</span><span class="plus" aria-hidden="true">+</span><span class="sr-only"> (Lunsj+)</span><span class="hl" hidden>Kaffemaskinen tom igjen: Ansatte bønn-faller ledelsen</span></button> ble det gitt inntrykk av at maskinen hadde vært fylt opp i mellomtiden. Det har den ikke. Lunsjbordet beklager.</p>
+
+</main>
+
+</div>
+
+<footer class="colophon">
+  <div class="colophon-inner">
+    <p>Lunsjbordet er satire. Plussakene finnes foreløpig bare som overskrifter. Tips redaksjonen med en lapp ved kaffemaskinen.</p>
+  </div>
+</footer>
+
+<dialog class="betalingsmur" id="betalingsmur" aria-labelledby="pw-title">
+  <h2 class="pw-title" id="pw-title"><span class="plus" aria-hidden="true">+</span><span id="pw-title-text">Denne saken krever Lunsj+</span></h2>
+  <p class="pw-hl" id="pw-hl"></p>
+  <p class="pw-text" id="pw-text" aria-live="polite">Lunsj+ koster én kanelbolle i uka, betalt ved kaffemaskinen. Bindingstid til julebordet.</p>
+  <div class="pw-actions">
+    <button type="button" class="btn solid" id="pw-buy">Kjøp Lunsj+</button>
+    <button type="button" class="btn quiet" id="pw-close">Lukk</button>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  "use strict";
+
+  // Dagens dato i avishodet
+  var todayEl = document.getElementById("today");
+  try {
+    var s = new Intl.DateTimeFormat("nb-NO", { weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(new Date());
+    todayEl.textContent = s.charAt(0).toUpperCase() + s.slice(1);
+  } catch (e) {
+    // Beholder datoen som står i avishodet
+  }
+
+  // Nedtelling til ankeforhandlingen 13.–15. oktober 2026
+  var bigEl = document.getElementById("count-big");
+  var smallEl = document.getElementById("count-small");
+  var now = new Date();
+  var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  var d = Math.round((new Date(2026, 9, 13) - today) / 86400000);
+  if (d > 1) { bigEl.textContent = d + " dager"; smallEl.textContent = "til Borgarting"; }
+  else if (d === 1) { bigEl.textContent = "I morgen"; smallEl.textContent = "i Borgarting"; }
+  else if (d >= -2) { bigEl.textContent = "Dag " + (1 - d); smallEl.textContent = "i Borgarting"; }
+  else { bigEl.textContent = "Ferdig"; smallEl.textContent = "prosedert"; }
+
+  // Plussaker og Lunsj+: overskriften finnes, saken ligger bak betalingsmuren
+  var dlg = document.getElementById("betalingsmur");
+  var titleEl = document.getElementById("pw-title-text");
+  var hlEl = document.getElementById("pw-hl");
+  var textEl = document.getElementById("pw-text");
+  var buyBtn = document.getElementById("pw-buy");
+  var closeBtn = document.getElementById("pw-close");
+  var MODES = {
+    story: {
+      title: titleEl.textContent,
+      text: textEl.textContent,
+      doneTitle: "Bestillingen er registrert",
+      doneText: "Legg kanelbollen ved kaffemaskinen. Saken åpnes innen rimelig tid."
+    },
+    sub: {
+      title: "Bli Lunsj+-abonnent",
+      text: "Bollen leveres ved kaffemaskinen hver mandag. Bindingstid til julebordet.",
+      doneTitle: "Velkommen som abonnent",
+      doneText: "Legg kanelbollen ved kaffemaskinen. Abonnementet aktiveres innen rimelig tid."
+    }
+  };
+  var mode = MODES.story;
+  var trigger = null;
+  var bought = false;
+
+  function openWall(btn, m, hlText) {
+    trigger = btn;
+    mode = m;
+    bought = false;
+    titleEl.textContent = m.title;
+    textEl.textContent = m.text;
+    hlEl.textContent = hlText;
+    buyBtn.hidden = false;
+    if (typeof dlg.showModal === "function") dlg.showModal();
+    else dlg.setAttribute("open", "");
+    buyBtn.focus();
+  }
+
+  function onClosed() {
+    if (bought && mode === MODES.sub) markSubscribed();
+    if (trigger && trigger.offsetParent !== null) {
+      try { trigger.focus(); } catch (e) { /* fokus er en bekvemmelighet */ }
+    }
+    trigger = null;
+  }
+
+  function closeWall() {
+    if (typeof dlg.close === "function") {
+      dlg.close();
+    } else {
+      dlg.removeAttribute("open");
+      onClosed();
+    }
+  }
+
+  dlg.addEventListener("close", onClosed);
+
+  Array.prototype.forEach.call(document.querySelectorAll(".paid"), function (btn) {
+    btn.addEventListener("click", function () {
+      var hl = btn.querySelector(".hl");
+      openWall(btn, MODES.story, hl ? hl.textContent.replace(/\s+/g, " ").trim() : "");
+    });
+  });
+
+  buyBtn.addEventListener("click", function () {
+    bought = true;
+    titleEl.textContent = mode.doneTitle;
+    textEl.textContent = mode.doneText;
+    buyBtn.hidden = true;
+    closeBtn.focus();
+  });
+
+  closeBtn.addEventListener("click", closeWall);
+
+  // Lunsj+-banneret øverst
+  var plusbar = document.getElementById("plusbar");
+  var pbMsg = document.getElementById("pb-msg");
+
+  function markSubscribed() {
+    pbMsg.textContent = "Takk for at du abonnerer. Plussakene er fortsatt bare overskrifter.";
+    plusbar.classList.add("done");
+    pbMsg.focus();
+  }
+
+  document.getElementById("pb-cta").addEventListener("click", function () {
+    openWall(this, MODES.sub, "Høsttilbud: én kanelbolle i uka (før to)");
+  });
+
+  document.getElementById("pb-no").addEventListener("click", function () {
+    pbMsg.textContent = "Greit. Vi spør igjen ved neste sidevisning.";
+    plusbar.classList.add("done");
+    pbMsg.focus();
+    setTimeout(function () { plusbar.classList.add("leaving"); }, 2600);
+    setTimeout(function () {
+      plusbar.hidden = true;
+      var next = document.getElementById("br-toggle");
+      if (!next || next.offsetParent === null) next = document.querySelector(".front a");
+      if (next) next.focus();
+    }, 2950);
+  });
+
+  // Nytraktet: banneret på mindre skjermer viser siste overskrift og kan foldes ut
+  var br = document.getElementById("breaking");
+  var brBtn = document.getElementById("br-toggle");
+  var firstHl = br.querySelector(".br-item .br-hl");
+  if (firstHl) document.getElementById("br-head").textContent = firstHl.textContent;
+  brBtn.addEventListener("click", function () {
+    var open = brBtn.getAttribute("aria-expanded") !== "true";
+    brBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    br.classList.toggle("open", open);
+  });
+
+  // Annonsen for Oppvaskakademiet
+  var adBtn = document.getElementById("kurs-pamelding");
+  var adReply = document.getElementById("kurs-svar");
+  adBtn.addEventListener("click", function () {
+    if (adBtn.getAttribute("aria-disabled") === "true") return;
+    adBtn.setAttribute("aria-disabled", "true");
+    adBtn.textContent = "Påmeldt";
+    adReply.textContent = "Påmelding mottatt. Hilde tar kontakt.";
+  });
+
+  // Podkasten: avspilleren later som den spiller, med teksting linje for linje
+  var EPISODES = [
+    { no: 14, title: "Livet etter Bussen", guest: "Med Markus, fra cellekontoret", dur: 1080, lines: [
+      ["", "[Kaffemaskinen kverner]"],
+      ["Programleder", "Velkommen til Kø ved kaffemaskinen. Kaffen trekker, og det gjør vi også."],
+      ["Programleder", "I studio har vi Markus, som nylig gikk av Bussen."],
+      ["Markus", "Jeg har ikke forlatt noen. Jeg har bare fått en dør."],
+      ["Nushin", "Kan jeg ringe inn? Det er et svik uten like."],
+      ["Markus", "Døra står nesten alltid åpen."],
+      ["Programleder", "Ifølge våre målinger: 12 prosent av tiden."]
+    ] },
+    { no: 13, title: "Hilde forklarer oppvaskmaskinen. Igjen.", guest: "Med Hilde Bakke", dur: 1260, lines: [
+      ["Programleder", "I dag skal Hilde forklare oppvaskmaskinen."],
+      ["Hilde", "Åpne døra. Sett inn koppen. Lukk døra."],
+      ["Programleder", "Kan du ta det én gang til, litt saktere?"],
+      ["Hilde", "Nei."],
+      ["", "[En kopp blir satt på benken]"],
+      ["Hilde", "Hørte dere det? Det var en partner."]
+    ] },
+    { no: 12, title: "LO-notatet, alle 41 fotnotene", guest: "Med Nicolay Skarning", dur: 10020, lines: [
+      ["Nicolay", "Fotnote 1. En vaffel med brunost er en utilbørlig fordel."],
+      ["Nicolay", "Fotnote 2. Se fotnote 1."],
+      ["Programleder", "Vi har 39 fotnoter igjen."],
+      ["", "[Vaffeljernet piper]"],
+      ["Nicolay", "Ikke spis bevisene."]
+    ] },
+    { no: 11, title: "Hvor er Juni i lunsjen?", guest: "Med Elias", dur: 690, lines: [
+      ["Programleder", "Vi har ringt Juni for å spørre hvor hun er i lunsjen."],
+      ["", "[Det ringer. Ingen svarer.]"],
+      ["Elias", "Jakken henger på stolen. Mer vet jeg ikke."],
+      ["Programleder", "Juni, hvis du hører dette: Bussen går 11:30, og den venter ikke."]
+    ] }
+  ];
+  var SPEEDS = [{ label: "1×", f: 1 }, { label: "1,5×", f: 1.5 }, { label: "2×", f: 2 }, { label: "Haster litt", f: 3 }];
+  var LINE_MS = 3200;
+  var SIM = 4;
+  var pod = document.getElementById("pod");
+  var playBtn = document.getElementById("pod-play");
+  var speedBtn = document.getElementById("pod-speed");
+  var epTitleEl = document.getElementById("pod-ep-title");
+  var guestEl = document.getElementById("pod-guest");
+  var podBar = document.getElementById("pod-bar");
+  var posEl = document.getElementById("pod-pos");
+  var durEl = document.getElementById("pod-dur");
+  var capEl = document.getElementById("pod-cap");
+  var moreBtn = document.getElementById("pod-more");
+  var moreHl = document.getElementById("pod-more-hl");
+  var epBtns = Array.prototype.slice.call(document.querySelectorAll(".pod-item"));
+  var cur = 0, speed = 0, played = 0, last = 0, timer = null, ended = false;
+
+  function clock(sec) {
+    sec = Math.floor(sec);
+    var h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), x = sec % 60;
+    return (h ? h + ":" + (m < 10 ? "0" : "") : "") + m + ":" + (x < 10 ? "0" : "") + x;
+  }
+  function caption(line) {
+    capEl.textContent = "";
+    if (line[0]) {
+      var who = document.createElement("b");
+      who.textContent = line[0];
+      capEl.appendChild(who);
+    }
+    capEl.appendChild(document.createTextNode(line[1]));
+  }
+  function renderPos() {
+    var ep = EPISODES[cur];
+    var sec = Math.min(played * SIM / 1000, ep.dur);
+    posEl.textContent = clock(sec);
+    podBar.style.width = (sec / ep.dur * 100) + "%";
+  }
+  function pause() {
+    if (timer) clearInterval(timer);
+    timer = null;
+    pod.classList.remove("playing");
+    playBtn.setAttribute("aria-pressed", "false");
+    playBtn.setAttribute("aria-label", "Spill av episoden");
+  }
+  function tick() {
+    var now = Date.now();
+    played += (now - last) * SPEEDS[speed].f;
+    last = now;
+    var ep = EPISODES[cur];
+    var i = Math.floor(played / LINE_MS);
+    if (i >= ep.lines.length) {
+      // Gratisdelen er slutt: resten ligger bak betalingsmuren
+      played = ep.lines.length * LINE_MS;
+      pause();
+      ended = true;
+      caption(["", "Resten av episoden er bare for Lunsj+-abonnenter."]);
+      moreBtn.hidden = false;
+      renderPos();
+      return;
+    }
+    caption(ep.lines[i]);
+    renderPos();
+  }
+  function play() {
+    if (ended) {
+      ended = false;
+      played = 0;
+      moreBtn.hidden = true;
+    }
+    last = Date.now();
+    pod.classList.add("playing");
+    playBtn.setAttribute("aria-pressed", "true");
+    playBtn.setAttribute("aria-label", "Sett episoden på pause");
+    tick();
+    if (!ended) timer = setInterval(tick, 250);
+  }
+  function load(i) {
+    pause();
+    cur = i;
+    played = 0;
+    ended = false;
+    var ep = EPISODES[i];
+    epTitleEl.textContent = "Episode " + ep.no + ": " + ep.title;
+    guestEl.textContent = ep.guest;
+    durEl.textContent = clock(ep.dur);
+    moreHl.textContent = "Kø ved kaffemaskinen, episode " + ep.no + ": " + ep.title;
+    moreBtn.hidden = true;
+    caption(ep.lines[0]);
+    renderPos();
+    epBtns.forEach(function (b, j) { b.parentNode.setAttribute("aria-current", j === i ? "true" : "false"); });
+  }
+
+  playBtn.addEventListener("click", function () {
+    if (timer) pause(); else play();
+  });
+  speedBtn.addEventListener("click", function () {
+    speed = (speed + 1) % SPEEDS.length;
+    speedBtn.textContent = SPEEDS[speed].label;
+    speedBtn.setAttribute("aria-label", "Avspillingshastighet: " + SPEEDS[speed].label);
+  });
+  epBtns.forEach(function (b, i) {
+    b.addEventListener("click", function () { load(i); play(); });
+  });
+
+  // Klikk utenfor ruta lukker den
+  dlg.addEventListener("click", function (e) {
+    if (e.target !== dlg) return;
+    var r = dlg.getBoundingClientRect();
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) closeWall();
+  });
+})();
+</script>
+</body>
+</html>
