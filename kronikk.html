@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="color-scheme" content="light dark">
+<title>Mens maten var på vei | Lunsjbordet</title>
+<meta name="description" content="Kronikk. Markus ble sittende igjen på kontoret med house-jazz på øret og overtidsmat på vei. Før maten kom, hadde han lært mer om bransjen og selve livet enn på samtlige frokostseminarer.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Permanent+Marker&family=Schibsted+Grotesk:wght@400..900&display=swap">
+<style>
+  /* Lunsjbordets profil: samme farger og skrifter som i avisens øvrige saker.
+     Kronikken: én spalte, serif i tittelen skiller meninger fra nyheter, utsikten fra cellekontoret som bilde. */
+  :root {
+    --bg: #f3f5f4;
+    --ink: #1c2226;
+    --muted: #59646a;
+    --line: #cfd6d5;
+    --surface: #e4e9e8;
+    --link: #1f5e57;
+    --amber: #e8962a;
+    --glow: rgba(232, 150, 42, .55);
+    --postit: #f4d547;
+    --wall: #d6dcda;
+    --floor: #b6bebc;
+    --frame: #7e888b;
+    --steel-hi: #e4e8e8;
+    --steel: #b3bbbd;
+    --drop: rgba(20, 26, 30, .35);
+    --tape: rgba(255, 255, 255, .6);
+    --night: rgba(8, 11, 14, .62);
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --marker: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121618;
+      --ink: #e6eae9;
+      --muted: #9ba6aa;
+      --line: #2b3337;
+      --surface: #1b2124;
+      --link: #7cc4b7;
+      --amber: #f2a640;
+      --glow: rgba(242, 166, 64, .5);
+      --postit: #e9ca3e;
+      --wall: #1e2427;
+      --floor: #15191b;
+      --frame: #2b3236;
+      --steel-hi: #5c666a;
+      --steel: #3e464a;
+      --drop: rgba(0, 0, 0, .6);
+      --tape: rgba(255, 255, 255, .3);
+      --night: rgba(0, 0, 0, .55);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121618;
+    --ink: #e6eae9;
+    --muted: #9ba6aa;
+    --line: #2b3337;
+    --surface: #1b2124;
+    --link: #7cc4b7;
+    --amber: #f2a640;
+    --glow: rgba(242, 166, 64, .5);
+    --postit: #e9ca3e;
+    --wall: #1e2427;
+    --floor: #15191b;
+    --frame: #2b3236;
+    --steel-hi: #5c666a;
+    --steel: #3e464a;
+    --drop: rgba(0, 0, 0, .6);
+    --tape: rgba(255, 255, 255, .3);
+    --night: rgba(0, 0, 0, .55);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  .nw { white-space: nowrap; }
+
+  /* Avishode, med lenke tilbake til forsiden */
+  .masthead { border-bottom: 1px solid var(--line); }
+  .masthead-inner { max-width: 54rem; margin: 0 auto; padding: 1.1rem max(1.25rem, env(safe-area-inset-right, 0px)) 1rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .75rem 2rem; font-family: var(--sans); }
+  .brand { margin: 0; font-size: 1.75rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+  .brand a { color: inherit; text-decoration: none; }
+  @media (hover: hover) { .brand a:hover { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; } }
+  .brand-tag { margin: .35rem 0 0; font-size: .875rem; color: var(--muted); }
+  .today { margin: 0; font-size: .875rem; line-height: 1.45; color: var(--muted); text-align: right; }
+  @media (max-width: 40rem) { .today { text-align: left; } }
+
+  /* Kronikken */
+  main { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px)); }
+  .story { max-width: 42rem; margin: 0 auto; }
+  .kicker { margin: 2.5rem 0 .6rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
+  h1 { margin: 0 0 1.1rem; font-family: var(--serif); font-weight: 600; font-size: clamp(2.4rem, 1.35rem + 4.6vw, 4rem); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance; }
+  .lead { margin: 0 0 1.5rem; font-size: 1.3125rem; line-height: 1.45; font-weight: 500; }
+  .byline { margin: 0 0 2rem; font-family: var(--sans); font-size: .875rem; line-height: 1.5; color: var(--muted); }
+  .byline p { margin: 0; }
+  .author { color: var(--ink); font-weight: 700; }
+
+  /* Utsikten fra cellekontoret */
+  .hero { margin: 0 0 2.25rem; }
+  @media (min-width: 62rem) { .hero { margin-inline: -5rem; } }
+  .stage { position: relative; isolation: isolate; display: grid; justify-items: center; padding: clamp(1.75rem, 5vw, 2.75rem) clamp(1rem, 5vw, 3rem) 2.75rem; background: linear-gradient(to top, var(--floor) 0 1.25rem, transparent 1.25rem), var(--wall); border-radius: 8px; overflow: hidden; }
+  .night { position: absolute; inset: 0; z-index: 1; background: var(--night); opacity: 0; pointer-events: none; }
+  .room { position: relative; z-index: 2; width: min(100%, 31rem); }
+  .win { position: relative; padding: .5rem; background: linear-gradient(160deg, var(--steel-hi), var(--steel)); border: 1px solid var(--frame); border-radius: 6px; box-shadow: 0 12px 22px -14px var(--drop); }
+  .win::before { content: ""; position: absolute; inset: 0; border-radius: inherit; background: var(--night); opacity: 0; }
+  .dk-view { position: relative; z-index: 1; display: block; width: 100%; height: auto; border-radius: 2px; }
+  .sill { height: .75rem; margin: 0 -.75rem; background: linear-gradient(to bottom, var(--steel-hi), var(--steel)); border: 1px solid var(--frame); border-radius: 2px; box-shadow: 0 8px 10px -7px var(--drop); }
+  .postit { position: absolute; top: -.9rem; right: -.8rem; z-index: 2; width: 4.6rem; height: 4.2rem; display: grid; place-items: center; padding: .2rem; text-align: center; transform: rotate(7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1.05rem/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .postit::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.2rem; height: .9rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+  .phone { position: absolute; left: clamp(.4rem, 5%, 1.5rem); bottom: .75rem; z-index: 3; width: clamp(7.5rem, 34%, 10.25rem); padding: .3rem; border-radius: 14px; background: #1d2428; box-shadow: 0 16px 22px -12px var(--drop), inset 0 0 0 1px rgba(255, 255, 255, .1); transform: rotate(-4deg); transform-origin: bottom left; }
+  .screen { padding: .5rem .55rem .6rem; border-radius: 11px; background: #0e1113; color: #edf1f2; font-family: var(--sans); }
+  .ph-top { display: flex; justify-content: space-between; gap: .5rem; font-size: .625rem; font-weight: 700; line-height: 1; color: var(--amber); text-shadow: 0 0 6px var(--glow); font-variant-numeric: tabular-nums; }
+  .bar { height: .3rem; margin: .5rem 0; border-radius: 99px; background: rgba(255, 255, 255, .14); overflow: hidden; }
+  .bar span { display: block; width: 40%; height: 100%; border-radius: inherit; background: var(--amber); box-shadow: 0 0 8px var(--glow); }
+  .ph-status { margin: 0; font-size: .8125rem; font-weight: 800; line-height: 1.2; }
+  .ph-eta { margin: .2rem 0 0; font-size: .6875rem; font-weight: 500; line-height: 1.3; color: #a3aeb2; }
+  .stage.off .night, .stage.off .win::before { opacity: 1; }
+  .stage.off .sill, .stage.off .postit { filter: brightness(.45); }
+  .stage.off .dk-mull { fill: #3a4145; stroke: #22282b; }
+
+  /* Utsikten: solnedgangen speilet i nabobyggets vinduer, fase for fase */
+  .dk-sky-a { stop-color: var(--s1); }
+  .dk-sky-b { stop-color: var(--s2); }
+  .dk-refl-a { stop-color: var(--r1); }
+  .dk-refl-b { stop-color: var(--r2); }
+  .dk-facade { fill: var(--frame); }
+  .dk-parapet { fill: var(--steel); }
+  .dk-mull { fill: var(--steel); stroke: var(--frame); stroke-width: 1; }
+  .dk-lit { fill: #f6e3a1; opacity: var(--lit-o); }
+  .dk-sun { opacity: var(--sun-o); transform: translateY(var(--sun-y)); }
+  .dk-sheen { fill: #ffffff; opacity: .07; }
+  @supports (fill: color-mix(in srgb, red, blue)) {
+    .dk-facade { fill: color-mix(in srgb, var(--frame), #0b0e12 var(--fd)); }
+    .dk-parapet { fill: color-mix(in srgb, var(--steel), #0b0e12 var(--fd)); }
+  }
+  .stage[data-phase="0"] { --s1: #a7c2d4; --s2: #f3d39a; --r1: #f1c784; --r2: #e48f4a; --sun-y: 0px; --sun-o: 1; --lit-o: 0; --fd: 0%; }
+  .stage[data-phase="1"] { --s1: #8fa9c6; --s2: #f1b072; --r1: #efb06a; --r2: #dc7a40; --sun-y: 14px; --sun-o: 1; --lit-o: 0; --fd: 0%; }
+  .stage[data-phase="2"] { --s1: #7889b2; --s2: #ec9168; --r1: #f0a467; --r2: #da6c54; --sun-y: 30px; --sun-o: .95; --lit-o: 0; --fd: 6%; }
+  .stage[data-phase="3"] { --s1: #5e6c9a; --s2: #da767c; --r1: #e38a72; --r2: #bb5e78; --sun-y: 52px; --sun-o: .55; --lit-o: .85; --fd: 18%; }
+  .stage[data-phase="4"] { --s1: #454f7c; --s2: #ab6380; --r1: #bd6d82; --r2: #7f5886; --sun-y: 70px; --sun-o: .12; --lit-o: 1; --fd: 32%; }
+  .stage[data-phase="5"] { --s1: #2f3959; --s2: #6e5275; --r1: #775b7e; --r2: #4b486d; --sun-y: 80px; --sun-o: 0; --lit-o: 1; --fd: 46%; }
+  .controls { margin-top: .9rem; }
+  .btn { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .55rem 1rem; border: 1px solid var(--ink); border-radius: 8px; background: transparent; color: var(--ink); font: 600 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
+  .btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  @media (hover: hover) { .btn:hover { background: var(--surface); } }
+  figcaption { margin-top: .7rem; font-family: var(--sans); font-size: .875rem; line-height: 1.45; color: var(--muted); }
+  .credit { white-space: nowrap; }
+
+  /* Brødtekst */
+  .body p { margin: 0 0 1.05em; font-size: 1.1875rem; line-height: 1.62; }
+  .body blockquote { margin: 2rem 0 2.1rem; padding-left: 1.25rem; border-left: 4px solid var(--postit); }
+  .body blockquote p { margin: 0; font: 700 1.5rem/1.25 var(--sans); letter-spacing: -0.015em; }
+  .body .bio { margin-top: 1.6em; }
+  .disclaimer { margin: 2rem 0 0; padding-top: 1rem; border-top: 1px solid var(--line); font: 500 .9375rem/1.5 var(--sans); color: var(--muted); }
+
+  /* Les også */
+  .more { margin: 2.75rem 0 0; font-family: var(--sans); }
+  .more h2 { margin: 0 0 .7rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+  .more ul { margin: 0; padding: 0; list-style: none; }
+  .more li { margin: 0 0 1rem; font-size: 1.0625rem; font-weight: 700; line-height: 1.35; }
+  .src { display: block; margin-top: .2rem; font-size: .8125rem; font-weight: 500; color: var(--muted); }
+
+  .colophon { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px)); font: 500 .875rem/1.5 var(--sans); color: var(--muted); }
+  .colophon p { max-width: 42rem; margin: 3rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+
+  /* Bevegelse: kvelden glir over når leveringen oppdateres, og bare hvis leseren ikke har bedt om mindre bevegelse */
+  @media (prefers-reduced-motion: no-preference) {
+    .dk-view stop { transition: stop-color 1.4s ease; }
+    .dk-sun { transition: transform 1.6s ease, opacity 1.4s ease; }
+    .dk-lit { transition: opacity 1.2s ease; }
+    .dk-facade, .dk-parapet, .dk-mull { transition: fill 1.4s ease, stroke .9s ease; }
+    .bar span { transition: width .9s ease; }
+    .night, .win::before { transition: opacity .9s ease; }
+    .sill, .postit { transition: filter .9s ease; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="brand"><a href="index.html">Lunsjbordet</a></p>
+      <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+    </div>
+    <p class="today">Mandag 5. oktober 2026<br>Været ved vinduet: oppholdsvær, med solnedgang i andre hånd</p>
+  </div>
+</header>
+
+<main>
+  <article class="story">
+    <p class="kicker">Kronikk</p>
+    <h1>Mens maten var på vei</h1>
+
+    <p class="lead">Her om kvelden ble jeg sittende igjen på kontoret. Sola gikk ned, jeg hadde house-jazz på øret, og overtidsmaten var på vei. Før maten kom, hadde jeg lært mer om bransjen og selve livet enn på samtlige frokostseminarer jeg har deltatt på.</p>
+
+    <div class="byline">
+      <p class="author">Markus</p>
+      <p>Publisert <time datetime="2026-10-05">mandag 5. oktober 2026</time></p>
+    </div>
+
+    <figure class="hero">
+      <div class="stage" id="stage" data-phase="0">
+        <div class="night" aria-hidden="true"></div>
+        <div class="room">
+          <div class="win">
+            <svg class="dk-view" viewBox="0 0 320 210" role="img" aria-labelledby="dk-title"><title id="dk-title">Utsikt fra kontorvinduet: solnedgangen speiles i vinduene på nabobygget</title><defs><linearGradient id="dk-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="dk-sky-a"/><stop offset="1" class="dk-sky-b"/></linearGradient><linearGradient id="dk-refl" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="210"><stop offset="0" class="dk-refl-a"/><stop offset="1" class="dk-refl-b"/></linearGradient><radialGradient id="dk-sun"><stop offset="0" stop-color="#fffdf0"/><stop offset=".22" stop-color="#fff0b8"/><stop offset=".5" stop-color="#ffc768" stop-opacity=".8"/><stop offset="1" stop-color="#f59a45" stop-opacity="0"/></radialGradient><mask id="dk-panes" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="210"><g fill="#fff"><rect x="27" y="46" width="36" height="32" rx="1"/><rect x="73" y="46" width="36" height="32" rx="1"/><rect x="119" y="46" width="36" height="32" rx="1"/><rect x="165" y="46" width="36" height="32" rx="1"/><rect x="211" y="46" width="36" height="32" rx="1"/><rect x="257" y="46" width="36" height="32" rx="1"/><rect x="27" y="92" width="36" height="32" rx="1"/><rect x="73" y="92" width="36" height="32" rx="1"/><rect x="119" y="92" width="36" height="32" rx="1"/><rect x="165" y="92" width="36" height="32" rx="1"/><rect x="211" y="92" width="36" height="32" rx="1"/><rect x="257" y="92" width="36" height="32" rx="1"/><rect x="27" y="138" width="36" height="32" rx="1"/><rect x="73" y="138" width="36" height="32" rx="1"/><rect x="119" y="138" width="36" height="32" rx="1"/><rect x="165" y="138" width="36" height="32" rx="1"/><rect x="211" y="138" width="36" height="32" rx="1"/><rect x="257" y="138" width="36" height="32" rx="1"/><rect x="27" y="184" width="36" height="32" rx="1"/><rect x="73" y="184" width="36" height="32" rx="1"/><rect x="119" y="184" width="36" height="32" rx="1"/><rect x="165" y="184" width="36" height="32" rx="1"/><rect x="211" y="184" width="36" height="32" rx="1"/><rect x="257" y="184" width="36" height="32" rx="1"/></g></mask></defs><rect width="320" height="210" fill="url(#dk-sky)"/><rect class="dk-facade" x="18" y="34" width="284" height="180"/><rect class="dk-parapet" x="14" y="30" width="292" height="6"/><g fill="url(#dk-refl)"><rect x="27" y="46" width="36" height="32" rx="1"/><rect x="73" y="46" width="36" height="32" rx="1"/><rect x="119" y="46" width="36" height="32" rx="1"/><rect x="165" y="46" width="36" height="32" rx="1"/><rect x="211" y="46" width="36" height="32" rx="1"/><rect x="257" y="46" width="36" height="32" rx="1"/><rect x="27" y="92" width="36" height="32" rx="1"/><rect x="73" y="92" width="36" height="32" rx="1"/><rect x="119" y="92" width="36" height="32" rx="1"/><rect x="165" y="92" width="36" height="32" rx="1"/><rect x="211" y="92" width="36" height="32" rx="1"/><rect x="257" y="92" width="36" height="32" rx="1"/><rect x="27" y="138" width="36" height="32" rx="1"/><rect x="73" y="138" width="36" height="32" rx="1"/><rect x="119" y="138" width="36" height="32" rx="1"/><rect x="165" y="138" width="36" height="32" rx="1"/><rect x="211" y="138" width="36" height="32" rx="1"/><rect x="257" y="138" width="36" height="32" rx="1"/><rect x="27" y="184" width="36" height="32" rx="1"/><rect x="73" y="184" width="36" height="32" rx="1"/><rect x="119" y="184" width="36" height="32" rx="1"/><rect x="165" y="184" width="36" height="32" rx="1"/><rect x="211" y="184" width="36" height="32" rx="1"/><rect x="257" y="184" width="36" height="32" rx="1"/></g><rect class="dk-lit" x="27" y="92" width="36" height="32" rx="1"/><rect class="dk-lit" x="119" y="46" width="36" height="32" rx="1"/><rect class="dk-lit" x="165" y="138" width="36" height="32" rx="1"/><rect class="dk-lit" x="257" y="92" width="36" height="32" rx="1"/><g mask="url(#dk-panes)"><circle class="dk-sun" cx="229" cy="106" r="24" fill="url(#dk-sun)"/></g><g class="dk-facade"><rect x="44" y="46" width="2" height="32"/><rect x="90" y="46" width="2" height="32"/><rect x="136" y="46" width="2" height="32"/><rect x="182" y="46" width="2" height="32"/><rect x="228" y="46" width="2" height="32"/><rect x="274" y="46" width="2" height="32"/><rect x="44" y="92" width="2" height="32"/><rect x="90" y="92" width="2" height="32"/><rect x="136" y="92" width="2" height="32"/><rect x="182" y="92" width="2" height="32"/><rect x="228" y="92" width="2" height="32"/><rect x="274" y="92" width="2" height="32"/><rect x="44" y="138" width="2" height="32"/><rect x="90" y="138" width="2" height="32"/><rect x="136" y="138" width="2" height="32"/><rect x="182" y="138" width="2" height="32"/><rect x="228" y="138" width="2" height="32"/><rect x="274" y="138" width="2" height="32"/><rect x="44" y="184" width="2" height="32"/><rect x="90" y="184" width="2" height="32"/><rect x="136" y="184" width="2" height="32"/><rect x="182" y="184" width="2" height="32"/><rect x="228" y="184" width="2" height="32"/><rect x="274" y="184" width="2" height="32"/></g><polygon class="dk-sheen" points="92,0 128,0 40,210 4,210"/><rect class="dk-mull" x="158.25" y="-1" width="3.5" height="212"/></svg>
+            <div class="postit" aria-hidden="true">IKKE FØRT.</div>
+          </div>
+          <div class="sill" aria-hidden="true"></div>
+          <div class="phone" role="status" aria-live="polite" aria-atomic="true" aria-label="Leveringsstatus for overtidsmaten">
+            <div class="screen">
+              <div class="ph-top"><span id="ph-time">18:22</span><span>Overtidsmat</span></div>
+              <div class="bar" aria-hidden="true"><span id="ph-bar"></span></div>
+              <p class="ph-status" id="ph-status">Restauranten lager maten</p>
+              <p class="ph-eta" id="ph-eta">Levering ca. 18:39</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button type="button" class="btn" id="advance">Oppdater leveringsstatus</button>
+      </div>
+      <figcaption>Utsikten fra cellekontoret, slik Markus så den: speilet i vinduene på nabobygget. Følg gjerne leveringen selv. <span class="credit">Illustrasjon: Lunsjbordet</span></figcaption>
+    </figure>
+
+    <div class="body">
+      <p>Det begynte med en e-post klokka 16:52. Emnefeltet var «Haster litt». «Litt» er den delen av hastegraden som blir igjen hos avsenderen. Resten fikk jeg.</p>
+
+      <p>Klokka seks var etasjen nesten tom. Jeg bestilte overtidsmat, og appen anslo 34 minutter. Retningslinjene for overtidsmat har jeg aldri lest i sin helhet, og de er den eneste teksten i bygget jeg tolker utvidende.</p>
+
+      <p>Jeg satte på en spilleliste med «late night» og «lounge» i navnet og snudde stolen mot vinduet. House-jazz er jazz for folk som ikke rekker jazzklubben, og house for folk som skal på jobb i morgen. Den er kultivert nok til at man føler seg som hotellgjest i Lisboa, og rytmisk nok til å holde takten på tastaturet.</p>
+
+      <p>Så begynte sola å gå ned. Strengt tatt så jeg den speilet i vinduene på nabobygget, og det teller. Himmelen ble oransje, så rosa, så den fargen som ellers bare finnes i PowerPoint-maler fra 2009.</p>
+
+      <p>I juni betyr solnedgang fra kontoret at noe har gått galt. Om høsten betyr det bare at det er høst.</p>
+
+      <blockquote>
+        <p>«Det er de beste 0,3 timene jeg aldri har fakturert.»</p>
+      </blockquote>
+
+      <p>Mens appen tellet ned, tenkte jeg på bransjen.</p>
+
+      <p>Den første lærdommen kom da en kollega fra etasjen over gikk forbi med laptopen under armen. Vi nikket til hverandre slik bussjåfører gjør når de møtes: kort, alvorlig og med full forståelse. Ingen av oss spurte hva den andre jobbet med, og det er den eneste taushetsplikten i bransjen vi har innført helt frivillig.</p>
+
+      <p>Den andre lærdommen er at overtidsmat er bransjens kjærlighetsspråk. Den sier takk på den eneste måten bransjen kan: med en beløpsgrense. Jeg landet fire kroner under. Det kalles faglig skjønn.</p>
+
+      <p>Den tredje lærdommen er at en solnedgang varer omtrent 0,3 timer. Jeg førte den ikke, og det er de beste 0,3 timene jeg aldri har fakturert. Jeg foreslår derfor at bransjen innfører en egen timekode for solnedgang, et sted mellom «fagutvikling» og «internt».</p>
+
+      <p>Så skiftet appen til «nesten fremme», og der ble den stående. Det var da jeg begynte å forstå selve livet.</p>
+
+      <p>Lyset på kontoret styres av bevegelsessensorer, og sitter man stille lenge nok, blir det mørkt. Jeg måtte vinke til taket fire ganger den kvelden for å bevise at jeg fortsatt var der. Jeg har sjelden følt meg så sett.</p>
+
+      <p>Man må altså vise livstegn med jevne mellomrom. Jeg tror prinsippet gjelder utenfor kontoret også.</p>
+
+      <p>Selve sola forsvant midt i en fotnote, uten forvarsel og uten å be om utsatt frist. Klokka 18:40 trykket jeg send, mens himmelen fortsatt var rosa. Jeg har skrevet mange fotnoter og husker ingen av dem. Den solnedgangen kommer jeg til å huske.</p>
+
+      <p>Klokka 18:58 ringte budet. Resepsjonen var for lengst stengt, så jeg tok heisen ned for å hente maten. Jeg trykket på 1 og ikke en etasje lenger ned, av grunner <a href="ma.html">Lunsjbordets faste lesere kjenner til</a>.</p>
+
+      <p>Da jeg kom opp igjen, var sola borte og lyset slukket. I innboksen lå svaret på hastesaken: «Takk! Dette kan egentlig vente til neste uke.» Det var kveldens siste lærdom om bransjen: Alt haster helt til det er levert.</p>
+
+      <p>Jeg spiste i mørket til jeg kom på å vinke. Da kom lyset tilbake. Om det var en metafor, får leserne avgjøre. Jeg har mine mistanker.</p>
+
+      <p class="bio"><em>Markus er Lunsjbordets nye kronikør. Han har overtidsmat på vei.</em></p>
+    </div>
+
+    <p class="disclaimer">Dette er en kronikk. Meninger i teksten står for skribentens regning, overtidsmaten for firmaets.</p>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title">Les også</h2>
+      <ul>
+        <li><a href="bussen.html">Markus gikk av Bussen for egen celle: <span class="nw">–&nbsp;Et</span> svik uten like</a><span class="src">Lunsjbordet</span></li>
+        <li><a href="ma.html">Kollega fikk <span class="nw">Ma-reritt</span> etter <span class="nw">Ma-kaber</span> filmkveld</a><span class="src">Lunsjbordet</span></li>
+        <li><a href="index.html">Flere saker på forsiden</a><span class="src">Lunsjbordet</span></li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer class="colophon">
+  <p>Lunsjbordet er satire. Sola går ned uansett, resten bør tas med en klype salt.</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  // Leveringen, fra restauranten til døra. Kvelden faller på mens appen står på «Nesten fremme».
+  var STEPS = [
+    { phase: 0, time: "18:22", status: "Restauranten lager maten", eta: "Levering ca. 18:39", bar: 40 },
+    { phase: 1, time: "18:31", status: "Budet har hentet maten", eta: "Levering ca. 18:39", bar: 66 },
+    { phase: 2, time: "18:36", status: "Nesten fremme", eta: "Levering ca. 18:39", bar: 92 },
+    { phase: 3, time: "18:40", status: "Nesten fremme", eta: "Levering ca. 18:39", bar: 92 },
+    { phase: 4, time: "18:49", status: "Nesten fremme", eta: "Levering ca. 18:39", bar: 92 },
+    { phase: 5, time: "18:58", status: "Budet er her", eta: "Resepsjonen er stengt. Trykk på 1.", bar: 100 },
+    { phase: 5, time: "19:04", status: "Levert", eta: "Lyset har slukket. Vink til taket.", bar: 100, off: true }
+  ];
+  var LABEL = "Oppdater leveringsstatus";
+
+  var stage = document.getElementById("stage");
+  var timeEl = document.getElementById("ph-time");
+  var barEl = document.getElementById("ph-bar");
+  var statusEl = document.getElementById("ph-status");
+  var etaEl = document.getElementById("ph-eta");
+  var btn = document.getElementById("advance");
+  var step = 0;
+  var waved = false;
+
+  function show(s) {
+    stage.setAttribute("data-phase", String(s.phase));
+    stage.classList.toggle("off", !!s.off);
+    timeEl.textContent = s.time;
+    barEl.style.width = s.bar + "%";
+    statusEl.textContent = s.status;
+    etaEl.textContent = s.eta;
+  }
+
+  btn.addEventListener("click", function () {
+    if (waved) {
+      // Ny kveld, ny bestilling
+      waved = false;
+      step = 0;
+      show(STEPS[0]);
+      btn.textContent = LABEL;
+      return;
+    }
+    if (STEPS[step].off) {
+      // Vinket til taket: lyset kommer tilbake
+      waved = true;
+      stage.classList.remove("off");
+      etaEl.textContent = "Lyset er tilbake. God appetitt.";
+      btn.textContent = "Bestill ny overtidsmat";
+      return;
+    }
+    step += 1;
+    show(STEPS[step]);
+    btn.textContent = STEPS[step].off ? "Vink til taket" : LABEL;
+  });
+})();
+</script>
+</body>
+</html>

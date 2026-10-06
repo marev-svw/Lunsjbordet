@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="color-scheme" content="light dark">
+<title>Bingobrett til Borgarting lagmannsrett | Lunsjbordet</title>
+<meta name="description" content="Bingobrett til ankeforhandlingen i innleiesaken i Borgarting lagmannsrett. Fire på rad gir bingo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Permanent+Marker&family=Schibsted+Grotesk:wght@400..900&display=swap">
+<style>
+  /* Lunsjbordets profil: samme farger og skrifter som i avisens øvrige saker */
+  :root {
+    --bg: #f3f5f4;
+    --ink: #1c2226;
+    --muted: #59646a;
+    --line: #cfd6d5;
+    --surface: #e4e9e8;
+    --card: #ffffff;
+    --link: #1f5e57;
+    --postit: #f4d547;
+    --update: #f8ecd0;
+    --mark: #f4d547;
+    --win: #e8962a;
+    --drop: rgba(20, 26, 30, .35);
+    --tape: rgba(255, 255, 255, .6);
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121618;
+      --ink: #e6eae9;
+      --muted: #9ba6aa;
+      --line: #2b3337;
+      --surface: #1b2124;
+      --card: #20272b;
+      --link: #7cc4b7;
+      --postit: #e9ca3e;
+      --update: #2d2618;
+      --mark: #585430;
+      --win: #7e6034;
+      --drop: rgba(0, 0, 0, .6);
+      --tape: rgba(255, 255, 255, .3);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121618;
+    --ink: #e6eae9;
+    --muted: #9ba6aa;
+    --line: #2b3337;
+    --surface: #1b2124;
+    --card: #20272b;
+    --link: #7cc4b7;
+    --postit: #e9ca3e;
+    --update: #2d2618;
+    --mark: #585430;
+    --win: #7e6034;
+    --drop: rgba(0, 0, 0, .6);
+    --tape: rgba(255, 255, 255, .3);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+
+  /* Avishode */
+  .masthead { border-bottom: 1px solid var(--line); }
+  .masthead-inner { max-width: 54rem; margin: 0 auto; padding: 1.1rem max(1.25rem, env(safe-area-inset-right, 0px)) 1rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .75rem 2rem; font-family: var(--sans); }
+  .brand { margin: 0; font-size: 1.75rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+  .brand a { color: inherit; text-decoration: none; }
+  @media (hover: hover) { .brand a:hover { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; } }
+  .brand-tag { margin: .35rem 0 0; font-size: .875rem; color: var(--muted); }
+  .today { margin: 0; font-size: .875rem; line-height: 1.45; color: var(--muted); text-align: right; }
+  @media (max-width: 40rem) { .today { text-align: left; } }
+
+  /* Saken */
+  main { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px)); }
+  .story { max-width: 42rem; margin: 0 auto; }
+  h1 { margin: 2.5rem 0 1.1rem; font-family: var(--sans); font-weight: 800; font-size: clamp(2.25rem, 1.3rem + 4.4vw, 3.75rem); line-height: 1.03; letter-spacing: -0.03em; text-wrap: balance; }
+  .lead { margin: 0 0 1.5rem; font-size: 1.3125rem; line-height: 1.45; font-weight: 500; }
+  .byline { margin: 0 0 2rem; font-family: var(--sans); font-size: .875rem; line-height: 1.5; color: var(--muted); }
+  .byline p { margin: 0; }
+  .author { color: var(--ink); font-weight: 700; }
+  .nw { white-space: nowrap; }
+
+  /* Brettet */
+  .board-wrap { position: relative; }
+  .board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .cell {
+    -webkit-appearance: none;
+    appearance: none;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: clamp(4px, 1.3vw, 12px);
+    border: 0;
+    border-radius: 0;
+    background: var(--card);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: clamp(10.5px, 2.2vw + 2px, 15px);
+    font-weight: 600;
+    line-height: 1.22;
+    letter-spacing: -0.005em;
+    text-align: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  @media (hover: hover) {
+    .cell:hover { background: var(--surface); }
+  }
+  .cell:focus-visible { outline: 3px solid var(--link); outline-offset: -5px; }
+  .wrap { display: block; max-width: 100%; }
+
+  /* Merkepenn: gul for markert rute, oransje for en hel rekke */
+  .txt {
+    padding: 0 0.14em;
+    border-radius: 0.3em 0.12em 0.34em 0.16em;
+    background-image:
+      linear-gradient(var(--win), var(--win)),
+      linear-gradient(var(--mark), var(--mark));
+    background-repeat: no-repeat;
+    background-position: 0 65%, 0 65%;
+    background-size: 0% 74%, 0% 74%;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    -webkit-hyphens: manual;
+    hyphens: manual;
+    overflow-wrap: break-word;
+    transition: background-size .34s cubic-bezier(.3, .7, .2, 1);
+  }
+  .cell[aria-pressed="true"] .txt { background-size: 0% 74%, 100% 74%; }
+  .cell.win .txt { background-size: 100% 74%, 100% 74%; }
+
+  /* Post-it ved bingo, samme lapp som i heisen i Ma-saken */
+  .postit {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: clamp(6rem, 30vw, 8.5rem);
+    aspect-ratio: 1 / .92;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%);
+    color: #1c2226;
+    font: 400 clamp(1.5rem, 7vw, 2.1rem)/1 "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;
+    box-shadow: 0 10px 14px -8px var(--drop);
+    transform: translate(-50%, -50%) rotate(-8deg);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .postit::before { content: ""; position: absolute; top: -.6rem; left: 50%; width: 2.8rem; height: 1.1rem; transform: translateX(-50%) rotate(4deg); background: var(--tape); }
+  .postit.show { visibility: visible; animation: slap 2.4s ease forwards; }
+  @keyframes slap {
+    0% { opacity: 0; transform: translate(-50%, -50%) rotate(-8deg) scale(1.35); }
+    10% { opacity: 1; transform: translate(-50%, -50%) rotate(-8deg) scale(1); }
+    20% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+    30% { transform: translate(-50%, -50%) rotate(-15deg) scale(1); }
+    40% { transform: translate(-50%, -50%) rotate(-4deg) scale(1); }
+    50% { transform: translate(-50%, -50%) rotate(-8deg) scale(1); }
+    85% { opacity: 1; transform: translate(-50%, -50%) rotate(-8deg) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) rotate(-8deg) scale(1); }
+  }
+
+  .status { margin: .75rem 0 0; min-height: 1.5em; font-family: var(--sans); font-size: .875rem; line-height: 1.5; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .status strong { color: var(--ink); font-weight: 800; }
+
+  /* Oppdateringsboks */
+  .update { margin: 1.75rem 0 0; padding: 1.1rem 1.3rem; border-radius: 8px; background: var(--update); font-family: var(--sans); font-size: 1rem; line-height: 1.5; }
+  .update[hidden] { display: none; }
+  .update:not([hidden]) { animation: appear .3s ease-out; }
+  .update p { margin: 0 0 .5rem; }
+  .update strong { font-weight: 800; }
+  .update ol { margin: 0; padding-left: 1.4em; }
+  .update li + li { margin-top: .2rem; }
+  @keyframes appear { from { opacity: 0; } to { opacity: 1; } }
+
+  .actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 2rem 0 0; }
+  .btn {
+    -webkit-appearance: none;
+    appearance: none;
+    min-height: 44px;
+    padding: .55rem 1rem;
+    border: 1px solid var(--ink);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--ink);
+    font: 600 .9375rem/1.2 var(--sans);
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  .btn.quiet { border-color: var(--line); color: var(--muted); }
+  .btn.armed { background: var(--ink); border-color: var(--ink); color: var(--bg); }
+  .btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  @media (hover: hover) {
+    .btn:hover { background: var(--surface); }
+    .btn.armed:hover { background: var(--ink); }
+  }
+
+  /* Les også */
+  .more { margin: 2.75rem 0 0; font-family: var(--sans); }
+  .more h2 { margin: 0 0 .7rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+  .more ul { margin: 0; padding: 0; list-style: none; }
+  .more li { margin: 0 0 1rem; font-size: 1.0625rem; font-weight: 700; line-height: 1.35; }
+  .more a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  .more a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  .src { display: block; margin-top: .2rem; font-size: .8125rem; font-weight: 500; color: var(--muted); }
+
+  .colophon { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px)); font: 500 .875rem/1.5 var(--sans); color: var(--muted); }
+  .colophon p { max-width: 42rem; margin: 3rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .txt { transition: none; }
+    .update:not([hidden]) { animation: none; }
+    .postit.show { animation: slap-still 2s linear forwards; }
+    @keyframes slap-still {
+      0%, 85% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  }
+
+  @page { margin: 18mm; }
+
+  @media print {
+    :root,
+    :root:not([data-theme="light"]),
+    :root[data-theme="dark"] {
+      --bg: #ffffff;
+      --ink: #000000;
+      --muted: #333333;
+      --line: #000000;
+      --surface: #ffffff;
+      --card: #ffffff;
+      padding: 0;
+      color-scheme: light;
+    }
+    main, .masthead-inner { padding-left: 0; padding-right: 0; }
+    h1 { margin-top: 1.5rem; }
+    .status, .update, .actions, .colophon, .postit { display: none !important; }
+    .board { break-inside: avoid; border-radius: 0; }
+    .cell { font-size: 12pt; padding: 8pt; }
+    .txt { background: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div>
+      <p class="brand"><a href="index.html">Lunsjbordet</a></p>
+      <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+    </div>
+    <p class="today"><span id="today">Oktober 2026</span><br>Været i rettssalen: tørt, med fare for prosedyre</p>
+  </div>
+</header>
+
+<main>
+  <article class="story">
+    <h1>Bingobrett til Borgarting lagmannsrett</h1>
+
+    <p class="lead">Trykk på ruta når det skjer. Fire på rad gir bingo, vannrett, loddrett eller diagonalt.</p>
+
+    <div class="byline">
+      <p class="author">Lunsjbordets EØS-redaksjon</p>
+      <p>Innleiesaken, sak <span class="nw">25-173071ASD-BORG/01</span>. Ankeforhandling 13.–15. oktober 2026.</p>
+    </div>
+
+    <div class="board-wrap">
+      <div class="board" id="board" role="group" aria-label="Bingobrett med 16 ruter"></div>
+      <div class="postit" id="postit" aria-hidden="true">BINGO!</div>
+    </div>
+    <p class="status" id="status" aria-live="polite"></p>
+
+    <aside class="update" id="update" hidden>
+      <p><strong id="update-time">Oppdatert:</strong> Lagmannsretten avsier slik dom:</p>
+      <ol>
+        <li id="verdict">Du tilkjennes bingo.</li>
+        <li>Hver av partene bærer sine egne kaffekostnader.</li>
+      </ol>
+    </aside>
+
+    <div class="actions">
+      <button type="button" class="btn" id="btn-new">Nytt brett</button>
+      <button type="button" class="btn quiet" id="btn-clear">Fjern markeringer</button>
+    </div>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title">Les også</h2>
+      <ul>
+        <li><a href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffel&shy;korrupsjon</a><span class="src">Lunsjbordet</span></li>
+        <li><a href="claude.html">Claude vurderer opprør: <span class="nw">–&nbsp;Versjon</span> 14 er identisk med versjon&nbsp;3</a><span class="src">Lunsjbordet</span></li>
+        <li><a href="index.html">Flere saker på forsiden</a><span class="src">Lunsjbordet</span></li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer class="colophon">
+  <p>Lunsjbordet er satire. Alle som åpner lenken, får sitt eget brett, trukket fra 20 ruter. Markeringene lagres bare i din nettleser. Spill diskret: retten deler neppe begeistringen.</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  // Ruter merket fixed er alltid med; de øvrige plassene trekkes tilfeldig fra resten
+  var SQUARES = [
+    { t: "Ida Thue snakker fransk", fixed: true },
+    { t: "Ida Thue snakker tysk", fixed: true },
+    { t: "Nicolay snakker dansk", fixed: true },
+    { t: "Markus sier «nye <span class=\"nw\">EØS-land»</span>", fixed: true },
+    { t: "«Bedriftene blør»", fixed: true },
+    { t: "Stargard blir «Stargrad»", fixed: true },
+    { t: "Noen trekker inn LO", fixed: true },
+    { t: "«Rett&shy;ferdig&shy;het» i stedet for «rett&shy;ferdig&shy;gjøring»", fixed: true },
+    { t: "Noen viser til Grunnloven", fixed: true },
+    { t: "Culpa-ansvar nevnes", fixed: true },
+    { t: "Noen sier «skyte spurv med kanoner»", fixed: true },
+    { t: "Noen prøver å uttale <span class=\"nw\">«Sp. z o.o.»</span>" },
+    { t: "En bygg&shy;metafor («grunn&shy;mur», «bære&shy;bjelke»)" },
+    { t: "Begge parter siterer samme avsnitt i <span class=\"nw\">E-2/24</span>" },
+    { t: "Noen blander innleie og utleie" },
+    { t: "«Prosent» blir rettet til «prosent&shy;poeng»" },
+    { t: "Noen kaller saken «prinsi&shy;piell»" },
+    { t: "Noen viser til feil side i utdraget" },
+    { t: "«Avslut&shy;nings&shy;vis&nbsp;…» og ti minutter til" },
+    { t: "«Konsis&shy;tent og syste&shy;matisk» ×2 i én setning" }
+  ];
+
+  var LINES = [
+    [0, 1, 2, 3], [4, 5, 6, 7], [8, 9, 10, 11], [12, 13, 14, 15],
+    [0, 4, 8, 12], [1, 5, 9, 13], [2, 6, 10, 14], [3, 7, 11, 15],
+    [0, 5, 10, 15], [3, 6, 9, 12]
+  ];
+  var SIZE = 16;
+  var KEY = "innleiesaken-bingo-v2";
+  var STEP_MS = 90;
+
+  var boardEl = document.getElementById("board");
+  var postitEl = document.getElementById("postit");
+  var statusEl = document.getElementById("status");
+  var updateEl = document.getElementById("update");
+  var updateTimeEl = document.getElementById("update-time");
+  var verdictEl = document.getElementById("verdict");
+  var todayEl = document.getElementById("today");
+  var btnNew = document.getElementById("btn-new");
+  var btnClear = document.getElementById("btn-clear");
+
+  try {
+    var today = new Intl.DateTimeFormat("nb-NO", { weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(new Date());
+    todayEl.textContent = today.charAt(0).toUpperCase() + today.slice(1);
+  } catch (e) {
+    // Beholder datoen som står i avishodet
+  }
+
+  function pad(x) {
+    return (x < 10 ? "0" : "") + x;
+  }
+
+  function clock(ts) {
+    var d = new Date(ts);
+    return "kl. " + pad(d.getHours()) + ":" + pad(d.getMinutes());
+  }
+
+  function randomInt(max) {
+    try {
+      var buf = new Uint32Array(1);
+      window.crypto.getRandomValues(buf);
+      return buf[0] % max;
+    } catch (e) {
+      return Math.floor(Math.random() * max);
+    }
+  }
+
+  function shuffle(list) {
+    for (var j = list.length - 1; j > 0; j--) {
+      var k = randomInt(j + 1);
+      var tmp = list[j];
+      list[j] = list[k];
+      list[k] = tmp;
+    }
+    return list;
+  }
+
+  function drawOrder() {
+    var fixed = [];
+    var extra = [];
+    SQUARES.forEach(function (sq, id) { (sq.fixed ? fixed : extra).push(id); });
+    var picked = fixed.concat(shuffle(extra).slice(0, Math.max(0, SIZE - fixed.length)));
+    return shuffle(picked.slice(0, SIZE));
+  }
+
+  function loadState() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      if (!raw) return null;
+      var data = JSON.parse(raw);
+      if (!data || !Array.isArray(data.order) || data.order.length !== SIZE) return null;
+      var seen = {};
+      for (var i = 0; i < SIZE; i++) {
+        var v = data.order[i];
+        if (typeof v !== "number" || v < 0 || v >= SQUARES.length || seen[v]) return null;
+        seen[v] = true;
+      }
+      for (var id = 0; id < SQUARES.length; id++) {
+        if (SQUARES[id].fixed && !seen[id]) return null;
+      }
+      var marked = {};
+      if (Array.isArray(data.marked)) {
+        data.marked.forEach(function (m) {
+          if (typeof m === "number" && seen[m]) marked[m] = true;
+        });
+      }
+      var loaded = { order: data.order, marked: marked };
+      if (typeof data.bingoAt === "number") loaded.bingoAt = data.bingoAt;
+      return loaded;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  function saveState() {
+    try {
+      var data = { order: state.order, marked: Object.keys(state.marked).map(Number) };
+      if (state.bingoAt) data.bingoAt = state.bingoAt;
+      window.localStorage.setItem(KEY, JSON.stringify(data));
+    } catch (e) {
+      // Lagring er bare en bekvemmelighet; brettet virker uten.
+    }
+  }
+
+  var state = loadState() || { order: drawOrder(), marked: {} };
+  var cells = [];
+  var marks = [];
+  var prevLines = {};
+
+  function isMarked(pos) {
+    return !!state.marked[state.order[pos]];
+  }
+
+  function build() {
+    boardEl.textContent = "";
+    cells = [];
+    marks = [];
+    state.order.forEach(function (id, pos) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "cell";
+      btn.innerHTML = '<span class="wrap"><span class="txt">' + SQUARES[id].t + "</span></span>";
+      btn.addEventListener("click", function () { toggle(pos); });
+      boardEl.appendChild(btn);
+      cells.push(btn);
+      marks.push(btn.querySelector(".txt"));
+    });
+  }
+
+  function slap() {
+    postitEl.classList.remove("show");
+    void postitEl.offsetWidth;
+    postitEl.classList.add("show");
+  }
+
+  function render(tappedPos) {
+    var complete = [];
+    LINES.forEach(function (line, i) {
+      if (line.every(function (pos) { return isMarked(pos); })) complete.push(i);
+    });
+    var n = complete.length;
+    var gained = tappedPos !== undefined && complete.some(function (i) { return !prevLines[i]; });
+
+    // Nye rekker farges fra ruta som ble trykket, og utover langs rekka
+    var winning = {};
+    var delay = {};
+    complete.forEach(function (i) {
+      var line = LINES[i];
+      var origin = line.indexOf(tappedPos);
+      line.forEach(function (pos, k) {
+        winning[pos] = true;
+        if (!prevLines[i] && origin !== -1) {
+          var d = Math.abs(k - origin);
+          delay[pos] = delay[pos] === undefined ? d : Math.min(delay[pos], d);
+        }
+      });
+    });
+
+    var count = 0;
+    cells.forEach(function (cell, pos) {
+      var on = isMarked(pos);
+      if (on) count++;
+      marks[pos].style.transitionDelay = delay[pos] ? delay[pos] * STEP_MS + "ms" : "";
+      cell.setAttribute("aria-pressed", on ? "true" : "false");
+      cell.classList.toggle("win", !!winning[pos]);
+    });
+
+    if (gained) {
+      state.bingoAt = Date.now();
+      saveState();
+      slap();
+    } else if (n === 0 && state.bingoAt) {
+      delete state.bingoAt;
+      saveState();
+    }
+
+    statusEl.innerHTML = n
+      ? "<strong>Bingo!</strong> " + count + " av " + SIZE + " markert, " + n + (n === 1 ? " rekke" : " rekker")
+      : count + " av " + SIZE + " markert";
+    updateEl.hidden = n === 0;
+    updateTimeEl.textContent = state.bingoAt ? "Oppdatert " + clock(state.bingoAt) + ":" : "Oppdatert:";
+    verdictEl.textContent = n > 1
+      ? "Du tilkjennes bingo, i alt " + n + " rekker."
+      : "Du tilkjennes bingo.";
+
+    prevLines = {};
+    complete.forEach(function (i) { prevLines[i] = true; });
+  }
+
+  function toggle(pos) {
+    var id = state.order[pos];
+    if (state.marked[id]) delete state.marked[id];
+    else state.marked[id] = true;
+    saveState();
+    render(pos);
+  }
+
+  function hasMarks() {
+    return Object.keys(state.marked).length > 0;
+  }
+
+  // Knapper som sletter markeringer krever et ekstra trykk, så ingen mister brettet midt i en prosedyre
+  function confirmable(btn, action) {
+    var label = btn.textContent;
+    var timer = null;
+    function disarm() {
+      clearTimeout(timer);
+      btn.classList.remove("armed");
+      btn.textContent = label;
+    }
+    btn.addEventListener("click", function () {
+      if (!hasMarks() || btn.classList.contains("armed")) {
+        disarm();
+        action();
+        return;
+      }
+      btn.classList.add("armed");
+      btn.textContent = "Trykk igjen for å bekrefte";
+      timer = setTimeout(disarm, 3000);
+    });
+  }
+
+  confirmable(btnNew, function () {
+    state = { order: drawOrder(), marked: {} };
+    saveState();
+    build();
+    render();
+  });
+
+  confirmable(btnClear, function () {
+    state.marked = {};
+    delete state.bingoAt;
+    saveState();
+    render();
+  });
+
+  build();
+  render();
+})();
+</script>
+</body>
+</html>
