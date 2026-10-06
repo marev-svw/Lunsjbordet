@@ -1,2 +1,16 @@
+# Lenkeforhåndsvisninger i Teams, Slack, Outlook, LinkedIn og lignende får lese sidene
+User-agent: SkypeUriPreview
+User-agent: MicrosoftPreview
+User-agent: Slackbot-LinkExpanding
+User-agent: Slackbot
+User-agent: Twitterbot
+User-agent: facebookexternalhit
+User-agent: LinkedInBot
+User-agent: Discordbot
+User-agent: WhatsApp
+User-agent: TelegramBot
+Allow: /
+
+# Søkemotorer og alle andre holdes ute
 User-agent: *
 Disallow: /
