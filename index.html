@@ -498,6 +498,57 @@
   .colophon-inner { max-width: 79.5rem; margin: 2.25rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
   .colophon p { max-width: 42rem; margin: 0; }
 
+  /* Arkivredaksjonen: arkivskuffen nederst med saker som ikke står på forsiden */
+  .arkiv { padding: clamp(1.1rem, 3cqi, 1.6rem); border-radius: 8px; background: var(--surface); font-family: var(--sans); }
+  .ark-kicker { margin: 0 0 .3rem; font-size: .8125rem; font-weight: 700; color: var(--link); }
+  .ark-title { margin: 0; font-size: clamp(1.5rem, 1.1rem + 1.6cqi, 2.1rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; }
+  .ark-tag { max-width: 34rem; margin: .4rem 0 1.25rem; font: 400 1rem/1.45 var(--serif); color: var(--muted); }
+  .ark-skuff { -webkit-appearance: none; appearance: none; position: relative; width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 1rem; margin: 0; padding: 1rem 5.5rem 1rem 1rem; border: 1px solid var(--frame); border-radius: 6px; background: linear-gradient(to bottom, var(--steel-hi), var(--steel)); color: var(--btn-ink); font: inherit; text-align: left; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 10px 18px -14px var(--drop); }
+  .ark-skuff:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; }
+  .ark-etikett { padding: .22rem; border: 2px solid var(--frame); border-radius: 3px; background: linear-gradient(to bottom, var(--steel), var(--steel-hi)); }
+  .ark-kort { display: block; min-width: 4.6rem; padding: .3rem .55rem .25rem; background: #fbfaf5; color: #1c2226; text-align: center; }
+  .ark-kort b { display: block; font: 400 1.05rem/1.05 var(--marker); }
+  .ark-kort small { display: block; margin-top: .1rem; font: 700 .625rem/1.2 var(--sans); letter-spacing: .06em; }
+  .ark-grep { display: grid; justify-items: center; gap: .5rem; }
+  .ark-hank { position: relative; width: min(100%, 7.5rem); height: 1rem; border-radius: 4px; background: linear-gradient(to bottom, var(--btn-hi), var(--btn-mid) 55%, var(--btn-lo)); box-shadow: 0 4px 5px -3px var(--drop), inset 0 1px 0 rgba(255, 255, 255, .5); }
+  .ark-hank::before, .ark-hank::after { content: ""; position: absolute; top: -.3rem; width: .55rem; height: 1.6rem; border-radius: 3px; background: var(--btn-lo); }
+  .ark-hank::before { left: -.25rem; }
+  .ark-hank::after { right: -.25rem; }
+  .ark-cta { display: inline-flex; align-items: center; gap: .45rem; font-size: .9375rem; font-weight: 800; line-height: 1.2; text-align: center; }
+  .ark-cta .chev { flex: none; margin: 0 0 .2rem; }
+  .arkiv.open .ark-cta .chev { margin: .2rem 0 0; transform: rotate(225deg); }
+  .ark-lapp { position: absolute; top: -.75rem; right: .8rem; width: 4.1rem; height: 3.8rem; display: grid; place-items: center; padding: .2rem; text-align: center; transform: rotate(5deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .8125rem/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); pointer-events: none; }
+  .ark-lapp::before { content: ""; position: absolute; top: -.5rem; left: 50%; width: 2rem; height: .8rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+  .arkiv.open .ark-skuff { border-radius: 6px 6px 0 0; }
+  @container (max-width: 30rem) {
+    .ark-skuff { padding-right: 1rem; }
+    .ark-hank { width: min(100%, 6rem); }
+    .ark-lapp { top: -2.2rem; right: .4rem; width: 3.7rem; height: 3.4rem; font-size: .75rem; }
+  }
+  .ark-innhold { padding: 1.9rem clamp(.9rem, 3cqi, 1.25rem) 1.1rem; border: 1px solid var(--frame); border-top: 0; border-radius: 0 0 6px 6px; background: var(--cab); box-shadow: inset 0 12px 14px -12px var(--drop); }
+  .ark-innhold[hidden] { display: none; }
+  .ark-liste { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2rem 1.1rem; margin: 0; padding: 0; list-style: none; }
+  @container (min-width: 36rem) { .ark-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .mappe { position: relative; padding: .95rem 1.1rem 1.1rem; border-radius: 0 6px 6px 6px; background: linear-gradient(to bottom, var(--paper-hi), var(--paper)); color: var(--poster-ink); box-shadow: 0 8px 14px -10px var(--drop); }
+  .mappe::before { content: attr(data-fane); position: absolute; bottom: 100%; left: 0; padding: .3rem .75rem .15rem; border-radius: 6px 6px 0 0; background: var(--paper-hi); font: 700 .75rem/1.2 var(--sans); white-space: nowrap; }
+  .mappe:nth-child(2n)::before { left: 38%; }
+  .m-desk { margin: 0 0 .35rem; font-size: .8125rem; font-weight: 700; color: #5a4526; }
+  .m-hl { margin: 0 0 .45rem; font-size: 1.1875rem; font-weight: 800; line-height: 1.25; letter-spacing: -0.012em; text-wrap: pretty; }
+  .m-tekst { margin: 0; font: 400 1rem/1.45 var(--serif); }
+  .mappe .stretch { text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: .08em; text-underline-offset: .16em; transition: text-decoration-color .15s ease; }
+  .mappe:hover .stretch { text-decoration-color: currentColor; }
+  .mappe .stretch:focus-visible::after { outline-color: var(--poster-ink); }
+  .ark-fot { margin: 1.4rem 0 0; font-size: .875rem; line-height: 1.5; color: var(--muted); }
+  @media (prefers-reduced-motion: no-preference) {
+    .arkiv.open .mappe { animation: arkUt .35s cubic-bezier(.2, .7, .3, 1) both; }
+    .arkiv.open .mappe:nth-child(2) { animation-delay: .07s; }
+    .arkiv.open .mappe:nth-child(3) { animation-delay: .14s; }
+    .arkiv.open .mappe:nth-child(4) { animation-delay: .21s; }
+  }
+  @keyframes arkUt {
+    from { opacity: 0; transform: translateY(-.75rem); }
+  }
+
   /* Annonser: tydelig merket, og med egne farger slik annonser har */
   .op-merke { margin: 0 0 .35rem; font: 500 .75rem/1.2 var(--sans); color: var(--muted); }
   .op-flate { position: relative; overflow: hidden; border-radius: 8px; font-family: var(--sans); }
@@ -968,6 +1019,35 @@
 
   <p class="fix"><strong>Rettelse:</strong> I saken <button type="button" class="paid ref"><span class="u">«Kaffemaskinen tom igjen»</span><span class="plus" aria-hidden="true">+</span><span class="sr-only"> (Lunsj+)</span><span class="hl" hidden>Kaffemaskinen tom igjen: Ansatte bønn-faller ledelsen</span></button> ble det gitt inntrykk av at maskinen hadde vært fylt opp i mellomtiden. Det har den ikke. Lunsjbordet beklager.</p>
 
+  <section class="arkiv" id="arkiv" aria-labelledby="ark-title">
+    <p class="ark-kicker">Lunsjbordets arkivredaksjon</p>
+    <h2 class="ark-title" id="ark-title">Arkivet</h2>
+    <p class="ark-tag">Saker som har gått av forsiden, men ikke av minnet.</p>
+    <button type="button" class="ark-skuff" id="ark-skuff" aria-expanded="false" aria-controls="ark-innhold">
+      <span class="ark-etikett" aria-hidden="true"><span class="ark-kort"><b>ARKIV</b><small>2026</small></span></span>
+      <span class="ark-grep">
+        <span class="ark-hank" aria-hidden="true"></span>
+        <span class="ark-cta"><span id="ark-cta-tekst">Åpne arkivskuffen</span><span class="chev" aria-hidden="true"></span></span>
+      </span>
+      <span class="ark-lapp" aria-hidden="true">Nøkkel hos Hilde.</span>
+    </button>
+    <div class="ark-innhold" id="ark-innhold" hidden>
+      <ol class="ark-liste">
+        <li class="mappe" data-fane="5. oktober">
+          <p class="m-desk">Krimredaksjonen</p>
+          <h3 class="m-hl"><a class="stretch" href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffel&shy;korrupsjon</a></h3>
+          <p class="m-tekst">Nicolay Skarning mener LO forsøker å påvirke innleiesaken med vafler og et kaffekrus.</p>
+        </li>
+        <li class="mappe" data-fane="25. september">
+          <p class="m-desk">Kulturredaksjonen</p>
+          <h3 class="m-hl"><a class="stretch" href="ma.html">Kollega fikk <span class="nw">Ma-reritt</span> etter <span class="nw">Ma-kaber</span> filmkveld</a></h3>
+          <p class="m-tekst">Markus så skrekkfilmen «Ma» med Octavia Spencer. Nå skal han aldri mer ned i kjelleren.</p>
+        </li>
+      </ol>
+      <p class="ark-fot">Eldre saker er sendt til fjernarkivet i kjelleren. Ingen har meldt seg til å hente dem.</p>
+    </div>
+  </section>
+
 </main>
 
 </div>
@@ -1132,6 +1212,19 @@
     adBtn.setAttribute("aria-disabled", "true");
     adBtn.textContent = "Påmeldt";
     adReply.textContent = "Påmelding mottatt. Hilde tar kontakt.";
+  });
+
+  // Arkivskuffen: knappen trekker ut skuffen med saker som ikke står på forsiden
+  var ark = document.getElementById("arkiv");
+  var arkBtn = document.getElementById("ark-skuff");
+  var arkInn = document.getElementById("ark-innhold");
+  var arkTekst = document.getElementById("ark-cta-tekst");
+  arkBtn.addEventListener("click", function () {
+    var open = arkBtn.getAttribute("aria-expanded") !== "true";
+    arkBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    arkInn.hidden = !open;
+    ark.classList.toggle("open", open);
+    arkTekst.textContent = open ? "Lukk arkivskuffen" : "Åpne arkivskuffen";
   });
 
   // Podkasten: avspilleren later som den spiller, med teksting linje for linje
