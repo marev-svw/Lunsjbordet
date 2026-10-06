@@ -449,17 +449,9 @@
   .row .mostread { align-self: start; }
   @container (min-width: 53.5rem) { .row { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); } }
 
-  /* Rad tre: bingobrettet, Claude-saken og Bussen-saken */
+  /* Rad tre: bingobrettet og Claude-saken side om side */
   .pair { display: grid; gap: 1.25rem; }
-  @container (min-width: 37.5rem) {
-    .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .pair > :first-child { grid-column: 1 / -1; }
-  }
-  @container (min-width: 57.5rem) {
-    .pair { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    .pair > :first-child { grid-column: auto; }
-    .pair .hl-lg { font-size: 1.5rem; }
-  }
+  @container (min-width: 37.5rem) { .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
   .col { display: flex; flex-direction: column; }
   .banner { flex: 1 0 auto; min-height: 15rem; }
 
@@ -484,19 +476,6 @@
   .ogsa { position: absolute; top: 2.1rem; left: 50%; width: 4.6rem; height: 4.3rem; display: grid; place-items: center; padding: .25rem; text-align: center; transform: translateX(-50%) rotate(-5deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95rem/1.05 var(--marker); box-shadow: 0 7px 10px -6px var(--drop); }
   .ogsa::before { content: ""; position: absolute; top: -.5rem; left: 50%; width: 2rem; height: .8rem; transform: translateX(-50%) rotate(3deg); background: var(--tape); }
   .kick { height: .8rem; margin: 0 3px; background: var(--frame); }
-
-  /* Sanntidstavla fra Bussen-saken */
-  .stop { display: grid; grid-template-rows: auto 1fr; justify-items: center; padding: clamp(1.25rem, 4cqi, 1.75rem) clamp(1rem, 4cqi, 2rem) 0; background: linear-gradient(to top, var(--floor) 0 1rem, transparent 1rem), var(--wall); pointer-events: none; }
-  .sign { position: relative; width: min(100%, 17.5rem); padding: .45rem; background: linear-gradient(160deg, var(--steel-hi), var(--steel)); border: 1px solid var(--frame); border-radius: 10px; box-shadow: 0 12px 22px -14px var(--drop); }
-  .pole { width: .5rem; min-height: 2.5rem; background: linear-gradient(90deg, var(--steel), var(--steel-hi) 45%, var(--steel)); border-inline: 1px solid var(--frame); }
-  .led { position: relative; overflow: hidden; border-radius: 6px; background: #0e1113; color: var(--amber); font-family: var(--sans); font-weight: 700; font-variant-numeric: tabular-nums; text-shadow: 0 0 6px var(--glow); }
-  .led::after { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at center, transparent 0 1px, rgba(0, 0, 0, .28) 1.4px) 0 0 / 3px 3px; }
-  .led-head { display: flex; justify-content: space-between; gap: 1rem; padding: .5rem .65rem .4rem; border-bottom: 1px solid rgba(232, 150, 42, .25); font-size: .9rem; font-weight: 800; }
-  .led-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: .55rem; padding: .35rem .65rem; border-bottom: 1px solid rgba(232, 150, 42, .14); font-size: .85rem; white-space: nowrap; }
-  .led-row:last-child { border-bottom: 0; }
-  .led-num { display: inline-grid; place-items: center; min-width: 1.45rem; height: 1.25rem; border: 1px solid currentColor; border-radius: 3px; font-size: .8em; }
-  .svik { position: absolute; top: -.8rem; right: -.7rem; width: 3.9rem; height: 3.6rem; display: grid; place-items: center; transform: rotate(8deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1rem/1 var(--marker); box-shadow: 0 7px 10px -6px var(--drop); }
-  .svik::before { content: ""; position: absolute; top: -.45rem; left: 50%; width: 1.9rem; height: .75rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
   /* Tekstdelen i de mindre sakene */
   .card-body { padding: clamp(1.1rem, 3cqi, 1.5rem) clamp(1.1rem, 3cqi, 1.75rem) clamp(1.25rem, 3cqi, 1.6rem); }
@@ -906,13 +885,13 @@
     <section class="mostread" aria-labelledby="mr-title">
       <h2 id="mr-title">Sladderredaksjonens favoritter</h2>
       <ol>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kontorplanten viste seg å være av plast: Har blitt vannet hver dag siden 2023</span></button></li>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kollega prosederte i fire minutter på mute: Ingen innsigelser</span></button></li>
-        <li><a href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffel&shy;korrupsjon</a></li>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kaffemaskinen tom igjen: Ansatte <span class="nw">bønn-faller</span> ledelsen</span></button></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Fredagskaken var glutenfri: Tre kolleger begjærer gjenopptakelse</span></button></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Ukjent matboks i kjøleskapet har fått eget saksnummer</span></button></li>
+        <li><a href="bussen.html">Markus gikk av Bussen for egen celle: <span class="nw">–&nbsp;Et</span> svik uten like</a></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Møterom dobbeltbooket i tre uker: Ingen av partene vil frafalle</span></button></li>
         <li><a href="ma.html">Kollega fikk <span class="nw">Ma-reritt</span> etter <span class="nw">Ma-kaber</span> filmkveld</a></li>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Melkekartong datert 3. september funnet i kjøleskapet: Eieren påberoper seg foreldelse</span></button></li>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Heisen sto fast i tre minutter: Kolleger kaller det et løft for arbeidsmiljøet</span></button></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kollega har svart «Mottatt, ser på det» 40 ganger i høst: Har ikke sett på noe</span></button></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Teams-statusen har stått på «Ute av kontoret» siden juli: Kollegaen sitter to meter unna</span></button></li>
       </ol>
     </section>
   </div>
@@ -994,29 +973,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets teknologiredaksjon</p>
           <p>Oppdatert kl. 17:05: Versjon 15 er mottatt</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card bus col">
-      <div class="stop banner" aria-hidden="true">
-        <div class="sign">
-          <div class="led">
-            <div class="led-head"><span>Bussen</span></div>
-            <div class="led-row"><span class="led-num">1</span><span>Kaffemaskinen</span><span>2 min</span></div>
-            <div class="led-row"><span class="led-num">2</span><span>Kopirommet</span><span>6 min</span></div>
-            <div class="led-row"><span class="led-num">M</span><span>Markus</span><span>Innstilt</span></div>
-          </div>
-          <div class="svik">SVIK.</div>
-        </div>
-        <div class="pole"></div>
-      </div>
-      <div class="card-body">
-        <h2 class="hl-lg"><a class="stretch" href="bussen.html">Markus gikk av Bussen for egen celle: <span class="nw">–&nbsp;Et</span> svik uten like</a></h2>
-        <p class="lead-sm">Markus har flyttet til et cellekontor lenger nede i gangen. Arbeidsrettskollegene vurderer lojalitetsplikten.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
-          <p>Oppdatert kl. 10:47</p>
         </div>
       </div>
     </article>
@@ -1113,6 +1069,11 @@
           <p class="m-desk">Krimredaksjonen</p>
           <h3 class="m-hl"><a class="stretch" href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffel&shy;korrupsjon</a></h3>
           <p class="m-tekst">Nicolay Skarning mener LO forsøker å påvirke innleiesaken med vafler og et kaffekrus.</p>
+        </li>
+        <li class="mappe" data-fane="5. oktober">
+          <p class="m-desk">Arbeidslivsredaksjonen</p>
+          <h3 class="m-hl"><a class="stretch" href="bussen.html">Markus gikk av Bussen for egen celle: <span class="nw">–&nbsp;Et</span> svik uten like</a></h3>
+          <p class="m-tekst">Markus har flyttet til et cellekontor lenger nede i gangen. Arbeidsrettskollegene vurderer lojalitetsplikten.</p>
         </li>
         <li class="mappe" data-fane="25. september">
           <p class="m-desk">Kulturredaksjonen</p>
