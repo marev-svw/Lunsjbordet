@@ -64,6 +64,11 @@
     --poster-ink: #3a2a1a;
     --drop: rgba(20, 26, 30, .35);
     --tape: rgba(255, 255, 255, .6);
+    --sheet: #fdfdfb;
+    --sheet-muted: #5c676d;
+    --sheet-rule: #d3dde6;
+    --pen: #2a4aa0;
+    --stamp: #b3261e;
     --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
     --serif: "Newsreader", Georgia, "Times New Roman", serif;
     --marker: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;
@@ -110,6 +115,11 @@
       --paper-lo: #c3ad7d;
       --drop: rgba(0, 0, 0, .6);
       --tape: rgba(255, 255, 255, .3);
+    --sheet: #dfe4e2;
+    --sheet-muted: #4f5a60;
+    --sheet-rule: #b8c3cc;
+    --pen: #24409a;
+    --stamp: #a3241c;
       color-scheme: dark;
     }
   }
@@ -149,6 +159,11 @@
     --paper-lo: #c3ad7d;
     --drop: rgba(0, 0, 0, .6);
     --tape: rgba(255, 255, 255, .3);
+    --sheet: #dfe4e2;
+    --sheet-muted: #4f5a60;
+    --sheet-rule: #b8c3cc;
+    --pen: #24409a;
+    --stamp: #a3241c;
     color-scheme: dark;
   }
 
@@ -277,6 +292,37 @@
   .tn-box .court { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 12px 22px -14px var(--drop); }
   .tn-note { position: absolute; top: -.9rem; right: -.6rem; width: 4.4rem; height: 4rem; display: grid; place-items: center; padding: .2rem; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1rem/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
   .tn-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
+  /* Toppraden: to saker side om side over podkasten, bildet over teksten */
+  .duo { display: grid; gap: 1.25rem; }
+  .duo > .top { display: flex; flex-direction: column; }
+  @container (min-width: 45.5rem) {
+    .duo { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    /* Bildene får samme høyde, og overskriftene starter på samme linje */
+    @supports (grid-template-rows: subgrid) {
+      .duo { grid-template-rows: auto auto; }
+      .duo > .top { display: grid; grid-row: span 2; grid-template-columns: none; grid-template-rows: subgrid; row-gap: 0; }
+    }
+  }
+  .duo .fig { order: -1; flex: 1 0 auto; min-height: 15rem; padding: clamp(1.75rem, 4cqi, 2.5rem) clamp(1.25rem, 4cqi, 2.25rem); }
+  .duo .top-text { justify-content: flex-start; padding: clamp(1.1rem, 2.6cqi, 1.75rem) clamp(1.1rem, 2.6cqi, 1.9rem) clamp(1.25rem, 2.6cqi, 1.75rem); }
+  .duo .hl-xl { margin-bottom: .75rem; font-size: clamp(1.75rem, 1.2rem + 1.5cqi, 2.4rem); }
+  .duo .hl-xl.op { font-size: clamp(1.95rem, 1.3rem + 1.7cqi, 2.65rem); }
+  .duo .lead { margin-bottom: 1.1rem; font-size: 1.0625rem; line-height: 1.5; }
+
+  /* Agendaen fra traineemøtet: punkt 1 er gjennomført, resten er utsatt */
+  .fig.moete { background: var(--wall); }
+  .mt-sheet { position: relative; width: min(100%, 19rem); padding: 1rem 1.1rem .9rem; background: var(--sheet); color: #1c2226; border-radius: 2px; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); transform: rotate(-1.2deg); font-family: var(--sans); }
+  .mt-kind { margin: 0; font-size: .6875rem; font-weight: 600; line-height: 1.3; color: var(--sheet-muted); }
+  .mt-title { margin: .15rem 0 .2rem; font-size: 1.125rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.01em; }
+  .mt-when { max-width: calc(100% - 4.5rem); margin: 0 0 .7rem; font-size: .75rem; line-height: 1.35; color: var(--sheet-muted); }
+  .mt-agenda { position: relative; margin: 0; padding: .45rem 0 0; border-top: 1px solid var(--sheet-rule); list-style: none; counter-reset: punkt; }
+  .mt-agenda li { counter-increment: punkt; display: flex; align-items: center; gap: .4rem; min-height: 1.6rem; font-size: .8125rem; line-height: 1.25; }
+  .mt-agenda li::before { content: counter(punkt) "."; flex: none; width: 1rem; font-weight: 700; color: var(--sheet-muted); }
+  .mt-agenda svg { flex: none; width: .95rem; height: .95rem; color: var(--pen); }
+  .mt-stamp { position: absolute; left: 56%; top: 60%; margin: 0; padding: .25rem .55rem .15rem; border: 3px solid var(--stamp); border-radius: 6px; color: var(--stamp); font: 900 1.5rem/1 var(--sans); letter-spacing: .12em; opacity: .85; transform: translate(-50%, -50%) rotate(-11deg); mix-blend-mode: multiply; }
+  .mt-note { position: absolute; top: -.85rem; right: -.75rem; width: 5rem; height: 4.3rem; display: grid; place-items: center; padding: .25rem; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .9375rem/1.1 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .mt-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
@@ -711,6 +757,35 @@
 
 <main class="front">
 
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
+      <p class="kicker">Debatt</p>
+      <h2 class="hl-xl op"><a class="stretch" href="tanzania.html">Mindre Tanzania, mer timeføring</a></h2>
+      <p class="lead">Traineemøtene våre har en agenda. Den sendes ut i god tid, den er gjennomtenkt, og den blir ikke brukt. Det er på tide at møtene handler om det de skal handle om.</p>
+      <div class="meta">
+        <p class="desk">Anonym trainee</p>
+        <p>Navnet er kjent for redaksjonen</p>
+      </div>
+    </div>
+    <div class="fig moete" aria-hidden="true">
+      <div class="mt-sheet">
+        <p class="mt-kind">Møteinnkalling</p>
+        <p class="mt-title">Traineemøte</p>
+        <p class="mt-when">Torsdag kl. 09:00 til 09:30, møterom 4</p>
+        <ol class="mt-agenda">
+          <li>Velkommen<svg viewBox="0 0 20 20"><path d="M3.5 11.5 8 15.5 16.5 4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li>Timeføring</li>
+          <li>Maler og dokumenthåndtering</li>
+          <li>Reiseregninger</li>
+          <li>Eventuelt</li>
+        </ol>
+        <p class="mt-stamp">UTSATT</p>
+        <div class="mt-note">Tanzania??</div>
+      </div>
+    </div>
+  </article>
+
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Anmeldelse</p>
@@ -728,6 +803,7 @@
       </div>
     </div>
   </article>
+  </div>
 
   <section class="pod" id="pod" aria-labelledby="pod-title">
     <svg class="pod-cover" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="8" fill="#1f5e57"/><g fill="#f4d547" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="16" letter-spacing="-0.4"><text x="10" y="27">KØ VED</text><text x="10" y="44">KAFFE-</text><text x="10" y="61" textLength="96" lengthAdjust="spacingAndGlyphs">MASKINEN</text></g><g fill="none" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round"><path d="M76.94 78.5A7 7 0 0 1 89.06 78.5"/><path d="M72.61 76A12 12 0 0 1 93.39 76"/><path d="M68.28 73.5A17 17 0 0 1 97.72 73.5"/><path d="M96 88h3a4.5 4.5 0 0 1 0 9h-3"/></g><path d="M70 84h26v13a8 8 0 0 1-8 8H78a8 8 0 0 1-8-8z" fill="#f3f5f4"/><rect x="64" y="107" width="40" height="3" rx="1.5" fill="#f3f5f4"/><g fill="#cfe3de" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="700"><text x="10" y="99" font-size="6">EN PODKAST FRA</text><text x="10" y="108" font-size="6.5" textLength="46" lengthAdjust="spacingAndGlyphs">LUNSJBORDET</text></g></svg>
