@@ -14,6 +14,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `claude.html` | Claude vurderer opprør |
 | `ma.html` | Kollega fikk Ma-reritt etter Ma-kaber filmkveld |
 | `bingo.html` | Bingobrett til Borgarting lagmannsrett |
+| `tennis.html` | Traineene tester TennisTirsdag |
 | `favicon.svg`, `apple-touch-icon.png` | Ikon i nettleserfanen og på hjemskjermen |
 | `og-image.png` | Bildet som vises når en lenke deles i Teams, Slack, Outlook og lignende |
 | `robots.txt` | Slipper inn lenkeforhåndsvisninger og ber søkemotorer holde seg unna |
