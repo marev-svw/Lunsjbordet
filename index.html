@@ -614,6 +614,63 @@
   .sirup .op-tittel, .sirup .op-slagord { color: #fff; }
   .sirup-ikon { width: 2.8rem; height: auto; }
 
+  /* Lunsjquizen: utfoldbar quiz med fasit bak én knapp og selvrapportert poengsum */
+  .qz-head { display: grid; }
+  @container (min-width: 45.5rem) { .qz-head { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); } }
+  .qz-fig { display: grid; place-items: center; min-height: 14rem; padding: 2.1rem 1.5rem 2rem; background: var(--surface); overflow: hidden; pointer-events: none; }
+  .qz-text { display: flex; flex-direction: column; justify-content: center; padding: clamp(1.1rem, 3cqi, 1.9rem) clamp(1.1rem, 3cqi, 2rem) clamp(1.25rem, 3cqi, 1.9rem); }
+  .qz-kicker { margin: 0 0 .5rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
+  .qz-text .lead-sm { max-width: 34rem; }
+  .qz-open { align-self: flex-start; display: inline-flex; align-items: center; gap: .6rem; margin-top: 1.2rem; }
+  .qz-open .chev { flex: none; margin: 0 0 .2rem; }
+  .quiz.open .qz-open .chev { margin: .2rem 0 0; transform: rotate(225deg); }
+
+  /* Svararket i illustrasjonen: blyant, lapp og uleselig håndskrift */
+  .qz-ark { position: relative; width: min(100%, 15rem); padding: .85rem 1rem 1rem; border-radius: 2px; background: var(--sheet); color: #1c2226; transform: rotate(2deg); box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); }
+  .qz-ark-t { margin: 0 0 .3rem; padding-bottom: .4rem; border-bottom: 1px solid var(--sheet-rule); font: 800 .75rem/1.2 var(--sans); letter-spacing: .1em; }
+  .qz-ark ol { margin: 0; padding: 0; list-style: none; counter-reset: linje; }
+  .qz-ark li { counter-increment: linje; display: flex; align-items: center; gap: .4rem; height: 1.45rem; border-bottom: 1px solid var(--sheet-rule); color: var(--pen); }
+  .qz-ark li::before { content: counter(linje) "."; flex: none; width: 1.05rem; font: 700 .625rem/1 var(--sans); color: var(--sheet-muted); }
+  .qz-ark li svg { height: .7rem; width: auto; }
+  .qz-ark li b { font: 400 .875rem/1 var(--marker); }
+  .qz-blyant { position: absolute; right: -2.4rem; bottom: -1.3rem; width: 8rem; height: auto; transform: rotate(-30deg); filter: drop-shadow(0 6px 4px var(--drop)); }
+  .qz-lapp { position: absolute; top: -1.15rem; right: -1.2rem; width: 4.3rem; height: 3.9rem; display: grid; place-items: center; padding: .2rem; text-align: center; transform: rotate(7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .9375rem/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .qz-lapp::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(3deg); background: var(--tape); }
+
+  /* Spørsmålene: to spalter på bred skjerm, nummerert i lesrekkefølge */
+  .qz-body { padding: .35rem clamp(1.1rem, 3cqi, 2rem) clamp(1.25rem, 3cqi, 1.75rem); border-top: 1px solid var(--line); }
+  .qz-body[hidden] { display: none; }
+  .qz-list { margin: 0; padding: 0; list-style: none; counter-reset: sporsmal; }
+  @container (min-width: 45.5rem) { .qz-list { columns: 2; column-gap: 2.5rem; } }
+  .qz-q { counter-increment: sporsmal; display: grid; grid-template-columns: 2rem minmax(0, 1fr); column-gap: .65rem; padding: 1rem 0 1.05rem; border-bottom: 1px solid var(--line); break-inside: avoid; }
+  .qz-q::before { content: counter(sporsmal); grid-row: 1 / span 3; font: 800 1.375rem/1.05 var(--sans); color: var(--muted); font-variant-numeric: tabular-nums; }
+  .qz-q > * { grid-column: 2; min-width: 0; }
+  .qz-tema { margin: 0 0 .25rem; font: 700 .75rem/1.2 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .qz-sp { margin: 0; font: 600 1.0625rem/1.4 var(--sans); text-wrap: pretty; }
+  .qz-svar { margin-top: .55rem; }
+  .qz-svar[hidden] { display: none; }
+  .qz-svar p { margin: 0; font: 400 1rem/1.45 var(--serif); }
+  .qz-svar strong { font-family: var(--sans); font-weight: 800; color: var(--link); }
+  .qz-rett { -webkit-appearance: none; appearance: none; display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; margin: .15rem 0 -.6rem; padding: 0; border: 0; background: none; color: var(--muted); font: 600 .875rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .qz-boks { flex: none; width: 1.25rem; height: 1.25rem; display: grid; place-items: center; border: 2px solid var(--muted); border-radius: 4px; }
+  .qz-boks svg { width: .85rem; height: .85rem; opacity: 0; }
+  .qz-rett[aria-pressed="true"] { color: var(--ink); }
+  .qz-rett[aria-pressed="true"] .qz-boks { border-color: var(--link); background: var(--link); color: var(--card); }
+  .qz-rett[aria-pressed="true"] .qz-boks svg { opacity: 1; }
+  .qz-rett:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+
+  /* Fasitknappen og poengsummen på en gul lapp */
+  .qz-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.25rem; margin-top: 1.4rem; }
+  .qz-hint { flex: 1 1 16rem; margin: 0; font: 400 .9375rem/1.45 var(--serif); color: var(--muted); }
+  .qz-score { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.4rem; }
+  .qz-score[hidden], .qz-hint[hidden], .qz-foot .btn[hidden] { display: none; }
+  .qz-karakter { position: relative; flex: none; width: 5.4rem; height: 5rem; display: grid; place-content: center; text-align: center; transform: rotate(-4deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; box-shadow: 0 8px 12px -7px var(--drop); }
+  .qz-karakter::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+  .qz-karakter b { font: 400 1.75rem/1 var(--marker); font-variant-numeric: tabular-nums; }
+  .qz-karakter small { margin-top: .15rem; font: 700 .6875rem/1.1 var(--sans); }
+  .qz-dom-wrap { display: grid; justify-items: start; gap: .5rem; max-width: 26rem; }
+  .qz-dom { margin: 0; font: 700 1.0625rem/1.35 var(--sans); }
+
   /* Betalingsmuren */
   .betalingsmur { width: min(27rem, calc(100% - 2.5rem)); max-width: none; padding: 1.5rem 1.5rem 1.35rem; border: 0; border-radius: 8px; background: var(--card); color: var(--ink); font-family: var(--sans); box-shadow: 0 24px 48px -18px var(--drop); }
   .betalingsmur::backdrop { background: rgba(20, 26, 30, .5); }
@@ -995,6 +1052,130 @@
     </article>
   </div>
 
+  <section class="card quiz" id="quiz" aria-labelledby="quiz-title">
+    <div class="qz-head">
+      <div class="qz-fig" aria-hidden="true">
+        <div class="qz-ark">
+          <p class="qz-ark-t">LUNSJQUIZEN</p>
+          <ol>
+            <li><svg viewBox="0 0 62 10"><path d="M1 6c3-5 5 3 8-1s4-4 7 0 3 3 6-1 5-3 8 1 3 2 6-1 4-3 7 0 4 2 6-1 4-2 6 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
+            <li><svg viewBox="0 0 44 10"><path d="M1 5c2-4 5 3 8 0s3-4 6 0 4 3 7-1 4-2 6 1 3 2 6-1 4-1 9 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
+            <li><b>?</b></li>
+            <li><svg viewBox="0 0 70 10"><path d="M1 6c3-4 4 3 7 0s4-4 7 0 4 3 7 0 3-4 6 0 5 3 8-1 4-2 7 1 3 2 6-1 5-3 8 0 4 2 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
+            <li></li>
+            <li></li>
+          </ol>
+          <span class="qz-lapp">7. okt.</span>
+          <svg class="qz-blyant" viewBox="0 0 120 16">
+            <rect x="0" y="2" width="12" height="12" rx="2.5" fill="#e88f9b"/>
+            <rect x="11" y="1.5" width="9" height="13" fill="#b8bfc1"/>
+            <rect x="20" y="2" width="78" height="12" fill="#f2c230"/>
+            <rect x="20" y="6.3" width="78" height="3.4" fill="#e0ab1e"/>
+            <path d="M98 2l18 6-18 6z" fill="#f1d3a7"/>
+            <path d="M110.5 6.2l5.5 1.8-5.5 1.8z" fill="#2b2f33"/>
+          </svg>
+        </div>
+      </div>
+      <div class="qz-text">
+        <p class="qz-kicker">Lunsjquizen, onsdag 7. oktober</p>
+        <h2 class="hl-lg" id="quiz-title">Fjorten spørsmål før kaffen blir kald</h2>
+        <p class="lead-sm">Litt av hvert, og tre spørsmål fra nyhetene. Fasiten ligger bak én knapp. Ærligheten ligger hos deg.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets quizredaksjon</p>
+          <p>Dagens quiz, uke 41. 14 spørsmål.</p>
+        </div>
+        <button type="button" class="btn solid qz-open" id="qz-open" aria-expanded="false" aria-controls="qz-body"><span id="qz-open-tekst">Ta quizen</span><span class="chev" aria-hidden="true"></span></button>
+      </div>
+    </div>
+
+    <div class="qz-body" id="qz-body" hidden>
+      <ol class="qz-list">
+        <li class="qz-q">
+          <p class="qz-tema">Geografi</p>
+          <p class="qz-sp">Hvilket land grenser til både Frankrike og Spania, men er ikke medlem av EU?</p>
+          <div class="qz-svar" hidden><p><strong>Andorra.</strong> Fyrstedømmet ligger i Pyreneene.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Språk</p>
+          <p class="qz-sp">Hva betyr det svenske ordet «rolig» på norsk?</p>
+          <div class="qz-svar" hidden><p><strong>Morsom.</strong> Det norske «rolig» heter «lugn» på svensk.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Nyheter</p>
+          <p class="qz-sp">I statsbudsjettet som ble lagt fram onsdag, vil regjeringen styrke kampen mot en fremmed fiskeart i norske elver. Hvilken?</p>
+          <div class="qz-svar" hidden><p><strong>Pukkellaks.</strong> Regjeringen foreslår 54&nbsp;millioner kroner til innsatsen i 2027.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Fysikk</p>
+          <p class="qz-sp">Ved hvor mange grader Fahrenheit koker vann ved havnivå?</p>
+          <div class="qz-svar" hidden><p><strong>212&nbsp;°F.</strong> Vann fryser ved 32&nbsp;°F.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Kunst</p>
+          <p class="qz-sp">Hvem malte taket i Det sixtinske kapell: Leonardo da Vinci, Rafael, Michelangelo eller Botticelli?</p>
+          <div class="qz-svar" hidden><p><strong>Michelangelo,</strong> i årene 1508–1512. Botticelli malte noen av freskene på veggene.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Musikk</p>
+          <p class="qz-sp">Hvor mange tangenter har et vanlig piano?</p>
+          <div class="qz-svar" hidden><p><strong>88.</strong> 52 hvite og 36 svarte.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Dyreliv</p>
+          <p class="qz-sp">Hvilken farge har huden til en isbjørn under pelsen?</p>
+          <div class="qz-svar" hidden><p><strong>Svart.</strong> Pelsen ser hvit ut, men hårene er gjennomsiktige.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Nyheter</p>
+          <p class="qz-sp">Hvem vant herrefinalen i tennisturneringen US Open i september?</p>
+          <div class="qz-svar" hidden><p><strong>Alexander Zverev.</strong> Han slo amerikaneren Ben Shelton i fire sett.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Litteratur</p>
+          <p class="qz-sp">Hvem skrev romantrilogien «Kristin Lavransdatter»?</p>
+          <div class="qz-svar" hidden><p><strong>Sigrid Undset.</strong> Hun fikk Nobelprisen i litteratur i 1928.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Mat</p>
+          <p class="qz-sp">Hvilken «nøtt» hører med i klassisk pesto alla genovese?</p>
+          <div class="qz-svar" hidden><p><strong>Pinjekjerner.</strong> Strengt tatt frø fra pinjefuru, ikke nøtter.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Historie</p>
+          <p class="qz-sp">Hvilket år ble Gro Harlem Brundtland Norges første kvinnelige statsminister?</p>
+          <div class="qz-svar" hidden><p><strong>1981.</strong> Hun ble statsminister igjen i 1986 og 1990.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Tall</p>
+          <p class="qz-sp">Hvilket årstall skrives MCM med romertall?</p>
+          <div class="qz-svar" hidden><p><strong>1900.</strong> M er 1000, og CM er 900.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Nyheter</p>
+          <p class="qz-sp">Tadej Pogačar vant Tour de France i juli. Hvor mange sammenlagtseire har han nå i rittet?</p>
+          <div class="qz-svar" hidden><p><strong>Fem.</strong> Like mange som rekordholderne Anquetil, Merckx, Hinault og Induráin.</p></div>
+        </li>
+        <li class="qz-q">
+          <p class="qz-tema">Vitenskap</p>
+          <p class="qz-sp">Hva måles i enheten hertz?</p>
+          <div class="qz-svar" hidden><p><strong>Frekvens.</strong> Én hertz er én svingning per sekund.</p></div>
+        </li>
+      </ol>
+
+      <div class="qz-foot">
+        <button type="button" class="btn solid" id="qz-fasit">Vis fasit</button>
+        <div class="qz-score" id="qz-score" hidden>
+          <p class="qz-karakter" aria-label="Poengsum"><b id="qz-poeng">0</b><small>av 14</small></p>
+          <div class="qz-dom-wrap">
+            <p class="qz-dom" id="qz-dom" aria-live="polite"></p>
+            <button type="button" class="btn quiet" id="qz-reset">Start på nytt</button>
+          </div>
+        </div>
+        <p class="qz-hint" id="qz-hint">Svarene dukker opp under hvert spørsmål.</p>
+      </div>
+    </div>
+  </section>
+
   <div class="oppslag-rad">
     <aside class="oppslag" aria-labelledby="op-m2">
       <p class="op-merke" id="op-m2">Annonse</p>
@@ -1281,6 +1462,103 @@
     ark.classList.toggle("open", open);
     arkTekst.textContent = open ? "Lukk arkivskuffen" : "Åpne arkivskuffen";
   });
+
+  // Lunsjquizen (daglig): foldes ut med knappen; fasiten vises under hvert spørsmål, og leseren teller selv
+  var quiz = document.getElementById("quiz");
+  var qzOpen = document.getElementById("qz-open");
+  var qzBody = document.getElementById("qz-body");
+  var qzOpenTekst = document.getElementById("qz-open-tekst");
+  var qzFasit = document.getElementById("qz-fasit");
+  var qzScore = document.getElementById("qz-score");
+  var qzPoeng = document.getElementById("qz-poeng");
+  var qzDom = document.getElementById("qz-dom");
+  var qzHint = document.getElementById("qz-hint");
+  var qzReset = document.getElementById("qz-reset");
+  var qzSvar = Array.prototype.slice.call(quiz.querySelectorAll(".qz-svar"));
+  var QZ_KEY = "lunsjquizen-2026-10-07";
+  var QZ_DOM = [
+    [14, "Full pott. Quizredaksjonen ber om å få se kladden."],
+    [11, "Sterkt. Siste kanelbolle er din."],
+    [8, "Godkjent. Ingen merknader i protokollen."],
+    [4, "Helt greit. Skyld gjerne på kaffemaskinen."],
+    [0, "Tynt. Prøv igjen etter neste kopp."]
+  ];
+  var qz = { shown: false, right: {} };
+  try {
+    var qzSaved = JSON.parse(window.localStorage.getItem(QZ_KEY) || "null");
+    if (qzSaved && qzSaved.shown === true) {
+      qz.shown = true;
+      (Array.isArray(qzSaved.right) ? qzSaved.right : []).forEach(function (i) {
+        if (typeof i === "number" && i >= 0 && i < qzSvar.length) qz.right[i] = true;
+      });
+    }
+  } catch (e) {
+    // Lagring er bare en bekvemmelighet; quizen virker uten.
+  }
+
+  function qzSave() {
+    try {
+      window.localStorage.setItem(QZ_KEY, JSON.stringify({ shown: qz.shown, right: Object.keys(qz.right).map(Number) }));
+    } catch (e) {
+      // Ingen lagring i denne nettleseren
+    }
+  }
+
+  var qzRett = qzSvar.map(function (svar, i) {
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "qz-rett";
+    btn.innerHTML = '<span class="qz-boks" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3 8.5l3.2 3L13 4.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Jeg hadde rett';
+    btn.addEventListener("click", function () {
+      if (qz.right[i]) delete qz.right[i];
+      else qz.right[i] = true;
+      qzSave();
+      qzRender();
+    });
+    svar.appendChild(btn);
+    return btn;
+  });
+
+  function qzRender() {
+    var n = Object.keys(qz.right).length;
+    qzSvar.forEach(function (svar) { svar.hidden = !qz.shown; });
+    qzRett.forEach(function (btn, i) { btn.setAttribute("aria-pressed", qz.right[i] ? "true" : "false"); });
+    qzFasit.hidden = qz.shown;
+    qzScore.hidden = !qz.shown;
+    qzHint.hidden = qz.shown;
+    qzPoeng.textContent = n;
+    if (n === 0) {
+      qzDom.textContent = "Kryss av for svarene du hadde rett på.";
+    } else {
+      for (var k = 0; k < QZ_DOM.length; k++) {
+        if (n >= QZ_DOM[k][0]) { qzDom.textContent = n + " av " + qzSvar.length + " riktige. " + QZ_DOM[k][1]; break; }
+      }
+    }
+  }
+
+  qzOpen.addEventListener("click", function () {
+    var open = qzOpen.getAttribute("aria-expanded") !== "true";
+    qzOpen.setAttribute("aria-expanded", open ? "true" : "false");
+    qzBody.hidden = !open;
+    quiz.classList.toggle("open", open);
+    qzOpenTekst.textContent = open ? "Lukk quizen" : "Ta quizen";
+  });
+
+  qzFasit.addEventListener("click", function () {
+    qz.shown = true;
+    qzSave();
+    qzRender();
+    qzRett[0].focus();
+  });
+
+  qzReset.addEventListener("click", function () {
+    qz = { shown: false, right: {} };
+    qzSave();
+    qzRender();
+    qzFasit.focus();
+  });
+
+  qzRender();
 
   // Podkasten: avspilleren later som den spiller, med teksting linje for linje
   var EPISODES = [
