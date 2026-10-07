@@ -207,7 +207,7 @@
   @media (min-width: 70rem) {
     .layout { grid-template-columns: minmax(0, 1fr) 20rem; column-gap: 1.5rem; align-items: start; }
     .plusbar { grid-column: 1 / -1; grid-row: 1; }
-    .quiz { grid-column: 1 / -1; grid-row: 2; }
+    .quiz { grid-column: 1; grid-row: 2; }
     .front { grid-column: 1; grid-row: 3; }
     .layout:has(> .plusbar[hidden]) > .quiz { grid-row: 1; }
     .layout:has(> .plusbar[hidden]) > .front { grid-row: 2; }
@@ -286,8 +286,8 @@
   .br-body a { color: var(--link); text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; }
   .br-body a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
   @media (min-width: 70rem) {
-    .breaking { position: sticky; top: 1rem; grid-column: 2; grid-row: 3; max-height: calc(100vh - 2rem); overflow: auto; padding: 1.2rem 1.25rem 1.4rem; }
-    .layout:has(> .plusbar[hidden]) > .breaking { grid-row: 2; }
+    .breaking { position: sticky; top: 1rem; grid-column: 2; grid-row: 2 / span 2; max-height: calc(100vh - 2rem); overflow: auto; padding: 1.2rem 1.25rem 1.4rem; }
+    .layout:has(> .plusbar[hidden]) > .breaking { grid-row: 1 / span 2; }
     .br-toggle { display: none; }
     .br-title { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.1rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
     .br-feed { display: block; padding: 0; }
