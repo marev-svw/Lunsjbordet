@@ -745,7 +745,9 @@
   .tv-dere { font: 400 .875rem/1 var(--marker); color: #b3261e; white-space: nowrap; }
   .tv-pts { font: 400 1.25rem/1 var(--marker); color: #b3261e; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .tv-rad.tom .tv-plass { opacity: .3; }
-  .tv-rad.tom .tv-navn::before { content: ""; flex: 1; max-width: 9rem; height: 0; margin-top: .4rem; border-top: 2px dotted rgba(28, 34, 38, .14); }
+  /* Stiplet linje fra lagnavnet helt bort til poengsummen, og over hele bredden på ledige plasser */
+  .tv-rad:not(.tom) .tv-navn::after { content: ""; flex: 1 1 0; min-width: 0; height: 0; margin-bottom: .3em; border-top: 2px dotted rgba(28, 34, 38, .2); }
+  .tv-rad.tom .tv-navn::before { content: ""; flex: 1; height: 0; margin-top: .4rem; border-top: 2px dotted rgba(28, 34, 38, .14); }
   /* Leder: tallet ringes inn med rød tusj */
   .tv-rad.leder .tv-plass::before { content: ""; position: absolute; inset: -.42rem -.6rem -.38rem -.55rem; border: 2.5px solid #b3261e; border-radius: 52% 46% 55% 44%; transform: rotate(-9deg); }
   /* Smal skjerm: klokkeslettet viker for lagnavnet */
@@ -1816,9 +1818,6 @@
     var n = Object.keys(qz.right).length;
     tpSendPoeng.textContent = n + " av " + qzSvar.length;
     tpForm.hidden = !(qz.shown && tp.klar && !tp.feil && !tp.lagret);
-    if (tp.lagret && !tp.sender) {
-      tpStatusEl.textContent = "«" + tp.lagret.lag + "» står på tavla med " + tp.lagret.poeng + " av " + tp.lagret.av + ".";
-    }
   }
 
   function tpKl(d) {
@@ -1931,6 +1930,7 @@
         tp.lagret = { id: ref.id, lag: lag, poeng: poeng, av: av };
         try { window.localStorage.setItem(TP_LS, JSON.stringify(tp.lagret)); } catch (err) { /* ingen lagring */ }
         tp.sender = false;
+        tpStatusEl.textContent = "";
         tpTegn(tp.rader.slice());
         toppRender();
       }).catch(function () {
