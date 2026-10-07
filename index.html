@@ -732,18 +732,17 @@
   .tv-lapp b { font: 400 .9375rem/1 var(--marker); }
   .tv-lapp small { font: 700 .625rem/1.1 var(--sans); letter-spacing: .04em; }
 
-  .tv-liste { position: relative; z-index: 1; display: grid; gap: 0 2.75rem; margin: 0; padding: 0; list-style: none; }
-  @container (min-width: 45.5rem) { .tv-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; } }
+  /* Plass 1–10 i én kolonne, smal nok til at poengsummen står nær lagnavnet */
+  .tv-liste { position: relative; z-index: 1; display: grid; max-width: 40rem; margin: 0; padding: 0; list-style: none; }
   .tv-rad { display: grid; grid-template-columns: 2rem minmax(0, 1fr) auto auto; align-items: center; gap: .55rem; min-height: 2.75rem; transform: rotate(-.35deg); }
   .tv-rad:nth-child(even) { transform: rotate(.3deg); }
   .tv-plass { position: relative; justify-self: center; font: 400 1.25rem/1 var(--marker); color: #1c2226; font-variant-numeric: tabular-nums; }
   .tv-navn { display: flex; align-items: baseline; gap: .5rem; min-width: 0; }
-  .tv-lag { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 400 1.1875rem/1.3 var(--marker); color: #2a4aa0; }
+  .tv-lag { min-width: 0; overflow-wrap: anywhere; font: 400 1.1875rem/1.3 var(--marker); color: #2a4aa0; }
   .tv-rad:nth-child(3n+2) .tv-lag { color: #1f6b45; }
   .tv-rad:nth-child(3n) .tv-lag { color: #1c2226; }
   .tv-navn small { flex: none; font: 600 .6875rem/1 var(--sans); color: var(--sheet-muted); font-variant-numeric: tabular-nums; }
   .tv-dere { font: 400 .875rem/1 var(--marker); color: #b3261e; white-space: nowrap; }
-  .tv-dere:empty { display: none; }
   .tv-pts { font: 400 1.25rem/1 var(--marker); color: #b3261e; font-variant-numeric: tabular-nums; white-space: nowrap; }
   .tv-rad.tom .tv-plass { opacity: .3; }
   .tv-rad.tom .tv-navn::before { content: ""; flex: 1; max-width: 9rem; height: 0; margin-top: .4rem; border-top: 2px dotted rgba(28, 34, 38, .14); }
