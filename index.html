@@ -712,13 +712,61 @@
   .qz-dom-wrap { display: grid; justify-items: start; gap: .5rem; max-width: 26rem; }
   .qz-dom { margin: 0; font: 700 1.0625rem/1.35 var(--sans); }
 
-  /* Topplisten: lagene melder inn poengsummen, dagens topp 10 står på et svarark ved siden av */
-  .qz-topp { display: grid; gap: 1.5rem 2.5rem; margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+  /* Lunsjbordets ledertavle: en whiteboard med aluminiumsramme, tusjskrift, gammel skygge av visket tekst
+     og tusjhylle. Tavla er lys i begge temaer, som svararkene, så tusjfargene er faste. */
+  .qz-topp { display: grid; gap: 1.6rem; margin-top: 1.6rem; padding-top: 1.6rem; border-top: 1px solid var(--line); }
   .qz-topp[hidden] { display: none; }
-  @container (min-width: 45.5rem) { .qz-topp { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
-  .qz-topp-t { margin: 0 0 .45rem; font: 800 1.375rem/1.2 var(--sans); letter-spacing: -0.015em; }
+  .tv { margin: 0; padding-bottom: .9rem; }
+  .tv-ramme { position: relative; padding: .45rem; border: 1px solid var(--frame); border-radius: 6px; background: linear-gradient(160deg, var(--steel-hi), var(--steel)); box-shadow: 0 14px 24px -16px var(--drop); }
+  .tv-flate { position: relative; overflow: hidden; padding: 1rem clamp(.9rem, 3cqi, 1.6rem) 1.15rem; border-radius: 2px; background:
+      linear-gradient(112deg, transparent 38%, rgba(255, 255, 255, .55) 46%, transparent 54%),
+      radial-gradient(ellipse 30% 9% at 24% 62%, rgba(90, 100, 110, .07), transparent 70%),
+      radial-gradient(ellipse 22% 7% at 72% 30%, rgba(42, 74, 160, .06), transparent 70%),
+      radial-gradient(ellipse 26% 8% at 66% 84%, rgba(90, 100, 110, .06), transparent 70%),
+      var(--sheet); color: #1c2226; }
+  .tv-hode { position: relative; z-index: 1; padding-right: 5.6rem; margin-bottom: .6rem; }
+  .tv-tittel { display: inline-block; margin: 0; padding-bottom: .3rem; font: 400 clamp(1.35rem, 1rem + 1.6cqi, 1.85rem)/1.1 var(--marker); letter-spacing: .01em; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 8' preserveAspectRatio='none'%3E%3Cpath d='M2 5c30-3 60-2 95-1s70 1 101-2' fill='none' stroke='%23b3261e' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E") left bottom / 100% .5rem no-repeat; }
+  .tv-dato { margin: .35rem 0 0; font: 700 .75rem/1.2 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--sheet-muted); }
+  .tv-lapp { position: absolute; z-index: 2; top: .55rem; right: .7rem; width: 4.9rem; height: 4.5rem; display: grid; place-content: center; gap: .2rem; padding: .3rem; text-align: center; transform: rotate(5deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; box-shadow: 0 8px 12px -7px var(--drop); }
+  .tv-lapp::before { content: ""; position: absolute; top: -.2rem; left: 50%; width: .85rem; height: .85rem; border-radius: 50%; transform: translateX(-50%); background: radial-gradient(circle at 35% 30%, #e86a5f, #b3261e 70%); box-shadow: 0 2px 3px rgba(0, 0, 0, .3); }
+  .tv-lapp b { font: 400 .9375rem/1 var(--marker); }
+  .tv-lapp small { font: 700 .625rem/1.1 var(--sans); letter-spacing: .04em; }
+
+  .tv-liste { position: relative; z-index: 1; display: grid; gap: 0 2.75rem; margin: 0; padding: 0; list-style: none; }
+  @container (min-width: 45.5rem) { .tv-liste { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(5, auto); grid-auto-flow: column; } }
+  .tv-rad { display: grid; grid-template-columns: 2rem minmax(0, 1fr) auto auto; align-items: center; gap: .55rem; min-height: 2.75rem; transform: rotate(-.35deg); }
+  .tv-rad:nth-child(even) { transform: rotate(.3deg); }
+  .tv-plass { position: relative; justify-self: center; font: 400 1.25rem/1 var(--marker); color: #1c2226; font-variant-numeric: tabular-nums; }
+  .tv-navn { display: flex; align-items: baseline; gap: .5rem; min-width: 0; }
+  .tv-lag { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 400 1.1875rem/1.3 var(--marker); color: #2a4aa0; }
+  .tv-rad:nth-child(3n+2) .tv-lag { color: #1f6b45; }
+  .tv-rad:nth-child(3n) .tv-lag { color: #1c2226; }
+  .tv-navn small { flex: none; font: 600 .6875rem/1 var(--sans); color: var(--sheet-muted); font-variant-numeric: tabular-nums; }
+  .tv-dere { font: 400 .875rem/1 var(--marker); color: #b3261e; white-space: nowrap; }
+  .tv-dere:empty { display: none; }
+  .tv-pts { font: 400 1.25rem/1 var(--marker); color: #b3261e; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .tv-rad.tom .tv-plass { opacity: .3; }
+  .tv-rad.tom .tv-navn::before { content: ""; flex: 1; max-width: 9rem; height: 0; margin-top: .4rem; border-top: 2px dotted rgba(28, 34, 38, .14); }
+  /* Leder: tallet ringes inn med rød tusj */
+  .tv-rad.leder .tv-plass::before { content: ""; position: absolute; inset: -.42rem -.6rem -.38rem -.55rem; border: 2.5px solid #b3261e; border-radius: 52% 46% 55% 44%; transform: rotate(-9deg); }
+  /* Smal skjerm: klokkeslettet viker for lagnavnet */
+  @container (max-width: 32rem) {
+    .tv-rad { gap: .45rem; }
+    .tv-navn small { display: none; }
+    .tv-lag { font-size: 1.0625rem; }
+  }
+  .tv-tom { position: relative; z-index: 1; margin: .7rem 0 0; font: 400 1.0625rem/1.35 var(--marker); color: var(--sheet-muted); transform: rotate(-.5deg); }
+  .tv-tom[hidden] { display: none; }
+
+  /* Tusjhylla under tavla, med tre tusjer og en svamp */
+  .tv-hylle { position: relative; height: .75rem; margin: 0 .5rem; border: 1px solid var(--frame); border-top: 0; border-radius: 0 0 4px 4px; background: linear-gradient(to bottom, var(--steel), var(--steel-hi)); box-shadow: 0 8px 10px -7px var(--drop); }
+  .tv-tusjer { position: absolute; right: clamp(.6rem, 4cqi, 2rem); bottom: .2rem; width: 9.5rem; height: auto; }
+
+  /* Innsending under tavla */
+  .qz-inn { display: grid; gap: .5rem 2.5rem; }
+  @container (min-width: 45.5rem) { .qz-inn { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); align-items: start; } }
+  .qz-topp-t { margin: 0 0 .4rem; font: 800 1.25rem/1.2 var(--sans); letter-spacing: -0.015em; }
   .qz-inn-tekst { margin: 0; max-width: 30rem; font: 400 1rem/1.5 var(--serif); }
-  .qz-form { margin-top: 1.1rem; }
   .qz-form[hidden] { display: none; }
   .qz-label { display: block; margin-bottom: .4rem; font: 700 .875rem/1.2 var(--sans); }
   .qz-felt { display: flex; flex-wrap: wrap; gap: .6rem; }
@@ -726,20 +774,8 @@
   .qz-input:focus-visible { outline: 3px solid var(--link); outline-offset: 1px; }
   .qz-felt .btn:disabled { opacity: .55; cursor: default; }
   .qz-liten { margin: .55rem 0 0; font: 400 .875rem/1.4 var(--sans); color: var(--muted); }
-  .qz-status { margin: .9rem 0 0; font: 700 1rem/1.4 var(--sans); }
+  .qz-status { margin: .75rem 0 0; font: 700 1rem/1.4 var(--sans); }
   .qz-status:empty { display: none; }
-  .qz-tavle { position: relative; padding: .85rem 1.1rem 1rem; border-radius: 2px; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); }
-  .qz-tavle::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 3rem; height: .9rem; transform: translateX(-50%) rotate(-2deg); background: var(--tape); }
-  .qz-tavle-t { margin: 0; padding-bottom: .45rem; border-bottom: 1px solid var(--sheet-rule); font: 800 .75rem/1.2 var(--sans); letter-spacing: .1em; }
-  .qz-liste { margin: 0; padding: 0; list-style: none; }
-  .qz-rad { display: grid; grid-template-columns: 1.7rem minmax(0, 1fr) auto; align-items: center; gap: .5rem; min-height: 2.4rem; border-bottom: 1px solid var(--sheet-rule); }
-  .qz-plass { font: 700 .75rem/1 var(--sans); color: var(--sheet-muted); font-variant-numeric: tabular-nums; }
-  .qz-navn { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 600 .9375rem/1.25 var(--sans); }
-  .qz-navn small { margin-left: .45rem; font-size: .75rem; font-weight: 500; color: var(--sheet-muted); font-variant-numeric: tabular-nums; }
-  .qz-pts { font: 400 1.125rem/1 var(--marker); color: var(--pen); font-variant-numeric: tabular-nums; }
-  .qz-rad.eget { margin: 0 -.5rem; padding: 0 .5rem; background: rgba(244, 213, 71, .45); }
-  .qz-tom { margin: .7rem 0 0; font: 400 .9375rem/1.4 var(--serif); color: var(--sheet-muted); }
-  .qz-tom[hidden] { display: none; }
 
   /* Betalingsmuren */
   .betalingsmur { width: min(27rem, calc(100% - 2.5rem)); max-width: none; padding: 1.5rem 1.5rem 1.35rem; border: 0; border-radius: 8px; background: var(--card); color: var(--ink); font-family: var(--sans); box-shadow: 0 24px 48px -18px var(--drop); }
@@ -961,24 +997,47 @@
     </div>
 
     <div class="qz-topp" id="qz-topp" hidden>
-      <div class="qz-inn">
-        <p class="qz-tema">Topplisten</p>
-        <h3 class="qz-topp-t">Meld inn laget</h3>
-        <p class="qz-inn-tekst">Vis fasiten og tell opp, så kan laget sende poengsummen til dagens topp 10. Listen nullstilles når neste quiz er ute.</p>
-        <form class="qz-form" id="qz-form" hidden novalidate>
-          <label class="qz-label" for="qz-lag">Lagnavn</label>
-          <div class="qz-felt">
-            <input class="qz-input" id="qz-lag" name="lag" type="text" maxlength="30" autocomplete="off" enterkeyhint="send">
-            <button type="submit" class="btn solid" id="qz-send">Send inn</button>
+      <div class="tv">
+        <div class="tv-ramme">
+          <div class="tv-flate">
+            <div class="tv-hode">
+              <h3 class="tv-tittel" id="qz-tavle-t">Lunsjbordets ledertavle</h3>
+              <p class="tv-dato" id="qz-tavle-dato">Dagens topp 10</p>
+            </div>
+            <ol class="tv-liste" id="qz-liste" aria-labelledby="qz-tavle-t"></ol>
+            <p class="tv-tom" id="qz-tom" aria-live="polite">Leter etter en tusj som virker …</p>
+            <div class="tv-lapp" aria-hidden="true"><b>IKKE VISK UT</b><small>FØR 07:30</small></div>
           </div>
-          <p class="qz-liten">Sendes inn med <span id="qz-send-poeng">0 av 14</span> riktige. Poengsummen er selvrapportert, og quizredaksjonen stoler på deg.</p>
-        </form>
-        <p class="qz-status" id="qz-status" aria-live="polite"></p>
+        </div>
+        <div class="tv-hylle" aria-hidden="true">
+          <svg class="tv-tusjer" viewBox="0 0 152 24">
+            <rect x="2" y="12" width="40" height="9" rx="3.5" fill="#2a4aa0"/>
+            <rect x="10" y="13.5" width="18" height="6" rx="1" fill="#f3f5f4" opacity=".85"/>
+            <rect x="40" y="11.5" width="10" height="10" rx="2.5" fill="#1d3577"/>
+            <rect x="56" y="12" width="38" height="9" rx="3.5" fill="#b3261e"/>
+            <rect x="63" y="13.5" width="16" height="6" rx="1" fill="#f3f5f4" opacity=".85"/>
+            <path d="M94 13.5h4l3.5 3-3.5 3h-4z" fill="#7a1a14"/>
+            <rect x="108" y="4" width="42" height="13" rx="3" fill="#3a4247"/>
+            <rect x="108" y="16" width="42" height="5.5" rx="1.5" fill="#d9d2c3"/>
+          </svg>
+        </div>
       </div>
-      <div class="qz-tavle">
-        <p class="qz-tavle-t" id="qz-tavle-t">DAGENS TOPP 10</p>
-        <ol class="qz-liste" id="qz-liste" aria-labelledby="qz-tavle-t"></ol>
-        <p class="qz-tom" id="qz-tom" aria-live="polite">Henter topplisten …</p>
+      <div class="qz-inn">
+        <div>
+          <h3 class="qz-topp-t">Skriv laget på tavla</h3>
+          <p class="qz-inn-tekst">Vis fasiten og tell opp, så kan laget skrive seg på tavla. Den viskes ut når neste quiz er ute.</p>
+        </div>
+        <div>
+          <form class="qz-form" id="qz-form" hidden novalidate>
+            <label class="qz-label" for="qz-lag">Lagnavn</label>
+            <div class="qz-felt">
+              <input class="qz-input" id="qz-lag" name="lag" type="text" maxlength="30" autocomplete="off" enterkeyhint="send">
+              <button type="submit" class="btn solid" id="qz-send">Skriv på tavla</button>
+            </div>
+            <p class="qz-liten">Med <span id="qz-send-poeng">0 av 14</span> riktige. Poengsummen er selvrapportert, og quizredaksjonen stoler på deg.</p>
+          </form>
+          <p class="qz-status" id="qz-status" aria-live="polite"></p>
+        </div>
       </div>
     </div>
   </div>
@@ -987,11 +1046,23 @@
 <aside class="breaking" id="breaking" aria-labelledby="br-title">
   <button type="button" class="br-toggle" id="br-toggle" aria-expanded="false" aria-controls="br-feed">
     <span class="live" aria-hidden="true"></span>
-    <span class="br-text"><span class="br-label">Nytraktet</span><span class="br-head" id="br-head">Partner strøk på ergonomikontrollen</span></span>
+    <span class="br-text"><span class="br-label">Nytraktet</span><span class="br-head" id="br-head">Lunsjquizen får ledertavle</span></span>
     <span class="chev" aria-hidden="true"></span>
   </button>
   <h2 class="br-title" id="br-title"><span class="live" aria-hidden="true"></span>Nytraktet</h2>
   <div class="br-feed" id="br-feed">
+    <article class="br-item">
+      <h3 class="br-hl">Lunsjquizen får ledertavle</h3>
+      <p class="br-meta"><time class="br-time" datetime="2026-10-07T23:56+02:00">23:56</time><span>Lunsjbordets konkurranseredaksjon</span></p>
+      <div class="br-body">
+        <p>Lagene som tar Lunsjquizen, kan nå skrive seg på en egen ledertavle. Det opplyser Lunsjbordets quizredaksjon i en pressemelding sendt ut sent onsdag kveld.</p>
+        <p>Tavla viser dagens ti beste lag og viskes ut kl.&nbsp;07:30 hver morgen, når de nye spørsmålene settes inn. Poengsummen er fortsatt selvrapportert.</p>
+        <p>«Vi har vurdert både kontrollspørsmål og stikkprøver, men landet på tillit. Det er billigere», heter det i pressemeldingen.</p>
+        <p>Tavla er åpen for alle lag, også dem som bare består av én person.</p>
+        <p>«Et lag på én er fortsatt et lag. Det er bare færre å skylde på», skriver quizredaksjonen.</p>
+        <p>Lagnavn kan være på inntil 30 tegn. Det utelukker blant annet «Transaksjonsgruppen pluss han ene fra skatt», erfarer Lunsjbordet. Laget vurderer å klage.</p>
+      </div>
+    </article>
     <article class="br-item">
       <h3 class="br-hl">Partner strøk på ergonomikontrollen</h3>
       <p class="br-meta"><time class="br-time" datetime="2026-10-07T14:42+02:00">14:42</time><span>Lunsjbordets HMS-redaksjon</span></p>
@@ -1623,7 +1694,7 @@
   var qzHint = document.getElementById("qz-hint");
   var qzReset = document.getElementById("qz-reset");
   var qzSvar = Array.prototype.slice.call(quiz.querySelectorAll(".qz-svar"));
-  var QZ_KEY = "lunsjquizen-2026-10-07"; // Quizens dato. Styrer også topplisten, så den må oppdateres med hver nye quiz.
+  var QZ_KEY = "lunsjquizen-2026-10-07"; // Quizens dato. Styrer også ledertavla, så den må oppdateres med hver nye quiz.
   var QZ_DOM = [
     [14, "Full pott. Quizredaksjonen ber om å få se kladden."],
     [11, "Sterkt. Siste kanelbolle er din."],
@@ -1709,7 +1780,7 @@
 
   qzRender();
 
-  // Topplisten: lagnavn og selvrapportert poengsum lagres i Firestore under quiz/<dato>/resultater.
+  // Ledertavla: lagnavn og selvrapportert poengsum lagres i Firestore under quiz/<dato>/resultater.
   // Datoen hentes fra QZ_KEY, så listen nullstilles når en ny quiz publiseres med ny QZ_KEY.
   // Firebase lastes først når quizen åpnes. Uten forbindelse (for eksempel i artefakten) vises en melding.
   var TP_SDK = "https://www.gstatic.com/firebasejs/13.0.0/";
@@ -1747,7 +1818,7 @@
     tpSendPoeng.textContent = n + " av " + qzSvar.length;
     tpForm.hidden = !(qz.shown && tp.klar && !tp.feil && !tp.lagret);
     if (tp.lagret && !tp.sender) {
-      tpStatusEl.textContent = "«" + tp.lagret.lag + "» er meldt inn med " + tp.lagret.poeng + " av " + tp.lagret.av + ". Lykke til på tabellen.";
+      tpStatusEl.textContent = "«" + tp.lagret.lag + "» står på tavla med " + tp.lagret.poeng + " av " + tp.lagret.av + ".";
     }
   }
 
@@ -1763,39 +1834,47 @@
     for (var i = 0; i < 10; i++) {
       var r = rader[i];
       var li = document.createElement("li");
-      li.className = "qz-rad";
+      li.className = "tv-rad";
       var p = document.createElement("span");
-      p.className = "qz-plass";
+      p.className = "tv-plass";
       var navn = document.createElement("span");
-      navn.className = "qz-navn";
+      navn.className = "tv-navn";
+      var dere = document.createElement("span");
+      dere.className = "tv-dere";
       var pts = document.createElement("span");
-      pts.className = "qz-pts";
+      pts.className = "tv-pts";
       if (r) {
         if (i === 0 || r.poeng !== rader[i - 1].poeng) plass = i + 1;
-        p.textContent = plass + ".";
-        navn.textContent = r.lag;
+        p.textContent = plass;
+        if (plass === 1) li.className += " leder";
+        var lag = document.createElement("span");
+        lag.className = "tv-lag";
+        lag.textContent = r.lag;
         var kl = document.createElement("small");
         kl.textContent = tpKl(r.tid);
+        navn.appendChild(lag);
         navn.appendChild(kl);
         pts.textContent = r.poeng + "/" + r.av;
-        if (tp.lagret && tp.lagret.id === r.id) li.className += " eget";
+        if (tp.lagret && tp.lagret.id === r.id) dere.textContent = "\u2190 dere";
       } else {
-        p.textContent = (i + 1) + ".";
+        li.className += " tom";
+        p.textContent = i + 1;
         li.setAttribute("aria-hidden", "true");
       }
       li.appendChild(p);
       li.appendChild(navn);
+      li.appendChild(dere);
       li.appendChild(pts);
       tpListe.appendChild(li);
     }
     tpTom.hidden = rader.length > 0;
-    tpTom.textContent = "Ingen lag har meldt seg ennå. Ledelsen er ledig.";
+    tpTom.textContent = "Tavla er blank. Første lag får tusjen.";
   }
 
   function tpFeil() {
     tp.feil = true;
     tpTom.hidden = false;
-    tpTom.textContent = "Topplisten er ikke tilgjengelig akkurat nå.";
+    tpTom.textContent = "Tavla er ikke tilgjengelig akkurat nå. Quizen virker som før.";
     toppRender();
   }
 
@@ -1825,10 +1904,10 @@
 
   if (/^\d{4}-\d{2}-\d{2}$/.test(tpId)) {
     var tpDel = tpId.split("-");
-    document.getElementById("qz-tavle-t").textContent = "DAGENS TOPP 10 · " + Number(tpDel[2]) + ". " + TP_MND[Number(tpDel[1]) - 1].toUpperCase();
+    document.getElementById("qz-tavle-dato").textContent = "Dagens topp 10 · " + Number(tpDel[2]) + ". " + TP_MND[Number(tpDel[1]) - 1];
     tpEl.hidden = false;
     tpTegn([]);
-    tpTom.textContent = "Henter topplisten …";
+    tpTom.textContent = "Leter etter en tusj som virker …";
 
     qzOpen.addEventListener("click", function () {
       if (qzOpen.getAttribute("aria-expanded") === "true") tpStart();
@@ -1848,7 +1927,7 @@
       var fs = tp.fs;
       tp.sender = true;
       tpSend.disabled = true;
-      tpStatusEl.textContent = "Sender inn …";
+      tpStatusEl.textContent = "Skriver på tavla …";
       fs.addDoc(fs.collection(tp.db, "quiz", tpId, "resultater"), { lag: lag, poeng: poeng, av: av, tid: fs.serverTimestamp() }).then(function (ref) {
         tp.lagret = { id: ref.id, lag: lag, poeng: poeng, av: av };
         try { window.localStorage.setItem(TP_LS, JSON.stringify(tp.lagret)); } catch (err) { /* ingen lagring */ }
@@ -1857,7 +1936,7 @@
         toppRender();
       }).catch(function () {
         tp.sender = false;
-        tpStatusEl.textContent = "Innsendingen gikk ikke gjennom. Prøv igjen om litt.";
+        tpStatusEl.textContent = "Det gikk ikke å skrive på tavla. Prøv igjen om litt.";
       }).then(function () {
         tpSend.disabled = false;
       });
@@ -1869,7 +1948,7 @@
     var btn = id === "quiz" ? qzOpen : id === "arkiv" ? arkBtn : null;
     if (btn && btn.getAttribute("aria-expanded") !== "true") btn.click();
   }
-  Array.prototype.forEach.call(document.querySelectorAll(".nav [data-open]"), function (a) {
+  Array.prototype.forEach.call(document.querySelectorAll("[data-open]"), function (a) {
     a.addEventListener("click", function () { navOpen(a.getAttribute("data-open")); });
   });
   document.getElementById("nav-plus").addEventListener("click", function () {
