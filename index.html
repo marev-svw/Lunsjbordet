@@ -188,8 +188,10 @@
   @media (min-width: 70rem) {
     .layout { grid-template-columns: minmax(0, 1fr) 20rem; column-gap: 1.5rem; align-items: start; }
     .plusbar { grid-column: 1 / -1; grid-row: 1; }
-    .front { grid-column: 1; grid-row: 2; }
-    .layout:has(> .plusbar[hidden]) > .front { grid-row: 1; }
+    .quiz { grid-column: 1 / -1; grid-row: 2; }
+    .front { grid-column: 1; grid-row: 3; }
+    .layout:has(> .plusbar[hidden]) > .quiz { grid-row: 1; }
+    .layout:has(> .plusbar[hidden]) > .front { grid-row: 2; }
   }
   /* Hovedspalten tilpasser seg sin egen bredde, ikke skjermens */
   .front { min-width: 0; display: grid; gap: 1.25rem; container-type: inline-size; }
@@ -265,8 +267,8 @@
   .br-body a { color: var(--link); text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; }
   .br-body a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
   @media (min-width: 70rem) {
-    .breaking { position: sticky; top: 1rem; grid-column: 2; grid-row: 2; max-height: calc(100vh - 2rem); overflow: auto; padding: 1.2rem 1.25rem 1.4rem; }
-    .layout:has(> .plusbar[hidden]) > .breaking { grid-row: 1; }
+    .breaking { position: sticky; top: 1rem; grid-column: 2; grid-row: 3; max-height: calc(100vh - 2rem); overflow: auto; padding: 1.2rem 1.25rem 1.4rem; }
+    .layout:has(> .plusbar[hidden]) > .breaking { grid-row: 2; }
     .br-toggle { display: none; }
     .br-title { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.1rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
     .br-feed { display: block; padding: 0; }
@@ -614,7 +616,9 @@
   .sirup .op-tittel, .sirup .op-slagord { color: #fff; }
   .sirup-ikon { width: 2.8rem; height: auto; }
 
-  /* Lunsjquizen: utfoldbar quiz med fasit bak én knapp og selvrapportert poengsum */
+  /* Lunsjquizen: utfoldbar quiz rett under Lunsj+-banneret, fasit bak én knapp og selvrapportert poengsum.
+     Kortet ligger utenfor hovedspalten, så det er sin egen container for bredderegler og cqi-mål. */
+  .quiz { container-type: inline-size; }
   .qz-head { display: grid; }
   @container (min-width: 45.5rem) { .qz-head { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); } }
   .qz-fig { display: grid; place-items: center; min-height: 14rem; padding: 2.1rem 1.5rem 2rem; background: var(--surface); overflow: hidden; pointer-events: none; }
@@ -754,6 +758,130 @@
     <button type="button" class="pb-no" id="pb-no">Nei takk, jeg klarer meg med overskrifter</button>
   </div>
   <p class="pb-msg" id="pb-msg" tabindex="-1" aria-live="polite"></p>
+</section>
+
+<section class="card quiz" id="quiz" aria-labelledby="quiz-title">
+  <div class="qz-head">
+    <div class="qz-fig" aria-hidden="true">
+      <div class="qz-ark">
+        <p class="qz-ark-t">LUNSJQUIZEN</p>
+        <ol>
+          <li><svg viewBox="0 0 62 10"><path d="M1 6c3-5 5 3 8-1s4-4 7 0 3 3 6-1 5-3 8 1 3 2 6-1 4-3 7 0 4 2 6-1 4-2 6 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
+          <li><svg viewBox="0 0 44 10"><path d="M1 5c2-4 5 3 8 0s3-4 6 0 4 3 7-1 4-2 6 1 3 2 6-1 4-1 9 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
+          <li><b>?</b></li>
+          <li><svg viewBox="0 0 70 10"><path d="M1 6c3-4 4 3 7 0s4-4 7 0 4 3 7 0 3-4 6 0 5 3 8-1 4-2 7 1 3 2 6-1 5-3 8 0 4 2 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
+          <li></li>
+          <li></li>
+        </ol>
+        <span class="qz-lapp">7. okt.</span>
+        <svg class="qz-blyant" viewBox="0 0 120 16">
+          <rect x="0" y="2" width="12" height="12" rx="2.5" fill="#e88f9b"/>
+          <rect x="11" y="1.5" width="9" height="13" fill="#b8bfc1"/>
+          <rect x="20" y="2" width="78" height="12" fill="#f2c230"/>
+          <rect x="20" y="6.3" width="78" height="3.4" fill="#e0ab1e"/>
+          <path d="M98 2l18 6-18 6z" fill="#f1d3a7"/>
+          <path d="M110.5 6.2l5.5 1.8-5.5 1.8z" fill="#2b2f33"/>
+        </svg>
+      </div>
+    </div>
+    <div class="qz-text">
+      <p class="qz-kicker">Lunsjquizen, onsdag 7. oktober</p>
+      <h2 class="hl-lg" id="quiz-title">Fjorten spørsmål før kaffen blir kald</h2>
+      <p class="lead-sm">Litt av hvert, og tre spørsmål fra nyhetene. Fasiten ligger bak én knapp. Ærligheten ligger hos deg.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets quizredaksjon</p>
+        <p>Dagens quiz, uke 41. 14 spørsmål.</p>
+      </div>
+      <button type="button" class="btn solid qz-open" id="qz-open" aria-expanded="false" aria-controls="qz-body"><span id="qz-open-tekst">Ta quizen</span><span class="chev" aria-hidden="true"></span></button>
+    </div>
+  </div>
+
+  <div class="qz-body" id="qz-body" hidden>
+    <ol class="qz-list">
+      <li class="qz-q">
+        <p class="qz-tema">Geografi</p>
+        <p class="qz-sp">Hvilket land grenser til både Frankrike og Spania, men er ikke medlem av EU?</p>
+        <div class="qz-svar" hidden><p><strong>Andorra.</strong> Fyrstedømmet ligger i Pyreneene.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Språk</p>
+        <p class="qz-sp">Hva betyr det svenske ordet «rolig» på norsk?</p>
+        <div class="qz-svar" hidden><p><strong>Morsom.</strong> Det norske «rolig» heter «lugn» på svensk.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Nyheter</p>
+        <p class="qz-sp">I statsbudsjettet som ble lagt fram onsdag, vil regjeringen styrke kampen mot en fremmed fiskeart i norske elver. Hvilken?</p>
+        <div class="qz-svar" hidden><p><strong>Pukkellaks.</strong> Regjeringen foreslår 54&nbsp;millioner kroner til innsatsen i 2027.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Fysikk</p>
+        <p class="qz-sp">Ved hvor mange grader Fahrenheit koker vann ved havnivå?</p>
+        <div class="qz-svar" hidden><p><strong>212&nbsp;°F.</strong> Vann fryser ved 32&nbsp;°F.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Kunst</p>
+        <p class="qz-sp">Hvem malte taket i Det sixtinske kapell: Leonardo da Vinci, Rafael, Michelangelo eller Botticelli?</p>
+        <div class="qz-svar" hidden><p><strong>Michelangelo,</strong> i årene 1508–1512. Botticelli malte noen av freskene på veggene.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Musikk</p>
+        <p class="qz-sp">Hvor mange tangenter har et vanlig piano?</p>
+        <div class="qz-svar" hidden><p><strong>88.</strong> 52 hvite og 36 svarte.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Dyreliv</p>
+        <p class="qz-sp">Hvilken farge har huden til en isbjørn under pelsen?</p>
+        <div class="qz-svar" hidden><p><strong>Svart.</strong> Pelsen ser hvit ut, men hårene er gjennomsiktige.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Nyheter</p>
+        <p class="qz-sp">Hvem vant herrefinalen i tennisturneringen US Open i september?</p>
+        <div class="qz-svar" hidden><p><strong>Alexander Zverev.</strong> Han slo amerikaneren Ben Shelton i fire sett.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Litteratur</p>
+        <p class="qz-sp">Hvem skrev romantrilogien «Kristin Lavransdatter»?</p>
+        <div class="qz-svar" hidden><p><strong>Sigrid Undset.</strong> Hun fikk Nobelprisen i litteratur i 1928.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Mat</p>
+        <p class="qz-sp">Hvilken «nøtt» hører med i klassisk pesto alla genovese?</p>
+        <div class="qz-svar" hidden><p><strong>Pinjekjerner.</strong> Strengt tatt frø fra pinjefuru, ikke nøtter.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Historie</p>
+        <p class="qz-sp">Hvilket år ble Gro Harlem Brundtland Norges første kvinnelige statsminister?</p>
+        <div class="qz-svar" hidden><p><strong>1981.</strong> Hun ble statsminister igjen i 1986 og 1990.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Tall</p>
+        <p class="qz-sp">Hvilket årstall skrives MCM med romertall?</p>
+        <div class="qz-svar" hidden><p><strong>1900.</strong> M er 1000, og CM er 900.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Nyheter</p>
+        <p class="qz-sp">Tadej Pogačar vant Tour de France i juli. Hvor mange sammenlagtseire har han nå i rittet?</p>
+        <div class="qz-svar" hidden><p><strong>Fem.</strong> Like mange som rekordholderne Anquetil, Merckx, Hinault og Induráin.</p></div>
+      </li>
+      <li class="qz-q">
+        <p class="qz-tema">Vitenskap</p>
+        <p class="qz-sp">Hva måles i enheten hertz?</p>
+        <div class="qz-svar" hidden><p><strong>Frekvens.</strong> Én hertz er én svingning per sekund.</p></div>
+      </li>
+    </ol>
+
+    <div class="qz-foot">
+      <button type="button" class="btn solid" id="qz-fasit">Vis fasit</button>
+      <div class="qz-score" id="qz-score" hidden>
+        <p class="qz-karakter" aria-label="Poengsum"><b id="qz-poeng">0</b><small>av 14</small></p>
+        <div class="qz-dom-wrap">
+          <p class="qz-dom" id="qz-dom" aria-live="polite"></p>
+          <button type="button" class="btn quiet" id="qz-reset">Start på nytt</button>
+        </div>
+      </div>
+      <p class="qz-hint" id="qz-hint">Svarene dukker opp under hvert spørsmål.</p>
+    </div>
+  </div>
 </section>
 
 <aside class="breaking" id="breaking" aria-labelledby="br-title">
@@ -1051,130 +1179,6 @@
       </div>
     </article>
   </div>
-
-  <section class="card quiz" id="quiz" aria-labelledby="quiz-title">
-    <div class="qz-head">
-      <div class="qz-fig" aria-hidden="true">
-        <div class="qz-ark">
-          <p class="qz-ark-t">LUNSJQUIZEN</p>
-          <ol>
-            <li><svg viewBox="0 0 62 10"><path d="M1 6c3-5 5 3 8-1s4-4 7 0 3 3 6-1 5-3 8 1 3 2 6-1 4-3 7 0 4 2 6-1 4-2 6 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
-            <li><svg viewBox="0 0 44 10"><path d="M1 5c2-4 5 3 8 0s3-4 6 0 4 3 7-1 4-2 6 1 3 2 6-1 4-1 9 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
-            <li><b>?</b></li>
-            <li><svg viewBox="0 0 70 10"><path d="M1 6c3-4 4 3 7 0s4-4 7 0 4 3 7 0 3-4 6 0 5 3 8-1 4-2 7 1 3 2 6-1 5-3 8 0 4 2 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></li>
-            <li></li>
-            <li></li>
-          </ol>
-          <span class="qz-lapp">7. okt.</span>
-          <svg class="qz-blyant" viewBox="0 0 120 16">
-            <rect x="0" y="2" width="12" height="12" rx="2.5" fill="#e88f9b"/>
-            <rect x="11" y="1.5" width="9" height="13" fill="#b8bfc1"/>
-            <rect x="20" y="2" width="78" height="12" fill="#f2c230"/>
-            <rect x="20" y="6.3" width="78" height="3.4" fill="#e0ab1e"/>
-            <path d="M98 2l18 6-18 6z" fill="#f1d3a7"/>
-            <path d="M110.5 6.2l5.5 1.8-5.5 1.8z" fill="#2b2f33"/>
-          </svg>
-        </div>
-      </div>
-      <div class="qz-text">
-        <p class="qz-kicker">Lunsjquizen, onsdag 7. oktober</p>
-        <h2 class="hl-lg" id="quiz-title">Fjorten spørsmål før kaffen blir kald</h2>
-        <p class="lead-sm">Litt av hvert, og tre spørsmål fra nyhetene. Fasiten ligger bak én knapp. Ærligheten ligger hos deg.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets quizredaksjon</p>
-          <p>Dagens quiz, uke 41. 14 spørsmål.</p>
-        </div>
-        <button type="button" class="btn solid qz-open" id="qz-open" aria-expanded="false" aria-controls="qz-body"><span id="qz-open-tekst">Ta quizen</span><span class="chev" aria-hidden="true"></span></button>
-      </div>
-    </div>
-
-    <div class="qz-body" id="qz-body" hidden>
-      <ol class="qz-list">
-        <li class="qz-q">
-          <p class="qz-tema">Geografi</p>
-          <p class="qz-sp">Hvilket land grenser til både Frankrike og Spania, men er ikke medlem av EU?</p>
-          <div class="qz-svar" hidden><p><strong>Andorra.</strong> Fyrstedømmet ligger i Pyreneene.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Språk</p>
-          <p class="qz-sp">Hva betyr det svenske ordet «rolig» på norsk?</p>
-          <div class="qz-svar" hidden><p><strong>Morsom.</strong> Det norske «rolig» heter «lugn» på svensk.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Nyheter</p>
-          <p class="qz-sp">I statsbudsjettet som ble lagt fram onsdag, vil regjeringen styrke kampen mot en fremmed fiskeart i norske elver. Hvilken?</p>
-          <div class="qz-svar" hidden><p><strong>Pukkellaks.</strong> Regjeringen foreslår 54&nbsp;millioner kroner til innsatsen i 2027.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Fysikk</p>
-          <p class="qz-sp">Ved hvor mange grader Fahrenheit koker vann ved havnivå?</p>
-          <div class="qz-svar" hidden><p><strong>212&nbsp;°F.</strong> Vann fryser ved 32&nbsp;°F.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Kunst</p>
-          <p class="qz-sp">Hvem malte taket i Det sixtinske kapell: Leonardo da Vinci, Rafael, Michelangelo eller Botticelli?</p>
-          <div class="qz-svar" hidden><p><strong>Michelangelo,</strong> i årene 1508–1512. Botticelli malte noen av freskene på veggene.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Musikk</p>
-          <p class="qz-sp">Hvor mange tangenter har et vanlig piano?</p>
-          <div class="qz-svar" hidden><p><strong>88.</strong> 52 hvite og 36 svarte.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Dyreliv</p>
-          <p class="qz-sp">Hvilken farge har huden til en isbjørn under pelsen?</p>
-          <div class="qz-svar" hidden><p><strong>Svart.</strong> Pelsen ser hvit ut, men hårene er gjennomsiktige.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Nyheter</p>
-          <p class="qz-sp">Hvem vant herrefinalen i tennisturneringen US Open i september?</p>
-          <div class="qz-svar" hidden><p><strong>Alexander Zverev.</strong> Han slo amerikaneren Ben Shelton i fire sett.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Litteratur</p>
-          <p class="qz-sp">Hvem skrev romantrilogien «Kristin Lavransdatter»?</p>
-          <div class="qz-svar" hidden><p><strong>Sigrid Undset.</strong> Hun fikk Nobelprisen i litteratur i 1928.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Mat</p>
-          <p class="qz-sp">Hvilken «nøtt» hører med i klassisk pesto alla genovese?</p>
-          <div class="qz-svar" hidden><p><strong>Pinjekjerner.</strong> Strengt tatt frø fra pinjefuru, ikke nøtter.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Historie</p>
-          <p class="qz-sp">Hvilket år ble Gro Harlem Brundtland Norges første kvinnelige statsminister?</p>
-          <div class="qz-svar" hidden><p><strong>1981.</strong> Hun ble statsminister igjen i 1986 og 1990.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Tall</p>
-          <p class="qz-sp">Hvilket årstall skrives MCM med romertall?</p>
-          <div class="qz-svar" hidden><p><strong>1900.</strong> M er 1000, og CM er 900.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Nyheter</p>
-          <p class="qz-sp">Tadej Pogačar vant Tour de France i juli. Hvor mange sammenlagtseire har han nå i rittet?</p>
-          <div class="qz-svar" hidden><p><strong>Fem.</strong> Like mange som rekordholderne Anquetil, Merckx, Hinault og Induráin.</p></div>
-        </li>
-        <li class="qz-q">
-          <p class="qz-tema">Vitenskap</p>
-          <p class="qz-sp">Hva måles i enheten hertz?</p>
-          <div class="qz-svar" hidden><p><strong>Frekvens.</strong> Én hertz er én svingning per sekund.</p></div>
-        </li>
-      </ol>
-
-      <div class="qz-foot">
-        <button type="button" class="btn solid" id="qz-fasit">Vis fasit</button>
-        <div class="qz-score" id="qz-score" hidden>
-          <p class="qz-karakter" aria-label="Poengsum"><b id="qz-poeng">0</b><small>av 14</small></p>
-          <div class="qz-dom-wrap">
-            <p class="qz-dom" id="qz-dom" aria-live="polite"></p>
-            <button type="button" class="btn quiet" id="qz-reset">Start på nytt</button>
-          </div>
-        </div>
-        <p class="qz-hint" id="qz-hint">Svarene dukker opp under hvert spørsmål.</p>
-      </div>
-    </div>
-  </section>
 
   <div class="oppslag-rad">
     <aside class="oppslag" aria-labelledby="op-m2">
