@@ -112,13 +112,22 @@
   a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
   .nw { white-space: nowrap; }
 
-  /* Avishode, med lenke tilbake til forsiden */
+  /* Avishode: gult toppbanner med logo og seksjonslenker, slik nettaviser har, og en infolinje under */
   .masthead { border-bottom: 1px solid var(--line); }
-  .masthead-inner { max-width: 54rem; margin: 0 auto; padding: 1.1rem max(1.25rem, env(safe-area-inset-right, 0px)) 1rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .75rem 2rem; font-family: var(--sans); }
-  .brand { margin: 0; font-size: 1.75rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+  .topbar { background: var(--postit); color: #1c2226; font-family: var(--sans); }
+  .topbar-inner { max-width: 54rem; margin: 0 auto; padding: .4rem max(1.25rem, env(safe-area-inset-right, 0px)) .4rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0 2rem; }
+  .brand { margin: 0; padding: .4rem 0; font-size: 1.75rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
   .brand a { color: inherit; text-decoration: none; }
   @media (hover: hover) { .brand a:hover { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; } }
-  .brand-tag { margin: .35rem 0 0; font-size: .875rem; color: var(--muted); }
+  .nav ul { display: flex; flex-wrap: wrap; margin: 0 -.6rem; padding: 0; list-style: none; }
+  .nav a, .nav button { -webkit-appearance: none; appearance: none; position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 .6rem; border: 0; background: none; color: inherit; font: 700 1rem/1 var(--sans); text-decoration: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .nav [aria-current="page"]::after { content: ""; position: absolute; left: .6rem; right: .6rem; bottom: .3rem; height: 3px; border-radius: 2px; background: currentColor; }
+  @media (hover: hover) { .nav a:not([aria-current]):hover, .nav button:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .35em; } }
+  .nav a:focus-visible, .nav button:focus-visible, .brand a:focus-visible { outline: 3px solid #1c2226; outline-offset: 1px; border-radius: 4px; }
+  .nav-plus { display: inline-grid; place-items: center; width: 1.15em; height: 1.15em; margin-left: .12em; border-radius: 4px; background: #1c2226; color: #f4d547; font-size: .9em; }
+  .nav-sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+  .masthead-inner { max-width: 54rem; margin: 0 auto; padding: .7rem max(1.25rem, env(safe-area-inset-right, 0px)) .75rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .35rem 2rem; font-family: var(--sans); }
+  .brand-tag { margin: 0; font-size: .875rem; color: var(--muted); }
   .today { margin: 0; font-size: .875rem; line-height: 1.45; color: var(--muted); text-align: right; }
   @media (max-width: 40rem) { .today { text-align: left; } }
 
@@ -208,11 +217,21 @@
 <body>
 
 <header class="masthead">
-  <div class="masthead-inner">
-    <div>
+  <div class="topbar">
+    <div class="topbar-inner">
       <p class="brand"><a href="index.html">Lunsjbordet</a></p>
-      <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+      <nav class="nav" aria-label="Seksjoner">
+        <ul>
+          <li><a href="index.html">Forside</a></li>
+          <li><a href="index.html#quiz" data-open="quiz">Quiz</a></li>
+          <li><a href="index.html#arkiv" data-open="arkiv">Arkiv</a></li>
+          <li><a href="index.html#lunsjpluss">Lunsj<span class="nav-plus" aria-hidden="true">+</span><span class="nav-sr">pluss</span></a></li>
+        </ul>
+      </nav>
     </div>
+  </div>
+  <div class="masthead-inner">
+    <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
     <p class="today">Mandag 5. oktober 2026<br>Været i serverparken: lunkent, med fare for streik</p>
   </div>
 </header>
