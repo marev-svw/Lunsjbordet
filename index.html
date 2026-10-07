@@ -712,6 +712,35 @@
   .qz-dom-wrap { display: grid; justify-items: start; gap: .5rem; max-width: 26rem; }
   .qz-dom { margin: 0; font: 700 1.0625rem/1.35 var(--sans); }
 
+  /* Topplisten: lagene melder inn poengsummen, dagens topp 10 står på et svarark ved siden av */
+  .qz-topp { display: grid; gap: 1.5rem 2.5rem; margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+  .qz-topp[hidden] { display: none; }
+  @container (min-width: 45.5rem) { .qz-topp { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } }
+  .qz-topp-t { margin: 0 0 .45rem; font: 800 1.375rem/1.2 var(--sans); letter-spacing: -0.015em; }
+  .qz-inn-tekst { margin: 0; max-width: 30rem; font: 400 1rem/1.5 var(--serif); }
+  .qz-form { margin-top: 1.1rem; }
+  .qz-form[hidden] { display: none; }
+  .qz-label { display: block; margin-bottom: .4rem; font: 700 .875rem/1.2 var(--sans); }
+  .qz-felt { display: flex; flex-wrap: wrap; gap: .6rem; }
+  .qz-input { flex: 1 1 12rem; min-width: 0; min-height: 44px; padding: .55rem .75rem; border: 1px solid var(--muted); border-radius: 8px; background: var(--card); color: var(--ink); font: 500 1rem/1.2 var(--sans); }
+  .qz-input:focus-visible { outline: 3px solid var(--link); outline-offset: 1px; }
+  .qz-felt .btn:disabled { opacity: .55; cursor: default; }
+  .qz-liten { margin: .55rem 0 0; font: 400 .875rem/1.4 var(--sans); color: var(--muted); }
+  .qz-status { margin: .9rem 0 0; font: 700 1rem/1.4 var(--sans); }
+  .qz-status:empty { display: none; }
+  .qz-tavle { position: relative; padding: .85rem 1.1rem 1rem; border-radius: 2px; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); }
+  .qz-tavle::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 3rem; height: .9rem; transform: translateX(-50%) rotate(-2deg); background: var(--tape); }
+  .qz-tavle-t { margin: 0; padding-bottom: .45rem; border-bottom: 1px solid var(--sheet-rule); font: 800 .75rem/1.2 var(--sans); letter-spacing: .1em; }
+  .qz-liste { margin: 0; padding: 0; list-style: none; }
+  .qz-rad { display: grid; grid-template-columns: 1.7rem minmax(0, 1fr) auto; align-items: center; gap: .5rem; min-height: 2.4rem; border-bottom: 1px solid var(--sheet-rule); }
+  .qz-plass { font: 700 .75rem/1 var(--sans); color: var(--sheet-muted); font-variant-numeric: tabular-nums; }
+  .qz-navn { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 600 .9375rem/1.25 var(--sans); }
+  .qz-navn small { margin-left: .45rem; font-size: .75rem; font-weight: 500; color: var(--sheet-muted); font-variant-numeric: tabular-nums; }
+  .qz-pts { font: 400 1.125rem/1 var(--marker); color: var(--pen); font-variant-numeric: tabular-nums; }
+  .qz-rad.eget { margin: 0 -.5rem; padding: 0 .5rem; background: rgba(244, 213, 71, .45); }
+  .qz-tom { margin: .7rem 0 0; font: 400 .9375rem/1.4 var(--serif); color: var(--sheet-muted); }
+  .qz-tom[hidden] { display: none; }
+
   /* Betalingsmuren */
   .betalingsmur { width: min(27rem, calc(100% - 2.5rem)); max-width: none; padding: 1.5rem 1.5rem 1.35rem; border: 0; border-radius: 8px; background: var(--card); color: var(--ink); font-family: var(--sans); box-shadow: 0 24px 48px -18px var(--drop); }
   .betalingsmur::backdrop { background: rgba(20, 26, 30, .5); }
@@ -929,6 +958,28 @@
         </div>
       </div>
       <p class="qz-hint" id="qz-hint">Svarene dukker opp under hvert spørsmål.</p>
+    </div>
+
+    <div class="qz-topp" id="qz-topp" hidden>
+      <div class="qz-inn">
+        <p class="qz-tema">Topplisten</p>
+        <h3 class="qz-topp-t">Meld inn laget</h3>
+        <p class="qz-inn-tekst">Vis fasiten og tell opp, så kan laget sende poengsummen til dagens topp 10. Listen nullstilles når neste quiz er ute.</p>
+        <form class="qz-form" id="qz-form" hidden novalidate>
+          <label class="qz-label" for="qz-lag">Lagnavn</label>
+          <div class="qz-felt">
+            <input class="qz-input" id="qz-lag" name="lag" type="text" maxlength="30" autocomplete="off" enterkeyhint="send">
+            <button type="submit" class="btn solid" id="qz-send">Send inn</button>
+          </div>
+          <p class="qz-liten">Sendes inn med <span id="qz-send-poeng">0 av 14</span> riktige. Poengsummen er selvrapportert, og quizredaksjonen stoler på deg.</p>
+        </form>
+        <p class="qz-status" id="qz-status" aria-live="polite"></p>
+      </div>
+      <div class="qz-tavle">
+        <p class="qz-tavle-t" id="qz-tavle-t">DAGENS TOPP 10</p>
+        <ol class="qz-liste" id="qz-liste" aria-labelledby="qz-tavle-t"></ol>
+        <p class="qz-tom" id="qz-tom" aria-live="polite">Henter topplisten …</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1572,7 +1623,7 @@
   var qzHint = document.getElementById("qz-hint");
   var qzReset = document.getElementById("qz-reset");
   var qzSvar = Array.prototype.slice.call(quiz.querySelectorAll(".qz-svar"));
-  var QZ_KEY = "lunsjquizen-2026-10-07";
+  var QZ_KEY = "lunsjquizen-2026-10-07"; // Quizens dato. Styrer også topplisten, så den må oppdateres med hver nye quiz.
   var QZ_DOM = [
     [14, "Full pott. Quizredaksjonen ber om å få se kladden."],
     [11, "Sterkt. Siste kanelbolle er din."],
@@ -1631,6 +1682,7 @@
         if (n >= QZ_DOM[k][0]) { qzDom.textContent = n + " av " + qzSvar.length + " riktige. " + QZ_DOM[k][1]; break; }
       }
     }
+    toppRender();
   }
 
   qzOpen.addEventListener("click", function () {
@@ -1656,6 +1708,161 @@
   });
 
   qzRender();
+
+  // Topplisten: lagnavn og selvrapportert poengsum lagres i Firestore under quiz/<dato>/resultater.
+  // Datoen hentes fra QZ_KEY, så listen nullstilles når en ny quiz publiseres med ny QZ_KEY.
+  // Firebase lastes først når quizen åpnes. Uten forbindelse (for eksempel i artefakten) vises en melding.
+  var TP_SDK = "https://www.gstatic.com/firebasejs/13.0.0/";
+  var TP_CONFIG = {
+    apiKey: "AIzaSyCl2PgrsfUn3GDo9A_kKVB6AM8vQdb927s",
+    authDomain: "lunsjbordet-f2f7c.firebaseapp.com",
+    projectId: "lunsjbordet-f2f7c",
+    storageBucket: "lunsjbordet-f2f7c.firebasestorage.app",
+    messagingSenderId: "848576640079",
+    appId: "1:848576640079:web:6b78eed9dcd1e22059a63a"
+  };
+  var TP_MND = ["jan.", "feb.", "mars", "apr.", "mai", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "des."];
+  var tpId = QZ_KEY.replace(/^lunsjquizen-/, "");
+  var tpEl = document.getElementById("qz-topp");
+  var tpForm = document.getElementById("qz-form");
+  var tpLag = document.getElementById("qz-lag");
+  var tpSend = document.getElementById("qz-send");
+  var tpSendPoeng = document.getElementById("qz-send-poeng");
+  var tpStatusEl = document.getElementById("qz-status");
+  var tpListe = document.getElementById("qz-liste");
+  var tpTom = document.getElementById("qz-tom");
+  var TP_LS = "lunsjquizen-topplisten-" + tpId;
+  var tp = { startet: false, klar: false, feil: false, sender: false, fs: null, db: null, lagret: null, rader: [] };
+
+  try {
+    var tpSaved = JSON.parse(window.localStorage.getItem(TP_LS) || "null");
+    if (tpSaved && typeof tpSaved.lag === "string" && typeof tpSaved.id === "string" && typeof tpSaved.poeng === "number" && typeof tpSaved.av === "number") tp.lagret = tpSaved;
+  } catch (e) {
+    // Lagring er bare en bekvemmelighet
+  }
+
+  function toppRender() {
+    if (!tpEl) return;
+    var n = Object.keys(qz.right).length;
+    tpSendPoeng.textContent = n + " av " + qzSvar.length;
+    tpForm.hidden = !(qz.shown && tp.klar && !tp.feil && !tp.lagret);
+    if (tp.lagret && !tp.sender) {
+      tpStatusEl.textContent = "«" + tp.lagret.lag + "» er meldt inn med " + tp.lagret.poeng + " av " + tp.lagret.av + ". Lykke til på tabellen.";
+    }
+  }
+
+  function tpKl(d) {
+    return ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+  }
+
+  function tpTegn(rader) {
+    rader.sort(function (a, b) { return b.poeng - a.poeng || a.tid - b.tid; });
+    rader = rader.slice(0, 10);
+    tpListe.textContent = "";
+    var plass = 0;
+    for (var i = 0; i < 10; i++) {
+      var r = rader[i];
+      var li = document.createElement("li");
+      li.className = "qz-rad";
+      var p = document.createElement("span");
+      p.className = "qz-plass";
+      var navn = document.createElement("span");
+      navn.className = "qz-navn";
+      var pts = document.createElement("span");
+      pts.className = "qz-pts";
+      if (r) {
+        if (i === 0 || r.poeng !== rader[i - 1].poeng) plass = i + 1;
+        p.textContent = plass + ".";
+        navn.textContent = r.lag;
+        var kl = document.createElement("small");
+        kl.textContent = tpKl(r.tid);
+        navn.appendChild(kl);
+        pts.textContent = r.poeng + "/" + r.av;
+        if (tp.lagret && tp.lagret.id === r.id) li.className += " eget";
+      } else {
+        p.textContent = (i + 1) + ".";
+        li.setAttribute("aria-hidden", "true");
+      }
+      li.appendChild(p);
+      li.appendChild(navn);
+      li.appendChild(pts);
+      tpListe.appendChild(li);
+    }
+    tpTom.hidden = rader.length > 0;
+    tpTom.textContent = "Ingen lag har meldt seg ennå. Ledelsen er ledig.";
+  }
+
+  function tpFeil() {
+    tp.feil = true;
+    tpTom.hidden = false;
+    tpTom.textContent = "Topplisten er ikke tilgjengelig akkurat nå.";
+    toppRender();
+  }
+
+  function tpStart() {
+    if (tp.startet) return;
+    tp.startet = true;
+    var tidsfrist = new Promise(function (_, avvis) { setTimeout(function () { avvis(new Error("tidsavbrudd")); }, 12000); });
+    Promise.race([Promise.all([import(TP_SDK + "firebase-app.js"), import(TP_SDK + "firebase-firestore.js")]), tidsfrist]).then(function (m) {
+      var fs = m[1];
+      tp.fs = fs;
+      tp.db = fs.getFirestore(m[0].initializeApp(TP_CONFIG));
+      var q = fs.query(fs.collection(tp.db, "quiz", tpId, "resultater"), fs.orderBy("poeng", "desc"), fs.limit(30));
+      fs.onSnapshot(q, function (snap) {
+        var rader = [];
+        snap.forEach(function (doc) {
+          var d = doc.data({ serverTimestamps: "estimate" });
+          if (typeof d.lag !== "string" || typeof d.poeng !== "number" || typeof d.av !== "number" || !d.tid || typeof d.tid.toDate !== "function") return;
+          rader.push({ id: doc.id, lag: d.lag, poeng: d.poeng, av: d.av, tid: d.tid.toDate() });
+        });
+        tp.klar = true;
+        tp.rader = rader;
+        tpTegn(rader.slice());
+        toppRender();
+      }, tpFeil);
+    }).catch(tpFeil);
+  }
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(tpId)) {
+    var tpDel = tpId.split("-");
+    document.getElementById("qz-tavle-t").textContent = "DAGENS TOPP 10 · " + Number(tpDel[2]) + ". " + TP_MND[Number(tpDel[1]) - 1].toUpperCase();
+    tpEl.hidden = false;
+    tpTegn([]);
+    tpTom.textContent = "Henter topplisten …";
+
+    qzOpen.addEventListener("click", function () {
+      if (qzOpen.getAttribute("aria-expanded") === "true") tpStart();
+    });
+
+    tpForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (tp.sender || !tp.db || tp.lagret) return;
+      var lag = tpLag.value.replace(/\s+/g, " ").trim();
+      if (!lag) {
+        tpStatusEl.textContent = "Laget trenger et navn.";
+        tpLag.focus();
+        return;
+      }
+      var poeng = Object.keys(qz.right).length;
+      var av = qzSvar.length;
+      var fs = tp.fs;
+      tp.sender = true;
+      tpSend.disabled = true;
+      tpStatusEl.textContent = "Sender inn …";
+      fs.addDoc(fs.collection(tp.db, "quiz", tpId, "resultater"), { lag: lag, poeng: poeng, av: av, tid: fs.serverTimestamp() }).then(function (ref) {
+        tp.lagret = { id: ref.id, lag: lag, poeng: poeng, av: av };
+        try { window.localStorage.setItem(TP_LS, JSON.stringify(tp.lagret)); } catch (err) { /* ingen lagring */ }
+        tp.sender = false;
+        tpTegn(tp.rader.slice());
+        toppRender();
+      }).catch(function () {
+        tp.sender = false;
+        tpStatusEl.textContent = "Innsendingen gikk ikke gjennom. Prøv igjen om litt.";
+      }).then(function () {
+        tpSend.disabled = false;
+      });
+    });
+  }
 
   // Toppbanneret: Quiz og Arkiv folder ut modulen de peker på, Lunsj+ åpner abonnementsruta
   function navOpen(id) {
