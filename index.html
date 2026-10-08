@@ -791,6 +791,8 @@
   }
   .tv-tom { position: relative; z-index: 1; margin: .7rem 0 0; font: 400 1.0625rem/1.35 var(--marker); color: var(--sheet-muted); transform: rotate(-.5deg); }
   .tv-tom[hidden] { display: none; }
+  .tv-tom a { color: #2a4aa0; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .15em; }
+  .tv-tom a:focus-visible { outline: 3px solid #2a4aa0; outline-offset: 2px; border-radius: 2px; }
 
   /* Tusjhylla under tavla, med tre tusjer og en svamp */
   .tv-hylle { position: relative; height: .75rem; margin: 0 .5rem; border: 1px solid var(--frame); border-top: 0; border-radius: 0 0 4px 4px; background: linear-gradient(to bottom, var(--steel), var(--steel-hi)); box-shadow: 0 8px 10px -7px var(--drop); }
@@ -1063,6 +1065,7 @@
           <p class="qz-inn-tekst">Vis fasiten og tell opp, så kan laget skrive seg på tavla. Den viskes ut når neste quiz er ute.</p>
         </div>
         <div>
+          <button type="button" class="btn quiet" id="qz-tell" hidden>Vis fasit</button>
           <form class="qz-form" id="qz-form" hidden novalidate>
             <label class="qz-label" for="qz-lag">Lagnavn</label>
             <div class="qz-felt">
@@ -1835,7 +1838,8 @@
 
   // Ledertavla: lagnavn og selvrapportert poengsum lagres i Firestore under quiz/<dato>/resultater.
   // Datoen hentes fra QZ_KEY, så listen nullstilles når en ny quiz publiseres med ny QZ_KEY.
-  // Firebase lastes først når quizen åpnes. Uten forbindelse (for eksempel i artefakten) vises en melding.
+  // Firebase lastes først når quizen åpnes, og bare på nettsiden. I artefakten og andre kopier
+  // stoppes Firebase av nettleseren, så der vises en lenke til nettsiden i stedet.
   var TP_SDK = "https://www.gstatic.com/firebasejs/13.0.0/";
   var TP_CONFIG = {
     apiKey: "AIzaSyCl2PgrsfUn3GDo9A_kKVB6AM8vQdb927s",
@@ -1845,6 +1849,8 @@
     messagingSenderId: "848576640079",
     appId: "1:848576640079:web:6b78eed9dcd1e22059a63a"
   };
+  var TP_NETTSIDE = "https://marev-svw.github.io/Lunsjbordet/#quiz";
+  var tpPaaNettsiden = /^(marev-svw\.github\.io|localhost|127\.0\.0\.1)$/.test(window.location.hostname);
   var TP_MND = ["jan.", "feb.", "mars", "apr.", "mai", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "des."];
   var tpId = QZ_KEY.replace(/^lunsjquizen-/, "");
   var tpEl = document.getElementById("qz-topp");
@@ -1855,8 +1861,10 @@
   var tpStatusEl = document.getElementById("qz-status");
   var tpListe = document.getElementById("qz-liste");
   var tpTom = document.getElementById("qz-tom");
+  var tpTell = document.getElementById("qz-tell");
   var TP_LS = "lunsjquizen-topplisten-" + tpId;
-  var tp = { startet: false, klar: false, feil: false, sender: false, fs: null, db: null, lagret: null, rader: [] };
+  // online: siste svar kom fra serveren. harData: serveren har svart minst én gang.
+  var tp = { startet: false, klar: false, online: false, harData: false, feil: false, sender: false, fs: null, db: null, lagret: null, rader: [] };
 
   try {
     var tpSaved = JSON.parse(window.localStorage.getItem(TP_LS) || "null");
@@ -1869,11 +1877,23 @@
     if (!tpEl) return;
     var n = Object.keys(qz.right).length;
     tpSendPoeng.textContent = n + " av " + qzSvar.length;
-    tpForm.hidden = !(qz.shown && tp.klar && !tp.feil && !tp.lagret);
+    tpForm.hidden = !(qz.shown && tp.klar && tp.online && !tp.feil && !tp.lagret);
+    tpTell.hidden = !(tpPaaNettsiden && !tp.feil && !qz.shown && !tp.lagret);
   }
 
   function tpKl(d) {
     return ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+  }
+
+  // Kort feilkode som kollegaer kan oppgi når noe ikke virker
+  function tpKode(err, reserve) {
+    var k = err && err.code;
+    if (!k && err && err.message === "tidsavbrudd") k = "tidsavbrudd";
+    return k ? String(k).slice(0, 40) : reserve;
+  }
+
+  function tpLogg(err) {
+    try { console.warn("Ledertavla:", err); } catch (e) { /* ingen konsoll */ }
   }
 
   function tpTegn(rader) {
@@ -1921,23 +1941,26 @@
     tpTom.textContent = "Tavla er blank. Første lag får tusjen.";
   }
 
-  function tpFeil() {
+  function tpFeil(err, reserve) {
+    tpLogg(err);
     tp.feil = true;
     tpTom.hidden = false;
-    tpTom.textContent = "Tavla er ikke tilgjengelig akkurat nå. Quizen virker som før.";
+    tpTom.textContent = "Tavla er ikke tilgjengelig akkurat nå. Quizen virker som før. (Feil: " + tpKode(err, reserve) + ")";
     toppRender();
   }
 
   function tpStart() {
-    if (tp.startet) return;
+    if (tp.startet || !tpPaaNettsiden) return;
     tp.startet = true;
-    var tidsfrist = new Promise(function (_, avvis) { setTimeout(function () { avvis(new Error("tidsavbrudd")); }, 12000); });
+    var tidsfrist = new Promise(function (_, avvis) { setTimeout(function () { avvis(new Error("tidsavbrudd")); }, 20000); });
     Promise.race([Promise.all([import(TP_SDK + "firebase-app.js"), import(TP_SDK + "firebase-firestore.js")]), tidsfrist]).then(function (m) {
       var fs = m[1];
       tp.fs = fs;
-      tp.db = fs.getFirestore(m[0].initializeApp(TP_CONFIG));
+      // Long polling i stedet for strømming: tåler proxyer og sikkerhetsprogrammer på jobbnettverk
+      // som holder igjen trafikken (Firebase anbefaler dette for slike nettverk).
+      tp.db = fs.initializeFirestore(m[0].initializeApp(TP_CONFIG), { experimentalForceLongPolling: true });
       var q = fs.query(fs.collection(tp.db, "quiz", tpId, "resultater"), fs.orderBy("poeng", "desc"), fs.limit(30));
-      fs.onSnapshot(q, function (snap) {
+      fs.onSnapshot(q, { includeMetadataChanges: true }, function (snap) {
         var rader = [];
         snap.forEach(function (doc) {
           var d = doc.data({ serverTimestamps: "estimate" });
@@ -1945,11 +1968,18 @@
           rader.push({ id: doc.id, lag: d.lag, poeng: d.poeng, av: d.av, tid: d.tid.toDate() });
         });
         tp.klar = true;
+        tp.online = !snap.metadata.fromCache;
+        if (tp.online) tp.harData = true;
         tp.rader = rader;
         tpTegn(rader.slice());
+        // Firebase gir en tom liste fra hurtigminnet når serveren ikke svarer. Si det heller enn å vise en blank tavle.
+        if (!tp.harData) {
+          tpTom.hidden = false;
+          tpTom.textContent = "Tavla får ikke kontakt med serveren fra dette nettverket. Prøv gjerne fra mobilen.";
+        }
         toppRender();
-      }, tpFeil);
-    }).catch(tpFeil);
+      }, function (err) { tpFeil(err, "lesing"); });
+    }).catch(function (err) { tpFeil(err, "lasting"); });
   }
 
   if (/^\d{4}-\d{2}-\d{2}$/.test(tpId)) {
@@ -1957,11 +1987,26 @@
     document.getElementById("qz-tavle-dato").textContent = "Dagens topp 10 · " + Number(tpDel[2]) + ". " + TP_MND[Number(tpDel[1]) - 1];
     tpEl.hidden = false;
     tpTegn([]);
-    tpTom.textContent = "Leter etter en tusj som virker …";
 
-    qzOpen.addEventListener("click", function () {
-      if (qzOpen.getAttribute("aria-expanded") === "true") tpStart();
-    });
+    if (!tpPaaNettsiden) {
+      tp.feil = true;
+      tpTom.textContent = "Ledertavla virker bare på ";
+      var tpLenke = document.createElement("a");
+      tpLenke.href = TP_NETTSIDE;
+      tpLenke.target = "_blank";
+      tpLenke.rel = "noopener";
+      tpLenke.textContent = "Lunsjbordets nettside";
+      tpTom.appendChild(tpLenke);
+      tpTom.appendChild(document.createTextNode("."));
+      tpTom.hidden = false;
+    } else {
+      tpTom.textContent = "Leter etter en tusj som virker …";
+      qzOpen.addEventListener("click", function () {
+        if (qzOpen.getAttribute("aria-expanded") === "true") tpStart();
+      });
+    }
+
+    tpTell.addEventListener("click", function () { qzFasit.click(); });
 
     tpForm.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -1978,20 +2023,35 @@
       tp.sender = true;
       tpSend.disabled = true;
       tpStatusEl.textContent = "Skriver på tavla …";
+      // Svarer ikke serveren, ligger skrivingen i kø hos Firebase. Si fra i stedet for å stå og vente i det stille.
+      var treg = setTimeout(function () {
+        if (tp.sender) tpStatusEl.textContent = "Tavla svarer ikke fra dette nettverket. Siden prøver igjen så lenge den er åpen, men det kan gå raskere fra mobilen.";
+      }, 15000);
       fs.addDoc(fs.collection(tp.db, "quiz", tpId, "resultater"), { lag: lag, poeng: poeng, av: av, tid: fs.serverTimestamp() }).then(function (ref) {
+        clearTimeout(treg);
         tp.lagret = { id: ref.id, lag: lag, poeng: poeng, av: av, sig: QZ_SIG };
         try { window.localStorage.setItem(TP_LS, JSON.stringify(tp.lagret)); } catch (err) { /* ingen lagring */ }
         tp.sender = false;
         tpStatusEl.textContent = "";
         tpTegn(tp.rader.slice());
         toppRender();
-      }).catch(function () {
+        // Vis laget på tavla, siden skjemaet forsvinner
+        var dere = tpListe.querySelector(".tv-dere:not(:empty)");
+        if (dere) {
+          var rolig = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          try { dere.parentNode.scrollIntoView({ block: "center", behavior: rolig ? "auto" : "smooth" }); } catch (err) { /* rulling er en bekvemmelighet */ }
+        }
+      }).catch(function (err) {
+        clearTimeout(treg);
+        tpLogg(err);
         tp.sender = false;
-        tpStatusEl.textContent = "Det gikk ikke å skrive på tavla. Prøv igjen om litt.";
+        tpStatusEl.textContent = "Det gikk ikke å skrive på tavla. Prøv igjen om litt. (Feil: " + tpKode(err, "skriving") + ")";
       }).then(function () {
         tpSend.disabled = false;
       });
     });
+
+    toppRender();
   }
 
   // Toppbanneret: Quiz og Arkiv folder ut modulen de peker på, Lunsj+ åpner abonnementsruta
