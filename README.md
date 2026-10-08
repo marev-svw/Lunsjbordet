@@ -17,6 +17,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `bingo.html` | Bingobrett til Borgarting lagmannsrett |
 | `tennis.html` | Traineene tester TennisTirsdag |
 | `tanzania.html` | Debatt: Mindre Tanzania, mer timeføring |
+| `kontakt.html` | Kontakt redaksjonen: tipsskjema som sendes til redaksjonen på e-post via FormSubmit |
 | `favicon.svg`, `apple-touch-icon.png` | Ikon i nettleserfanen og på hjemskjermen |
 | `og-image.png` | Bildet som vises når en lenke deles i Teams, Slack, Outlook og lignende |
 | `robots.txt` | Slipper inn lenkeforhåndsvisninger og ber søkemotorer holde seg unna |
@@ -40,6 +41,10 @@ En GitHub Pages-side er åpen for alle som har adressen, også når repoet er pr
 1. Kopier en eksisterende sak, for eksempel `bussen.html`, og gi den et nytt filnavn.
 2. Bytt ut innholdet. Lenken tilbake til forsiden ligger i avishodet.
 3. Legg inn saken på forsiden i `index.html`, med lenke til det nye filnavnet.
+
+## Tipsskjemaet
+
+`kontakt.html` poster skjemaet til FormSubmit (`https://formsubmit.co/...`), som sender lappen videre på e-post med eventuelle vedlegg (til sammen maks 10 MB). Etter innsending sender FormSubmit leseren tilbake til `kontakt.html?sendt=1`, som viser kvitteringen. Adressen i `action` på skjemaet byttes til den tilfeldige strengen fra FormSubmit når skjemaet er aktivert, så e-postadressen ikke står i kildekoden.
 
 ## Lenkeforhåndsvisning
 

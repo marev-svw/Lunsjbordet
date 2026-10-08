@@ -564,6 +564,18 @@
   .colophon { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px)); font: 500 .875rem/1.5 var(--sans); color: var(--muted); }
   .colophon-inner { max-width: 79.5rem; margin: 2.25rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
   .colophon p { max-width: 42rem; margin: 0; }
+  .colophon a { color: var(--link); text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  .colophon a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+
+  /* Tips oss: gul lapp over arkivet, lenker til kontaktsiden */
+  .tipslapp { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 1.5rem; margin-top: .4rem; padding: 1.4rem clamp(1.1rem, 3cqi, 1.6rem) 1.25rem; background: linear-gradient(to bottom, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 2.5rem), var(--postit); color: #1c2226; border-radius: 2px; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); font-family: var(--sans); }
+  .tipslapp::before { content: ""; position: absolute; top: -.6rem; left: 50%; width: 5.5rem; height: 1.1rem; transform: translateX(-50%) rotate(-2deg); background: var(--tape); }
+  .tl-tekst { min-width: 0; flex: 1 1 18rem; }
+  .tl-title { margin: 0; font: 400 1.6rem/1.1 var(--marker); transform: rotate(-1.5deg); transform-origin: left center; }
+  .tl-tekst p { max-width: 36rem; margin: .45rem 0 0; font: 400 1.0625rem/1.45 var(--serif); }
+  .tl-cta { display: inline-flex; align-items: center; min-height: 48px; padding: .65rem 1.25rem; border-radius: 8px; background: #1c2226; color: #f4d547; font: 800 .9375rem/1.2 var(--sans); white-space: nowrap; -webkit-tap-highlight-color: transparent; }
+  @media (hover: hover) { .tl-cta:hover { opacity: .88; } }
+  .tl-cta:focus-visible { outline: 3px solid #1c2226; outline-offset: 2px; }
 
   /* Arkivredaksjonen: arkivskuffen nederst med saker som ikke står på forsiden */
   .arkiv { padding: clamp(1.1rem, 3cqi, 1.6rem); border-radius: 8px; background: var(--surface); font-family: var(--sans); }
@@ -846,6 +858,7 @@
             <li><a href="index.html" aria-current="page">Forside</a></li>
             <li><a href="#quiz" data-open="quiz">Quiz</a></li>
             <li><a href="#arkiv" data-open="arkiv">Arkiv</a></li>
+            <li><a href="kontakt.html">Tips oss</a></li>
             <li><button type="button" id="nav-plus">Lunsj<span class="nav-plus" aria-hidden="true">+</span><span class="nav-sr">pluss</span></button></li>
           </ul>
         </nav>
@@ -1470,6 +1483,14 @@
 
   <p class="fix"><strong>Rettelse:</strong> I debattinnlegget <a class="ref" href="tanzania.html"><span class="u">«Mindre Tanzania, mer timeføring»</span></a> stod det at traineemøtet ble hevet kl.&nbsp;10:15. Riktig tidspunkt er 10:17. De to siste minuttene gikk med til å avtale neste møte, som også skal handle om timeføring. Lunsjbordet beklager.</p>
 
+  <aside class="tipslapp" aria-labelledby="tl-title">
+    <div class="tl-tekst">
+      <h2 class="tl-title" id="tl-title">Tips oss!</h2>
+      <p>Hørt noe ved kaffemaskinen? Legg igjen en lapp til redaksjonen, med eller uten navn. Vedlegg tas imot.</p>
+    </div>
+    <a class="tl-cta" href="kontakt.html">Skriv en lapp</a>
+  </aside>
+
   <section class="arkiv" id="arkiv" aria-labelledby="ark-title">
     <p class="ark-kicker">Lunsjbordets arkivredaksjon</p>
     <h2 class="ark-title" id="ark-title">Arkivet</h2>
@@ -1510,7 +1531,7 @@
 
 <footer class="colophon">
   <div class="colophon-inner">
-    <p>Lunsjbordet er satire. Plussakene finnes foreløpig bare som overskrifter. Tips redaksjonen med en lapp ved kaffemaskinen.</p>
+    <p>Lunsjbordet er satire. Plussakene finnes foreløpig bare som overskrifter. Tips redaksjonen med en lapp ved kaffemaskinen, eller <a href="kontakt.html">send den digitalt</a>.</p>
   </div>
 </footer>
 

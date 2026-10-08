@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://marev-svw.github.io/Lunsjbordet/kontakt.html">
+<meta property="og:site_name" content="Lunsjbordet">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kontakt redaksjonen">
+<meta property="og:description" content="Send tips, innlegg og rettelser til Lunsjbordet, med eller uten navn.">
+<meta property="og:url" content="https://marev-svw.github.io/Lunsjbordet/kontakt.html">
+<meta property="og:image" content="https://marev-svw.github.io/Lunsjbordet/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lunsjbordet: kanelbolle på en gul lapp over avisnavnet og «Lokale nyheter fra kaffemaskinen»">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<title>Kontakt redaksjonen | Lunsjbordet</title>
+<meta name="description" content="Send tips, innlegg og rettelser til Lunsjbordet, med eller uten navn.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Permanent+Marker&family=Schibsted+Grotesk:wght@400..900&display=swap">
+<style>
+  /* Lunsjbordets profil: samme farger og skrifter som i avisens øvrige saker */
+  :root {
+    --bg: #f3f5f4;
+    --ink: #1c2226;
+    --muted: #59646a;
+    --line: #cfd6d5;
+    --surface: #e4e9e8;
+    --card: #ffffff;
+    --link: #1f5e57;
+    --postit: #f4d547;
+    --lapp-ink: #1c2226;
+    --stamp: #b3261e;
+    --drop: rgba(20, 26, 30, .35);
+    --tape: rgba(255, 255, 255, .6);
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --marker: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121618;
+      --ink: #e6eae9;
+      --muted: #9ba6aa;
+      --line: #2b3337;
+      --surface: #1b2124;
+      --card: #20272b;
+      --link: #7cc4b7;
+      --postit: #e9ca3e;
+      --stamp: #ee7d73;
+      --drop: rgba(0, 0, 0, .6);
+      --tape: rgba(255, 255, 255, .3);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121618;
+    --ink: #e6eae9;
+    --muted: #9ba6aa;
+    --line: #2b3337;
+    --surface: #1b2124;
+    --card: #20272b;
+    --link: #7cc4b7;
+    --postit: #e9ca3e;
+    --stamp: #ee7d73;
+    --drop: rgba(0, 0, 0, .6);
+    --tape: rgba(255, 255, 255, .3);
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  .nw { white-space: nowrap; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+  [hidden] { display: none !important; }
+
+  /* Avishode: gult toppbanner med logo og slagord, dagens dato og værvarsel, og seksjonslenker */
+  .topbar { background: var(--postit); color: #1c2226; font-family: var(--sans); }
+  .topbar-inner { max-width: 54rem; margin: 0 auto; padding: 1rem max(1.25rem, env(safe-area-inset-right, 0px)) .45rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .5rem 2rem; }
+  .brand-wrap { padding-bottom: .55rem; }
+  .brand { margin: 0; font-size: 1.875rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+  .brand a { color: inherit; text-decoration: none; }
+  @media (hover: hover) { .brand a:hover { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; } }
+  .brand-tag { margin: .3rem 0 0; font-size: .875rem; font-weight: 500; color: #3a4247; }
+  .topbar-side { display: grid; justify-items: end; gap: .1rem; min-width: 0; }
+  .today { margin: 0; font-size: .8125rem; line-height: 1.4; color: #3a4247; text-align: right; }
+  .nav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; margin: 0 -.6rem; padding: 0; list-style: none; }
+  .nav a, .nav button { -webkit-appearance: none; appearance: none; position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 .6rem; border: 0; background: none; color: inherit; font: 700 1rem/1 var(--sans); text-decoration: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .nav [aria-current="page"]::after { content: ""; position: absolute; left: .6rem; right: .6rem; bottom: .3rem; height: 3px; border-radius: 2px; background: currentColor; }
+  @media (hover: hover) { .nav a:not([aria-current]):hover, .nav button:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .35em; } }
+  .nav a:focus-visible, .nav button:focus-visible, .brand a:focus-visible { outline: 3px solid #1c2226; outline-offset: 1px; border-radius: 4px; }
+  .nav-plus { display: inline-grid; place-items: center; width: 1.15em; height: 1.15em; margin-left: .12em; border-radius: 4px; background: #1c2226; color: #f4d547; font-size: .9em; }
+  .nav-sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+  @media (max-width: 40rem) {
+    .topbar-inner { padding-top: .85rem; }
+    .brand-wrap { padding-bottom: 0; }
+    .topbar-side { justify-items: start; }
+    .today { text-align: left; }
+    .today-sep { display: none; }
+    .weather { display: block; }
+    .nav ul { justify-content: flex-start; }
+  }
+
+  /* Siden */
+  main { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px)); }
+  .story { max-width: 42rem; margin: 0 auto; }
+  .kicker { margin: 2.5rem 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
+  h1 { margin: 0 0 1.1rem; font-family: var(--sans); font-weight: 800; font-size: clamp(2.25rem, 1.3rem + 4.4vw, 3.75rem); line-height: 1.03; letter-spacing: -0.03em; text-wrap: balance; }
+  .lead { margin: 0; font-size: 1.3125rem; line-height: 1.45; font-weight: 500; text-wrap: pretty; }
+
+  /* Lappen: skjemaet er en gul lapp med teip, som den ved kaffemaskinen */
+  .lapp {
+    position: relative;
+    margin: 2.6rem 0 0;
+    padding: 1.9rem clamp(1.1rem, 4vw, 1.9rem) 1.5rem;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, .3), rgba(255, 255, 255, 0) 3.5rem), var(--postit);
+    color: var(--lapp-ink);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px -2px var(--drop), 0 24px 30px -22px var(--drop);
+    font-family: var(--sans);
+    display: grid;
+    gap: 1.35rem;
+  }
+  .lapp::before {
+    content: "";
+    position: absolute;
+    top: -.65rem;
+    left: 50%;
+    width: 6.5rem;
+    height: 1.2rem;
+    transform: translateX(-50%) rotate(-2deg);
+    background: var(--tape);
+  }
+  .lapp-head { margin: 0; font: 400 1.75rem/1.1 var(--marker); transform: rotate(-1.5deg); transform-origin: left center; }
+  .lapp :focus-visible { outline: 3px solid var(--lapp-ink); outline-offset: 2px; }
+
+  .felt { display: grid; gap: .3rem; min-width: 0; }
+  .etikett { margin: 0; font: 800 .8125rem/1.2 var(--sans); letter-spacing: .02em; }
+  .valgfri { font-weight: 500; opacity: .7; }
+  .lapp input[type="text"], .lapp input[type="email"], .lapp textarea {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+    color: var(--lapp-ink);
+    background: transparent;
+    border: 0;
+    border-bottom: 1.5px solid rgba(28, 34, 38, .32);
+    border-radius: 0;
+    padding: .4rem .1rem;
+    font: 600 1.0625rem/1.3 var(--sans);
+  }
+  .lapp input[type="text"]#overskrift { font-size: 1.1875rem; font-weight: 800; }
+  /* Linjert papir i meldingsfeltet */
+  .lapp textarea {
+    padding: 0 .1rem;
+    min-height: calc(1.75rem * 7);
+    resize: vertical;
+    border-bottom: 0;
+    font: 400 1.125rem/1.75rem var(--serif);
+    background: repeating-linear-gradient(to bottom, transparent 0 calc(1.75rem - 1.5px), rgba(28, 34, 38, .22) calc(1.75rem - 1.5px) 1.75rem);
+    background-attachment: local;
+  }
+  .lapp input::placeholder, .lapp textarea::placeholder { color: rgba(28, 34, 38, .55); opacity: 1; }
+  .lapp input:focus, .lapp textarea:focus { outline: none; border-bottom-color: var(--lapp-ink); }
+  .lapp textarea:focus { box-shadow: 0 0 0 2px var(--lapp-ink); border-radius: 2px; }
+  .lapp [aria-invalid="true"] { box-shadow: 0 0 0 2px var(--stamp) !important; border-radius: 2px; }
+
+  /* Hva gjelder det: valg som små etiketter */
+  .typer { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .typer legend { padding: 0; margin-bottom: .45rem; }
+  .typer-valg { display: flex; flex-wrap: wrap; gap: .45rem; }
+  .typer input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .typer label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 36px;
+    padding: .3rem .85rem;
+    border: 1.5px solid var(--lapp-ink);
+    border-radius: 999px;
+    font: 800 .875rem/1.2 var(--sans);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .typer input:checked + label { background: var(--lapp-ink); color: #f4d547; }
+  .typer input:focus-visible + label { outline: 3px solid var(--lapp-ink); outline-offset: 2px; }
+
+  /* Vedlegg */
+  .filer { display: grid; gap: .5rem; }
+  .fil { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem .75rem; min-width: 0; }
+  .fil input[type="file"] { flex: 1 1 14rem; min-width: 0; max-width: 100%; font: 500 .875rem/1.3 var(--sans); color: var(--lapp-ink); }
+  .fil input[type="file"]::file-selector-button {
+    margin-right: .75rem;
+    min-height: 38px;
+    padding: .4rem .85rem;
+    border: 1.5px solid var(--lapp-ink);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--lapp-ink);
+    font: 700 .875rem/1.2 var(--sans);
+    cursor: pointer;
+  }
+  @media (hover: hover) { .fil input[type="file"]::file-selector-button:hover { background: rgba(28, 34, 38, .08); } }
+  .lenkeknapp {
+    -webkit-appearance: none;
+    appearance: none;
+    justify-self: start;
+    min-height: 36px;
+    padding: .2rem 0;
+    border: 0;
+    background: none;
+    color: var(--lapp-ink);
+    font: 700 .875rem/1.2 var(--sans);
+    text-decoration: underline;
+    text-decoration-thickness: .08em;
+    text-underline-offset: .2em;
+    cursor: pointer;
+  }
+  .hjelp { margin: 0; font: 500 .8125rem/1.45 var(--sans); opacity: .78; }
+  .hjelp.feil { opacity: 1; color: #8f1d17; font-weight: 700; }
+
+  .avsender { display: grid; gap: 1.1rem 1.25rem; }
+  @media (min-width: 34rem) { .avsender { grid-template-columns: 1fr 1fr; } }
+  .kilde { margin: -.4rem 0 0; font: italic 400 1rem/1.45 var(--serif); }
+
+  /* Honningkrukka for roboter: usynlig for lesere og skjermlesere */
+  .honning { position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+
+  .lapp-fot { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: .75rem 1rem; padding-top: .3rem; }
+  .melding { margin: 0 auto 0 0; font: 700 .9375rem/1.4 var(--sans); color: #8f1d17; }
+  .cta {
+    -webkit-appearance: none;
+    appearance: none;
+    min-height: 48px;
+    padding: .7rem 1.4rem;
+    border: 0;
+    border-radius: 8px;
+    background: var(--lapp-ink);
+    color: #f4d547;
+    font: 800 1rem/1.2 var(--sans);
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+  @media (hover: hover) { .cta:hover { opacity: .88; } }
+  .cta:disabled { opacity: .55; cursor: default; }
+
+  /* Kvittering etter innsending */
+  .takk { position: relative; margin: 2.6rem 0 0; padding: 1.6rem clamp(1.1rem, 4vw, 1.9rem) 1.4rem; border-radius: 8px; background: var(--card); font-family: var(--sans); }
+  .takk:focus { outline: none; }
+  .takk h2 { margin: 0 7.5rem .5rem 0; font: 800 1.75rem/1.1 var(--sans); letter-spacing: -0.02em; }
+  .takk p { margin: 0 0 1rem; max-width: 34rem; font: 400 1.125rem/1.5 var(--serif); }
+  .stempel { position: absolute; top: 1.4rem; right: 1.25rem; margin: 0; padding: .25rem .55rem .15rem; border: 3px solid currentColor; border-radius: 6px; color: var(--link); font: 900 .875rem/1 var(--sans); letter-spacing: .12em; text-transform: uppercase; opacity: .9; transform: rotate(-8deg); }
+  .takk-valg { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.25rem; }
+  .btn { -webkit-appearance: none; appearance: none; display: inline-flex; align-items: center; min-height: 44px; padding: .55rem 1rem; border: 1px solid var(--ink); border-radius: 8px; background: transparent; color: var(--ink); font: 600 .9375rem/1.2 var(--sans); text-decoration: none; cursor: pointer; touch-action: manipulation; }
+  .btn.solid { background: var(--ink); color: var(--card); }
+  .btn:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  @media (hover: hover) { .btn:hover { background: var(--surface); } .btn.solid:hover { background: var(--ink); opacity: .88; } }
+  @media (max-width: 30rem) { .takk h2 { margin-right: 0; padding-top: 2.4rem; } }
+
+  /* Greit å vite */
+  .vite { margin: 2.5rem 0 0; font-family: var(--sans); }
+  .vite h2 { margin: 0 0 .7rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+  .vite ul { margin: 0; padding-left: 1.15rem; }
+  .vite li { margin: 0 0 .6rem; font-size: 1rem; line-height: 1.5; }
+  .vite li::marker { color: var(--muted); }
+
+  .colophon { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px)); font: 500 .875rem/1.5 var(--sans); color: var(--muted); }
+  .colophon p { max-width: 42rem; margin: 3rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .lapp { animation: stick .7s cubic-bezier(.3, .7, .2, 1) both; }
+    .takk .stempel { animation: stemple .45s cubic-bezier(.2, .9, .3, 1.2) .15s both; }
+  }
+  @keyframes stick {
+    0% { transform: rotate(1.2deg) scale(1.015); }
+    45% { transform: rotate(-.4deg) scale(1); }
+    100% { transform: none; }
+  }
+  @keyframes stemple {
+    0% { opacity: 0; transform: rotate(-8deg) scale(1.8); }
+    100% { opacity: .9; transform: rotate(-8deg) scale(1); }
+  }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-wrap">
+        <p class="brand"><a href="index.html">Lunsjbordet</a></p>
+        <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+      </div>
+      <div class="topbar-side">
+        <p class="today"><span id="today">Torsdag 8. oktober 2026</span><span class="today-sep" aria-hidden="true"> · </span><span class="weather">Tipsmottaket ved kaffemaskinen: åpent</span></p>
+        <nav class="nav" aria-label="Seksjoner">
+          <ul>
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="index.html#quiz">Quiz</a></li>
+            <li><a href="index.html#arkiv">Arkiv</a></li>
+            <li><a href="kontakt.html" aria-current="page">Tips oss</a></li>
+            <li><a href="index.html#lunsjpluss">Lunsj<span class="nav-plus" aria-hidden="true">+</span><span class="nav-sr">pluss</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+  // Dagens dato i toppbanneret, lik på alle sider
+  (function () {
+    try {
+      var s = new Intl.DateTimeFormat("nb-NO", { weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(new Date());
+      document.getElementById("today").textContent = s.charAt(0).toUpperCase() + s.slice(1);
+    } catch (e) {
+      // Beholder datoen som står i banneret
+    }
+  })();
+</script>
+
+<main>
+  <article class="story">
+    <p class="kicker">Tipsmottaket</p>
+    <h1>Kontakt redaksjonen</h1>
+    <p class="lead">Har du hørt noe ved kaffemaskinen, funnet en kopp på avveie eller skrevet et innlegg som fortjener spalteplass? Legg igjen en lapp. Redaksjonen leser alt, også det som kommer inn etter 16:00.</p>
+
+    <section class="takk" id="takk" tabindex="-1" aria-labelledby="takk-tittel" hidden>
+      <p class="stempel" aria-hidden="true">Mottatt</p>
+      <h2 id="takk-tittel">Lappen er levert</h2>
+      <p>Redaksjonen leser den ved neste kaffepause. Blir det sak av det, kan du kjenne deg igjen som «en kilde nær kaffemaskinen».</p>
+      <div class="takk-valg">
+        <button type="button" class="btn solid" id="ny-lapp">Skriv en lapp til</button>
+        <a class="btn" href="index.html">Til forsiden</a>
+      </div>
+    </section>
+
+    <!-- Skjemaet sendes til FormSubmit, som videresender lappen til redaksjonen på e-post -->
+    <form class="lapp" id="tips" action="https://formsubmit.co/marev@svw.no" method="POST" enctype="multipart/form-data" novalidate>
+      <p class="lapp-head" aria-hidden="true">Til redaksjonen</p>
+
+      <fieldset class="typer">
+        <legend class="etikett">Hva gjelder det?</legend>
+        <div class="typer-valg">
+          <input type="radio" name="Type" id="type-tips" value="Tips" checked><label for="type-tips">Tips</label>
+          <input type="radio" name="Type" id="type-innlegg" value="Innlegg"><label for="type-innlegg">Innlegg</label>
+          <input type="radio" name="Type" id="type-rettelse" value="Rettelse"><label for="type-rettelse">Rettelse</label>
+          <input type="radio" name="Type" id="type-annet" value="Annet"><label for="type-annet">Annet</label>
+        </div>
+      </fieldset>
+
+      <div class="felt">
+        <label class="etikett" for="overskrift">Overskrift <span class="valgfri">(valgfritt)</span></label>
+        <input type="text" id="overskrift" name="Overskrift" maxlength="150" placeholder="Kort fortalt, gjerne med kolon" autocomplete="off">
+      </div>
+
+      <div class="felt">
+        <label class="etikett" for="melding" id="melding-etikett">Tipset</label>
+        <textarea id="melding" name="Melding" rows="7" maxlength="20000" required placeholder="Hva skjedde, hvor og når? Klokkeslett gjør seg alltid godt."></textarea>
+      </div>
+
+      <div class="felt">
+        <p class="etikett" id="vedlegg-etikett">Vedlegg <span class="valgfri">(valgfritt)</span></p>
+        <div class="filer" role="group" aria-labelledby="vedlegg-etikett" aria-describedby="fil-info">
+          <div class="fil">
+            <input type="file" id="vedlegg-1" name="Vedlegg" aria-label="Vedlegg 1">
+            <button type="button" class="lenkeknapp fjern" hidden>Fjern</button>
+          </div>
+          <div class="fil" hidden>
+            <input type="file" id="vedlegg-2" name="Vedlegg 2" aria-label="Vedlegg 2">
+            <button type="button" class="lenkeknapp fjern" hidden>Fjern</button>
+          </div>
+          <div class="fil" hidden>
+            <input type="file" id="vedlegg-3" name="Vedlegg 3" aria-label="Vedlegg 3">
+            <button type="button" class="lenkeknapp fjern" hidden>Fjern</button>
+          </div>
+          <button type="button" class="lenkeknapp" id="flere-filer">+ Legg ved en fil til</button>
+        </div>
+        <p class="hjelp" id="fil-info" aria-live="polite">Bilder, skjermbilder eller dokumenter. Til sammen maks 10 MB.</p>
+      </div>
+
+      <div class="avsender">
+        <div class="felt">
+          <label class="etikett" for="navn">Navn <span class="valgfri">(valgfritt)</span></label>
+          <input type="text" id="navn" name="Navn" maxlength="100" autocomplete="name">
+        </div>
+        <div class="felt">
+          <label class="etikett" for="epost">E-post <span class="valgfri">(valgfritt)</span></label>
+          <input type="email" id="epost" name="email" maxlength="200" autocomplete="email" inputmode="email">
+        </div>
+      </div>
+      <p class="kilde">La feltene stå tomme hvis du vil være anonym. Redaksjonen beskytter sine kilder, også mot partnerne.</p>
+
+      <div class="honning" aria-hidden="true">
+        <label for="honning">Ikke fyll ut dette feltet</label>
+        <input type="text" id="honning" name="_honey" tabindex="-1" autocomplete="off">
+      </div>
+      <input type="hidden" name="_subject" id="emne" value="Lunsjbordet: nytt tips">
+      <input type="hidden" name="_next" value="https://marev-svw.github.io/Lunsjbordet/kontakt.html?sendt=1">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="lapp-fot">
+        <p class="melding" id="skjema-melding" role="alert"></p>
+        <button type="submit" class="cta" id="send">Send lappen</button>
+      </div>
+    </form>
+
+    <section class="vite" aria-labelledby="vite-tittel">
+      <h2 id="vite-tittel">Greit å vite</h2>
+      <ul>
+        <li>Lappen går på e-post til redaksjonen gjennom skjematjenesten FormSubmit. Før den sendes, ber tjenesten deg bekrefte at du ikke er en robot.</li>
+        <li>Navn og e-post er valgfritt. Lar du feltene stå tomme, står det ikke i lappen hvem den er fra.</li>
+        <li>Ikke send klientopplysninger, taushetsbelagt informasjon eller annet du ikke ville sagt høyt ved kaffemaskinen.</li>
+        <li>Redaksjonen forbeholder seg retten til å forkorte, spisse og sette kolon i alle titler.</li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer class="colophon">
+  <p>Lunsjbordet er satire. Tipsene trenger ikke være det.</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var MAKS = 10 * 1024 * 1024;
+  var form = document.getElementById("tips");
+  var takk = document.getElementById("takk");
+  var melding = document.getElementById("melding");
+  var meldingEtikett = document.getElementById("melding-etikett");
+  var overskrift = document.getElementById("overskrift");
+  var epost = document.getElementById("epost");
+  var emne = document.getElementById("emne");
+  var feil = document.getElementById("skjema-melding");
+  var send = document.getElementById("send");
+  var filInfo = document.getElementById("fil-info");
+  var flere = document.getElementById("flere-filer");
+  var rader = Array.prototype.slice.call(form.querySelectorAll(".fil"));
+  var STANDARD_FILTEKST = filInfo.textContent;
+
+  // Tekstene på lappen følger valget under «Hva gjelder det?»
+  var TYPER = {
+    Tips: { etikett: "Tipset", hint: "Hva skjedde, hvor og når? Klokkeslett gjør seg alltid godt.", emne: "nytt tips" },
+    Innlegg: { etikett: "Innlegget", hint: "Skriv eller lim inn innlegget. Lange innlegg kan også legges ved som fil.", emne: "nytt innlegg" },
+    Rettelse: { etikett: "Hva er feil?", hint: "Hvilken sak gjelder det, og hva er riktig? Redaksjonen beklager på forhånd.", emne: "ny rettelse" },
+    Annet: { etikett: "Meldingen", hint: "Skriv fritt.", emne: "ny lapp" }
+  };
+  function valgtType() {
+    var r = form.querySelector('input[name="Type"]:checked');
+    return r && TYPER[r.value] ? r.value : "Tips";
+  }
+  function oppdaterType() {
+    var t = TYPER[valgtType()];
+    meldingEtikett.textContent = t.etikett;
+    melding.placeholder = t.hint;
+  }
+  Array.prototype.forEach.call(form.querySelectorAll('input[name="Type"]'), function (r) {
+    r.addEventListener("change", oppdaterType);
+  });
+
+  // Vedlegg: inntil tre filer, til sammen maks 10 MB
+  function inputs() { return rader.map(function (rad) { return rad.querySelector('input[type="file"]'); }); }
+  function totalStorrelse() {
+    return inputs().reduce(function (sum, inp) {
+      return sum + (inp.files && inp.files[0] ? inp.files[0].size : 0);
+    }, 0);
+  }
+  function mb(b) { return (b / 1048576).toFixed(1).replace(".", ","); }
+  function oppdaterFiler() {
+    rader.forEach(function (rad) {
+      var inp = rad.querySelector('input[type="file"]');
+      rad.querySelector(".fjern").hidden = !(inp.files && inp.files.length);
+    });
+    flere.hidden = rader.every(function (rad) { return !rad.hidden; });
+    var sum = totalStorrelse();
+    filInfo.classList.toggle("feil", sum > MAKS);
+    if (sum > MAKS) {
+      filInfo.textContent = "Vedleggene er til sammen " + mb(sum) + " MB. Grensen er 10 MB.";
+    } else if (sum > 0) {
+      filInfo.textContent = mb(sum) + " av 10 MB brukt.";
+    } else {
+      filInfo.textContent = STANDARD_FILTEKST;
+    }
+  }
+  rader.forEach(function (rad, i) {
+    var inp = rad.querySelector('input[type="file"]');
+    inp.addEventListener("change", oppdaterFiler);
+    rad.querySelector(".fjern").addEventListener("click", function () {
+      inp.value = "";
+      if (i > 0) {
+        rad.hidden = true;
+        flere.focus();
+      } else {
+        inp.focus();
+      }
+      oppdaterFiler();
+    });
+  });
+  flere.addEventListener("click", function () {
+    var neste = rader.filter(function (rad) { return rad.hidden; })[0];
+    if (!neste) return;
+    neste.hidden = false;
+    oppdaterFiler();
+    neste.querySelector('input[type="file"]').focus();
+  });
+
+  // Kontroll før lappen sendes
+  function visFeil(tekst, felt) {
+    feil.textContent = tekst;
+    if (felt) {
+      felt.setAttribute("aria-invalid", "true");
+      felt.focus();
+    }
+  }
+  [melding, epost].forEach(function (felt) {
+    felt.addEventListener("input", function () {
+      felt.removeAttribute("aria-invalid");
+      feil.textContent = "";
+    });
+  });
+  form.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault();
+      if (form.requestSubmit) form.requestSubmit(send); else send.click();
+    }
+  });
+  form.addEventListener("submit", function (e) {
+    feil.textContent = "";
+    if (!melding.value.trim()) {
+      e.preventDefault();
+      visFeil("Lappen er tom. Skriv noe før du sender.", melding);
+      return;
+    }
+    if (epost.value.trim() && !epost.validity.valid) {
+      e.preventDefault();
+      visFeil("E-postadressen ser ikke riktig ut. Rett den, eller la feltet stå tomt.", epost);
+      return;
+    }
+    if (totalStorrelse() > MAKS) {
+      e.preventDefault();
+      visFeil("Vedleggene er for store. Til sammen maks 10 MB.");
+      return;
+    }
+    var tittel = overskrift.value.trim();
+    emne.value = "Lunsjbordet: " + TYPER[valgtType()].emne + (tittel ? " – " + tittel : "");
+    // Tomme filfelt sendes ikke med
+    inputs().forEach(function (inp) {
+      if (!(inp.files && inp.files.length)) inp.disabled = true;
+    });
+    send.disabled = true;
+    send.textContent = "Sender …";
+  });
+
+  // Tilbake fra FormSubmit med nettleserens tilbakeknapp: gjør skjemaet klart igjen
+  window.addEventListener("pageshow", function () {
+    send.disabled = false;
+    send.textContent = "Send lappen";
+    inputs().forEach(function (inp) { inp.disabled = false; });
+  });
+
+  // Kvittering når FormSubmit sender leseren tilbake med ?sendt=1
+  function visSkjema() {
+    takk.hidden = true;
+    form.hidden = false;
+    form.reset();
+    rader.forEach(function (rad, i) { if (i > 0) rad.hidden = true; });
+    oppdaterType();
+    oppdaterFiler();
+    melding.focus();
+  }
+  document.getElementById("ny-lapp").addEventListener("click", visSkjema);
+  var sendt = false;
+  try { sendt = new URLSearchParams(window.location.search).get("sendt") === "1"; } catch (err) { sendt = false; }
+  if (sendt) {
+    form.hidden = true;
+    takk.hidden = false;
+    takk.focus();
+    try { history.replaceState(null, "", window.location.pathname); } catch (err) { /* adressen blir stående */ }
+  }
+
+  oppdaterType();
+  oppdaterFiler();
+})();
+</script>
+</body>
+</html>
