@@ -230,6 +230,8 @@
     text-underline-offset: .2em;
     cursor: pointer;
   }
+  .kopi { margin: 0; padding: .7rem .85rem; border: 1.5px dashed rgba(28, 34, 38, .45); border-radius: 6px; font: 600 .9375rem/1.45 var(--sans); }
+  .kopi a { color: var(--lapp-ink); font-weight: 800; }
   .hjelp { margin: 0; font: 500 .8125rem/1.45 var(--sans); opacity: .78; }
   .hjelp.feil { opacity: 1; color: #8f1d17; font-weight: 700; }
 
@@ -348,9 +350,10 @@
       </div>
     </section>
 
-    <!-- Skjemaet sendes til FormSubmit, som videresender lappen til redaksjonen på e-post -->
-    <form class="lapp" id="tips" action="https://formsubmit.co/marev@svw.no" method="POST" enctype="multipart/form-data" novalidate>
+    <!-- Skjemaet sendes til FormSubmit (adressen står i MOTTAKER i skriptet nederst), som videresender lappen til redaksjonen på e-post -->
+    <form class="lapp" id="tips" method="POST" enctype="multipart/form-data" novalidate>
       <p class="lapp-head" aria-hidden="true">Til redaksjonen</p>
+      <p class="kopi" id="kopi" hidden>Dette er en kopi av siden. Lappen kan bare sendes fra <a href="https://marev-svw.github.io/Lunsjbordet/kontakt.html">Lunsjbordets nettside</a>.</p>
 
       <fieldset class="typer">
         <legend class="etikett">Hva gjelder det?</legend>
@@ -440,6 +443,15 @@
 
   var MAKS = 10 * 1024 * 1024;
   var form = document.getElementById("tips");
+
+  // Lappen sendes bare fra nettsiden. Andre steder (for eksempel en kopi) vises en lenke dit i stedet.
+  var MOTTAKER = "https://formsubmit.co/marev@svw.no";
+  var paaNettsiden = /^(marev-svw\.github\.io|localhost|127\.0\.0\.1)$/.test(window.location.hostname);
+  if (paaNettsiden) {
+    form.action = MOTTAKER;
+  } else {
+    document.getElementById("kopi").hidden = false;
+  }
   var takk = document.getElementById("takk");
   var melding = document.getElementById("melding");
   var meldingEtikett = document.getElementById("melding-etikett");
@@ -541,6 +553,11 @@
   });
   form.addEventListener("submit", function (e) {
     feil.textContent = "";
+    if (!paaNettsiden) {
+      e.preventDefault();
+      visFeil("Lappen kan bare sendes fra Lunsjbordets nettside. Bruk lenken øverst på lappen.");
+      return;
+    }
     if (!melding.value.trim()) {
       e.preventDefault();
       visFeil("Lappen er tom. Skriv noe før du sender.", melding);
