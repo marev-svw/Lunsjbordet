@@ -7,6 +7,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | Fil | Innhold |
 | --- | --- |
 | `index.html` | Forsiden |
+| `kantina.html` | Matanmeldelse: Modig kantine, halvrå jordskokk |
 | `dd.html` | Fullmektig trodde DD var Dungeons & Dragons |
 | `kronikk.html` | Kronikk: Mens maten var på vei |
 | `bussen.html` | Markus gikk av Bussen for egen celle |
