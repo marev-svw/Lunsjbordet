@@ -577,6 +577,15 @@
   @media (hover: hover) { .tl-cta:hover { opacity: .88; } }
   .tl-cta:focus-visible { outline: 3px solid #1c2226; outline-offset: 2px; }
 
+  /* Rettelsen og tipslappen side om side nederst i hovedspalten, under hverandre på smal skjerm */
+  .bunn-rad { display: grid; gap: 1.25rem; }
+  .bunn-rad .tipslapp { margin-top: 0; }
+  @container (min-width: 41.5rem) {
+    .bunn-rad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .bunn-rad .tipslapp { flex-direction: column; flex-wrap: nowrap; align-items: flex-start; }
+    .bunn-rad .tl-tekst { flex: 0 1 auto; }
+  }
+
   /* Arkivredaksjonen: arkivskuffen nederst med saker som ikke står på forsiden */
   .arkiv { padding: clamp(1.1rem, 3cqi, 1.6rem); border-radius: 8px; background: var(--surface); font-family: var(--sans); }
   .ark-kicker { margin: 0 0 .3rem; font-size: .8125rem; font-weight: 700; color: var(--link); }
@@ -1481,15 +1490,17 @@
     </div>
   </section>
 
-  <p class="fix"><strong>Rettelse:</strong> I debattinnlegget <a class="ref" href="tanzania.html"><span class="u">«Mindre Tanzania, mer timeføring»</span></a> stod det at traineemøtet ble hevet kl.&nbsp;10:15. Riktig tidspunkt er 10:17. De to siste minuttene gikk med til å avtale neste møte, som også skal handle om timeføring. Lunsjbordet beklager.</p>
+  <div class="bunn-rad">
+    <p class="fix"><strong>Rettelse:</strong> I debattinnlegget <a class="ref" href="tanzania.html"><span class="u">«Mindre Tanzania, mer timeføring»</span></a> stod det at traineemøtet ble hevet kl.&nbsp;10:15. Riktig tidspunkt er 10:17. De to siste minuttene gikk med til å avtale neste møte, som også skal handle om timeføring. Lunsjbordet beklager.</p>
 
-  <aside class="tipslapp" aria-labelledby="tl-title">
-    <div class="tl-tekst">
-      <h2 class="tl-title" id="tl-title">Tips oss!</h2>
-      <p>Hørt noe ved kaffemaskinen? Legg igjen en lapp til redaksjonen, med eller uten navn. Vedlegg tas imot.</p>
-    </div>
-    <a class="tl-cta" href="kontakt.html">Skriv en lapp</a>
-  </aside>
+    <aside class="tipslapp" aria-labelledby="tl-title">
+      <div class="tl-tekst">
+        <h2 class="tl-title" id="tl-title">Tips oss!</h2>
+        <p>Hørt noe ved kaffemaskinen? Legg igjen en lapp til redaksjonen, med eller uten navn. Vedlegg tas imot.</p>
+      </div>
+      <a class="tl-cta" href="kontakt.html">Skriv en lapp</a>
+    </aside>
+  </div>
 
   <section class="arkiv" id="arkiv" aria-labelledby="ark-title">
     <p class="ark-kicker">Lunsjbordets arkivredaksjon</p>

@@ -44,7 +44,7 @@ En GitHub Pages-side er åpen for alle som har adressen, også når repoet er pr
 
 ## Tipsskjemaet
 
-`kontakt.html` poster skjemaet til FormSubmit (`https://formsubmit.co/...`), som sender lappen videre på e-post med eventuelle vedlegg (til sammen maks 10 MB). Etter innsending sender FormSubmit leseren tilbake til `kontakt.html?sendt=1`, som viser kvitteringen. Mottakeradressen står i `MOTTAKER` i skriptet nederst i `kontakt.html`, og skjemaet sender bare når siden åpnes på `marev-svw.github.io` (eller lokalt); andre steder, som artefakt-kopien, vises en lenke til nettsiden. Adressen byttes til den tilfeldige strengen fra FormSubmit når skjemaet er aktivert, så e-postadressen ikke står i kildekoden.
+`kontakt.html` poster skjemaet til FormSubmit (`https://formsubmit.co/...`), som sender lappen videre på e-post med eventuelle vedlegg (til sammen maks 10 MB). Etter innsending sender FormSubmit leseren tilbake til `kontakt.html?sendt=1`, som viser kvitteringen. Mottakeradressen står i `MOTTAKER` i skriptet nederst i `kontakt.html`, og skjemaet sender bare når siden åpnes på `marev-svw.github.io` (eller lokalt); andre steder, som artefakt-kopien, vises en lenke til nettsiden. Adressen er den tilfeldige strengen FormSubmit ga ved aktiveringen, så e-postadressen ikke står i kildekoden.
 
 ## Lenkeforhåndsvisning
 
