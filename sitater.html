@@ -119,6 +119,11 @@
     .today-sep { display: none; }
     .weather { display: block; }
     .nav ul { justify-content: flex-start; }
+    /* Mobil: Lunsj+ skjules og menypunktene rykker litt tettere, så menyen får plass på én linje */
+    .nav ul { margin: 0 -.45rem; }
+    .nav a, .nav button { padding: 0 .45rem; }
+    .nav [aria-current="page"]::after { left: .45rem; right: .45rem; }
+    .nav .nav-pluss { display: none; }
   }
 
   /* Siden: innledning som en sak, deretter bunken med utskrifter */
@@ -202,8 +207,9 @@
             <li><a href="index.html">Forside</a></li>
             <li><a href="index.html#quiz">Quiz</a></li>
             <li><a href="index.html#arkiv">Arkiv</a></li>
+            <li><a href="sitater.html" aria-current="page">Sitater</a></li>
             <li><a href="kontakt.html">Tips oss</a></li>
-            <li><a href="index.html#lunsjpluss">Lunsj<span class="nav-plus" aria-hidden="true">+</span><span class="nav-sr">pluss</span></a></li>
+            <li class="nav-pluss"><a href="index.html#lunsjpluss">Lunsj<span class="nav-plus" aria-hidden="true">+</span><span class="nav-sr">pluss</span></a></li>
           </ul>
         </nav>
       </div>
