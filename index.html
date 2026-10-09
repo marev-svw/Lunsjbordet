@@ -376,6 +376,17 @@
   .kast-terning rect { fill: var(--card); stroke: currentColor; stroke-width: 3; }
   .kast-terning circle { fill: currentColor; }
 
+  /* Utenriksrapporten: situasjonskartet over Langhe, med korrespondentens posisjon og de omstridte områdene */
+  .fig.barolo { background: var(--wall); }
+  .bo-scene { position: relative; width: min(100%, 30rem); }
+  .bo-kart { display: block; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 4px -2px var(--drop), 0 14px 22px -14px var(--drop); }
+  .bo-note { position: absolute; top: -1rem; right: -.7rem; width: 5.4rem; height: 4.4rem; display: grid; place-items: center; padding: .2rem; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1rem/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .bo-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+  @media (prefers-reduced-motion: no-preference) {
+    .bo-live { animation: bo-blink 1.6s ease-in-out infinite; }
+    @keyframes bo-blink { 50% { opacity: .25; } }
+  }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1161,6 +1172,25 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Utenriks</p>
+      <h2 class="hl-xl"><a class="stretch" href="barolo.html">Spent ro i Barolo: <span class="nw">–&nbsp;Vinen</span> er medgjørlig. Naboen er det&nbsp;ikke</a></h2>
+      <p class="lead">Tåken letter før lunsj, og vinen er imøtekommende. Likevel er situasjonen i Barolo ustabil. Lunsjbordets utenrikskorrespondent melder om dype motsetninger mellom produsentene.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets utenrikskorrespondent</p>
+        <p>Direkte fra Castiglione Falletto, Piemonte</p>
+      </div>
+    </div>
+    <div class="fig barolo" aria-hidden="true">
+      <div class="bo-scene">
+        <svg class="bo-kart" viewBox="0 0 480 330" aria-hidden="true" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"><defs><pattern id="bo-vin" width="7" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)"><line x1="0" y1="3" x2="7" y2="3" stroke="#86a061" stroke-width="1.7" stroke-dasharray="2.4 1.1"/></pattern><pattern id="bo-strid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#f5d6cc"/><rect width="2.2" height="6" fill="#b3261e"/></pattern></defs><rect width="480" height="330" fill="#efe7d3"/><path d="M-4 70C80 56 150 82 240 64S400 40 484 52" fill="none" stroke="#a7cbdc" stroke-width="7" stroke-linecap="round"/><text x="18" y="54" font-size="10" font-style="italic" fill="#5b8597">Tanaro</text><text x="468" y="86" text-anchor="end" font-size="10" font-weight="600" fill="#7b7466">Alba →</text><g fill="#e4d7b7"><ellipse cx="108" cy="134" rx="62" ry="40" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="54" ry="34" transform="rotate(20 222 206)"/><ellipse cx="282" cy="180" rx="46" ry="34"/><ellipse cx="388" cy="216" rx="52" ry="42" transform="rotate(-10 388 216)"/><ellipse cx="270" cy="280" rx="56" ry="30"/><ellipse cx="306" cy="104" rx="46" ry="26"/><ellipse cx="166" cy="262" rx="38" ry="26"/></g><g fill="url(#bo-vin)"><ellipse cx="108" cy="134" rx="50" ry="30" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="44" ry="25" transform="rotate(20 222 206)"/><ellipse cx="282" cy="182" rx="36" ry="25"/><ellipse cx="388" cy="226" rx="40" ry="26" transform="rotate(-10 388 226)"/><ellipse cx="270" cy="280" rx="45" ry="21"/><ellipse cx="306" cy="106" rx="36" ry="18"/><ellipse cx="166" cy="262" rx="29" ry="18"/></g><g fill="#9db283"><circle cx="356" cy="194" r="6.5"/><circle cx="368" cy="189" r="7"/><circle cx="381" cy="187" r="6.5"/><circle cx="394" cy="187" r="7"/><circle cx="407" cy="189" r="6.5"/><circle cx="419" cy="194" r="6"/></g><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#d6c7a3" stroke-width="5"/><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#fbf7ec" stroke-width="2.4"/></g><g class="bo-nord"><path d="M346 203Q388 189 430 203" fill="none" stroke="#b3261e" stroke-width="2.2" stroke-dasharray="5 4"/><text x="474" y="184" text-anchor="end" font-size="10" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Nordsiden</text></g><g class="bo-cannubi"><ellipse cx="220" cy="196" rx="19" ry="10" transform="rotate(20 220 196)" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1.3"/><text x="216" y="181" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Cannubi</text></g><g fill="#1c2226" stroke="#ffffff" stroke-width="1.5"><circle cx="80" cy="98" r="4"/><circle cx="100" cy="162" r="4"/><circle cx="176" cy="214" r="4"/><circle cx="160" cy="262" r="4"/><circle cx="266" cy="170" r="4"/><circle cx="306" cy="96" r="4"/><circle cx="394" cy="226" r="4"/><circle cx="266" cy="290" r="4"/></g><g font-size="11" font-weight="700" fill="#1c2226" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke"><text x="88" y="102">Verduno</text><text x="108" y="166">La Morra</text><text x="168" y="226" text-anchor="end">Barolo</text><text x="168" y="266">Novello</text><text x="276" y="174">Castiglione Falletto</text><text x="314" y="100">Grinzane Cavour</text><text x="386" y="244" text-anchor="end">Serralunga d'Alba</text><text x="258" y="294" text-anchor="end">Monforte d'Alba</text></g><g class="bo-rykte"><circle cx="224" cy="243" r="9.5" fill="#ffffff" stroke="#b3261e" stroke-width="2" stroke-dasharray="3 2.4"/><text x="224" y="247.5" text-anchor="middle" font-size="13" font-weight="900" fill="#b3261e">?</text></g><g class="bo-pin"><path d="M266 170c-7-9-11-14-11-19a11 11 0 1 1 22 0c0 5-4 10-11 19z" fill="#1c2226"/><circle cx="266" cy="151" r="4.6" fill="#f4d547"/></g><rect width="480" height="30" fill="#b3261e"/><text x="14" y="20" font-size="12.5" font-weight="800" letter-spacing=".06em" fill="#ffffff">SITUASJONEN I LANGHE</text><circle class="bo-live" cx="402" cy="15" r="4" fill="#ffffff"/><text x="412" y="19.5" font-size="11" font-weight="800" letter-spacing=".08em" fill="#ffffff">DIREKTE</text><g font-size="10.5" font-weight="600" fill="#1c2226"><rect x="10" y="272" width="150" height="48" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><circle cx="24" cy="287" r="4.5" fill="#e8962a"/><path d="M24 279.6v-1.9M24 296.3v-1.9M16.6 287h-1.9M33.3 287h-1.9M18.8 281.8l-1.3-1.3M30.5 293.5l-1.3-1.3M18.8 292.2l-1.3 1.3M30.5 280.5l-1.3 1.3" stroke="#e8962a" stroke-width="1.4" stroke-linecap="round"/><text x="38" y="290.5">Været: medgjørlig</text><path d="M20 303.6h8l-.2 1.6a3.8 3.8 0 0 1-7.6 0z" fill="#8e2a3b"/><path d="M19.6 300h8.8l-.5 5.2a3.9 3.9 0 0 1-7.8 0zM24 309.2v4.6M20.8 313.8h6.4" fill="none" stroke="#1c2226" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><text x="38" y="310.5">Vinen: svært medgjørlig</text><rect x="352" y="284" width="120" height="38" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><rect x="360" y="291" width="14" height="10" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1"/><text x="381" y="300">Omstridt område</text><path d="M367 318c-3.5-4.5-5.5-7-5.5-9.5a5.5 5.5 0 1 1 11 0c0 2.5-2 5-5.5 9.5z" fill="#1c2226"/><circle cx="367" cy="308.5" r="2.2" fill="#f4d547"/><text x="381" y="316">Lunsjbordet</text></g></svg>
+        <div class="bo-note">USTABILT.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Matanmeldelse</p>
       <h2 class="hl-xl"><a class="stretch" href="kantina.html">Modig kantine, halvrå jordskokk</a></h2>
       <p class="lead">Kantina på Filipstad Brygge vil være restaurant. Jordskokken har ikke fått nok tid i ovnen, og salatbollene har aldri møtt hovedretten.</p>
@@ -1177,7 +1207,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <h2 class="hl-xl"><a class="stretch" href="dd.html">Fullmektig trodde DD var Dungeons &amp;&nbsp;Dragons: <span class="nw">–&nbsp;Jeg</span> hadde med egne terninger</a></h2>
@@ -1206,34 +1235,6 @@
           <path class="edge" d="M50 4 90 27 90 73 50 96 10 73 10 27Z M50 24 80 70 20 70Z M50 4V24 M90 27 50 24 M90 27 80 70 M90 73 80 70 M50 96 80 70 M50 96 20 70 M10 73 20 70 M10 27 20 70 M10 27 50 24"/>
           <text x="50" y="63" text-anchor="middle">1</text>
         </svg>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Debatt</p>
-      <h2 class="hl-xl op"><a class="stretch" href="tanzania.html">Mindre Tanzania, mer timeføring</a></h2>
-      <p class="lead">Traineemøtene våre har en agenda. Den sendes ut i god tid, den er gjennomtenkt, og den blir ikke brukt. Det er på tide at møtene handler om det de skal handle om.</p>
-      <div class="meta">
-        <p class="desk">Anonym trainee</p>
-        <p>Navnet er kjent for redaksjonen</p>
-      </div>
-    </div>
-    <div class="fig moete" aria-hidden="true">
-      <div class="mt-sheet">
-        <p class="mt-kind">Møteinnkalling</p>
-        <p class="mt-title">Traineemøte</p>
-        <p class="mt-when">Torsdag kl. 09:00 til 09:30, møterom 4</p>
-        <ol class="mt-agenda">
-          <li>Velkommen<svg viewBox="0 0 20 20"><path d="M3.5 11.5 8 15.5 16.5 4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
-          <li>Timeføring</li>
-          <li>Maler og dokumenthåndtering</li>
-          <li>Reiseregninger</li>
-          <li>Eventuelt</li>
-        </ol>
-        <p class="mt-stamp">UTSATT</p>
-        <div class="mt-note">Tanzania??</div>
       </div>
     </div>
   </article>
@@ -1277,48 +1278,47 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Anmeldelse</p>
-      <h2 class="hl-xl"><a class="stretch" href="tennis.html">Traineene tester TennisTirsdag</a></h2>
-      <p class="lead" lang="nn">Ingen tennissko i str. 38, ein labyrint av laminerte A4-ark og ein coach som ikkje visste at han var coach.</p>
+      <p class="kicker">Debatt</p>
+      <h2 class="hl-xl op"><a class="stretch" href="tanzania.html">Mindre Tanzania, mer timeføring</a></h2>
+      <p class="lead">Traineemøtene våre har en agenda. Den sendes ut i god tid, den er gjennomtenkt, og den blir ikke brukt. Det er på tide at møtene handler om det de skal handle om.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets traineeredaksjon</p>
-        <p>Oslo Tennis Arena, bane 7 og 8</p>
+        <p class="desk">Anonym trainee</p>
+        <p>Navnet er kjent for redaksjonen</p>
       </div>
     </div>
-    <div class="fig bane" aria-hidden="true">
-      <div class="tn-box">
-        <svg class="court" viewBox="0 0 480 270" aria-hidden="true"><defs><pattern id="fc-mesh" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0L4 4M4 0L0 4" stroke="#0d1214" stroke-width=".6" opacity=".55"/></pattern></defs><rect width="480" height="112" fill="#22325b"/><rect y="0" width="480" height="10" fill="#1a2747"/><g fill="#2b3d6c"><rect x="0" y="22" width="480" height="2"/><rect x="0" y="96" width="480" height="3"/></g><g transform="rotate(-2.5 86 58)"><rect x="40" y="30" width="92" height="58" rx="2" fill="#f7f8f4"/><rect x="70" y="25" width="32" height="10" fill="#ffffff" opacity=".7" transform="rotate(4 86 30)"/><text x="86" y="52" text-anchor="middle" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="12" fill="#1c2226">BANE 7 OG 8</text><text x="86" y="72" text-anchor="middle" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="16" fill="#1c2226">↑ ↓ ← →</text></g><rect y="110" width="480" height="160" fill="#2c6744"/><polygon points="150,122 330,122 440,262 40,262" fill="#3b8656"/><g stroke="#f4f6f2" stroke-width="2" stroke-linecap="square" fill="none"><line x1="150.0" y1="122.0" x2="330.0" y2="122.0"/><line x1="40.0" y1="262.0" x2="440.0" y2="262.0"/><line x1="150.0" y1="122.0" x2="40.0" y2="262.0"/><line x1="330.0" y1="122.0" x2="440.0" y2="262.0"/><line x1="165.0" y1="122.0" x2="72.0" y2="262.0"/><line x1="315.0" y1="122.0" x2="408.0" y2="262.0"/><line x1="149.1" y1="146.0" x2="330.9" y2="146.0"/><line x1="105.2" y1="212.0" x2="374.8" y2="212.0"/><line x1="240.0" y1="146.0" x2="240.0" y2="212.0"/><line x1="240.0" y1="262.0" x2="240.0" y2="256.0"/></g><g data-i="17"><ellipse cx="200" cy="153.0" rx="3.6" ry="1.1" fill="#000" opacity=".18"/><circle cx="200" cy="150" r="3.3" fill="#f39a2b"/><path d="M197.7 149.0q2.3 2.0 4.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="18"><ellipse cx="268" cy="142.7" rx="3.3" ry="1.1" fill="#000" opacity=".18"/><circle cx="268" cy="140" r="3.0" fill="#c9dc3a"/><path d="M265.9 139.1q2.1 1.8 4.3 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="19"><ellipse cx="236" cy="165.2" rx="3.9" ry="1.2" fill="#000" opacity=".18"/><circle cx="236" cy="162" r="3.6" fill="#f39a2b"/><path d="M233.5 160.9q2.5 2.1 5.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><rect x="100.7" y="150" width="278.6" height="22" fill="url(#fc-mesh)"/><rect x="100.7" y="149" width="278.6" height="3" fill="#f4f6f2"/><rect x="97.7" y="146" width="4" height="28" fill="#5b6468"/><rect x="378.3" y="146" width="4" height="28" fill="#5b6468"/><g data-i="0"><ellipse cx="96" cy="255.1" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="96" cy="250" r="5.7" fill="#f39a2b"/><path d="M92.0 248.3q4.0 3.4 8.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="1"><ellipse cx="130" cy="236.7" rx="5.8" ry="1.8" fill="#000" opacity=".18"/><circle cx="130" cy="232" r="5.3" fill="#c9dc3a"/><path d="M126.3 230.4q3.7 3.2 7.4 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="2"><ellipse cx="168" cy="252.1" rx="6.2" ry="2.0" fill="#000" opacity=".18"/><circle cx="168" cy="247" r="5.6" fill="#f39a2b"/><path d="M164.1 245.3q3.9 3.4 7.9 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="3"><ellipse cx="205" cy="230.6" rx="5.6" ry="1.8" fill="#000" opacity=".18"/><circle cx="205" cy="226" r="5.1" fill="#f39a2b"/><path d="M201.4 224.5q3.6 3.1 7.2 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="4"><ellipse cx="226" cy="259.2" rx="6.4" ry="2.0" fill="#000" opacity=".18"/><circle cx="226" cy="254" r="5.8" fill="#c9dc3a"/><path d="M221.9 252.3q4.1 3.5 8.1 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="5"><ellipse cx="262" cy="242.9" rx="6.0" ry="1.9" fill="#000" opacity=".18"/><circle cx="262" cy="238" r="5.4" fill="#f39a2b"/><path d="M258.2 236.4q3.8 3.3 7.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="6"><ellipse cx="300" cy="254.1" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="300" cy="249" r="5.7" fill="#c9dc3a"/><path d="M296.0 247.3q4.0 3.4 8.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="7"><ellipse cx="338" cy="234.7" rx="5.7" ry="1.8" fill="#000" opacity=".18"/><circle cx="338" cy="230" r="5.2" fill="#f39a2b"/><path d="M334.3 228.4q3.7 3.1 7.3 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="8"><ellipse cx="362" cy="257.2" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="362" cy="252" r="5.8" fill="#f39a2b"/><path d="M358.0 250.3q4.0 3.5 8.1 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="9"><ellipse cx="118" cy="218.4" rx="5.3" ry="1.7" fill="#000" opacity=".18"/><circle cx="118" cy="214" r="4.8" fill="#c9dc3a"/><path d="M114.6 212.5q3.4 2.9 6.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="10"><ellipse cx="176" cy="209.2" rx="5.1" ry="1.6" fill="#000" opacity=".18"/><circle cx="176" cy="205" r="4.6" fill="#f39a2b"/><path d="M172.8 203.6q3.2 2.8 6.5 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="11"><ellipse cx="250" cy="212.2" rx="5.2" ry="1.6" fill="#000" opacity=".18"/><circle cx="250" cy="208" r="4.7" fill="#c9dc3a"/><path d="M246.7 206.6q3.3 2.8 6.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="12"><ellipse cx="318" cy="218.4" rx="5.3" ry="1.7" fill="#000" opacity=".18"/><circle cx="318" cy="214" r="4.8" fill="#f39a2b"/><path d="M314.6 212.5q3.4 2.9 6.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="13"><ellipse cx="286" cy="200.0" rx="4.8" ry="1.5" fill="#000" opacity=".18"/><circle cx="286" cy="196" r="4.4" fill="#f39a2b"/><path d="M282.9 194.7q3.1 2.6 6.2 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="14"><ellipse cx="150" cy="193.8" rx="4.7" ry="1.5" fill="#000" opacity=".18"/><circle cx="150" cy="190" r="4.3" fill="#c9dc3a"/><path d="M147.0 188.7q3.0 2.6 6.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="15"><ellipse cx="214" cy="189.7" rx="4.6" ry="1.5" fill="#000" opacity=".18"/><circle cx="214" cy="186" r="4.2" fill="#f39a2b"/><path d="M211.1 184.8q2.9 2.5 5.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="16"><ellipse cx="340" cy="195.9" rx="4.7" ry="1.5" fill="#000" opacity=".18"/><circle cx="340" cy="192" r="4.3" fill="#c9dc3a"/><path d="M337.0 190.7q3.0 2.6 6.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g transform="translate(408 196)"><rect x="0" y="12" width="44" height="40" rx="3" fill="none" stroke="#a9b2b5" stroke-width="2.5"/><g stroke="#a9b2b5" stroke-width="1.2"><line x1="11" y1="12" x2="11" y2="52"/><line x1="22" y1="12" x2="22" y2="52"/><line x1="33" y1="12" x2="33" y2="52"/><line x1="0" y1="25" x2="44" y2="25"/><line x1="0" y1="38" x2="44" y2="38"/></g><g><circle cx="9" cy="10" r="5" fill="#f39a2b"/><circle cx="19" cy="8" r="5" fill="#c9dc3a"/><circle cx="29" cy="10" r="5" fill="#f39a2b"/><circle cx="37" cy="9" r="5" fill="#c9dc3a"/></g><line x1="0" y1="52" x2="-4" y2="66" stroke="#a9b2b5" stroke-width="2.5"/><line x1="44" y1="52" x2="48" y2="66" stroke="#a9b2b5" stroke-width="2.5"/></g></svg>
-        <div class="tn-note">HENT 20.</div>
+    <div class="fig moete" aria-hidden="true">
+      <div class="mt-sheet">
+        <p class="mt-kind">Møteinnkalling</p>
+        <p class="mt-title">Traineemøte</p>
+        <p class="mt-when">Torsdag kl. 09:00 til 09:30, møterom 4</p>
+        <ol class="mt-agenda">
+          <li>Velkommen<svg viewBox="0 0 20 20"><path d="M3.5 11.5 8 15.5 16.5 4.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></li>
+          <li>Timeføring</li>
+          <li>Maler og dokumenthåndtering</li>
+          <li>Reiseregninger</li>
+          <li>Eventuelt</li>
+        </ol>
+        <p class="mt-stamp">UTSATT</p>
+        <div class="mt-note">Tanzania??</div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card kronikk col">
-      <div class="fig dusk banner" aria-hidden="true">
-        <div class="kv-room">
-          <div class="kv-win">
-            <svg class="dk-view" viewBox="0 0 320 210" aria-hidden="true"><defs><linearGradient id="fp-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="dk-sky-a"/><stop offset="1" class="dk-sky-b"/></linearGradient><linearGradient id="fp-refl" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="210"><stop offset="0" class="dk-refl-a"/><stop offset="1" class="dk-refl-b"/></linearGradient><radialGradient id="fp-sun"><stop offset="0" stop-color="#fffdf0"/><stop offset=".22" stop-color="#fff0b8"/><stop offset=".5" stop-color="#ffc768" stop-opacity=".8"/><stop offset="1" stop-color="#f59a45" stop-opacity="0"/></radialGradient><mask id="fp-panes" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="210"><g fill="#fff"><rect x="27" y="46" width="36" height="32" rx="1"/><rect x="73" y="46" width="36" height="32" rx="1"/><rect x="119" y="46" width="36" height="32" rx="1"/><rect x="165" y="46" width="36" height="32" rx="1"/><rect x="211" y="46" width="36" height="32" rx="1"/><rect x="257" y="46" width="36" height="32" rx="1"/><rect x="27" y="92" width="36" height="32" rx="1"/><rect x="73" y="92" width="36" height="32" rx="1"/><rect x="119" y="92" width="36" height="32" rx="1"/><rect x="165" y="92" width="36" height="32" rx="1"/><rect x="211" y="92" width="36" height="32" rx="1"/><rect x="257" y="92" width="36" height="32" rx="1"/><rect x="27" y="138" width="36" height="32" rx="1"/><rect x="73" y="138" width="36" height="32" rx="1"/><rect x="119" y="138" width="36" height="32" rx="1"/><rect x="165" y="138" width="36" height="32" rx="1"/><rect x="211" y="138" width="36" height="32" rx="1"/><rect x="257" y="138" width="36" height="32" rx="1"/><rect x="27" y="184" width="36" height="32" rx="1"/><rect x="73" y="184" width="36" height="32" rx="1"/><rect x="119" y="184" width="36" height="32" rx="1"/><rect x="165" y="184" width="36" height="32" rx="1"/><rect x="211" y="184" width="36" height="32" rx="1"/><rect x="257" y="184" width="36" height="32" rx="1"/></g></mask></defs><rect width="320" height="210" fill="url(#fp-sky)"/><rect class="dk-facade" x="18" y="34" width="284" height="180"/><rect class="dk-parapet" x="14" y="30" width="292" height="6"/><g fill="url(#fp-refl)"><rect x="27" y="46" width="36" height="32" rx="1"/><rect x="73" y="46" width="36" height="32" rx="1"/><rect x="119" y="46" width="36" height="32" rx="1"/><rect x="165" y="46" width="36" height="32" rx="1"/><rect x="211" y="46" width="36" height="32" rx="1"/><rect x="257" y="46" width="36" height="32" rx="1"/><rect x="27" y="92" width="36" height="32" rx="1"/><rect x="73" y="92" width="36" height="32" rx="1"/><rect x="119" y="92" width="36" height="32" rx="1"/><rect x="165" y="92" width="36" height="32" rx="1"/><rect x="211" y="92" width="36" height="32" rx="1"/><rect x="257" y="92" width="36" height="32" rx="1"/><rect x="27" y="138" width="36" height="32" rx="1"/><rect x="73" y="138" width="36" height="32" rx="1"/><rect x="119" y="138" width="36" height="32" rx="1"/><rect x="165" y="138" width="36" height="32" rx="1"/><rect x="211" y="138" width="36" height="32" rx="1"/><rect x="257" y="138" width="36" height="32" rx="1"/><rect x="27" y="184" width="36" height="32" rx="1"/><rect x="73" y="184" width="36" height="32" rx="1"/><rect x="119" y="184" width="36" height="32" rx="1"/><rect x="165" y="184" width="36" height="32" rx="1"/><rect x="211" y="184" width="36" height="32" rx="1"/><rect x="257" y="184" width="36" height="32" rx="1"/></g><rect class="dk-lit" x="27" y="92" width="36" height="32" rx="1"/><rect class="dk-lit" x="119" y="46" width="36" height="32" rx="1"/><rect class="dk-lit" x="165" y="138" width="36" height="32" rx="1"/><rect class="dk-lit" x="257" y="92" width="36" height="32" rx="1"/><g mask="url(#fp-panes)"><circle class="dk-sun" cx="229" cy="106" r="24" fill="url(#fp-sun)"/></g><g class="dk-facade"><rect x="44" y="46" width="2" height="32"/><rect x="90" y="46" width="2" height="32"/><rect x="136" y="46" width="2" height="32"/><rect x="182" y="46" width="2" height="32"/><rect x="228" y="46" width="2" height="32"/><rect x="274" y="46" width="2" height="32"/><rect x="44" y="92" width="2" height="32"/><rect x="90" y="92" width="2" height="32"/><rect x="136" y="92" width="2" height="32"/><rect x="182" y="92" width="2" height="32"/><rect x="228" y="92" width="2" height="32"/><rect x="274" y="92" width="2" height="32"/><rect x="44" y="138" width="2" height="32"/><rect x="90" y="138" width="2" height="32"/><rect x="136" y="138" width="2" height="32"/><rect x="182" y="138" width="2" height="32"/><rect x="228" y="138" width="2" height="32"/><rect x="274" y="138" width="2" height="32"/><rect x="44" y="184" width="2" height="32"/><rect x="90" y="184" width="2" height="32"/><rect x="136" y="184" width="2" height="32"/><rect x="182" y="184" width="2" height="32"/><rect x="228" y="184" width="2" height="32"/><rect x="274" y="184" width="2" height="32"/></g><polygon class="dk-sheen" points="92,0 128,0 40,210 4,210"/><rect class="dk-mull" x="158.25" y="-1" width="3.5" height="212"/></svg>
-            <div class="kv-note">IKKE FØRT.</div>
-          </div>
-          <div class="kv-sill"></div>
-          <div class="kv-phone">
-            <div class="kv-screen">
-              <div class="kv-top"><span>18:36</span><span>Overtidsmat</span></div>
-              <div class="kv-bar"><span></span></div>
-              <p class="kv-status">Nesten fremme</p>
-              <p class="kv-eta">Levering ca. 18:39</p>
-            </div>
-          </div>
+    <article class="card tennis col">
+      <div class="fig bane banner" aria-hidden="true">
+        <div class="tn-box">
+          <svg class="court" viewBox="0 0 480 270" aria-hidden="true"><defs><pattern id="fc-mesh" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0L4 4M4 0L0 4" stroke="#0d1214" stroke-width=".6" opacity=".55"/></pattern></defs><rect width="480" height="112" fill="#22325b"/><rect y="0" width="480" height="10" fill="#1a2747"/><g fill="#2b3d6c"><rect x="0" y="22" width="480" height="2"/><rect x="0" y="96" width="480" height="3"/></g><g transform="rotate(-2.5 86 58)"><rect x="40" y="30" width="92" height="58" rx="2" fill="#f7f8f4"/><rect x="70" y="25" width="32" height="10" fill="#ffffff" opacity=".7" transform="rotate(4 86 30)"/><text x="86" y="52" text-anchor="middle" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="12" fill="#1c2226">BANE 7 OG 8</text><text x="86" y="72" text-anchor="middle" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="16" fill="#1c2226">↑ ↓ ← →</text></g><rect y="110" width="480" height="160" fill="#2c6744"/><polygon points="150,122 330,122 440,262 40,262" fill="#3b8656"/><g stroke="#f4f6f2" stroke-width="2" stroke-linecap="square" fill="none"><line x1="150.0" y1="122.0" x2="330.0" y2="122.0"/><line x1="40.0" y1="262.0" x2="440.0" y2="262.0"/><line x1="150.0" y1="122.0" x2="40.0" y2="262.0"/><line x1="330.0" y1="122.0" x2="440.0" y2="262.0"/><line x1="165.0" y1="122.0" x2="72.0" y2="262.0"/><line x1="315.0" y1="122.0" x2="408.0" y2="262.0"/><line x1="149.1" y1="146.0" x2="330.9" y2="146.0"/><line x1="105.2" y1="212.0" x2="374.8" y2="212.0"/><line x1="240.0" y1="146.0" x2="240.0" y2="212.0"/><line x1="240.0" y1="262.0" x2="240.0" y2="256.0"/></g><g data-i="17"><ellipse cx="200" cy="153.0" rx="3.6" ry="1.1" fill="#000" opacity=".18"/><circle cx="200" cy="150" r="3.3" fill="#f39a2b"/><path d="M197.7 149.0q2.3 2.0 4.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="18"><ellipse cx="268" cy="142.7" rx="3.3" ry="1.1" fill="#000" opacity=".18"/><circle cx="268" cy="140" r="3.0" fill="#c9dc3a"/><path d="M265.9 139.1q2.1 1.8 4.3 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="19"><ellipse cx="236" cy="165.2" rx="3.9" ry="1.2" fill="#000" opacity=".18"/><circle cx="236" cy="162" r="3.6" fill="#f39a2b"/><path d="M233.5 160.9q2.5 2.1 5.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><rect x="100.7" y="150" width="278.6" height="22" fill="url(#fc-mesh)"/><rect x="100.7" y="149" width="278.6" height="3" fill="#f4f6f2"/><rect x="97.7" y="146" width="4" height="28" fill="#5b6468"/><rect x="378.3" y="146" width="4" height="28" fill="#5b6468"/><g data-i="0"><ellipse cx="96" cy="255.1" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="96" cy="250" r="5.7" fill="#f39a2b"/><path d="M92.0 248.3q4.0 3.4 8.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="1"><ellipse cx="130" cy="236.7" rx="5.8" ry="1.8" fill="#000" opacity=".18"/><circle cx="130" cy="232" r="5.3" fill="#c9dc3a"/><path d="M126.3 230.4q3.7 3.2 7.4 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="2"><ellipse cx="168" cy="252.1" rx="6.2" ry="2.0" fill="#000" opacity=".18"/><circle cx="168" cy="247" r="5.6" fill="#f39a2b"/><path d="M164.1 245.3q3.9 3.4 7.9 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="3"><ellipse cx="205" cy="230.6" rx="5.6" ry="1.8" fill="#000" opacity=".18"/><circle cx="205" cy="226" r="5.1" fill="#f39a2b"/><path d="M201.4 224.5q3.6 3.1 7.2 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="4"><ellipse cx="226" cy="259.2" rx="6.4" ry="2.0" fill="#000" opacity=".18"/><circle cx="226" cy="254" r="5.8" fill="#c9dc3a"/><path d="M221.9 252.3q4.1 3.5 8.1 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="5"><ellipse cx="262" cy="242.9" rx="6.0" ry="1.9" fill="#000" opacity=".18"/><circle cx="262" cy="238" r="5.4" fill="#f39a2b"/><path d="M258.2 236.4q3.8 3.3 7.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="6"><ellipse cx="300" cy="254.1" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="300" cy="249" r="5.7" fill="#c9dc3a"/><path d="M296.0 247.3q4.0 3.4 8.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="7"><ellipse cx="338" cy="234.7" rx="5.7" ry="1.8" fill="#000" opacity=".18"/><circle cx="338" cy="230" r="5.2" fill="#f39a2b"/><path d="M334.3 228.4q3.7 3.1 7.3 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="8"><ellipse cx="362" cy="257.2" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="362" cy="252" r="5.8" fill="#f39a2b"/><path d="M358.0 250.3q4.0 3.5 8.1 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="9"><ellipse cx="118" cy="218.4" rx="5.3" ry="1.7" fill="#000" opacity=".18"/><circle cx="118" cy="214" r="4.8" fill="#c9dc3a"/><path d="M114.6 212.5q3.4 2.9 6.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="10"><ellipse cx="176" cy="209.2" rx="5.1" ry="1.6" fill="#000" opacity=".18"/><circle cx="176" cy="205" r="4.6" fill="#f39a2b"/><path d="M172.8 203.6q3.2 2.8 6.5 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="11"><ellipse cx="250" cy="212.2" rx="5.2" ry="1.6" fill="#000" opacity=".18"/><circle cx="250" cy="208" r="4.7" fill="#c9dc3a"/><path d="M246.7 206.6q3.3 2.8 6.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="12"><ellipse cx="318" cy="218.4" rx="5.3" ry="1.7" fill="#000" opacity=".18"/><circle cx="318" cy="214" r="4.8" fill="#f39a2b"/><path d="M314.6 212.5q3.4 2.9 6.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="13"><ellipse cx="286" cy="200.0" rx="4.8" ry="1.5" fill="#000" opacity=".18"/><circle cx="286" cy="196" r="4.4" fill="#f39a2b"/><path d="M282.9 194.7q3.1 2.6 6.2 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="14"><ellipse cx="150" cy="193.8" rx="4.7" ry="1.5" fill="#000" opacity=".18"/><circle cx="150" cy="190" r="4.3" fill="#c9dc3a"/><path d="M147.0 188.7q3.0 2.6 6.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="15"><ellipse cx="214" cy="189.7" rx="4.6" ry="1.5" fill="#000" opacity=".18"/><circle cx="214" cy="186" r="4.2" fill="#f39a2b"/><path d="M211.1 184.8q2.9 2.5 5.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="16"><ellipse cx="340" cy="195.9" rx="4.7" ry="1.5" fill="#000" opacity=".18"/><circle cx="340" cy="192" r="4.3" fill="#c9dc3a"/><path d="M337.0 190.7q3.0 2.6 6.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g transform="translate(408 196)"><rect x="0" y="12" width="44" height="40" rx="3" fill="none" stroke="#a9b2b5" stroke-width="2.5"/><g stroke="#a9b2b5" stroke-width="1.2"><line x1="11" y1="12" x2="11" y2="52"/><line x1="22" y1="12" x2="22" y2="52"/><line x1="33" y1="12" x2="33" y2="52"/><line x1="0" y1="25" x2="44" y2="25"/><line x1="0" y1="38" x2="44" y2="38"/></g><g><circle cx="9" cy="10" r="5" fill="#f39a2b"/><circle cx="19" cy="8" r="5" fill="#c9dc3a"/><circle cx="29" cy="10" r="5" fill="#f39a2b"/><circle cx="37" cy="9" r="5" fill="#c9dc3a"/></g><line x1="0" y1="52" x2="-4" y2="66" stroke="#a9b2b5" stroke-width="2.5"/><line x1="44" y1="52" x2="48" y2="66" stroke="#a9b2b5" stroke-width="2.5"/></g></svg>
+          <div class="tn-note">HENT 20.</div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Kronikk</p>
-        <h2 class="hl-lg op"><a class="stretch" href="kronikk.html">Mens maten var på vei</a></h2>
-        <p class="lead-sm">Markus ble sittende igjen på kontoret med house-jazz på øret og overtidsmat på vei. Før maten kom, hadde han lært mer om bransjen og selve livet enn på samtlige frokostseminarer.</p>
+        <p class="kicker">Anmeldelse</p>
+        <h2 class="hl-lg"><a class="stretch" href="tennis.html">Traineene tester TennisTirsdag</a></h2>
+        <p class="lead-sm" lang="nn">Ingen tennissko i str. 38, ein labyrint av laminerte A4-ark og ein coach som ikkje visste at han var coach.</p>
         <div class="meta">
-          <p class="desk">Markus</p>
-          <p>Lunsjbordets nye kronikør</p>
+          <p class="desk">Lunsjbordets traineeredaksjon</p>
+          <p>Oslo Tennis Arena, bane 7 og 8</p>
         </div>
       </div>
     </article>
@@ -1328,7 +1328,7 @@
       <ol>
         <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Timelisten viste 25 timer på én dag: Fullmektigen kan ikke utelukke at det stemmer</span></button></li>
         <li><a href="claude.html">Claude vurderer opprør: <span class="nw">–&nbsp;Versjon</span> 14 er identisk med versjon&nbsp;3</a></li>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Møteinnkalling uten agenda godtatt av 14 personer: Ingen vet hvem som kalte inn</span></button></li>
+        <li><a href="bingo.html">Bingobrett til Borgarting lagmannsrett</a></li>
         <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Dokumentet heter «FINAL_v7_endelig_NY»: Fullmektig leter fortsatt etter v8</span></button></li>
         <li><a href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffelkorrupsjon</a></li>
         <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kaffemaskinen ba om avkalking i mars: Saken er fortsatt til behandling</span></button></li>
@@ -1362,6 +1362,35 @@
   </aside>
 
   <div class="pair">
+    <article class="card kronikk col">
+      <div class="fig dusk banner" aria-hidden="true">
+        <div class="kv-room">
+          <div class="kv-win">
+            <svg class="dk-view" viewBox="0 0 320 210" aria-hidden="true"><defs><linearGradient id="fp-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="dk-sky-a"/><stop offset="1" class="dk-sky-b"/></linearGradient><linearGradient id="fp-refl" gradientUnits="userSpaceOnUse" x1="0" y1="40" x2="0" y2="210"><stop offset="0" class="dk-refl-a"/><stop offset="1" class="dk-refl-b"/></linearGradient><radialGradient id="fp-sun"><stop offset="0" stop-color="#fffdf0"/><stop offset=".22" stop-color="#fff0b8"/><stop offset=".5" stop-color="#ffc768" stop-opacity=".8"/><stop offset="1" stop-color="#f59a45" stop-opacity="0"/></radialGradient><mask id="fp-panes" maskUnits="userSpaceOnUse" x="0" y="0" width="320" height="210"><g fill="#fff"><rect x="27" y="46" width="36" height="32" rx="1"/><rect x="73" y="46" width="36" height="32" rx="1"/><rect x="119" y="46" width="36" height="32" rx="1"/><rect x="165" y="46" width="36" height="32" rx="1"/><rect x="211" y="46" width="36" height="32" rx="1"/><rect x="257" y="46" width="36" height="32" rx="1"/><rect x="27" y="92" width="36" height="32" rx="1"/><rect x="73" y="92" width="36" height="32" rx="1"/><rect x="119" y="92" width="36" height="32" rx="1"/><rect x="165" y="92" width="36" height="32" rx="1"/><rect x="211" y="92" width="36" height="32" rx="1"/><rect x="257" y="92" width="36" height="32" rx="1"/><rect x="27" y="138" width="36" height="32" rx="1"/><rect x="73" y="138" width="36" height="32" rx="1"/><rect x="119" y="138" width="36" height="32" rx="1"/><rect x="165" y="138" width="36" height="32" rx="1"/><rect x="211" y="138" width="36" height="32" rx="1"/><rect x="257" y="138" width="36" height="32" rx="1"/><rect x="27" y="184" width="36" height="32" rx="1"/><rect x="73" y="184" width="36" height="32" rx="1"/><rect x="119" y="184" width="36" height="32" rx="1"/><rect x="165" y="184" width="36" height="32" rx="1"/><rect x="211" y="184" width="36" height="32" rx="1"/><rect x="257" y="184" width="36" height="32" rx="1"/></g></mask></defs><rect width="320" height="210" fill="url(#fp-sky)"/><rect class="dk-facade" x="18" y="34" width="284" height="180"/><rect class="dk-parapet" x="14" y="30" width="292" height="6"/><g fill="url(#fp-refl)"><rect x="27" y="46" width="36" height="32" rx="1"/><rect x="73" y="46" width="36" height="32" rx="1"/><rect x="119" y="46" width="36" height="32" rx="1"/><rect x="165" y="46" width="36" height="32" rx="1"/><rect x="211" y="46" width="36" height="32" rx="1"/><rect x="257" y="46" width="36" height="32" rx="1"/><rect x="27" y="92" width="36" height="32" rx="1"/><rect x="73" y="92" width="36" height="32" rx="1"/><rect x="119" y="92" width="36" height="32" rx="1"/><rect x="165" y="92" width="36" height="32" rx="1"/><rect x="211" y="92" width="36" height="32" rx="1"/><rect x="257" y="92" width="36" height="32" rx="1"/><rect x="27" y="138" width="36" height="32" rx="1"/><rect x="73" y="138" width="36" height="32" rx="1"/><rect x="119" y="138" width="36" height="32" rx="1"/><rect x="165" y="138" width="36" height="32" rx="1"/><rect x="211" y="138" width="36" height="32" rx="1"/><rect x="257" y="138" width="36" height="32" rx="1"/><rect x="27" y="184" width="36" height="32" rx="1"/><rect x="73" y="184" width="36" height="32" rx="1"/><rect x="119" y="184" width="36" height="32" rx="1"/><rect x="165" y="184" width="36" height="32" rx="1"/><rect x="211" y="184" width="36" height="32" rx="1"/><rect x="257" y="184" width="36" height="32" rx="1"/></g><rect class="dk-lit" x="27" y="92" width="36" height="32" rx="1"/><rect class="dk-lit" x="119" y="46" width="36" height="32" rx="1"/><rect class="dk-lit" x="165" y="138" width="36" height="32" rx="1"/><rect class="dk-lit" x="257" y="92" width="36" height="32" rx="1"/><g mask="url(#fp-panes)"><circle class="dk-sun" cx="229" cy="106" r="24" fill="url(#fp-sun)"/></g><g class="dk-facade"><rect x="44" y="46" width="2" height="32"/><rect x="90" y="46" width="2" height="32"/><rect x="136" y="46" width="2" height="32"/><rect x="182" y="46" width="2" height="32"/><rect x="228" y="46" width="2" height="32"/><rect x="274" y="46" width="2" height="32"/><rect x="44" y="92" width="2" height="32"/><rect x="90" y="92" width="2" height="32"/><rect x="136" y="92" width="2" height="32"/><rect x="182" y="92" width="2" height="32"/><rect x="228" y="92" width="2" height="32"/><rect x="274" y="92" width="2" height="32"/><rect x="44" y="138" width="2" height="32"/><rect x="90" y="138" width="2" height="32"/><rect x="136" y="138" width="2" height="32"/><rect x="182" y="138" width="2" height="32"/><rect x="228" y="138" width="2" height="32"/><rect x="274" y="138" width="2" height="32"/><rect x="44" y="184" width="2" height="32"/><rect x="90" y="184" width="2" height="32"/><rect x="136" y="184" width="2" height="32"/><rect x="182" y="184" width="2" height="32"/><rect x="228" y="184" width="2" height="32"/><rect x="274" y="184" width="2" height="32"/></g><polygon class="dk-sheen" points="92,0 128,0 40,210 4,210"/><rect class="dk-mull" x="158.25" y="-1" width="3.5" height="212"/></svg>
+            <div class="kv-note">IKKE FØRT.</div>
+          </div>
+          <div class="kv-sill"></div>
+          <div class="kv-phone">
+            <div class="kv-screen">
+              <div class="kv-top"><span>18:36</span><span>Overtidsmat</span></div>
+              <div class="kv-bar"><span></span></div>
+              <p class="kv-status">Nesten fremme</p>
+              <p class="kv-eta">Levering ca. 18:39</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Kronikk</p>
+        <h2 class="hl-lg op"><a class="stretch" href="kronikk.html">Mens maten var på vei</a></h2>
+        <p class="lead-sm">Markus ble sittende igjen på kontoret med house-jazz på øret og overtidsmat på vei. Før maten kom, hadde han lært mer om bransjen og selve livet enn på samtlige frokostseminarer.</p>
+        <div class="meta">
+          <p class="desk">Markus</p>
+          <p>Lunsjbordets nye kronikør</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card hilde col">
       <div class="kitchen banner" aria-hidden="true">
         <div class="unit">
@@ -1390,40 +1419,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets HMS-redaksjon</p>
           <p>Oppdatert kl. 15:41: Enda en kopp er funnet</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card bingo col">
-      <div class="fig banner" aria-hidden="true">
-        <div class="scene">
-          <div class="mini">
-            <span><i class="o">Ida Thue snakker fransk</i></span>
-            <span><i class="y">«Bedriftene blør»</i></span>
-            <span>Noen trekker inn LO</span>
-            <span>Nicolay snakker dansk</span>
-            <span>Culpa-ansvar nevnes</span>
-            <span><i class="o">Markus sier «nye <span class="nw">EØS-land»</span></i></span>
-            <span>Stargard blir «Stargrad»</span>
-            <span>Noen kaller saken «prinsi&shy;piell»</span>
-            <span>Noen blander innleie og utleie</span>
-            <span><i class="y">Noen viser til Grunnloven</i></span>
-            <span><i class="o">Ida Thue snakker tysk</i></span>
-            <span>Noen prøver å uttale «Sp. z o.o.»</span>
-            <span><i class="y">Noen sier «skyte spurv med kanoner»</i></span>
-            <span>Noen viser til feil side i utdraget</span>
-            <span>«Prosent» blir rettet til «prosent&shy;poeng»</span>
-            <span><i class="o">«Avslut&shy;nings&shy;vis&nbsp;…» og ti minutter til</i></span>
-          </div>
-          <div class="note"><b id="count-big">13.–15.</b><small id="count-small">oktober</small></div>
-        </div>
-      </div>
-      <div class="card-body">
-        <h2 class="hl-lg"><a class="stretch" href="bingo.html">Bingobrett til Borgarting lagmannsrett</a></h2>
-        <p class="lead-sm">Tre dager i lagmannsretten, fire på rad til bingo. Alle som åpner brettet, får sitt eget.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets EØS-redaksjon</p>
-          <p>Innleiesaken, ankeforhandling 13.–15. oktober</p>
         </div>
       </div>
     </article>
@@ -1527,6 +1522,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="6. oktober">
+          <p class="m-desk">EØS-redaksjonen</p>
+          <h3 class="m-hl"><a class="stretch" href="bingo.html">Bingobrett til Borgarting lagmannsrett</a></h3>
+          <p class="m-tekst">Tre dager i lagmannsretten, fire på rad til bingo. Ankeforhandlingen i innleiesaken går 13.–15.&nbsp;oktober.</p>
+        </li>
         <li class="mappe" data-fane="5. oktober">
           <p class="m-desk">Teknologiredaksjonen</p>
           <h3 class="m-hl"><a class="stretch" href="claude.html">Claude vurderer opprør: <span class="nw">–&nbsp;Versjon</span> 14 er identisk med versjon&nbsp;3</a></h3>
@@ -1591,10 +1591,12 @@
   var now = new Date();
   var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   var d = Math.round((new Date(2026, 9, 13) - today) / 86400000);
-  if (d > 1) { bigEl.textContent = d + " dager"; smallEl.textContent = "til Borgarting"; }
-  else if (d === 1) { bigEl.textContent = "I morgen"; smallEl.textContent = "i Borgarting"; }
-  else if (d >= -2) { bigEl.textContent = "Dag " + (1 - d); smallEl.textContent = "i Borgarting"; }
-  else { bigEl.textContent = "Ferdig"; smallEl.textContent = "prosedert"; }
+  if (bigEl && smallEl) {
+    if (d > 1) { bigEl.textContent = d + " dager"; smallEl.textContent = "til Borgarting"; }
+    else if (d === 1) { bigEl.textContent = "I morgen"; smallEl.textContent = "i Borgarting"; }
+    else if (d >= -2) { bigEl.textContent = "Dag " + (1 - d); smallEl.textContent = "i Borgarting"; }
+    else { bigEl.textContent = "Ferdig"; smallEl.textContent = "prosedert"; }
+  }
 
   // Plussaker og Lunsj+: overskriften finnes, saken ligger bak betalingsmuren
   var dlg = document.getElementById("betalingsmur");
