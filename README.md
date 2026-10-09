@@ -20,6 +20,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `tennis.html` | Traineene tester TennisTirsdag |
 | `tanzania.html` | Debatt: Mindre Tanzania, mer timeføring |
 | `kontakt.html` | Kontakt redaksjonen: tipsskjema som sendes til redaksjonen på e-post via FormSubmit |
+| `sitater.html` | Tatt ut av kontekst: sitater hørt på kontoret. Påskeegg, lenket bare fra ordet «kaffemaskinen» i slagordet på forsiden |
 | `favicon.svg`, `apple-touch-icon.png` | Ikon i nettleserfanen og på hjemskjermen |
 | `og-image.png` | Bildet som vises når en lenke deles i Teams, Slack, Outlook og lignende |
 | `robots.txt` | Slipper inn lenkeforhåndsvisninger og ber søkemotorer holde seg unna |

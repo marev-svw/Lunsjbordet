@@ -182,6 +182,10 @@
   .brand a { color: inherit; text-decoration: none; }
   @media (hover: hover) { .brand a:hover { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; } }
   .brand-tag { margin: .3rem 0 0; font-size: .875rem; font-weight: 500; color: #3a4247; }
+  /* Påskeegg: «kaffemaskinen» i slagordet lenker til det som er hørt der. Bare en svak prikket strek røper den */
+  .brand-tag .egg { color: inherit; text-decoration: underline dotted rgba(28, 34, 38, .4); text-decoration-thickness: 1.5px; text-underline-offset: .22em; -webkit-tap-highlight-color: transparent; }
+  @media (hover: hover) { .brand-tag .egg:hover { text-decoration-style: solid; text-decoration-color: currentColor; } }
+  .brand-tag .egg:focus-visible { outline: 3px solid #1c2226; outline-offset: 1px; border-radius: 3px; }
   .topbar-side { display: grid; justify-items: end; gap: .1rem; min-width: 0; }
   .today { margin: 0; font-size: .8125rem; line-height: 1.4; color: #3a4247; text-align: right; }
   .nav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; margin: 0 -.6rem; padding: 0; list-style: none; }
@@ -883,7 +887,7 @@
     <div class="topbar-inner">
       <div class="brand-wrap">
         <h1 class="brand">Lunsjbordet</h1>
-        <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+        <p class="brand-tag">Lokale nyheter fra <a class="egg" href="sitater.html" title="Hørt ved kaffemaskinen">kaffemaskinen</a></p>
       </div>
       <div class="topbar-side">
         <p class="today"><span id="today">Fredag 9. oktober 2026</span><span class="today-sep" aria-hidden="true"> · </span><span class="weather">Været ved kaffemaskinen: lett skydekke over printeren, byger av reply-all fra ti, og stigende fare for fredagskaker i løpet av ettermiddagen</span></p>
