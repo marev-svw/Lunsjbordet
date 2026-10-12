@@ -1,0 +1,791 @@
+{
+ "quizer": [
+  {
+   "dato": "2026-10-07",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket land grenser til både Frankrike og Spania, men er ikke medlem av EU?",
+     "fasit": "Andorra",
+     "svar": "Andorra. Fyrstedømmet ligger i Pyreneene."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hva betyr det svenske ordet «rolig» på norsk?",
+     "fasit": "Morsom",
+     "svar": "Morsom. Det norske «rolig» heter «lugn» på svensk."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "I statsbudsjettet som ble lagt fram onsdag, vil regjeringen styrke kampen mot en fremmed fiskeart i norske elver. Hvilken?",
+     "fasit": "Pukkellaks",
+     "svar": "Pukkellaks. Regjeringen foreslår 54 millioner kroner til innsatsen i 2027."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Ved hvor mange grader Fahrenheit koker vann ved havnivå?",
+     "fasit": "212 °F",
+     "svar": "212 °F. Vann fryser ved 32 °F."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvem malte taket i Det sixtinske kapell: Leonardo da Vinci, Rafael, Michelangelo eller Botticelli?",
+     "fasit": "Michelangelo,",
+     "svar": "Michelangelo, i årene 1508–1512. Botticelli malte noen av freskene på veggene."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvor mange tangenter har et vanlig piano?",
+     "fasit": "88",
+     "svar": "88. 52 hvite og 36 svarte."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hvilken farge har huden til en isbjørn under pelsen?",
+     "fasit": "Svart",
+     "svar": "Svart. Pelsen ser hvit ut, men hårene er gjennomsiktige."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvem vant herrefinalen i tennisturneringen US Open i september?",
+     "fasit": "Alexander Zverev",
+     "svar": "Alexander Zverev. Han slo amerikaneren Ben Shelton i fire sett."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romantrilogien «Kristin Lavransdatter»?",
+     "fasit": "Sigrid Undset",
+     "svar": "Sigrid Undset. Hun fikk Nobelprisen i litteratur i 1928."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken «nøtt» hører med i klassisk pesto alla genovese?",
+     "fasit": "Pinjekjerner",
+     "svar": "Pinjekjerner. Strengt tatt frø fra pinjefuru, ikke nøtter."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilket år ble Gro Harlem Brundtland Norges første kvinnelige statsminister?",
+     "fasit": "1981",
+     "svar": "1981. Hun ble statsminister igjen i 1986 og 1990."
+    },
+    {
+     "tema": "Tall",
+     "sporsmal": "Hvilket årstall skrives MCM med romertall?",
+     "fasit": "1900",
+     "svar": "1900. M er 1000, og CM er 900."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Tadej Pogačar vant Tour de France i juli. Hvor mange sammenlagtseire har han nå i rittet?",
+     "fasit": "Fem",
+     "svar": "Fem. Like mange som rekordholderne Anquetil, Merckx, Hinault og Induráin."
+    },
+    {
+     "tema": "Vitenskap",
+     "sporsmal": "Hva måles i enheten hertz?",
+     "fasit": "Frekvens",
+     "svar": "Frekvens. Én hertz er én svingning per sekund."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er hovedstaden i Australia?",
+     "fasit": "Canberra",
+     "svar": "Canberra. Mange tror det er Sydney eller Melbourne."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nobelprisene deles ut denne uka. Hvilken kvinne fikk Nobels fredspris i 2025?",
+     "fasit": "María Corina Machado",
+     "svar": "María Corina Machado fra Venezuela."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva heter det største organet i menneskekroppen?",
+     "fasit": "Huden",
+     "svar": "Huden. Hos en voksen veier den rundt fire kilo."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år falt Berlinmuren?",
+     "fasit": "1989",
+     "svar": "1989. Tyskland ble gjenforent i 1990."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket band ga ut albumet «Abbey Road» i 1969?",
+     "fasit": "The Beatles",
+     "svar": "The Beatles. Coveret med fotgjengerfeltet er et av verdens mest kopierte."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Erling Haaland scoret to ganger da Norge slo et nabo-land 3–2 i Nations League 24. september. Hvilket land?",
+     "fasit": "Danmark",
+     "svar": "Danmark. Kampen ble spilt i Oslo."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hvilket grunnstoff har det kjemiske symbolet Fe?",
+     "fasit": "Jern,",
+     "svar": "Jern, fra latin «ferrum»."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev «Sult», utgitt i 1890?",
+     "fasit": "Knut Hamsun",
+     "svar": "Knut Hamsun. Han fikk Nobelprisen i litteratur i 1920."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor mange spillere er det på banen per lag i et håndballag, målvakt medregnet?",
+     "fasit": "Sju",
+     "svar": "Sju. Seks utespillere og en målvakt."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilket land stammer sushi tradisjonelt fra, i den formen vi kjenner i dag?",
+     "fasit": "Japan",
+     "svar": "Japan. Den eldste formen har røtter i Sørøst-Asia."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nobels fredspris blir delt ut i en norsk by hver 10. desember. Hvilken?",
+     "fasit": "Oslo,",
+     "svar": "Oslo, i Oslo rådhus. De andre prisene deles ut i Stockholm."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva er kvadratroten av 144?",
+     "fasit": "12",
+     "svar": "12. 12 ganger 12 er 144."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilken planet i solsystemet har flest måner?",
+     "fasit": "Saturn",
+     "svar": "Saturn. Over 200 kjente måner, flere enn Jupiter."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken regissør står bak filmen «Jurassic Park» fra 1993?",
+     "fasit": "Steven Spielberg",
+     "svar": "Steven Spielberg. Samme år kom også «Schindlers liste»."
+    }
+   ]
+  },
+  {
+   "dato": "2026-10-08",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er hovedstaden i Canada?",
+     "fasit": "Ottawa",
+     "svar": "Ottawa. Mange tror det er Toronto."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nobels litteraturpris deles ut i dag, torsdag. Hvem fikk prisen i 2025?",
+     "fasit": "László Krasznahorkai",
+     "svar": "László Krasznahorkai fra Ungarn."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hvor mange tenner har en voksen person normalt, visdomstenner medregnet?",
+     "fasit": "32",
+     "svar": "32. Mange får fjernet visdomstennene."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilket år startet første verdenskrig?",
+     "fasit": "1914",
+     "svar": "1914. Skuddene i Sarajevo falt i juni."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken svensk gruppe vant Eurovision Song Contest i 1974 med «Waterloo»?",
+     "fasit": "ABBA",
+     "svar": "ABBA. Seieren ble starten på verdensstjernestatus."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Fotball-VM 2026 ble arrangert i tre land. USA og Canada var to av dem. Hva var det tredje?",
+     "fasit": "Mexico",
+     "svar": "Mexico. Første VM med 48 lag."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hva er kjemisk formel for bordsalt?",
+     "fasit": "NaCl",
+     "svar": "NaCl. Natriumklorid."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev «Fyrtøyet» og «Den lille havfruen»?",
+     "fasit": "H.C. Andersen",
+     "svar": "H.C. Andersen. Han var dansk."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor lang er en maratondistanse, i kilometer?",
+     "fasit": "42,195 km",
+     "svar": "42,195 km. Det tilsvarer 26 mil og 385 yards."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilket land er opprinnelsen til osten parmesan?",
+     "fasit": "Italia",
+     "svar": "Italia. Parmigiano Reggiano kommer fra området rundt Parma."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nobels fysikkpris for 2025 gikk til forskning på en kvantefysisk effekt i elektriske kretser. Hva het effekten, i korte trekk: tunnelering eller superledning?",
+     "fasit": "Kvantemekanisk tunnelering",
+     "svar": "Kvantemekanisk tunnelering. Prisen gikk til Clarke, Devoret og Martinis."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva er 15 prosent av 200?",
+     "fasit": "30",
+     "svar": "30. 10 prosent er 20, og 5 prosent er 10."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hva er verdens største landdyr?",
+     "fasit": "Afrikansk elefant",
+     "svar": "Afrikansk elefant. Hannene kan veie over seks tonn."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvem malte «Skrik»?",
+     "fasit": "Edvard Munch",
+     "svar": "Edvard Munch. Det finnes flere versjoner."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken elv renner gjennom flest land i verden?",
+     "fasit": "Donau",
+     "svar": "Donau. Den renner gjennom ti land, fra Tyskland til Svartehavet."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nobels medisinpris gikk mandag til tre forskere som har funnet en måte å skru enkelte nerveceller av og på. Hva bruker metoden for å styre cellene?",
+     "fasit": "Lys",
+     "svar": "Lys. Metoden kalles optogenetikk. Prisen gikk til Karl Deisseroth, Peter Hegemann og Georg Nagel."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hvilken gass utgjør omtrent 78 prosent av luften vi puster inn?",
+     "fasit": "Nitrogen",
+     "svar": "Nitrogen. Oksygen utgjør rundt 21 prosent."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilket år ble Norge med i NATO?",
+     "fasit": "1949",
+     "svar": "1949. Norge var ett av tolv land som grunnla alliansen."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvor mange symfonier fullførte Ludwig van Beethoven?",
+     "fasit": "Ni",
+     "svar": "Ni. Den niende avsluttes med «Ode til gleden»."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Kong Haakon drar på sin første offisielle reise som konge tirsdag 13. oktober. I hvilken by i Nordland starter reisen?",
+     "fasit": "Narvik",
+     "svar": "Narvik. Samme dag går turen videre til Finnmark."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hva kalles et ord eller en setning som blir det samme lest baklengs, som «Agnes i senga»?",
+     "fasit": "Et palindrom",
+     "svar": "Et palindrom. Ordet kommer fra gresk og betyr omtrent «løper tilbake»."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hva heter adelsmannen som kjemper mot vindmøller i Miguel de Cervantes’ roman fra 1605?",
+     "fasit": "Don Quijote",
+     "svar": "Don Quijote. Han rir ut sammen med væpneren Sancho Panza."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken idrett spiller lagene om Stanley Cup?",
+     "fasit": "Ishockey",
+     "svar": "Ishockey. Trofeet deles ut til vinneren av NHL-sluttspillet."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilket krydder er verdens dyreste målt i vekt?",
+     "fasit": "Safran",
+     "svar": "Safran. Det er støvfanget i krokusblomster, høstet for hånd."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken sørkoreansk film ble i 2020 den første ikke-engelskspråklige filmen som vant Oscar for beste film?",
+     "fasit": "«Parasitt»",
+     "svar": "«Parasitt». Filmen er regissert av Bong Joon-ho."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva er det minste primtallet?",
+     "fasit": "2",
+     "svar": "2. Det er også det eneste primtallet som er et partall. 1 regnes ikke som primtall."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hvor mange hjerter har en åttearmet blekksprut?",
+     "fasit": "Tre",
+     "svar": "Tre. To pumper blod gjennom gjellene, og ett pumper det videre ut i kroppen."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "Hvilken dansk arkitekt tegnet operahuset i Sydney?",
+     "fasit": "Jørn Utzon",
+     "svar": "Jørn Utzon. Operahuset ble åpnet i 1973."
+    }
+   ]
+  },
+  {
+   "dato": "2026-10-09",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva heter verdens lengste fjellkjede over land, som strekker seg langs vestkysten av Sør-Amerika?",
+     "fasit": "Andes",
+     "svar": "Andes. Fjellkjeden er rundt 7000 kilometer lang."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nobels økonomipris kunngjøres mandag. I 2025 gikk den blant andre til Joel Mokyr, Philippe Aghion og Peter Howitt. Hva handlet forskningen deres om?",
+     "fasit": "Hvordan innovasjon og teknologisk fornyelse driver økonomisk vekst",
+     "svar": "Hvordan innovasjon og teknologisk fornyelse driver økonomisk vekst. Prisen er offisielt Sveriges Riksbanks pris til Alfred Nobels minne."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hvilket organ i kroppen produserer hormonet insulin?",
+     "fasit": "Bukspyttkjertelen",
+     "svar": "Bukspyttkjertelen. Insulin regulerer blodsukkeret."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år ble unionen mellom Norge og Sverige oppløst?",
+     "fasit": "1905",
+     "svar": "1905. Det skjedde etter folkeavstemningen om unionsoppløsning."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken italiensk komponist skrev «De fire årstider»?",
+     "fasit": "Antonio Vivaldi",
+     "svar": "Antonio Vivaldi. Verket er fire fiolinkonserter, én for hver årstid."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "I oktober 2025 ble juveler fra et av verdens mest besøkte museer stjålet i et dristig ran i åpningstiden. Hvilket museum?",
+     "fasit": "Louvre i Paris",
+     "svar": "Louvre i Paris. Ranet tok bare noen få minutter."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «1984» om overvåkingsstaten med Storebror?",
+     "fasit": "George Orwell",
+     "svar": "George Orwell. Boken ble utgitt i 1949."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken idrett brukes begrepene «birdie» og «bogey»?",
+     "fasit": "Golf",
+     "svar": "Golf. En birdie er ett slag under par på hullet."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilket land kommer osten halloumi opprinnelig fra?",
+     "fasit": "Kypros",
+     "svar": "Kypros. Osten tåler steking og grilling fordi den har høyt smeltepunkt."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken regissør står bak «Pulp Fiction» fra 1994?",
+     "fasit": "Quentin Tarantino",
+     "svar": "Quentin Tarantino. Filmen vant Gullpalmen i Cannes."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva kalles en mangekant med åtte sider?",
+     "fasit": "En åttekant, eller oktagon",
+     "svar": "En åttekant, eller oktagon. Stoppskilt har denne formen."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hva er verdens største nålevende fugl?",
+     "fasit": "Struts",
+     "svar": "Struts. Den kan løpe over 60 kilometer i timen."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvem grunnla Microsoft sammen med Paul Allen i 1975?",
+     "fasit": "Bill Gates",
+     "svar": "Bill Gates. Selskapet ble startet i Albuquerque i New Mexico."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "I hvilken by ligger kirken Sagrada Família, tegnet av Antoni Gaudí?",
+     "fasit": "Barcelona",
+     "svar": "Barcelona. Byggingen startet i 1882 og er fortsatt ikke helt ferdig."
+    }
+   ]
+  },
+  {
+   "dato": "2026-10-10",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er hovedstaden i Tyrkia?",
+     "fasit": "Ankara",
+     "svar": "Ankara. Landets største by er Istanbul."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "USA holder midtveisvalg 3. november. Hvor mange medlemmer har Representantenes hus, som alle er på valg?",
+     "fasit": "435",
+     "svar": "435. Senatet har 100 medlemmer, og bare en tredjedel av dem er på valg."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Spania ble verdensmester i fotball for menn i sommer. Hvilket land tapte finalen?",
+     "fasit": "Argentina",
+     "svar": "Argentina. Finalen ble spilt på MetLife Stadium i New Jersey."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hva heter den lyseste stjernen på nattehimmelen, sett fra Jorden?",
+     "fasit": "Sirius",
+     "svar": "Sirius. Den ligger i stjernebildet Store hund."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken romersk keiser blir tradisjonelt koblet til brannen i Roma i år 64?",
+     "fasit": "Nero",
+     "svar": "Nero. Han skal ha lagt skylden på de kristne."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev bøkene om Pippi Langstrømpe?",
+     "fasit": "Astrid Lindgren",
+     "svar": "Astrid Lindgren. Den første boken kom ut i 1945."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken norsk komponist skrev musikken til Henrik Ibsens skuespill «Peer Gynt»?",
+     "fasit": "Edvard Grieg",
+     "svar": "Edvard Grieg. «I Dovregubbens hall» er en av de mest kjente delene."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor høyt henger kurven i basketball, målt fra gulvet?",
+     "fasit": "3,05 meter, altså 10 fot",
+     "svar": "3,05 meter, altså 10 fot. Høyden er den samme på alle nivåer."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken ost er hovedingrediensen sammen med oliven og tomat i en klassisk gresk salat?",
+     "fasit": "Feta",
+     "svar": "Feta. Osten lages av sauemelk, eventuelt blandet med geitemelk."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken skuespiller spilte tittelrollen i «Forrest Gump» fra 1994?",
+     "fasit": "Tom Hanks",
+     "svar": "Tom Hanks. Filmen vant Oscar for beste film."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva er 2 opphøyd i tiende potens?",
+     "fasit": "1024",
+     "svar": "1024. Tallet er også kjent fra datamaskinenes verden som en kibi."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hvilket landdyr har lengst drektighet, på rundt 22 måneder?",
+     "fasit": "Elefant",
+     "svar": "Elefant. Ungen veier gjerne over 100 kilo ved fødselen."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva står forkortelsen USB for?",
+     "fasit": "Universal Serial Bus",
+     "svar": "Universal Serial Bus. Standarden kom på markedet på midten av 1990-tallet."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hvilket språk har flest morsmålstalere i verden?",
+     "fasit": "Mandarin-kinesisk",
+     "svar": "Mandarin-kinesisk. Engelsk har flest talere når de som har det som andrespråk regnes med."
+    }
+   ]
+  },
+  {
+   "dato": "2026-10-11",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er hovedstaden i Kenya?",
+     "fasit": "Nairobi",
+     "svar": "Nairobi. Byen ligger på rundt 1 700 meters høyde."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Vinter-OL i februar ble arrangert i Milano og en annen italiensk by i Dolomittene. Hvilken?",
+     "fasit": "Cortina d'Ampezzo",
+     "svar": "Cortina d'Ampezzo. Første gang byen var vertskap var i 1956."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilket parti ble størst ved stortingsvalget i 2025?",
+     "fasit": "Arbeiderpartiet",
+     "svar": "Arbeiderpartiet. Jonas Gahr Støre fortsatte som statsminister."
+    },
+    {
+     "tema": "Naturvitenskap",
+     "sporsmal": "Hva kalles prosessen der planter lager sukker av lys, vann og karbondioksid?",
+     "fasit": "Fotosyntese",
+     "svar": "Fotosyntese. Oksygen er et biprodukt."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år landet Apollo 11 på månen?",
+     "fasit": "1969",
+     "svar": "1969. Neil Armstrong og Buzz Aldrin gikk på månen, mens Michael Collins ble igjen i banen."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev «Hobbiten», utgitt i 1937?",
+     "fasit": "J.R.R. Tolkien",
+     "svar": "J.R.R. Tolkien. Boken er en forløper til «Ringenes herre»."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken norsk artist vant Eurovision Song Contest i 2009 med «Fairytale»?",
+     "fasit": "Alexander Rybak",
+     "svar": "Alexander Rybak. Han fikk 387 poeng, som var rekord den gang."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilken tennisturnering spilles på gress i en forstad til London?",
+     "fasit": "Wimbledon",
+     "svar": "Wimbledon. Det er den eldste av de fire grand slam-turneringene."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva er hovedingrediensen i guacamole?",
+     "fasit": "Avokado",
+     "svar": "Avokado. Retten stammer fra Mexico."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvem regisserte «Titanic» fra 1997?",
+     "fasit": "James Cameron",
+     "svar": "James Cameron. Filmen vant elleve Oscar-statuetter."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hva er 13 opphøyd i andre potens?",
+     "fasit": "169",
+     "svar": "169. 13 ganger 13."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket landdyr løper raskest?",
+     "fasit": "Geparden",
+     "svar": "Geparden. Den kan nå rundt 100 kilometer i timen over korte distanser."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "I hvilket år ble den første iPhone lansert?",
+     "fasit": "2007",
+     "svar": "2007. Steve Jobs viste den fram i januar."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvem malte «Stjernenatt» i 1889?",
+     "fasit": "Vincent van Gogh",
+     "svar": "Vincent van Gogh. Maleriet henger på MoMA i New York."
+    }
+   ]
+  },
+  {
+   "dato": "2026-10-12",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er hovedstaden i Canada?",
+     "fasit": "Ottawa",
+     "svar": "Ottawa. Byen ligger ved grensen mellom Ontario og Quebec."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken by er vertskap for sommer-OL i 2028?",
+     "fasit": "Los Angeles",
+     "svar": "Los Angeles. Det er tredje gang byen arrangerer lekene."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hvilket grunnstoff har atomnummer 26?",
+     "fasit": "Jern",
+     "svar": "Jern. Det har det kjemiske symbolet Fe."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år falt Berlinmuren?",
+     "fasit": "1989",
+     "svar": "1989. Tyskland ble gjenforent året etter."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Sult» fra 1890?",
+     "fasit": "Knut Hamsun",
+     "svar": "Knut Hamsun. Han fikk Nobelprisen i litteratur i 1920."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket band ga ut albumet «Abbey Road» i 1969?",
+     "fasit": "The Beatles",
+     "svar": "The Beatles. Coveret med de fire på fotgjengerfeltet er et av verdens mest kopierte."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor mange spillere har et håndballag på banen om gangen, keeperen medregnet?",
+     "fasit": "Sju",
+     "svar": "Sju. Seks utespillere og én keeper."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken italiensk fersk ost brukes tradisjonelt i tiramisu?",
+     "fasit": "Mascarpone",
+     "svar": "Mascarpone. Den er laget av fløte."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken skuespiller spiller kaptein Jack Sparrow i «Pirates of the Caribbean»?",
+     "fasit": "Johnny Depp",
+     "svar": "Johnny Depp. Han ble nominert til Oscar for den første filmen i 2003."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hvor mange grader er vinkelsummen i en firkant?",
+     "fasit": "360",
+     "svar": "360. To trekanter à 180 grader."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket pattedyr er det eneste som kan fly aktivt?",
+     "fasit": "Flaggermusen",
+     "svar": "Flaggermusen. Andre «flygende» pattedyr, som flygeegern, svever bare."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "På hvilken dato deles Nobels fredspris ut i Oslo hvert år?",
+     "fasit": "10. desember",
+     "svar": "10. desember. Datoen er dødsdagen til Alfred Nobel, i 1896."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken japansk kunstner laget tresnittet «Den store bølgen utenfor Kanagawa»?",
+     "fasit": "Katsushika Hokusai",
+     "svar": "Katsushika Hokusai. Verket ble laget rundt 1831."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilken planet i solsystemet har flest kjente måner?",
+     "fasit": "Saturn",
+     "svar": "Saturn. Over 200 er bekreftet."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken innsjø er Afrikas største målt i areal?",
+     "fasit": "Victoriasjøen",
+     "svar": "Victoriasjøen. Den er også verdens største tropiske innsjø."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvem vant Formel 1-løpet i Singapore søndag 11. oktober?",
+     "fasit": "Max Verstappen",
+     "svar": "Max Verstappen. Det var hans første seier på Marina Bay-banen. Charles Leclerc ble nummer to."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva heter den minste knokkelen i menneskekroppen?",
+     "fasit": "Stigbøylen",
+     "svar": "Stigbøylen. Den sitter i mellomøret og er bare rundt tre millimeter lang."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken romersk keiser lot bygge en mur tvers over Nord-England?",
+     "fasit": "Hadrian",
+     "svar": "Hadrian. Hadrians mur ble påbegynt rundt år 122."
+    },
+    {
+     "tema": "Mytologi",
+     "sporsmal": "Hva heter Odins åttebeinte hest i norrøn mytologi?",
+     "fasit": "Sleipner",
+     "svar": "Sleipner. Ifølge sagnet var Sleipner avkom av Loke og hingsten Svadilfare."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken komponist skrev operaen «Carmen»?",
+     "fasit": "Georges Bizet",
+     "svar": "Georges Bizet. Operaen hadde urpremiere i Paris i 1875."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilket land vant det første verdensmesterskapet i fotball, i 1930?",
+     "fasit": "Uruguay",
+     "svar": "Uruguay. Landet var også vertskap og slo Argentina 4–2 i finalen."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva er det vanlige navnet på natriumbikarbonat på kjøkkenet?",
+     "fasit": "Natron",
+     "svar": "Natron. Den kjemiske formelen er NaHCO₃."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Regjeringen la fram statsbudsjettet for 2027 onsdag 7. oktober. Hvor mange milliarder kroner fra oljefondet foreslår den å bruke? Svar innenfor 25 milliarder godkjennes.",
+     "fasit": "608,4 milliarder kroner",
+     "svar": "608,4 milliarder kroner. Forslaget kom fra finansminister Jens Stoltenberg."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Vanilje lages av frøkapslene til en klatreplante. Hvilken plantefamilie tilhører den?",
+     "fasit": "Orkidéfamilien",
+     "svar": "Orkidéfamilien. Vaniljeplanten stammer opprinnelig fra Mexico."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilket programmeringsspråk er oppkalt etter en britisk komigruppe?",
+     "fasit": "Python",
+     "svar": "Python. Navnet kommer fra Monty Python, og språket ble lansert i 1991."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "Hvilken arkitekt tegnet Guggenheim-museet i Bilbao?",
+     "fasit": "Frank Gehry",
+     "svar": "Frank Gehry. Museet åpnet i 1997."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilken haiart er verdens største fisk?",
+     "fasit": "Hvalhaien",
+     "svar": "Hvalhaien. Den kan bli over 12 meter lang og lever av plankton."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hvilket språk er offisielt språk i Haiti sammen med fransk?",
+     "fasit": "Haitisk kreol",
+     "svar": "Haitisk kreol. Det ble offisielt språk med grunnloven fra 1987."
+    }
+   ]
+  }
+ ],
+ "antall_sporsmal": 126
+}

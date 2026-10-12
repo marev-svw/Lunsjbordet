@@ -22,6 +22,8 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `tanzania.html` | Debatt: Mindre Tanzania, mer timeføring |
 | `kontakt.html` | Kontakt redaksjonen: tipsskjema som sendes til redaksjonen på e-post via FormSubmit |
 | `sitater.html` | Tatt ut av kontekst: sitater hørt på kontoret. Lenket fra «Sitater» i menyen i toppbanneret |
+| `quiz/arkiv.json` | Alle spørsmål som har vært i Lunsjquizen, med dato, tema og fasit |
+| `quiz/sjekk.py` | Sjekker dagens quiz mot arkivet, så spørsmål og fasitsvar ikke gjentas, og arkiverer quizen |
 | `favicon.svg`, `apple-touch-icon.png` | Ikon i nettleserfanen og på hjemskjermen |
 | `og-image.png` | Bildet som vises når en lenke deles i Teams, Slack, Outlook og lignende |
 | `robots.txt` | Slipper inn lenkeforhåndsvisninger og ber søkemotorer holde seg unna |
@@ -45,6 +47,17 @@ En GitHub Pages-side er åpen for alle som har adressen, også når repoet er pr
 1. Kopier en eksisterende sak, for eksempel `bussen.html`, og gi den et nytt filnavn.
 2. Bytt ut innholdet. Lenken tilbake til forsiden ligger i avishodet.
 3. Legg inn saken på forsiden i `index.html`, med lenke til det nye filnavnet.
+
+## Lunsjquizen
+
+Quizen på forsiden byttes hver morgen. Alle spørsmål som har vært publisert, ligger i `quiz/arkiv.json`. Før en ny quiz publiseres, kjøres:
+
+```
+python3 -I quiz/sjekk.py sjekk     # stopper ved gjentatt fasit, for like spørsmål, samme spørsmålsmal siste 7 dager eller samme tema to ganger
+python3 -I quiz/sjekk.py arkiver   # legger dagens spørsmål til i arkivet (commit det sammen med index.html)
+```
+
+`python3 -I quiz/sjekk.py bygg` bygger arkivet på nytt fra git-historikken til `index.html`.
 
 ## Tipsskjemaet
 
