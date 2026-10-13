@@ -720,7 +720,7 @@
   .op-knapp { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .6rem 1.1rem; border: 0; border-radius: 8px; background: #f4d547; color: #1c2226; font: 800 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
   .op-knapp[aria-disabled="true"] { opacity: .75; cursor: default; }
   .op-knapp:focus-visible { outline: 3px solid #f3f5f4; outline-offset: 2px; }
-  .kurs-svar { margin: 0; min-height: 1.4em; font-size: .875rem; }
+  .mappe-svar { margin: 0; min-height: 1.4em; font-size: .875rem; }
   @container (min-width: 45.5rem) {
     .oppvask { grid-template-columns: auto minmax(0, 1fr) minmax(11rem, auto); }
     .op-handling { grid-column: auto; flex-direction: column; align-items: stretch; text-align: center; }
@@ -731,15 +731,15 @@
   .oppslag-rad .op-flate { flex: 1; padding: 1.1rem 1.2rem 1.2rem; }
   .op-stempel { position: absolute; top: .85rem; right: .8rem; padding: .2rem .45rem; border-radius: 4px; font: 800 .8rem/1 var(--sans); letter-spacing: .08em; }
   .rute { background-color: #f2c230; background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, .045) 0 6px, transparent 6px 12px); color: #1d1b16; }
-  .rute .op-firma { padding-right: 4.75rem; font-size: .8125rem; letter-spacing: .06em; text-transform: uppercase; }
+  .rute .op-firma { padding-right: 6rem; font-size: .8125rem; letter-spacing: .06em; text-transform: uppercase; }
   .rute .op-stempel { border: 2px solid #1d1b16; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .875rem; letter-spacing: .04em; transform: rotate(-4deg); }
   .reise { background: #f4efe3; box-shadow: inset 0 0 0 2px #d6ddd9; color: #1f2a33; }
-  .reise .op-firma { padding-right: 5.75rem; color: #2a6674; font-family: var(--serif); font-size: 1rem; font-style: italic; }
+  .reise .op-firma { padding-right: 5.25rem; color: #2a6674; font-family: var(--serif); font-size: 1rem; font-style: italic; }
   .reise .op-stempel { border: 2px dashed #2a6674; color: #2a6674; transform: rotate(6deg); }
-  .sirup { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1rem; background: linear-gradient(160deg, #9c5419, #6f3511); color: #fbeedd; }
-  .sirup .op-firma { color: #ffd59a; }
-  .sirup .op-tittel, .sirup .op-slagord { color: #fff; }
-  .sirup-ikon { width: 2.8rem; height: auto; }
+  .stille { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1rem; background: linear-gradient(160deg, #26386b, #151f40); color: #e6eefc; }
+  .stille .op-firma { color: #9fd3ff; }
+  .stille .op-tittel, .stille .op-slagord { color: #fff; }
+  .stille-ikon { width: 3rem; height: auto; }
 
   /* Lunsjquizen: utfoldbar quiz rett under Lunsj+-banneret, fasit bak én knapp og selvrapportert poengsum.
      Kortet ligger utenfor hovedspalten, så det er sin egen container for bredderegler og cqi-mål. */
@@ -1337,24 +1337,24 @@
         <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/><rect x="9.3" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/></svg>
       </button>
       <div class="pod-now">
-        <p class="pod-ep"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span id="pod-ep-title">Episode 15: Arrivederci, timeliste</span></p>
-        <p class="pod-guest" id="pod-guest">Med Markus, snart i Piemonte</p>
+        <p class="pod-ep"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span id="pod-ep-title">Episode 16: Dagen etter Borgarting</span></p>
+        <p class="pod-guest" id="pod-guest">Med Nicolay Skarning, uten stemme</p>
         <div class="pod-track" aria-hidden="true"><span id="pod-bar"></span></div>
-        <div class="pod-times"><span id="pod-pos">0:00</span><span id="pod-dur">24:00</span></div>
+        <div class="pod-times"><span id="pod-pos">0:00</span><span id="pod-dur">33:00</span></div>
       </div>
       <button type="button" class="pod-speed" id="pod-speed" aria-label="Avspillingshastighet: 1×">1×</button>
     </div>
     <div class="pod-cap-wrap">
       <p class="pod-cap" id="pod-cap">[Kaffemaskinen kverner]</p>
-      <button type="button" class="paid pod-more" id="pod-more" hidden><span class="plus" aria-hidden="true">+</span>Hør resten av episoden<span class="hl" id="pod-more-hl" hidden>Kø ved kaffemaskinen, episode 15: Arrivederci, timeliste</span></button>
+      <button type="button" class="paid pod-more" id="pod-more" hidden><span class="plus" aria-hidden="true">+</span>Hør resten av episoden<span class="hl" id="pod-more-hl" hidden>Kø ved kaffemaskinen, episode 16: Dagen etter Borgarting</span></button>
     </div>
     <div class="pod-list">
       <h3>Episoder</h3>
       <ol>
-          <li aria-current="true"><button type="button" class="pod-item" data-ep="0"><span class="t">15. Arrivederci, timeliste</span><span class="d">24:00</span><span class="g">Med Markus, snart i Piemonte</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="1"><span class="t">14. Livet etter Bussen</span><span class="d">18:00</span><span class="g">Med Markus, fra cellekontoret</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="2"><span class="t">13. Hilde forklarer oppvaskmaskinen. Igjen.</span><span class="d">21:00</span><span class="g">Med Hilde Bakke</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="3"><span class="t">12. LO-notatet, alle 41 fotnotene</span><span class="d">2:47:00</span><span class="g">Med Nicolay Skarning</span></button></li>
+          <li aria-current="true"><button type="button" class="pod-item" data-ep="0"><span class="t">16. Dagen etter Borgarting</span><span class="d">33:00</span><span class="g">Med Nicolay Skarning, uten stemme</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="1"><span class="t">15. Arrivederci, timeliste</span><span class="d">24:00</span><span class="g">Med Markus, snart i Piemonte</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="2"><span class="t">14. Livet etter Bussen</span><span class="d">18:00</span><span class="g">Med Markus, fra cellekontoret</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="3"><span class="t">13. Hilde forklarer oppvaskmaskinen. Igjen.</span><span class="d">21:00</span><span class="g">Med Hilde Bakke</span></button></li>
       </ol>
       <p class="pod-where">Tilgjengelig ved kaffemaskinen, i kopirommet og i heisen. Ikke i kjelleren.</p>
     </div>
@@ -1439,22 +1439,21 @@
     <p class="op-merke" id="op-m1">Annonse</p>
     <div class="op-flate oppvask">
       <svg class="op-ikon" viewBox="0 0 64 64" aria-hidden="true">
-        <path d="M16 36h30v14a10 10 0 0 1-10 10H26a10 10 0 0 1-10-10z" fill="none" stroke="#f3f5f4" stroke-width="3" stroke-linejoin="round"/>
-        <path d="M46 40h3a6 6 0 0 1 0 12h-3" fill="none" stroke="#f3f5f4" stroke-width="3"/>
-        <path d="M19 27v6c0 2 5 3.5 12 3.5s12-1.5 12-3.5v-6" fill="none" stroke="#f4d547" stroke-width="3"/>
-        <path d="M7 22 31 12l24 10-24 10z" fill="#f4d547"/>
-        <path d="M55 22v10" stroke="#f4d547" stroke-width="2.5"/>
-        <circle cx="55" cy="33.5" r="2.4" fill="#f4d547"/>
+        <path d="M8 20a4 4 0 0 1 4-4h14l5 6h21a4 4 0 0 1 4 4v26a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4z" fill="#f4d547"/>
+        <path d="M8 30h48" stroke="#12403b" stroke-width="2.5"/>
+        <rect x="20" y="36" width="24" height="3" rx="1.5" fill="#12403b"/>
+        <rect x="20" y="43" width="16" height="3" rx="1.5" fill="#12403b"/>
+        <path d="M46 6l8 6-8 6" fill="none" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <div class="op-tekstdel">
-        <p class="op-firma">Kaffekurset Kalde Kopper</p>
-        <p class="op-tittel">Lær å drikke kaffen mens den fortsatt er varm</p>
-        <p class="op-tekst">Helgekurs for travle partnere: Hell opp. Sett deg ned. Drikk. Ingen telefoner tillatt, heller ikke «bare ett raskt møte».</p>
-        <p class="op-smaa">Kursavgift: ett møte uten agenda. Kursbevis deles ut kaldt.</p>
+        <p class="op-firma">Mappeflytt AS</p>
+        <p class="op-tittel">Vi digitaliserer arkivet ditt: Papirene flyttes fra én mappe til en annen</p>
+        <p class="op-tekst">Moderne dokumenthåndtering for partnere med mange bokser og lite tid. Vi tar mappen, bærer den to meter og setter den ned igjen.</p>
+        <p class="op-smaa">Pris: én kopi til kopirommet, og ingen spør hvorfor. Kvittering utstedes i tre eksemplarer.</p>
       </div>
       <div class="op-handling">
-        <button type="button" class="op-knapp" id="kurs-pamelding">Meld på en kaffekopp</button>
-        <p class="kurs-svar" id="kurs-svar" aria-live="polite"></p>
+        <button type="button" class="op-knapp" id="mappe-bestill">Bestill mappeflytt</button>
+        <p class="mappe-svar" id="mappe-svar" aria-live="polite"></p>
       </div>
     </div>
   </aside>
@@ -1512,39 +1511,37 @@
     <aside class="oppslag" aria-labelledby="op-m2">
       <p class="op-merke" id="op-m2">Annonse</p>
       <div class="op-flate rute">
-        <span class="op-stempel" aria-hidden="true">11:30</span>
-        <p class="op-firma">Bussen Ekspress</p>
-        <p class="op-tittel">Rutetabellen for lunsj, nå i lommeformat</p>
-        <p class="op-tekst">Én avgang daglig fra skriveplassene. Ingen holdeplass ved cellekontorene. Jakker på stolen regnes ikke som påstigning.</p>
-        <p class="op-slagord">Vi venter ikke. Heller ikke på Juni.</p>
+        <span class="op-stempel" aria-hidden="true">OPPTATT</span>
+        <p class="op-firma">Plass-Pål Reservasjon</p>
+        <p class="op-tittel">Reserver plassen din ved kaffemaskinen</p>
+        <p class="op-tekst">Legg igjen en jakke, en kopp eller et usikkert blikk. Plassen er din i inntil elleve minutter, deretter overtar Hilde.</p>
+        <p class="op-slagord">Her står vi. Du står i kø.</p>
       </div>
     </aside>
     <aside class="oppslag" aria-labelledby="op-m3">
       <p class="op-merke" id="op-m3">Annonse</p>
       <div class="op-flate reise">
-        <span class="op-stempel" aria-hidden="true">NØTTEFRI</span>
-        <p class="op-firma">Innenlands Reiser</p>
-        <p class="op-tittel">Italiensk ferie uten å forlate landet</p>
-        <p class="op-tekst">Toskansk solnedgang over kantina, pasta fra matboksen og null peanøtter om bord. Avreise fra heisen, retur før timelisten stenger.</p>
-        <p class="op-slagord">Vi flyr ikke. Vi tar trappa.</p>
+        <span class="op-stempel" aria-hidden="true">GYLDIG</span>
+        <p class="op-firma">Passordvern Norge</p>
+        <p class="op-tittel">Passordet ditt har gått ut. Vi har forlenget det med et utropstegn</p>
+        <p class="op-tekst">Fra Sommer2024! til Sommer2024!!, helt uten opplæring. Månedlig bytte av utropstegn er inkludert. Du slipper å huske det. Det gjør vi heller ikke.</p>
+        <p class="op-slagord">Trygt. Stort sett.</p>
       </div>
     </aside>
     <aside class="oppslag" aria-labelledby="op-m4">
       <p class="op-merke" id="op-m4">Annonse</p>
-      <div class="op-flate sirup">
-        <svg class="sirup-ikon" viewBox="0 0 40 64" aria-hidden="true">
-          <rect x="10" y="3" width="20" height="8" rx="2" fill="#3b1d0a"/>
-          <rect x="12.5" y="11" width="15" height="4" fill="#3b1d0a" opacity=".55"/>
-          <rect x="6" y="15" width="28" height="46" rx="6" fill="#f6e6c8" stroke="#3b1d0a" stroke-width="2.5"/>
-          <rect x="9" y="27" width="22" height="31" rx="3.5" fill="#d98a2b"/>
-          <circle cx="20" cy="42" r="6.5" fill="#f6e6c8" stroke="#3b1d0a" stroke-width="2"/>
-          <path d="M20 42v-3.8M20 42l2.8 1.6" fill="none" stroke="#3b1d0a" stroke-width="1.8" stroke-linecap="round"/>
+      <div class="op-flate stille">
+        <svg class="stille-ikon" viewBox="0 0 64 56" aria-hidden="true">
+          <path d="M10 36V30a22 22 0 0 1 44 0v6" fill="none" stroke="#9fd3ff" stroke-width="4" stroke-linecap="round"/>
+          <rect x="5" y="32" width="11" height="18" rx="4" fill="#9fd3ff"/>
+          <rect x="48" y="32" width="11" height="18" rx="4" fill="#9fd3ff"/>
+          <path d="M26 24l12 12M38 24L26 36" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
         </svg>
         <div>
-          <p class="op-firma">Sirupsbanken</p>
-          <p class="op-tittel">Sett karamellen i bankboks</p>
-          <p class="op-tekst">Personlig sirupsdepot med kodelås. Hilde har ikke nøkkel. Nushin har ikke koden, men hun prøver.</p>
-          <p class="op-slagord">Sikkerhet i hver dråpe.</p>
+          <p class="op-firma">Stillesonen AS</p>
+          <p class="op-tittel">Hodetelefoner uten musikk</p>
+          <p class="op-tekst">Gå rundt med et alvorlig ansikt og ingenting på ørene, og ingen spør om «bare en kjapp ting». Tilgjengelig i svart og i svart.</p>
+          <p class="op-slagord">Hører du oss? Det håper vi ikke.</p>
         </div>
       </div>
     </aside>
@@ -1554,27 +1551,27 @@
     <h2 class="sr-only" id="more-title">Flere saker</h2>
     <div class="stubs">
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Mikrobølgeovnen varslet om fisk klokka 11:58: Fire kolleger vurderer å si opp</span></button></h3>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Gjettekonkurransen om hvem som tok siste kanelbolle: Alle 23 deltakere svarte «ikke meg»</span></button></h3>
         <p class="desk-s">Konkurranseredaksjonen</p>
       </article>
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Sofaen på kjøkkenet har blitt sittende i 14 minutter etter at møtet var slutt</span></button></h3>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Julebordkomiteen har bestilt 400 julenisser: Kontoret har 38 ansatte</span></button></h3>
         <p class="desk-s">Kulturredaksjonen</p>
       </article>
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kollega sa «bare en kjapp ting» i 52 minutter: Ofrene er i ro</span></button></h3>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Skriveren fikk nytt passord: Ingen vet hvem som fikk det</span></button></h3>
         <p class="desk-s">Teknologiredaksjonen</p>
       </article>
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kopimaskinen skrev ut «Prøv igjen senere» i sju uker: Ingen har prøvd senere</span></button></h3>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kaffekassa gikk i pluss for første gang: Revisorene er bekymret</span></button></h3>
         <p class="desk-s">Økonomiredaksjonen</p>
       </article>
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Plantene i resepsjonen har fått permisjon: Ingen vet fra hva</span></button></h3>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Brannøvelsen gikk fint: Alle sto ved kantina før alarmen gikk</span></button></h3>
         <p class="desk-s">HMS-redaksjonen</p>
       </article>
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">«Alle på kopi» ble til alle på kopi: Postkassen ber om unnskyldning</span></button></h3>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Fredagsmøtet ble flyttet til torsdag for å få fri på fredag: Torsdag er nå fredag</span></button></h3>
         <p class="desk-s">Arbeidslivsredaksjonen</p>
       </article>
     </div>
@@ -1799,14 +1796,14 @@
     br.classList.toggle("open", open);
   });
 
-  // Annonsen for Kaffekurset Kalde Kopper
-  var adBtn = document.getElementById("kurs-pamelding");
-  var adReply = document.getElementById("kurs-svar");
+  // Annonsen for Mappeflytt AS
+  var adBtn = document.getElementById("mappe-bestill");
+  var adReply = document.getElementById("mappe-svar");
   adBtn.addEventListener("click", function () {
     if (adBtn.getAttribute("aria-disabled") === "true") return;
     adBtn.setAttribute("aria-disabled", "true");
-    adBtn.textContent = "Påmeldt";
-    adReply.textContent = "Påmelding mottatt. Kaffen er allerede kald.";
+    adBtn.textContent = "Bestilt";
+    adReply.textContent = "Bestilling mottatt. Mappen er allerede flyttet, men ikke av oss.";
   });
 
   // Arkivskuffen: knappen trekker ut skuffen med saker som ikke står på forsiden
@@ -2163,6 +2160,17 @@
 
   // Podkasten: avspilleren later som den spiller, med teksting linje for linje
   var EPISODES = [
+    { no: 16, title: "Dagen etter Borgarting", guest: "Med Nicolay Skarning, uten stemme", dur: 1980, lines: [
+      ["", "[Kaffemaskinen kverner]"],
+      ["Programleder", "Velkommen til Kø ved kaffemaskinen. I dag har vi Nicolay, som har vært i Borgarting lagmannsrett i tre dager."],
+      ["Programleder", "Nicolay, hvordan føles det å være tilbake?"],
+      ["Nicolay", "[Hvisker] Fotnote 1. Stemmen er til behandling."],
+      ["Programleder", "Vi tolker det som et godt tegn."],
+      ["Nushin", "Kan jeg ringe inn? Jeg har holdt av en kanelbolle siden mandag."],
+      ["Nicolay", "[Hvisker] Den er et bevis."],
+      ["", "[En bingobrikke legges forsiktig på bordet]"],
+      ["Programleder", "Dommen foreligger ikke ennå. Det gjør heller ikke kaffen."]
+    ] },
     { no: 15, title: "Arrivederci, timeliste", guest: "Med Markus, snart i Piemonte", dur: 1440, lines: [
       ["", "[Kaffemaskinen kverner]"],
       ["Programleder", "Velkommen til Kø ved kaffemaskinen. I dag uten karamellsirup, men med Markus, som reiser til Piemonte torsdag."],
@@ -2190,13 +2198,6 @@
       ["Hilde", "Nei."],
       ["", "[En kopp blir satt på benken]"],
       ["Hilde", "Hørte dere det? Det var en partner."]
-    ] },
-    { no: 12, title: "LO-notatet, alle 41 fotnotene", guest: "Med Nicolay Skarning", dur: 10020, lines: [
-      ["Nicolay", "Fotnote 1. En vaffel med brunost er en utilbørlig fordel."],
-      ["Nicolay", "Fotnote 2. Se fotnote 1."],
-      ["Programleder", "Vi har 39 fotnoter igjen."],
-      ["", "[Vaffeljernet piper]"],
-      ["Nicolay", "Ikke spis bevisene."]
     ] }
   ];
   var SPEEDS = [{ label: "1×", f: 1 }, { label: "1,5×", f: 1.5 }, { label: "2×", f: 2 }, { label: "Haster litt", f: 3 }];
