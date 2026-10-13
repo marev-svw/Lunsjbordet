@@ -785,7 +785,96 @@
      "svar": "Haitisk kreol. Det ble offisielt språk med grunnloven fra 1987."
     }
    ]
+  },
+  {
+   "dato": "2026-10-13",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "I hvilket land ligger byen Timbuktu?",
+     "fasit": "Mali",
+     "svar": "Mali. Byen var et senter for handel og læring ved Sahara på 1300-tallet."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvem vant Ballon d'Or for menn i 2025?",
+     "fasit": "Ousmane Dembélé",
+     "svar": "Ousmane Dembélé. Den franske Paris Saint-Germain-spilleren fikk prisen etter at klubben vant Champions League."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hva kalles det når en lysstråle bøyer av idet den går fra luft over i vann?",
+     "fasit": "Brytning, også kalt refraksjon",
+     "svar": "Brytning, også kalt refraksjon. Derfor ser en blyant ut til å knekke i et vannglass."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år ble Titanic senket etter å ha truffet et isfjell?",
+     "fasit": "1912",
+     "svar": "1912. Skipet var på sin jomfrutur fra Southampton til New York."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev «Stolthet og fordom», utgitt i 1813?",
+     "fasit": "Jane Austen",
+     "svar": "Jane Austen. Hovedpersonene er Elizabeth Bennet og Mr. Darcy."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken sanger fikk tilnavnet «Kongen av pop»?",
+     "fasit": "Michael Jackson",
+     "svar": "Michael Jackson. Albumet «Thriller» fra 1982 er et av de mest solgte gjennom tidene."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken by ble sommer-OL arrangert i 2016?",
+     "fasit": "Rio de Janeiro",
+     "svar": "Rio de Janeiro. Det var første gang lekene gikk i Sør-Amerika."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Eurovision Song Contest 2026 ble arrangert etter at Østerrike vant i 2025. Hvilken østerriksk by var vertskap?",
+     "fasit": "Wien",
+     "svar": "Wien. Østerrike vant i 2025 med JJ og «Wasted Love»."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva er tahini laget av?",
+     "fasit": "Sesamfrø",
+     "svar": "Sesamfrø. Tahini er en sentral ingrediens i hummus."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilket animasjonsstudio står bak «Oppdrag Nemo» og «Toy Story»?",
+     "fasit": "Pixar",
+     "svar": "Pixar. «Toy Story» fra 1995 var den første lange filmen laget helt på datamaskin."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hvor mange sekunder er det i en time?",
+     "fasit": "3600",
+     "svar": "3600. 60 minutter ganger 60 sekunder."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva kalles en kenguruunge som ennå sitter i morens pung?",
+     "fasit": "Joey",
+     "svar": "Joey. Navnet brukes også om unger av andre pungdyr."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilken britisk fysiker oppfant World Wide Web i 1989?",
+     "fasit": "Tim Berners-Lee",
+     "svar": "Tim Berners-Lee. Han jobbet ved forskningssenteret CERN i Sveits."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken nederlandsk maler skapte «Pike med perleørering»?",
+     "fasit": "Johannes Vermeer",
+     "svar": "Johannes Vermeer. Maleriet henger i Mauritshuis i Den Haag."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 126
+ "antall_sporsmal": 140
 }
