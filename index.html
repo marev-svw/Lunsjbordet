@@ -290,6 +290,13 @@
   .br-body p:last-child { margin-bottom: 0; }
   .br-body a { color: var(--link); text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; }
   .br-body a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  /* Direktedekning i Nytraktet: tidsstemplede innlegg, nyeste øverst */
+  .br-body .lb-ingress { font-style: italic; }
+  .lb-post { margin: 0 0 .9rem; padding-top: .75rem; border-top: 1px solid var(--line); }
+  .lb-post p { margin-bottom: .5em; }
+  .lb-post p:last-child { margin-bottom: 0; }
+  .lb-t { display: block; margin: 0 0 .3rem; font: 800 .8125rem/1.2 var(--sans); font-variant-numeric: tabular-nums; }
+  .br-body .lb-slutt { margin: 0; padding-top: .75rem; border-top: 1px solid var(--line); font: 700 .8125rem/1.4 var(--sans); color: var(--muted); }
   @media (min-width: 70rem) {
     .breaking { position: sticky; top: 1rem; grid-column: 2; grid-row: 2 / span 2; max-height: calc(100vh - 2rem); overflow: auto; padding: 1.2rem 1.25rem 1.4rem; }
     .layout:has(> .plusbar[hidden]) > .breaking { grid-row: 1 / span 2; }
@@ -1133,11 +1140,45 @@
 <aside class="breaking" id="breaking" aria-labelledby="br-title">
   <button type="button" class="br-toggle" id="br-toggle" aria-expanded="false" aria-controls="br-feed">
     <span class="live" aria-hidden="true"></span>
-    <span class="br-text"><span class="br-label">Nytraktet</span><span class="br-head" id="br-head">Lunsjquizen får ledertavle</span></span>
+    <span class="br-text"><span class="br-label">Nytraktet</span><span class="br-head" id="br-head">DIREKTE: Innleiesaken i Borgarting</span></span>
     <span class="chev" aria-hidden="true"></span>
   </button>
   <h2 class="br-title" id="br-title"><span class="live" aria-hidden="true"></span>Nytraktet</h2>
   <div class="br-feed" id="br-feed">
+    <article class="br-item">
+      <h3 class="br-hl">DIREKTE: Innleiesaken i Borgarting</h3>
+      <p class="br-meta"><time class="br-time" datetime="2026-10-13T08:58+02:00">08:58</time><span>Lunsjbordets rettsreporter</span></p>
+      <div class="br-body">
+        <p class="lb-ingress">Retten settes om få minutter. Lunsjbordet er på plass og følger ankeforhandlingen tett.</p>
+        <div class="lb-post">
+          <time class="lb-t" datetime="2026-10-13T08:58+02:00">08:58</time>
+          <p>Partene har tatt plass. Det er nå helt stille i salen, bortsett fra en kulepenn som klikkes rytmisk et sted på ankende parts side. Lunsjbordet har valgt ikke å navngi kulepennen.</p>
+        </div>
+        <div class="lb-post">
+          <time class="lb-t" datetime="2026-10-13T08:49+02:00">08:49</time>
+          <p>Lunsjbordet kan bekrefte at en tralle med permer nettopp ble trillet inn i salen. Vår reporter rakk å telle elleve permer før trallen forsvant rundt hjørnet. Én av dem var merket «Diverse».</p>
+        </div>
+        <div class="lb-post">
+          <time class="lb-t" datetime="2026-10-13T08:41+02:00">08:41</time>
+          <p>Lunsjbordet har testet kaffen i lagmannsretten. Konklusjonen er foreløpig og kan påankes.</p>
+        </div>
+        <div class="lb-post">
+          <time class="lb-t" datetime="2026-10-13T08:30+02:00">08:30</time>
+          <p><b>BAKGRUNN:</b> Saken gjelder bemanningsforetakenes erstatningskrav mot staten etter innstrammingene i innleiereglene i 2023. Saken har tidligere vært innom EFTA-domstolen. Lunsjbordet var ikke til stede i Luxembourg, men har lest sammendraget. To ganger.</p>
+          <p>Lunsjbordet har tidligere snakket med to av advokatene <a href="portrett.html">dagen før Borgarting</a>.</p>
+        </div>
+        <div class="lb-post">
+          <time class="lb-t" datetime="2026-10-13T08:14+02:00">08:14</time>
+          <p>På kontoret står en halvspist brødskive igjen på pulten til en av advokatene i saken. Lunsjbordet tolker dette som et tegn på høy konsentrasjon. Brødskiven har ikke ønsket å kommentere saken.</p>
+        </div>
+        <div class="lb-post">
+          <time class="lb-t" datetime="2026-10-13T08:02+02:00">08:02</time>
+          <p>God morgen, og velkommen til Lunsjbordets direktedekning fra Borgarting lagmannsrett. Vår rettsreporter har sikret seg plass på tilhørerbenken, med god utsikt til både dommerbordet og nærmeste stikkontakt.</p>
+          <p>Leserne kan følge forhandlingene på eget <a href="bingo.html">bingobrett</a>.</p>
+        </div>
+        <p class="lb-slutt">Saken oppdateres.</p>
+      </div>
+    </article>
     <article class="br-item">
       <h3 class="br-hl">Lunsjquizen får ledertavle</h3>
       <p class="br-meta"><time class="br-time" datetime="2026-10-07T23:56+02:00">23:56</time><span>Lunsjbordets konkurranseredaksjon</span></p>
