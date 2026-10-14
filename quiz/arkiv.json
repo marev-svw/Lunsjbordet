@@ -874,7 +874,96 @@
      "svar": "Johannes Vermeer. Maleriet henger i Mauritshuis i Den Haag."
     }
    ]
+  },
+  {
+   "dato": "2026-10-14",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Gjennom hvilken storby i Irak renner elven Tigris?",
+     "fasit": "Bagdad",
+     "svar": "Bagdad. Tigris og Eufrat har gitt Mesopotamia navn, «landet mellom elvene»."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilket land vant herrenes fotball-VM i sommer, etter 1–0 i finalen mot Argentina?",
+     "fasit": "Spania",
+     "svar": "Spania. Ferran Torres scoret i ekstraomgangen. Det var Spanias andre VM-tittel, etter 2010."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Galle lages i et av kroppens organer og lagres i gallblæren. Hvilket organ lager den?",
+     "fasit": "Leveren",
+     "svar": "Leveren. Gallen lagres i gallblæren og hjelper til med å bryte ned fett."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hva het skipet som fraktet pilegrimsfedrene til Nord-Amerika i 1620?",
+     "fasit": "Mayflower",
+     "svar": "Mayflower. De landet ved Plymouth i Massachusetts."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken russisk forfatter skrev «Krig og fred»?",
+     "fasit": "Lev Tolstoj",
+     "svar": "Lev Tolstoj. Romanen kom ut i årene 1865–1869 og regnes som en av de lengste i verdenslitteraturen."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken komponist skrev «Måneskinnssonaten»?",
+     "fasit": "Ludwig van Beethoven",
+     "svar": "Ludwig van Beethoven. Navnet kom først etter hans død, fra en kritiker som syntes den minnet om måneskinn over en innsjø."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I en volleyballkamp står det seks spillere på hvert lag. Hvor mange er det til sammen på banen?",
+     "fasit": "Tolv",
+     "svar": "Tolv. Lagene roterer én plass hver gang de vinner serven."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken ost brukes tradisjonelt på en ekte pizza margherita?",
+     "fasit": "Mozzarella",
+     "svar": "Mozzarella. Pizzaen har fargene fra det italienske flagget: rød tomat, hvit ost og grønn basilikum."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvem regisserte filmtrilogien «Ringenes herre»?",
+     "fasit": "Peter Jackson",
+     "svar": "Peter Jackson. Filmene ble spilt inn på New Zealand."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Årets Nobelpris i kjemi gikk til forskning på molekyler som er speilbilder av hverandre, slik som venstre og høyre hånd. Hva kalles denne egenskapen?",
+     "fasit": "Kiralitet",
+     "svar": "Kiralitet. Prisen gikk til Henri Kagan og Kenso Soai."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva kalles et tall større enn 1 som bare kan deles på 1 og seg selv?",
+     "fasit": "Primtall",
+     "svar": "Primtall. De første er 2, 3, 5, 7 og 11."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva kalles en voksen hannsau?",
+     "fasit": "Vær",
+     "svar": "Vær. Og ja, det er samme ord som det de snakker om i værvarselet."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Mobilen finner posisjonen din ved hjelp av satellitter, i et system forkortet GPS. Hva er det engelske fulle navnet?",
+     "fasit": "Global Positioning System",
+     "svar": "Global Positioning System. Systemet drives av USA og bruker satellitter i bane rundt jorden."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hva heter Jupiters største måne?",
+     "fasit": "Ganymedes",
+     "svar": "Ganymedes. Den er større enn planeten Merkur."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 140
+ "antall_sporsmal": 154
 }
