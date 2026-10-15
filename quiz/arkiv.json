@@ -963,7 +963,96 @@
      "svar": "Ganymedes. Den er større enn planeten Merkur."
     }
    ]
+  },
+  {
+   "dato": "2026-10-15",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken innsjø er den dypeste i verden?",
+     "fasit": "Bajkal",
+     "svar": "Bajkal. Den ligger i Sibir og rommer rundt en femtedel av jordens ferskvann."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nobelprisen i litteratur gikk i år til en kanadisk dikter og klassisist, kjent for diktromanen «Autobiography of Red». Hvem er hun?",
+     "fasit": "Anne Carson",
+     "svar": "Anne Carson. Hun underviser i oldgresk og blander poesi, prosa og oversettelser."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken egyptisk dronning forførte både Julius Cæsar og Marcus Antonius?",
+     "fasit": "Kleopatra",
+     "svar": "Kleopatra. Hun var den siste aktive herskeren av det ptolemeiske riket."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hva kalles det når vanndamp blir til flytende vann, for eksempel på et kaldt vindu?",
+     "fasit": "Kondensasjon",
+     "svar": "Kondensasjon. Det motsatte, når væske blir til damp, kalles fordamping."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Årets Nobels fredspris gikk til en tidligere dommer og menneskerettighetsforkjemper, Navi Pillay. Hvilket land kommer hun fra?",
+     "fasit": "Sør-Afrika",
+     "svar": "Sør-Afrika. Komiteen trakk fram hennes arbeid for en global rettsorden og for at krigsforbrytelser blir straffet."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva heter verdens mest kjente sykkelritt, som avsluttes i Paris hver juli?",
+     "fasit": "Tour de France",
+     "svar": "Tour de France. Vinneren får den gule ledertrøya."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilket krydder gir karri den gule fargen?",
+     "fasit": "Gurkemeie",
+     "svar": "Gurkemeie. Krydderet lages av en rot og brukes også som matfarge."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken spansk kunstner malte «Guernica» i 1937?",
+     "fasit": "Pablo Picasso",
+     "svar": "Pablo Picasso. Bildet skildrer bombingen av en baskisk by under den spanske borgerkrigen."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hva er «takk» på spansk?",
+     "fasit": "Gracias",
+     "svar": "Gracias. På italiensk heter det «grazie»."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Årets Nobelpris i økonomi gikk til Michael Woodford og en amerikansk økonom ved Stanford. Hvem?",
+     "fasit": "Robert Hall",
+     "svar": "Robert Hall. Prisen ble kunngjort mandag, for arbeid om grunnlaget for stabiliseringspolitikk."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilket selskap eier operativsystemet Android?",
+     "fasit": "Google",
+     "svar": "Google. Systemet brukes på de fleste mobiltelefoner i verden."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket instrument er den amerikanske rockelegenden Jimi Hendrix mest kjent for å ha spilt?",
+     "fasit": "Gitar",
+     "svar": "Gitar. Han spilte venstrehendt, på en gitar bygget for høyrehendte."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken Disney-film har sangen «Let It Go»?",
+     "fasit": "Frozen",
+     "svar": "Frozen. I norsk versjon heter filmen «Frost»."
+    },
+    {
+     "tema": "Norge",
+     "sporsmal": "Hva heter Norges lengste elv?",
+     "fasit": "Glomma",
+     "svar": "Glomma. Den er rundt 600 kilometer lang og munner ut ved Fredrikstad."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 154
+ "antall_sporsmal": 168
 }
