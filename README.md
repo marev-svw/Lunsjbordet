@@ -7,6 +7,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | Fil | Innhold |
 | --- | --- |
 | `index.html` | Forsiden |
+| `brettbar.html` | Fullmektigens nye telefon deler kontoret på midten, med telefonen som kan brettes ut og sammen |
 | `uavhengig.html` | Fullmektigene vurderer å følge opp Høyesterett, med arbeidsgruppens flytskjema «Er du særlig uavhengig?» |
 | `spisskompetanse.html` | Kronikk: Oslo-kontoret faller bak i konkurransen om intern spisskompetanse, av Kristian |
 | `portrett.html` | Portrettet: Dagen før Borgarting, med Nicolay og Markus |
