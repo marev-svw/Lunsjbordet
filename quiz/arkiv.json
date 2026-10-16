@@ -1052,7 +1052,96 @@
      "svar": "Glomma. Den er rundt 600 kilometer lang og munner ut ved Fredrikstad."
     }
    ]
+  },
+  {
+   "dato": "2026-10-16",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket afrikansk land har Addis Abeba som hovedstad?",
+     "fasit": "Etiopia",
+     "svar": "Etiopia. Byen ligger over 2 300 meter over havet."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken 20 år gammel Mercedes-sjåfør leder i dag Formel 1-VM for sjåfører?",
+     "fasit": "Kimi Antonelli",
+     "svar": "Kimi Antonelli. Italieneren har 340 poeng og ligger foran blant andre Max Verstappen."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hvilket pigment gir huden og håret vårt farge?",
+     "fasit": "Melanin",
+     "svar": "Melanin. Det er også det som får huden til å bli brun i sola."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken fransk keiser tapte slaget ved Waterloo i 1815?",
+     "fasit": "Napoleon Bonaparte",
+     "svar": "Napoleon Bonaparte. Han ble etterpå sendt i eksil på Sankt Helena."
+    },
+    {
+     "tema": "Krim",
+     "sporsmal": "Hvilken britisk forfatter skapte detektiven Sherlock Holmes?",
+     "fasit": "Arthur Conan Doyle",
+     "svar": "Arthur Conan Doyle. Første bok, «Et studium i rødt», kom i 1887."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket strykeinstrument er størst i et vanlig symfoniorkester?",
+     "fasit": "Kontrabass",
+     "svar": "Kontrabass. Den er så stor at musikeren står eller sitter på en høy krakk."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken idrett kan en spiller score med en «slam dunk»?",
+     "fasit": "Basketball",
+     "svar": "Basketball. Spilleren legger ballen ned i kurven ovenfra."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Norges Bank hevet styringsrenten i september. Hvor mange prosent er renten nå?",
+     "fasit": "4,5 prosent",
+     "svar": "4,5 prosent. Den ble hevet fra 4,25 prosent, og neste rentemøte er 5. november."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den japanske retten som består av tynne skiver rå fisk, servert uten ris?",
+     "fasit": "Sashimi",
+     "svar": "Sashimi. Sushi er derimot laget med ris."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hva er enheten for elektrisk spenning?",
+     "fasit": "Volt",
+     "svar": "Volt. Enheten er oppkalt etter den italienske fysikeren Alessandro Volta."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken skuespiller vant en Oscar for rollen som Jokeren i «The Dark Knight» fra 2008?",
+     "fasit": "Heath Ledger",
+     "svar": "Heath Ledger. Han fikk prisen etter sin død."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Norge tapte 1–2 i Nations League 1. oktober. Hvilket land var motstanderen, i en kamp spilt utenfor Norge?",
+     "fasit": "Wales",
+     "svar": "Wales. Norge har tre poeng etter fire kamper i gruppa."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilken planet kalles «den røde planeten»?",
+     "fasit": "Mars",
+     "svar": "Mars. Fargen kommer fra jernoksid i overflaten."
+    },
+    {
+     "tema": "Mytologi",
+     "sporsmal": "Hva heter den greske guden for vin og fest?",
+     "fasit": "Dionysos",
+     "svar": "Dionysos. Romerne kalte ham Bacchus."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 168
+ "antall_sporsmal": 182
 }
