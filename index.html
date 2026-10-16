@@ -457,6 +457,24 @@
   .ko-note { position: absolute; top: -1.5em; right: -.9em; width: 4.7em; height: 4.3em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .9375em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
   .ko-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
+  /* Uavhengighetssaken: servietten med arbeidsgruppens mandat, kaffering og lapp.
+     Alle mål i em, så illustrasjonen vokser med hovedspalten. */
+  .fig.uv { background: var(--wall); }
+  .uv-scene { position: relative; width: min(100%, 22em); margin-top: .6em; font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .uv-napkin { position: relative; padding: 1.5em 1.45em 1.6em; background-color: var(--sheet); background-image: radial-gradient(rgba(0, 0, 0, .06) 1px, transparent 1.5px); background-size: .6em .6em; border-radius: 2px; box-shadow: inset 0 0 0 .7em var(--sheet), inset 0 0 0 calc(.7em + 1.5px) rgba(0, 0, 0, .09), 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); transform: rotate(-2.5deg); color: var(--pen); }
+  .uv-napkin::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, transparent 49.7%, rgba(0, 0, 0, .07) 50%, transparent 50.3%); pointer-events: none; }
+  .uv-napkin p { margin: 0; }
+  .uv-title { display: inline-block; margin-bottom: .45em !important; padding-bottom: .1em; border-bottom: .12em solid currentColor; font: 400 1.45em/1 var(--marker); color: #1c2226; letter-spacing: .03em; }
+  .uv-text { max-width: 15em; font: 400 .95em/1.3 var(--marker); }
+  .uv-list { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .3em .7em; margin: .95em 0 0; padding: .7em 0 0; border-top: 1.5px dashed currentColor; font: 400 .9em/1.2 var(--marker); }
+  .uv-list dt { color: #1c2226; }
+  .uv-list dd { margin: 0; }
+  .uv-list s { text-decoration-thickness: .12em; }
+  .uv-red { color: var(--stamp); }
+  .uv-ring { position: absolute; left: -1.4em; bottom: -1.3em; width: 6.2em; height: auto; transform: rotate(18deg); pointer-events: none; mix-blend-mode: multiply; }
+  .uv-note { position: absolute; top: -1.4em; right: -.9em; width: 6em; height: 4.4em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .9375em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .uv-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1358,6 +1376,35 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Arbeidsliv</p>
+      <h2 class="hl-xl"><a class="stretch" href="uavhengig.html">Fullmektigene vurderer å følge opp Høyesterett: <span class="nw">–&nbsp;Vi</span> vet bare ikke hvilken&nbsp;vei</a></h2>
+      <p class="lead">Høyesterett strammet onsdag inn unntaket for særlig uavhengige stillinger. Nå har fullmektigene satt ned en arbeidsgruppe for å følge opp dommen. Hva oppfølgingen skal gå ut på, er uklart. Det samme er hvem som fortsatt er uavhengige.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
+        <p>Notert på en serviett ved lunsjbordet</p>
+      </div>
+    </div>
+    <div class="fig uv" aria-hidden="true">
+      <div class="uv-scene">
+        <div class="uv-napkin">
+          <p class="uv-title">MANDAT</p>
+          <p class="uv-text">Vurdere oppfølging av HR-2026-2227-A, herunder hvem som er hva</p>
+          <dl class="uv-list">
+            <dt>Faste</dt><dd>særlig uavh. <s>ja</s> <span class="uv-red">?</span></dd>
+            <dt>Fullm.</dt><dd>ikke særlig</dd>
+            <dt>Partnere</dt><dd>bare her</dd>
+            <dt>Kantina</dt><dd>rammevilkår<span class="uv-red">!</span></dd>
+          </dl>
+        </div>
+        <svg class="uv-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="none" stroke="#8a5a2b" stroke-width="5" stroke-linecap="round" stroke-dasharray="170 14 30 26" opacity=".3"/><circle cx="50" cy="50" r="33" fill="none" stroke="#8a5a2b" stroke-width="1.5" stroke-dasharray="60 20 90 40" opacity=".18"/></svg>
+        <div class="uv-note">UAVKLART.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Kronikk</p>
       <h2 class="hl-xl op"><a class="stretch" href="spisskompetanse.html">Oslo-kontoret faller bak i konkurransen om intern spisskompetanse</a></h2>
       <p class="lead">Fra nyttår kan sertifiserte partnere i Bergen la fullmektiger begynne å jobbe så snart Teams-meldingen er sendt. Oslo vurderte en lignende ordning og fant den for ressurskrevende. Det bør vi tenke nytt om.</p>
@@ -1388,7 +1435,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Portrettet</p>
@@ -1422,24 +1468,6 @@
           </div>
         </div>
         <div class="pk-note"><b id="count-big">I morgen</b><small id="count-small">i Borgarting</small></div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Utenriks</p>
-      <h2 class="hl-xl"><a class="stretch" href="barolo.html">Spent ro i Barolo: <span class="nw">–&nbsp;Vinen</span> er medgjørlig. Naboen er det&nbsp;ikke</a></h2>
-      <p class="lead">Tåken letter før lunsj, og vinen er imøtekommende. Likevel er situasjonen i Barolo ustabil. Lunsjbordets utenrikskorrespondent melder om dype motsetninger mellom produsentene.</p>
-      <div class="meta">
-        <p class="desk">Lunsjbordets utenrikskorrespondent</p>
-        <p>Direkte fra Castiglione Falletto, Piemonte</p>
-      </div>
-    </div>
-    <div class="fig barolo" aria-hidden="true">
-      <div class="bo-scene">
-        <svg class="bo-kart" viewBox="0 0 480 330" aria-hidden="true" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"><defs><pattern id="bo-vin" width="7" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)"><line x1="0" y1="3" x2="7" y2="3" stroke="#86a061" stroke-width="1.7" stroke-dasharray="2.4 1.1"/></pattern><pattern id="bo-strid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#f5d6cc"/><rect width="2.2" height="6" fill="#b3261e"/></pattern></defs><rect width="480" height="330" fill="#efe7d3"/><path d="M-4 70C80 56 150 82 240 64S400 40 484 52" fill="none" stroke="#a7cbdc" stroke-width="7" stroke-linecap="round"/><text x="18" y="54" font-size="10" font-style="italic" fill="#5b8597">Tanaro</text><text x="468" y="86" text-anchor="end" font-size="10" font-weight="600" fill="#7b7466">Alba →</text><g fill="#e4d7b7"><ellipse cx="108" cy="134" rx="62" ry="40" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="54" ry="34" transform="rotate(20 222 206)"/><ellipse cx="282" cy="180" rx="46" ry="34"/><ellipse cx="388" cy="216" rx="52" ry="42" transform="rotate(-10 388 216)"/><ellipse cx="270" cy="280" rx="56" ry="30"/><ellipse cx="306" cy="104" rx="46" ry="26"/><ellipse cx="166" cy="262" rx="38" ry="26"/></g><g fill="url(#bo-vin)"><ellipse cx="108" cy="134" rx="50" ry="30" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="44" ry="25" transform="rotate(20 222 206)"/><ellipse cx="282" cy="182" rx="36" ry="25"/><ellipse cx="388" cy="226" rx="40" ry="26" transform="rotate(-10 388 226)"/><ellipse cx="270" cy="280" rx="45" ry="21"/><ellipse cx="306" cy="106" rx="36" ry="18"/><ellipse cx="166" cy="262" rx="29" ry="18"/></g><g fill="#9db283"><circle cx="356" cy="194" r="6.5"/><circle cx="368" cy="189" r="7"/><circle cx="381" cy="187" r="6.5"/><circle cx="394" cy="187" r="7"/><circle cx="407" cy="189" r="6.5"/><circle cx="419" cy="194" r="6"/></g><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#d6c7a3" stroke-width="5"/><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#fbf7ec" stroke-width="2.4"/></g><g class="bo-nord"><path d="M346 203Q388 189 430 203" fill="none" stroke="#b3261e" stroke-width="2.2" stroke-dasharray="5 4"/><text x="474" y="184" text-anchor="end" font-size="10" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Nordsiden</text></g><g class="bo-cannubi"><ellipse cx="220" cy="196" rx="19" ry="10" transform="rotate(20 220 196)" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1.3"/><text x="216" y="181" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Cannubi</text></g><g fill="#1c2226" stroke="#ffffff" stroke-width="1.5"><circle cx="80" cy="98" r="4"/><circle cx="100" cy="162" r="4"/><circle cx="176" cy="214" r="4"/><circle cx="160" cy="262" r="4"/><circle cx="266" cy="170" r="4"/><circle cx="306" cy="96" r="4"/><circle cx="394" cy="226" r="4"/><circle cx="266" cy="290" r="4"/></g><g font-size="11" font-weight="700" fill="#1c2226" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke"><text x="88" y="102">Verduno</text><text x="108" y="166">La Morra</text><text x="168" y="226" text-anchor="end">Barolo</text><text x="168" y="266">Novello</text><text x="276" y="174">Castiglione Falletto</text><text x="314" y="100">Grinzane Cavour</text><text x="386" y="244" text-anchor="end">Serralunga d'Alba</text><text x="258" y="294" text-anchor="end">Monforte d'Alba</text></g><g class="bo-rykte"><circle cx="224" cy="243" r="9.5" fill="#ffffff" stroke="#b3261e" stroke-width="2" stroke-dasharray="3 2.4"/><text x="224" y="247.5" text-anchor="middle" font-size="13" font-weight="900" fill="#b3261e">?</text></g><g class="bo-pin"><path d="M266 170c-7-9-11-14-11-19a11 11 0 1 1 22 0c0 5-4 10-11 19z" fill="#1c2226"/><circle cx="266" cy="151" r="4.6" fill="#f4d547"/></g><rect width="480" height="30" fill="#b3261e"/><text x="14" y="20" font-size="12.5" font-weight="800" letter-spacing=".06em" fill="#ffffff">SITUASJONEN I LANGHE</text><circle class="bo-live" cx="402" cy="15" r="4" fill="#ffffff"/><text x="412" y="19.5" font-size="11" font-weight="800" letter-spacing=".08em" fill="#ffffff">DIREKTE</text><g font-size="10.5" font-weight="600" fill="#1c2226"><rect x="10" y="272" width="150" height="48" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><circle cx="24" cy="287" r="4.5" fill="#e8962a"/><path d="M24 279.6v-1.9M24 296.3v-1.9M16.6 287h-1.9M33.3 287h-1.9M18.8 281.8l-1.3-1.3M30.5 293.5l-1.3-1.3M18.8 292.2l-1.3 1.3M30.5 280.5l-1.3 1.3" stroke="#e8962a" stroke-width="1.4" stroke-linecap="round"/><text x="38" y="290.5">Været: medgjørlig</text><path d="M20 303.6h8l-.2 1.6a3.8 3.8 0 0 1-7.6 0z" fill="#8e2a3b"/><path d="M19.6 300h8.8l-.5 5.2a3.9 3.9 0 0 1-7.8 0zM24 309.2v4.6M20.8 313.8h6.4" fill="none" stroke="#1c2226" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><text x="38" y="310.5">Vinen: svært medgjørlig</text><rect x="352" y="284" width="120" height="38" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><rect x="360" y="291" width="14" height="10" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1"/><text x="381" y="300">Omstridt område</text><path d="M367 318c-3.5-4.5-5.5-7-5.5-9.5a5.5 5.5 0 1 1 11 0c0 2.5-2 5-5.5 9.5z" fill="#1c2226"/><circle cx="367" cy="308.5" r="2.2" fill="#f4d547"/><text x="381" y="316">Lunsjbordet</text></g></svg>
-        <div class="bo-note">USTABILT.</div>
       </div>
     </div>
   </article>
@@ -1483,51 +1511,37 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Matanmeldelse</p>
-      <h2 class="hl-xl"><a class="stretch" href="kantina.html">Modig kantine, halvrå jordskokk</a></h2>
-      <p class="lead">Kantina på Filipstad Brygge vil være restaurant. Jordskokken har ikke fått nok tid i ovnen, og salatbollene har aldri møtt hovedretten.</p>
+      <p class="kicker">Utenriks</p>
+      <h2 class="hl-xl"><a class="stretch" href="barolo.html">Spent ro i Barolo: <span class="nw">–&nbsp;Vinen</span> er medgjørlig. Naboen er det&nbsp;ikke</a></h2>
+      <p class="lead">Tåken letter før lunsj, og vinen er imøtekommende. Likevel er situasjonen i Barolo ustabil. Lunsjbordets utenrikskorrespondent melder om dype motsetninger mellom produsentene.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets matanmeldere</p>
-        <p class="kast"><svg class="kast-terning" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="7"/><circle cx="13" cy="13" r="3.6"/><circle cx="27" cy="27" r="3.6"/></svg>Terningkast 2 · Kantine, Filipstad Brygge</p>
+        <p class="desk">Lunsjbordets utenrikskorrespondent</p>
+        <p>Direkte fra Castiglione Falletto, Piemonte</p>
       </div>
     </div>
-    <div class="fig kantine" aria-hidden="true">
-      <div class="kt-scene">
-        <svg class="kt-tray" viewBox="0 0 480 300" aria-hidden="true"><rect x="24" y="28" width="432" height="248" rx="20" fill="#a99f8c"/><rect x="36" y="40" width="408" height="224" rx="14" fill="#c7bfae"/><g transform="rotate(-3 64 160)"><g stroke="#b8c0c3" stroke-width="2.6" stroke-linecap="round"><line x1="48" y1="78" x2="48" y2="108"/><line x1="54" y1="78" x2="54" y2="108"/><line x1="60" y1="78" x2="60" y2="108"/><line x1="66" y1="78" x2="66" y2="108"/></g><path d="M45 106h24v8q0 16-7 21v10h-10v-10q-7-5-7-21z" fill="#b8c0c3"/><rect x="52" y="144" width="10" height="104" rx="5" fill="#8f989c"/></g><g transform="rotate(2 94 160)"><path d="M88 76q16 6 16 42v34h-16z" fill="#cfd5d8"/><rect x="87" y="150" width="13" height="98" rx="5.5" fill="#3a4247"/></g><circle cx="215" cy="158" r="96" fill="#fbfaf6" stroke="#dcd6c8" stroke-width="2"/><circle cx="215" cy="158" r="72" fill="none" stroke="#ece7dc" stroke-width="2"/><path d="M158 122q26 18 52 4t54 10q-10 30-42 44t-52 26" fill="none" stroke="#9a5b22" stroke-width="4" stroke-linecap="round" opacity=".5"/><g transform="translate(184 140) rotate(-15)"><ellipse rx="23" ry="15" fill="#b9853f"/><ellipse cx="2" cy="-1" rx="16" ry="9.5" fill="#f2e7c9" stroke="#d9b56e" stroke-width="2"/></g><g transform="translate(236 128) rotate(20)"><ellipse rx="21" ry="14" fill="#ad7a37"/><ellipse cx="1" cy="-1" rx="14" ry="8.5" fill="#f3e9cd" stroke="#d6af66" stroke-width="2"/></g><g transform="translate(212 180) rotate(5)"><ellipse rx="24" ry="15" fill="#b9853f"/><ellipse cx="-2" cy="-1" rx="17" ry="9.5" fill="#f2e7c9" stroke="#d9b56e" stroke-width="2"/></g><g transform="translate(258 178) rotate(-28)"><ellipse rx="19" ry="13" fill="#a8763a"/><ellipse cx="1" cy="0" rx="12" ry="7.5" fill="#f3e9cd" stroke="#d6af66" stroke-width="2"/></g><g transform="translate(170 194) rotate(32)"><ellipse rx="20" ry="13" fill="#b9853f"/><ellipse cx="1" cy="-1" rx="13" ry="8" fill="#f2e7c9" stroke="#d9b56e" stroke-width="2"/></g><g fill="#fffdf5" stroke="#e5dcc6" stroke-width="1.3"><circle cx="262" cy="118" r="10"/><circle cx="276" cy="126" r="8"/><circle cx="268" cy="134" r="7"/><circle cx="252" cy="128" r="6.5"/></g><g fill="#d6a22b"><circle cx="198" cy="160" r="2.4"/><circle cx="222" cy="150" r="2.4"/><circle cx="240" cy="198" r="2.4"/><circle cx="190" cy="214" r="2.4"/><circle cx="270" cy="154" r="2.4"/><circle cx="160" cy="168" r="2.4"/><circle cx="228" cy="214" r="2.4"/><circle cx="206" cy="120" r="2.4"/></g><circle cx="372" cy="122" r="58" fill="#e7edef" stroke="#b5c3c9" stroke-width="2"/><circle cx="372" cy="122" r="50" fill="#dde7dc"/><g fill="#507d3b"><ellipse cx="350" cy="104" rx="16" ry="9" transform="rotate(-30 350 104)"/><ellipse cx="388" cy="98" rx="15" ry="8" transform="rotate(25 388 98)"/><ellipse cx="364" cy="140" rx="17" ry="9" transform="rotate(10 364 140)"/></g><g fill="#6f9e4b"><ellipse cx="392" cy="132" rx="14" ry="8" transform="rotate(-40 392 132)"/><ellipse cx="346" cy="128" rx="12" ry="7" transform="rotate(50 346 128)"/><ellipse cx="370" cy="114" rx="13" ry="7" transform="rotate(-5 370 114)"/></g><g fill="#efe2c0"><circle cx="378" cy="146" r="2.6"/><circle cx="384" cy="150" r="2.6"/><circle cx="356" cy="114" r="2.6"/><circle cx="398" cy="114" r="2.6"/><circle cx="372" cy="98" r="2.6"/><circle cx="342" cy="140" r="2.6"/><circle cx="404" cy="124" r="2.6"/></g><g fill="#b3261e"><circle cx="360" cy="96" r="3.2"/><circle cx="394" cy="140" r="3.2"/><circle cx="352" cy="148" r="3.2"/><circle cx="384" cy="110" r="3.2"/></g><circle cx="372" cy="122" r="58" fill="#ffffff" opacity=".2"/><path d="M330 100q18-32 62-28" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".65"/><g transform="rotate(-8 398 168)"><rect x="372" y="159" width="52" height="19" rx="2" fill="#fdfdfb" stroke="#c9cdd0"/><text x="398" y="172.5" text-anchor="middle" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="9.5" fill="#1c2226">SALAT</text></g><g transform="translate(398 226) rotate(12)"><g><rect x="-21" y="-21" width="42" height="42" rx="8" fill="#fdfdfb" stroke="#c3c8cb" stroke-width="1.5"/><circle cx="-8.5" cy="-8.5" r="4.4" fill="#1c2226"/><circle cx="8.5" cy="8.5" r="4.4" fill="#1c2226"/></g></g></svg>
-        <div class="kt-note">HALVRÅ.</div>
+    <div class="fig barolo" aria-hidden="true">
+      <div class="bo-scene">
+        <svg class="bo-kart" viewBox="0 0 480 330" aria-hidden="true" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"><defs><pattern id="bo-vin" width="7" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)"><line x1="0" y1="3" x2="7" y2="3" stroke="#86a061" stroke-width="1.7" stroke-dasharray="2.4 1.1"/></pattern><pattern id="bo-strid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#f5d6cc"/><rect width="2.2" height="6" fill="#b3261e"/></pattern></defs><rect width="480" height="330" fill="#efe7d3"/><path d="M-4 70C80 56 150 82 240 64S400 40 484 52" fill="none" stroke="#a7cbdc" stroke-width="7" stroke-linecap="round"/><text x="18" y="54" font-size="10" font-style="italic" fill="#5b8597">Tanaro</text><text x="468" y="86" text-anchor="end" font-size="10" font-weight="600" fill="#7b7466">Alba →</text><g fill="#e4d7b7"><ellipse cx="108" cy="134" rx="62" ry="40" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="54" ry="34" transform="rotate(20 222 206)"/><ellipse cx="282" cy="180" rx="46" ry="34"/><ellipse cx="388" cy="216" rx="52" ry="42" transform="rotate(-10 388 216)"/><ellipse cx="270" cy="280" rx="56" ry="30"/><ellipse cx="306" cy="104" rx="46" ry="26"/><ellipse cx="166" cy="262" rx="38" ry="26"/></g><g fill="url(#bo-vin)"><ellipse cx="108" cy="134" rx="50" ry="30" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="44" ry="25" transform="rotate(20 222 206)"/><ellipse cx="282" cy="182" rx="36" ry="25"/><ellipse cx="388" cy="226" rx="40" ry="26" transform="rotate(-10 388 226)"/><ellipse cx="270" cy="280" rx="45" ry="21"/><ellipse cx="306" cy="106" rx="36" ry="18"/><ellipse cx="166" cy="262" rx="29" ry="18"/></g><g fill="#9db283"><circle cx="356" cy="194" r="6.5"/><circle cx="368" cy="189" r="7"/><circle cx="381" cy="187" r="6.5"/><circle cx="394" cy="187" r="7"/><circle cx="407" cy="189" r="6.5"/><circle cx="419" cy="194" r="6"/></g><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#d6c7a3" stroke-width="5"/><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#fbf7ec" stroke-width="2.4"/></g><g class="bo-nord"><path d="M346 203Q388 189 430 203" fill="none" stroke="#b3261e" stroke-width="2.2" stroke-dasharray="5 4"/><text x="474" y="184" text-anchor="end" font-size="10" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Nordsiden</text></g><g class="bo-cannubi"><ellipse cx="220" cy="196" rx="19" ry="10" transform="rotate(20 220 196)" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1.3"/><text x="216" y="181" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Cannubi</text></g><g fill="#1c2226" stroke="#ffffff" stroke-width="1.5"><circle cx="80" cy="98" r="4"/><circle cx="100" cy="162" r="4"/><circle cx="176" cy="214" r="4"/><circle cx="160" cy="262" r="4"/><circle cx="266" cy="170" r="4"/><circle cx="306" cy="96" r="4"/><circle cx="394" cy="226" r="4"/><circle cx="266" cy="290" r="4"/></g><g font-size="11" font-weight="700" fill="#1c2226" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke"><text x="88" y="102">Verduno</text><text x="108" y="166">La Morra</text><text x="168" y="226" text-anchor="end">Barolo</text><text x="168" y="266">Novello</text><text x="276" y="174">Castiglione Falletto</text><text x="314" y="100">Grinzane Cavour</text><text x="386" y="244" text-anchor="end">Serralunga d'Alba</text><text x="258" y="294" text-anchor="end">Monforte d'Alba</text></g><g class="bo-rykte"><circle cx="224" cy="243" r="9.5" fill="#ffffff" stroke="#b3261e" stroke-width="2" stroke-dasharray="3 2.4"/><text x="224" y="247.5" text-anchor="middle" font-size="13" font-weight="900" fill="#b3261e">?</text></g><g class="bo-pin"><path d="M266 170c-7-9-11-14-11-19a11 11 0 1 1 22 0c0 5-4 10-11 19z" fill="#1c2226"/><circle cx="266" cy="151" r="4.6" fill="#f4d547"/></g><rect width="480" height="30" fill="#b3261e"/><text x="14" y="20" font-size="12.5" font-weight="800" letter-spacing=".06em" fill="#ffffff">SITUASJONEN I LANGHE</text><circle class="bo-live" cx="402" cy="15" r="4" fill="#ffffff"/><text x="412" y="19.5" font-size="11" font-weight="800" letter-spacing=".08em" fill="#ffffff">DIREKTE</text><g font-size="10.5" font-weight="600" fill="#1c2226"><rect x="10" y="272" width="150" height="48" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><circle cx="24" cy="287" r="4.5" fill="#e8962a"/><path d="M24 279.6v-1.9M24 296.3v-1.9M16.6 287h-1.9M33.3 287h-1.9M18.8 281.8l-1.3-1.3M30.5 293.5l-1.3-1.3M18.8 292.2l-1.3 1.3M30.5 280.5l-1.3 1.3" stroke="#e8962a" stroke-width="1.4" stroke-linecap="round"/><text x="38" y="290.5">Været: medgjørlig</text><path d="M20 303.6h8l-.2 1.6a3.8 3.8 0 0 1-7.6 0z" fill="#8e2a3b"/><path d="M19.6 300h8.8l-.5 5.2a3.9 3.9 0 0 1-7.8 0zM24 309.2v4.6M20.8 313.8h6.4" fill="none" stroke="#1c2226" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><text x="38" y="310.5">Vinen: svært medgjørlig</text><rect x="352" y="284" width="120" height="38" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><rect x="360" y="291" width="14" height="10" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1"/><text x="381" y="300">Omstridt område</text><path d="M367 318c-3.5-4.5-5.5-7-5.5-9.5a5.5 5.5 0 1 1 11 0c0 2.5-2 5-5.5 9.5z" fill="#1c2226"/><circle cx="367" cy="308.5" r="2.2" fill="#f4d547"/><text x="381" y="316">Lunsjbordet</text></g></svg>
+        <div class="bo-note">USTABILT.</div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card dd col">
-      <div class="fig dd banner" aria-hidden="true">
-        <div class="dd-mail">
-          <p class="dd-kind">E-post, onsdag kl. 16:12</p>
-          <p class="dd-subj"><mark>DD</mark> – Prosjekt Ørn</p>
-          <p class="dd-from">Fra: Partner · Til: Fullmektig · Kopi: Transaksjonsgruppen</p>
-          <p class="dd-body">Du er satt på <mark>DD</mark> fra mandag. Kick-off torsdag kl. 08:00 i møterom 4.</p>
-          <p class="dd-reply">Gleder meg!! Har med egne terninger.</p>
-          <p class="dd-stamp">DUE DILIGENCE</p>
-          <svg class="dd-die" viewBox="0 0 100 100">
-            <polygon class="f2" points="50,4 90,27 50,24"/>
-            <polygon class="f1" points="90,27 90,73 80,70 50,24"/>
-            <polygon class="f3" points="90,73 50,96 80,70"/>
-            <polygon class="f2" points="50,96 10,73 20,70 80,70"/>
-            <polygon class="f3" points="10,73 10,27 20,70"/>
-            <polygon class="f1" points="10,27 50,4 50,24 20,70"/>
-            <polygon class="f0" points="50,24 80,70 20,70"/>
-            <path class="edge" d="M50 4 90 27 90 73 50 96 10 73 10 27Z M50 24 80 70 20 70Z M50 4V24 M90 27 50 24 M90 27 80 70 M90 73 80 70 M50 96 80 70 M50 96 20 70 M10 73 20 70 M10 27 20 70 M10 27 50 24"/>
-            <text x="50" y="63" text-anchor="middle">1</text>
-          </svg>
+    <article class="card kantina col">
+      <div class="fig kantine banner" aria-hidden="true">
+        <div class="kt-scene">
+          <svg class="kt-tray" viewBox="0 0 480 300" aria-hidden="true"><rect x="24" y="28" width="432" height="248" rx="20" fill="#a99f8c"/><rect x="36" y="40" width="408" height="224" rx="14" fill="#c7bfae"/><g transform="rotate(-3 64 160)"><g stroke="#b8c0c3" stroke-width="2.6" stroke-linecap="round"><line x1="48" y1="78" x2="48" y2="108"/><line x1="54" y1="78" x2="54" y2="108"/><line x1="60" y1="78" x2="60" y2="108"/><line x1="66" y1="78" x2="66" y2="108"/></g><path d="M45 106h24v8q0 16-7 21v10h-10v-10q-7-5-7-21z" fill="#b8c0c3"/><rect x="52" y="144" width="10" height="104" rx="5" fill="#8f989c"/></g><g transform="rotate(2 94 160)"><path d="M88 76q16 6 16 42v34h-16z" fill="#cfd5d8"/><rect x="87" y="150" width="13" height="98" rx="5.5" fill="#3a4247"/></g><circle cx="215" cy="158" r="96" fill="#fbfaf6" stroke="#dcd6c8" stroke-width="2"/><circle cx="215" cy="158" r="72" fill="none" stroke="#ece7dc" stroke-width="2"/><path d="M158 122q26 18 52 4t54 10q-10 30-42 44t-52 26" fill="none" stroke="#9a5b22" stroke-width="4" stroke-linecap="round" opacity=".5"/><g transform="translate(184 140) rotate(-15)"><ellipse rx="23" ry="15" fill="#b9853f"/><ellipse cx="2" cy="-1" rx="16" ry="9.5" fill="#f2e7c9" stroke="#d9b56e" stroke-width="2"/></g><g transform="translate(236 128) rotate(20)"><ellipse rx="21" ry="14" fill="#ad7a37"/><ellipse cx="1" cy="-1" rx="14" ry="8.5" fill="#f3e9cd" stroke="#d6af66" stroke-width="2"/></g><g transform="translate(212 180) rotate(5)"><ellipse rx="24" ry="15" fill="#b9853f"/><ellipse cx="-2" cy="-1" rx="17" ry="9.5" fill="#f2e7c9" stroke="#d9b56e" stroke-width="2"/></g><g transform="translate(258 178) rotate(-28)"><ellipse rx="19" ry="13" fill="#a8763a"/><ellipse cx="1" cy="0" rx="12" ry="7.5" fill="#f3e9cd" stroke="#d6af66" stroke-width="2"/></g><g transform="translate(170 194) rotate(32)"><ellipse rx="20" ry="13" fill="#b9853f"/><ellipse cx="1" cy="-1" rx="13" ry="8" fill="#f2e7c9" stroke="#d9b56e" stroke-width="2"/></g><g fill="#fffdf5" stroke="#e5dcc6" stroke-width="1.3"><circle cx="262" cy="118" r="10"/><circle cx="276" cy="126" r="8"/><circle cx="268" cy="134" r="7"/><circle cx="252" cy="128" r="6.5"/></g><g fill="#d6a22b"><circle cx="198" cy="160" r="2.4"/><circle cx="222" cy="150" r="2.4"/><circle cx="240" cy="198" r="2.4"/><circle cx="190" cy="214" r="2.4"/><circle cx="270" cy="154" r="2.4"/><circle cx="160" cy="168" r="2.4"/><circle cx="228" cy="214" r="2.4"/><circle cx="206" cy="120" r="2.4"/></g><circle cx="372" cy="122" r="58" fill="#e7edef" stroke="#b5c3c9" stroke-width="2"/><circle cx="372" cy="122" r="50" fill="#dde7dc"/><g fill="#507d3b"><ellipse cx="350" cy="104" rx="16" ry="9" transform="rotate(-30 350 104)"/><ellipse cx="388" cy="98" rx="15" ry="8" transform="rotate(25 388 98)"/><ellipse cx="364" cy="140" rx="17" ry="9" transform="rotate(10 364 140)"/></g><g fill="#6f9e4b"><ellipse cx="392" cy="132" rx="14" ry="8" transform="rotate(-40 392 132)"/><ellipse cx="346" cy="128" rx="12" ry="7" transform="rotate(50 346 128)"/><ellipse cx="370" cy="114" rx="13" ry="7" transform="rotate(-5 370 114)"/></g><g fill="#efe2c0"><circle cx="378" cy="146" r="2.6"/><circle cx="384" cy="150" r="2.6"/><circle cx="356" cy="114" r="2.6"/><circle cx="398" cy="114" r="2.6"/><circle cx="372" cy="98" r="2.6"/><circle cx="342" cy="140" r="2.6"/><circle cx="404" cy="124" r="2.6"/></g><g fill="#b3261e"><circle cx="360" cy="96" r="3.2"/><circle cx="394" cy="140" r="3.2"/><circle cx="352" cy="148" r="3.2"/><circle cx="384" cy="110" r="3.2"/></g><circle cx="372" cy="122" r="58" fill="#ffffff" opacity=".2"/><path d="M330 100q18-32 62-28" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".65"/><g transform="rotate(-8 398 168)"><rect x="372" y="159" width="52" height="19" rx="2" fill="#fdfdfb" stroke="#c9cdd0"/><text x="398" y="172.5" text-anchor="middle" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="9.5" fill="#1c2226">SALAT</text></g><g transform="translate(398 226) rotate(12)"><g><rect x="-21" y="-21" width="42" height="42" rx="8" fill="#fdfdfb" stroke="#c3c8cb" stroke-width="1.5"/><circle cx="-8.5" cy="-8.5" r="4.4" fill="#1c2226"/><circle cx="8.5" cy="8.5" r="4.4" fill="#1c2226"/></g></g></svg>
+          <div class="kt-note">HALVRÅ.</div>
         </div>
       </div>
       <div class="card-body">
-        <h2 class="hl-lg"><a class="stretch" href="dd.html">Fullmektig trodde DD var Dungeons &amp;&nbsp;Dragons: <span class="nw">–&nbsp;Jeg</span> hadde med egne terninger</a></h2>
-        <p class="lead-sm">En fullmektig i transaksjonsgruppen trodde han var invitert til å spille Dungeons &amp; Dragons med partnerne. Det var en due diligence. Siden torsdag har han ført 31 timer overtid.</p>
+        <p class="kicker">Matanmeldelse</p>
+        <h2 class="hl-lg"><a class="stretch" href="kantina.html">Modig kantine, halvrå jordskokk</a></h2>
+        <p class="lead-sm">Kantina på Filipstad Brygge vil være restaurant. Jordskokken har ikke fått nok tid i ovnen, og salatbollene har aldri møtt hovedretten.</p>
         <div class="meta">
-          <p class="desk">Lunsjbordets transaksjonsredaksjon</p>
-          <p>Oppdatert kl. 20:41: Badetøyet er pakket</p>
+          <p class="desk">Lunsjbordets matanmeldere</p>
+          <p class="kast"><svg class="kast-terning" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="7"/><circle cx="13" cy="13" r="3.6"/><circle cx="27" cy="27" r="3.6"/></svg>Terningkast 2 · Kantine, Filipstad Brygge</p>
         </div>
       </div>
     </article>
@@ -1570,6 +1584,38 @@
   </aside>
 
   <div class="pair">
+    <article class="card dd col">
+      <div class="fig dd banner" aria-hidden="true">
+        <div class="dd-mail">
+          <p class="dd-kind">E-post, onsdag kl. 16:12</p>
+          <p class="dd-subj"><mark>DD</mark> – Prosjekt Ørn</p>
+          <p class="dd-from">Fra: Partner · Til: Fullmektig · Kopi: Transaksjonsgruppen</p>
+          <p class="dd-body">Du er satt på <mark>DD</mark> fra mandag. Kick-off torsdag kl. 08:00 i møterom 4.</p>
+          <p class="dd-reply">Gleder meg!! Har med egne terninger.</p>
+          <p class="dd-stamp">DUE DILIGENCE</p>
+          <svg class="dd-die" viewBox="0 0 100 100">
+            <polygon class="f2" points="50,4 90,27 50,24"/>
+            <polygon class="f1" points="90,27 90,73 80,70 50,24"/>
+            <polygon class="f3" points="90,73 50,96 80,70"/>
+            <polygon class="f2" points="50,96 10,73 20,70 80,70"/>
+            <polygon class="f3" points="10,73 10,27 20,70"/>
+            <polygon class="f1" points="10,27 50,4 50,24 20,70"/>
+            <polygon class="f0" points="50,24 80,70 20,70"/>
+            <path class="edge" d="M50 4 90 27 90 73 50 96 10 73 10 27Z M50 24 80 70 20 70Z M50 4V24 M90 27 50 24 M90 27 80 70 M90 73 80 70 M50 96 80 70 M50 96 20 70 M10 73 20 70 M10 27 20 70 M10 27 50 24"/>
+            <text x="50" y="63" text-anchor="middle">1</text>
+          </svg>
+        </div>
+      </div>
+      <div class="card-body">
+        <h2 class="hl-lg"><a class="stretch" href="dd.html">Fullmektig trodde DD var Dungeons &amp;&nbsp;Dragons: <span class="nw">–&nbsp;Jeg</span> hadde med egne terninger</a></h2>
+        <p class="lead-sm">En fullmektig i transaksjonsgruppen trodde han var invitert til å spille Dungeons &amp; Dragons med partnerne. Det var en due diligence. Siden torsdag har han ført 31 timer overtid.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets transaksjonsredaksjon</p>
+          <p>Oppdatert kl. 20:41: Badetøyet er pakket</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card tanzania col">
       <div class="fig moete banner" aria-hidden="true">
         <div class="mt-sheet">
@@ -1594,24 +1640,6 @@
         <div class="meta">
           <p class="desk">Anonym trainee</p>
           <p>Navnet er kjent for redaksjonen</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card tennis col">
-      <div class="fig bane banner" aria-hidden="true">
-        <div class="tn-box">
-          <svg class="court" viewBox="0 0 480 270" aria-hidden="true"><defs><pattern id="fc-mesh" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 0L4 4M4 0L0 4" stroke="#0d1214" stroke-width=".6" opacity=".55"/></pattern></defs><rect width="480" height="112" fill="#22325b"/><rect y="0" width="480" height="10" fill="#1a2747"/><g fill="#2b3d6c"><rect x="0" y="22" width="480" height="2"/><rect x="0" y="96" width="480" height="3"/></g><g transform="rotate(-2.5 86 58)"><rect x="40" y="30" width="92" height="58" rx="2" fill="#f7f8f4"/><rect x="70" y="25" width="32" height="10" fill="#ffffff" opacity=".7" transform="rotate(4 86 30)"/><text x="86" y="52" text-anchor="middle" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="800" font-size="12" fill="#1c2226">BANE 7 OG 8</text><text x="86" y="72" text-anchor="middle" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="700" font-size="16" fill="#1c2226">↑ ↓ ← →</text></g><rect y="110" width="480" height="160" fill="#2c6744"/><polygon points="150,122 330,122 440,262 40,262" fill="#3b8656"/><g stroke="#f4f6f2" stroke-width="2" stroke-linecap="square" fill="none"><line x1="150.0" y1="122.0" x2="330.0" y2="122.0"/><line x1="40.0" y1="262.0" x2="440.0" y2="262.0"/><line x1="150.0" y1="122.0" x2="40.0" y2="262.0"/><line x1="330.0" y1="122.0" x2="440.0" y2="262.0"/><line x1="165.0" y1="122.0" x2="72.0" y2="262.0"/><line x1="315.0" y1="122.0" x2="408.0" y2="262.0"/><line x1="149.1" y1="146.0" x2="330.9" y2="146.0"/><line x1="105.2" y1="212.0" x2="374.8" y2="212.0"/><line x1="240.0" y1="146.0" x2="240.0" y2="212.0"/><line x1="240.0" y1="262.0" x2="240.0" y2="256.0"/></g><g data-i="17"><ellipse cx="200" cy="153.0" rx="3.6" ry="1.1" fill="#000" opacity=".18"/><circle cx="200" cy="150" r="3.3" fill="#f39a2b"/><path d="M197.7 149.0q2.3 2.0 4.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="18"><ellipse cx="268" cy="142.7" rx="3.3" ry="1.1" fill="#000" opacity=".18"/><circle cx="268" cy="140" r="3.0" fill="#c9dc3a"/><path d="M265.9 139.1q2.1 1.8 4.3 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="19"><ellipse cx="236" cy="165.2" rx="3.9" ry="1.2" fill="#000" opacity=".18"/><circle cx="236" cy="162" r="3.6" fill="#f39a2b"/><path d="M233.5 160.9q2.5 2.1 5.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><rect x="100.7" y="150" width="278.6" height="22" fill="url(#fc-mesh)"/><rect x="100.7" y="149" width="278.6" height="3" fill="#f4f6f2"/><rect x="97.7" y="146" width="4" height="28" fill="#5b6468"/><rect x="378.3" y="146" width="4" height="28" fill="#5b6468"/><g data-i="0"><ellipse cx="96" cy="255.1" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="96" cy="250" r="5.7" fill="#f39a2b"/><path d="M92.0 248.3q4.0 3.4 8.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="1"><ellipse cx="130" cy="236.7" rx="5.8" ry="1.8" fill="#000" opacity=".18"/><circle cx="130" cy="232" r="5.3" fill="#c9dc3a"/><path d="M126.3 230.4q3.7 3.2 7.4 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="2"><ellipse cx="168" cy="252.1" rx="6.2" ry="2.0" fill="#000" opacity=".18"/><circle cx="168" cy="247" r="5.6" fill="#f39a2b"/><path d="M164.1 245.3q3.9 3.4 7.9 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="3"><ellipse cx="205" cy="230.6" rx="5.6" ry="1.8" fill="#000" opacity=".18"/><circle cx="205" cy="226" r="5.1" fill="#f39a2b"/><path d="M201.4 224.5q3.6 3.1 7.2 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="4"><ellipse cx="226" cy="259.2" rx="6.4" ry="2.0" fill="#000" opacity=".18"/><circle cx="226" cy="254" r="5.8" fill="#c9dc3a"/><path d="M221.9 252.3q4.1 3.5 8.1 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="5"><ellipse cx="262" cy="242.9" rx="6.0" ry="1.9" fill="#000" opacity=".18"/><circle cx="262" cy="238" r="5.4" fill="#f39a2b"/><path d="M258.2 236.4q3.8 3.3 7.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="6"><ellipse cx="300" cy="254.1" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="300" cy="249" r="5.7" fill="#c9dc3a"/><path d="M296.0 247.3q4.0 3.4 8.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="7"><ellipse cx="338" cy="234.7" rx="5.7" ry="1.8" fill="#000" opacity=".18"/><circle cx="338" cy="230" r="5.2" fill="#f39a2b"/><path d="M334.3 228.4q3.7 3.1 7.3 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="8"><ellipse cx="362" cy="257.2" rx="6.3" ry="2.0" fill="#000" opacity=".18"/><circle cx="362" cy="252" r="5.8" fill="#f39a2b"/><path d="M358.0 250.3q4.0 3.5 8.1 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="9"><ellipse cx="118" cy="218.4" rx="5.3" ry="1.7" fill="#000" opacity=".18"/><circle cx="118" cy="214" r="4.8" fill="#c9dc3a"/><path d="M114.6 212.5q3.4 2.9 6.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="10"><ellipse cx="176" cy="209.2" rx="5.1" ry="1.6" fill="#000" opacity=".18"/><circle cx="176" cy="205" r="4.6" fill="#f39a2b"/><path d="M172.8 203.6q3.2 2.8 6.5 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="11"><ellipse cx="250" cy="212.2" rx="5.2" ry="1.6" fill="#000" opacity=".18"/><circle cx="250" cy="208" r="4.7" fill="#c9dc3a"/><path d="M246.7 206.6q3.3 2.8 6.6 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="12"><ellipse cx="318" cy="218.4" rx="5.3" ry="1.7" fill="#000" opacity=".18"/><circle cx="318" cy="214" r="4.8" fill="#f39a2b"/><path d="M314.6 212.5q3.4 2.9 6.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="13"><ellipse cx="286" cy="200.0" rx="4.8" ry="1.5" fill="#000" opacity=".18"/><circle cx="286" cy="196" r="4.4" fill="#f39a2b"/><path d="M282.9 194.7q3.1 2.6 6.2 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="14"><ellipse cx="150" cy="193.8" rx="4.7" ry="1.5" fill="#000" opacity=".18"/><circle cx="150" cy="190" r="4.3" fill="#c9dc3a"/><path d="M147.0 188.7q3.0 2.6 6.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="15"><ellipse cx="214" cy="189.7" rx="4.6" ry="1.5" fill="#000" opacity=".18"/><circle cx="214" cy="186" r="4.2" fill="#f39a2b"/><path d="M211.1 184.8q2.9 2.5 5.8 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g data-i="16"><ellipse cx="340" cy="195.9" rx="4.7" ry="1.5" fill="#000" opacity=".18"/><circle cx="340" cy="192" r="4.3" fill="#c9dc3a"/><path d="M337.0 190.7q3.0 2.6 6.0 0" stroke="#fff" stroke-width=".7" fill="none" opacity=".8"/></g><g transform="translate(408 196)"><rect x="0" y="12" width="44" height="40" rx="3" fill="none" stroke="#a9b2b5" stroke-width="2.5"/><g stroke="#a9b2b5" stroke-width="1.2"><line x1="11" y1="12" x2="11" y2="52"/><line x1="22" y1="12" x2="22" y2="52"/><line x1="33" y1="12" x2="33" y2="52"/><line x1="0" y1="25" x2="44" y2="25"/><line x1="0" y1="38" x2="44" y2="38"/></g><g><circle cx="9" cy="10" r="5" fill="#f39a2b"/><circle cx="19" cy="8" r="5" fill="#c9dc3a"/><circle cx="29" cy="10" r="5" fill="#f39a2b"/><circle cx="37" cy="9" r="5" fill="#c9dc3a"/></g><line x1="0" y1="52" x2="-4" y2="66" stroke="#a9b2b5" stroke-width="2.5"/><line x1="44" y1="52" x2="48" y2="66" stroke="#a9b2b5" stroke-width="2.5"/></g></svg>
-          <div class="tn-note">HENT 20.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Anmeldelse</p>
-        <h2 class="hl-lg"><a class="stretch" href="tennis.html">Traineene tester TennisTirsdag</a></h2>
-        <p class="lead-sm" lang="nn">Ingen tennissko i str. 38, ein labyrint av laminerte A4-ark og ein coach som ikkje visste at han var coach.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets traineeredaksjon</p>
-          <p>Oslo Tennis Arena, bane 7 og 8</p>
         </div>
       </div>
     </article>
@@ -1713,6 +1741,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="6. oktober">
+          <p class="m-desk">Traineeredaksjonen</p>
+          <h3 class="m-hl"><a class="stretch" href="tennis.html">Traineene tester TennisTirsdag</a></h3>
+          <p class="m-tekst" lang="nn">Ingen tennissko i str. 38, ein labyrint av laminerte A4-ark og ein coach som ikkje visste at han var coach.</p>
+        </li>
         <li class="mappe" data-fane="5. oktober">
           <p class="m-desk">Kronikk</p>
           <h3 class="m-hl"><a class="stretch" href="kronikk.html">Mens maten var på vei</a></h3>

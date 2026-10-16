@@ -7,6 +7,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | Fil | Innhold |
 | --- | --- |
 | `index.html` | Forsiden |
+| `uavhengig.html` | Fullmektigene vurderer å følge opp Høyesterett, med arbeidsgruppens flytskjema «Er du særlig uavhengig?» |
 | `spisskompetanse.html` | Kronikk: Oslo-kontoret faller bak i konkurransen om intern spisskompetanse, av Kristian |
 | `portrett.html` | Portrettet: Dagen før Borgarting, med Nicolay og Markus |
 | `barolo.html` | Utenriks: Spent ro i Barolo, fra Lunsjbordets utenrikskorrespondent |
