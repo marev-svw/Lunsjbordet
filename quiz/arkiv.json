@@ -1230,7 +1230,96 @@
      "svar": "Grip dagen. Uttrykket stammer fra den romerske dikteren Horats."
     }
    ]
+  },
+  {
+   "dato": "2026-10-18",
+   "sporsmal": [
+    {
+     "tema": "Romfart",
+     "sporsmal": "Hva het hunden som i 1957 ble det første dyret i bane rundt Jorden?",
+     "fasit": "Laika",
+     "svar": "Laika. Hun ble sendt opp med den sovjetiske satellitten Sputnik 2."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Togstreiken som startet 18. september, ble avsluttet lørdag. Lokførerne i Vy skal få samme grunnlønn som lokførerne i hvilket annet togselskap?",
+     "fasit": "Flytoget",
+     "svar": "Flytoget. Lønnen skal være lik fra 1. desember 2027, og togene i Vy begynte å gå igjen lørdag kl. 12:00."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva heter sundet som skiller Spania fra Marokko?",
+     "fasit": "Gibraltarstredet",
+     "svar": "Gibraltarstredet. På det smaleste er det bare rundt 14 kilometer bredt."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken mongolsk hersker grunnla på 1200-tallet det som ble verdens største sammenhengende landrike?",
+     "fasit": "Djengis Khan",
+     "svar": "Djengis Khan. Riket nådde sin største utstrekning under etterkommerne hans."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hva kalles en person som samler på frimerker?",
+     "fasit": "Filatelist",
+     "svar": "Filatelist. Hobbyen kalles filateli."
+    },
+    {
+     "tema": "Medisin",
+     "sporsmal": "Hvilken skotsk forsker oppdaget penicillinet i 1928?",
+     "fasit": "Alexander Fleming",
+     "svar": "Alexander Fleming. Han la merke til at en mugg drepte bakteriene i en glemt petriskål."
+    },
+    {
+     "tema": "Teater",
+     "sporsmal": "Hva heter hovedpersonen som forlater mann og barn på slutten av Henrik Ibsens «Et dukkehjem»?",
+     "fasit": "Nora",
+     "svar": "Nora. Stykket hadde urpremiere i København i 1879."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor mange poeng er en touchdown verdt i amerikansk fotball?",
+     "fasit": "Seks",
+     "svar": "Seks. Laget får deretter forsøke å score ett eller to ekstrapoeng."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Pave Leo 14. ble lørdag skrevet ut fra Gemelli-sykehuset i Roma etter en lungeoperasjon. Han er den første paven fra hvilket land?",
+     "fasit": "USA",
+     "svar": "USA. Han er født i Chicago og het Robert Prevost før han ble valgt i 2025."
+    },
+    {
+     "tema": "Drikke",
+     "sporsmal": "Hvilken plante lages tequila av?",
+     "fasit": "Agave",
+     "svar": "Agave. Det skal være blå agave, og den dyrkes særlig i delstaten Jalisco i Mexico."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hva heter temperaturskalaen der nullpunktet ligger ved minus 273,15 grader celsius?",
+     "fasit": "Kelvin",
+     "svar": "Kelvin. Den er oppkalt etter den britiske fysikeren Lord Kelvin."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken amerikansk kunstner er kjent for silketrykkene av suppebokser fra Campbell?",
+     "fasit": "Andy Warhol",
+     "svar": "Andy Warhol. Han var en av de fremste i popkunsten på 1960-tallet."
+    },
+    {
+     "tema": "Økonomi",
+     "sporsmal": "Hva heter valutaen i Polen?",
+     "fasit": "Złoty",
+     "svar": "Złoty. Navnet betyr «gyllen» på polsk."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket australsk pattedyr har andenebb og legger egg?",
+     "fasit": "Nebbdyr",
+     "svar": "Nebbdyr. Bare nebbdyret og maurpiggsvinene er pattedyr som legger egg."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 196
+ "antall_sporsmal": 210
 }
