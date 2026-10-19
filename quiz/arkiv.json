@@ -1319,7 +1319,96 @@
      "svar": "Nebbdyr. Bare nebbdyret og maurpiggsvinene er pattedyr som legger egg."
     }
    ]
+  },
+  {
+   "dato": "2026-10-19",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket land har flest innbyggere i Afrika?",
+     "fasit": "Nigeria",
+     "svar": "Nigeria. Landet har over 220 millioner innbyggere, og største by er Lagos."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Regjeringen vil at TikTok, Snapchat og en populær spillplattform skal få 16 års aldersgrense. Hvilken spillplattform?",
+     "fasit": "Roblox",
+     "svar": "Roblox. Digitaliseringsminister Lene Vågslid mener plattformen har algoritmer og markedsføring rettet mot barn."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken japansk by ble rammet av den første atombomben som ble brukt i krig, 6. august 1945?",
+     "fasit": "Hiroshima",
+     "svar": "Hiroshima. Tre dager senere ble Nagasaki rammet av den andre."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hvor mange kromosomer har et menneske normalt i hver kroppscelle?",
+     "fasit": "46",
+     "svar": "46. De er ordnet i 23 par, ett sett fra hver av foreldrene."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken britisk rockegruppe ga ut albumet «The Dark Side of the Moon» i 1973?",
+     "fasit": "Pink Floyd",
+     "svar": "Pink Floyd. Albumet lå på Billboard-listen i over 900 uker."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Hundre års ensomhet» om slekten Buendía i landsbyen Macondo?",
+     "fasit": "Gabriel García Márquez",
+     "svar": "Gabriel García Márquez. Den colombianske forfatteren ga ut romanen i 1967."
+    },
+    {
+     "tema": "Spill",
+     "sporsmal": "Hva kalles det i sjakk når kongen er truet og ikke har noen lovlige trekk for å unnslippe?",
+     "fasit": "Sjakkmatt",
+     "svar": "Sjakkmatt. Ordet kommer fra persisk og betyr omtrent «kongen er hjelpeløs»."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hva heter den store spiralgalaksen som er Melkeveiens nærmeste store nabo?",
+     "fasit": "Andromedagalaksen",
+     "svar": "Andromedagalaksen. Den ligger rundt 2,5 millioner lysår unna og er på kollisjonskurs med Melkeveien."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Ukraina sendte i helgen over 1 000 droner mot Russland, og en oljeterminal i landets nest største by begynte å brenne. Hvilken by?",
+     "fasit": "St. Petersburg",
+     "svar": "St. Petersburg. Angrepet traff blant annet Petersburg Oil Terminal ved Finskebukta."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den grønne, sterke pastaen som serveres til sushi?",
+     "fasit": "Wasabi",
+     "svar": "Wasabi. Mye av det som selges som wasabi, er egentlig pepperrot farget grønn."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilket selskap lanserte spillkonsollen PlayStation i Japan i 1994?",
+     "fasit": "Sony",
+     "svar": "Sony. Konsollen kom til Europa året etter."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hvilket språk snakker de aller fleste innbyggerne i Brasil som morsmål?",
+     "fasit": "Portugisisk",
+     "svar": "Portugisisk. Brasil er landet i verden med flest portugisisktalende."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter det fiktive afrikanske landet som er hjemlandet til superhelten i «Black Panther»?",
+     "fasit": "Wakanda",
+     "svar": "Wakanda. Filmen fra 2018 var den første superheltfilmen som ble nominert til Oscar for beste film."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hvilken blodtype kalles universalgiver, fordi den i nødstilfeller kan gis til nesten alle?",
+     "fasit": "O negativ",
+     "svar": "O negativ. Bare rundt seks prosent av nordmenn har denne blodtypen."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 210
+ "antall_sporsmal": 224
 }
