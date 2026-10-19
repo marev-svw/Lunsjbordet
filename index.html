@@ -500,6 +500,32 @@
   .tf-note { position: absolute; bottom: -1.1rem; left: -.8rem; width: 5.4rem; height: 4.4rem; display: grid; place-items: center; padding: .2rem; text-align: center; transform: rotate(-6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1rem/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
   .tf-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
+  /* LinkedIn-saken: partnerens innlegg i feeden, med kritikkstempel og lapp.
+     Alle mål i em, så illustrasjonen vokser med hovedspalten. */
+  .fig.feed { background: var(--wall); }
+  .fd-scene { position: relative; width: min(100%, 26em); margin-top: 1em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .fd-card { position: relative; overflow: hidden; border-radius: .6em; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); transform: rotate(-1.5deg); }
+  .fd-bar { display: flex; align-items: center; justify-content: space-between; gap: .5em; margin: 0; padding: .5em .75em .5em 6.2em; border-bottom: 1px solid var(--sheet-rule); font-size: .75em; font-weight: 800; }
+  .fd-search { flex: 1; min-width: 0; max-width: 10em; padding: .25em .55em; border-radius: .3em; background: #e8edf0; color: var(--sheet-muted); font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .fd-bell { display: inline-flex; align-items: center; gap: .3em; color: var(--sheet-muted); font-weight: 600; white-space: nowrap; }
+  .fd-bell b { padding: .1em .35em; border-radius: 99px; background: var(--stamp); color: #ffffff; font-size: .85em; font-weight: 800; }
+  .fd-head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .6em; align-items: start; padding: .8em .85em 0; }
+  .fd-av { display: grid; place-items: center; width: 2.5em; height: 2.5em; border-radius: 50%; background: linear-gradient(150deg, #2b7a70, #1f5e57); color: #ffffff; font-weight: 800; }
+  .fd-who { margin: 0; font-size: .6875em; line-height: 1.35; color: var(--sheet-muted); }
+  .fd-who b { display: block; font-size: 1.25em; color: #1c2226; }
+  .fd-who b span { font-weight: 500; color: var(--sheet-muted); }
+  .fd-who > span { display: block; }
+  .fd-text { margin: .6em .85em .65em; font-size: .8125em; line-height: 1.4; }
+  .fd-stats { display: flex; align-items: center; gap: .35em; margin: 0 .85em; padding-bottom: .5em; border-bottom: 1px solid var(--sheet-rule); font-size: .6875em; color: var(--sheet-muted); }
+  .fd-rx { display: inline-flex; }
+  .fd-rx svg { width: 1.3em; height: 1.3em; margin-right: -.3em; border-radius: 50%; box-shadow: 0 0 0 1.5px var(--sheet); }
+  .fd-rx svg:last-child { margin-right: 0; }
+  .fd-cm { margin-left: auto; }
+  .fd-act { display: flex; justify-content: space-between; margin: 0; padding: .5em .85em .6em; font-size: .75em; font-weight: 700; color: var(--sheet-muted); }
+  .fd-stamp { position: absolute; left: 55%; top: 62%; margin: 0; padding: .2em .5em .12em; border: 3px solid var(--stamp); border-radius: 6px; color: var(--stamp); font: 900 1.35em/1 var(--sans); letter-spacing: .12em; opacity: .85; transform: translate(-50%, -50%) rotate(-11deg); mix-blend-mode: multiply; }
+  .fd-note { position: absolute; top: -1.5em; left: -1em; z-index: 1; width: 5.4em; height: 4.6em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(-7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .875em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .fd-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1412,6 +1438,32 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Justis</p>
+      <h2 class="hl-xl"><a class="stretch" href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a></h2>
+      <p class="lead">Advokatnemnda har ikke funnet brudd på reglene for god advokatskikk. Den retter likevel kritikk mot en partner. Begrunnelsen er at nemndas medlemmer er så lei av innleggene hans at noe måtte gjøres.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets justisredaksjon</p>
+        <p>Lest i feeden, mot vår vilje</p>
+      </div>
+    </div>
+    <div class="fig feed" aria-hidden="true">
+      <div class="fd-scene">
+        <div class="fd-card">
+          <p class="fd-bar"><span class="fd-search">Søk uten Partner</span><span class="fd-bell">Varsler <b>99+</b></span></p>
+          <div class="fd-head"><span class="fd-av">P</span><p class="fd-who"><b>Partner <span>· 1.</span></b><span>Partner | Advokat | Ydmyk</span><span>Lørdag 06:12</span></p></div>
+          <p class="fd-text">Jeg er ydmyk og takknemlig for at Advokatnemnda har behandlet saken min så grundig. Hva tenker dere?</p>
+          <p class="fd-stats"><span class="fd-rx"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#3b7ddd"/><path d="M5.2 9.2h2.1v5.6H5.2zM8.2 14.8V9.4l2.2-3.8c.25-.4.75-.5 1.15-.25.32.22.45.62.32.98L11.2 8.4h3c.7 0 1.2.62 1.08 1.3l-.62 3.9c-.1.7-.55 1.2-1.1 1.2z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#d9573f"/><path d="M10 15.2 5.3 10.6a2.9 2.9 0 0 1 4.1-4.1l.6.6.6-.6a2.9 2.9 0 0 1 4.1 4.1z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#e3a92b"/><path d="M10 4.6a3.9 3.9 0 0 0-2.3 7.1v1.5h4.6v-1.5A3.9 3.9 0 0 0 10 4.6zM8 14.2h4v1.3H8z" fill="#ffffff"/></svg></span>214<span class="fd-cm">38 kommentarer</span></p>
+          <p class="fd-act"><span>Liker</span><span>Kommenter</span><span>Del</span></p>
+          <p class="fd-stamp">KRITIKK</p>
+        </div>
+        <div class="fd-note">IKKE BRUDD. BARE NOK.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Teknologi</p>
       <h2 class="hl-xl"><a class="stretch" href="brettbar.html">Fullmektigens nye telefon deler kontoret på midten: <span class="nw">–&nbsp;Tidenes</span> røverkjøp</a></h2>
       <p class="lead">En fullmektig har kjøpt den brettbare iPhone Duo, med økonomisk bistand fra jobben. Han kaller det tidenes røverkjøp, men innrømmer at han måtte betale en andel selv. Kollegene er delt på midten, omtrent som telefonen.</p>
@@ -1440,7 +1492,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Arbeidsliv</p>
@@ -1465,38 +1516,6 @@
         </div>
         <svg class="uv-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="none" stroke="#8a5a2b" stroke-width="5" stroke-linecap="round" stroke-dasharray="170 14 30 26" opacity=".3"/><circle cx="50" cy="50" r="33" fill="none" stroke="#8a5a2b" stroke-width="1.5" stroke-dasharray="60 20 90 40" opacity=".18"/></svg>
         <div class="uv-note">UAVKLART.</div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Kronikk</p>
-      <h2 class="hl-xl op"><a class="stretch" href="spisskompetanse.html">Oslo-kontoret faller bak i konkurransen om intern spisskompetanse</a></h2>
-      <p class="lead">Fra nyttår kan sertifiserte partnere i Bergen la fullmektiger begynne å jobbe så snart Teams-meldingen er sendt. Oslo vurderte en lignende ordning og fant den for ressurskrevende. Det bør vi tenke nytt om.</p>
-      <div class="meta">
-        <p class="desk">Kristian</p>
-        <p>Skrevet i kø hos ressursstyringen</p>
-      </div>
-    </div>
-    <div class="fig ko" aria-hidden="true">
-      <div class="ko-scene">
-        <div class="ko-chat">
-          <p class="ko-lbl">Bergen · Teams</p>
-          <p class="ko-msg in">Har du mulighet til å bistå?</p>
-          <p class="ko-msg out">Ja!<span class="ko-react"><svg viewBox="0 0 16 16"><path d="M1.5 7h2.6v7.2H1.5zM5.3 14.2V7.3l2.8-4.9c.3-.5 1-.7 1.5-.3.4.3.6.8.4 1.3L9.3 6.4h3.9c.9 0 1.5.8 1.4 1.6l-.8 5c-.1.7-.7 1.2-1.4 1.2z" fill="currentColor"/></svg>1</span></p>
-          <p class="ko-status">Levert 10:15</p>
-        </div>
-        <div class="ko-kiosk">
-          <p class="ko-lbl">Oslo · Kø</p>
-          <div class="ko-screen">
-            <p class="ko-row"><span>Nå betjenes</span><b>0018</b></p>
-            <p class="ko-row"><span>Ditt nummer</span><b>1187</b></p>
-            <p class="ko-eta">Forventet ventetid:<b>21 måneder</b></p>
-          </div>
-          <div class="ko-slot"></div>
-          <div class="ko-note">IKKE PURR.</div>
-        </div>
       </div>
     </div>
   </article>
@@ -1540,56 +1559,70 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Portrettet</p>
-      <h2 class="hl-xl"><a class="stretch" href="portrett.html">Dagen før Borgarting: <span class="nw">–&nbsp;Vi</span> rir inn ved&nbsp;daggry</a></h2>
-      <p class="lead">I morgen møter Nicolay Skarning og Markus Fjeldstad Reve staten i Borgarting lagmannsrett. Den ene ser innleiesaken som et western-oppgjør, den andre som en årgangsvin.</p>
+      <p class="kicker">Kronikk</p>
+      <h2 class="hl-xl op"><a class="stretch" href="spisskompetanse.html">Oslo-kontoret faller bak i konkurransen om intern spisskompetanse</a></h2>
+      <p class="lead">Fra nyttår kan sertifiserte partnere i Bergen la fullmektiger begynne å jobbe så snart Teams-meldingen er sendt. Oslo vurderte en lignende ordning og fant den for ressurskrevende. Det bør vi tenke nytt om.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets magasinredaksjon</p>
-        <p>Intervjuet på cellekontoret</p>
+        <p class="desk">Kristian</p>
+        <p>Skrevet i kø hos ressursstyringen</p>
       </div>
     </div>
-    <div class="fig portrett" aria-hidden="true">
-      <div class="pk-scene">
-        <div class="pk-kort pk-n">
-          <div class="pk-face">
-            <p class="pk-rate"><span><b>97</b><small>SHERIFF</small></span><span class="pk-nr">NR. 1</span></p>
-            <div class="pk-window">
-              <svg viewBox="0 0 100 64"><path d="M4 42c10-5 18-3 24 0 8 3 36 3 44 0 6-3 14-5 24 0-6 9-22 15-46 15S10 51 4 42z" fill="#3a2a1a"/><path d="M27 42c-3-14 0-26 7-31 5 3 10 3 16-1 6 4 11 4 16 1 7 5 10 17 7 31-14 4-32 4-46 0z" fill="#4a3522"/><path d="M27.6 34.5c15 3.6 29.8 3.6 44.8 0l.5 6c-15.3 3.8-30.5 3.8-45.8 0z" fill="#b5352a"/><path d="M45 18c3-3 7-3 10 0" fill="none" stroke="#2b1f12" stroke-width="1.6" stroke-linecap="round" opacity=".5"/></svg>
-            </div>
-            <p class="pk-navn"><b>NICOLAY</b><span>SKARNING</span></p>
-            <p class="pk-foot">INNLEIESAKEN · 2026</p>
-          </div>
+    <div class="fig ko" aria-hidden="true">
+      <div class="ko-scene">
+        <div class="ko-chat">
+          <p class="ko-lbl">Bergen · Teams</p>
+          <p class="ko-msg in">Har du mulighet til å bistå?</p>
+          <p class="ko-msg out">Ja!<span class="ko-react"><svg viewBox="0 0 16 16"><path d="M1.5 7h2.6v7.2H1.5zM5.3 14.2V7.3l2.8-4.9c.3-.5 1-.7 1.5-.3.4.3.6.8.4 1.3L9.3 6.4h3.9c.9 0 1.5.8 1.4 1.6l-.8 5c-.1.7-.7 1.2-1.4 1.2z" fill="currentColor"/></svg>1</span></p>
+          <p class="ko-status">Levert 10:15</p>
         </div>
-        <div class="pk-kort pk-m">
-          <div class="pk-face">
-            <p class="pk-rate"><span><b>93</b><small>SOMMELIER</small></span><span class="pk-nr">NR. 2</span></p>
-            <div class="pk-window">
-              <svg viewBox="0 0 64 100"><path d="M15 6h34c3 22-2 40-17 46C17 46 12 28 15 6z" fill="rgba(246,234,208,.16)" stroke="#f6ead0" stroke-width="2.4" stroke-linejoin="round"/><path d="M16.3 24h31.4c-.6 13-5.4 22.6-15.7 26.8C21.7 46.6 16.9 37 16.3 24z" fill="#b8324d"/><path d="M20 12c-.6 6-.4 11 .6 15" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".45"/><path d="M30.6 52h2.8v30h-2.8z" fill="#f6ead0"/><ellipse cx="32" cy="85" rx="14" ry="4" fill="#f6ead0"/></svg>
-            </div>
-            <p class="pk-navn"><b>Markus</b><span>FJELDSTAD REVE</span></p>
-            <p class="pk-foot">INNLEIESAKEN · 2026</p>
+        <div class="ko-kiosk">
+          <p class="ko-lbl">Oslo · Kø</p>
+          <div class="ko-screen">
+            <p class="ko-row"><span>Nå betjenes</span><b>0018</b></p>
+            <p class="ko-row"><span>Ditt nummer</span><b>1187</b></p>
+            <p class="ko-eta">Forventet ventetid:<b>21 måneder</b></p>
           </div>
+          <div class="ko-slot"></div>
+          <div class="ko-note">IKKE PURR.</div>
         </div>
-        <div class="pk-note"><b id="count-big">I morgen</b><small id="count-small">i Borgarting</small></div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card barolo col">
-      <div class="fig barolo banner" aria-hidden="true">
-          <div class="bo-scene">
-            <svg class="bo-kart" viewBox="0 0 480 330" aria-hidden="true" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"><defs><pattern id="bo-vin" width="7" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)"><line x1="0" y1="3" x2="7" y2="3" stroke="#86a061" stroke-width="1.7" stroke-dasharray="2.4 1.1"/></pattern><pattern id="bo-strid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#f5d6cc"/><rect width="2.2" height="6" fill="#b3261e"/></pattern></defs><rect width="480" height="330" fill="#efe7d3"/><path d="M-4 70C80 56 150 82 240 64S400 40 484 52" fill="none" stroke="#a7cbdc" stroke-width="7" stroke-linecap="round"/><text x="18" y="54" font-size="10" font-style="italic" fill="#5b8597">Tanaro</text><text x="468" y="86" text-anchor="end" font-size="10" font-weight="600" fill="#7b7466">Alba →</text><g fill="#e4d7b7"><ellipse cx="108" cy="134" rx="62" ry="40" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="54" ry="34" transform="rotate(20 222 206)"/><ellipse cx="282" cy="180" rx="46" ry="34"/><ellipse cx="388" cy="216" rx="52" ry="42" transform="rotate(-10 388 216)"/><ellipse cx="270" cy="280" rx="56" ry="30"/><ellipse cx="306" cy="104" rx="46" ry="26"/><ellipse cx="166" cy="262" rx="38" ry="26"/></g><g fill="url(#bo-vin)"><ellipse cx="108" cy="134" rx="50" ry="30" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="44" ry="25" transform="rotate(20 222 206)"/><ellipse cx="282" cy="182" rx="36" ry="25"/><ellipse cx="388" cy="226" rx="40" ry="26" transform="rotate(-10 388 226)"/><ellipse cx="270" cy="280" rx="45" ry="21"/><ellipse cx="306" cy="106" rx="36" ry="18"/><ellipse cx="166" cy="262" rx="29" ry="18"/></g><g fill="#9db283"><circle cx="356" cy="194" r="6.5"/><circle cx="368" cy="189" r="7"/><circle cx="381" cy="187" r="6.5"/><circle cx="394" cy="187" r="7"/><circle cx="407" cy="189" r="6.5"/><circle cx="419" cy="194" r="6"/></g><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#d6c7a3" stroke-width="5"/><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#fbf7ec" stroke-width="2.4"/></g><g class="bo-nord"><path d="M346 203Q388 189 430 203" fill="none" stroke="#b3261e" stroke-width="2.2" stroke-dasharray="5 4"/><text x="474" y="184" text-anchor="end" font-size="10" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Nordsiden</text></g><g class="bo-cannubi"><ellipse cx="220" cy="196" rx="19" ry="10" transform="rotate(20 220 196)" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1.3"/><text x="216" y="181" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Cannubi</text></g><g fill="#1c2226" stroke="#ffffff" stroke-width="1.5"><circle cx="80" cy="98" r="4"/><circle cx="100" cy="162" r="4"/><circle cx="176" cy="214" r="4"/><circle cx="160" cy="262" r="4"/><circle cx="266" cy="170" r="4"/><circle cx="306" cy="96" r="4"/><circle cx="394" cy="226" r="4"/><circle cx="266" cy="290" r="4"/></g><g font-size="11" font-weight="700" fill="#1c2226" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke"><text x="88" y="102">Verduno</text><text x="108" y="166">La Morra</text><text x="168" y="226" text-anchor="end">Barolo</text><text x="168" y="266">Novello</text><text x="276" y="174">Castiglione Falletto</text><text x="314" y="100">Grinzane Cavour</text><text x="386" y="244" text-anchor="end">Serralunga d'Alba</text><text x="258" y="294" text-anchor="end">Monforte d'Alba</text></g><g class="bo-rykte"><circle cx="224" cy="243" r="9.5" fill="#ffffff" stroke="#b3261e" stroke-width="2" stroke-dasharray="3 2.4"/><text x="224" y="247.5" text-anchor="middle" font-size="13" font-weight="900" fill="#b3261e">?</text></g><g class="bo-pin"><path d="M266 170c-7-9-11-14-11-19a11 11 0 1 1 22 0c0 5-4 10-11 19z" fill="#1c2226"/><circle cx="266" cy="151" r="4.6" fill="#f4d547"/></g><rect width="480" height="30" fill="#b3261e"/><text x="14" y="20" font-size="12.5" font-weight="800" letter-spacing=".06em" fill="#ffffff">SITUASJONEN I LANGHE</text><circle class="bo-live" cx="402" cy="15" r="4" fill="#ffffff"/><text x="412" y="19.5" font-size="11" font-weight="800" letter-spacing=".08em" fill="#ffffff">DIREKTE</text><g font-size="10.5" font-weight="600" fill="#1c2226"><rect x="10" y="272" width="150" height="48" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><circle cx="24" cy="287" r="4.5" fill="#e8962a"/><path d="M24 279.6v-1.9M24 296.3v-1.9M16.6 287h-1.9M33.3 287h-1.9M18.8 281.8l-1.3-1.3M30.5 293.5l-1.3-1.3M18.8 292.2l-1.3 1.3M30.5 280.5l-1.3 1.3" stroke="#e8962a" stroke-width="1.4" stroke-linecap="round"/><text x="38" y="290.5">Været: medgjørlig</text><path d="M20 303.6h8l-.2 1.6a3.8 3.8 0 0 1-7.6 0z" fill="#8e2a3b"/><path d="M19.6 300h8.8l-.5 5.2a3.9 3.9 0 0 1-7.8 0zM24 309.2v4.6M20.8 313.8h6.4" fill="none" stroke="#1c2226" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><text x="38" y="310.5">Vinen: svært medgjørlig</text><rect x="352" y="284" width="120" height="38" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><rect x="360" y="291" width="14" height="10" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1"/><text x="381" y="300">Omstridt område</text><path d="M367 318c-3.5-4.5-5.5-7-5.5-9.5a5.5 5.5 0 1 1 11 0c0 2.5-2 5-5.5 9.5z" fill="#1c2226"/><circle cx="367" cy="308.5" r="2.2" fill="#f4d547"/><text x="381" y="316">Lunsjbordet</text></g></svg>
-            <div class="bo-note">USTABILT.</div>
+    <article class="card portrett col">
+      <div class="fig portrett banner" aria-hidden="true">
+        <div class="pk-scene">
+          <div class="pk-kort pk-n">
+            <div class="pk-face">
+              <p class="pk-rate"><span><b>97</b><small>SHERIFF</small></span><span class="pk-nr">NR. 1</span></p>
+              <div class="pk-window">
+                <svg viewBox="0 0 100 64"><path d="M4 42c10-5 18-3 24 0 8 3 36 3 44 0 6-3 14-5 24 0-6 9-22 15-46 15S10 51 4 42z" fill="#3a2a1a"/><path d="M27 42c-3-14 0-26 7-31 5 3 10 3 16-1 6 4 11 4 16 1 7 5 10 17 7 31-14 4-32 4-46 0z" fill="#4a3522"/><path d="M27.6 34.5c15 3.6 29.8 3.6 44.8 0l.5 6c-15.3 3.8-30.5 3.8-45.8 0z" fill="#b5352a"/><path d="M45 18c3-3 7-3 10 0" fill="none" stroke="#2b1f12" stroke-width="1.6" stroke-linecap="round" opacity=".5"/></svg>
+              </div>
+              <p class="pk-navn"><b>NICOLAY</b><span>SKARNING</span></p>
+              <p class="pk-foot">INNLEIESAKEN · 2026</p>
+            </div>
           </div>
+          <div class="pk-kort pk-m">
+            <div class="pk-face">
+              <p class="pk-rate"><span><b>93</b><small>SOMMELIER</small></span><span class="pk-nr">NR. 2</span></p>
+              <div class="pk-window">
+                <svg viewBox="0 0 64 100"><path d="M15 6h34c3 22-2 40-17 46C17 46 12 28 15 6z" fill="rgba(246,234,208,.16)" stroke="#f6ead0" stroke-width="2.4" stroke-linejoin="round"/><path d="M16.3 24h31.4c-.6 13-5.4 22.6-15.7 26.8C21.7 46.6 16.9 37 16.3 24z" fill="#b8324d"/><path d="M20 12c-.6 6-.4 11 .6 15" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".45"/><path d="M30.6 52h2.8v30h-2.8z" fill="#f6ead0"/><ellipse cx="32" cy="85" rx="14" ry="4" fill="#f6ead0"/></svg>
+              </div>
+              <p class="pk-navn"><b>Markus</b><span>FJELDSTAD REVE</span></p>
+              <p class="pk-foot">INNLEIESAKEN · 2026</p>
+            </div>
+          </div>
+          <div class="pk-note"><b id="count-big">I morgen</b><small id="count-small">i Borgarting</small></div>
+        </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Utenriks</p>
-        <h2 class="hl-lg"><a class="stretch" href="barolo.html">Spent ro i Barolo: <span class="nw">–&nbsp;Vinen</span> er medgjørlig. Naboen er det&nbsp;ikke</a></h2>
-        <p class="lead-sm">Tåken letter før lunsj, og vinen er imøtekommende. Likevel er situasjonen i Barolo ustabil. Lunsjbordets utenrikskorrespondent melder om dype motsetninger mellom produsentene.</p>
+        <p class="kicker">Portrettet</p>
+        <h2 class="hl-lg"><a class="stretch" href="portrett.html">Dagen før Borgarting: <span class="nw">–&nbsp;Vi</span> rir inn ved&nbsp;daggry</a></h2>
+        <p class="lead-sm">I morgen møter Nicolay Skarning og Markus Fjeldstad Reve staten i Borgarting lagmannsrett. Den ene ser innleiesaken som et western-oppgjør, den andre som en årgangsvin.</p>
         <div class="meta">
-          <p class="desk">Lunsjbordets utenrikskorrespondent</p>
-          <p>Direkte fra Castiglione Falletto, Piemonte</p>
+          <p class="desk">Lunsjbordets magasinredaksjon</p>
+          <p>Intervjuet på cellekontoret</p>
         </div>
       </div>
     </article>
@@ -1632,6 +1665,24 @@
   </aside>
 
   <div class="pair">
+    <article class="card barolo col">
+      <div class="fig barolo banner" aria-hidden="true">
+          <div class="bo-scene">
+            <svg class="bo-kart" viewBox="0 0 480 330" aria-hidden="true" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif"><defs><pattern id="bo-vin" width="7" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-18)"><line x1="0" y1="3" x2="7" y2="3" stroke="#86a061" stroke-width="1.7" stroke-dasharray="2.4 1.1"/></pattern><pattern id="bo-strid" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#f5d6cc"/><rect width="2.2" height="6" fill="#b3261e"/></pattern></defs><rect width="480" height="330" fill="#efe7d3"/><path d="M-4 70C80 56 150 82 240 64S400 40 484 52" fill="none" stroke="#a7cbdc" stroke-width="7" stroke-linecap="round"/><text x="18" y="54" font-size="10" font-style="italic" fill="#5b8597">Tanaro</text><text x="468" y="86" text-anchor="end" font-size="10" font-weight="600" fill="#7b7466">Alba →</text><g fill="#e4d7b7"><ellipse cx="108" cy="134" rx="62" ry="40" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="54" ry="34" transform="rotate(20 222 206)"/><ellipse cx="282" cy="180" rx="46" ry="34"/><ellipse cx="388" cy="216" rx="52" ry="42" transform="rotate(-10 388 216)"/><ellipse cx="270" cy="280" rx="56" ry="30"/><ellipse cx="306" cy="104" rx="46" ry="26"/><ellipse cx="166" cy="262" rx="38" ry="26"/></g><g fill="url(#bo-vin)"><ellipse cx="108" cy="134" rx="50" ry="30" transform="rotate(-25 108 134)"/><ellipse cx="222" cy="206" rx="44" ry="25" transform="rotate(20 222 206)"/><ellipse cx="282" cy="182" rx="36" ry="25"/><ellipse cx="388" cy="226" rx="40" ry="26" transform="rotate(-10 388 226)"/><ellipse cx="270" cy="280" rx="45" ry="21"/><ellipse cx="306" cy="106" rx="36" ry="18"/><ellipse cx="166" cy="262" rx="29" ry="18"/></g><g fill="#9db283"><circle cx="356" cy="194" r="6.5"/><circle cx="368" cy="189" r="7"/><circle cx="381" cy="187" r="6.5"/><circle cx="394" cy="187" r="7"/><circle cx="407" cy="189" r="6.5"/><circle cx="419" cy="194" r="6"/></g><g fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#d6c7a3" stroke-width="5"/><path d="M100 162 176 214 266 170 394 226M266 170 266 290M176 214 160 262M266 170 306 96M100 162 80 98" stroke="#fbf7ec" stroke-width="2.4"/></g><g class="bo-nord"><path d="M346 203Q388 189 430 203" fill="none" stroke="#b3261e" stroke-width="2.2" stroke-dasharray="5 4"/><text x="474" y="184" text-anchor="end" font-size="10" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Nordsiden</text></g><g class="bo-cannubi"><ellipse cx="220" cy="196" rx="19" ry="10" transform="rotate(20 220 196)" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1.3"/><text x="216" y="181" text-anchor="middle" font-size="9.5" font-weight="800" fill="#b3261e" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke">Cannubi</text></g><g fill="#1c2226" stroke="#ffffff" stroke-width="1.5"><circle cx="80" cy="98" r="4"/><circle cx="100" cy="162" r="4"/><circle cx="176" cy="214" r="4"/><circle cx="160" cy="262" r="4"/><circle cx="266" cy="170" r="4"/><circle cx="306" cy="96" r="4"/><circle cx="394" cy="226" r="4"/><circle cx="266" cy="290" r="4"/></g><g font-size="11" font-weight="700" fill="#1c2226" stroke="#efe7d3" stroke-width="3" stroke-linejoin="round" paint-order="stroke"><text x="88" y="102">Verduno</text><text x="108" y="166">La Morra</text><text x="168" y="226" text-anchor="end">Barolo</text><text x="168" y="266">Novello</text><text x="276" y="174">Castiglione Falletto</text><text x="314" y="100">Grinzane Cavour</text><text x="386" y="244" text-anchor="end">Serralunga d'Alba</text><text x="258" y="294" text-anchor="end">Monforte d'Alba</text></g><g class="bo-rykte"><circle cx="224" cy="243" r="9.5" fill="#ffffff" stroke="#b3261e" stroke-width="2" stroke-dasharray="3 2.4"/><text x="224" y="247.5" text-anchor="middle" font-size="13" font-weight="900" fill="#b3261e">?</text></g><g class="bo-pin"><path d="M266 170c-7-9-11-14-11-19a11 11 0 1 1 22 0c0 5-4 10-11 19z" fill="#1c2226"/><circle cx="266" cy="151" r="4.6" fill="#f4d547"/></g><rect width="480" height="30" fill="#b3261e"/><text x="14" y="20" font-size="12.5" font-weight="800" letter-spacing=".06em" fill="#ffffff">SITUASJONEN I LANGHE</text><circle class="bo-live" cx="402" cy="15" r="4" fill="#ffffff"/><text x="412" y="19.5" font-size="11" font-weight="800" letter-spacing=".08em" fill="#ffffff">DIREKTE</text><g font-size="10.5" font-weight="600" fill="#1c2226"><rect x="10" y="272" width="150" height="48" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><circle cx="24" cy="287" r="4.5" fill="#e8962a"/><path d="M24 279.6v-1.9M24 296.3v-1.9M16.6 287h-1.9M33.3 287h-1.9M18.8 281.8l-1.3-1.3M30.5 293.5l-1.3-1.3M18.8 292.2l-1.3 1.3M30.5 280.5l-1.3 1.3" stroke="#e8962a" stroke-width="1.4" stroke-linecap="round"/><text x="38" y="290.5">Været: medgjørlig</text><path d="M20 303.6h8l-.2 1.6a3.8 3.8 0 0 1-7.6 0z" fill="#8e2a3b"/><path d="M19.6 300h8.8l-.5 5.2a3.9 3.9 0 0 1-7.8 0zM24 309.2v4.6M20.8 313.8h6.4" fill="none" stroke="#1c2226" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><text x="38" y="310.5">Vinen: svært medgjørlig</text><rect x="352" y="284" width="120" height="38" rx="4" fill="#fbf8f0" stroke="#d6c9a8"/><rect x="360" y="291" width="14" height="10" fill="url(#bo-strid)" stroke="#b3261e" stroke-width="1"/><text x="381" y="300">Omstridt område</text><path d="M367 318c-3.5-4.5-5.5-7-5.5-9.5a5.5 5.5 0 1 1 11 0c0 2.5-2 5-5.5 9.5z" fill="#1c2226"/><circle cx="367" cy="308.5" r="2.2" fill="#f4d547"/><text x="381" y="316">Lunsjbordet</text></g></svg>
+            <div class="bo-note">USTABILT.</div>
+          </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Utenriks</p>
+        <h2 class="hl-lg"><a class="stretch" href="barolo.html">Spent ro i Barolo: <span class="nw">–&nbsp;Vinen</span> er medgjørlig. Naboen er det&nbsp;ikke</a></h2>
+        <p class="lead-sm">Tåken letter før lunsj, og vinen er imøtekommende. Likevel er situasjonen i Barolo ustabil. Lunsjbordets utenrikskorrespondent melder om dype motsetninger mellom produsentene.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets utenrikskorrespondent</p>
+          <p>Direkte fra Castiglione Falletto, Piemonte</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card kantina col">
       <div class="fig kantine banner" aria-hidden="true">
         <div class="kt-scene">
@@ -1646,38 +1697,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets matanmeldere</p>
           <p class="kast"><svg class="kast-terning" viewBox="0 0 40 40" aria-hidden="true"><rect x="2" y="2" width="36" height="36" rx="7"/><circle cx="13" cy="13" r="3.6"/><circle cx="27" cy="27" r="3.6"/></svg>Terningkast 2 · Kantine, Filipstad Brygge</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card dd col">
-      <div class="fig dd banner" aria-hidden="true">
-        <div class="dd-mail">
-          <p class="dd-kind">E-post, onsdag kl. 16:12</p>
-          <p class="dd-subj"><mark>DD</mark> – Prosjekt Ørn</p>
-          <p class="dd-from">Fra: Partner · Til: Fullmektig · Kopi: Transaksjonsgruppen</p>
-          <p class="dd-body">Du er satt på <mark>DD</mark> fra mandag. Kick-off torsdag kl. 08:00 i møterom 4.</p>
-          <p class="dd-reply">Gleder meg!! Har med egne terninger.</p>
-          <p class="dd-stamp">DUE DILIGENCE</p>
-          <svg class="dd-die" viewBox="0 0 100 100">
-            <polygon class="f2" points="50,4 90,27 50,24"/>
-            <polygon class="f1" points="90,27 90,73 80,70 50,24"/>
-            <polygon class="f3" points="90,73 50,96 80,70"/>
-            <polygon class="f2" points="50,96 10,73 20,70 80,70"/>
-            <polygon class="f3" points="10,73 10,27 20,70"/>
-            <polygon class="f1" points="10,27 50,4 50,24 20,70"/>
-            <polygon class="f0" points="50,24 80,70 20,70"/>
-            <path class="edge" d="M50 4 90 27 90 73 50 96 10 73 10 27Z M50 24 80 70 20 70Z M50 4V24 M90 27 50 24 M90 27 80 70 M90 73 80 70 M50 96 80 70 M50 96 20 70 M10 73 20 70 M10 27 20 70 M10 27 50 24"/>
-            <text x="50" y="63" text-anchor="middle">1</text>
-          </svg>
-        </div>
-      </div>
-      <div class="card-body">
-        <h2 class="hl-lg"><a class="stretch" href="dd.html">Fullmektig trodde DD var Dungeons &amp;&nbsp;Dragons: <span class="nw">–&nbsp;Jeg</span> hadde med egne terninger</a></h2>
-        <p class="lead-sm">En fullmektig i transaksjonsgruppen trodde han var invitert til å spille Dungeons &amp; Dragons med partnerne. Det var en due diligence. Siden torsdag har han ført 31 timer overtid.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets transaksjonsredaksjon</p>
-          <p>Oppdatert kl. 20:41: Badetøyet er pakket</p>
         </div>
       </div>
     </article>
@@ -1779,6 +1798,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="7. oktober">
+          <p class="m-desk">Transaksjonsredaksjonen</p>
+          <h3 class="m-hl"><a class="stretch" href="dd.html">Fullmektig trodde DD var Dungeons &amp;&nbsp;Dragons: <span class="nw">–&nbsp;Jeg</span> hadde med egne terninger</a></h3>
+          <p class="m-tekst">En fullmektig trodde han var invitert til å spille Dungeons &amp; Dragons med partnerne. Det var en due diligence.</p>
+        </li>
         <li class="mappe" data-fane="6. oktober">
           <p class="m-desk">Debatt</p>
           <h3 class="m-hl"><a class="stretch" href="tanzania.html">Mindre Tanzania, mer timeføring</a></h3>
