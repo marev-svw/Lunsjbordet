@@ -1408,7 +1408,96 @@
      "svar": "O negativ. Bare rundt seks prosent av nordmenn har denne blodtypen."
     }
    ]
+  },
+  {
+   "dato": "2026-10-20",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken by er New Zealands hovedstad?",
+     "fasit": "Wellington",
+     "svar": "Wellington. Byen ligger på sørspissen av Nordøya. Auckland er større, men ikke hovedstad."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Formel 1 kjører i Texas denne helgen, der Kimi Antonelli kan bli tidenes yngste verdensmester. I hvilken by kjøres løpet?",
+     "fasit": "Austin",
+     "svar": "Austin. Løpet går søndag 25. oktober på banen Circuit of the Americas."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken amerikansk flyger ble i 1932 den første kvinnen som fløy alene over Atlanterhavet?",
+     "fasit": "Amelia Earhart",
+     "svar": "Amelia Earhart. Hun forsvant sporløst over Stillehavet i 1937."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Fra hvilket land kommer musikkstilen reggae, gjort verdenskjent av Bob Marley?",
+     "fasit": "Jamaica",
+     "svar": "Jamaica. Reggae vokste fram i Kingston på slutten av 1960-tallet."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hva heter kapteinen som jakter besatt på den hvite hvalen i Herman Melvilles «Moby Dick»?",
+     "fasit": "Kaptein Ahab",
+     "svar": "Kaptein Ahab. Romanen kom ut i 1851, og skipet hans heter Pequod."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hvilket metall er flytende ved romtemperatur?",
+     "fasit": "Kvikksølv",
+     "svar": "Kvikksølv. Det kjemiske symbolet Hg kommer fra det greske «hydrargyrum», flytende sølv."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Israel holder parlamentsvalg 27. oktober. Hva heter landets nasjonalforsamling?",
+     "fasit": "Knesset",
+     "svar": "Knesset. Forsamlingen har 120 medlemmer og holder til i Jerusalem."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken idrett spiller landslag om Davis Cup?",
+     "fasit": "Tennis",
+     "svar": "Tennis. Turneringen for herrelag ble spilt første gang i 1900."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den ungarske gryteretten av kjøtt, løk og rikelig med paprika?",
+     "fasit": "Gulasj",
+     "svar": "Gulasj. Navnet kommer fra ungarsk «gulyás», som betyr gjeter."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter det øde fjellhotellet der Jack Torrance går fra forstanden i Stanley Kubricks «The Shining»?",
+     "fasit": "Overlook Hotel",
+     "svar": "Overlook Hotel. Filmen fra 1980 bygger på romanen til Stephen King."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hva kalles den lengste siden i en rettvinklet trekant?",
+     "fasit": "Hypotenusen",
+     "svar": "Hypotenusen. Den ligger rett overfor den rette vinkelen, og de to andre sidene kalles kateter."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Iran har bedt USA godta et forslag om å gjenåpne et sund som er en av verdens viktigste ruter for olje. Hvilket sund?",
+     "fasit": "Hormuzstredet",
+     "svar": "Hormuzstredet. Sundet ligger mellom Iran og Oman og forbinder Persiabukta med Omanbukta."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken norsk billedhugger laget de over 200 skulpturene i Frognerparken i Oslo?",
+     "fasit": "Gustav Vigeland",
+     "svar": "Gustav Vigeland. Den mest kjente er trolig «Sinnataggen», og monolitten er hugget i ett stykke granitt."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva heter verdens største pingvinart?",
+     "fasit": "Keiserpingvin",
+     "svar": "Keiserpingvin. Den kan bli rundt 1,2 meter høy og hekker midt på vinteren i Antarktis."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 224
+ "antall_sporsmal": 238
 }
