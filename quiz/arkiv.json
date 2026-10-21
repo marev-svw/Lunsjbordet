@@ -1497,7 +1497,96 @@
      "svar": "Keiserpingvin. Den kan bli rundt 1,2 meter høy og hekker midt på vinteren i Antarktis."
     }
    ]
+  },
+  {
+   "dato": "2026-10-21",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket hav ligger mellom Australia og New Zealand?",
+     "fasit": "Tasmanhavet",
+     "svar": "Tasmanhavet. Havet er oppkalt etter nederlenderen Abel Tasman, som kom hit i 1642."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "En gullgruve raste sammen i provinsen Nariño denne uken, og 14 mistet livet. I hvilket land ligger provinsen?",
+     "fasit": "Colombia",
+     "svar": "Colombia. Nariño ligger i den sørvestlige delen av landet, ved grensen mot Ecuador."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken engelsk dronning regjerte da den spanske armadaen ble slått i 1588?",
+     "fasit": "Elizabeth I",
+     "svar": "Elizabeth I. Stormer i Kanalen og engelske brannskip gjorde mye av jobben."
+    },
+    {
+     "tema": "Naturvitenskap",
+     "sporsmal": "Hva heter grunnstoffet med atomnummer 1, det letteste og vanligste i universet?",
+     "fasit": "Hydrogen",
+     "svar": "Hydrogen. Det utgjør størstedelen av massen i stjerner som Sola."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen om doktor Victor, som skaper et vesen av døde kroppsdeler?",
+     "fasit": "Mary Shelley",
+     "svar": "Mary Shelley. «Frankenstein» utkom i 1818, da forfatteren var bare 20 år."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken tysk komponist skrev operasyklusen «Ringen som Nibelungen»?",
+     "fasit": "Richard Wagner",
+     "svar": "Richard Wagner. Syklusen består av fire operaer og tar rundt femten timer å framføre."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles det i baseball når slagmannen sender ballen over gjerdet og kan løpe alle basene?",
+     "fasit": "Hjemmeløp",
+     "svar": "Hjemmeløp. På engelsk heter det «home run»."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken sørfransk havneby er kjent for fiskesuppen bouillabaisse?",
+     "fasit": "Marseille",
+     "svar": "Marseille. Suppen var opprinnelig fiskernes middag, laget av fisk som ikke kunne selges."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken nederlandsk maler er kjent for stramme komposisjoner av røde, blå og gule flater avgrenset av svarte linjer?",
+     "fasit": "Piet Mondrian",
+     "svar": "Piet Mondrian. Han var med på å grunnlegge stilretningen De Stijl."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilken stor, flygeudyktig fugl pryder Australias riksvåpen sammen med en kenguru?",
+     "fasit": "Emu",
+     "svar": "Emu. Begge dyrene ble valgt fordi de ikke lett går baklengs."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hva heter det irrasjonale tallet på omtrent 2,718 som er grunntall i den naturlige logaritmen?",
+     "fasit": "Eulers tall, eller e",
+     "svar": "Eulers tall, eller e. Tallet er oppkalt etter den sveitsiske matematikeren Leonhard Euler."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nora Kojen Stubbe satte norgesrekord for kvinner i Backyard Ultra ved å løpe 70 runder. Omtrent hvor lang er hver runde?",
+     "fasit": "6,7 kilometer",
+     "svar": "6,7 kilometer. Runden er nøyaktig 4,167 engelske mil, og løperne må starte en ny hver time."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "I hvilken klassiker fra 1939 sier jenta Dorothy at det ikke finnes noe sted som hjemme?",
+     "fasit": "«Trollmannen fra Oz»",
+     "svar": "«Trollmannen fra Oz». Filmen er kjent for overgangen fra svart-hvitt til farger."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilken av Saturns måner har en tykk atmosfære av nitrogen og metan?",
+     "fasit": "Titan",
+     "svar": "Titan. Den er Saturns største måne og større enn planeten Merkur."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 238
+ "antall_sporsmal": 252
 }
