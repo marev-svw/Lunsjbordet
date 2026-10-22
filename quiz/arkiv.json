@@ -1586,7 +1586,96 @@
      "svar": "Titan. Den er Saturns største måne og større enn planeten Merkur."
     }
    ]
+  },
+  {
+   "dato": "2026-10-22",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket europeisk land har Vilnius som hovedstad?",
+     "fasit": "Litauen",
+     "svar": "Litauen. Landet er det største av de tre baltiske statene."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Statsministeren, Ukrainas president og USAs spesialutsending var denne uka samlet i Oslo for å snakke om veien mot fred. Hvilken finsk president deltok også?",
+     "fasit": "Alexander Stubb",
+     "svar": "Alexander Stubb. Stubb har vært Finlands president siden 2024."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilket år ble Sovjetunionen formelt oppløst?",
+     "fasit": "1991",
+     "svar": "1991. Oppløsningen ble besluttet i desember, og Mikhail Gorbatsjov gikk av som president."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hva kalles forvandlingen fra larve til voksent insekt, for eksempel til en sommerfugl?",
+     "fasit": "Metamorfose",
+     "svar": "Metamorfose. Mellom larve og sommerfugl går insektet gjennom et puppestadium."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Sofies verden», utgitt i 1991?",
+     "fasit": "Jostein Gaarder",
+     "svar": "Jostein Gaarder. Boken er en roman om filosofiens historie og er oversatt til over femti språk."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Statsminister Støre inviterte denne uka partiene til et bredt skoleforlik, og regjeringen vil videreføre en ordning som begrenser antall elever per lærer. Hva heter ordningen?",
+     "fasit": "Lærernormen",
+     "svar": "Lærernormen. Den setter en øvre grense for hvor mange elever det kan være per lærer på en skole."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken amerikansk rockesanger er kjent under tilnavnet «The Boss»?",
+     "fasit": "Bruce Springsteen",
+     "svar": "Bruce Springsteen. Han ga ut albumet «Born to Run» i 1975."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva heter den øverste divisjonen i norsk fotball for kvinner?",
+     "fasit": "Toppserien",
+     "svar": "Toppserien. Serien ble startet i 1984 under navnet 1. divisjon."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken frukt er hovedingrediensen i den franske omvendte kaken tarte tatin?",
+     "fasit": "Eple",
+     "svar": "Eple. Ifølge sagnet oppsto kaken ved en feil på et hotell sør for Paris."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "Hvilket jernkonstruksjon-landemerke i Paris ble reist til verdensutstillingen i 1889?",
+     "fasit": "Eiffeltårnet",
+     "svar": "Eiffeltårnet. Tårnet skulle opprinnelig bare stå i tjue år."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nigeria har bekreftet et ebolatilfelle hos en kvinne som kom fra Uganda. I hvilken by ble tilfellet påvist?",
+     "fasit": "Abuja",
+     "svar": "Abuja. Abuja er Nigerias hovedstad, og ikke den største byen, som er Lagos."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva heter søkemotoren fra Microsoft som ble lansert i 2009?",
+     "fasit": "Bing",
+     "svar": "Bing. Den erstattet tidligere søketjenester som Live Search."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket landdyr har den lengste halsen?",
+     "fasit": "Sjiraff",
+     "svar": "Sjiraff. Halsen har like mange halsvirvler som hos mennesker: sju."
+    },
+    {
+     "tema": "Medisin",
+     "sporsmal": "Hvilket vitamin lager kroppen selv når huden får sollys?",
+     "fasit": "D-vitamin",
+     "svar": "D-vitamin. I Norge er det lite sol nok til dette store deler av vinteren."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 252
+ "antall_sporsmal": 266
 }
