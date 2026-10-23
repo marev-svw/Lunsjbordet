@@ -1675,7 +1675,96 @@
      "svar": "D-vitamin. I Norge er det lite sol nok til dette store deler av vinteren."
     }
    ]
+  },
+  {
+   "dato": "2026-10-23",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken ørken dekker store deler av Nord-Afrika og er verdens største varme ørken?",
+     "fasit": "Sahara",
+     "svar": "Sahara. Ørkenen er omtrent like stor som USA."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "EU-parlamentet delte i år ut Sakharov-prisen for tankefrihet til en internasjonal domstol i Haag. Hvilken?",
+     "fasit": "Den internasjonale straffedomstolen",
+     "svar": "Den internasjonale straffedomstolen. Domstolen, ofte forkortet ICC, behandler blant annet krigsforbrytelser og folkemord."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken by på Sunnmøre ble i 1904 rammet av en storbrann og gjenreist i jugendstil?",
+     "fasit": "Ålesund",
+     "svar": "Ålesund. Byen mistet nesten alle bygningene, og over 10 000 mennesker ble hjemløse."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hvilken gass tar planter opp fra lufta når de driver fotosyntese?",
+     "fasit": "Karbondioksid",
+     "svar": "Karbondioksid. Planter avgir oksygen i bytte."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Sykehuset i en finnmarksby nær den russiske grensen innførte denne uka rød beredskap etter brudd på en vannledning. Hvilken by?",
+     "fasit": "Kirkenes",
+     "svar": "Kirkenes. Sykehuset kunne ikke utføre operasjoner, og akuttpasienter kunne bli kjørt til andre sykehus."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev den lille fortellingen «Den lille prinsen»?",
+     "fasit": "Antoine de Saint-Exupéry",
+     "svar": "Antoine de Saint-Exupéry. Boken kom i 1943, og forfatteren var også flyger."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket britisk band, med Freddie Mercury som vokalist, ga ut «Bohemian Rhapsody»?",
+     "fasit": "Queen",
+     "svar": "Queen. Låten ble utgitt i 1975 og er nesten seks minutter lang."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor mange spillere har et fotballag på banen samtidig, målvakten medregnet?",
+     "fasit": "Elleve",
+     "svar": "Elleve. Hvert lag kan bytte inn flere spillere i løpet av kampen."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken italiensk rett består av lag av pastaplater, kjøttsaus og hvit saus?",
+     "fasit": "Lasagne",
+     "svar": "Lasagne. Retten kommer opprinnelig fra Emilia-Romagna."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvor mange ben har en edderkopp?",
+     "fasit": "Åtte",
+     "svar": "Åtte. Insekter har seks ben, så edderkopper regnes ikke som insekter."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter trollmannsskolen i Harry Potter-bøkene og filmene?",
+     "fasit": "Galtvort, eller Hogwarts på originalspråket",
+     "svar": "Galtvort, eller Hogwarts på originalspråket. Skolen ligger i Skottland, og elevene sorteres i fire elevhjem."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Skuespilleren Tom Skerritt døde denne uka. I hvilken science fiction-film fra 1979 spilte han kaptein Dallas?",
+     "fasit": "«Alien»",
+     "svar": "«Alien». Filmen ble regissert av Ridley Scott."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "I hvilken italiensk by ligger det skjeve tårnet som er et kjent byggverk?",
+     "fasit": "Pisa",
+     "svar": "Pisa. Tårnet begynte å helle allerede under byggingen på 1100-tallet."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva kalles den største blodåren som fører blod ut fra hjertet?",
+     "fasit": "Aorta, eller hovedpulsåren",
+     "svar": "Aorta, eller hovedpulsåren. Den er omtrent like tykk som en hageslange."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 266
+ "antall_sporsmal": 280
 }
