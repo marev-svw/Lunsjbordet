@@ -1764,7 +1764,96 @@
      "svar": "Aorta, eller hovedpulsåren. Den er omtrent like tykk som en hageslange."
     }
    ]
+  },
+  {
+   "dato": "2026-10-24",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken elv renner gjennom Egypt og munner ut i Middelhavet gjennom et stort delta?",
+     "fasit": "Nilen",
+     "svar": "Nilen. Den regnes som en av verdens lengste elver."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Norge og Russland ble fredag enige om en fiskeriavtale for 2027 etter forhandlinger i en tyrkisk storby. Hvilken by?",
+     "fasit": "Istanbul",
+     "svar": "Istanbul. Forhandlingene startet mandag 19. oktober."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken tysk boktrykker gjorde løse bokstaver av metall kjent i Europa rundt 1450?",
+     "fasit": "Johannes Gutenberg",
+     "svar": "Johannes Gutenberg. Hans mest kjente trykk er Gutenberg-bibelen."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hva kalles det når en lydbølge kastes tilbake fra en fjellvegg og kommer tilbake til oss?",
+     "fasit": "Ekko",
+     "svar": "Ekko. Lyd går omtrent 340 meter i sekundet i luft."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken svensk forfatter skrev «Nils Holgerssons underlige reise gjennom Sverige» og fikk Nobels litteraturpris i 1909?",
+     "fasit": "Selma Lagerlöf",
+     "svar": "Selma Lagerlöf. Hun var den første kvinnen som fikk litteraturprisen."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Første frie trening i USAs Grand Prix i Austin ble kjørt fredag. Hvilken Ferrari-sjåfør hadde beste tid?",
+     "fasit": "Charles Leclerc",
+     "svar": "Charles Leclerc. Verstappen ble nummer to, bare 84 tusendeler bak."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken norsk duo fra Tromsø består av Svein Berge og Torbjørn Brundtland og ga ut «Remind Me»?",
+     "fasit": "Röyksopp",
+     "svar": "Röyksopp. Låten kom i 2001."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor mange ringer er det i det olympiske symbolet?",
+     "fasit": "Fem",
+     "svar": "Fem. Ringene symboliserer de fem kontinentene."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilket japansk navn brukes på tangarket som rulles rundt ris og fisk i sushirull?",
+     "fasit": "Nori",
+     "svar": "Nori. Arket lages av tørket rødalge."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilken fugl er nasjonalsymbol i USA og har hvitt hode og hvit hale?",
+     "fasit": "Hvithodehavørn",
+     "svar": "Hvithodehavørn. Fuglen er avbildet på USAs riksvåpen."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken regissør står bak filmene «Inception» og «Oppenheimer»?",
+     "fasit": "Christopher Nolan",
+     "svar": "Christopher Nolan. Oppenheimer vant sju Oscar-priser i 2024."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva kalles programmet på en datamaskin eller mobil som brukes til å surfe på nettet, som Chrome?",
+     "fasit": "Nettleser",
+     "svar": "Nettleser. Den første populære nettleseren, Mosaic, kom i 1993."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken franske maler er kjent for serien med vannliljer fra hagen i Giverny?",
+     "fasit": "Claude Monet",
+     "svar": "Claude Monet. Han var en av impresjonismens grunnleggere."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva kalles de tynne luftrørene i lungene der oksygen tas opp i blodet?",
+     "fasit": "Lungeblærer, eller alveoler",
+     "svar": "Lungeblærer, eller alveoler. Et voksent menneske har flere hundre millioner av dem."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 280
+ "antall_sporsmal": 294
 }
