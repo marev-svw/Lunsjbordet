@@ -9,6 +9,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `index.html` | Forsiden |
 | `utropstegn.html` | Tre utropstegn avgjorde innleiesaken: Borgarting lagmannsretts dom gjengitt i sin helhet, med VG-faksimilen (`faksimile-vg.jpg`) |
 | `linkedin.html` | Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn», med feeden der innleggene ikke lar seg skjule |
+| `reklame.html` | Kristian har mistet oversikten over traineene: «Det er så irriterende med reklame», med innboksen der hilse-e-postene havner i Reklame |
 | `brettbar.html` | Fullmektigens nye telefon deler kontoret på midten, med telefonen som kan brettes ut og sammen |
 | `uavhengig.html` | Fullmektigene vurderer å følge opp Høyesterett, med arbeidsgruppens flytskjema «Er du særlig uavhengig?» |
 | `spisskompetanse.html` | Kronikk: Oslo-kontoret faller bak i konkurransen om intern spisskompetanse, av Kristian |
