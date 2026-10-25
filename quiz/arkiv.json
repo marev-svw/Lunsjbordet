@@ -1853,7 +1853,96 @@
      "svar": "Lungeblærer, eller alveoler. Et voksent menneske har flere hundre millioner av dem."
     }
    ]
+  },
+  {
+   "dato": "2026-10-25",
+   "sporsmal": [
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken innsjø i Sibir er verdens dypeste, med over 1600 meter ned til bunnen?",
+     "fasit": "Bajkalsjøen",
+     "svar": "Bajkalsjøen. Den inneholder omtrent en femtedel av jordas ferskvann i innsjøer."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Kimi Antonelli tok lørdag pole i USAs Grand Prix i Austin. Hvilket lag kjører han for?",
+     "fasit": "Mercedes",
+     "svar": "Mercedes. Max Verstappen ble nummer to, 0,179 sekunder bak."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken svensk konge falt i slaget ved Lützen i 1632?",
+     "fasit": "Gustav II Adolf",
+     "svar": "Gustav II Adolf. Han regnes som grunnleggeren av Sverige som stormakt."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hva kalles det når månen står rett mellom sola og jorda og skjuler sola?",
+     "fasit": "Solformørkelse",
+     "svar": "Solformørkelse. Under en total solformørkelse blir det midt på dagen nesten mørkt."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Natt til søndag stilles klokka én time tilbake i Norge. Hva heter tiden vi da går over til?",
+     "fasit": "Vintertid",
+     "svar": "Vintertid. Klokka går fra 03:00 til 02:00, og vi får en time ekstra søvn."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken irsk forfatter skrev romanen «Ulysses», utgitt i 1922?",
+     "fasit": "James Joyce",
+     "svar": "James Joyce. Handlingen foregår på én dag i Dublin."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken amerikansk sangerinne ble kalt «soulens dronning» og sang «Respect»?",
+     "fasit": "Aretha Franklin",
+     "svar": "Aretha Franklin. Hun var den første kvinnen i Rock and Roll Hall of Fame."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor mange hull har en standard golfbane?",
+     "fasit": "Atten",
+     "svar": "Atten. Banen spilles i en runde på 18 hull."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilket land er opphavet til osten gouda?",
+     "fasit": "Nederland",
+     "svar": "Nederland. Osten er oppkalt etter en by sør i landet."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket havdyr har tre hjerter og blått blod?",
+     "fasit": "Blekksprut",
+     "svar": "Blekksprut. To av hjertene pumper blod til gjellene."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter den lille klovnefisken i Pixar-filmen fra 2003 som blir tatt til Sydney?",
+     "fasit": "Nemo",
+     "svar": "Nemo. Filmen heter «Oppdrag Nemo» på norsk."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva het sosiale mediet med fugl som logo før det ble omdøpt til X i 2023?",
+     "fasit": "Twitter",
+     "svar": "Twitter. Tjenesten ble lansert i 2006."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken østerriksk maler er kjent for det gullbelagte maleriet «Kysset» fra 1908?",
+     "fasit": "Gustav Klimt",
+     "svar": "Gustav Klimt. Maleriet henger i Belvedere-palasset i Wien."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva heter det lille bruskaktige lokket som hindrer mat i å havne i luftrøret?",
+     "fasit": "Strupelokket",
+     "svar": "Strupelokket. Det lukker seg automatisk når vi svelger."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 294
+ "antall_sporsmal": 308
 }
