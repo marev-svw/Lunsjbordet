@@ -1942,7 +1942,96 @@
      "svar": "Strupelokket. Det lukker seg automatisk når vi svelger."
     }
    ]
+  },
+  {
+   "dato": "2026-10-26",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvem vant søndag andre runde av presidentvalget i Brasil og sikret seg en fjerde periode?",
+     "fasit": "Lula da Silva",
+     "svar": "Lula da Silva. Han slo Flávio Bolsonaro med rundt 52 prosent av stemmene."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Lewis Hamilton ble nummer fire i USAs Grand Prix i Austin søndag. Hvilket lag kjører han for?",
+     "fasit": "Ferrari",
+     "svar": "Ferrari. Kimi Antonelli vant løpet fra pole."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva heter Europas lengste elv, som renner ut i Det kaspiske hav?",
+     "fasit": "Volga",
+     "svar": "Volga. Elva er rundt 3500 kilometer lang og renner gjennom Russland."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken sovjetisk leder holdt den hemmelige talen som kritiserte Stalin i 1956?",
+     "fasit": "Nikita Khrusjtsjov",
+     "svar": "Nikita Khrusjtsjov. Talen ble holdt på partikongressen i Moskva."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hva kalles det når et stoff går direkte fra fast form til gass, uten å bli væske først?",
+     "fasit": "Sublimering",
+     "svar": "Sublimering. Tørris er et kjent eksempel."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken britisk forfatter skapte den belgiske detektiven Hercule Poirot?",
+     "fasit": "Agatha Christie",
+     "svar": "Agatha Christie. Poirot dukker opp i over 30 romaner, blant dem «Mordet i Orientekspressen»."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket instrument spilte jazzlegenden Miles Davis?",
+     "fasit": "Trompet",
+     "svar": "Trompet. Albumet «Kind of Blue» fra 1959 regnes som et av jazzens mesterverk."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilken norsk skiskytter har tatt åtte OL-gull og er blant tidenes mest dekorerte vinter-OL-utøvere?",
+     "fasit": "Ole Einar Bjørndalen",
+     "svar": "Ole Einar Bjørndalen. Han tok 13 OL-medaljer til sammen."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den italienske kaffedrikken med espresso og melkeskum som er oppkalt etter en munkekåpe?",
+     "fasit": "Cappuccino",
+     "svar": "Cappuccino. Navnet kommer fra kapusinermunkenes brune drakt."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hvilken del av hjernen sitter bak i skallen og styrer balansen vår?",
+     "fasit": "Lillehjernen",
+     "svar": "Lillehjernen. Den spiller også en rolle i koordinasjon av bevegelser."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter byen Batman beskytter?",
+     "fasit": "Gotham City",
+     "svar": "Gotham City. Byen er skapt av tegneserieforlaget DC."
+    },
+    {
+     "tema": "Økonomi",
+     "sporsmal": "Hva heter valutaen i Japan?",
+     "fasit": "Yen",
+     "svar": "Yen. Valutaen har vært i bruk siden 1871."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilken planet har en storm så stor at den har rast i hundrevis av år og kalles «den store røde flekken»?",
+     "fasit": "Jupiter",
+     "svar": "Jupiter. Stormen er større enn jordas diameter."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "Hvilken katalanske arkitekt tegnet basilikaen Sagrada Família i Barcelona?",
+     "fasit": "Antoni Gaudí",
+     "svar": "Antoni Gaudí. Byggingen startet i 1882 og er fortsatt ikke helt ferdig."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 308
+ "antall_sporsmal": 322
 }
