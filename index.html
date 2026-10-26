@@ -291,6 +291,9 @@
   .br-body a { color: var(--link); text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .18em; }
   .br-body a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
   /* Direktedekning i Nytraktet: tidsstemplede innlegg, nyeste øverst */
+  .br-body .br-fig { margin: 0 0 .9rem; }
+  .br-body .br-fig img { display: block; width: 100%; height: auto; border-radius: 6px; }
+  .br-body .br-fig figcaption { margin: .4rem 0 0; font: italic 400 .8125rem/1.4 var(--sans); color: var(--muted); }
   .br-body .lb-ingress { font-style: italic; }
   .lb-post { margin: 0 0 .9rem; padding-top: .75rem; border-top: 1px solid var(--line); }
   .lb-post p { margin-bottom: .5em; }
@@ -1260,6 +1263,20 @@
   </button>
   <h2 class="br-title" id="br-title"><span class="live" aria-hidden="true"></span>Nytraktet</h2>
   <div class="br-feed" id="br-feed">
+    <article class="br-item">
+      <h3 class="br-hl">Claude har tatt over som trener for Manchester United</h3>
+      <p class="br-meta"><time class="br-time" datetime="2026-10-26T12:56+01:00">12:56</time><span>Lunsjbordets sportsredaksjon</span></p>
+      <div class="br-body">
+        <figure class="br-fig">
+          <img src="claude-trener.png" width="321" height="223" alt="Tegning av roboten Claude i trenerfrakk og rød skjerf ved sidelinjen på en fotballbane" loading="lazy">
+          <figcaption>Claude fotografert på trenerkontoret kort tid etter at ansettelsen ble kjent.</figcaption>
+        </figure>
+        <p>Manchester United bekrefter mandag at KI-assistenten Claude (bildet) overtar som hovedtrener med umiddelbar virkning.</p>
+        <p>Avtalen skal ha kommet i stand etter at Claude fikk tilgang til statistikk fra to kamper der Bengaluru FC slo Markus, og konkluderte med at alt er mulig med riktig oppstilling.</p>
+        <p>Markus var ikke tilgjengelig for kommentar.</p>
+        <p>Saken oppdateres.</p>
+      </div>
+    </article>
     <article class="br-item">
       <h3 class="br-hl">Karamellsirupen er tilbake</h3>
       <p class="br-meta"><time class="br-time" datetime="2026-10-21T08:12+02:00">08:12</time><span>Lunsjbordets forbrukerredaksjon</span></p>
