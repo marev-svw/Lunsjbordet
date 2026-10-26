@@ -7,6 +7,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | Fil | Innhold |
 | --- | --- |
 | `index.html` | Forsiden |
+| `filmnerd.html` | Dikterens hjørne, uke 44: «Meg – en filmnerd», av Nuhsin |
 | `samme-person.html` | Kristian og Markus kan være samme person: «Ingen har sett dem på samme bilde», med adgangskortene der navnelappene kan byttes |
 | `utropstegn.html` | Tre utropstegn avgjorde innleiesaken: Borgarting lagmannsretts dom gjengitt i sin helhet, med VG-faksimilen (`faksimile-vg.jpg`) |
 | `linkedin.html` | Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn», med feeden der innleggene ikke lar seg skjule |
@@ -28,6 +29,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `tennis.html` | Traineene tester TennisTirsdag |
 | `tanzania.html` | Debatt: Mindre Tanzania, mer timeføring |
 | `kontakt.html` | Kontakt redaksjonen: tipsskjema som sendes til redaksjonen på e-post via FormSubmit |
+| `dikt.html` | Dikterens hjørne: alle ukens dikt, nyeste øverst. Lenket fra «Dikt» i menyen i toppbanneret |
 | `sitater.html` | Tatt ut av kontekst: sitater hørt på kontoret. Lenket fra «Sitater» i menyen i toppbanneret |
 | `quiz/arkiv.json` | Alle spørsmål som har vært i Lunsjquizen, med dato, tema og fasit |
 | `quiz/sjekk.py` | Sjekker dagens quiz mot arkivet, så spørsmål og fasitsvar ikke gjentas, og arkiverer quizen |
@@ -54,6 +56,10 @@ En GitHub Pages-side er åpen for alle som har adressen, også når repoet er pr
 1. Kopier en eksisterende sak, for eksempel `bussen.html`, og gi den et nytt filnavn.
 2. Bytt ut innholdet. Lenken tilbake til forsiden ligger i avishodet.
 3. Legg inn saken på forsiden i `index.html`, med lenke til det nye filnavnet.
+
+## Dikterens hjørne
+
+Nytt dikt hver mandag, publisert som en vanlig sak på forsiden. Hvert dikt får en egen side (for eksempel `filmnerd.html`) og legges øverst i bunken på `dikt.html`, med uke og dato, tittel, diktet, signatur og en kort fotnote fra redaksjonen.
 
 ## Lunsjquizen
 
