@@ -7,7 +7,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | Fil | Innhold |
 | --- | --- |
 | `index.html` | Forsiden |
-| `filmnerd.html` | Dikterens hjørne, uke 44: «Meg – en filmnerd», av Nushin |
+| `filmnerd.html` | Dikterens hjørne, uke 44: «Meg – en filmnerd», av Dikteren |
 | `samme-person.html` | Kristian og Markus kan være samme person: «Ingen har sett dem på samme bilde», med adgangskortene der navnelappene kan byttes |
 | `utropstegn.html` | Tre utropstegn avgjorde innleiesaken: Borgarting lagmannsretts dom gjengitt i sin helhet, med VG-faksimilen (`faksimile-vg.jpg`) |
 | `linkedin.html` | Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn», med feeden der innleggene ikke lar seg skjule |
