@@ -2031,7 +2031,96 @@
      "svar": "Antoni Gaudí. Byggingen startet i 1882 og er fortsatt ikke helt ferdig."
     }
    ]
+  },
+  {
+   "dato": "2026-10-27",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Israel holder parlamentsvalg i dag, tirsdag. Hva heter den tidligere generalstabssjefen som leder partiet Yashar og utfordrer Netanyahu?",
+     "fasit": "Gadi Eisenkot",
+     "svar": "Gadi Eisenkot. Meningsmålingene har pekt på at ingen av de to blokkene får flertall alene."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Formel 1 kjører Mexico by-GP i helgen. Banen er oppkalt etter to brødre som var racerkjørere. Hva heter den?",
+     "fasit": "Autódromo Hermanos Rodríguez",
+     "svar": "Autódromo Hermanos Rodríguez. Løpet kjøres søndag 1. november over 71 runder."
+    },
+    {
+     "tema": "Økonomi",
+     "sporsmal": "Hvilken sveitsisk bank- og finansby ved Zürichsjøen er landets største by?",
+     "fasit": "Zürich",
+     "svar": "Zürich. Hovedstaden er derimot Bern."
+    },
+    {
+     "tema": "Naturvitenskap",
+     "sporsmal": "Hva kalles den vitenskapelige studien av sopp?",
+     "fasit": "Mykologi",
+     "svar": "Mykologi. Ordet kommer av det greske «mykes», som betyr sopp."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev skuespillet «Peer Gynt» fra 1867?",
+     "fasit": "Henrik Ibsen",
+     "svar": "Henrik Ibsen. Edvard Grieg skrev scenemusikken noen år senere."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hva het skipet Roald Amundsen brukte på ekspedisjonen som nådde Sørpolen i 1911?",
+     "fasit": "Fram",
+     "svar": "Fram. Skipet var bygget for Fridtjof Nansen og står i dag på Frammuseet i Oslo."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den spanske risretten som tradisjonelt får sin gule farge av safran?",
+     "fasit": "Paella",
+     "svar": "Paella. Retten stammer fra Valencia-regionen."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket instrument, med piper, tangenter og pedaler, kalles ofte «instrumentenes konge»?",
+     "fasit": "Orgel",
+     "svar": "Orgel. Instrumentet brukes særlig i kirker."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva heter Afrikas høyeste fjell, som ligger i Tanzania?",
+     "fasit": "Kilimanjaro",
+     "svar": "Kilimanjaro. Toppen ligger 5895 meter over havet."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken Pixar-film fra 2007 handler om en rotte som drømmer om å bli kokk i Paris?",
+     "fasit": "Ratatouille",
+     "svar": "Ratatouille. Rotta heter Remy."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilket land kommer mobilprodusenten Nokia fra?",
+     "fasit": "Finland",
+     "svar": "Finland. Selskapet startet som en tresliperi i 1865."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva kalles blodcellene som frakter oksygen rundt i kroppen, og som får blodet til å se rødt ut?",
+     "fasit": "Røde blodlegemer",
+     "svar": "Røde blodlegemer. De inneholder hemoglobin, som binder oksygen."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hva er summen av de indre vinklene i en femkant, målt i grader?",
+     "fasit": "540",
+     "svar": "540. Summen i en mangekant er (n − 2) · 180 grader."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hva kalles skriftsystemet som brukes i blant annet russisk og bulgarsk?",
+     "fasit": "Kyrillisk",
+     "svar": "Kyrillisk. Det er oppkalt etter munken Kyrillos."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 322
+ "antall_sporsmal": 336
 }
