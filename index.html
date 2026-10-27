@@ -589,6 +589,25 @@
   .dm-note b { font-weight: 400; font-size: 1.2em; }
   .dm-note small { font-size: .8em; }
 
+  /* Kantinesaken: heksegryta over bålet med tirsdagens fem ingredienser, boblene og lappen.
+     Alle mål i em, så illustrasjonen vokser med hovedspalten. */
+  .fig.gryte { background: var(--wall); }
+  .gs-scene { position: relative; width: min(100%, 20em); margin-top: .8em; font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .gs-svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .gs-boble { transform-box: fill-box; transform-origin: center; opacity: .5; }
+  .gs-note { position: absolute; top: -1.4em; right: -1em; z-index: 1; width: 5.4em; height: 4.6em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .9375em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .gs-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+  @media (prefers-reduced-motion: no-preference) {
+    .gs-boble { opacity: 0; animation: gs-boble 2.4s ease-in infinite; }
+    .gs-boble:nth-of-type(2) { animation-delay: .8s; }
+    .gs-boble:nth-of-type(3) { animation-delay: 1.6s; }
+  }
+  @keyframes gs-boble {
+    0% { opacity: 0; transform: translateY(0) scale(.5); }
+    30% { opacity: .75; }
+    100% { opacity: 0; transform: translateY(-26px) scale(1.1); }
+  }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1527,6 +1546,56 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Kantina</p>
+      <h2 class="hl-xl"><a class="stretch" href="hekseri.html">Kantina mistenkes for svart magi på tirsdager: <span class="nw">–&nbsp;Intet</span> mindre enn en&nbsp;heksegryte</a></h2>
+      <p class="lead">Et tips til redaksjonen hevder at kantina på Filipstad Brygge driver med svart magi, men bare på tirsdager. Lunsjbordet har sammenlignet tirsdagens varmrett med kjente heksegryter.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets matredaksjon</p>
+        <p>Spist med sølvgaffel</p>
+      </div>
+    </div>
+    <div class="fig gryte" aria-hidden="true">
+      <div class="gs-scene">
+        <svg class="gs-svg" viewBox="30 20 340 290">
+          <defs><radialGradient id="gs-lys" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#d9f2a4" stop-opacity=".9"/><stop offset="1" stop-color="#d9f2a4" stop-opacity="0"/></radialGradient></defs>
+          <ellipse cx="200" cy="300" rx="150" ry="12" fill="#000000" opacity=".16"/>
+          <rect x="108" y="276" width="184" height="16" rx="8" transform="rotate(-7 200 284)" fill="#6b4a2e"/>
+          <rect x="108" y="276" width="184" height="16" rx="8" transform="rotate(7 200 284)" fill="#5a3d25"/>
+          <path d="M146 286C134 264 146 250 150 230C164 248 176 264 166 286Z" fill="#e8962a"/>
+          <path d="M184 288C170 256 188 232 196 204C216 232 230 258 214 288Z" fill="#e8962a"/>
+          <path d="M234 286C226 266 236 252 244 234C256 252 264 268 254 286Z" fill="#e8962a"/>
+          <path d="M188 288C182 270 192 258 198 244C208 260 214 274 208 288Z" fill="#f4d547"/>
+          <rect x="104" y="226" width="14" height="50" rx="5" transform="rotate(8 111 251)" fill="#1a1f21"/>
+          <rect x="282" y="226" width="14" height="50" rx="5" transform="rotate(-8 289 251)" fill="#1a1f21"/>
+          <path d="M62 120C62 212 112 260 200 260C288 260 338 212 338 120Z" fill="#262d30"/>
+          <path d="M90 146C94 198 120 228 160 242" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="9" stroke-linecap="round"/>
+          <path d="M64 132C40 130 34 162 58 168" fill="none" stroke="#1a1f21" stroke-width="8" stroke-linecap="round"/>
+          <path d="M336 132C360 130 366 162 342 168" fill="none" stroke="#1a1f21" stroke-width="8" stroke-linecap="round"/>
+          <ellipse cx="200" cy="120" rx="146" ry="26" fill="#343c40"/>
+          <ellipse cx="200" cy="120" rx="132" ry="19" fill="#15191b"/>
+          <ellipse cx="200" cy="122" rx="128" ry="16" fill="#4a2a70"/>
+          <ellipse cx="200" cy="112" rx="150" ry="46" fill="url(#gs-lys)" opacity=".85"/>
+          <g fill="#fbfaf3"><ellipse cx="150" cy="128" rx="3" ry="1.3" transform="rotate(20 150 128)"/><ellipse cx="172" cy="132" rx="3" ry="1.3" transform="rotate(-30 172 132)"/><ellipse cx="214" cy="133" rx="3" ry="1.3" transform="rotate(10 214 133)"/><ellipse cx="236" cy="130" rx="3" ry="1.3" transform="rotate(-15 236 130)"/><ellipse cx="262" cy="125" rx="3" ry="1.3" transform="rotate(35 262 125)"/><ellipse cx="124" cy="122" rx="3" ry="1.3" transform="rotate(-20 124 122)"/><ellipse cx="282" cy="117" rx="3" ry="1.3" transform="rotate(-35 282 117)"/><ellipse cx="300" cy="125" rx="3" ry="1.3" transform="rotate(15 300 125)"/></g>
+          <ellipse cx="204" cy="126" rx="30" ry="7" fill="#f4efe2"/>
+          <g fill="#b9853f"><circle cx="192" cy="125" r="2.4"/><circle cx="206" cy="128" r="1.8"/><circle cx="218" cy="124" r="2.6"/><circle cx="199" cy="122" r="1.4"/></g>
+          <g fill="#c8551f"><circle cx="238" cy="118" r="6.5"/><circle cx="252" cy="124" r="6"/><circle cx="232" cy="128" r="6"/><circle cx="264" cy="114" r="5.5"/><circle cx="160" cy="118" r="5.5"/></g>
+          <g fill="#ffd2a8" opacity=".7"><circle cx="236" cy="116" r="1.8"/><circle cx="250" cy="122" r="1.6"/><circle cx="230" cy="126" r="1.6"/><circle cx="262" cy="112" r="1.5"/><circle cx="158" cy="116" r="1.5"/></g>
+          <g transform="translate(296 102) rotate(26)"><path d="M-11-34Q4-40 15-32L19 20Q4 27-9 20Z" fill="#e3c48c" stroke="#c9a465" stroke-width="2"/><g fill="#9c6b35" opacity=".75"><circle cx="0" cy="-20" r="2.6"/><circle cx="7" cy="-4" r="2"/><circle cx="-3" cy="8" r="2.4"/></g></g>
+          <g transform="translate(136 112)"><path d="M0-40L22 8H-22Z" fill="#6d9d35"/><g fill="#8fc24e"><path d="M0-40L8-22H-8Z"/><path d="M-9-20L-1-2H-17Z"/><path d="M9-20L17-2H1Z"/><path d="M-15-2L-7 12H-23Z"/><path d="M0-2L8 12H-8Z"/><path d="M15-2L23 12H7Z"/></g><g fill="#b5e07a"><circle cx="0" cy="-30" r="1.6"/><circle cx="-9" cy="-10" r="1.4"/><circle cx="9" cy="-10" r="1.4"/><circle cx="-15" cy="6" r="1.3"/><circle cx="0" cy="6" r="1.3"/><circle cx="15" cy="6" r="1.3"/></g></g>
+          <g transform="translate(178 118) scale(.55)"><path d="M0-40L22 8H-22Z" fill="#6d9d35"/><g fill="#8fc24e"><path d="M0-40L8-22H-8Z"/><path d="M-9-20L-1-2H-17Z"/><path d="M9-20L17-2H1Z"/><path d="M-15-2L-7 12H-23Z"/><path d="M0-2L8 12H-8Z"/><path d="M15-2L23 12H7Z"/></g></g>
+          <g fill="#ffffff"><circle class="gs-boble" cx="168" cy="116" r="5"/><circle class="gs-boble" cx="222" cy="110" r="6"/><circle class="gs-boble" cx="276" cy="118" r="4"/></g>
+          <path d="M54 120A146 26 0 0 0 346 120L332 120A132 19 0 0 1 68 120Z" fill="#343c40"/>
+          <path d="M58 128A146 26 0 0 0 342 128" fill="none" stroke="#4a5458" stroke-width="2"/>
+          <g fill="none" stroke="#d9f2a4" stroke-width="6" stroke-linecap="round" opacity=".7"><path d="M160 86C148 70 172 58 160 40"/><path d="M202 80C190 62 214 50 202 26"/><path d="M244 86C232 70 256 58 244 42"/></g>
+        </svg>
+        <div class="gs-note">TIRSDAG.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Dikterens hjørne</p>
       <h2 class="hl-xl"><a class="stretch" href="filmnerd.html">Meg –&nbsp;en filmnerd</a></h2>
       <p class="lead">Ukens dikt handler om en dokumentar som finnes, bare ikke i Norge. Dikteren har lett i alle strømmetjenester og kledd seg for anledningen.</p>
@@ -1548,7 +1617,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Lunsjbordet undersøker</p>
@@ -1564,34 +1632,6 @@
         <div class="sp-kort a"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Kristian</p><div class="sp-strek"></div></div>
         <div class="sp-kort b"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Markus</p><div class="sp-strek"></div></div>
         <div class="sp-note">Hvem er hvem?</div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Innleiesaken</p>
-      <h2 class="hl-xl"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h2>
-      <p class="lead">Fire dager etter ankeforhandlingen har Borgarting lagmannsrett avsagt dom. Lunsjbordet gjengir den i sin helhet. Den kan leses på under seks minutter.</p>
-      <div class="meta">
-        <p class="desk">Lunsjbordets EØS-redaksjon</p>
-        <p>Gjengitt uten forkortelser</p>
-      </div>
-    </div>
-    <div class="fig dom" aria-hidden="true">
-      <div class="dm-scene">
-        <div class="dm-sheet">
-          <p class="dm-court">Borgarting lagmannsrett</p>
-          <p class="dm-type">Dom</p>
-          <p class="dm-para"><span class="dm-nr">(4)</span><span>Ett utropstegn kan være en oppfordring. <mark>Tre er et pålegg.</mark></span></p>
-          <p class="dm-slutt">Domsslutning</p>
-          <ol class="dm-list">
-            <li>Anken tas til følge.</li>
-            <li>EØS-spørsmålene tas etter ferien.</li>
-          </ol>
-          <p class="dm-stamp">!!!</p>
-        </div>
-        <div class="dm-note"><b>HUSK!!!</b><small>s. 4469 flg.</small></div>
       </div>
     </div>
   </article>
@@ -1635,56 +1675,54 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Justis</p>
-      <h2 class="hl-xl"><a class="stretch" href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a></h2>
-      <p class="lead">Advokatnemnda har ikke funnet brudd på reglene for god advokatskikk. Den retter likevel kritikk mot en partner. Begrunnelsen er at nemndas medlemmer er så lei av innleggene hans at noe måtte gjøres.</p>
+      <p class="kicker">Innleiesaken</p>
+      <h2 class="hl-xl"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h2>
+      <p class="lead">Fire dager etter ankeforhandlingen har Borgarting lagmannsrett avsagt dom. Lunsjbordet gjengir den i sin helhet. Den kan leses på under seks minutter.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets justisredaksjon</p>
-        <p>Lest i feeden, mot vår vilje</p>
+        <p class="desk">Lunsjbordets EØS-redaksjon</p>
+        <p>Gjengitt uten forkortelser</p>
       </div>
     </div>
-    <div class="fig feed" aria-hidden="true">
-      <div class="fd-scene">
-        <div class="fd-card">
-          <p class="fd-bar"><span class="fd-search">Søk uten Partner</span><span class="fd-bell">Varsler <b>99+</b></span></p>
-          <div class="fd-head"><span class="fd-av">P</span><p class="fd-who"><b>Partner <span>· 1.</span></b><span>Partner | Advokat | Ydmyk</span><span>Lørdag 06:12</span></p></div>
-          <p class="fd-text">Jeg er ydmyk og takknemlig for at Advokatnemnda har behandlet saken min så grundig. Hva tenker dere?</p>
-          <p class="fd-stats"><span class="fd-rx"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#3b7ddd"/><path d="M5.2 9.2h2.1v5.6H5.2zM8.2 14.8V9.4l2.2-3.8c.25-.4.75-.5 1.15-.25.32.22.45.62.32.98L11.2 8.4h3c.7 0 1.2.62 1.08 1.3l-.62 3.9c-.1.7-.55 1.2-1.1 1.2z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#d9573f"/><path d="M10 15.2 5.3 10.6a2.9 2.9 0 0 1 4.1-4.1l.6.6.6-.6a2.9 2.9 0 0 1 4.1 4.1z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#e3a92b"/><path d="M10 4.6a3.9 3.9 0 0 0-2.3 7.1v1.5h4.6v-1.5A3.9 3.9 0 0 0 10 4.6zM8 14.2h4v1.3H8z" fill="#ffffff"/></svg></span>214<span class="fd-cm">38 kommentarer</span></p>
-          <p class="fd-act"><span>Liker</span><span>Kommenter</span><span>Del</span></p>
-          <p class="fd-stamp">KRITIKK</p>
+    <div class="fig dom" aria-hidden="true">
+      <div class="dm-scene">
+        <div class="dm-sheet">
+          <p class="dm-court">Borgarting lagmannsrett</p>
+          <p class="dm-type">Dom</p>
+          <p class="dm-para"><span class="dm-nr">(4)</span><span>Ett utropstegn kan være en oppfordring. <mark>Tre er et pålegg.</mark></span></p>
+          <p class="dm-slutt">Domsslutning</p>
+          <ol class="dm-list">
+            <li>Anken tas til følge.</li>
+            <li>EØS-spørsmålene tas etter ferien.</li>
+          </ol>
+          <p class="dm-stamp">!!!</p>
         </div>
-        <div class="fd-note">IKKE BRUDD. BARE NOK.</div>
+        <div class="dm-note"><b>HUSK!!!</b><small>s. 4469 flg.</small></div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card telefon col">
-      <div class="fig telefon banner" aria-hidden="true">
-        <div class="tf-scene">
-          <div class="tf-dev">
-            <div class="tf-scr">
-              <svg class="tf-wp" viewBox="0 0 141 100" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tf-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171c39"/><stop offset=".16" stop-color="#2c3160"/><stop offset=".3" stop-color="#6a6597"/><stop offset=".4" stop-color="#c3929f"/></linearGradient></defs><rect width="141" height="100" fill="url(#tf-sky)"/><circle cx="112" cy="16" r="3" fill="#f3ead6" opacity=".9"/><path d="M0 37C13 31 26 29 40 32S66 27 82 30 115 25 141 29V100H0Z" fill="#454679"/></svg>
-              <svg class="tf-wifi" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#ffffff" stroke-width="1.4" opacity=".9"/><path d="M7.5 11a6.4 6.4 0 0 1 9 0M9.3 13a3.8 3.8 0 0 1 5.4 0" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="15.4" r="1.1" fill="#ffffff"/></svg>
-              <p class="tf-date">fredag 16. oktober</p>
-              <p class="tf-time">08:47</p>
-              <svg class="tf-wp" viewBox="0 0 141 100" preserveAspectRatio="xMidYMid slice"><path d="M0 46C20 38 40 36 60 40S100 42 141 35V100H0Z" fill="#2c2e58"/><path d="M0 68C30 60 60 59 86 64S124 69 141 66V100H0Z" fill="#57538a"/><path d="M0 84C36 77 72 78 100 82S130 86 141 84V100H0Z" fill="#7f78ac"/></svg>
-              <p class="tf-ntf"><span class="tf-ico">kr</span><span><b>Lønn<span>nå</span></b>Trekk i oktoberlønnen: egenandel, telefon. Beløp: en andel.</span></p>
-              <span class="tf-btn tf-lys"><svg viewBox="0 0 24 24"><path d="M7 2h10v4l-3 4v12h-4V10L7 6z" fill="#ffffff"/></svg></span>
-              <span class="tf-btn tf-kam"><svg viewBox="0 0 24 24"><path d="M3 7.5h4l2-2.5h6l2 2.5h4V19H3z" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="12" cy="12.5" r="3.3" fill="none" stroke="#ffffff" stroke-width="2.2"/></svg></span>
-              <span class="tf-home"></span>
-            </div>
+    <article class="card feed col">
+      <div class="fig feed banner" aria-hidden="true">
+        <div class="fd-scene">
+          <div class="fd-card">
+            <p class="fd-bar"><span class="fd-search">Søk uten Partner</span><span class="fd-bell">Varsler <b>99+</b></span></p>
+            <div class="fd-head"><span class="fd-av">P</span><p class="fd-who"><b>Partner <span>· 1.</span></b><span>Partner | Advokat | Ydmyk</span><span>Lørdag 06:12</span></p></div>
+            <p class="fd-text">Jeg er ydmyk og takknemlig for at Advokatnemnda har behandlet saken min så grundig. Hva tenker dere?</p>
+            <p class="fd-stats"><span class="fd-rx"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#3b7ddd"/><path d="M5.2 9.2h2.1v5.6H5.2zM8.2 14.8V9.4l2.2-3.8c.25-.4.75-.5 1.15-.25.32.22.45.62.32.98L11.2 8.4h3c.7 0 1.2.62 1.08 1.3l-.62 3.9c-.1.7-.55 1.2-1.1 1.2z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#d9573f"/><path d="M10 15.2 5.3 10.6a2.9 2.9 0 0 1 4.1-4.1l.6.6.6-.6a2.9 2.9 0 0 1 4.1 4.1z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#e3a92b"/><path d="M10 4.6a3.9 3.9 0 0 0-2.3 7.1v1.5h4.6v-1.5A3.9 3.9 0 0 0 10 4.6zM8 14.2h4v1.3H8z" fill="#ffffff"/></svg></span>214<span class="fd-cm">38 kommentarer</span></p>
+            <p class="fd-act"><span>Liker</span><span>Kommenter</span><span>Del</span></p>
+            <p class="fd-stamp">KRITIKK</p>
           </div>
-          <div class="tf-note">TO FOR ÉN.</div>
+          <div class="fd-note">IKKE BRUDD. BARE NOK.</div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Teknologi</p>
-        <h2 class="hl-lg"><a class="stretch" href="brettbar.html">Fullmektigens nye telefon deler kontoret på midten: <span class="nw">–&nbsp;Tidenes</span> røverkjøp</a></h2>
-        <p class="lead-sm">En fullmektig har kjøpt den brettbare iPhone Duo, med økonomisk bistand fra jobben. Han kaller det tidenes røverkjøp, men innrømmer at han måtte betale en andel selv. Kollegene er delt på midten, omtrent som telefonen.</p>
+        <p class="kicker">Justis</p>
+        <h2 class="hl-lg"><a class="stretch" href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a></h2>
+        <p class="lead-sm">Advokatnemnda har ikke funnet brudd på reglene for god advokatskikk. Den retter likevel kritikk mot en partner. Begrunnelsen er at nemndas medlemmer er så lei av innleggene hans at noe måtte gjøres.</p>
         <div class="meta">
-          <p class="desk">Lunsjbordets teknologiredaksjon</p>
-          <p>Brettet ut ved kaffemaskinen</p>
+          <p class="desk">Lunsjbordets justisredaksjon</p>
+          <p>Lest i feeden, mot vår vilje</p>
         </div>
       </div>
     </article>
@@ -1729,6 +1767,36 @@
   </aside>
 
   <div class="pair">
+    <article class="card telefon col">
+      <div class="fig telefon banner" aria-hidden="true">
+        <div class="tf-scene">
+          <div class="tf-dev">
+            <div class="tf-scr">
+              <svg class="tf-wp" viewBox="0 0 141 100" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tf-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171c39"/><stop offset=".16" stop-color="#2c3160"/><stop offset=".3" stop-color="#6a6597"/><stop offset=".4" stop-color="#c3929f"/></linearGradient></defs><rect width="141" height="100" fill="url(#tf-sky)"/><circle cx="112" cy="16" r="3" fill="#f3ead6" opacity=".9"/><path d="M0 37C13 31 26 29 40 32S66 27 82 30 115 25 141 29V100H0Z" fill="#454679"/></svg>
+              <svg class="tf-wifi" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#ffffff" stroke-width="1.4" opacity=".9"/><path d="M7.5 11a6.4 6.4 0 0 1 9 0M9.3 13a3.8 3.8 0 0 1 5.4 0" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="15.4" r="1.1" fill="#ffffff"/></svg>
+              <p class="tf-date">fredag 16. oktober</p>
+              <p class="tf-time">08:47</p>
+              <svg class="tf-wp" viewBox="0 0 141 100" preserveAspectRatio="xMidYMid slice"><path d="M0 46C20 38 40 36 60 40S100 42 141 35V100H0Z" fill="#2c2e58"/><path d="M0 68C30 60 60 59 86 64S124 69 141 66V100H0Z" fill="#57538a"/><path d="M0 84C36 77 72 78 100 82S130 86 141 84V100H0Z" fill="#7f78ac"/></svg>
+              <p class="tf-ntf"><span class="tf-ico">kr</span><span><b>Lønn<span>nå</span></b>Trekk i oktoberlønnen: egenandel, telefon. Beløp: en andel.</span></p>
+              <span class="tf-btn tf-lys"><svg viewBox="0 0 24 24"><path d="M7 2h10v4l-3 4v12h-4V10L7 6z" fill="#ffffff"/></svg></span>
+              <span class="tf-btn tf-kam"><svg viewBox="0 0 24 24"><path d="M3 7.5h4l2-2.5h6l2 2.5h4V19H3z" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="12" cy="12.5" r="3.3" fill="none" stroke="#ffffff" stroke-width="2.2"/></svg></span>
+              <span class="tf-home"></span>
+            </div>
+          </div>
+          <div class="tf-note">TO FOR ÉN.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Teknologi</p>
+        <h2 class="hl-lg"><a class="stretch" href="brettbar.html">Fullmektigens nye telefon deler kontoret på midten: <span class="nw">–&nbsp;Tidenes</span> røverkjøp</a></h2>
+        <p class="lead-sm">En fullmektig har kjøpt den brettbare iPhone Duo, med økonomisk bistand fra jobben. Han kaller det tidenes røverkjøp, men innrømmer at han måtte betale en andel selv. Kollegene er delt på midten, omtrent som telefonen.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets teknologiredaksjon</p>
+          <p>Brettet ut ved kaffemaskinen</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card uavhengig col">
       <div class="fig uv banner" aria-hidden="true">
         <div class="uv-scene">
@@ -1753,38 +1821,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
           <p>Notert på en serviett ved lunsjbordet</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card ko col">
-      <div class="fig ko banner" aria-hidden="true">
-        <div class="ko-scene">
-          <div class="ko-chat">
-            <p class="ko-lbl">Bergen · Teams</p>
-            <p class="ko-msg in">Har du mulighet til å bistå?</p>
-            <p class="ko-msg out">Ja!<span class="ko-react"><svg viewBox="0 0 16 16"><path d="M1.5 7h2.6v7.2H1.5zM5.3 14.2V7.3l2.8-4.9c.3-.5 1-.7 1.5-.3.4.3.6.8.4 1.3L9.3 6.4h3.9c.9 0 1.5.8 1.4 1.6l-.8 5c-.1.7-.7 1.2-1.4 1.2z" fill="currentColor"/></svg>1</span></p>
-            <p class="ko-status">Levert 10:15</p>
-          </div>
-          <div class="ko-kiosk">
-            <p class="ko-lbl">Oslo · Kø</p>
-            <div class="ko-screen">
-              <p class="ko-row"><span>Nå betjenes</span><b>0018</b></p>
-              <p class="ko-row"><span>Ditt nummer</span><b>1187</b></p>
-              <p class="ko-eta">Forventet ventetid:<b>21 måneder</b></p>
-            </div>
-            <div class="ko-slot"></div>
-            <div class="ko-note">IKKE PURR.</div>
-          </div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Kronikk</p>
-        <h2 class="hl-lg op"><a class="stretch" href="spisskompetanse.html">Oslo-kontoret faller bak i konkurransen om intern spisskompetanse</a></h2>
-        <p class="lead-sm">Fra nyttår kan sertifiserte partnere i Bergen la fullmektiger begynne å jobbe så snart Teams-meldingen er sendt. Oslo vurderte en lignende ordning og fant den for ressurskrevende. Det bør vi tenke nytt om.</p>
-        <div class="meta">
-          <p class="desk">Kristian</p>
-          <p>Skrevet i kø hos ressursstyringen</p>
         </div>
       </div>
     </article>
@@ -1887,6 +1923,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="13. oktober">
+          <p class="m-desk">Kronikk</p>
+          <h3 class="m-hl"><a class="stretch" href="spisskompetanse.html">Oslo-kontoret faller bak i konkurransen om intern spisskompetanse</a></h3>
+          <p class="m-tekst">Fra nyttår kan sertifiserte partnere i Bergen la fullmektiger begynne å jobbe så snart Teams-meldingen er sendt. Oslo vurderte en lignende ordning og fant den for ressurskrevende.</p>
+        </li>
         <li class="mappe" data-fane="12. oktober">
           <p class="m-desk">Portrettet</p>
           <h3 class="m-hl"><a class="stretch" href="portrett.html">Dagen før Borgarting: <span class="nw">–&nbsp;Vi</span> rir inn ved&nbsp;daggry</a></h3>

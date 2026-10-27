@@ -7,6 +7,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | Fil | Innhold |
 | --- | --- |
 | `index.html` | Forsiden |
+| `hekseri.html` | Kantina mistenkes for svart magi på tirsdager: «Intet mindre enn en heksegryte», med heksegryta der leseren legger i tirsdagens fem ingredienser |
 | `filmnerd.html` | Dikterens hjørne, uke 44: «Meg – en filmnerd», av Dikteren |
 | `samme-person.html` | Kristian og Markus kan være samme person: «Ingen har sett dem på samme bilde», med adgangskortene der navnelappene kan byttes |
 | `utropstegn.html` | Tre utropstegn avgjorde innleiesaken: Borgarting lagmannsretts dom gjengitt i sin helhet, med VG-faksimilen (`faksimile-vg.jpg`) |
