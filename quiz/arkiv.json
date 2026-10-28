@@ -2120,7 +2120,96 @@
      "svar": "Kyrillisk. Det er oppkalt etter munken Kyrillos."
     }
    ]
+  },
+  {
+   "dato": "2026-10-28",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "USA holder mellomvalg tirsdag 3. november. Hva heter de to kamrene i Kongressen som velges?",
+     "fasit": "Representantenes hus og Senatet",
+     "svar": "Representantenes hus og Senatet. Alle 435 plasser i Representantenes hus er på valg, men bare en tredel av senatorene."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Natt til lørdag feires halloween. Hvilket land regnes som opphavet til tradisjonen, via den keltiske høsttiden Samhain?",
+     "fasit": "Irland",
+     "svar": "Irland. Tradisjonen kom til USA med irske innvandrere på 1800-tallet."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva heter hovedstaden i Mongolia?",
+     "fasit": "Ulan Bator",
+     "svar": "Ulan Bator. Byen er en av verdens kaldeste hovedsteder."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år tapte Napoleon det avgjørende slaget ved Waterloo?",
+     "fasit": "1815",
+     "svar": "1815. Slaget sto i dagens Belgia, mot hertugen av Wellington og preusserne."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva kalles et stoff med pH-verdi under 7?",
+     "fasit": "Syre",
+     "svar": "Syre. Sitronsaft og eddik er kjente eksempler."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Pesten» fra 1947, som utspiller seg i den algeriske byen Oran?",
+     "fasit": "Albert Camus",
+     "svar": "Albert Camus. Boken regnes som en allegori over motstand og solidaritet."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken polsk komponist og pianist skrev blant annet nocturner og polonaiser?",
+     "fasit": "Frédéric Chopin",
+     "svar": "Frédéric Chopin. Han bodde store deler av livet i Paris."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilken norsk langrennsløper har flest VM-gull gjennom tidene?",
+     "fasit": "Marit Bjørgen",
+     "svar": "Marit Bjørgen. Hun tok 18 VM-gull og 15 olympiske medaljer."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den tyske, knuteformede bakervaren som gjerne er strødd med grovt salt?",
+     "fasit": "Brezel",
+     "svar": "Brezel. På norsk sier vi ofte pretzel."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilken fisk vandrer fra havet opp i elvene for å gyte og er kjent for å hoppe i fossefall?",
+     "fasit": "Laks",
+     "svar": "Laks. Den vender tilbake til elva den selv ble klekket i."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken mexicansk kunstner er kjent for en rekke selvportretter med markerte, sammenvokste øyenbryn?",
+     "fasit": "Frida Kahlo",
+     "svar": "Frida Kahlo. Hun bodde mesteparten av livet i Casa Azul i Mexico by."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva heter de japanske høyhastighetstogene som har gått siden 1964?",
+     "fasit": "Shinkansen",
+     "svar": "Shinkansen. På norsk kalles de ofte kulene."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva heter organet i kroppen som renser blodet og produserer urin?",
+     "fasit": "Nyrene",
+     "svar": "Nyrene. Et menneske kan klare seg fint med bare én."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hva kalles et dyr som spiser både planter og kjøtt?",
+     "fasit": "Altetende",
+     "svar": "Altetende. Mennesker og bjørner er eksempler."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 336
+ "antall_sporsmal": 350
 }
