@@ -2209,7 +2209,96 @@
      "svar": "Altetende. Mennesker og bjørner er eksempler."
     }
    ]
+  },
+  {
+   "dato": "2026-10-29",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilket land er vertskap for FNs klimatoppmøte COP31 i november?",
+     "fasit": "Tyrkia",
+     "svar": "Tyrkia. Møtet holdes i Antalya, mens Australia leder forhandlingene."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken by er Marokkos hovedstad, selv om Casablanca er større?",
+     "fasit": "Rabat",
+     "svar": "Rabat. Byen ligger ved Atlanterhavskysten og er en av landets fire kongebyer."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvem var Storbritannias statsminister under store deler av andre verdenskrig?",
+     "fasit": "Winston Churchill",
+     "svar": "Winston Churchill. Han tok over i mai 1940 og gikk av etter valgnederlag i 1945."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev den selvbiografiske romanserien «Min kamp» i seks bind, utgitt 2009–2011?",
+     "fasit": "Karl Ove Knausgård",
+     "svar": "Karl Ove Knausgård. Romanserien gjorde ham kjent langt utenfor Norges grenser."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket strykeinstrument spilles sittende, med instrumentet mellom knærne, og er større enn en bratsj?",
+     "fasit": "Cello",
+     "svar": "Cello. Det har fire strenger, stemt en oktav under bratsjen."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Torsdag 5. november markerer briter Guy Fawkes Night. Hvilken bygning forsøkte Fawkes og de sammensvorne å sprenge i 1605?",
+     "fasit": "Det britiske parlamentet",
+     "svar": "Det britiske parlamentet. Forsøket kalles kruttsammensvergelsen, og feires med bål og fyrverkeri."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken idrett skyver lag stein over isen mot «huset»?",
+     "fasit": "Curling",
+     "svar": "Curling. Sporten kalles ofte «sjakk på is»; norske lag har tatt OL-medaljer i den."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva er hovedingrediensen i hummus?",
+     "fasit": "Kikerter",
+     "svar": "Kikerter. Vanligvis blandes de med tahini, sitron og hvitløk."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket pungdyr lever nesten bare av eukalyptusblader?",
+     "fasit": "Koala",
+     "svar": "Koala. Bladene er næringsfattige, så dyret sover rundt 20 timer i døgnet."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilken app for korte videoer eies av det kinesiske selskapet ByteDance?",
+     "fasit": "TikTok",
+     "svar": "TikTok. Appen ble lansert internasjonalt i 2017."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken spansk maler er kjent for bildet med de smeltende klokkene, «Minnets vedvaren»?",
+     "fasit": "Salvador Dalí",
+     "svar": "Salvador Dalí. Maleriet fra 1931 er et hovedverk i surrealismen."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilken planet i solsystemet har kortest omløpstid rundt solen?",
+     "fasit": "Merkur",
+     "svar": "Merkur. Ett år på Merkur varer bare 88 jorddøgn."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva kalles tallet ett etterfulgt av hundre nuller?",
+     "fasit": "Googol",
+     "svar": "Googol. Navnet ble funnet på av en niåring på 1930-tallet, og ga navn til Google."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hva betyr det danske ordet «frokost» på norsk?",
+     "fasit": "Lunsj",
+     "svar": "Lunsj. Den første måltidet på dagen heter «morgenmad» på dansk."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 350
+ "antall_sporsmal": 364
 }
