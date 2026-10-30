@@ -2298,7 +2298,96 @@
      "svar": "Lunsj. Den første måltidet på dagen heter «morgenmad» på dansk."
     }
    ]
+  },
+  {
+   "dato": "2026-10-30",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken kjent bane i São Paulo er åstedet for Formel 1-løpet i Brasil søndag 8. november?",
+     "fasit": "Interlagos",
+     "svar": "Interlagos. Banen heter offisielt Autódromo José Carlos Pace og kjøres mot klokken."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Halloween feires i kveld. Hva het den gamle keltiske høstfesten som festen stammer fra?",
+     "fasit": "Samhain",
+     "svar": "Samhain. Den ble feiret rundt 31. oktober og markerte overgangen til den mørke årstiden."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er verdens største øy, hvis vi ikke regner Australia som øy?",
+     "fasit": "Grønland",
+     "svar": "Grønland. Øya er om lag 2,1 millioner kvadratkilometer og er et selvstyrt område i Danmark."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken egyptisk farao er kjent for gravkammeret som ble funnet nesten urørt i 1922?",
+     "fasit": "Tutankhamon",
+     "svar": "Tutankhamon. Howard Carter åpnet graven i Kongenes dal, med den berømte gullmasken."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem regnes som forfatteren av de greske epikkene «Iliaden» og «Odysseen»?",
+     "fasit": "Homer",
+     "svar": "Homer. Om han faktisk fantes, er fortsatt omdiskutert blant forskere."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken italiensk komponist skrev operaene «Rigoletto» og «La traviata»?",
+     "fasit": "Giuseppe Verdi",
+     "svar": "Giuseppe Verdi. Han levde 1813–1901 og regnes som en av operaens store navn."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles det i bowling når alle ti kjeglene felles i første kast?",
+     "fasit": "Strike",
+     "svar": "Strike. Tolv strikes på rad gir full pott, altså 300 poeng."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken drikk dyppes de små kjeksene i den italienske desserten tiramisu?",
+     "fasit": "Kaffe",
+     "svar": "Kaffe. Tradisjonelt brukes sterk espresso, ofte med litt likør."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket dyr er det største i kattefamilien?",
+     "fasit": "Tiger",
+     "svar": "Tiger. Sibirtigeren kan veie over 300 kilo."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva kalles forsøk på å lure folk til å gi fra seg passord og kortnummer via falske e-poster?",
+     "fasit": "Phishing",
+     "svar": "Phishing. Ordet er laget i tråd med «fishing», altså fisking."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvem malte «Nattevakten» fra 1642?",
+     "fasit": "Rembrandt",
+     "svar": "Rembrandt. Maleriet henger i Rijksmuseum i Amsterdam."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hva heter galaksen som solsystemet vårt er en del av?",
+     "fasit": "Melkeveien",
+     "svar": "Melkeveien. Den er en spiralgalakse med flere hundre milliarder stjerner."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva er det lengste og sterkeste beinet i menneskekroppen?",
+     "fasit": "Lårbenet",
+     "svar": "Lårbenet. Det kalles også femur."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hva heter det grønne stoffet i plantene som fanger opp sollys?",
+     "fasit": "Klorofyll",
+     "svar": "Klorofyll. Det er også derfor blader gulner om høsten, når stoffet brytes ned."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 364
+ "antall_sporsmal": 378
 }
