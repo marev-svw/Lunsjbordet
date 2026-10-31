@@ -2387,7 +2387,96 @@
      "svar": "Klorofyll. Det er også derfor blader gulner om høsten, når stoffet brytes ned."
     }
    ]
+  },
+  {
+   "dato": "2026-10-31",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilket valg holdes i USA tirsdag 3. november, midt i presidentperioden?",
+     "fasit": "Mellomvalget",
+     "svar": "Mellomvalget. Det kalles også «midterms». Hele Representantenes hus og en tredjedel av Senatet står på valg."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken tyrkisk kystby skal i november arrangere FNs klimatoppmøte COP31?",
+     "fasit": "Antalya",
+     "svar": "Antalya. Byen ligger ved Middelhavet og er et av Tyrkias største turistmål."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er Australias folkerikeste by?",
+     "fasit": "Sydney",
+     "svar": "Sydney. Mange tror det er Canberra, men den er bare hovedstaden."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken amerikansk president ble skutt i Dallas i november 1963?",
+     "fasit": "John F. Kennedy",
+     "svar": "John F. Kennedy. Han var president fra 1961 og ble etterfulgt av Lyndon B. Johnson."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev dramaet «Hamlet»?",
+     "fasit": "William Shakespeare",
+     "svar": "William Shakespeare. Stykket regnes som hans lengste, og åpner med et spøkelse på slottsmuren."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken komponist, født i Tyskland, skrev oratoriet «Messias» med «Halleluja-koret»?",
+     "fasit": "Georg Friedrich Händel",
+     "svar": "Georg Friedrich Händel. Han bodde mesteparten av livet i London og ble britisk statsborger."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken sport kan et lag score en «touchdown»?",
+     "fasit": "Amerikansk fotball",
+     "svar": "Amerikansk fotball. En touchdown gir seks poeng."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva kalles tørkede druer?",
+     "fasit": "Rosiner",
+     "svar": "Rosiner. Korinter er tørkede, små druer av en annen sort."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva kalles en gruppe ulver som lever sammen?",
+     "fasit": "En flokk",
+     "svar": "En flokk. Flokken ledes vanligvis av et par med unger, ikke av en «alfa»."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva kalles et lite bildesymbol som brukes for å uttrykke følelser i meldinger?",
+     "fasit": "Emoji",
+     "svar": "Emoji. Ordet er japansk og betyr omtrent «bildetegn»."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken fransk billedhugger skapte skulpturen «Tenkeren»?",
+     "fasit": "Auguste Rodin",
+     "svar": "Auguste Rodin. Den står blant annet foran Rodin-museet i Paris."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilken stjerne er nærmest solen vår?",
+     "fasit": "Proxima Centauri",
+     "svar": "Proxima Centauri. Den er rundt 4,2 lysår unna."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva heter hormonet som ofte kalles stresshormonet?",
+     "fasit": "Kortisol",
+     "svar": "Kortisol. Det produseres i binyrene."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hvilken edelgass brukes til å fylle ballonger som flyter?",
+     "fasit": "Helium",
+     "svar": "Helium. Det er det nest letteste grunnstoffet."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 378
+ "antall_sporsmal": 392
 }
