@@ -608,6 +608,26 @@
     100% { opacity: 0; transform: translateY(-26px) scale(1.1); }
   }
 
+  /* Karmasaken: kontoutskriften fra Universets karmabank med seks poster, saldo null, stempel og lapp.
+     Alle mål i em, så illustrasjonen vokser med hovedspalten. */
+  .fig.karma { background: var(--wall); }
+  .kb-scene { position: relative; width: min(100%, 18.5em); margin-top: 1em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .kb-ark { position: relative; padding: 1em 1.1em 3em; border-radius: 3px; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); transform: rotate(-1.5deg); }
+  .kb-ark p { margin: 0; }
+  .kb-bank { font-size: .625em; font-weight: 700; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; color: var(--sheet-muted); }
+  .kb-ark .kb-type { margin: .15em 0 .5em; padding-bottom: .45em; border-bottom: 1px solid var(--sheet-rule); font-size: 1.25em; font-weight: 800; line-height: 1.1; }
+  .kb-rad { display: grid; grid-template-columns: 2.9em minmax(0, 1fr) auto; gap: 0 .5em; padding: .28em 0; border-top: 1px dashed var(--sheet-rule); font-size: .75em; line-height: 1.3; }
+  .kb-rad:first-of-type { border-top: 0; }
+  .kb-rad span:first-child { font-weight: 600; font-variant-numeric: tabular-nums; }
+  .kb-rad span:nth-child(2) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--sheet-muted); }
+  .kb-rad b { font-weight: 800; font-variant-numeric: tabular-nums; color: var(--stamp); }
+  .kb-rad.kb-inn span:first-child, .kb-rad.kb-inn b { color: #1f6b4f; }
+  .kb-ark .kb-saldo { display: flex; justify-content: space-between; align-items: baseline; margin-top: .35em; padding-top: .4em; border-top: 2px solid #1c2226; font-size: .875em; font-weight: 800; }
+  .kb-saldo b { font-size: 1.3em; font-variant-numeric: tabular-nums; }
+  .kb-ark .kb-stempel { position: absolute; right: 1em; bottom: .75em; padding: .25em .5em .2em; border: 3px solid var(--stamp); border-radius: 5px; color: var(--stamp); font-size: .95em; font-weight: 900; line-height: 1; letter-spacing: .08em; text-transform: uppercase; transform: rotate(-6deg); opacity: .88; }
+  .kb-note { position: absolute; top: -1.5em; right: -1em; z-index: 1; width: 5.4em; height: 4.6em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .kb-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1546,6 +1566,36 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Arbeidstid</p>
+      <h2 class="hl-xl"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h2>
+      <p class="lead">Lenge har Markus tatt imot kolleger som kommer etter 08:30 med de samme seks ordene: «Jeg har vært her siden 07:15.» En morgen nylig forsov han seg. Kollegene kaller det en etterlengtet leveranse fra universet.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
+        <p>Bokført av universet</p>
+      </div>
+    </div>
+    <div class="fig karma" aria-hidden="true">
+      <div class="kb-scene">
+        <div class="kb-ark">
+          <p class="kb-bank">Universets karmabank</p>
+          <p class="kb-type">Kontoutskrift</p>
+          <p class="kb-rad"><span>08:31</span><span>Fullmektig</span><b>−1</b></p>
+          <p class="kb-rad"><span>08:34</span><span>Trainee</span><b>−1</b></p>
+          <p class="kb-rad"><span>08:42</span><span>Barnehagen avvist</span><b>−2</b></p>
+          <p class="kb-rad"><span>08:52</span><span>Partner, sagt lavere</span><b>−1</b></p>
+          <p class="kb-rad"><span>08:58</span><span>Tommel opp på Teams</span><b>−1</b></p>
+          <p class="kb-rad kb-inn"><span>Sent</span><span>Kontohaver forsov seg</span><b>+6</b></p>
+          <p class="kb-saldo"><span>Saldo</span><b>0</b></p>
+          <p class="kb-stempel">I balanse</p>
+        </div>
+        <div class="kb-note">SIDEN NÅ.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Kantina</p>
       <h2 class="hl-xl"><a class="stretch" href="hekseri.html">Kantina mistenkes for svart magi på tirsdager: <span class="nw">–&nbsp;Intet</span> mindre enn en&nbsp;heksegryte</a></h2>
       <p class="lead">Et tips til redaksjonen hevder at kantina på Filipstad Brygge driver med svart magi, men bare på tirsdager. Lunsjbordet har sammenlignet tirsdagens varmrett med kjente heksegryter.</p>
@@ -1593,7 +1643,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Dikterens hjørne</p>
@@ -1613,25 +1662,6 @@
           <div class="dk-rad dk-rad2"><span></span><span></span><span></span><span></span></div>
         </div>
         <div class="dk-note">SVART POLO.</div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Lunsjbordet undersøker</p>
-      <h2 class="hl-xl"><a class="stretch" href="samme-person.html">Kristian og Markus kan være samme person: <span class="nw">–&nbsp;Ingen</span> har sett dem på samme&nbsp;bilde</a></h2>
-      <p class="lead">De ligner, de har samme livshistorie og de samme interessene på fritiden. Nå har de også begynt å ta over hverandres liv. Et tips til redaksjonen ber kollegene følge med på når byttet skjer.</p>
-      <div class="meta">
-        <p class="desk">Lunsjbordets granskingsgruppe</p>
-        <p>Navnelappene er sjekket</p>
-      </div>
-    </div>
-    <div class="fig sp" aria-hidden="true">
-      <div class="sp-scene">
-        <div class="sp-kort a"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Kristian</p><div class="sp-strek"></div></div>
-        <div class="sp-kort b"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Markus</p><div class="sp-strek"></div></div>
-        <div class="sp-note">Hvem er hvem?</div>
       </div>
     </div>
   </article>
@@ -1675,54 +1705,48 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Innleiesaken</p>
-      <h2 class="hl-xl"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h2>
-      <p class="lead">Fire dager etter ankeforhandlingen har Borgarting lagmannsrett avsagt dom. Lunsjbordet gjengir den i sin helhet. Den kan leses på under seks minutter.</p>
+      <p class="kicker">Lunsjbordet undersøker</p>
+      <h2 class="hl-xl"><a class="stretch" href="samme-person.html">Kristian og Markus kan være samme person: <span class="nw">–&nbsp;Ingen</span> har sett dem på samme&nbsp;bilde</a></h2>
+      <p class="lead">De ligner, de har samme livshistorie og de samme interessene på fritiden. Nå har de også begynt å ta over hverandres liv. Et tips til redaksjonen ber kollegene følge med på når byttet skjer.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets EØS-redaksjon</p>
-        <p>Gjengitt uten forkortelser</p>
+        <p class="desk">Lunsjbordets granskingsgruppe</p>
+        <p>Navnelappene er sjekket</p>
       </div>
     </div>
-    <div class="fig dom" aria-hidden="true">
-      <div class="dm-scene">
-        <div class="dm-sheet">
-          <p class="dm-court">Borgarting lagmannsrett</p>
-          <p class="dm-type">Dom</p>
-          <p class="dm-para"><span class="dm-nr">(4)</span><span>Ett utropstegn kan være en oppfordring. <mark>Tre er et pålegg.</mark></span></p>
-          <p class="dm-slutt">Domsslutning</p>
-          <ol class="dm-list">
-            <li>Anken tas til følge.</li>
-            <li>EØS-spørsmålene tas etter ferien.</li>
-          </ol>
-          <p class="dm-stamp">!!!</p>
-        </div>
-        <div class="dm-note"><b>HUSK!!!</b><small>s. 4469 flg.</small></div>
+    <div class="fig sp" aria-hidden="true">
+      <div class="sp-scene">
+        <div class="sp-kort a"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Kristian</p><div class="sp-strek"></div></div>
+        <div class="sp-kort b"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Markus</p><div class="sp-strek"></div></div>
+        <div class="sp-note">Hvem er hvem?</div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card feed col">
-      <div class="fig feed banner" aria-hidden="true">
-        <div class="fd-scene">
-          <div class="fd-card">
-            <p class="fd-bar"><span class="fd-search">Søk uten Partner</span><span class="fd-bell">Varsler <b>99+</b></span></p>
-            <div class="fd-head"><span class="fd-av">P</span><p class="fd-who"><b>Partner <span>· 1.</span></b><span>Partner | Advokat | Ydmyk</span><span>Lørdag 06:12</span></p></div>
-            <p class="fd-text">Jeg er ydmyk og takknemlig for at Advokatnemnda har behandlet saken min så grundig. Hva tenker dere?</p>
-            <p class="fd-stats"><span class="fd-rx"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#3b7ddd"/><path d="M5.2 9.2h2.1v5.6H5.2zM8.2 14.8V9.4l2.2-3.8c.25-.4.75-.5 1.15-.25.32.22.45.62.32.98L11.2 8.4h3c.7 0 1.2.62 1.08 1.3l-.62 3.9c-.1.7-.55 1.2-1.1 1.2z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#d9573f"/><path d="M10 15.2 5.3 10.6a2.9 2.9 0 0 1 4.1-4.1l.6.6.6-.6a2.9 2.9 0 0 1 4.1 4.1z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#e3a92b"/><path d="M10 4.6a3.9 3.9 0 0 0-2.3 7.1v1.5h4.6v-1.5A3.9 3.9 0 0 0 10 4.6zM8 14.2h4v1.3H8z" fill="#ffffff"/></svg></span>214<span class="fd-cm">38 kommentarer</span></p>
-            <p class="fd-act"><span>Liker</span><span>Kommenter</span><span>Del</span></p>
-            <p class="fd-stamp">KRITIKK</p>
+    <article class="card dom col">
+      <div class="fig dom banner" aria-hidden="true">
+        <div class="dm-scene">
+          <div class="dm-sheet">
+            <p class="dm-court">Borgarting lagmannsrett</p>
+            <p class="dm-type">Dom</p>
+            <p class="dm-para"><span class="dm-nr">(4)</span><span>Ett utropstegn kan være en oppfordring. <mark>Tre er et pålegg.</mark></span></p>
+            <p class="dm-slutt">Domsslutning</p>
+            <ol class="dm-list">
+              <li>Anken tas til følge.</li>
+              <li>EØS-spørsmålene tas etter ferien.</li>
+            </ol>
+            <p class="dm-stamp">!!!</p>
           </div>
-          <div class="fd-note">IKKE BRUDD. BARE NOK.</div>
+          <div class="dm-note"><b>HUSK!!!</b><small>s. 4469 flg.</small></div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Justis</p>
-        <h2 class="hl-lg"><a class="stretch" href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a></h2>
-        <p class="lead-sm">Advokatnemnda har ikke funnet brudd på reglene for god advokatskikk. Den retter likevel kritikk mot en partner. Begrunnelsen er at nemndas medlemmer er så lei av innleggene hans at noe måtte gjøres.</p>
+        <p class="kicker">Innleiesaken</p>
+        <h2 class="hl-lg"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h2>
+        <p class="lead-sm">Fire dager etter ankeforhandlingen har Borgarting lagmannsrett avsagt dom. Lunsjbordet gjengir den i sin helhet. Den kan leses på under seks minutter.</p>
         <div class="meta">
-          <p class="desk">Lunsjbordets justisredaksjon</p>
-          <p>Lest i feeden, mot vår vilje</p>
+          <p class="desk">Lunsjbordets EØS-redaksjon</p>
+          <p>Gjengitt uten forkortelser</p>
         </div>
       </div>
     </article>
@@ -1767,6 +1791,31 @@
   </aside>
 
   <div class="pair">
+    <article class="card feed col">
+      <div class="fig feed banner" aria-hidden="true">
+        <div class="fd-scene">
+          <div class="fd-card">
+            <p class="fd-bar"><span class="fd-search">Søk uten Partner</span><span class="fd-bell">Varsler <b>99+</b></span></p>
+            <div class="fd-head"><span class="fd-av">P</span><p class="fd-who"><b>Partner <span>· 1.</span></b><span>Partner | Advokat | Ydmyk</span><span>Lørdag 06:12</span></p></div>
+            <p class="fd-text">Jeg er ydmyk og takknemlig for at Advokatnemnda har behandlet saken min så grundig. Hva tenker dere?</p>
+            <p class="fd-stats"><span class="fd-rx"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#3b7ddd"/><path d="M5.2 9.2h2.1v5.6H5.2zM8.2 14.8V9.4l2.2-3.8c.25-.4.75-.5 1.15-.25.32.22.45.62.32.98L11.2 8.4h3c.7 0 1.2.62 1.08 1.3l-.62 3.9c-.1.7-.55 1.2-1.1 1.2z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#d9573f"/><path d="M10 15.2 5.3 10.6a2.9 2.9 0 0 1 4.1-4.1l.6.6.6-.6a2.9 2.9 0 0 1 4.1 4.1z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#e3a92b"/><path d="M10 4.6a3.9 3.9 0 0 0-2.3 7.1v1.5h4.6v-1.5A3.9 3.9 0 0 0 10 4.6zM8 14.2h4v1.3H8z" fill="#ffffff"/></svg></span>214<span class="fd-cm">38 kommentarer</span></p>
+            <p class="fd-act"><span>Liker</span><span>Kommenter</span><span>Del</span></p>
+            <p class="fd-stamp">KRITIKK</p>
+          </div>
+          <div class="fd-note">IKKE BRUDD. BARE NOK.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Justis</p>
+        <h2 class="hl-lg"><a class="stretch" href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a></h2>
+        <p class="lead-sm">Advokatnemnda har ikke funnet brudd på reglene for god advokatskikk. Den retter likevel kritikk mot en partner. Begrunnelsen er at nemndas medlemmer er så lei av innleggene hans at noe måtte gjøres.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets justisredaksjon</p>
+          <p>Lest i feeden, mot vår vilje</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card telefon col">
       <div class="fig telefon banner" aria-hidden="true">
         <div class="tf-scene">
@@ -1793,34 +1842,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets teknologiredaksjon</p>
           <p>Brettet ut ved kaffemaskinen</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card uavhengig col">
-      <div class="fig uv banner" aria-hidden="true">
-        <div class="uv-scene">
-          <div class="uv-napkin">
-            <p class="uv-title">MANDAT</p>
-            <p class="uv-text">Vurdere oppfølging av HR-2026-2227-A, herunder hvem som er hva</p>
-            <dl class="uv-list">
-              <dt>Faste</dt><dd>særlig uavh. <s>ja</s> <span class="uv-red">?</span></dd>
-              <dt>Fullm.</dt><dd>ikke særlig</dd>
-              <dt>Partnere</dt><dd>bare her</dd>
-              <dt>Kantina</dt><dd>rammevilkår<span class="uv-red">!</span></dd>
-            </dl>
-          </div>
-          <svg class="uv-ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="38" fill="none" stroke="#8a5a2b" stroke-width="5" stroke-linecap="round" stroke-dasharray="170 14 30 26" opacity=".3"/><circle cx="50" cy="50" r="33" fill="none" stroke="#8a5a2b" stroke-width="1.5" stroke-dasharray="60 20 90 40" opacity=".18"/></svg>
-          <div class="uv-note">UAVKLART.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Arbeidsliv</p>
-        <h2 class="hl-lg"><a class="stretch" href="uavhengig.html">Fullmektigene vurderer å følge opp Høyesterett: <span class="nw">–&nbsp;Vi</span> vet bare ikke hvilken&nbsp;vei</a></h2>
-        <p class="lead-sm">Høyesterett strammet onsdag inn unntaket for særlig uavhengige stillinger. Nå har fullmektigene satt ned en arbeidsgruppe for å følge opp dommen. Hva oppfølgingen skal gå ut på, er uklart. Det samme er hvem som fortsatt er uavhengige.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
-          <p>Notert på en serviett ved lunsjbordet</p>
         </div>
       </div>
     </article>
@@ -1923,6 +1944,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="16. oktober">
+          <p class="m-desk">Arbeidsliv</p>
+          <h3 class="m-hl"><a class="stretch" href="uavhengig.html">Fullmektigene vurderer å følge opp Høyesterett: <span class="nw">–&nbsp;Vi</span> vet bare ikke hvilken&nbsp;vei</a></h3>
+          <p class="m-tekst">Høyesterett strammet inn unntaket for særlig uavhengige stillinger. Fullmektigene har satt ned en arbeidsgruppe for å følge opp dommen. Hva oppfølgingen skal gå ut på, er uklart.</p>
+        </li>
         <li class="mappe" data-fane="13. oktober">
           <p class="m-desk">Kronikk</p>
           <h3 class="m-hl"><a class="stretch" href="spisskompetanse.html">Oslo-kontoret faller bak i konkurransen om intern spisskompetanse</a></h3>
