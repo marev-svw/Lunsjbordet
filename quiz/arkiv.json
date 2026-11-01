@@ -2476,7 +2476,96 @@
      "svar": "Helium. Det er det nest letteste grunnstoffet."
     }
    ]
+  },
+  {
+   "dato": "2026-11-01",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken by arrangerer New York City Marathon søndag 1. november?",
+     "fasit": "New York",
+     "svar": "New York. Løpet starter på Staten Island og ender i Central Park."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilket land skal lede forhandlingene under COP31, selv om Tyrkia er vertsland for toppmøtet?",
+     "fasit": "Australia",
+     "svar": "Australia. Landene ble enige om en delt ordning, der Tyrkia er vert og Australia leder forhandlingene."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er hovedstaden i Kasakhstan?",
+     "fasit": "Astana",
+     "svar": "Astana. Byen het en periode Nursultan, men har hett Astana igjen siden 2022."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilket år falt Konstantinopel til osmanene?",
+     "fasit": "1453",
+     "svar": "1453. Byen ble senere kalt Istanbul."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Egalias døtre» fra 1977, der kvinner har makten?",
+     "fasit": "Gerd Brantenberg",
+     "svar": "Gerd Brantenberg. Boka snur kjønnsrollene på hodet og er blitt en norsk klassiker."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "I hvilken italiensk by ligger operahuset La Scala?",
+     "fasit": "Milano",
+     "svar": "Milano. Operahuset åpnet i 1778."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva heter det omtrent 90 kilometer lange skirennet mellom Sälen og Mora i Sverige?",
+     "fasit": "Vasaloppet",
+     "svar": "Vasaloppet. Rennet arrangeres første søndag i mars og er blant verdens største langløp."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva kalles den italienske risretten som lages ved at risen røres jevnlig mens buljong tilsettes litt etter litt?",
+     "fasit": "Risotto",
+     "svar": "Risotto. Til risotto brukes helst kortkornet ris som arborio eller carnaroli."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva er verdens største landlevende rovdyr?",
+     "fasit": "Isbjørn",
+     "svar": "Isbjørn. Hannene kan veie godt over 400 kilo."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hvilket grunnstoff, oppkalt etter planeten Uranus, er et tungt og radioaktivt metall som brukes i kjernekraft?",
+     "fasit": "Uran",
+     "svar": "Uran. Grunnstoffet ble oppdaget i 1789 og oppkalt etter planeten."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva kalles et dataprogram som er laget for å lure folk til å åpne det, oppkalt etter en gresk trehest?",
+     "fasit": "Trojaner",
+     "svar": "Trojaner. Navnet kommer fra hesten i fortellingen om Troja."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvem skapte «Fontene» i 1917, et snudd urinal signert «R. Mutt»?",
+     "fasit": "Marcel Duchamp",
+     "svar": "Marcel Duchamp. Verket regnes som et av de mest innflytelsesrike i moderne kunst."
+    },
+    {
+     "tema": "Økonomi",
+     "sporsmal": "Hvilken valuta brukes i Sveits?",
+     "fasit": "Sveitsisk franc",
+     "svar": "Sveitsisk franc. Landet er ikke medlem av EU og har ikke innført euro."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva heter den største muskelen i menneskekroppen?",
+     "fasit": "Setemuskelen",
+     "svar": "Setemuskelen. Den heter gluteus maximus på latin."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 392
+ "antall_sporsmal": 406
 }
