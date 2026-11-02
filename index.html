@@ -608,6 +608,31 @@
     100% { opacity: 0; transform: translateY(-26px) scale(1.1); }
   }
 
+  /* Dikterens hjørne, uke 45: skiltet i fellesarealet der noen har rettet SO til RO, kaffekoppen og lappen.
+     Alle mål i em, så illustrasjonen vokser med spalten. */
+  .fig.d45 { background: var(--wall); }
+  .d45-scene { position: relative; width: min(100%, 19.5em); margin: 1.4em 0 .6em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .d45-skilt { position: relative; padding: 1em 1.2em 1.1em; border-radius: .5em; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); transform: rotate(-1.5deg); }
+  .d45-skilt::before, .d45-skilt::after { content: ""; position: absolute; top: .55em; width: .45em; height: .45em; border-radius: 50%; background: #9aa5ab; box-shadow: inset 0 0 0 .1em #7d888e; }
+  .d45-skilt::before { left: .6em; }
+  .d45-skilt::after { right: .6em; }
+  .d45-skilt p { margin: 0; }
+  .d45-etg { font-size: .625em; font-weight: 700; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; text-align: center; color: var(--sheet-muted); }
+  .d45-skilt .d45-navn { margin: .7em 0 .55em; padding-bottom: .5em; border-bottom: 1px solid var(--sheet-rule); font-size: 1.75em; font-weight: 900; line-height: 1; letter-spacing: .04em; text-align: center; white-space: nowrap; }
+  .d45-so { position: relative; display: inline-block; }
+  .d45-so::after { content: ""; position: absolute; left: -.06em; right: -.02em; top: 46%; height: .11em; border-radius: 99px; background: var(--stamp); transform: rotate(-9deg); }
+  .d45-ro { position: absolute; left: -.05em; top: -.95em; font: 400 .62em/1 var(--marker); letter-spacing: 0; color: var(--stamp); transform: rotate(-8deg); }
+  .d45-rad { display: flex; justify-content: space-between; gap: .6em; padding: .28em 0; border-top: 1px dashed var(--sheet-rule); font-size: .75em; line-height: 1.3; }
+  .d45-navn + .d45-rad { border-top: 0; }
+  .d45-rad span { font-weight: 600; color: var(--sheet-muted); }
+  .d45-rad b { font-weight: 800; }
+  .d45-rad .d45-nei { color: var(--stamp); }
+  .d45-kopp { position: absolute; left: -.8em; bottom: -1em; z-index: 1; width: 2.4em; height: 2.1em; border-radius: .15em .15em .8em .8em; background: linear-gradient(to bottom, #6b4a2e 0 .32em, #fdfdfb .32em); box-shadow: 0 8px 12px -7px var(--drop); }
+  .d45-kopp::after { content: ""; position: absolute; top: .45em; right: -.62em; width: .7em; height: .9em; border: .25em solid #fdfdfb; border-left: 0; border-radius: 0 .6em .6em 0; }
+  .d45-kopp::before { content: ""; position: absolute; bottom: 100%; left: .7em; width: .8em; height: 1.2em; border-left: .16em solid var(--muted); border-radius: 50%; opacity: .5; }
+  .d45-note { position: absolute; top: -1.6em; right: -1em; z-index: 1; width: 5em; height: 4.4em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .d45-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Karmasaken: kontoutskriften fra Universets karmabank med seks poster, saldo null, stempel og lapp.
      Alle mål i em, så illustrasjonen vokser med hovedspalten. */
   .fig.karma { background: var(--wall); }
@@ -1566,6 +1591,33 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Dikterens hjørne</p>
+      <h2 class="hl-xl"><a class="stretch" href="ro-sial-sone.html">Ro-sial sone</a></h2>
+      <p class="lead">Ukens dikt handler om fellesarealet der verdener skulle møtes. Dikteren har vært der og funnet noe annet enn det som står på skiltet.</p>
+      <div class="meta">
+        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+        <p>Nytt dikt hver mandag</p>
+      </div>
+    </div>
+    <div class="fig d45" aria-hidden="true">
+      <div class="d45-scene">
+        <div class="d45-skilt">
+          <p class="d45-etg">Fellesareal · 3. etasje</p>
+          <p class="d45-navn"><span class="d45-so">SO<span class="d45-ro">RO</span></span>SIAL SONE</p>
+          <p class="d45-rad"><span>Knekkebrød</span><b>knekker</b></p>
+          <p class="d45-rad"><span>Kaffe</span><b>søtes</b></p>
+          <p class="d45-rad"><span>Varsler</span><b class="d45-nei">når ikke frem</b></p>
+          <p class="d45-rad"><span>Møteinnkallinger</span><b class="d45-nei">når ikke frem</b></p>
+        </div>
+        <div class="d45-kopp"></div>
+        <div class="d45-note">HYSJ.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Arbeidstid</p>
       <h2 class="hl-xl"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h2>
       <p class="lead">Lenge har Markus tatt imot kolleger som kommer etter 08:30 med de samme seks ordene: «Jeg har vært her siden 07:15.» En morgen nylig forsov han seg. Kollegene kaller det en etterlengtet leveranse fra universet.</p>
@@ -1593,7 +1645,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Kantina</p>
@@ -1642,29 +1693,6 @@
       </div>
     </div>
   </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Dikterens hjørne</p>
-      <h2 class="hl-xl"><a class="stretch" href="filmnerd.html">Meg –&nbsp;en filmnerd</a></h2>
-      <p class="lead">Ukens dikt handler om en dokumentar som finnes, bare ikke i Norge. Dikteren har lett i alle strømmetjenester og kledd seg for anledningen.</p>
-      <div class="meta">
-        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-        <p>Nytt dikt hver mandag</p>
-      </div>
-    </div>
-    <div class="fig dk" aria-hidden="true">
-      <div class="dk-scene">
-        <div class="dk-tv">
-          <p class="dk-bar"><span class="dk-logo">STRØM</span><span class="dk-sok">Holmes dokumentar</span></p>
-          <div class="dk-rad"><span></span><span></span><span class="dk-borte">?</span><span></span></div>
-          <div class="dk-melding"><b>Ikke tilgjengelig</b><small>Tittelen finnes ikke i ditt land</small></div>
-          <div class="dk-rad dk-rad2"><span></span><span></span><span></span><span></span></div>
-        </div>
-        <div class="dk-note">SVART POLO.</div>
-      </div>
-    </div>
-  </article>
   </div>
 
   <section class="pod" id="pod" aria-labelledby="pod-title">
@@ -1705,48 +1733,43 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Lunsjbordet undersøker</p>
-      <h2 class="hl-xl"><a class="stretch" href="samme-person.html">Kristian og Markus kan være samme person: <span class="nw">–&nbsp;Ingen</span> har sett dem på samme&nbsp;bilde</a></h2>
-      <p class="lead">De ligner, de har samme livshistorie og de samme interessene på fritiden. Nå har de også begynt å ta over hverandres liv. Et tips til redaksjonen ber kollegene følge med på når byttet skjer.</p>
+      <p class="kicker">Dikterens hjørne</p>
+      <h2 class="hl-xl"><a class="stretch" href="filmnerd.html">Meg –&nbsp;en filmnerd</a></h2>
+      <p class="lead">Ukens dikt handler om en dokumentar som finnes, bare ikke i Norge. Dikteren har lett i alle strømmetjenester og kledd seg for anledningen.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets granskingsgruppe</p>
-        <p>Navnelappene er sjekket</p>
+        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+        <p>Nytt dikt hver mandag</p>
       </div>
     </div>
-    <div class="fig sp" aria-hidden="true">
-      <div class="sp-scene">
-        <div class="sp-kort a"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Kristian</p><div class="sp-strek"></div></div>
-        <div class="sp-kort b"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Markus</p><div class="sp-strek"></div></div>
-        <div class="sp-note">Hvem er hvem?</div>
+    <div class="fig dk" aria-hidden="true">
+      <div class="dk-scene">
+        <div class="dk-tv">
+          <p class="dk-bar"><span class="dk-logo">STRØM</span><span class="dk-sok">Holmes dokumentar</span></p>
+          <div class="dk-rad"><span></span><span></span><span class="dk-borte">?</span><span></span></div>
+          <div class="dk-melding"><b>Ikke tilgjengelig</b><small>Tittelen finnes ikke i ditt land</small></div>
+          <div class="dk-rad dk-rad2"><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="dk-note">SVART POLO.</div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card dom col">
-      <div class="fig dom banner" aria-hidden="true">
-        <div class="dm-scene">
-          <div class="dm-sheet">
-            <p class="dm-court">Borgarting lagmannsrett</p>
-            <p class="dm-type">Dom</p>
-            <p class="dm-para"><span class="dm-nr">(4)</span><span>Ett utropstegn kan være en oppfordring. <mark>Tre er et pålegg.</mark></span></p>
-            <p class="dm-slutt">Domsslutning</p>
-            <ol class="dm-list">
-              <li>Anken tas til følge.</li>
-              <li>EØS-spørsmålene tas etter ferien.</li>
-            </ol>
-            <p class="dm-stamp">!!!</p>
-          </div>
-          <div class="dm-note"><b>HUSK!!!</b><small>s. 4469 flg.</small></div>
+    <article class="card sp col">
+      <div class="fig sp banner" aria-hidden="true">
+        <div class="sp-scene">
+          <div class="sp-kort a"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Kristian</p><div class="sp-strek"></div></div>
+          <div class="sp-kort b"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Markus</p><div class="sp-strek"></div></div>
+          <div class="sp-note">Hvem er hvem?</div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Innleiesaken</p>
-        <h2 class="hl-lg"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h2>
-        <p class="lead-sm">Fire dager etter ankeforhandlingen har Borgarting lagmannsrett avsagt dom. Lunsjbordet gjengir den i sin helhet. Den kan leses på under seks minutter.</p>
+        <p class="kicker">Lunsjbordet undersøker</p>
+        <h2 class="hl-lg"><a class="stretch" href="samme-person.html">Kristian og Markus kan være samme person: <span class="nw">–&nbsp;Ingen</span> har sett dem på samme&nbsp;bilde</a></h2>
+        <p class="lead-sm">De ligner, de har samme livshistorie og de samme interessene på fritiden. Nå har de også begynt å ta over hverandres liv. Et tips til redaksjonen ber kollegene følge med på når byttet skjer.</p>
         <div class="meta">
-          <p class="desk">Lunsjbordets EØS-redaksjon</p>
-          <p>Gjengitt uten forkortelser</p>
+          <p class="desk">Lunsjbordets granskingsgruppe</p>
+          <p>Navnelappene er sjekket</p>
         </div>
       </div>
     </article>
@@ -1791,6 +1814,34 @@
   </aside>
 
   <div class="pair">
+    <article class="card dom col">
+      <div class="fig dom banner" aria-hidden="true">
+        <div class="dm-scene">
+          <div class="dm-sheet">
+            <p class="dm-court">Borgarting lagmannsrett</p>
+            <p class="dm-type">Dom</p>
+            <p class="dm-para"><span class="dm-nr">(4)</span><span>Ett utropstegn kan være en oppfordring. <mark>Tre er et pålegg.</mark></span></p>
+            <p class="dm-slutt">Domsslutning</p>
+            <ol class="dm-list">
+              <li>Anken tas til følge.</li>
+              <li>EØS-spørsmålene tas etter ferien.</li>
+            </ol>
+            <p class="dm-stamp">!!!</p>
+          </div>
+          <div class="dm-note"><b>HUSK!!!</b><small>s. 4469 flg.</small></div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Innleiesaken</p>
+        <h2 class="hl-lg"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h2>
+        <p class="lead-sm">Fire dager etter ankeforhandlingen har Borgarting lagmannsrett avsagt dom. Lunsjbordet gjengir den i sin helhet. Den kan leses på under seks minutter.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets EØS-redaksjon</p>
+          <p>Gjengitt uten forkortelser</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card feed col">
       <div class="fig feed banner" aria-hidden="true">
         <div class="fd-scene">
@@ -1812,36 +1863,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets justisredaksjon</p>
           <p>Lest i feeden, mot vår vilje</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card telefon col">
-      <div class="fig telefon banner" aria-hidden="true">
-        <div class="tf-scene">
-          <div class="tf-dev">
-            <div class="tf-scr">
-              <svg class="tf-wp" viewBox="0 0 141 100" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="tf-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#171c39"/><stop offset=".16" stop-color="#2c3160"/><stop offset=".3" stop-color="#6a6597"/><stop offset=".4" stop-color="#c3929f"/></linearGradient></defs><rect width="141" height="100" fill="url(#tf-sky)"/><circle cx="112" cy="16" r="3" fill="#f3ead6" opacity=".9"/><path d="M0 37C13 31 26 29 40 32S66 27 82 30 115 25 141 29V100H0Z" fill="#454679"/></svg>
-              <svg class="tf-wifi" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10.5" fill="none" stroke="#ffffff" stroke-width="1.4" opacity=".9"/><path d="M7.5 11a6.4 6.4 0 0 1 9 0M9.3 13a3.8 3.8 0 0 1 5.4 0" fill="none" stroke="#ffffff" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="15.4" r="1.1" fill="#ffffff"/></svg>
-              <p class="tf-date">fredag 16. oktober</p>
-              <p class="tf-time">08:47</p>
-              <svg class="tf-wp" viewBox="0 0 141 100" preserveAspectRatio="xMidYMid slice"><path d="M0 46C20 38 40 36 60 40S100 42 141 35V100H0Z" fill="#2c2e58"/><path d="M0 68C30 60 60 59 86 64S124 69 141 66V100H0Z" fill="#57538a"/><path d="M0 84C36 77 72 78 100 82S130 86 141 84V100H0Z" fill="#7f78ac"/></svg>
-              <p class="tf-ntf"><span class="tf-ico">kr</span><span><b>Lønn<span>nå</span></b>Trekk i oktoberlønnen: egenandel, telefon. Beløp: en andel.</span></p>
-              <span class="tf-btn tf-lys"><svg viewBox="0 0 24 24"><path d="M7 2h10v4l-3 4v12h-4V10L7 6z" fill="#ffffff"/></svg></span>
-              <span class="tf-btn tf-kam"><svg viewBox="0 0 24 24"><path d="M3 7.5h4l2-2.5h6l2 2.5h4V19H3z" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/><circle cx="12" cy="12.5" r="3.3" fill="none" stroke="#ffffff" stroke-width="2.2"/></svg></span>
-              <span class="tf-home"></span>
-            </div>
-          </div>
-          <div class="tf-note">TO FOR ÉN.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Teknologi</p>
-        <h2 class="hl-lg"><a class="stretch" href="brettbar.html">Fullmektigens nye telefon deler kontoret på midten: <span class="nw">–&nbsp;Tidenes</span> røverkjøp</a></h2>
-        <p class="lead-sm">En fullmektig har kjøpt den brettbare iPhone Duo, med økonomisk bistand fra jobben. Han kaller det tidenes røverkjøp, men innrømmer at han måtte betale en andel selv. Kollegene er delt på midten, omtrent som telefonen.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets teknologiredaksjon</p>
-          <p>Brettet ut ved kaffemaskinen</p>
         </div>
       </div>
     </article>
@@ -1944,6 +1965,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="16. oktober">
+          <p class="m-desk">Teknologi</p>
+          <h3 class="m-hl"><a class="stretch" href="brettbar.html">Fullmektigens nye telefon deler kontoret på midten: <span class="nw">–&nbsp;Tidenes</span> røverkjøp</a></h3>
+          <p class="m-tekst">En fullmektig har kjøpt den brettbare iPhone Duo, med økonomisk bistand fra jobben. Han kaller det tidenes røverkjøp. Kollegene er delt på midten, omtrent som telefonen.</p>
+        </li>
         <li class="mappe" data-fane="16. oktober">
           <p class="m-desk">Arbeidsliv</p>
           <h3 class="m-hl"><a class="stretch" href="uavhengig.html">Fullmektigene vurderer å følge opp Høyesterett: <span class="nw">–&nbsp;Vi</span> vet bare ikke hvilken&nbsp;vei</a></h3>

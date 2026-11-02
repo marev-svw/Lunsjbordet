@@ -9,6 +9,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `index.html` | Forsiden |
 | `karma.html` | Karmaen var på jobb før Markus: «Jeg har vært her siden nå», med kontoutskriften fra Universets karmabank der leseren bokfører postene selv |
 | `hekseri.html` | Kantina mistenkes for svart magi på tirsdager: «Intet mindre enn en heksegryte», med heksegryta der leseren legger i tirsdagens fem ingredienser |
+| `ro-sial-sone.html` | Dikterens hjørne, uke 45: «Ro-sial sone», av Dikteren |
 | `filmnerd.html` | Dikterens hjørne, uke 44: «Meg – en filmnerd», av Dikteren |
 | `samme-person.html` | Kristian og Markus kan være samme person: «Ingen har sett dem på samme bilde», med adgangskortene der navnelappene kan byttes |
 | `utropstegn.html` | Tre utropstegn avgjorde innleiesaken: Borgarting lagmannsretts dom gjengitt i sin helhet, med VG-faksimilen (`faksimile-vg.jpg`) |
