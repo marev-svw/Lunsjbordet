@@ -2654,7 +2654,96 @@
      "svar": "Mjøsa. Innsjøen ligger mellom Innlandet og Akershus og er over 440 meter dyp ved det dypeste."
     }
    ]
+  },
+  {
+   "dato": "2026-11-03",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken amerikansk lørdagsfeiring i slutten av november åpner julehandelen med store rabatter, og kommer i år fredag 27. november?",
+     "fasit": "Black Friday",
+     "svar": "Black Friday. Dagen kommer dagen etter Thanksgiving, som i år er torsdag 26. november."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hva kalles novembermåneden hvor menn lar barten gro for å sette søkelys på mannshelse og kreft?",
+     "fasit": "Movember",
+     "svar": "Movember. Ordet er satt sammen av «moustache» og «november»."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "I hvilket land ligger inkabyen Machu Picchu?",
+     "fasit": "Peru",
+     "svar": "Peru. Byen ligger høyt oppe i Andesfjellene."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken amerikansk president ledet unionen under borgerkrigen 1861–1865?",
+     "fasit": "Abraham Lincoln",
+     "svar": "Abraham Lincoln. Han ble skutt i 1865, kort tid etter krigens slutt."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken amerikansk forfatter skrev «Den gamle mannen og havet»?",
+     "fasit": "Ernest Hemingway",
+     "svar": "Ernest Hemingway. Boken kom i 1952 og ga ham Pulitzerprisen."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken amerikansk sangerinne er kjent som «Queen of Pop»?",
+     "fasit": "Madonna",
+     "svar": "Madonna. Hun slo igjennom på 1980-tallet med låter som «Like a Virgin»."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilken tysk by var vertskap for sommer-OL i 1972?",
+     "fasit": "München",
+     "svar": "München. Lekene ble overskygget av gisseltragedien."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken kål er hovedingrediensen i den koreanske retten kimchi?",
+     "fasit": "Kinakål",
+     "svar": "Kinakål. Kålen gjæres med chili, hvitløk og ingefær."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva spiser pandaen nesten utelukkende?",
+     "fasit": "Bambus",
+     "svar": "Bambus. En voksen panda kan spise over ti kilo om dagen."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "I hvilket museum i Madrid henger Picassos «Guernica»?",
+     "fasit": "Museo Reina Sofía",
+     "svar": "Museo Reina Sofía. Bildet viser bombingen av en baskisk by i 1937."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hvilket naturlig mineral er det hardeste vi kjenner?",
+     "fasit": "Diamant",
+     "svar": "Diamant. Mineralet består av rent karbon."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvem var det første mennesket som satte foten på månen?",
+     "fasit": "Neil Armstrong",
+     "svar": "Neil Armstrong. Det skjedde 21. juli 1969 under Apollo 11."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva kalles en trekant der alle tre sidene er like lange?",
+     "fasit": "Likesidet trekant",
+     "svar": "Likesidet trekant. Alle vinklene er da 60 grader."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva heter proteinet i de røde blodlegemene som binder oksygen?",
+     "fasit": "Hemoglobin",
+     "svar": "Hemoglobin. Det inneholder jern, og gir blodet den røde fargen."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 420
+ "antall_sporsmal": 434
 }
