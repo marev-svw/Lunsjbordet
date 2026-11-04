@@ -2743,7 +2743,96 @@
      "svar": "Hemoglobin. Det inneholder jern, og gir blodet den røde fargen."
     }
    ]
+  },
+  {
+   "dato": "2026-11-04",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Tirsdag var det mellomvalg i USA, midt i en presidents andre periode. Hvem er president?",
+     "fasit": "Donald Trump",
+     "svar": "Donald Trump. Han tiltrådte i januar 2025, og mellomvalget avgjør kontrollen over Kongressen."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hva kalles den kinesiske netthandelsdagen 11. november, som regnes som verdens største shoppingdag?",
+     "fasit": "Singles' Day",
+     "svar": "Singles' Day. Dagen ble gjort stor av Alibaba og er valgt fordi datoen er skrevet 11.11."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket fjellkjede i Russland regnes som grensen mellom Europa og Asia?",
+     "fasit": "Uralfjellene",
+     "svar": "Uralfjellene. Kjeden strekker seg over 2000 kilometer fra Nordishavet og sørover mot Kasakhstan."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvem ble Norges konge i 1905, etter unionsoppløsningen med Sverige?",
+     "fasit": "Haakon VII",
+     "svar": "Haakon VII. Han var født som prins Carl av Danmark."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hvilket kjemisk symbol har grunnstoffet gull?",
+     "fasit": "Au",
+     "svar": "Au. Symbolet kommer fra det latinske «aurum»."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter det lange, smale franske hvetebrødet med sprø skorpe?",
+     "fasit": "Baguette",
+     "svar": "Baguette. Brødet er så tett knyttet til Frankrike at tradisjonen fikk plass på Unescos liste over immateriell kulturarv."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken russisk komponist skrev balletten «Svanesjøen»?",
+     "fasit": "Pjotr Tsjajkovskij",
+     "svar": "Pjotr Tsjajkovskij. Han skrev også «Nøtteknekkeren» og «Tornerose»."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles det når en golfspiller bruker ett slag mindre enn par på et hull?",
+     "fasit": "Birdie",
+     "svar": "Birdie. To slag under par kalles ørn, og tre kalles albatross."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken Disney-film handler om løveungen Simba?",
+     "fasit": "«Løvenes konge»",
+     "svar": "«Løvenes konge». Filmen kom i 1994 og ble nyinnspilt i 2019."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hvilken sans er øresneglen, også kalt cochlea, viktigst for?",
+     "fasit": "Hørsel",
+     "svar": "Hørsel. Sneglehuset omgjør lydbølger til nervesignaler."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilket stjernebilde kjennes igjen på tre stjerner på rekke som kalles beltet?",
+     "fasit": "Orion",
+     "svar": "Orion. Stjernebildet er oppkalt etter en jeger i gresk mytologi."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hva betyr det japanske ordet «arigatō» på norsk?",
+     "fasit": "Takk",
+     "svar": "Takk. Mer høflig sier man «arigatō gozaimasu»."
+    },
+    {
+     "tema": "Norge",
+     "sporsmal": "Hvilken norsk by er kjent som «regnbyen», med over 200 regndager i året?",
+     "fasit": "Bergen",
+     "svar": "Bergen. Byen ligger mellom de syv fjellene og får mye regn fra Atlanterhavet."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hva er summen av vinklene i en trekant?",
+     "fasit": "180 grader",
+     "svar": "180 grader. Det gjelder alle trekanter på et flatt plan."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 434
+ "antall_sporsmal": 448
 }
