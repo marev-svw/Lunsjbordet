@@ -71,7 +71,7 @@ Tegneserie i fire ruter øverst på forsiden (`<section class="stripe" id="strip
 
 Ny stripe hver uke:
 
-1. Bytt tittel (`st-title`) og uke i bylinjen (`st-by`).
+1. Bytt stripens tittel (`h3.st-title`) og uke i linjen over (`p.st-by`). Overskriften «Ukas stripe» (`h2.st-name`) står fast.
 2. Bytt ut de fire `<li class="st-panel">`. Hver rute er en inline SVG med `viewBox="0 0 320 240"`, `role="img"` og en `<title>` som beskriver ruten og gjengir replikkene, så skjermlesere får med seg hele stripen.
 3. Bruk klassene som finnes (`st-wall`, `st-counter`, `st-bubble`, `st-say`, `st-cap-box`, `st-note` og så videre), så stripen følger lyst og mørkt tema. Hold replikkene korte: tekst i rutene bør ikke være mindre enn 11 i SVG-enheter.
 4. Fjern CSS for figurer eller detaljer som ikke brukes lenger, og legg ny CSS under kommentaren «Rutene».

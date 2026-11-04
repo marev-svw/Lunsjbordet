@@ -230,10 +230,11 @@
   /* Ukas stripe: tegneserie i fire ruter øverst på forsiden. Fire på rad på stor skjerm, ellers
      sveipbar (to ruter om gangen på mellomstor skjerm, én på mobil), så stripen aldri blir høy */
   .stripe { position: relative; overflow: hidden; padding: 1rem 1.1rem 1.1rem; border-radius: 8px; background: var(--card); color: var(--ink); font-family: var(--sans); container-type: inline-size; }
-  .st-head { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .75rem; margin: 0 0 .85rem; }
-  .st-tag { margin: 0; padding: .15rem .55rem; border-radius: 999px; background: var(--postit); color: #1c2226; font-size: .75rem; font-weight: 800; }
-  .st-title { margin: 0; font-size: 1.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; }
-  .st-by { margin: 0 0 0 auto; font-size: .8125rem; color: var(--muted); }
+  /* Hodet følger arkivet og podkasten: liten linje over, stor overskrift, stripens tittel under */
+  .st-head { margin: .1rem 0 1rem; }
+  .st-by { margin: 0 0 .3rem; font-size: .8125rem; font-weight: 700; color: var(--link); }
+  .st-name { margin: 0; font-size: clamp(1.5rem, 1.1rem + 1.6cqi, 2.1rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; }
+  .st-title { margin: .35rem 0 0; font: italic 500 1.1875rem/1.3 var(--serif); }
   .st-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
   .st-panels { display: flex; gap: .6rem; margin: 0 -1.1rem; padding: 0 1.1rem; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 1.1rem; scrollbar-width: none; overscroll-behavior-x: contain; }
   .st-panels::-webkit-scrollbar { display: none; }
@@ -242,11 +243,9 @@
   .st-hint { margin: .55rem 0 0; font-size: .75rem; color: var(--muted); }
   @container (min-width: 60rem) {
     .st-panels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin: 0; padding: 0; overflow: visible; }
-    .st-title { font-size: 1.375rem; }
     .st-hint { display: none; }
   }
   @container (max-width: 35.99rem) {
-    .st-by { margin-left: 0; flex-basis: 100%; }
     .st-panel { flex-basis: 86%; }
   }
 
@@ -1217,9 +1216,9 @@
 
 <section class="stripe" id="stripe" aria-labelledby="stripe-title">
   <div class="st-head">
-    <p class="st-tag">Ukas stripe</p>
-    <h2 class="st-title" id="stripe-title">Lovlig varslet</h2>
     <p class="st-by">Lunsjbordets tegneredaksjon · uke 45</p>
+    <h2 class="st-name" id="stripe-title">Ukas stripe</h2>
+    <h3 class="st-title">Lovlig varslet</h3>
   </div>
   <svg class="st-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="st-steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color: var(--steel-hi)"/><stop offset="1" style="stop-color: var(--steel)"/></linearGradient><filter id="st-glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
   <ol class="st-panels">
