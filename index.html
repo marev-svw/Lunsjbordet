@@ -211,11 +211,9 @@
   .layout { max-width: 82rem; margin: 0 auto; padding: 1.5rem max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px)); display: grid; gap: 1.25rem; }
   @media (min-width: 70rem) {
     .layout { grid-template-columns: minmax(0, 1fr) 20rem; column-gap: 1.5rem; align-items: start; }
-    .plusbar { grid-column: 1 / -1; grid-row: 1; }
+    .stripe { grid-column: 1 / -1; grid-row: 1; }
     .quiz { grid-column: 1; grid-row: 2; }
     .front { grid-column: 1; grid-row: 3; }
-    .layout:has(> .plusbar[hidden]) > .quiz { grid-row: 1; }
-    .layout:has(> .plusbar[hidden]) > .front { grid-row: 2; }
   }
   /* Hovedspalten tilpasser seg sin egen bredde, ikke skjermens */
   .front { min-width: 0; display: grid; gap: 1.25rem; container-type: inline-size; }
@@ -229,38 +227,64 @@
   .stretch:focus-visible { outline: none; }
   .stretch:focus-visible::after { outline: 3px solid var(--link); outline-offset: -3px; }
 
-  /* Lunsj+-reklamen under toppbanneret: hvit flate med gul knapp, så den skiller seg fra det gule banneret */
-  .plusbar { position: relative; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: .8rem 1rem; padding: 1rem 1.1rem; overflow: hidden; border-radius: 8px; background: var(--card); color: var(--ink); font-family: var(--sans); }
-  .plusbar[hidden] { display: none; }
-  .bun { width: 3.4rem; height: 3.4rem; filter: drop-shadow(0 4px 4px rgba(60, 35, 10, .25)); }
-  .pb-brand { display: flex; flex-wrap: wrap; align-items: center; gap: .45rem; margin: 0 0 .25rem; }
-  .pb-logo { font-size: 1rem; font-weight: 900; letter-spacing: -0.02em; }
-  .pb-plus { display: inline-grid; place-items: center; width: 1.15em; height: 1.15em; margin-left: .12em; border-radius: 4px; background: var(--postit); color: #1c2226; font-size: .9em; vertical-align: .08em; }
-  .pb-tag { padding: .12rem .5rem; border: 1.5px solid currentColor; border-radius: 999px; font-size: .7rem; font-weight: 800; }
-  .pb-head { margin: 0; font-size: 1.125rem; font-weight: 800; line-height: 1.2; letter-spacing: -0.015em; text-wrap: balance; }
-  .pb-head s { opacity: .5; text-decoration-thickness: .09em; }
-  .pb-perks, .pb-fine { display: none; }
-  .pb-actions { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: .35rem 1rem; }
-  .pb-cta { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .6rem 1.15rem; border: 0; border-radius: 8px; background: var(--postit); color: #1c2226; font: 800 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
-  .pb-no { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .3rem 0; border: 0; background: none; color: var(--ink); font: 500 .8125rem/1.3 var(--sans); text-align: left; text-decoration: underline; text-underline-offset: .15em; cursor: pointer; touch-action: manipulation; }
-  .pb-cta:focus-visible, .pb-no:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; }
-  .pb-msg { display: none; grid-column: 2 / -1; margin: 0; font-size: 1rem; font-weight: 800; }
-  .pb-msg:focus { outline: none; }
-  .plusbar.done .pb-copy, .plusbar.done .pb-actions { display: none; }
-  .plusbar.done .pb-msg { display: block; }
-  .plusbar.leaving { opacity: 0; transition: opacity .3s ease; }
-  @media (min-width: 48rem) {
-    .plusbar { grid-template-columns: auto minmax(0, 1fr) auto; gap: 1.25rem; padding: 1.1rem 1.4rem; }
-    .bun { width: 4.25rem; height: 4.25rem; }
-    .pb-head { font-size: 1.375rem; }
-    .pb-perks { display: flex; flex-wrap: wrap; gap: .3rem 1.1rem; margin: .5rem 0 0; padding: 0; list-style: none; font-size: .875rem; font-weight: 600; }
-    .pb-perks li { display: flex; align-items: center; gap: .4rem; }
-    .pb-perks li::before { content: ""; width: .65rem; height: .35rem; border-left: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg) translateY(-2px); }
-    .pb-fine { display: block; margin: .4rem 0 0; font-size: .75rem; opacity: .75; }
-    .pb-actions { grid-column: auto; flex-direction: column; align-items: stretch; max-width: 15rem; text-align: center; }
-    .pb-no { text-align: center; }
+  /* Ukas stripe: tegneserie i fire ruter øverst på forsiden. Fire på rad på stor skjerm, ellers
+     sveipbar (to ruter om gangen på mellomstor skjerm, én på mobil), så stripen aldri blir høy */
+  .stripe { position: relative; overflow: hidden; padding: 1rem 1.1rem 1.1rem; border-radius: 8px; background: var(--card); color: var(--ink); font-family: var(--sans); container-type: inline-size; }
+  .st-head { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem .75rem; margin: 0 0 .85rem; }
+  .st-tag { margin: 0; padding: .15rem .55rem; border-radius: 999px; background: var(--postit); color: #1c2226; font-size: .75rem; font-weight: 800; }
+  .st-title { margin: 0; font-size: 1.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; }
+  .st-by { margin: 0 0 0 auto; font-size: .8125rem; color: var(--muted); }
+  .st-defs { position: absolute; width: 0; height: 0; overflow: hidden; }
+  .st-panels { display: flex; gap: .6rem; margin: 0 -1.1rem; padding: 0 1.1rem; list-style: none; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 1.1rem; scrollbar-width: none; overscroll-behavior-x: contain; }
+  .st-panels::-webkit-scrollbar { display: none; }
+  .st-panel { flex: 0 0 46%; scroll-snap-align: start; overflow: hidden; border: 1px solid var(--line); border-radius: 7px; }
+  .st-panel svg { display: block; width: 100%; height: auto; }
+  .st-hint { margin: .55rem 0 0; font-size: .75rem; color: var(--muted); }
+  @container (min-width: 60rem) {
+    .st-panels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .75rem; margin: 0; padding: 0; overflow: visible; }
+    .st-title { font-size: 1.375rem; }
+    .st-hint { display: none; }
   }
-  @media (prefers-reduced-motion: reduce) { .plusbar.leaving { transition: none; } }
+  @container (max-width: 35.99rem) {
+    .st-by { margin-left: 0; flex-basis: 100%; }
+    .st-panel { flex-basis: 86%; }
+  }
+
+  /* Rutene */
+  .st-wall { fill: var(--wall); }
+  .st-skirt { fill: var(--frame); opacity: .25; }
+  .st-top { fill: var(--counter-hi); }
+  .st-counter { fill: var(--counter); }
+  .st-floor { fill: var(--floor); }
+  .st-frame { stroke: var(--frame); stroke-width: 1.2; }
+  .st-cap { fill: var(--steel-hi); stroke: var(--frame); stroke-width: 1.2; }
+  .st-display { fill: #0e1113; stroke: var(--frame); stroke-width: 1.2; }
+  .st-led { fill: var(--amber); font: 800 9.5px/1 var(--sans); letter-spacing: .06em; text-anchor: middle; }
+  .st-btn { fill: var(--btn-mid); stroke: var(--btn-lo); stroke-width: 1.2; }
+  .st-recess { fill: #1c2226; opacity: .55; }
+  .st-syrup { fill: #c27a2c; stroke: #8f5418; stroke-width: 1.2; }
+  .st-empty { fill: var(--tape); stroke: var(--frame); stroke-width: 1.2; }
+  .st-label { fill: #fdfdfb; opacity: .9; }
+  .st-cap-box { fill: var(--postit); }
+  .st-cap-text { fill: #1c2226; font: 800 11.5px/1 var(--sans); }
+  .st-bubble { fill: var(--sheet); stroke: #1c2226; stroke-width: 1.4; stroke-linejoin: round; }
+  .st-bubble-fill { fill: var(--sheet); }
+  .st-say { fill: #1c2226; font: 700 12px/1 var(--sans); text-anchor: middle; }
+  .st-legs { fill: #39424a; }
+  .st-shoe { fill: #232a2f; }
+  .st-mug { fill: #fdfdfb; stroke: #9aa4a7; stroke-width: 1.2; }
+  .st-mug-h { stroke: #9aa4a7; }
+  .st-book { fill: var(--stamp); }
+  .st-book-spine { fill: #7d1a14; }
+  .st-book-gold { fill: #d8b24a; }
+  .st-note { fill: var(--postit); filter: drop-shadow(0 3px 2px rgba(20, 26, 30, .25)); }
+  .st-note.st-faded { fill: #d9c98a; }
+  .st-tape { fill: var(--tape); }
+  .st-note-t { fill: #1c2226; font: 400 9.5px/1 var(--marker); text-anchor: middle; }
+  .st-web path { stroke: var(--muted); stroke-width: .8; opacity: .6; }
+  .st-alarm { animation: st-blink 1.4s steps(1, end) infinite; }
+  @keyframes st-blink { 50% { opacity: .4; } }
+  @media (prefers-reduced-motion: reduce) { .st-alarm { animation: none; } }
 
   /* Nytraktet (siste nytt) */
   .breaking { overflow: hidden; border-radius: 8px; background: var(--card); font-family: var(--sans); }
@@ -303,7 +327,6 @@
   .br-body .lb-slutt { margin: 0; padding-top: .75rem; border-top: 1px solid var(--line); font: 700 .8125rem/1.4 var(--sans); color: var(--muted); }
   @media (min-width: 70rem) {
     .breaking { position: sticky; top: 1rem; grid-column: 2; grid-row: 2 / span 2; max-height: calc(100vh - 2rem); overflow: auto; padding: 1.2rem 1.25rem 1.4rem; }
-    .layout:has(> .plusbar[hidden]) > .breaking { grid-row: 1 / span 2; }
     .br-toggle { display: none; }
     .br-title { display: flex; align-items: center; gap: .6rem; margin: 0 0 1.1rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
     .br-feed { display: block; padding: 0; }
@@ -984,7 +1007,7 @@
   .stille .op-tittel, .stille .op-slagord { color: #fff; }
   .stille-ikon { width: 3rem; height: auto; }
 
-  /* Lunsjquizen: utfoldbar quiz rett under Lunsj+-banneret, fasit bak én knapp og selvrapportert poengsum.
+  /* Lunsjquizen: utfoldbar quiz rett under Ukas stripe, fasit bak én knapp og selvrapportert poengsum.
      Kortet ligger utenfor hovedspalten, så det er sin egen container for bredderegler og cqi-mål. */
   .quiz { container-type: inline-size; }
   .qz-head { display: grid; }
@@ -1192,23 +1215,20 @@
 
 <div class="layout">
 
-<section class="plusbar" id="plusbar" aria-label="Lunsj+">
-  <svg class="bun" viewBox="0 0 64 64" aria-hidden="true"><defs><radialGradient id="bun-g" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#f0c48a"/><stop offset="1" stop-color="#c98a4b"/></radialGradient></defs><circle cx="32" cy="32" r="27" fill="url(#bun-g)" stroke="#a96f35" stroke-width="2"/><path d="M33.5 32.0 L33.7 32.4 L33.7 32.9 L33.6 33.5 L33.3 34.0 L32.8 34.4 L32.2 34.8 L31.5 35.0 L30.7 34.9 L29.8 34.7 L29.1 34.2 L28.4 33.5 L28.0 32.6 L27.7 31.5 L27.8 30.4 L28.1 29.3 L28.8 28.3 L29.7 27.4 L30.9 26.7 L32.2 26.4 L33.6 26.4 L35.1 26.8 L36.4 27.6 L37.6 28.7 L38.4 30.1 L38.9 31.8 L38.9 33.5 L38.5 35.3 L37.7 37.0 L36.4 38.4 L34.8 39.5 L32.8 40.1 L30.8 40.3 L28.7 39.9 L26.7 39.0 L24.9 37.6 L23.6 35.8 L22.7 33.6 L22.3 31.3 L22.6 28.8 L23.5 26.5 L25.0 24.4 L27.0 22.7 L29.4 21.6 L32.0 21.0 L34.8 21.2 L37.5 22.0 L40.0 23.5 L42.0 25.6 L43.5 28.2 L44.2 31.2 L44.3 34.3 L43.5 37.3 L42.0 40.2 L39.8 42.6 L37.0 44.4 L33.9 45.4 L30.4 45.7 L27.0 45.1 L23.8 43.6 L21.0 41.4 L18.9 38.5 L17.5 35.1 L16.9 31.4 L17.4 27.6 L18.7 24.0 L21.0 20.8 L24.0 18.2 L27.6 16.5 L31.5 15.6 L35.6 15.8 L39.6 17.0 L43.2 19.2 L46.2 22.3 L48.4 26.0 L49.6 30.2 L49.7 34.7 L48.7 39.1 L46.6 43.1 L43.5 46.5 L39.6 49.1 L35.2 50.7 L30.5 51.1 L25.7 50.3 L21.3 48.4 L17.4 45.4 L14.3 41.4 L12.3 36.8 L11.5 31.8 L12.0 26.7 L13.8 21.8" fill="none" stroke="#7a4318" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/><rect x="20.7" y="17" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(20 22 18)"/><rect x="39.7" y="14" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(-30 41 15)"/><rect x="45.7" y="29" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(45 47 30)"/><rect x="38.7" y="45" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(10 40 46)"/><rect x="22.7" y="44" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(-20 24 45)"/><rect x="14.7" y="31" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(60 16 32)"/><rect x="31.7" y="25" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(0 33 26)"/><rect x="27.7" y="37" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(35 29 38)"/><rect x="42.7" y="38" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(-50 44 39)"/><rect x="17.7" y="23" width="2.6" height="2" rx=".8" fill="#fffdf6" transform="rotate(15 19 24)"/></svg>
-  <div class="pb-copy">
-    <p class="pb-brand"><span class="pb-logo">Lunsj<span class="pb-plus" aria-hidden="true">+</span><span class="sr-only">pluss</span></span><span class="pb-tag">Høsttilbud</span></p>
-    <h2 class="pb-head">Prøv Lunsj+ for <s>to</s> én kanelbolle i uka</h2>
-    <ul class="pb-perks">
-      <li>Alle plussaker, så snart de blir skrevet</li>
-      <li>Forkjøpsrett til fredagskaken</li>
-      <li>Garantert karamellsirup*</li>
-    </ul>
-    <p class="pb-fine">*Gjelder ikke denne uken. Bindingstid til julebordet. Bollen leveres fysisk, Vipps godtas ikke.</p>
+<section class="stripe" id="stripe" aria-labelledby="stripe-title">
+  <div class="st-head">
+    <p class="st-tag">Ukas stripe</p>
+    <h2 class="st-title" id="stripe-title">Lovlig varslet</h2>
+    <p class="st-by">Lunsjbordets tegneredaksjon · uke 45</p>
   </div>
-  <div class="pb-actions">
-    <button type="button" class="pb-cta" id="pb-cta">Bli abonnent</button>
-    <button type="button" class="pb-no" id="pb-no">Nei takk, jeg klarer meg med overskrifter</button>
-  </div>
-  <p class="pb-msg" id="pb-msg" tabindex="-1" aria-live="polite"></p>
+  <svg class="st-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="st-steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color: var(--steel-hi)"/><stop offset="1" style="stop-color: var(--steel)"/></linearGradient><filter id="st-glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
+  <ol class="st-panels">
+    <li class="st-panel"><svg viewBox="0 0 320 240" role="img" aria-labelledby="st-t1"><title id="st-t1">Rute 1, mars. Kaffemaskinen viser «Avkalk meg». En kollega trykker på knappen og sier: «Etter fristen.»</title><rect class="st-wall" width="320" height="240"/><rect class="st-skirt" y="140" width="320" height="2"/><rect class="st-top" y="148" width="320" height="8"/><rect class="st-counter" y="156" width="320" height="40"/><rect class="st-floor" y="196" width="320" height="44"/><rect x="8" y="8" width="42" height="21" rx="3" class="st-cap-box"/><text x="15" y="22.5" class="st-cap-text">Mars</text><g class="st-machine"><rect x="186" y="44" width="110" height="106" rx="8" fill="url(#st-steel)" class="st-frame"/><rect x="182" y="36" width="118" height="12" rx="4" class="st-cap"/><rect x="198" y="54" width="86" height="30" rx="3" class="st-display"/><text x="241" y="72.5" class="st-led" filter="url(#st-glow)">AVKALK MEG</text><circle cx="246" cy="93" r="4" class="st-btn"/><circle cx="260" cy="93" r="4" class="st-btn"/><circle cx="274" cy="93" r="4" class="st-btn"/><rect x="238" y="102" width="46" height="42" rx="4" class="st-recess"/><rect x="255" y="102" width="12" height="7" rx="1.5" class="st-cap"/><rect x="234" y="141" width="54" height="7" rx="2" class="st-cap"/></g><g class="st-bottle"><rect x="304" y="104" width="6" height="12" rx="1.5" class="st-cap"/><rect x="300" y="100" width="14" height="5" rx="1.5" class="st-cap"/><rect x="299" y="115" width="16" height="33" rx="4" class="st-syrup"/><rect x="301" y="124" width="12" height="9" rx="1" class="st-label"/></g><g transform="translate(176 0) scale(1 1)"><rect x="-14" y="176" width="11" height="54" rx="3" class="st-legs"/><rect x="3" y="176" width="11" height="54" rx="3" class="st-legs"/><ellipse cx="-7" cy="232" rx="9" ry="4" class="st-shoe"/><ellipse cx="11" cy="232" rx="9" ry="4" class="st-shoe"/><rect x="-20" y="120" width="11" height="46" rx="5.5" fill="#184b45"/><rect x="-21" y="110" width="42" height="74" rx="14" fill="#1f5e57"/><path d="M-7 111 L0 121 L7 111 Z" fill="#e8c4a0"/><circle cx="0" cy="86" r="19.5" fill="#3a2a20"/><circle cx="4" cy="92" r="17" fill="#e8c4a0"/><circle cx="11" cy="90" r="1.9" fill="#1c2226"/><circle cx="17.5" cy="90" r="1.9" fill="#1c2226"/><path d="M12 100 L18 100" stroke="#1c2226" stroke-width="1.6" stroke-linecap="round"/><rect x="9" y="117" width="11" height="52" rx="5.5" fill="#184b45" transform="rotate(-118 14.5 122.5)"/><circle cx="60" cy="98" r="5.5" fill="#e8c4a0"/></g><rect x="64" y="34" width="104" height="24" rx="9" class="st-bubble"/><path d="M144 57 L170 66 L158 57" class="st-bubble st-tail"/><rect x="145" y="55" width="12" height="3" class="st-bubble-fill"/><text x="116.0" y="52" class="st-say">Etter fristen.</text></svg></li>
+    <li class="st-panel"><svg viewBox="0 0 320 240" role="img" aria-labelledby="st-t2"><title id="st-t2">Rute 2, juni. Displayet viser «Avkalk meg, vennligst». Kollegaen setter en gul lapp på maskinen der det står «Mandag».</title><rect class="st-wall" width="320" height="240"/><rect class="st-skirt" y="140" width="320" height="2"/><rect class="st-top" y="148" width="320" height="8"/><rect class="st-counter" y="156" width="320" height="40"/><rect class="st-floor" y="196" width="320" height="44"/><rect x="8" y="8" width="42" height="21" rx="3" class="st-cap-box"/><text x="15" y="22.5" class="st-cap-text">Juni</text><g class="st-machine"><rect x="186" y="44" width="110" height="106" rx="8" fill="url(#st-steel)" class="st-frame"/><rect x="182" y="36" width="118" height="12" rx="4" class="st-cap"/><rect x="198" y="54" width="86" height="30" rx="3" class="st-display"/><text x="241" y="66.5" class="st-led" filter="url(#st-glow)">AVKALK MEG.</text><text x="241" y="78" class="st-led" filter="url(#st-glow)">VENNLIGST.</text><circle cx="246" cy="93" r="4" class="st-btn"/><circle cx="260" cy="93" r="4" class="st-btn"/><circle cx="274" cy="93" r="4" class="st-btn"/><rect x="238" y="102" width="46" height="42" rx="4" class="st-recess"/><rect x="255" y="102" width="12" height="7" rx="1.5" class="st-cap"/><rect x="234" y="141" width="54" height="7" rx="2" class="st-cap"/></g><g class="st-bottle"><rect x="304" y="104" width="6" height="12" rx="1.5" class="st-cap"/><rect x="300" y="100" width="14" height="5" rx="1.5" class="st-cap"/><rect x="299" y="115" width="16" height="33" rx="4" class="st-syrup"/><rect x="301" y="124" width="12" height="9" rx="1" class="st-label"/></g><g transform="rotate(-6 211 117)"><rect x="190" y="100" width="42" height="34" class="st-note"/><rect x="203" y="96" width="16" height="7" class="st-tape"/><text x="211" y="121.5" class="st-note-t">MANDAG</text></g><g transform="translate(150 0) scale(1 1)"><rect x="-14" y="176" width="11" height="54" rx="3" class="st-legs"/><rect x="3" y="176" width="11" height="54" rx="3" class="st-legs"/><ellipse cx="-7" cy="232" rx="9" ry="4" class="st-shoe"/><ellipse cx="11" cy="232" rx="9" ry="4" class="st-shoe"/><rect x="-20" y="120" width="11" height="46" rx="5.5" fill="#184b45"/><rect x="-21" y="110" width="42" height="74" rx="14" fill="#1f5e57"/><path d="M-7 111 L0 121 L7 111 Z" fill="#e8c4a0"/><circle cx="0" cy="86" r="19.5" fill="#3a2a20"/><circle cx="4" cy="92" r="17" fill="#e8c4a0"/><circle cx="11" cy="90" r="1.9" fill="#1c2226"/><circle cx="17.5" cy="90" r="1.9" fill="#1c2226"/><path d="M12 100 L18 100" stroke="#1c2226" stroke-width="1.6" stroke-linecap="round"/><rect x="9" y="117" width="11" height="30" rx="5.5" fill="#184b45" transform="rotate(-74 14.5 122.5)"/><circle cx="43" cy="131" r="5.5" fill="#e8c4a0"/></g></svg></li>
+    <li class="st-panel"><svg viewBox="0 0 320 240" role="img" aria-labelledby="st-t3"><title id="st-t3">Rute 3, oktober. Ingen i nærheten. Displayet blinker «Siste varsel». Lappen med «Mandag» henger der fortsatt, det er spindelvev på maskinen, og sirupflasken er tom.</title><rect class="st-wall" width="320" height="240"/><rect class="st-skirt" y="140" width="320" height="2"/><rect class="st-top" y="148" width="320" height="8"/><rect class="st-counter" y="156" width="320" height="40"/><rect class="st-floor" y="196" width="320" height="44"/><rect x="8" y="8" width="62" height="21" rx="3" class="st-cap-box"/><text x="15" y="22.5" class="st-cap-text">Oktober</text><g class="st-web" fill="none"><path d="M300 36 L320 14 M300 36 L320 36 M300 36 L310 0 M300 36 L292 0"/><path d="M296 22 Q306 26 314 22 M298 12 Q305 16 316 8 M296 29 Q306 30 316 29"/></g><g class="st-machine"><rect x="186" y="44" width="110" height="106" rx="8" fill="url(#st-steel)" class="st-frame"/><rect x="182" y="36" width="118" height="12" rx="4" class="st-cap"/><rect x="198" y="54" width="86" height="30" rx="3" class="st-display"/><text x="241" y="66.5" class="st-led st-alarm" filter="url(#st-glow)">SISTE</text><text x="241" y="78" class="st-led st-alarm" filter="url(#st-glow)">VARSEL</text><circle cx="246" cy="93" r="4" class="st-btn"/><circle cx="260" cy="93" r="4" class="st-btn"/><circle cx="274" cy="93" r="4" class="st-btn"/><rect x="238" y="102" width="46" height="42" rx="4" class="st-recess"/><rect x="255" y="102" width="12" height="7" rx="1.5" class="st-cap"/><rect x="234" y="141" width="54" height="7" rx="2" class="st-cap"/></g><g class="st-bottle"><rect x="304" y="104" width="6" height="12" rx="1.5" class="st-cap"/><rect x="300" y="100" width="14" height="5" rx="1.5" class="st-cap"/><rect x="299" y="115" width="16" height="33" rx="4" class="st-empty"/><rect x="301" y="124" width="12" height="9" rx="1" class="st-label"/></g><g transform="rotate(-6 211 117)"><rect x="190" y="100" width="42" height="34" class="st-note st-faded"/><rect x="203" y="96" width="16" height="7" class="st-tape"/><text x="211" y="121.5" class="st-note-t">MANDAG</text></g></svg></li>
+    <li class="st-panel"><svg viewBox="0 0 320 240" role="img" aria-labelledby="st-t4"><title id="st-t4">Rute 4, i dag. Displayet viser «Streik fra 12:00». Kollegaen med tom kopp spør: «Kan den bare gjøre det?» En kollega med lovboka svarer: «Den varslet i mars.»</title><rect class="st-wall" width="320" height="240"/><rect class="st-skirt" y="140" width="320" height="2"/><rect class="st-top" y="148" width="320" height="8"/><rect class="st-counter" y="156" width="320" height="40"/><rect class="st-floor" y="196" width="320" height="44"/><rect x="8" y="8" width="48" height="21" rx="3" class="st-cap-box"/><text x="15" y="22.5" class="st-cap-text">I dag</text><g class="st-machine"><rect x="186" y="44" width="110" height="106" rx="8" fill="url(#st-steel)" class="st-frame"/><rect x="182" y="36" width="118" height="12" rx="4" class="st-cap"/><rect x="198" y="54" width="86" height="30" rx="3" class="st-display"/><text x="241" y="66.5" class="st-led" filter="url(#st-glow)">STREIK</text><text x="241" y="78" class="st-led" filter="url(#st-glow)">FRA 12:00</text><circle cx="246" cy="93" r="4" class="st-btn"/><circle cx="260" cy="93" r="4" class="st-btn"/><circle cx="274" cy="93" r="4" class="st-btn"/><rect x="238" y="102" width="46" height="42" rx="4" class="st-recess"/><rect x="255" y="102" width="12" height="7" rx="1.5" class="st-cap"/><rect x="234" y="141" width="54" height="7" rx="2" class="st-cap"/></g><g class="st-bottle"><rect x="304" y="104" width="6" height="12" rx="1.5" class="st-cap"/><rect x="300" y="100" width="14" height="5" rx="1.5" class="st-cap"/><rect x="299" y="115" width="16" height="33" rx="4" class="st-syrup"/><rect x="301" y="124" width="12" height="9" rx="1" class="st-label"/></g><g transform="rotate(-6 211 117)"><rect x="190" y="100" width="42" height="34" class="st-note st-faded"/><rect x="203" y="96" width="16" height="7" class="st-tape"/><text x="211" y="121.5" class="st-note-t">MANDAG</text></g><g transform="translate(38 0) scale(1 1)"><rect x="-14" y="176" width="11" height="54" rx="3" class="st-legs"/><rect x="3" y="176" width="11" height="54" rx="3" class="st-legs"/><ellipse cx="-7" cy="232" rx="9" ry="4" class="st-shoe"/><ellipse cx="11" cy="232" rx="9" ry="4" class="st-shoe"/><rect x="-20" y="120" width="11" height="46" rx="5.5" fill="#184b45"/><rect x="-21" y="110" width="42" height="74" rx="14" fill="#1f5e57"/><path d="M-7 111 L0 121 L7 111 Z" fill="#e8c4a0"/><circle cx="0" cy="86" r="19.5" fill="#3a2a20"/><circle cx="4" cy="92" r="17" fill="#e8c4a0"/><circle cx="11" cy="90" r="1.9" fill="#1c2226"/><circle cx="17.5" cy="90" r="1.9" fill="#1c2226"/><ellipse cx="15.5" cy="100.5" rx="2" ry="2.4" fill="#1c2226"/><rect x="9" y="117" width="11" height="34" rx="5.5" fill="#184b45" transform="rotate(-62 14.5 122.5)"/><rect x="38" y="122" width="16" height="17" rx="2.5" class="st-mug"/><path d="M54 126 q7 0 7 5.5 q0 5.5 -7 5.5" fill="none" stroke-width="2.6" class="st-mug-h"/><circle cx="40" cy="136" r="5.5" fill="#e8c4a0"/></g><g transform="translate(168 0) scale(-1 1)"><rect x="-14" y="176" width="11" height="54" rx="3" class="st-legs"/><rect x="3" y="176" width="11" height="54" rx="3" class="st-legs"/><ellipse cx="-7" cy="232" rx="9" ry="4" class="st-shoe"/><ellipse cx="11" cy="232" rx="9" ry="4" class="st-shoe"/><rect x="-20" y="120" width="11" height="46" rx="5.5" fill="#30495f"/><rect x="-21" y="110" width="42" height="74" rx="14" fill="#3b5a7a"/><path d="M-7 111 L0 121 L7 111 Z" fill="#c99a74"/><path d="M-20 108 L-20 86 A20 20 0 0 1 20 84 L18 96 L-6 96 L-6 108 Z" fill="#6b3f22"/><circle cx="0" cy="86" r="19.5" fill="#6b3f22"/><circle cx="4" cy="92" r="17" fill="#c99a74"/><path d="M-13 80 Q2 70 21 82 L21 78 Q8 64 -12 72 Z" fill="#6b3f22"/><circle cx="11" cy="90" r="1.9" fill="#1c2226"/><circle cx="17.5" cy="90" r="1.9" fill="#1c2226"/><path d="M11.5 99 Q15 102 19 98.5" fill="none" stroke="#1c2226" stroke-width="1.6" stroke-linecap="round"/><rect x="9" y="120" width="11" height="30" rx="5.5" fill="#30495f" transform="rotate(-24 14.5 122.5)"/><g transform="rotate(-8 24 148)"><rect x="9" y="128" width="30" height="40" rx="2.5" class="st-book"/><rect x="9" y="128" width="5" height="40" class="st-book-spine"/><rect x="9" y="135" width="30" height="2.4" class="st-book-gold"/><rect x="9" y="159" width="30" height="2.4" class="st-book-gold"/></g><circle cx="27" cy="167" r="5.5" fill="#c99a74"/></g><rect x="62" y="10" width="96" height="38" rx="9" class="st-bubble"/><path d="M72 47 L54 66 L86 47" class="st-bubble st-tail"/><rect x="73" y="45" width="12" height="3" class="st-bubble-fill"/><text x="110.0" y="28" class="st-say">Kan den bare</text><text x="110.0" y="42" class="st-say">gjøre det?</text><rect x="64" y="58" width="78" height="38" rx="9" class="st-bubble"/><path d="M118 95 L147 100 L132 95" class="st-bubble st-tail"/><rect x="119" y="93" width="12" height="3" class="st-bubble-fill"/><text x="103.0" y="76" class="st-say">Den varslet</text><text x="103.0" y="90" class="st-say">i mars.</text></svg></li>
+  </ol>
+  <p class="st-hint" aria-hidden="true">Sveip for neste rute</p>
 </section>
 
 <section class="card quiz" id="quiz" aria-labelledby="quiz-title">
@@ -2198,32 +2218,8 @@
 
   closeBtn.addEventListener("click", closeWall);
 
-  // Lunsj+-banneret øverst
-  var plusbar = document.getElementById("plusbar");
-  var pbMsg = document.getElementById("pb-msg");
-
-  function markSubscribed() {
-    pbMsg.textContent = "Takk for at du abonnerer. Plussakene er fortsatt bare overskrifter.";
-    plusbar.classList.add("done");
-    pbMsg.focus();
-  }
-
-  document.getElementById("pb-cta").addEventListener("click", function () {
-    openWall(this, MODES.sub, "Høsttilbud: én kanelbolle i uka (før to)");
-  });
-
-  document.getElementById("pb-no").addEventListener("click", function () {
-    pbMsg.textContent = "Greit. Vi spør igjen ved neste sidevisning.";
-    plusbar.classList.add("done");
-    pbMsg.focus();
-    setTimeout(function () { plusbar.classList.add("leaving"); }, 2600);
-    setTimeout(function () {
-      plusbar.hidden = true;
-      var next = document.getElementById("br-toggle");
-      if (!next || next.offsetParent === null) next = document.querySelector(".front a");
-      if (next) next.focus();
-    }, 2950);
-  });
+  // Lunsj+ har ikke lenger eget banner: abonnementsruta åpnes fra toppbanneret
+  function markSubscribed() {}
 
   // Nytraktet: banneret på mindre skjermer viser siste overskrift og kan foldes ut
   var br = document.getElementById("breaking");

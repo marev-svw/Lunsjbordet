@@ -65,6 +65,17 @@ En GitHub Pages-side er åpen for alle som har adressen, også når repoet er pr
 
 Nytt dikt hver mandag, publisert som en vanlig sak på forsiden. Hvert dikt får en egen side (for eksempel `filmnerd.html`) og legges øverst i bunken på `dikt.html`, med uke og dato, tittel, diktet, signatur og en kort fotnote fra redaksjonen.
 
+## Ukas stripe
+
+Tegneserie i fire ruter øverst på forsiden (`<section class="stripe" id="stripe">` i `index.html`), over quizen. Fire ruter på rad på stor skjerm; på nettbrett og mobil sveiper leseren mellom rutene.
+
+Ny stripe hver uke:
+
+1. Bytt tittel (`st-title`) og uke i bylinjen (`st-by`).
+2. Bytt ut de fire `<li class="st-panel">`. Hver rute er en inline SVG med `viewBox="0 0 320 240"`, `role="img"` og en `<title>` som beskriver ruten og gjengir replikkene, så skjermlesere får med seg hele stripen.
+3. Bruk klassene som finnes (`st-wall`, `st-counter`, `st-bubble`, `st-say`, `st-cap-box`, `st-note` og så videre), så stripen følger lyst og mørkt tema. Hold replikkene korte: tekst i rutene bør ikke være mindre enn 11 i SVG-enheter.
+4. Fjern CSS for figurer eller detaljer som ikke brukes lenger, og legg ny CSS under kommentaren «Rutene».
+
 ## Lunsjquizen
 
 Quizen på forsiden byttes hver morgen. Alle spørsmål som har vært publisert, ligger i `quiz/arkiv.json`. Før en ny quiz publiseres, kjøres:
