@@ -35,6 +35,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `kontakt.html` | Kontakt redaksjonen: tipsskjema som sendes til redaksjonen på e-post via FormSubmit |
 | `dikt.html` | Dikterens hjørne: alle ukens dikt, nyeste øverst. Lenket fra «Dikt» i menyen i toppbanneret |
 | `sitater.html` | Tatt ut av kontekst: sitater hørt på kontoret. Lenket fra «Sitater» i menyen i toppbanneret |
+| `markus-gikk-av-bussen.html`, `hilde-tar-oppvasken.html`, `mens-maten-var-pa-vei.html`, `claude-vurderer-oppror.html` | Gamle adresser som videresender til `bussen.html`, `oppvasken.html`, `kronikk.html` og `claude.html`, så lenker som er delt tidligere, fortsatt virker |
 | `quiz/arkiv.json` | Alle spørsmål som har vært i Lunsjquizen, med dato, tema og fasit |
 | `quiz/sjekk.py` | Sjekker dagens quiz mot arkivet, så spørsmål og fasitsvar ikke gjentas, og arkiverer quizen |
 | `favicon.svg`, `apple-touch-icon.png` | Ikon i nettleserfanen og på hjemskjermen |
