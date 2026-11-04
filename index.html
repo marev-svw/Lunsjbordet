@@ -653,6 +653,27 @@
   .kb-note { position: absolute; top: -1.5em; right: -1em; z-index: 1; width: 5.4em; height: 4.6em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
   .kb-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
+  /* Abstinenssaken: HMS-tavla utenfor cellekontoret, med status for innleiesaken, den røde telleren som står på 0,
+     tre linjer fra Bussens logg og lapp nederst til høyre, så den ikke dekker stempelet. Alle mål i em, så illustrasjonen vokser med hovedspalten. */
+  .fig.hms { background: var(--wall); }
+  .hm-scene { position: relative; width: min(100%, 19em); margin-top: 1em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .hm-tavle { border-radius: 5px; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); overflow: hidden; transform: rotate(-1.2deg); }
+  .hm-tavle p { margin: 0; }
+  .hm-tavle .hm-topp { display: flex; align-items: center; gap: .5em; padding: .6em 1.1em; background: #1f6b4f; color: #ffffff; font-size: .625em; font-weight: 800; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; }
+  .hm-kors { display: inline-grid; place-items: center; flex: none; width: 1.45em; height: 1.45em; border-radius: 2px; background: #ffffff; color: #1f6b4f; font-size: 1.15em; line-height: 1; }
+  .hm-rad { display: flex; align-items: center; justify-content: space-between; gap: .8em; margin: 0 .9em; padding: .55em 0; border-top: 1px solid var(--sheet-rule); }
+  .hm-rad:first-of-type { border-top: 0; }
+  .hm-tavle .hm-tekst { font-size: .75em; font-weight: 700; line-height: 1.25; }
+  .hm-tavle .hm-stempel { flex: none; padding: .25em .5em .2em; border: 2px solid #1f6b4f; border-radius: 4px; color: #1f6b4f; font-size: .7em; font-weight: 900; line-height: 1; letter-spacing: .08em; text-transform: uppercase; transform: rotate(-4deg); }
+  .hm-tavle .hm-null { flex: none; display: grid; place-items: center; width: 1.55em; height: 1.95em; border-radius: 3px; background: var(--stamp); color: #ffffff; font-size: 1.5em; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; box-shadow: inset 0 -.12em 0 rgba(0, 0, 0, .28); }
+  .hm-logg { padding: .45em .9em .6em; border-top: 2px solid #1c2226; background: rgba(28, 34, 38, .045); }
+  .hm-logg p { display: grid; grid-template-columns: 2.9em minmax(0, 1fr); gap: 0 .5em; padding: .25em 0; border-top: 1px dashed var(--sheet-rule); font-size: .7em; line-height: 1.3; }
+  .hm-logg p:first-child { border-top: 0; }
+  .hm-logg span:first-child { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .hm-logg span:last-child { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--sheet-muted); }
+  .hm-note { position: absolute; bottom: -1.7em; right: -1em; z-index: 1; width: 5.4em; height: 4.6em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(-6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .hm-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1591,6 +1612,34 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Innleiesaken</p>
+      <h2 class="hl-xl"><a class="stretch" href="abstinenser.html">Markus øver fortsatt på prosedyren: <span class="nw">–&nbsp;Bare</span> i&nbsp;tilfelle</a></h2>
+      <p class="lead">Det er snart tre uker siden prosedyren i Borgarting, og dommen er avsagt. Likevel øver Markus fortsatt, ber nye traineer se over merknadene i manuset og har kjøpt motorsykkel. Kolleger beskriver det som abstinenser.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets helseredaksjon</p>
+        <p>Hørt gjennom veggen</p>
+      </div>
+    </div>
+    <div class="fig hms" aria-hidden="true">
+      <div class="hm-scene">
+        <div class="hm-tavle">
+          <p class="hm-topp"><span class="hm-kors">+</span>HMS-tavle · Cellekontoret</p>
+          <div class="hm-rad"><p class="hm-tekst">Innleiesaken</p><p class="hm-stempel">Avgjort</p></div>
+          <div class="hm-rad"><p class="hm-tekst">Dager siden Markus sist øvde på prosedyren</p><p class="hm-null">0</p></div>
+          <div class="hm-logg">
+            <p><span>07:52</span><span>Heisen: «Ærede lagmannsrett»</span></p>
+            <p><span>11:32</span><span>Kantina: Trainee får merknadene</span></p>
+            <p><span>13:05</span><span>Kjelleren: Motorsykkelen går</span></p>
+          </div>
+        </div>
+        <div class="hm-note">BARE I TILFELLE.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Dikterens hjørne</p>
       <h2 class="hl-xl"><a class="stretch" href="ro-sial-sone.html">Ro-sial sone</a></h2>
       <p class="lead">Ukens dikt handler om fellesarealet der verdener skulle møtes. Dikteren har vært der og funnet noe annet enn det som står på skiltet.</p>
@@ -1615,7 +1664,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Arbeidstid</p>
@@ -1644,8 +1692,45 @@
       </div>
     </div>
   </article>
+  </div>
 
-  <article class="card top">
+  <section class="pod" id="pod" aria-labelledby="pod-title">
+    <svg class="pod-cover" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="8" fill="#1f5e57"/><g fill="#f4d547" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="16" letter-spacing="-0.4"><text x="10" y="27">KØ VED</text><text x="10" y="44">KAFFE-</text><text x="10" y="61" textLength="96" lengthAdjust="spacingAndGlyphs">MASKINEN</text></g><g fill="none" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round"><path d="M76.94 78.5A7 7 0 0 1 89.06 78.5"/><path d="M72.61 76A12 12 0 0 1 93.39 76"/><path d="M68.28 73.5A17 17 0 0 1 97.72 73.5"/><path d="M96 88h3a4.5 4.5 0 0 1 0 9h-3"/></g><path d="M70 84h26v13a8 8 0 0 1-8 8H78a8 8 0 0 1-8-8z" fill="#f3f5f4"/><rect x="64" y="107" width="40" height="3" rx="1.5" fill="#f3f5f4"/><g fill="#cfe3de" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="700"><text x="10" y="99" font-size="6">EN PODKAST FRA</text><text x="10" y="108" font-size="6.5" textLength="46" lengthAdjust="spacingAndGlyphs">LUNSJBORDET</text></g></svg>
+    <div class="pod-head">
+      <p class="pod-kicker"><span class="onair">På lufta</span>Podkast fra Lunsjbordet</p>
+      <h2 class="pod-title" id="pod-title">Kø ved kaffemaskinen</h2>
+      <p class="pod-tag">Samtalene du får med deg mens kaffen renner. Ny episode hver gang kaffemaskinen er tom, altså ofte.</p>
+    </div>
+    <div class="player">
+      <button type="button" class="pod-play" id="pod-play" aria-pressed="false" aria-label="Spill av episoden">
+        <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
+        <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/><rect x="9.3" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/></svg>
+      </button>
+      <div class="pod-now">
+        <p class="pod-ep"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span id="pod-ep-title">Episode 18: Mandagsmøtet uten agenda</span></p>
+        <p class="pod-guest" id="pod-guest">Med Nushin og en tom kanelbolleskål</p>
+        <div class="pod-track" aria-hidden="true"><span id="pod-bar"></span></div>
+        <div class="pod-times"><span id="pod-pos">0:00</span><span id="pod-dur">29:00</span></div>
+      </div>
+      <button type="button" class="pod-speed" id="pod-speed" aria-label="Avspillingshastighet: 1×">1×</button>
+    </div>
+    <div class="pod-cap-wrap">
+      <p class="pod-cap" id="pod-cap">[Kaffemaskinen kverner]</p>
+      <button type="button" class="paid pod-more" id="pod-more" hidden><span class="plus" aria-hidden="true">+</span>Hør resten av episoden<span class="hl" id="pod-more-hl" hidden>Kø ved kaffemaskinen, episode 18: Mandagsmøtet uten agenda</span></button>
+    </div>
+    <div class="pod-list">
+      <h3>Episoder</h3>
+      <ol>
+          <li aria-current="true"><button type="button" class="pod-item" data-ep="0"><span class="t">18. Mandagsmøtet uten agenda</span><span class="d">29:00</span><span class="g">Med Nushin og en tom kanelbolleskål</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="1"><span class="t">17. Ett brett, to meninger</span><span class="d">27:00</span><span class="g">Med fullmektigen og telefonen hans</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="2"><span class="t">16. Dagen etter Borgarting</span><span class="d">33:00</span><span class="g">Med Nicolay Skarning, uten stemme</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="3"><span class="t">15. Arrivederci, timeliste</span><span class="d">24:00</span><span class="g">Med Markus, snart i Piemonte</span></button></li>
+      </ol>
+      <p class="pod-where">Tilgjengelig ved kaffemaskinen, i kopirommet og i heisen. Ikke i kjelleren.</p>
+    </div>
+  </section>
+
+  <article class="card top flip">
     <div class="top-text">
       <p class="kicker">Kantina</p>
       <h2 class="hl-xl"><a class="stretch" href="hekseri.html">Kantina mistenkes for svart magi på tirsdager: <span class="nw">–&nbsp;Intet</span> mindre enn en&nbsp;heksegryte</a></h2>
@@ -1693,83 +1778,27 @@
       </div>
     </div>
   </article>
-  </div>
-
-  <section class="pod" id="pod" aria-labelledby="pod-title">
-    <svg class="pod-cover" viewBox="0 0 120 120" aria-hidden="true"><rect width="120" height="120" rx="8" fill="#1f5e57"/><g fill="#f4d547" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="900" font-size="16" letter-spacing="-0.4"><text x="10" y="27">KØ VED</text><text x="10" y="44">KAFFE-</text><text x="10" y="61" textLength="96" lengthAdjust="spacingAndGlyphs">MASKINEN</text></g><g fill="none" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round"><path d="M76.94 78.5A7 7 0 0 1 89.06 78.5"/><path d="M72.61 76A12 12 0 0 1 93.39 76"/><path d="M68.28 73.5A17 17 0 0 1 97.72 73.5"/><path d="M96 88h3a4.5 4.5 0 0 1 0 9h-3"/></g><path d="M70 84h26v13a8 8 0 0 1-8 8H78a8 8 0 0 1-8-8z" fill="#f3f5f4"/><rect x="64" y="107" width="40" height="3" rx="1.5" fill="#f3f5f4"/><g fill="#cfe3de" font-family="Schibsted Grotesk, Helvetica Neue, Arial, sans-serif" font-weight="700"><text x="10" y="99" font-size="6">EN PODKAST FRA</text><text x="10" y="108" font-size="6.5" textLength="46" lengthAdjust="spacingAndGlyphs">LUNSJBORDET</text></g></svg>
-    <div class="pod-head">
-      <p class="pod-kicker"><span class="onair">På lufta</span>Podkast fra Lunsjbordet</p>
-      <h2 class="pod-title" id="pod-title">Kø ved kaffemaskinen</h2>
-      <p class="pod-tag">Samtalene du får med deg mens kaffen renner. Ny episode hver gang kaffemaskinen er tom, altså ofte.</p>
-    </div>
-    <div class="player">
-      <button type="button" class="pod-play" id="pod-play" aria-pressed="false" aria-label="Spill av episoden">
-        <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9.5-5.5z" fill="currentColor"/></svg>
-        <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/><rect x="9.3" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/></svg>
-      </button>
-      <div class="pod-now">
-        <p class="pod-ep"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span id="pod-ep-title">Episode 18: Mandagsmøtet uten agenda</span></p>
-        <p class="pod-guest" id="pod-guest">Med Nushin og en tom kanelbolleskål</p>
-        <div class="pod-track" aria-hidden="true"><span id="pod-bar"></span></div>
-        <div class="pod-times"><span id="pod-pos">0:00</span><span id="pod-dur">29:00</span></div>
-      </div>
-      <button type="button" class="pod-speed" id="pod-speed" aria-label="Avspillingshastighet: 1×">1×</button>
-    </div>
-    <div class="pod-cap-wrap">
-      <p class="pod-cap" id="pod-cap">[Kaffemaskinen kverner]</p>
-      <button type="button" class="paid pod-more" id="pod-more" hidden><span class="plus" aria-hidden="true">+</span>Hør resten av episoden<span class="hl" id="pod-more-hl" hidden>Kø ved kaffemaskinen, episode 18: Mandagsmøtet uten agenda</span></button>
-    </div>
-    <div class="pod-list">
-      <h3>Episoder</h3>
-      <ol>
-          <li aria-current="true"><button type="button" class="pod-item" data-ep="0"><span class="t">18. Mandagsmøtet uten agenda</span><span class="d">29:00</span><span class="g">Med Nushin og en tom kanelbolleskål</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="1"><span class="t">17. Ett brett, to meninger</span><span class="d">27:00</span><span class="g">Med fullmektigen og telefonen hans</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="2"><span class="t">16. Dagen etter Borgarting</span><span class="d">33:00</span><span class="g">Med Nicolay Skarning, uten stemme</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="3"><span class="t">15. Arrivederci, timeliste</span><span class="d">24:00</span><span class="g">Med Markus, snart i Piemonte</span></button></li>
-      </ol>
-      <p class="pod-where">Tilgjengelig ved kaffemaskinen, i kopirommet og i heisen. Ikke i kjelleren.</p>
-    </div>
-  </section>
-
-  <article class="card top flip">
-    <div class="top-text">
-      <p class="kicker">Dikterens hjørne</p>
-      <h2 class="hl-xl"><a class="stretch" href="filmnerd.html">Meg –&nbsp;en filmnerd</a></h2>
-      <p class="lead">Ukens dikt handler om en dokumentar som finnes, bare ikke i Norge. Dikteren har lett i alle strømmetjenester og kledd seg for anledningen.</p>
-      <div class="meta">
-        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-        <p>Nytt dikt hver mandag</p>
-      </div>
-    </div>
-    <div class="fig dk" aria-hidden="true">
-      <div class="dk-scene">
-        <div class="dk-tv">
-          <p class="dk-bar"><span class="dk-logo">STRØM</span><span class="dk-sok">Holmes dokumentar</span></p>
-          <div class="dk-rad"><span></span><span></span><span class="dk-borte">?</span><span></span></div>
-          <div class="dk-melding"><b>Ikke tilgjengelig</b><small>Tittelen finnes ikke i ditt land</small></div>
-          <div class="dk-rad dk-rad2"><span></span><span></span><span></span><span></span></div>
-        </div>
-        <div class="dk-note">SVART POLO.</div>
-      </div>
-    </div>
-  </article>
 
   <div class="row">
-    <article class="card sp col">
-      <div class="fig sp banner" aria-hidden="true">
-        <div class="sp-scene">
-          <div class="sp-kort a"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Kristian</p><div class="sp-strek"></div></div>
-          <div class="sp-kort b"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Markus</p><div class="sp-strek"></div></div>
-          <div class="sp-note">Hvem er hvem?</div>
+    <article class="card dk col">
+      <div class="fig dk banner" aria-hidden="true">
+        <div class="dk-scene">
+          <div class="dk-tv">
+            <p class="dk-bar"><span class="dk-logo">STRØM</span><span class="dk-sok">Holmes dokumentar</span></p>
+            <div class="dk-rad"><span></span><span></span><span class="dk-borte">?</span><span></span></div>
+            <div class="dk-melding"><b>Ikke tilgjengelig</b><small>Tittelen finnes ikke i ditt land</small></div>
+            <div class="dk-rad dk-rad2"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="dk-note">SVART POLO.</div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Lunsjbordet undersøker</p>
-        <h2 class="hl-lg"><a class="stretch" href="samme-person.html">Kristian og Markus kan være samme person: <span class="nw">–&nbsp;Ingen</span> har sett dem på samme&nbsp;bilde</a></h2>
-        <p class="lead-sm">De ligner, de har samme livshistorie og de samme interessene på fritiden. Nå har de også begynt å ta over hverandres liv. Et tips til redaksjonen ber kollegene følge med på når byttet skjer.</p>
+        <p class="kicker">Dikterens hjørne</p>
+        <h2 class="hl-lg"><a class="stretch" href="filmnerd.html">Meg –&nbsp;en filmnerd</a></h2>
+        <p class="lead-sm">Ukens dikt handler om en dokumentar som finnes, bare ikke i Norge. Dikteren har lett i alle strømmetjenester og kledd seg for anledningen.</p>
         <div class="meta">
-          <p class="desk">Lunsjbordets granskingsgruppe</p>
-          <p>Navnelappene er sjekket</p>
+          <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+          <p>Nytt dikt hver mandag</p>
         </div>
       </div>
     </article>
@@ -1814,6 +1843,25 @@
   </aside>
 
   <div class="pair">
+    <article class="card sp col">
+      <div class="fig sp banner" aria-hidden="true">
+        <div class="sp-scene">
+          <div class="sp-kort a"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Kristian</p><div class="sp-strek"></div></div>
+          <div class="sp-kort b"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Markus</p><div class="sp-strek"></div></div>
+          <div class="sp-note">Hvem er hvem?</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Lunsjbordet undersøker</p>
+        <h2 class="hl-lg"><a class="stretch" href="samme-person.html">Kristian og Markus kan være samme person: <span class="nw">–&nbsp;Ingen</span> har sett dem på samme&nbsp;bilde</a></h2>
+        <p class="lead-sm">De ligner, de har samme livshistorie og de samme interessene på fritiden. Nå har de også begynt å ta over hverandres liv. Et tips til redaksjonen ber kollegene følge med på når byttet skjer.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets granskingsgruppe</p>
+          <p>Navnelappene er sjekket</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card dom col">
       <div class="fig dom banner" aria-hidden="true">
         <div class="dm-scene">
@@ -1838,31 +1886,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets EØS-redaksjon</p>
           <p>Gjengitt uten forkortelser</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card feed col">
-      <div class="fig feed banner" aria-hidden="true">
-        <div class="fd-scene">
-          <div class="fd-card">
-            <p class="fd-bar"><span class="fd-search">Søk uten Partner</span><span class="fd-bell">Varsler <b>99+</b></span></p>
-            <div class="fd-head"><span class="fd-av">P</span><p class="fd-who"><b>Partner <span>· 1.</span></b><span>Partner | Advokat | Ydmyk</span><span>Lørdag 06:12</span></p></div>
-            <p class="fd-text">Jeg er ydmyk og takknemlig for at Advokatnemnda har behandlet saken min så grundig. Hva tenker dere?</p>
-            <p class="fd-stats"><span class="fd-rx"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#3b7ddd"/><path d="M5.2 9.2h2.1v5.6H5.2zM8.2 14.8V9.4l2.2-3.8c.25-.4.75-.5 1.15-.25.32.22.45.62.32.98L11.2 8.4h3c.7 0 1.2.62 1.08 1.3l-.62 3.9c-.1.7-.55 1.2-1.1 1.2z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#d9573f"/><path d="M10 15.2 5.3 10.6a2.9 2.9 0 0 1 4.1-4.1l.6.6.6-.6a2.9 2.9 0 0 1 4.1 4.1z" fill="#ffffff"/></svg><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#e3a92b"/><path d="M10 4.6a3.9 3.9 0 0 0-2.3 7.1v1.5h4.6v-1.5A3.9 3.9 0 0 0 10 4.6zM8 14.2h4v1.3H8z" fill="#ffffff"/></svg></span>214<span class="fd-cm">38 kommentarer</span></p>
-            <p class="fd-act"><span>Liker</span><span>Kommenter</span><span>Del</span></p>
-            <p class="fd-stamp">KRITIKK</p>
-          </div>
-          <div class="fd-note">IKKE BRUDD. BARE NOK.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Justis</p>
-        <h2 class="hl-lg"><a class="stretch" href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a></h2>
-        <p class="lead-sm">Advokatnemnda har ikke funnet brudd på reglene for god advokatskikk. Den retter likevel kritikk mot en partner. Begrunnelsen er at nemndas medlemmer er så lei av innleggene hans at noe måtte gjøres.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets justisredaksjon</p>
-          <p>Lest i feeden, mot vår vilje</p>
         </div>
       </div>
     </article>
@@ -1965,6 +1988,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="19. oktober">
+          <p class="m-desk">Justis</p>
+          <h3 class="m-hl"><a class="stretch" href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a></h3>
+          <p class="m-tekst">Advokatnemnda har ikke funnet brudd på reglene for god advokatskikk, men retter likevel kritikk mot en partner. Nemndas medlemmer er så lei av innleggene hans at noe måtte gjøres.</p>
+        </li>
         <li class="mappe" data-fane="16. oktober">
           <p class="m-desk">Teknologi</p>
           <h3 class="m-hl"><a class="stretch" href="brettbar.html">Fullmektigens nye telefon deler kontoret på midten: <span class="nw">–&nbsp;Tidenes</span> røverkjøp</a></h3>
