@@ -87,7 +87,7 @@
   .topbar-side { display: grid; justify-items: end; gap: .1rem; min-width: 0; }
   .today { margin: 0; font-size: .8125rem; line-height: 1.4; color: #3a4247; text-align: right; }
   .nav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; margin: 0 -.6rem; padding: 0; list-style: none; }
-  .nav a, .nav button { -webkit-appearance: none; appearance: none; position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 .6rem; border: 0; background: none; color: inherit; font: 700 1rem/1 var(--sans); text-decoration: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .nav a, .nav button { -webkit-appearance: none; white-space: nowrap; appearance: none; position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 .6rem; border: 0; background: none; color: inherit; font: 700 1rem/1 var(--sans); text-decoration: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
   .nav [aria-current="page"]::after { content: ""; position: absolute; left: .6rem; right: .6rem; bottom: .3rem; height: 3px; border-radius: 2px; background: currentColor; }
   @media (hover: hover) { .nav a:not([aria-current]):hover, .nav button:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .35em; } }
   .nav a:focus-visible, .nav button:focus-visible, .brand a:focus-visible { outline: 3px solid #1c2226; outline-offset: 1px; border-radius: 4px; }
@@ -175,6 +175,7 @@
           <ul>
             <li><a href="index.html">Forside</a></li>
             <li><a href="index.html#quiz" data-open="quiz">Quiz</a></li>
+            <li><a href="index.html#stripe">Ukas stripe</a></li>
             <li><a href="index.html#arkiv" data-open="arkiv">Arkiv</a></li>
             <li><a href="sitater.html">Sitater</a></li>
             <li><a href="dikt.html">Dikt</a></li>

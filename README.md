@@ -67,7 +67,7 @@ Nytt dikt hver mandag, publisert som en vanlig sak på forsiden. Hvert dikt får
 
 ## Ukas stripe
 
-Tegneserie i fire ruter øverst på forsiden (`<section class="stripe" id="stripe">` i `index.html`), over quizen. Fire ruter på rad på stor skjerm; på nettbrett og mobil sveiper leseren mellom rutene.
+Tegneserie i fire ruter øverst på forsiden (`<section class="stripe" id="stripe">` i `index.html`), over quizen. Fire ruter på rad på stor skjerm; på nettbrett og mobil sveiper leseren mellom rutene. Lenket fra «Ukas stripe» i menyen i toppbanneret (mellom Quiz og Arkiv) på alle sider; nye sider skal ha med menypunktet.
 
 Ny stripe hver uke:
 
