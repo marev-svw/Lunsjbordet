@@ -2832,7 +2832,96 @@
      "svar": "180 grader. Det gjelder alle trekanter på et flatt plan."
     }
    ]
+  },
+  {
+   "dato": "2026-11-05",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilket land vant flest gullmedaljer under vinter-OL i Milano og Cortina i februar?",
+     "fasit": "Norge",
+     "svar": "Norge. Norge tok 18 gull, ny norsk rekord for ett vinter-OL, foran USA med 12."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken norsk langrennsløper ble tidenes mestvinnende utøver i vinter-OL under lekene i Milano og Cortina?",
+     "fasit": "Johannes Høsflot Klæbo",
+     "svar": "Johannes Høsflot Klæbo. Han la nye gullmedaljer til samlingen og passerte de store legendene."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken elv renner gjennom Paris?",
+     "fasit": "Seinen",
+     "svar": "Seinen. Elven er 777 kilometer lang og munner ut i Den engelske kanal."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken norsk polfarer ledet den første ekspedisjonen som nådde Sydpolen?",
+     "fasit": "Roald Amundsen",
+     "svar": "Roald Amundsen. Han nådde Sydpolen 14. desember 1911, rett foran Robert Falcon Scott."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev dystopiromanen «Fahrenheit 451» om et samfunn som brenner bøker?",
+     "fasit": "Ray Bradbury",
+     "svar": "Ray Bradbury. Tittelen viser til temperaturen der papir ifølge boken tar fyr."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvor mange strenger har en standard fiolin?",
+     "fasit": "Fire",
+     "svar": "Fire. De er stemt i kvinter: G, D, A og E."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles det når en fotballspiller scorer tre mål i samme kamp?",
+     "fasit": "Hattrick",
+     "svar": "Hattrick. Uttrykket kommer fra cricket, der en kaster som tar tre wickets på rad, belønnes med en hatt."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva lages smør og ost av?",
+     "fasit": "Melk",
+     "svar": "Melk. Smør lages av fløten, mens ost lages av melken når den får stivne."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva kalles en voksen hunnhest?",
+     "fasit": "Hoppe",
+     "svar": "Hoppe. Hannen kalles hingst, og en kastrert hann kalles vallak."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "Hvilken farao fikk bygget den største pyramiden i Giza?",
+     "fasit": "Keops",
+     "svar": "Keops. Pyramiden var verdens høyeste menneskeskapte bygning i nesten 4000 år."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilket selskap står bak datamaskinene Mac og mobilen iPhone?",
+     "fasit": "Apple",
+     "svar": "Apple. Selskapet ble grunnlagt i 1976 av blant andre Steve Jobs og Steve Wozniak."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hva kalles de minste blodårene, der oksygen og næring slippes ut til vevet?",
+     "fasit": "Kapillærer",
+     "svar": "Kapillærer. De er tynnere enn et hår og knytter pulsårene til venene."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvor mange måner har planeten Mars?",
+     "fasit": "To",
+     "svar": "To. De heter Fobos og Deimos, og er små og uregelmessige."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva er verdien av pi avrundet til to desimaler?",
+     "fasit": "3,14",
+     "svar": "3,14. Tallet er forholdet mellom en sirkels omkrets og diameter, og desimalene fortsetter i det uendelige."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 448
+ "antall_sporsmal": 462
 }
