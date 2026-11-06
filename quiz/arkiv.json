@@ -2921,7 +2921,96 @@
      "svar": "3,14. Tallet er forholdet mellom en sirkels omkrets og diameter, og desimalene fortsetter i det uendelige."
     }
    ]
+  },
+  {
+   "dato": "2026-11-06",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken amerikansk høytid feires torsdag 26. november i år, med kalkun og familiemiddag?",
+     "fasit": "Thanksgiving",
+     "svar": "Thanksgiving. Høytiden feires fjerde torsdag i november."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken amerikansk spillby er vertskap for Formel 1-løpet 21. november, kjørt om natten langs The Strip?",
+     "fasit": "Las Vegas",
+     "svar": "Las Vegas. Løpet har stått på kalenderen siden 2023."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket land har byen Seoul som sin største by og hovedstad?",
+     "fasit": "Sør-Korea",
+     "svar": "Sør-Korea. Seoul har rundt ti millioner innbyggere."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvem var Romerrikets første keiser?",
+     "fasit": "Augustus",
+     "svar": "Augustus. Han het opprinnelig Octavian og var adoptivsønn av Julius Cæsar."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken irsk forfatter skrev romanen «Dracula» fra 1897?",
+     "fasit": "Bram Stoker",
+     "svar": "Bram Stoker. Boken er skrevet som en samling brev og dagboknotater."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hva betyr den italienske musikkbetegnelsen «forte»?",
+     "fasit": "Sterkt, altså at man skal spille høyt",
+     "svar": "Sterkt, altså at man skal spille høyt. Motsatsen er «piano»."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva heter den japanske kampsporten der man slåss med bambussverd?",
+     "fasit": "Kendo",
+     "svar": "Kendo. Utøverne bruker rustning og et sverd av bambus kalt shinai."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den fermenterte kålretten som regnes som Koreas nasjonalrett?",
+     "fasit": "Kimchi",
+     "svar": "Kimchi. Den lages ofte av kinakål, chili og hvitløk."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilken fugl er verdens raskeste i stupflukt?",
+     "fasit": "Vandrefalk",
+     "svar": "Vandrefalk. I stup er den målt til over 300 kilometer i timen."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hvilken størrelse måles i enheten newton?",
+     "fasit": "Kraft",
+     "svar": "Kraft. Én newton gir en masse på ett kilo en akselerasjon på én meter per sekund i kvadrat."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hvilket metall kalles «argentum» på latin og brukes i bestikk og smykker?",
+     "fasit": "Sølv",
+     "svar": "Sølv. Det kjemiske symbolet er Ag."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken svart-hvit film om en tysk fabrikkeier som reddet jøder under andre verdenskrig vant Oscar for beste film i 1994?",
+     "fasit": "Schindlers liste",
+     "svar": "Schindlers liste. Liam Neeson spilte Oskar Schindler."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilken finlandssvensk student utviklet operativsystemkjernen Linux, først publisert i 1991?",
+     "fasit": "Linus Torvalds",
+     "svar": "Linus Torvalds. Han studerte i Helsingfors da han startet prosjektet."
+    },
+    {
+     "tema": "Tall",
+     "sporsmal": "Hvor mange minutter er det i et døgn?",
+     "fasit": "1440",
+     "svar": "1440. Det er 24 timer ganger 60 minutter."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 462
+ "antall_sporsmal": 476
 }
