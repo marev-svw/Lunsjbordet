@@ -3010,7 +3010,96 @@
      "svar": "1440. Det er 24 timer ganger 60 minutter."
     }
    ]
+  },
+  {
+   "dato": "2026-11-07",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Mandag 9. november er det 37 år siden en berømt mur falt i en europeisk hovedstad. Hvilken mur?",
+     "fasit": "Berlinmuren",
+     "svar": "Berlinmuren. Den hadde delt byen siden 1961."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Hvilken by i Emiratene er vertskap for sesongfinalen i Formel 1 i begynnelsen av desember?",
+     "fasit": "Abu Dhabi",
+     "svar": "Abu Dhabi. Løpet kjøres på Yas Marina-banen."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken europeisk by kalles «Den evige stad»?",
+     "fasit": "Roma",
+     "svar": "Roma. Ifølge sagnet ble byen grunnlagt i 753 f.Kr."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken egyptisk farao lot hugge ut de store templene ved Abu Simbel?",
+     "fasit": "Ramses II",
+     "svar": "Ramses II. Templene ble flyttet i 1960-årene da Nildammen sto ferdig."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken fransk forfatter skrev «Jorden rundt på 80 dager»?",
+     "fasit": "Jules Verne",
+     "svar": "Jules Verne. Boken kom ut i 1872."
+    },
+    {
+     "tema": "Anatomi",
+     "sporsmal": "Hva kalles den fargede ringen i øyet som styrer hvor mye lys som slipper inn?",
+     "fasit": "Iris",
+     "svar": "Iris. Pupillen er hullet i midten."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter den lille grønne læremesteren med store ører i «Star Wars»?",
+     "fasit": "Yoda",
+     "svar": "Yoda. Han blir over 900 år gammel."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva kalles en tørket plomme?",
+     "fasit": "Sviske",
+     "svar": "Sviske. Den regnes som et mildt avføringsmiddel."
+    },
+    {
+     "tema": "Geologi",
+     "sporsmal": "Hva kalles bergarten som dannes når kalkstein utsettes for høyt trykk og høy temperatur?",
+     "fasit": "Marmor",
+     "svar": "Marmor. Bergarten er mye brukt til skulpturer."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken idrett deltar Magnus Carlsen?",
+     "fasit": "Sjakk",
+     "svar": "Sjakk. Han ble verdensmester første gang i 2013."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hva heter jordens eneste naturlige satellitt?",
+     "fasit": "Månen",
+     "svar": "Månen. Den er rundt 384 000 kilometer unna."
+    },
+    {
+     "tema": "Reise",
+     "sporsmal": "Hvilket land har ruinbyen Petra, hugget ut i rød sandstein?",
+     "fasit": "Jordan",
+     "svar": "Jordan. Byen ble bygget av nabatéerne."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hvilket dyr er Norges største hjortedyr?",
+     "fasit": "Elg",
+     "svar": "Elg. En okse kan veie over 500 kilo."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket strykeinstrument har fire strenger og er litt mindre enn bratsjen?",
+     "fasit": "Fiolin",
+     "svar": "Fiolin. Den spilles med en bue."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 476
+ "antall_sporsmal": 490
 }
