@@ -3099,7 +3099,96 @@
      "svar": "Fiolin. Den spilles med en bue."
     }
    ]
+  },
+  {
+   "dato": "2026-11-08",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Søndag 29. november er det første søndag i advent. Hvor mange lys tennes på adventskransen da?",
+     "fasit": "Ett",
+     "svar": "Ett. Det tennes ett lys til hver søndag fram mot jul."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Fredag 27. november er det Black Friday. Hva kalles mandagen etter, da nettbutikkene tradisjonelt har store salg?",
+     "fasit": "Cyber Monday",
+     "svar": "Cyber Monday. Navnet kom i USA i 2005."
+    },
+    {
+     "tema": "Mytologi",
+     "sporsmal": "Hvilket vesen i gresk mytologi har slanger til hår og gjør de som ser på det til stein?",
+     "fasit": "Medusa",
+     "svar": "Medusa. Perseus halshogde henne."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hva kalles den laveste mulige temperaturen, null på kelvinskalaen?",
+     "fasit": "Absolutt nullpunkt",
+     "svar": "Absolutt nullpunkt. Det tilsvarer ca. –273 °C."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken russiskfødt maler regnes som en pioner for abstrakt kunst og malte «Komposisjon VII»?",
+     "fasit": "Wassily Kandinsky",
+     "svar": "Wassily Kandinsky. Han underviste ved Bauhaus-skolen."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hva kalles resultatet når to tall ganges med hverandre?",
+     "fasit": "Produkt",
+     "svar": "Produkt. Resultatet av en addisjon kalles sum."
+    },
+    {
+     "tema": "Romfart",
+     "sporsmal": "Hvilket menneske var det første i verdensrommet, i 1961?",
+     "fasit": "Jurij Gagarin",
+     "svar": "Jurij Gagarin. Turen rundt jorda varte 108 minutter."
+    },
+    {
+     "tema": "Økonomi",
+     "sporsmal": "Hva kalles det når prisene i et land stiger over tid, slik at pengene blir mindre verdt?",
+     "fasit": "Inflasjon",
+     "svar": "Inflasjon. Sentralbanken styrer renta for å holde den lav."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hvilket språk er det offisielle i Egypt?",
+     "fasit": "Arabisk",
+     "svar": "Arabisk. Det skrives fra høyre mot venstre."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hvilket pattedyr er det eneste som kan fly med egne vinger?",
+     "fasit": "Flaggermus",
+     "svar": "Flaggermus. Flygende ekorn glir bare."
+    },
+    {
+     "tema": "Medisin",
+     "sporsmal": "Hva kalles en lege som er spesialist på hjertesykdommer?",
+     "fasit": "Kardiolog",
+     "svar": "Kardiolog. Ordet kommer fra gresk «kardia», som betyr hjerte."
+    },
+    {
+     "tema": "Teater",
+     "sporsmal": "Hva kalles en forestilling der skuespilleren uttrykker alt med kropp og ansikt, uten å si ord?",
+     "fasit": "Pantomime",
+     "svar": "Pantomime. Den franske mimekunstneren Marcel Marceau gjorde sjangeren berømt."
+    },
+    {
+     "tema": "Krim",
+     "sporsmal": "Hvilken fiktiv detektiv bor i Baker Street 221B i London?",
+     "fasit": "Sherlock Holmes",
+     "svar": "Sherlock Holmes. Han ble skapt av Arthur Conan Doyle."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hva kalles dyr som lever både i vann og på land, som frosker og salamandere?",
+     "fasit": "Amfibier",
+     "svar": "Amfibier. De fleste legger eggene sine i vann."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 490
+ "antall_sporsmal": 504
 }
