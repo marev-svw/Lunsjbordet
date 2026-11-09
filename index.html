@@ -634,6 +634,24 @@
     100% { opacity: 0; transform: translateY(-26px) scale(1.1); }
   }
 
+  /* Dikterens hjørne, uke 46: kantinas ukemeny med lykten ved mandag, tirsdagen ringet rundt og lappen.
+     Alle mål i em, så illustrasjonen vokser med spalten. */
+  .fig.d46 { background: var(--wall); }
+  .d46-scene { position: relative; width: min(100%, 19.5em); margin: 1.4em 0 .6em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .d46-tavle { position: relative; padding: 1em 1.2em 1.1em; border-radius: .5em; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); transform: rotate(1.2deg); }
+  .d46-tavle p { margin: 0; }
+  .d46-topp { font-size: .625em; font-weight: 700; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; text-align: center; color: var(--sheet-muted); }
+  .d46-tavle .d46-navn { margin: .45em 0 .4em; padding-bottom: .45em; border-bottom: 1px solid var(--sheet-rule); font-size: 1.5em; font-weight: 900; line-height: 1; letter-spacing: .02em; text-align: center; }
+  .d46-dag { position: relative; display: grid; grid-template-columns: 4.4em minmax(0, 1fr); gap: .6em; align-items: baseline; padding: .36em 0; border-top: 1px dashed var(--sheet-rule); font-size: .75em; line-height: 1.3; }
+  .d46-navn + .d46-dag { border-top: 0; }
+  .d46-dag span { font-weight: 700; color: var(--sheet-muted); }
+  .d46-dag b { font-weight: 800; }
+  .d46-tir::after { content: ""; position: absolute; left: -.75em; right: -.55em; top: -.4em; bottom: -.4em; border: .17em solid var(--stamp); border-radius: 50%; transform: rotate(-2.5deg); pointer-events: none; }
+  .d46-tir span { color: var(--stamp); }
+  .d46-lykt { display: inline-block; width: 1.2em; height: 1.65em; margin-left: .35em; vertical-align: -.3em; }
+  .d46-note { position: absolute; top: -1.8em; right: -1.1em; z-index: 1; width: 5.2em; height: 4.5em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(-5deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .9375em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .d46-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Dikterens hjørne, uke 45: skiltet i fellesarealet der noen har rettet SO til RO, kaffekoppen og lappen.
      Alle mål i em, så illustrasjonen vokser med spalten. */
   .fig.d45 { background: var(--wall); }
@@ -1636,6 +1654,33 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Dikterens hjørne</p>
+      <h2 class="hl-xl"><a class="stretch" href="tirsdagens-frykt.html">Tirsdagens frykt</a></h2>
+      <p class="lead">Ukens dikt handler om mandagen, som lenge har hatt rykte på seg for å være ukens tyngste dag. Dikteren har lest kantinas meny og er ikke lenger like sikker.</p>
+      <div class="meta">
+        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+        <p>Nytt dikt hver mandag</p>
+      </div>
+    </div>
+    <div class="fig d46" aria-hidden="true">
+      <div class="d46-scene">
+        <div class="d46-tavle">
+          <p class="d46-topp">Kantina · Uke 46</p>
+          <p class="d46-navn">UKENS MENY</p>
+          <p class="d46-dag"><span>Mandag</span><b>Ukens mørke start<svg class="d46-lykt" viewBox="0 0 20 28"><path d="M6 5a4 4 0 0 1 8 0" fill="none" stroke="#3a4247" stroke-width="1.6"/><rect x="4" y="5" width="12" height="3" rx="1" fill="#3a4247"/><rect x="5" y="8" width="10" height="14" rx="1.5" fill="#f9e27a"/><path d="M10 11.5c2 2.4 2 5 0 6.5-2-1.5-2-4.1 0-6.5z" fill="#e8962a"/><path d="M5 8h10v14H5z" fill="none" stroke="#3a4247" stroke-width="1.4"/><path d="M10 8v14" stroke="#3a4247" stroke-width=".8" opacity=".35"/><rect x="3" y="22" width="14" height="3" rx="1" fill="#3a4247"/></svg></b></p>
+          <p class="d46-dag d46-tir"><span>Tirsdag</span><b>Jordskokk, romanescobuketter og melanzane</b></p>
+          <p class="d46-dag"><span>Onsdag</span><b>Fiskegrateng</b></p>
+          <p class="d46-dag"><span>Torsdag</span><b>Ertesuppe og pannekaker</b></p>
+          <p class="d46-dag"><span>Fredag</span><b>Taco</b></p>
+        </div>
+        <div class="d46-note">HELLER MANDAG.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Innleiesaken</p>
       <h2 class="hl-xl"><a class="stretch" href="abstinenser.html">Markus øver fortsatt på prosedyren: <span class="nw">–&nbsp;Bare</span> i&nbsp;tilfelle</a></h2>
       <p class="lead">Det er snart tre uker siden prosedyren i Borgarting. Mens alle andre venter på dommen, øver Markus fortsatt, ber nye traineer se over merknadene i manuset og har kjøpt motorsykkel. Kolleger beskriver det som abstinenser.</p>
@@ -1661,7 +1706,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Dikterens hjørne</p>
@@ -1684,35 +1728,6 @@
         </div>
         <div class="d45-kopp"></div>
         <div class="d45-note">HYSJ.</div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Arbeidstid</p>
-      <h2 class="hl-xl"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h2>
-      <p class="lead">Lenge har Markus tatt imot kolleger som kommer etter 08:30 med de samme seks ordene: «Jeg har vært her siden 07:15.» En morgen nylig forsov han seg. Kollegene kaller det en etterlengtet leveranse fra universet.</p>
-      <div class="meta">
-        <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
-        <p>Bokført av universet</p>
-      </div>
-    </div>
-    <div class="fig karma" aria-hidden="true">
-      <div class="kb-scene">
-        <div class="kb-ark">
-          <p class="kb-bank">Universets karmabank</p>
-          <p class="kb-type">Kontoutskrift</p>
-          <p class="kb-rad"><span>08:31</span><span>Fullmektig</span><b>−1</b></p>
-          <p class="kb-rad"><span>08:34</span><span>Trainee</span><b>−1</b></p>
-          <p class="kb-rad"><span>08:42</span><span>Barnehagen avvist</span><b>−2</b></p>
-          <p class="kb-rad"><span>08:52</span><span>Partner, sagt lavere</span><b>−1</b></p>
-          <p class="kb-rad"><span>08:58</span><span>Tommel opp på Teams</span><b>−1</b></p>
-          <p class="kb-rad kb-inn"><span>Sent</span><span>Kontohaver forsov seg</span><b>+6</b></p>
-          <p class="kb-saldo"><span>Saldo</span><b>0</b></p>
-          <p class="kb-stempel">I balanse</p>
-        </div>
-        <div class="kb-note">SIDEN NÅ.</div>
       </div>
     </div>
   </article>
@@ -1756,73 +1771,79 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Kantina</p>
-      <h2 class="hl-xl"><a class="stretch" href="hekseri.html">Kantina mistenkes for svart magi på tirsdager: <span class="nw">–&nbsp;Intet</span> mindre enn en&nbsp;heksegryte</a></h2>
-      <p class="lead">Et tips til redaksjonen hevder at kantina på Filipstad Brygge driver med svart magi, men bare på tirsdager. Lunsjbordet har sammenlignet tirsdagens varmrett med kjente heksegryter.</p>
+      <p class="kicker">Arbeidstid</p>
+      <h2 class="hl-xl"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h2>
+      <p class="lead">Lenge har Markus tatt imot kolleger som kommer etter 08:30 med de samme seks ordene: «Jeg har vært her siden 07:15.» En morgen nylig forsov han seg. Kollegene kaller det en etterlengtet leveranse fra universet.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets matredaksjon</p>
-        <p>Spist med sølvgaffel</p>
+        <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
+        <p>Bokført av universet</p>
       </div>
     </div>
-    <div class="fig gryte" aria-hidden="true">
-      <div class="gs-scene">
-        <svg class="gs-svg" viewBox="30 20 340 290">
-          <defs><radialGradient id="gs-lys" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#d9f2a4" stop-opacity=".9"/><stop offset="1" stop-color="#d9f2a4" stop-opacity="0"/></radialGradient></defs>
-          <ellipse cx="200" cy="300" rx="150" ry="12" fill="#000000" opacity=".16"/>
-          <rect x="108" y="276" width="184" height="16" rx="8" transform="rotate(-7 200 284)" fill="#6b4a2e"/>
-          <rect x="108" y="276" width="184" height="16" rx="8" transform="rotate(7 200 284)" fill="#5a3d25"/>
-          <path d="M146 286C134 264 146 250 150 230C164 248 176 264 166 286Z" fill="#e8962a"/>
-          <path d="M184 288C170 256 188 232 196 204C216 232 230 258 214 288Z" fill="#e8962a"/>
-          <path d="M234 286C226 266 236 252 244 234C256 252 264 268 254 286Z" fill="#e8962a"/>
-          <path d="M188 288C182 270 192 258 198 244C208 260 214 274 208 288Z" fill="#f4d547"/>
-          <rect x="104" y="226" width="14" height="50" rx="5" transform="rotate(8 111 251)" fill="#1a1f21"/>
-          <rect x="282" y="226" width="14" height="50" rx="5" transform="rotate(-8 289 251)" fill="#1a1f21"/>
-          <path d="M62 120C62 212 112 260 200 260C288 260 338 212 338 120Z" fill="#262d30"/>
-          <path d="M90 146C94 198 120 228 160 242" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="9" stroke-linecap="round"/>
-          <path d="M64 132C40 130 34 162 58 168" fill="none" stroke="#1a1f21" stroke-width="8" stroke-linecap="round"/>
-          <path d="M336 132C360 130 366 162 342 168" fill="none" stroke="#1a1f21" stroke-width="8" stroke-linecap="round"/>
-          <ellipse cx="200" cy="120" rx="146" ry="26" fill="#343c40"/>
-          <ellipse cx="200" cy="120" rx="132" ry="19" fill="#15191b"/>
-          <ellipse cx="200" cy="122" rx="128" ry="16" fill="#4a2a70"/>
-          <ellipse cx="200" cy="112" rx="150" ry="46" fill="url(#gs-lys)" opacity=".85"/>
-          <g fill="#fbfaf3"><ellipse cx="150" cy="128" rx="3" ry="1.3" transform="rotate(20 150 128)"/><ellipse cx="172" cy="132" rx="3" ry="1.3" transform="rotate(-30 172 132)"/><ellipse cx="214" cy="133" rx="3" ry="1.3" transform="rotate(10 214 133)"/><ellipse cx="236" cy="130" rx="3" ry="1.3" transform="rotate(-15 236 130)"/><ellipse cx="262" cy="125" rx="3" ry="1.3" transform="rotate(35 262 125)"/><ellipse cx="124" cy="122" rx="3" ry="1.3" transform="rotate(-20 124 122)"/><ellipse cx="282" cy="117" rx="3" ry="1.3" transform="rotate(-35 282 117)"/><ellipse cx="300" cy="125" rx="3" ry="1.3" transform="rotate(15 300 125)"/></g>
-          <ellipse cx="204" cy="126" rx="30" ry="7" fill="#f4efe2"/>
-          <g fill="#b9853f"><circle cx="192" cy="125" r="2.4"/><circle cx="206" cy="128" r="1.8"/><circle cx="218" cy="124" r="2.6"/><circle cx="199" cy="122" r="1.4"/></g>
-          <g fill="#c8551f"><circle cx="238" cy="118" r="6.5"/><circle cx="252" cy="124" r="6"/><circle cx="232" cy="128" r="6"/><circle cx="264" cy="114" r="5.5"/><circle cx="160" cy="118" r="5.5"/></g>
-          <g fill="#ffd2a8" opacity=".7"><circle cx="236" cy="116" r="1.8"/><circle cx="250" cy="122" r="1.6"/><circle cx="230" cy="126" r="1.6"/><circle cx="262" cy="112" r="1.5"/><circle cx="158" cy="116" r="1.5"/></g>
-          <g transform="translate(296 102) rotate(26)"><path d="M-11-34Q4-40 15-32L19 20Q4 27-9 20Z" fill="#e3c48c" stroke="#c9a465" stroke-width="2"/><g fill="#9c6b35" opacity=".75"><circle cx="0" cy="-20" r="2.6"/><circle cx="7" cy="-4" r="2"/><circle cx="-3" cy="8" r="2.4"/></g></g>
-          <g transform="translate(136 112)"><path d="M0-40L22 8H-22Z" fill="#6d9d35"/><g fill="#8fc24e"><path d="M0-40L8-22H-8Z"/><path d="M-9-20L-1-2H-17Z"/><path d="M9-20L17-2H1Z"/><path d="M-15-2L-7 12H-23Z"/><path d="M0-2L8 12H-8Z"/><path d="M15-2L23 12H7Z"/></g><g fill="#b5e07a"><circle cx="0" cy="-30" r="1.6"/><circle cx="-9" cy="-10" r="1.4"/><circle cx="9" cy="-10" r="1.4"/><circle cx="-15" cy="6" r="1.3"/><circle cx="0" cy="6" r="1.3"/><circle cx="15" cy="6" r="1.3"/></g></g>
-          <g transform="translate(178 118) scale(.55)"><path d="M0-40L22 8H-22Z" fill="#6d9d35"/><g fill="#8fc24e"><path d="M0-40L8-22H-8Z"/><path d="M-9-20L-1-2H-17Z"/><path d="M9-20L17-2H1Z"/><path d="M-15-2L-7 12H-23Z"/><path d="M0-2L8 12H-8Z"/><path d="M15-2L23 12H7Z"/></g></g>
-          <g fill="#ffffff"><circle class="gs-boble" cx="168" cy="116" r="5"/><circle class="gs-boble" cx="222" cy="110" r="6"/><circle class="gs-boble" cx="276" cy="118" r="4"/></g>
-          <path d="M54 120A146 26 0 0 0 346 120L332 120A132 19 0 0 1 68 120Z" fill="#343c40"/>
-          <path d="M58 128A146 26 0 0 0 342 128" fill="none" stroke="#4a5458" stroke-width="2"/>
-          <g fill="none" stroke="#d9f2a4" stroke-width="6" stroke-linecap="round" opacity=".7"><path d="M160 86C148 70 172 58 160 40"/><path d="M202 80C190 62 214 50 202 26"/><path d="M244 86C232 70 256 58 244 42"/></g>
-        </svg>
-        <div class="gs-note">TIRSDAG.</div>
+    <div class="fig karma" aria-hidden="true">
+      <div class="kb-scene">
+        <div class="kb-ark">
+          <p class="kb-bank">Universets karmabank</p>
+          <p class="kb-type">Kontoutskrift</p>
+          <p class="kb-rad"><span>08:31</span><span>Fullmektig</span><b>−1</b></p>
+          <p class="kb-rad"><span>08:34</span><span>Trainee</span><b>−1</b></p>
+          <p class="kb-rad"><span>08:42</span><span>Barnehagen avvist</span><b>−2</b></p>
+          <p class="kb-rad"><span>08:52</span><span>Partner, sagt lavere</span><b>−1</b></p>
+          <p class="kb-rad"><span>08:58</span><span>Tommel opp på Teams</span><b>−1</b></p>
+          <p class="kb-rad kb-inn"><span>Sent</span><span>Kontohaver forsov seg</span><b>+6</b></p>
+          <p class="kb-saldo"><span>Saldo</span><b>0</b></p>
+          <p class="kb-stempel">I balanse</p>
+        </div>
+        <div class="kb-note">SIDEN NÅ.</div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card dk col">
-      <div class="fig dk banner" aria-hidden="true">
-        <div class="dk-scene">
-          <div class="dk-tv">
-            <p class="dk-bar"><span class="dk-logo">STRØM</span><span class="dk-sok">Holmes dokumentar</span></p>
-            <div class="dk-rad"><span></span><span></span><span class="dk-borte">?</span><span></span></div>
-            <div class="dk-melding"><b>Ikke tilgjengelig</b><small>Tittelen finnes ikke i ditt land</small></div>
-            <div class="dk-rad dk-rad2"><span></span><span></span><span></span><span></span></div>
-          </div>
-          <div class="dk-note">SVART POLO.</div>
+    <article class="card gryte col">
+      <div class="fig gryte banner" aria-hidden="true">
+        <div class="gs-scene">
+          <svg class="gs-svg" viewBox="30 20 340 290">
+            <defs><radialGradient id="gs-lys" cx="50%" cy="60%" r="50%"><stop offset="0" stop-color="#d9f2a4" stop-opacity=".9"/><stop offset="1" stop-color="#d9f2a4" stop-opacity="0"/></radialGradient></defs>
+            <ellipse cx="200" cy="300" rx="150" ry="12" fill="#000000" opacity=".16"/>
+            <rect x="108" y="276" width="184" height="16" rx="8" transform="rotate(-7 200 284)" fill="#6b4a2e"/>
+            <rect x="108" y="276" width="184" height="16" rx="8" transform="rotate(7 200 284)" fill="#5a3d25"/>
+            <path d="M146 286C134 264 146 250 150 230C164 248 176 264 166 286Z" fill="#e8962a"/>
+            <path d="M184 288C170 256 188 232 196 204C216 232 230 258 214 288Z" fill="#e8962a"/>
+            <path d="M234 286C226 266 236 252 244 234C256 252 264 268 254 286Z" fill="#e8962a"/>
+            <path d="M188 288C182 270 192 258 198 244C208 260 214 274 208 288Z" fill="#f4d547"/>
+            <rect x="104" y="226" width="14" height="50" rx="5" transform="rotate(8 111 251)" fill="#1a1f21"/>
+            <rect x="282" y="226" width="14" height="50" rx="5" transform="rotate(-8 289 251)" fill="#1a1f21"/>
+            <path d="M62 120C62 212 112 260 200 260C288 260 338 212 338 120Z" fill="#262d30"/>
+            <path d="M90 146C94 198 120 228 160 242" fill="none" stroke="#ffffff" stroke-opacity=".12" stroke-width="9" stroke-linecap="round"/>
+            <path d="M64 132C40 130 34 162 58 168" fill="none" stroke="#1a1f21" stroke-width="8" stroke-linecap="round"/>
+            <path d="M336 132C360 130 366 162 342 168" fill="none" stroke="#1a1f21" stroke-width="8" stroke-linecap="round"/>
+            <ellipse cx="200" cy="120" rx="146" ry="26" fill="#343c40"/>
+            <ellipse cx="200" cy="120" rx="132" ry="19" fill="#15191b"/>
+            <ellipse cx="200" cy="122" rx="128" ry="16" fill="#4a2a70"/>
+            <ellipse cx="200" cy="112" rx="150" ry="46" fill="url(#gs-lys)" opacity=".85"/>
+            <g fill="#fbfaf3"><ellipse cx="150" cy="128" rx="3" ry="1.3" transform="rotate(20 150 128)"/><ellipse cx="172" cy="132" rx="3" ry="1.3" transform="rotate(-30 172 132)"/><ellipse cx="214" cy="133" rx="3" ry="1.3" transform="rotate(10 214 133)"/><ellipse cx="236" cy="130" rx="3" ry="1.3" transform="rotate(-15 236 130)"/><ellipse cx="262" cy="125" rx="3" ry="1.3" transform="rotate(35 262 125)"/><ellipse cx="124" cy="122" rx="3" ry="1.3" transform="rotate(-20 124 122)"/><ellipse cx="282" cy="117" rx="3" ry="1.3" transform="rotate(-35 282 117)"/><ellipse cx="300" cy="125" rx="3" ry="1.3" transform="rotate(15 300 125)"/></g>
+            <ellipse cx="204" cy="126" rx="30" ry="7" fill="#f4efe2"/>
+            <g fill="#b9853f"><circle cx="192" cy="125" r="2.4"/><circle cx="206" cy="128" r="1.8"/><circle cx="218" cy="124" r="2.6"/><circle cx="199" cy="122" r="1.4"/></g>
+            <g fill="#c8551f"><circle cx="238" cy="118" r="6.5"/><circle cx="252" cy="124" r="6"/><circle cx="232" cy="128" r="6"/><circle cx="264" cy="114" r="5.5"/><circle cx="160" cy="118" r="5.5"/></g>
+            <g fill="#ffd2a8" opacity=".7"><circle cx="236" cy="116" r="1.8"/><circle cx="250" cy="122" r="1.6"/><circle cx="230" cy="126" r="1.6"/><circle cx="262" cy="112" r="1.5"/><circle cx="158" cy="116" r="1.5"/></g>
+            <g transform="translate(296 102) rotate(26)"><path d="M-11-34Q4-40 15-32L19 20Q4 27-9 20Z" fill="#e3c48c" stroke="#c9a465" stroke-width="2"/><g fill="#9c6b35" opacity=".75"><circle cx="0" cy="-20" r="2.6"/><circle cx="7" cy="-4" r="2"/><circle cx="-3" cy="8" r="2.4"/></g></g>
+            <g transform="translate(136 112)"><path d="M0-40L22 8H-22Z" fill="#6d9d35"/><g fill="#8fc24e"><path d="M0-40L8-22H-8Z"/><path d="M-9-20L-1-2H-17Z"/><path d="M9-20L17-2H1Z"/><path d="M-15-2L-7 12H-23Z"/><path d="M0-2L8 12H-8Z"/><path d="M15-2L23 12H7Z"/></g><g fill="#b5e07a"><circle cx="0" cy="-30" r="1.6"/><circle cx="-9" cy="-10" r="1.4"/><circle cx="9" cy="-10" r="1.4"/><circle cx="-15" cy="6" r="1.3"/><circle cx="0" cy="6" r="1.3"/><circle cx="15" cy="6" r="1.3"/></g></g>
+            <g transform="translate(178 118) scale(.55)"><path d="M0-40L22 8H-22Z" fill="#6d9d35"/><g fill="#8fc24e"><path d="M0-40L8-22H-8Z"/><path d="M-9-20L-1-2H-17Z"/><path d="M9-20L17-2H1Z"/><path d="M-15-2L-7 12H-23Z"/><path d="M0-2L8 12H-8Z"/><path d="M15-2L23 12H7Z"/></g></g>
+            <g fill="#ffffff"><circle class="gs-boble" cx="168" cy="116" r="5"/><circle class="gs-boble" cx="222" cy="110" r="6"/><circle class="gs-boble" cx="276" cy="118" r="4"/></g>
+            <path d="M54 120A146 26 0 0 0 346 120L332 120A132 19 0 0 1 68 120Z" fill="#343c40"/>
+            <path d="M58 128A146 26 0 0 0 342 128" fill="none" stroke="#4a5458" stroke-width="2"/>
+            <g fill="none" stroke="#d9f2a4" stroke-width="6" stroke-linecap="round" opacity=".7"><path d="M160 86C148 70 172 58 160 40"/><path d="M202 80C190 62 214 50 202 26"/><path d="M244 86C232 70 256 58 244 42"/></g>
+          </svg>
+          <div class="gs-note">TIRSDAG.</div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Dikterens hjørne</p>
-        <h2 class="hl-lg"><a class="stretch" href="filmnerd.html">Meg –&nbsp;en filmnerd</a></h2>
-        <p class="lead-sm">Ukens dikt handler om en dokumentar som finnes, bare ikke i Norge. Dikteren har lett i alle strømmetjenester og kledd seg for anledningen.</p>
+        <p class="kicker">Kantina</p>
+        <h2 class="hl-lg"><a class="stretch" href="hekseri.html">Kantina mistenkes for svart magi på tirsdager: <span class="nw">–&nbsp;Intet</span> mindre enn en&nbsp;heksegryte</a></h2>
+        <p class="lead-sm">Et tips til redaksjonen hevder at kantina på Filipstad Brygge driver med svart magi, men bare på tirsdager. Lunsjbordet har sammenlignet tirsdagens varmrett med kjente heksegryter.</p>
         <div class="meta">
-          <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-          <p>Nytt dikt hver mandag</p>
+          <p class="desk">Lunsjbordets matredaksjon</p>
+          <p>Spist med sølvgaffel</p>
         </div>
       </div>
     </article>
@@ -1867,6 +1888,29 @@
   </aside>
 
   <div class="pair">
+    <article class="card dk col">
+      <div class="fig dk banner" aria-hidden="true">
+        <div class="dk-scene">
+          <div class="dk-tv">
+            <p class="dk-bar"><span class="dk-logo">STRØM</span><span class="dk-sok">Holmes dokumentar</span></p>
+            <div class="dk-rad"><span></span><span></span><span class="dk-borte">?</span><span></span></div>
+            <div class="dk-melding"><b>Ikke tilgjengelig</b><small>Tittelen finnes ikke i ditt land</small></div>
+            <div class="dk-rad dk-rad2"><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="dk-note">SVART POLO.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Dikterens hjørne</p>
+        <h2 class="hl-lg"><a class="stretch" href="filmnerd.html">Meg –&nbsp;en filmnerd</a></h2>
+        <p class="lead-sm">Ukens dikt handler om en dokumentar som finnes, bare ikke i Norge. Dikteren har lett i alle strømmetjenester og kledd seg for anledningen.</p>
+        <div class="meta">
+          <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+          <p>Nytt dikt hver mandag</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card sp col">
       <div class="fig sp banner" aria-hidden="true">
         <div class="sp-scene">
@@ -1882,34 +1926,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets granskingsgruppe</p>
           <p>Navnelappene er sjekket</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card dom col">
-      <div class="fig dom banner" aria-hidden="true">
-        <div class="dm-scene">
-          <div class="dm-sheet">
-            <p class="dm-court">Borgarting lagmannsrett</p>
-            <p class="dm-type">Dom</p>
-            <p class="dm-para"><span class="dm-nr">(4)</span><span>Ett utropstegn kan være en oppfordring. <mark>Tre er et pålegg.</mark></span></p>
-            <p class="dm-slutt">Domsslutning</p>
-            <ol class="dm-list">
-              <li>Anken tas til følge.</li>
-              <li>EØS-spørsmålene tas etter ferien.</li>
-            </ol>
-            <p class="dm-stamp">!!!</p>
-          </div>
-          <div class="dm-note"><b>HUSK!!!</b><small>s. 4469 flg.</small></div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Innleiesaken</p>
-        <h2 class="hl-lg"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h2>
-        <p class="lead-sm">Fire dager etter ankeforhandlingen har Borgarting lagmannsrett avsagt dom. Lunsjbordet gjengir den i sin helhet. Den kan leses på under seks minutter.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets EØS-redaksjon</p>
-          <p>Gjengitt uten forkortelser</p>
         </div>
       </div>
     </article>
@@ -2012,6 +2028,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="19. oktober">
+          <p class="m-desk">Innleiesaken</p>
+          <h3 class="m-hl"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h3>
+          <p class="m-tekst">Fire dager etter ankeforhandlingen har Borgarting lagmannsrett avsagt dom. Lunsjbordet gjengir den i sin helhet. Den kan leses på under seks minutter.</p>
+        </li>
         <li class="mappe" data-fane="19. oktober">
           <p class="m-desk">Justis</p>
           <h3 class="m-hl"><a class="stretch" href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a></h3>
