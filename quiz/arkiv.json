@@ -3188,7 +3188,96 @@
      "svar": "Amfibier. De fleste legger eggene sine i vann."
     }
    ]
+  },
+  {
+   "dato": "2026-11-09",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Onsdag 11. november markeres våpenhvilen som avsluttet første verdenskrig. Hvilken rød blomst bærer britene på jakkeslaget i dagene før, til minne om de falne?",
+     "fasit": "Valmue",
+     "svar": "Valmue. Blomsten vokste på slagmarkene i Flandern."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva heter verdens høyeste ustupte foss, som styrter 979 meter ned i jungelen i Venezuela?",
+     "fasit": "Angelfossen",
+     "svar": "Angelfossen. Den heter Salto Ángel på spansk."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilket år regnes det vestromerske keiserdømmet for å ha falt, da Romulus Augustulus ble avsatt?",
+     "fasit": "476",
+     "svar": "476. Det regnes som slutten på antikken i Vest-Europa."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken britisk forfatter skrev romanene «Store forventninger» og «Oliver Twist»?",
+     "fasit": "Charles Dickens",
+     "svar": "Charles Dickens. Han ga ut mange av bøkene som føljetonger i aviser."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken amerikansk sanger fikk tilnavnet «The King of Rock 'n' Roll»?",
+     "fasit": "Elvis Presley",
+     "svar": "Elvis Presley. Han bodde på herregården Graceland i Memphis."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken lagsport brukes begrepene «scrum» og «lineout»?",
+     "fasit": "Rugby",
+     "svar": "Rugby. Sporten er oppkalt etter en skole i den engelske byen Rugby."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Tirsdag 10. november er det Mortensaften. Hvilket fjørfe spises tradisjonelt denne kvelden i Danmark og Sverige?",
+     "fasit": "Gås",
+     "svar": "Gås. Tradisjonen er knyttet til Sankt Martin, som ifølge legenden gjemte seg blant gjess."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter det røde krydderet som lages av tørkede og malte peppersorter, og som gir ungarsk gulasj dens farge?",
+     "fasit": "Paprika",
+     "svar": "Paprika. Ungarn er kjent for både mild og sterk paprika."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket dyr kalles «ørkenens skip»?",
+     "fasit": "Kamel",
+     "svar": "Kamel. Pukkelen lagrer fett, ikke vann."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilken digital valuta ble skapt av den pseudonyme Satoshi Nakamoto i 2009?",
+     "fasit": "Bitcoin",
+     "svar": "Bitcoin. Ingen vet fortsatt hvem som skjuler seg bak navnet."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hva heter laget i atmosfæren over troposfæren, der ozonlaget ligger?",
+     "fasit": "Stratosfæren",
+     "svar": "Stratosfæren. Her flyr de fleste langdistansefly."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter filmserien om Katniss Everdeen, som må kjempe på liv og død i en arena?",
+     "fasit": "«Hunger Games»",
+     "svar": "«Hunger Games». Jennifer Lawrence spilte hovedrollen."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva er 15 prosent av 480?",
+     "fasit": "72",
+     "svar": "72. 10 prosent er 48, og 5 prosent er 24."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "Taj Mahal er et gravmonument i hvit marmor ved byen Agra. Hvilket land snakker vi om?",
+     "fasit": "India",
+     "svar": "India. Det ble bygget for keiserinne Mumtaz Mahal."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 504
+ "antall_sporsmal": 518
 }
