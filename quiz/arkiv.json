@@ -3277,7 +3277,96 @@
      "svar": "India. Det ble bygget for keiserinne Mumtaz Mahal."
     }
    ]
+  },
+  {
+   "dato": "2026-11-10",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Fredag 13. november er det fredag den 13. Hvilket tall regnes av mange som et uhellstall?",
+     "fasit": "Tretten",
+     "svar": "Tretten. Frykten for tallet har eget navn: triskaidekafobi."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Byene Marrakech og Casablanca ligger i hvilket nordafrikansk land?",
+     "fasit": "Marokko",
+     "svar": "Marokko. Landet har kyst mot både Atlanterhavet og Middelhavet."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilket år brøt andre verdenskrig ut, da Tyskland gikk til angrep på Polen?",
+     "fasit": "1939",
+     "svar": "1939. Norge ble dratt inn i krigen 9. april 1940."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Lørdag 14. november er det Verdens diabetesdag. Hvilket hormon mangler kroppen ved type 1-diabetes?",
+     "fasit": "Insulin",
+     "svar": "Insulin. Hormonet lages i bukspyttkjertelen."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken norsk forfatter skrev romanen «Naiv. Super.»?",
+     "fasit": "Erlend Loe",
+     "svar": "Erlend Loe. Boka kom ut i 1996 og ble en stor suksess."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hvem la fram den generelle relativitetsteorien i 1915?",
+     "fasit": "Albert Einstein",
+     "svar": "Albert Einstein. Teorien beskriver tyngdekraft som krumning av rommet."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket stort strengeinstrument har syv pedaler og 47 strenger?",
+     "fasit": "Harpe",
+     "svar": "Harpe. Pedalene lar spilleren endre tonehøyden på strengene."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den kalde tomatsuppen fra Spania, som serveres i glass om sommeren?",
+     "fasit": "Gazpacho",
+     "svar": "Gazpacho. Den lages av rå grønnsaker, olivenolje og brød."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles friidrettsøvelsen der man kaster en tung metallkule festet til en vaier?",
+     "fasit": "Slegge",
+     "svar": "Slegge. Kula veier 7,26 kilo for menn."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvem malte «Mona Lisa», som henger i Louvre?",
+     "fasit": "Leonardo da Vinci",
+     "svar": "Leonardo da Vinci. Maleriet ble laget tidlig på 1500-tallet."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva er Norges største rovdyr på land?",
+     "fasit": "Brunbjørn",
+     "svar": "Brunbjørn. Den lever i grenseområdene mot Sverige, Finland og Russland."
+    },
+    {
+     "tema": "Valuta",
+     "sporsmal": "Hva heter valutaen i Storbritannia?",
+     "fasit": "Pund sterling",
+     "svar": "Pund sterling. Ett pund er delt i 100 pence."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Fredag 20. november er det Verdens barnedag. Hvilken FN-konvensjon fra 1989 gir alle barn egne rettigheter?",
+     "fasit": "Barnekonvensjonen",
+     "svar": "Barnekonvensjonen. Den ble norsk lov i 2003."
+    },
+    {
+     "tema": "Kroppen",
+     "sporsmal": "Hva heter det beinet som omslutter og beskytter hjernen?",
+     "fasit": "Kraniet",
+     "svar": "Kraniet. Det består av flere plater som vokser sammen."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 518
+ "antall_sporsmal": 532
 }
