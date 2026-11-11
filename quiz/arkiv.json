@@ -3366,7 +3366,96 @@
      "svar": "Kraniet. Det består av flere plater som vokser sammen."
     }
    ]
+  },
+  {
+   "dato": "2026-11-11",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Mandag 16. november er det FNs internasjonale toleransedag. Hvilken FN-organisasjon for utdanning, vitenskap og kultur står bak markeringen?",
+     "fasit": "UNESCO",
+     "svar": "UNESCO. Organisasjonen ble stiftet i 1945 og har hovedkontor i Paris."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket fjell er det høyeste i Vest-Europa, på grensen mellom Frankrike og Italia?",
+     "fasit": "Mont Blanc",
+     "svar": "Mont Blanc. Toppen ligger på 4 806 meter."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Ved hvilken belgisk by tapte Napoleon sitt siste slag, i juni 1815?",
+     "fasit": "Waterloo",
+     "svar": "Waterloo. Wellington og prøysiske tropper stanset ham."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Onsdag 25. november markeres FNs internasjonale dag for avskaffelse av vold mot kvinner. Hvilken farge er knyttet til FNs kampanje de påfølgende 16 dagene?",
+     "fasit": "Oransje",
+     "svar": "Oransje. Kampanjen kalles «Orange the World»."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken russisk forfatter skrev romanen «Mesteren og Margarita», der Djevelen besøker Moskva?",
+     "fasit": "Mikhail Bulgakov",
+     "svar": "Mikhail Bulgakov. Boken ble utgitt først lenge etter hans død."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken stemmetype er den laveste kvinnestemmen i et firstemmig kor?",
+     "fasit": "Alt",
+     "svar": "Alt. Stemmen ligger mellom sopran og tenor."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hva kalles den celledelingen som gir to genetisk identiske datterceller?",
+     "fasit": "Mitose",
+     "svar": "Mitose. Ved meiose dannes kjønnsceller med halvt kromosomtall."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilken grand slam-turnering i tennis spilles på grus i Paris hver vår?",
+     "fasit": "Roland Garros",
+     "svar": "Roland Garros. Også kalt French Open."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den bløte franske osten med hvit skorpe, oppkalt etter en landsby i Normandie?",
+     "fasit": "Camembert",
+     "svar": "Camembert. Den lages av kumelk."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvem regisserte thrilleren «Psycho» fra 1960, med den kjente dusjscenen?",
+     "fasit": "Alfred Hitchcock",
+     "svar": "Alfred Hitchcock. Han spilte også små cameoroller i filmene sine."
+    },
+    {
+     "tema": "Psykologi",
+     "sporsmal": "Hva heter fobien for høyder?",
+     "fasit": "Akrofobi",
+     "svar": "Akrofobi. Ordet kommer fra gresk «akron», som betyr topp."
+    },
+    {
+     "tema": "Medisin",
+     "sporsmal": "Hvilken engelsk lege utviklet i 1796 den første vaksinen, mot kopper?",
+     "fasit": "Edward Jenner",
+     "svar": "Edward Jenner. Han brukte kukopper som utgangspunkt."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Tirsdag 1. desember er det Verdens aidsdag. Hvilket symbol i form av en liten sløyfe bærer folk for å vise støtte?",
+     "fasit": "Rød sløyfe",
+     "svar": "Rød sløyfe. Symbolet kom i 1991."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilken stor katt har det latinske navnet Panthera onca og lever i Mellom- og Sør-Amerika?",
+     "fasit": "Jaguar",
+     "svar": "Jaguar. Den har den kraftigste bitt av alle kattedyr."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 532
+ "antall_sporsmal": 546
 }
