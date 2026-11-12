@@ -1018,18 +1018,18 @@
   .op-tittel { margin: .25rem 0 .4rem; font-size: 1.25rem; font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; text-wrap: balance; }
   .op-tekst { margin: 0; font-size: .9375rem; line-height: 1.45; }
   .op-slagord { margin: .65rem 0 0; font-size: .9375rem; font-weight: 700; }
-  .oppvask { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem 1.25rem; align-items: center; padding: 1.25rem 1.4rem; background: #12403b; color: #f3f5f4; }
-  .oppvask .op-ikon { width: 3.5rem; height: 3.5rem; }
-  .oppvask .op-firma { color: #f4d547; }
-  .oppvask .op-tittel { font-size: clamp(1.25rem, 1rem + 1cqi, 1.6rem); }
+  .alibi { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1rem 1.25rem; align-items: center; padding: 1.25rem 1.4rem; background: radial-gradient(circle at 92% 12%, rgba(242, 193, 78, .22), transparent 38%), linear-gradient(150deg, #5a1a36, #2e0c1c); color: #f8eef2; }
+  .alibi .op-ikon { width: 3.5rem; height: 3.5rem; }
+  .alibi .op-firma { color: #f2c14e; letter-spacing: .04em; }
+  .alibi .op-tittel { font-size: clamp(1.25rem, 1rem + 1cqi, 1.6rem); }
   .op-smaa { margin: .45rem 0 0; font-size: .8125rem; opacity: .8; }
   .op-handling { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1rem; }
   .op-knapp { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .6rem 1.1rem; border: 0; border-radius: 8px; background: #f4d547; color: #1c2226; font: 800 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; }
   .op-knapp[aria-disabled="true"] { opacity: .75; cursor: default; }
-  .op-knapp:focus-visible { outline: 3px solid #f3f5f4; outline-offset: 2px; }
+  .op-knapp:focus-visible { outline: 3px solid #f8eef2; outline-offset: 2px; }
   .mappe-svar { margin: 0; min-height: 1.4em; font-size: .875rem; }
   @container (min-width: 45.5rem) {
-    .oppvask { grid-template-columns: auto minmax(0, 1fr) minmax(11rem, auto); }
+    .alibi { grid-template-columns: auto minmax(0, 1fr) minmax(11rem, auto); }
     .op-handling { grid-column: auto; flex-direction: column; align-items: stretch; text-align: center; }
   }
   .oppslag-rad { display: grid; gap: 1.25rem; }
@@ -1037,16 +1037,19 @@
   .oppslag-rad .oppslag { display: flex; flex-direction: column; }
   .oppslag-rad .op-flate { flex: 1; padding: 1.1rem 1.2rem 1.2rem; }
   .op-stempel { position: absolute; top: .85rem; right: .8rem; padding: .2rem .45rem; border-radius: 4px; font: 800 .8rem/1 var(--sans); letter-spacing: .08em; }
-  .rute { background-color: #f2c230; background-image: repeating-linear-gradient(135deg, rgba(0, 0, 0, .045) 0 6px, transparent 6px 12px); color: #1d1b16; }
-  .rute .op-firma { padding-right: 6rem; font-size: .8125rem; letter-spacing: .06em; text-transform: uppercase; }
-  .rute .op-stempel { border: 2px solid #1d1b16; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; font-size: .875rem; letter-spacing: .04em; transform: rotate(-4deg); }
-  .reise { background: #f4efe3; box-shadow: inset 0 0 0 2px #d6ddd9; color: #1f2a33; }
-  .reise .op-firma { padding-right: 5.25rem; color: #2a6674; font-family: var(--serif); font-size: 1rem; font-style: italic; }
-  .reise .op-stempel { border: 2px dashed #2a6674; color: #2a6674; transform: rotate(6deg); }
-  .stille { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1rem; background: linear-gradient(160deg, #26386b, #151f40); color: #e6eefc; }
-  .stille .op-firma { color: #9fd3ff; }
-  .stille .op-tittel, .stille .op-slagord { color: #fff; }
-  .stille-ikon { width: 3rem; height: auto; }
+  .kjol { background: linear-gradient(to right, #c9d6dc 0 .55rem, #f4f8f9 .55rem); box-shadow: inset 0 0 0 2px #c9d6dc; color: #1b2a33; }
+  .kjol.op-flate { padding-left: 1.6rem; }
+  .kjol .op-firma { padding-right: 6.75rem; color: #1f6f8b; font-size: .875rem; }
+  .kjol .op-stempel { padding: .3rem .55rem; border-radius: 2px; background: #fbfaf5; color: #1c2226; font: 400 1rem/1 var(--marker); letter-spacing: 0; transform: rotate(4deg); box-shadow: 0 4px 6px -4px rgba(0, 0, 0, .35); }
+  .kjol .op-stempel::before { content: ""; position: absolute; top: -.4rem; left: 50%; width: 1.8rem; height: .7rem; transform: translateX(-50%) rotate(-4deg); background: rgba(160, 205, 225, .75); }
+  .svar { background: #b3261e; background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, .05) 0 10px, transparent 10px 20px); color: #fff5f3; }
+  .svar .op-firma { padding-right: 5rem; color: #ffd8d2; }
+  .svar .op-stempel { border: 2px solid #fff5f3; color: #fff5f3; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace; transform: rotate(-5deg); }
+  .svar .op-slagord { color: #fff; }
+  .lys { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: start; gap: 1rem; background: radial-gradient(circle at 18% 22%, rgba(255, 214, 102, .35), transparent 42%), linear-gradient(170deg, #1b2440, #0b1022); color: #e9ecf6; }
+  .lys .op-firma { color: #ffd666; }
+  .lys .op-tittel, .lys .op-slagord { color: #fff; }
+  .lys-ikon { width: 3rem; height: auto; }
 
   /* Lunsjquizen: utfoldbar quiz rett under Ukas stripe, fasit bak én knapp og selvrapportert poengsum.
      Kortet ligger utenfor hovedspalten, så det er sin egen container for bredderegler og cqi-mål. */
@@ -1794,24 +1797,24 @@
         <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/><rect x="9.3" y="2.5" width="3.2" height="11" rx="1" fill="currentColor"/></svg>
       </button>
       <div class="pod-now">
-        <p class="pod-ep"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span id="pod-ep-title">Episode 18: Mandagsmøtet uten agenda</span></p>
-        <p class="pod-guest" id="pod-guest">Med Nushin og en tom kanelbolleskål</p>
+        <p class="pod-ep"><span class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span id="pod-ep-title">Episode 19: Elleve centimeter på trappa</span></p>
+        <p class="pod-guest" id="pod-guest">Med Hilde og en bøtte strøsand</p>
         <div class="pod-track" aria-hidden="true"><span id="pod-bar"></span></div>
-        <div class="pod-times"><span id="pod-pos">0:00</span><span id="pod-dur">29:00</span></div>
+        <div class="pod-times"><span id="pod-pos">0:00</span><span id="pod-dur">26:00</span></div>
       </div>
       <button type="button" class="pod-speed" id="pod-speed" aria-label="Avspillingshastighet: 1×">1×</button>
     </div>
     <div class="pod-cap-wrap">
       <p class="pod-cap" id="pod-cap">[Kaffemaskinen kverner]</p>
-      <button type="button" class="paid pod-more" id="pod-more" hidden><span class="plus" aria-hidden="true">+</span>Hør resten av episoden<span class="hl" id="pod-more-hl" hidden>Kø ved kaffemaskinen, episode 18: Mandagsmøtet uten agenda</span></button>
+      <button type="button" class="paid pod-more" id="pod-more" hidden><span class="plus" aria-hidden="true">+</span>Hør resten av episoden<span class="hl" id="pod-more-hl" hidden>Kø ved kaffemaskinen, episode 19: Elleve centimeter på trappa</span></button>
     </div>
     <div class="pod-list">
       <h3>Episoder</h3>
       <ol>
-          <li aria-current="true"><button type="button" class="pod-item" data-ep="0"><span class="t">18. Mandagsmøtet uten agenda</span><span class="d">29:00</span><span class="g">Med Nushin og en tom kanelbolleskål</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="1"><span class="t">17. Ett brett, to meninger</span><span class="d">27:00</span><span class="g">Med fullmektigen og telefonen hans</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="2"><span class="t">16. Dagen etter Borgarting</span><span class="d">33:00</span><span class="g">Med Nicolay Skarning, uten stemme</span></button></li>
-          <li aria-current="false"><button type="button" class="pod-item" data-ep="3"><span class="t">15. Arrivederci, timeliste</span><span class="d">24:00</span><span class="g">Med Markus, snart i Piemonte</span></button></li>
+          <li aria-current="true"><button type="button" class="pod-item" data-ep="0"><span class="t">19. Elleve centimeter på trappa</span><span class="d">26:00</span><span class="g">Med Hilde og en bøtte strøsand</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="1"><span class="t">18. Mandagsmøtet uten agenda</span><span class="d">29:00</span><span class="g">Med Nushin og en tom kanelbolleskål</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="2"><span class="t">17. Ett brett, to meninger</span><span class="d">27:00</span><span class="g">Med fullmektigen og telefonen hans</span></button></li>
+          <li aria-current="false"><button type="button" class="pod-item" data-ep="3"><span class="t">16. Dagen etter Borgarting</span><span class="d">33:00</span><span class="g">Med Nicolay Skarning, uten stemme</span></button></li>
       </ol>
       <p class="pod-where">Tilgjengelig ved kaffemaskinen, i kopirommet og i heisen. Ikke i kjelleren.</p>
     </div>
@@ -1889,24 +1892,24 @@
 
   <aside class="oppslag" aria-labelledby="op-m1">
     <p class="op-merke" id="op-m1">Annonse</p>
-    <div class="op-flate oppvask">
+    <div class="op-flate alibi">
       <svg class="op-ikon" viewBox="0 0 64 64" aria-hidden="true">
-        <rect x="14" y="6" width="36" height="52" rx="3" fill="#f4d547"/>
-        <rect x="19" y="11" width="26" height="42" rx="2" fill="#12403b"/>
-        <circle cx="40" cy="33" r="2.4" fill="#f4d547"/>
-        <circle cx="32" cy="22" r="6.5" fill="#f3f5f4"/>
-        <path d="M32 18v4.5l3 2" fill="none" stroke="#12403b" stroke-width="2" stroke-linecap="round"/>
-        <path d="M24 44h16" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 3"/>
-        <path d="M6 58h52" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round"/>
+        <path d="M18 8h20l-2 18a8 8 0 0 1-16 0z" fill="#f2c14e"/>
+        <path d="M21 14h14" stroke="#5a1a36" stroke-width="2" stroke-linecap="round" opacity=".5"/>
+        <path d="M28 34v14M20 50h16" stroke="#f8eef2" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="25" cy="20" r="1.4" fill="#fff8e1"/><circle cx="31" cy="24" r="1.1" fill="#fff8e1"/>
+        <rect x="36" y="30" width="22" height="28" rx="2" fill="#f8eef2"/>
+        <path d="M40 37h14M40 42h14M40 47h9" stroke="#5a1a36" stroke-width="2" stroke-linecap="round" opacity=".55"/>
+        <path d="M44 52l3 3 7-8" fill="none" stroke="#2e8b57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <div class="op-tekstdel">
-        <p class="op-firma">Møterom Fast AS</p>
-        <p class="op-tittel">Vi sitter i møterommet ditt fra klokka 07:00: Garantert opptatt hele dagen</p>
-        <p class="op-tekst">Slutt å bestille møterom. Våre folk setter seg i Møterom 4 før noen andre rekker det, og går først når du kommer. Hører du noen banke på, later de som ingenting.</p>
-        <p class="op-smaa">Pris: én kanelbolle per time. Gjelder ikke det lille rommet ved kopimaskinen. Det er allerede reservert.</p>
+        <p class="op-firma">Julebordsalibiet AS</p>
+        <p class="op-tittel">Vi husker julebordet for deg: Du gikk hjem kl. 22:15 og drakk vann</p>
+        <p class="op-tekst">Påmeldingen til julebordet er åpnet. Det er også vår. Vi sender tre edru vitner, en ferdig utfylt Taxi-kvittering og et bilde av deg med en sitronbrus. Alt du må gjøre, er å ikke holde tale.</p>
+        <p class="op-smaa">Pris: to kanelboller og taushet. Dekker ikke karaoke. Karaoke er alltid filmet.</p>
       </div>
       <div class="op-handling">
-        <button type="button" class="op-knapp" id="mappe-bestill">Reserver møterom</button>
+        <button type="button" class="op-knapp" id="mappe-bestill">Bestill alibi</button>
         <p class="mappe-svar" id="mappe-svar" aria-live="polite"></p>
       </div>
     </div>
@@ -1989,39 +1992,39 @@
   <div class="oppslag-rad">
     <aside class="oppslag" aria-labelledby="op-m2">
       <p class="op-merke" id="op-m2">Annonse</p>
-      <div class="op-flate rute">
-        <span class="op-stempel" aria-hidden="true">VAKT</span>
-        <p class="op-firma">Papirstoppvarslingen</p>
-        <p class="op-tittel">Vi tar papirstoppen for deg</p>
-        <p class="op-tekst">Når kopimaskinen blinker rødt, åpner våre folk alle fire luker og ser bekymret ut. Det hjelper ikke, men noen har i hvert fall gjort noe.</p>
-        <p class="op-slagord">Skylden deles av alle. Vi tar den.</p>
+      <div class="op-flate kjol">
+        <span class="op-stempel" aria-hidden="true">IKKE RØR!</span>
+        <p class="op-firma">Kjøleskapsvakta</p>
+        <p class="op-tittel">Matboksen din er trygg hos oss: Vi spiser den før noen andre rekker det</p>
+        <p class="op-tekst">Fellesskjøleskapet er en krigssone. Våre folk står vakt fra 08:00 og tømmer boksen din i god tid før lunsj. Ingen kan stjele det som allerede er spist.</p>
+        <p class="op-slagord">Tom boks, ingen mistanke.</p>
       </div>
     </aside>
     <aside class="oppslag" aria-labelledby="op-m3">
       <p class="op-merke" id="op-m3">Annonse</p>
-      <div class="op-flate reise">
-        <span class="op-stempel" aria-hidden="true">POSTKORT</span>
-        <p class="op-firma">Feriedagsbanken</p>
-        <p class="op-tittel">Vi tar ferien for deg: Du sender dagene, vi sender postkort</p>
-        <p class="op-tekst">Du har 31 feriedager til gode og ingen tid. Våre folk tar dem på Gran Canaria, med solkrem og bilder til meldingsapper. Du får postkort og et lite skjær av brunfarge.</p>
-        <p class="op-slagord">Ha det fint. Vi har det.</p>
+      <div class="op-flate svar">
+        <span class="op-stempel" aria-hidden="true">SENDT</span>
+        <p class="op-firma">Svar alle-forsikringen</p>
+        <p class="op-tittel">Trykket du «Svar alle»? Vi sender noe verre</p>
+        <p class="op-tekst">Innen tre minutter går det en e-post fra oss til hele huset med emnefeltet «Bursdagskake?» og fire vedlegg som ikke åpner seg. Ingen husker din. Alle husker oss.</p>
+        <p class="op-slagord">Vi tar skammen. Til alle.</p>
       </div>
     </aside>
     <aside class="oppslag" aria-labelledby="op-m4">
       <p class="op-merke" id="op-m4">Annonse</p>
-      <div class="op-flate stille">
-        <svg class="stille-ikon" viewBox="0 0 64 56" aria-hidden="true">
-          <rect x="20" y="4" width="8" height="16" rx="2" fill="#9fd3ff"/>
-          <rect x="36" y="4" width="8" height="16" rx="2" fill="#9fd3ff"/>
-          <path d="M14 20h36v8a18 18 0 0 1-36 0z" fill="#9fd3ff"/>
-          <path d="M32 46v6" stroke="#9fd3ff" stroke-width="3" stroke-linecap="round"/>
-          <path d="M52 8v8m0 0l-3-3m3 3l3-3" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <div class="op-flate lys">
+        <svg class="lys-ikon" viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="26" cy="26" r="11" fill="#ffd666"/>
+          <g stroke="#ffd666" stroke-width="3" stroke-linecap="round"><path d="M26 6v5M26 41v5M6 26h5M41 26h5M12 12l3.5 3.5M36.5 36.5 40 40M12 40l3.5-3.5M36.5 15.5 40 12"/></g>
+          <rect x="40" y="44" width="18" height="12" rx="2" fill="#e9ecf6"/>
+          <path d="M44 56v6M54 56v6" stroke="#e9ecf6" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M40 48l-6-3" stroke="#ffd666" stroke-width="2.5" stroke-linecap="round"/>
         </svg>
         <div>
-          <p class="op-firma">Ladekabelen AS</p>
-          <p class="op-tittel">Din egen ladekabel som ingen kan låne</p>
-          <p class="op-tekst">Kabelen piper høyt hvis den forlater skrivebordet ditt, og har navnet ditt trykt på hele lengden. Passer alle telefoner, bortsett fra den du har.</p>
-          <p class="op-slagord">Lånt er ladet.</p>
+          <p class="op-firma">Lyskasteriet</p>
+          <p class="op-tittel">Dagslys levert på døra fra 15:30</p>
+          <p class="op-tekst">Solen går ned før du har fått spist lunsj. Vi står utenfor vinduet ditt med en byggelyskaster og peker den rett på deg til timelisten er ført. Skyggene på veggen er inkludert.</p>
+          <p class="op-slagord">Ingen mørketid, ingen unnskyldning.</p>
         </div>
       </div>
     </aside>
@@ -2031,28 +2034,28 @@
     <h2 class="sr-only" id="more-title">Flere saker</h2>
     <div class="stubs">
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Julebordet har åpnet påmeldingen: Fjorten partnere har allerede meldt seg på uten å lese datoen</span></button></h3>
-        <p class="desk-s">Konkurranseredaksjonen</p>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">E-posten om snus i panten er ulest hos 41 ansatte: Alle mener den gjaldt noen andre</span></button></h3>
+        <p class="desk-s">Krimredaksjonen</p>
       </article>
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Skriveren i 2. etasje har begynt å skrive dikt: Dikteren ber om å bli kontaktet av advokaten sin</span></button></h3>
-        <p class="desk-s">Kulturredaksjonen</p>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Meldte hjemmekontor på grunn av snø: Kollegaen bor i etasjen over kontoret</span></button></h3>
+        <p class="desk-s">Trafikkredaksjonen</p>
       </article>
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Skjermspareren har gått siden mars: Ingen tør å røre musa</span></button></h3>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kollega trakk sitt eget navn i Secret Santa: Kjøper gave til seg selv for femte år på rad</span></button></h3>
+        <p class="desk-s">Julebordsredaksjonen</p>
+      </article>
+      <article class="stub">
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Ny kollega spurte hvem som eier melken i kjøleskapet: Tvisten er sendt til voldgift</span></button></h3>
+        <p class="desk-s">Arbeidslivsredaksjonen</p>
+      </article>
+      <article class="stub">
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Fullmektig satte Teams-status til «Opptatt» i 2024: Har ikke blitt forstyrret siden</span></button></h3>
         <p class="desk-s">Teknologiredaksjonen</p>
       </article>
       <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kaffekassa går med overskudd for første gang: Revisoren mistenker at noen har betalt to ganger</span></button></h3>
-        <p class="desk-s">Økonomiredaksjonen</p>
-      </article>
-      <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Brannøvelsen ble utsatt til alle var ferdige med møtet: Brannvesenet venter fortsatt i resepsjonen</span></button></h3>
+        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Adventskalenderen på kjøkkenet er tom 12.&nbsp;november: Ingen vil vitne</span></button></h3>
         <p class="desk-s">HMS-redaksjonen</p>
-      </article>
-      <article class="stub">
-        <h3><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Ny tittel på døra: «Fullmektig, senior, litt eldre»: Lønnen er som før</span></button></h3>
-        <p class="desk-s">Arbeidslivsredaksjonen</p>
       </article>
     </div>
   </section>
@@ -2317,14 +2320,14 @@
     br.classList.toggle("open", open);
   });
 
-  // Annonsen for Møterom Fast AS
+  // Annonsen for Julebordsalibiet AS
   var adBtn = document.getElementById("mappe-bestill");
   var adReply = document.getElementById("mappe-svar");
   adBtn.addEventListener("click", function () {
     if (adBtn.getAttribute("aria-disabled") === "true") return;
     adBtn.setAttribute("aria-disabled", "true");
-    adBtn.textContent = "Bestilt";
-    adReply.textContent = "Reservasjon mottatt. Møterom 4 er ledig i 2031. Frem til da får du stå på gangen.";
+    adBtn.textContent = "Alibi bekreftet";
+    adReply.textContent = "Alibi mottatt. Du var hjemme kl. 22:15. Vitnene møter i resepsjonen dagen etter med Bris.";
   });
 
   // Arkivskuffen: knappen trekker ut skuffen med saker som ikke står på forsiden
@@ -2681,6 +2684,18 @@
 
   // Podkasten: avspilleren later som den spiller, med teksting linje for linje
   var EPISODES = [
+    { no: 19, title: "Elleve centimeter på trappa", guest: "Med Hilde og en bøtte strøsand", dur: 1560, lines: [
+      ["", "[Kaffemaskinen kverner, noen tramper snø av skoene]"],
+      ["Programleder", "Velkommen til Kø ved kaffemaskinen. I dag har vi Hilde, som har satt ut en bøtte strøsand ved inngangen."],
+      ["Programleder", "Hilde, hvordan har det gått med bøtta?"],
+      ["Hilde", "Bøtta står fint. Sanden står ved siden av trappa. Trappa står for seg selv."],
+      ["Programleder", "Det kom 23 meldinger om hjemmekontor før 07:20. Hva tenker du om det?"],
+      ["Hilde", "Én av dem kom fra en som bor 650 meter unna. Han har skiene stående i resepsjonen."],
+      ["Markus", "Kan jeg ringe inn? Jeg var her 07:15. Sparkesykkelen kan bekrefte det."],
+      ["Hilde", "Sparkesykkelen har ikke møtt opp til avhør."],
+      ["", "[En spade skraper mot asfalt i det fjerne]"],
+      ["Programleder", "Vinteren er varslet hvert år. Neste episode kommer når brøytebilen gjør det."]
+    ] },
     { no: 18, title: "Mandagsmøtet uten agenda", guest: "Med Nushin og en tom kanelbolleskål", dur: 1740, lines: [
       ["", "[Kaffemaskinen kverner]"],
       ["Programleder", "Velkommen til Kø ved kaffemaskinen. I dag har vi Nushin, og en skål som en gang var full."],
@@ -2715,17 +2730,6 @@
       ["Nicolay", "[Hvisker] Den er et bevis."],
       ["", "[En bingobrikke legges forsiktig på bordet]"],
       ["Programleder", "Dommen foreligger ikke ennå. Det gjør heller ikke kaffen."]
-    ] },
-    { no: 15, title: "Arrivederci, timeliste", guest: "Med Markus, snart i Piemonte", dur: 1440, lines: [
-      ["", "[Kaffemaskinen kverner]"],
-      ["Programleder", "Velkommen til Kø ved kaffemaskinen. I dag uten karamellsirup, men med Markus, som reiser til Piemonte torsdag."],
-      ["Programleder", "Markus, er det sant at du vurderer en karriere som kvalitetstester av vin?"],
-      ["Markus", "Jeg har ikke bestemt meg. Jeg har bare pakket en korketrekker."],
-      ["Programleder", "Hvordan fører man timer på en vingård?"],
-      ["Markus", "Man fører ikke timer. Man fører glass."],
-      ["Kristian", "Kan jeg ringe inn? Jeg blir med neste gang, hvis det går et tog uten peanøtter."],
-      ["", "[En timeliste lukkes for siste gang]"],
-      ["Programleder", "Timelisten stenger fredag kl.\u00a016:00. Markus er tilbake mandag. Antagelig."]
     ] }
   ];
   var SPEEDS = [{ label: "1×", f: 1 }, { label: "1,5×", f: 1.5 }, { label: "2×", f: 2 }, { label: "Haster litt", f: 3 }];
