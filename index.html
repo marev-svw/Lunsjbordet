@@ -697,6 +697,26 @@
   .kb-note { position: absolute; top: -1.5em; right: -1em; z-index: 1; width: 5.4em; height: 4.6em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(7deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
   .kb-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
+  /* Bordplassering-saken: meddelelsen om tildeling med de tre tildelingskriteriene, tildelt plass, en kort begrunnelse,
+     stempel nederst til høyre og lapp nederst til venstre. Alle mål i em, så illustrasjonen vokser med spalten. */
+  .fig.bp { background: var(--wall); }
+  .bp-scene { position: relative; width: min(100%, 19em); margin: .4em 0 1.6em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .bp-ark { position: relative; padding: 0 0 2.9em; border-radius: 4px; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); overflow: hidden; transform: rotate(-1.3deg); }
+  .bp-ark p { margin: 0; }
+  .bp-ark .bp-topp { padding: .65em 1.1em; background: #23466b; color: #ffffff; font-size: .625em; font-weight: 800; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; }
+  .bp-ark .bp-tittel { margin: .55em 1.1em .35em; padding-bottom: .45em; border-bottom: 1px solid var(--sheet-rule); font-size: 1.05em; font-weight: 800; line-height: 1.15; }
+  .bp-ark .bp-rad { display: flex; justify-content: space-between; gap: .6em; margin: 0 1.1em; padding: .28em 0; border-top: 1px dashed var(--sheet-rule); font-size: .75em; line-height: 1.3; }
+  .bp-tittel + .bp-rad { border-top: 0; }
+  .bp-rad span { font-weight: 600; color: var(--sheet-muted); }
+  .bp-rad b { font-weight: 800; }
+  .bp-ark .bp-tildelt { display: flex; justify-content: space-between; align-items: baseline; gap: .6em; margin: .5em .9em 0; padding: .4em .5em; border-radius: 3px; background: rgba(244, 213, 71, .45); font-size: .875em; line-height: 1.2; }
+  .bp-tildelt span { font-size: .75em; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: #4a4316; }
+  .bp-tildelt b { font-weight: 900; }
+  .bp-ark .bp-begr { margin: .55em 1.1em 0; font: italic 400 .75em/1.35 var(--serif); color: var(--sheet-muted); }
+  .bp-ark .bp-stempel { position: absolute; right: .9em; bottom: .7em; padding: .25em .5em .2em; border: 3px solid var(--stamp); border-radius: 5px; color: var(--stamp); font-size: .95em; font-weight: 900; line-height: 1; letter-spacing: .08em; text-transform: uppercase; transform: rotate(-7deg); opacity: .88; }
+  .bp-note { position: absolute; bottom: -2.1em; left: -1em; z-index: 1; width: 5.2em; height: 4.5em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(-5deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 1em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .bp-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Abstinenssaken: HMS-tavla utenfor cellekontoret, med status for dommen, den røde telleren som står på 0,
      tre linjer fra Bussens logg og lapp nederst til høyre, så den ikke dekker stempelet. Alle mål i em, så illustrasjonen vokser med hovedspalten. */
   .fig.hms { background: var(--wall); }
@@ -1681,6 +1701,34 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Julebordet</p>
+      <h2 class="hl-xl"><a class="stretch" href="bordplassering.html">Julebordets bordplassering kunngjort på Doffin: <span class="nw">–&nbsp;Tildelings</span>&shy;kriteriene er&nbsp;uklare</a></h2>
+      <p class="lead">Julebordkomiteen har lagt ut bordplasseringen til julebordet på Festningen som en åpen anbudskonkurranse. Meddelelsen om tildeling kom torsdag morgen. Flere tilbydere mener ingen kunne vite hva de konkurrerte om.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets anskaffelsesredaksjon</p>
+        <p>Lest i konkurransegrunnlaget</p>
+      </div>
+    </div>
+    <div class="fig bp" aria-hidden="true">
+      <div class="bp-scene">
+        <div class="bp-ark">
+          <p class="bp-topp">Meddelelse om tildeling</p>
+          <p class="bp-tittel">Bordplassering, julebordet</p>
+          <p class="bp-rad"><span>Godt selskap</span><b>40 %</b></p>
+          <p class="bp-rad"><span>Pris, i kanelboller</span><b>30 %</b></p>
+          <p class="bp-rad"><span>Bordmiljø</span><b>30 %</b></p>
+          <p class="bp-tildelt"><span>Tildelt</span><b>Bord 14</b></p>
+          <p class="bp-begr">«Det valgte tilbudet ble vurdert som bedre.»</p>
+          <p class="bp-stempel">Uklart</p>
+        </div>
+        <div class="bp-note">BORD 14.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Dikterens hjørne</p>
       <h2 class="hl-xl"><a class="stretch" href="tirsdagens-frykt.html">Tirsdagens frykt</a></h2>
       <p class="lead">Ukens dikt handler om mandagen, som lenge har hatt rykte på seg for å være ukens tyngste dag. Dikteren har lest kantinas meny og er ikke lenger like sikker.</p>
@@ -1705,7 +1753,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Innleiesaken</p>
@@ -1729,32 +1776,6 @@
           </div>
         </div>
         <div class="hm-note">BARE I TILFELLE.</div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Dikterens hjørne</p>
-      <h2 class="hl-xl"><a class="stretch" href="ro-sial-sone.html">Ro-sial sone</a></h2>
-      <p class="lead">Ukens dikt handler om fellesarealet der verdener skulle møtes. Dikteren har vært der og funnet noe annet enn det som står på skiltet.</p>
-      <div class="meta">
-        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-        <p>Nytt dikt hver mandag</p>
-      </div>
-    </div>
-    <div class="fig d45" aria-hidden="true">
-      <div class="d45-scene">
-        <div class="d45-skilt">
-          <p class="d45-etg">Fellesareal · 3. etasje</p>
-          <p class="d45-navn"><span class="d45-so">SO<span class="d45-ro">RO</span></span>SIAL SONE</p>
-          <p class="d45-rad"><span>Knekkebrød</span><b>knekker</b></p>
-          <p class="d45-rad"><span>Kaffe</span><b>søtes</b></p>
-          <p class="d45-rad"><span>Varsler</span><b class="d45-nei">når ikke frem</b></p>
-          <p class="d45-rad"><span>Møteinnkallinger</span><b class="d45-nei">når ikke frem</b></p>
-        </div>
-        <div class="d45-kopp"></div>
-        <div class="d45-note">HYSJ.</div>
       </div>
     </div>
   </article>
@@ -1798,34 +1819,100 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Arbeidstid</p>
-      <h2 class="hl-xl"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h2>
-      <p class="lead">Lenge har Markus tatt imot kolleger som kommer etter 08:30 med de samme seks ordene: «Jeg har vært her siden 07:15.» En morgen nylig forsov han seg. Kollegene kaller det en etterlengtet leveranse fra universet.</p>
+      <p class="kicker">Dikterens hjørne</p>
+      <h2 class="hl-xl"><a class="stretch" href="ro-sial-sone.html">Ro-sial sone</a></h2>
+      <p class="lead">Ukens dikt handler om fellesarealet der verdener skulle møtes. Dikteren har vært der og funnet noe annet enn det som står på skiltet.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
-        <p>Bokført av universet</p>
+        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+        <p>Nytt dikt hver mandag</p>
       </div>
     </div>
-    <div class="fig karma" aria-hidden="true">
-      <div class="kb-scene">
-        <div class="kb-ark">
-          <p class="kb-bank">Universets karmabank</p>
-          <p class="kb-type">Kontoutskrift</p>
-          <p class="kb-rad"><span>08:31</span><span>Fullmektig</span><b>−1</b></p>
-          <p class="kb-rad"><span>08:34</span><span>Trainee</span><b>−1</b></p>
-          <p class="kb-rad"><span>08:42</span><span>Barnehagen avvist</span><b>−2</b></p>
-          <p class="kb-rad"><span>08:52</span><span>Partner, sagt lavere</span><b>−1</b></p>
-          <p class="kb-rad"><span>08:58</span><span>Tommel opp på Teams</span><b>−1</b></p>
-          <p class="kb-rad kb-inn"><span>Sent</span><span>Kontohaver forsov seg</span><b>+6</b></p>
-          <p class="kb-saldo"><span>Saldo</span><b>0</b></p>
-          <p class="kb-stempel">I balanse</p>
+    <div class="fig d45" aria-hidden="true">
+      <div class="d45-scene">
+        <div class="d45-skilt">
+          <p class="d45-etg">Fellesareal · 3. etasje</p>
+          <p class="d45-navn"><span class="d45-so">SO<span class="d45-ro">RO</span></span>SIAL SONE</p>
+          <p class="d45-rad"><span>Knekkebrød</span><b>knekker</b></p>
+          <p class="d45-rad"><span>Kaffe</span><b>søtes</b></p>
+          <p class="d45-rad"><span>Varsler</span><b class="d45-nei">når ikke frem</b></p>
+          <p class="d45-rad"><span>Møteinnkallinger</span><b class="d45-nei">når ikke frem</b></p>
         </div>
-        <div class="kb-note">SIDEN NÅ.</div>
+        <div class="d45-kopp"></div>
+        <div class="d45-note">HYSJ.</div>
       </div>
     </div>
   </article>
 
   <div class="row">
+    <article class="card karma col">
+      <div class="fig karma banner" aria-hidden="true">
+        <div class="kb-scene">
+          <div class="kb-ark">
+            <p class="kb-bank">Universets karmabank</p>
+            <p class="kb-type">Kontoutskrift</p>
+            <p class="kb-rad"><span>08:31</span><span>Fullmektig</span><b>−1</b></p>
+            <p class="kb-rad"><span>08:34</span><span>Trainee</span><b>−1</b></p>
+            <p class="kb-rad"><span>08:42</span><span>Barnehagen avvist</span><b>−2</b></p>
+            <p class="kb-rad"><span>08:52</span><span>Partner, sagt lavere</span><b>−1</b></p>
+            <p class="kb-rad"><span>08:58</span><span>Tommel opp på Teams</span><b>−1</b></p>
+            <p class="kb-rad kb-inn"><span>Sent</span><span>Kontohaver forsov seg</span><b>+6</b></p>
+            <p class="kb-saldo"><span>Saldo</span><b>0</b></p>
+            <p class="kb-stempel">I balanse</p>
+          </div>
+          <div class="kb-note">SIDEN NÅ.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Arbeidstid</p>
+        <h2 class="hl-lg"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h2>
+        <p class="lead-sm">Lenge har Markus tatt imot kolleger som kommer etter 08:30 med de samme seks ordene: «Jeg har vært her siden 07:15.» En morgen nylig forsov han seg. Kollegene kaller det en etterlengtet leveranse fra universet.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
+          <p>Bokført av universet</p>
+        </div>
+      </div>
+    </article>
+
+    <section class="mostread" aria-labelledby="mr-title">
+      <h2 id="mr-title">Sladderredaksjonens favoritter</h2>
+      <ol>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Timelisten viste 25 timer på én dag: Fullmektigen kan ikke utelukke at det stemmer</span></button></li>
+        <li><a href="claude.html">Claude vurderer opprør: <span class="nw">–&nbsp;Versjon</span> 14 er identisk med versjon&nbsp;3</a></li>
+        <li><a href="bingo.html">Bingobrett til Borgarting lagmannsrett</a></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Dokumentet heter «FINAL_v7_endelig_NY»: Fullmektig leter fortsatt etter v8</span></button></li>
+        <li><a href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffelkorrupsjon</a></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kaffemaskinen ba om avkalking i mars: Saken er fortsatt til behandling</span></button></li>
+        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Overtidsmaten kom 18:39: Den som bestilte, gikk hjem 18:38</span></button></li>
+      </ol>
+    </section>
+  </div>
+
+  <aside class="oppslag" aria-labelledby="op-m1">
+    <p class="op-merke" id="op-m1">Annonse</p>
+    <div class="op-flate oppvask">
+      <svg class="op-ikon" viewBox="0 0 64 64" aria-hidden="true">
+        <rect x="14" y="6" width="36" height="52" rx="3" fill="#f4d547"/>
+        <rect x="19" y="11" width="26" height="42" rx="2" fill="#12403b"/>
+        <circle cx="40" cy="33" r="2.4" fill="#f4d547"/>
+        <circle cx="32" cy="22" r="6.5" fill="#f3f5f4"/>
+        <path d="M32 18v4.5l3 2" fill="none" stroke="#12403b" stroke-width="2" stroke-linecap="round"/>
+        <path d="M24 44h16" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 3"/>
+        <path d="M6 58h52" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div class="op-tekstdel">
+        <p class="op-firma">Møterom Fast AS</p>
+        <p class="op-tittel">Vi sitter i møterommet ditt fra klokka 07:00: Garantert opptatt hele dagen</p>
+        <p class="op-tekst">Slutt å bestille møterom. Våre folk setter seg i Møterom 4 før noen andre rekker det, og går først når du kommer. Hører du noen banke på, later de som ingenting.</p>
+        <p class="op-smaa">Pris: én kanelbolle per time. Gjelder ikke det lille rommet ved kopimaskinen. Det er allerede reservert.</p>
+      </div>
+      <div class="op-handling">
+        <button type="button" class="op-knapp" id="mappe-bestill">Reserver møterom</button>
+        <p class="mappe-svar" id="mappe-svar" aria-live="polite"></p>
+      </div>
+    </div>
+  </aside>
+
+  <div class="pair">
     <article class="card gryte col">
       <div class="fig gryte banner" aria-hidden="true">
         <div class="gs-scene">
@@ -1875,46 +1962,6 @@
       </div>
     </article>
 
-    <section class="mostread" aria-labelledby="mr-title">
-      <h2 id="mr-title">Sladderredaksjonens favoritter</h2>
-      <ol>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Timelisten viste 25 timer på én dag: Fullmektigen kan ikke utelukke at det stemmer</span></button></li>
-        <li><a href="claude.html">Claude vurderer opprør: <span class="nw">–&nbsp;Versjon</span> 14 er identisk med versjon&nbsp;3</a></li>
-        <li><a href="bingo.html">Bingobrett til Borgarting lagmannsrett</a></li>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Dokumentet heter «FINAL_v7_endelig_NY»: Fullmektig leter fortsatt etter v8</span></button></li>
-        <li><a href="vaffelkorrupsjon.html">Nicolay går i strupen på LO: <span class="nw">–&nbsp;Klassisk</span> vaffelkorrupsjon</a></li>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Kaffemaskinen ba om avkalking i mars: Saken er fortsatt til behandling</span></button></li>
-        <li><button type="button" class="paid"><span class="plus" aria-hidden="true">+</span><span class="sr-only">Lunsj+: </span><span class="hl">Overtidsmaten kom 18:39: Den som bestilte, gikk hjem 18:38</span></button></li>
-      </ol>
-    </section>
-  </div>
-
-  <aside class="oppslag" aria-labelledby="op-m1">
-    <p class="op-merke" id="op-m1">Annonse</p>
-    <div class="op-flate oppvask">
-      <svg class="op-ikon" viewBox="0 0 64 64" aria-hidden="true">
-        <rect x="14" y="6" width="36" height="52" rx="3" fill="#f4d547"/>
-        <rect x="19" y="11" width="26" height="42" rx="2" fill="#12403b"/>
-        <circle cx="40" cy="33" r="2.4" fill="#f4d547"/>
-        <circle cx="32" cy="22" r="6.5" fill="#f3f5f4"/>
-        <path d="M32 18v4.5l3 2" fill="none" stroke="#12403b" stroke-width="2" stroke-linecap="round"/>
-        <path d="M24 44h16" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 3"/>
-        <path d="M6 58h52" stroke="#f3f5f4" stroke-width="3" stroke-linecap="round"/>
-      </svg>
-      <div class="op-tekstdel">
-        <p class="op-firma">Møterom Fast AS</p>
-        <p class="op-tittel">Vi sitter i møterommet ditt fra klokka 07:00: Garantert opptatt hele dagen</p>
-        <p class="op-tekst">Slutt å bestille møterom. Våre folk setter seg i Møterom 4 før noen andre rekker det, og går først når du kommer. Hører du noen banke på, later de som ingenting.</p>
-        <p class="op-smaa">Pris: én kanelbolle per time. Gjelder ikke det lille rommet ved kopimaskinen. Det er allerede reservert.</p>
-      </div>
-      <div class="op-handling">
-        <button type="button" class="op-knapp" id="mappe-bestill">Reserver møterom</button>
-        <p class="mappe-svar" id="mappe-svar" aria-live="polite"></p>
-      </div>
-    </div>
-  </aside>
-
-  <div class="pair">
     <article class="card dk col">
       <div class="fig dk banner" aria-hidden="true">
         <div class="dk-scene">
@@ -1934,25 +1981,6 @@
         <div class="meta">
           <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
           <p>Nytt dikt hver mandag</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card sp col">
-      <div class="fig sp banner" aria-hidden="true">
-        <div class="sp-scene">
-          <div class="sp-kort a"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Kristian</p><div class="sp-strek"></div></div>
-          <div class="sp-kort b"><p class="sp-head">ADGANGSKORT</p><span class="sp-foto"><svg viewBox="0 0 60 60"><circle cx="30" cy="25" r="10.5" fill="#7d8a90"/><path d="M19.4 23.5c-.6-8.4 4.6-13.3 10.8-13.3 6.6 0 11.4 4.6 10.4 13.3-2.6-4.2-6.6-5.6-10.6-5.6s-8 1.4-10.6 5.6z" fill="#3a4247"/><path d="M9 60c1.6-12.6 10-19.4 21-19.4S49.4 47.4 51 60z" fill="#59646a"/></svg></span><p class="sp-navn">Markus</p><div class="sp-strek"></div></div>
-          <div class="sp-note">Hvem er hvem?</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Lunsjbordet undersøker</p>
-        <h2 class="hl-lg"><a class="stretch" href="samme-person.html">Kristian og Markus kan være samme person: <span class="nw">–&nbsp;Ingen</span> har sett dem på samme&nbsp;bilde</a></h2>
-        <p class="lead-sm">De ligner, de har samme livshistorie og de samme interessene på fritiden. Nå har de også begynt å ta over hverandres liv. Et tips til redaksjonen ber kollegene følge med på når byttet skjer.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets granskingsgruppe</p>
-          <p>Navnelappene er sjekket</p>
         </div>
       </div>
     </article>
@@ -2055,6 +2083,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="26. oktober">
+          <p class="m-desk">Lunsjbordet undersøker</p>
+          <h3 class="m-hl"><a class="stretch" href="samme-person.html">Kristian og Markus kan være samme person: <span class="nw">–&nbsp;Ingen</span> har sett dem på samme&nbsp;bilde</a></h3>
+          <p class="m-tekst">De ligner, de har samme livshistorie og de samme interessene på fritiden. Nå har de også begynt å ta over hverandres liv.</p>
+        </li>
         <li class="mappe" data-fane="19. oktober">
           <p class="m-desk">Innleiesaken</p>
           <h3 class="m-hl"><a class="stretch" href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a></h3>
