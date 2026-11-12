@@ -231,7 +231,9 @@
      sveipbar (to ruter om gangen på mellomstor skjerm, én på mobil), så stripen aldri blir høy */
   .stripe { position: relative; overflow: hidden; padding: 1rem 1.1rem 1.1rem; border-radius: 8px; background: var(--card); color: var(--ink); font-family: var(--sans); container-type: inline-size; }
   /* Hodet følger arkivet og podkasten: liten linje over, stor overskrift, stripens tittel under */
-  .st-head { margin: .1rem 0 1rem; }
+  .st-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .5rem 1.5rem; margin: .1rem 0 1rem; }
+  .st-more { display: inline-flex; align-items: center; min-height: 44px; font: 700 .9375rem/1.2 var(--sans); color: var(--link); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .3em; }
+  @media (hover: hover) { .st-more:hover { text-decoration-thickness: 3px; } }
   .st-by { margin: 0 0 .3rem; font-size: .8125rem; font-weight: 700; color: var(--link); }
   .st-name { margin: 0; font-size: clamp(1.5rem, 1.1rem + 1.6cqi, 2.1rem); font-weight: 800; line-height: 1.08; letter-spacing: -0.025em; }
   .st-title { margin: .35rem 0 0; font: italic 500 1.1875rem/1.3 var(--serif); }
@@ -1245,7 +1247,7 @@
           <ul>
             <li><a href="index.html" aria-current="page">Forside</a></li>
             <li><a href="#quiz" data-open="quiz">Quiz</a></li>
-            <li><a href="#stripe">Ukas stripe</a></li>
+            <li><a href="striper.html">Ukas stripe</a></li>
             <li><a href="#arkiv" data-open="arkiv">Arkiv</a></li>
             <li><a href="sitater.html">Sitater</a></li>
             <li><a href="dikt.html">Dikt</a></li>
@@ -1262,9 +1264,12 @@
 
 <section class="stripe" id="stripe" aria-labelledby="stripe-title">
   <div class="st-head">
-    <p class="st-by">Lunsjbordets tegneredaksjon · uke 46</p>
-    <h2 class="st-name" id="stripe-title">Ukas stripe</h2>
-    <h3 class="st-title">Endelig versjon</h3>
+    <div class="st-head-txt">
+      <p class="st-by">Lunsjbordets tegneredaksjon · uke 46</p>
+      <h2 class="st-name" id="stripe-title">Ukas stripe</h2>
+      <h3 class="st-title">Endelig versjon</h3>
+    </div>
+    <a class="st-more" href="striper.html">Alle striper</a>
   </div>
   <svg class="st-defs" width="0" height="0" aria-hidden="true" focusable="false"><defs><linearGradient id="st-steel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color: var(--steel-hi)"/><stop offset="1" style="stop-color: var(--steel)"/></linearGradient><filter id="st-glow" x="-30%" y="-60%" width="160%" height="220%"><feGaussianBlur stdDeviation="1.6" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs></svg>
   <ol class="st-panels">

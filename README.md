@@ -35,6 +35,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | `tennis.html` | Traineene tester TennisTirsdag |
 | `tanzania.html` | Debatt: Mindre Tanzania, mer timeføring |
 | `kontakt.html` | Kontakt redaksjonen: tipsskjema som sendes til redaksjonen på e-post via FormSubmit |
+| `striper.html` | Ukas stripe: alle striper, nyeste øverst. Lenket fra «Ukas stripe» i menyen i toppbanneret og fra «Alle striper» ved stripen på forsiden |
 | `dikt.html` | Dikterens hjørne: alle ukens dikt, nyeste øverst. Lenket fra «Dikt» i menyen i toppbanneret |
 | `sitater.html` | Tatt ut av kontekst: sitater hørt på kontoret. Lenket fra «Sitater» i menyen i toppbanneret |
 | `markus-gikk-av-bussen.html`, `hilde-tar-oppvasken.html`, `mens-maten-var-pa-vei.html`, `claude-vurderer-oppror.html` | Gamle adresser som videresender til `bussen.html`, `oppvasken.html`, `kronikk.html` og `claude.html`, så lenker som er delt tidligere, fortsatt virker |
@@ -70,14 +71,16 @@ Nytt dikt hver mandag, publisert som en vanlig sak på forsiden. Hvert dikt får
 
 ## Ukas stripe
 
-Tegneserie i fire ruter øverst på forsiden (`<section class="stripe" id="stripe">` i `index.html`), over quizen. Fire ruter på rad på stor skjerm; på nettbrett og mobil sveiper leseren mellom rutene. Lenket fra «Ukas stripe» i menyen i toppbanneret (mellom Quiz og Arkiv) på alle sider; nye sider skal ha med menypunktet.
+Tegneserie i fire ruter øverst på forsiden (`<section class="stripe" id="stripe">` i `index.html`), over quizen. Fire ruter på rad på stor skjerm; på nettbrett og mobil sveiper leseren mellom rutene. Lenken «Alle striper» i stripens hode og «Ukas stripe» i menyen i toppbanneret (mellom Quiz og Arkiv, på alle sider) går til `striper.html`, der alle striper ligger, nyeste øverst. Nye sider skal ha med menypunktet.
 
 Ny stripe hver uke:
 
-1. Bytt stripens tittel (`h3.st-title`) og uke i linjen over (`p.st-by`). Overskriften «Ukas stripe» (`h2.st-name`) står fast.
-2. Bytt ut de fire `<li class="st-panel">`. Hver rute er en inline SVG med `viewBox="0 0 320 240"`, `role="img"` og en `<title>` som beskriver ruten og gjengir replikkene, så skjermlesere får med seg hele stripen.
+1. Forsiden: bytt stripens tittel (`h3.st-title`) og uke i linjen over (`p.st-by`). Overskriften «Ukas stripe» (`h2.st-name`) og lenken «Alle striper» (`a.st-more`) står fast.
+2. Forsiden: bytt ut de fire `<li class="st-panel">`. Hver rute er en inline SVG med `viewBox="0 0 320 240"`, `role="img"` og en `<title>` som beskriver ruten og gjengir replikkene, så skjermlesere får med seg hele stripen.
 3. Bruk klassene som finnes (`st-wall`, `st-counter`, `st-bubble`, `st-say`, `st-cap-box`, `st-note` og så videre), så stripen følger lyst og mørkt tema. Hold replikkene korte: tekst i rutene bør ikke være mindre enn 11 i SVG-enheter.
-4. Fjern CSS for figurer eller detaljer som ikke brukes lenger, og legg ny CSS under kommentaren «Rutene».
+4. Forsiden: fjern CSS for figurer eller detaljer som ikke brukes lenger, og legg ny CSS under kommentaren «Rutene».
+5. `striper.html`: legg stripen øverst i `<ol class="striper">` som `<li><article class="sa" id="uke-NN" aria-labelledby="sa-NN">` med `p.sa-uke` («Uke NN · D. måned ÅÅÅÅ»), `h2.sa-tittel id="sa-NN"` og de samme fire rutene, der `st-t1`–`st-t4` blir `sNN-t1`–`sNN-t4` (både `id` og `aria-labelledby`), så ingen id-er går igjen på siden.
+6. `striper.html`: legg nye klasser under kommentaren «Rutene». Klasser der endres og fjernes aldri, så eldre striper ser ut som da de ble publisert; trenger en ny stripe et annet utseende, får klassen et nytt navn. Bruker stripen en fargevariabel som mangler i `striper.html`, legges den til i alle tre `:root`-blokkene med samme verdier som i `index.html`.
 
 ## Lunsjquizen
 
