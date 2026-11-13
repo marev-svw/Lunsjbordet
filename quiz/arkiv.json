@@ -3544,7 +3544,96 @@
      "svar": "Alfa. Den siste heter omega."
     }
    ]
+  },
+  {
+   "dato": "2026-11-13",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Tirsdag 24. november er det 167 år siden Charles Darwin ga ut sitt hovedverk om evolusjon ved naturlig utvalg. Hva heter boken?",
+     "fasit": "Artenes opprinnelse",
+     "svar": "Artenes opprinnelse. Originaltittelen er «On the Origin of Species»."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hva kalles beltet av steinblokker og småplaneter mellom Mars og Jupiter?",
+     "fasit": "Asteroidebeltet",
+     "svar": "Asteroidebeltet. Dvergplaneten Ceres ligger der."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "Hvilken amerikansk arkitekt tegnet Guggenheim-museet i New York og huset Fallingwater?",
+     "fasit": "Frank Lloyd Wright",
+     "svar": "Frank Lloyd Wright. Guggenheim-museet åpnet i 1959, samme år som han døde."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Lørdag 14. november fyller kong Charles 78 år. Hva heter det store palasset i London som er det britiske monarkiets offisielle residens?",
+     "fasit": "Buckingham Palace",
+     "svar": "Buckingham Palace. Palasset har 775 rom."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva kalles gruppen av grunnstoffer som helium, neon og argon, som sjelden reagerer med andre stoffer?",
+     "fasit": "Edelgassene",
+     "svar": "Edelgassene. De står helt til høyre i periodesystemet."
+    },
+    {
+     "tema": "Filosofi",
+     "sporsmal": "Hvilken gresk filosof var læremester for Aleksander den store?",
+     "fasit": "Aristoteles",
+     "svar": "Aristoteles. Han var selv elev av Platon."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva står forkortelsen HTTP for, i nettadresser som begynner med http?",
+     "fasit": "Hypertext Transfer Protocol",
+     "svar": "Hypertext Transfer Protocol. Den sikre varianten heter HTTPS."
+    },
+    {
+     "tema": "Transport",
+     "sporsmal": "Hvilken by har verdens eldste undergrunnsbane, åpnet i 1863?",
+     "fasit": "London",
+     "svar": "London. Banen gikk mellom Paddington og Farringdon og var først dampdrevet."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Onsdag 18. november er det 98 år siden Mikke Mus debuterte på kino i en kortfilm om en elvebåt. Hva het filmen?",
+     "fasit": "Steamboat Willie",
+     "svar": "Steamboat Willie. Den hadde premiere i 1928 og var en av de første tegnefilmene med synkronisert lyd."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles det i golf når en spiller klarer hullet på to slag under par?",
+     "fasit": "Eagle",
+     "svar": "Eagle. Ett slag under par kalles birdie."
+    },
+    {
+     "tema": "TV",
+     "sporsmal": "I hvilken amerikansk by er TV-serien «The Wire» satt?",
+     "fasit": "Baltimore",
+     "svar": "Baltimore. Serien gikk fra 2002 til 2008."
+    },
+    {
+     "tema": "Religion",
+     "sporsmal": "Hva heter den jødiske lysfesten, med en ni-armet lysestake, som feires i desember?",
+     "fasit": "Hanukka",
+     "svar": "Hanukka. Lysestaken kalles hanukkia. Den skrives også Hanukkah."
+    },
+    {
+     "tema": "Geologi",
+     "sporsmal": "Hva kalles jordas lag mellom skorpen og den ytre kjernen?",
+     "fasit": "Kappen",
+     "svar": "Kappen. Den utgjør rundt 84 prosent av jordas volum og kalles også mantelen."
+    },
+    {
+     "tema": "Havliv",
+     "sporsmal": "Hva heter verdens største hai, som lever av plankton?",
+     "fasit": "Hvalhai",
+     "svar": "Hvalhai. Den kan bli over 12 meter lang."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 560
+ "antall_sporsmal": 574
 }
