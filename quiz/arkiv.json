@@ -3633,7 +3633,96 @@
      "svar": "Hvalhai. Den kan bli over 12 meter lang."
     }
    ]
+  },
+  {
+   "dato": "2026-11-14",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Tirsdag 17. november er det 157 år siden Suezkanalen åpnet. Hvilke to hav binder kanalen sammen?",
+     "fasit": "Middelhavet og Rødehavet",
+     "svar": "Middelhavet og Rødehavet. Kanalen gjør at skip slipper å seile rundt Afrika."
+    },
+    {
+     "tema": "Arkeologi",
+     "sporsmal": "Hvilken steinplate, funnet i 1799, ble nøkkelen til å tyde egyptiske hieroglyffer?",
+     "fasit": "Rosettasteinen",
+     "svar": "Rosettasteinen. Den bærer den samme teksten på tre skriftsystemer."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Don Quijote», ofte regnet som den første moderne romanen?",
+     "fasit": "Miguel de Cervantes",
+     "svar": "Miguel de Cervantes. Første del kom ut i 1605."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Torsdag 19. november er det 163 år siden en amerikansk president holdt en kort, berømt tale ved en slagmark i delstaten Pennsylvania. Hvilken by er slagmarken oppkalt etter?",
+     "fasit": "Gettysburg",
+     "svar": "Gettysburg. Presidenten var Abraham Lincoln, og talen varte i omtrent to minutter."
+    },
+    {
+     "tema": "Matematikk",
+     "sporsmal": "Hva er det første primtallet etter 50?",
+     "fasit": "53",
+     "svar": "53. 51 er delelig med 3, og 52 er partall."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken Beatles-trommeslager het egentlig Richard Starkey?",
+     "fasit": "Ringo Starr",
+     "svar": "Ringo Starr. Han sang også «Yellow Submarine»."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hva heter verdens største levende øgle, som lever på noen få øyer i Indonesia?",
+     "fasit": "Komodovaran",
+     "svar": "Komodovaran. Den kan bli opptil tre meter lang."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken ketsjersport slår man en fjærball over et høyt nett?",
+     "fasit": "Badminton",
+     "svar": "Badminton. Fjærballen kalles også shuttle."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Nürnberg-prosessene mot ledende nazister begynte 20. november 1945, for 81 år siden. Hvilket forbrytelsesbegrep ble for alvor knesatt der, siden «de følte bare ordre» ikke slapp unna ansvar: forbrytelser mot hva?",
+     "fasit": "Menneskeheten",
+     "svar": "Menneskeheten. Forbrytelser mot menneskeheten ble en del av folkeretten."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva kalles den japanske hvetenudelretten i buljong, som ofte serveres med tynne skiver svinekjøtt og egg?",
+     "fasit": "Ramen",
+     "svar": "Ramen. Retten har opprinnelse i kinesisk matlaging."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken prøyssisk jernkansler samlet Tyskland til ett rike i 1871?",
+     "fasit": "Otto von Bismarck",
+     "svar": "Otto von Bismarck. Keiser Wilhelm I ble kronet i Versailles."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hvilket språk har ordet «sauna» sin opprinnelse i?",
+     "fasit": "Finsk",
+     "svar": "Finsk. Landet har ca. tre millioner badstuer."
+    },
+    {
+     "tema": "Oppfinnelser",
+     "sporsmal": "Hvem fikk patent på telefonen i USA i 1876?",
+     "fasit": "Alexander Graham Bell",
+     "svar": "Alexander Graham Bell. Patentet ble innlevert bare timer før en konkurrent."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "I hvilket land ligger byen Porto, kjent for portvin?",
+     "fasit": "Portugal",
+     "svar": "Portugal. Byen ligger ved elven Douro."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 574
+ "antall_sporsmal": 588
 }
