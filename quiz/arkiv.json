@@ -3722,7 +3722,96 @@
      "svar": "Portugal. Byen ligger ved elven Douro."
     }
    ]
+  },
+  {
+   "dato": "2026-11-15",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Søndag 15. november er det 106 år siden Folkeforbundet, forgjengeren til FN, holdt sitt første store møte. I hvilken sveitsisk by lå organisasjonens hovedkvarter?",
+     "fasit": "Genève",
+     "svar": "Genève. Byen er i dag også sete for flere FN-organer."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva heter Sør-Amerikas lengste elv, som renner gjennom verdens største regnskog?",
+     "fasit": "Amazonas",
+     "svar": "Amazonas. Elven munner ut i Atlanterhavet."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva er det kjemiske symbolet for grunnstoffet natrium?",
+     "fasit": "Na",
+     "svar": "Na. Symbolet kommer fra det latinske «natrium»."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 17. november 1970 fikk Douglas Engelbart patent på det første eksemplaret av et dataverktøy som styrer markøren på skjermen. Hva kalles det?",
+     "fasit": "Datamus",
+     "svar": "Datamus. Den første modellen var av tre og hadde to hjul under."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev «Den guddommelige komedie», med de tre delene Inferno, Skjærsilden og Paradiset?",
+     "fasit": "Dante Alighieri",
+     "svar": "Dante Alighieri. Verket regnes som høydepunktet i italiensk middelalderlitteratur."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken skuespiller har spilt James Bond i flest offisielle filmer, med sju stykker?",
+     "fasit": "Roger Moore",
+     "svar": "Roger Moore. Han overtok rollen etter Sean Connery i 1973."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket britisk band fikk gjennombrudd i 2000 med albumet «Parachutes» og låta «Yellow»?",
+     "fasit": "Coldplay",
+     "svar": "Coldplay. Vokalist er Chris Martin."
+    },
+    {
+     "tema": "Oppdagelser",
+     "sporsmal": "Hvilken portugisisk sjøfarer var den første europeeren som nådde India sjøveien rundt Afrika, i 1498?",
+     "fasit": "Vasco da Gama",
+     "svar": "Vasco da Gama. Han ankom byen Calicut."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 19. november markerer FN verdens toalettdag. Hvilket grunnleggende tilbud, som er knyttet til hygiene, mangler fortsatt milliarder av mennesker?",
+     "fasit": "Trygge toaletter, eller sanitæranlegg",
+     "svar": "Trygge toaletter, eller sanitæranlegg. FN har som mål at alle skal ha tilgang innen 2030."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilke tre grener består en triatlon av?",
+     "fasit": "Svømming, sykling og løping",
+     "svar": "Svømming, sykling og løping. Disse tas i denne rekkefølgen, uten pause."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hva forteller tallet i lumen, som står på lyspærer, om pæren?",
+     "fasit": "Hvor mye lys den gir fra seg",
+     "svar": "Hvor mye lys den gir fra seg. Størrelsen kalles lysstrøm."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva slags kjøtt skal en ekte wienerschnitzel tradisjonelt lages av?",
+     "fasit": "Kalv",
+     "svar": "Kalv. Skiven blir banket tynn, panert og stekt."
+    },
+    {
+     "tema": "Geologi",
+     "sporsmal": "Hvilket fjell er høyest over havet, og ligger på grensen mellom Nepal og Kina?",
+     "fasit": "Mount Everest",
+     "svar": "Mount Everest. Fjellet er rundt 8 849 meter høyt."
+    },
+    {
+     "tema": "Hovedsteder",
+     "sporsmal": "Hva er hovedstaden i Kroatia?",
+     "fasit": "Zagreb",
+     "svar": "Zagreb. Byen ligger ved elven Sava."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 588
+ "antall_sporsmal": 602
 }
