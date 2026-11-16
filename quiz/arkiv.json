@@ -3811,7 +3811,96 @@
      "svar": "Zagreb. Byen ligger ved elven Sava."
     }
    ]
+  },
+  {
+   "dato": "2026-11-16",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Søndag 22. november er det 63 år siden president John F. Kennedy ble skutt under en åpen bilparade. I hvilken amerikansk by skjedde det?",
+     "fasit": "Dallas",
+     "svar": "Dallas. Han døde samme dag, og Lyndon B. Johnson overtok som president."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket vannsamling mellom Europa og Asia regnes som verdens største innsjø, selv om den kalles hav?",
+     "fasit": "Kaspihavet",
+     "svar": "Kaspihavet. Den ligger blant annet mot Russland, Iran og Kasakhstan."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken amerikansk president lanserte New Deal for å bekjempe krisen på 1930-tallet?",
+     "fasit": "Franklin D. Roosevelt",
+     "svar": "Franklin D. Roosevelt. Han satt som president i over tolv år, lenger enn noen annen."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Mandag 23. november er det 63 år siden den britiske TV-serien «Doctor Who» ble sendt for første gang. Hva heter romskipet, formet som et politikall, som Doktoren reiser i?",
+     "fasit": "TARDIS",
+     "svar": "TARDIS. Navnet står for «Time And Relative Dimension In Space»."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvilken kanadisk forfatter skrev romanen «Tjenerinnens fortelling» fra 1985?",
+     "fasit": "Margaret Atwood",
+     "svar": "Margaret Atwood. Boken er blitt til en kjent TV-serie."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken kanadisk artist har hiten «Blinding Lights» fra 2019?",
+     "fasit": "The Weeknd",
+     "svar": "The Weeknd. Låta ble en av de mest streamede noensinne."
+    },
+    {
+     "tema": "Naturfag",
+     "sporsmal": "Hva kalles en stein fra verdensrommet som har overlevd turen gjennom atmosfæren og landet på jorden?",
+     "fasit": "Meteoritt",
+     "svar": "Meteoritt. Mens den brenner opp i lufta, kalles den en meteor."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hvor mye er 15 ganger 15?",
+     "fasit": "225",
+     "svar": "225. 15 ganger 10 er 150, pluss 15 ganger 5 som er 75."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 1. desember 1955 nektet Rosa Parks å gi fra seg bussetet sitt til en hvit passasjer, noe som utløste en lang bussboikott. I hvilken amerikansk delstat skjedde det?",
+     "fasit": "Alabama",
+     "svar": "Alabama. Hendelsen skjedde i byen Montgomery."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilken fotballklubb fra hovedstaden i Spania har vunnet flest Champions League-titler og spiller i hvite drakter?",
+     "fasit": "Real Madrid",
+     "svar": "Real Madrid. Klubben har hjemmebane på Santiago Bernabéu."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva kalles den italienske desserten der en kule iskrem blir overhelt med en kopp varm espresso?",
+     "fasit": "Affogato",
+     "svar": "Affogato. Ordet betyr «druknet»."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken nederlandsk grafiker er kjent for trykk med umulige trapper og vannfall som ser ut til å renne oppover?",
+     "fasit": "M.C. Escher",
+     "svar": "M.C. Escher. Mange av verkene hans spiller på optiske illusjoner og matematikk."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hva heter den lille, flyløse fuglen som er nasjonalsymbolet til New Zealand?",
+     "fasit": "Kiwi",
+     "svar": "Kiwi. Den er nattaktiv og har nesebor i enden av nebbet."
+    },
+    {
+     "tema": "Økonomi",
+     "sporsmal": "Hva heter USAs sentralbank, som setter styringsrenten i landet?",
+     "fasit": "Federal Reserve",
+     "svar": "Federal Reserve. Den kalles ofte bare «Fed»."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 602
+ "antall_sporsmal": 616
 }
