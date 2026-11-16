@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://marev-svw.github.io/Lunsjbordet/partypan.html">
+<meta property="og:site_name" content="Lunsjbordet">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="«Partypan» går gjennom loggene for å finne ut hva han gjorde på afterworken">
+<meta property="og:description" content="En IT-medarbeider husker ingenting etter halv åtte på fredagens afterwork. Fylleangsten er ekstrem, så han har gjort det eneste han kan: hentet ut loggene.">
+<meta property="og:url" content="https://marev-svw.github.io/Lunsjbordet/partypan.html">
+<meta property="og:image" content="https://marev-svw.github.io/Lunsjbordet/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Lunsjbordet: kanelbolle på en gul lapp over avisnavnet og «Lokale nyheter fra kaffemaskinen»">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light dark">
+<title>«Partypan» går gjennom loggene for å finne ut hva han gjorde på afterworken | Lunsjbordet</title>
+<meta name="description" content="En IT-medarbeider husker ingenting etter halv åtte på fredagens afterwork. Fylleangsten er ekstrem, så han har gjort det eneste han kan: hentet ut loggene.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&family=Permanent+Marker&family=Schibsted+Grotesk:wght@400..900&display=swap">
+<style>
+  /* Lunsjbordets profil: samme farger og skrifter som i avisens øvrige saker */
+  :root {
+    --bg: #f3f5f4;
+    --ink: #1c2226;
+    --muted: #59646a;
+    --line: #cfd6d5;
+    --surface: #e4e9e8;
+    --link: #1f5e57;
+    --postit: #f4d547;
+    --wall: #d6dcda;
+    --drop: rgba(20, 26, 30, .35);
+    --tape: rgba(255, 255, 255, .6);
+    --sheet: #fdfdfb;
+    --sheet-muted: #5c676d;
+    --sheet-rule: #d3dde6;
+    --stamp: #b3261e;
+    --plus: #1f6b4f;
+    --sans: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+    --serif: "Newsreader", Georgia, "Times New Roman", serif;
+    --marker: "Permanent Marker", "Marker Felt", "Comic Sans MS", cursive;
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #121618;
+      --ink: #e6eae9;
+      --muted: #9ba6aa;
+      --line: #2b3337;
+      --surface: #1b2124;
+      --link: #7cc4b7;
+      --postit: #e9ca3e;
+      --wall: #1e2427;
+      --drop: rgba(0, 0, 0, .6);
+      --tape: rgba(255, 255, 255, .3);
+      --sheet: #dfe4e2;
+      --sheet-muted: #4f5a60;
+      --sheet-rule: #b9c4c8;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #121618;
+    --ink: #e6eae9;
+    --muted: #9ba6aa;
+    --line: #2b3337;
+    --surface: #1b2124;
+    --link: #7cc4b7;
+    --postit: #e9ca3e;
+    --wall: #1e2427;
+    --drop: rgba(0, 0, 0, .6);
+    --tape: rgba(255, 255, 255, .3);
+    --sheet: #dfe4e2;
+    --sheet-muted: #4f5a60;
+    --sheet-rule: #b9c4c8;
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: inherit; }
+  html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--serif); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
+  a { color: var(--link); text-decoration-thickness: .08em; text-underline-offset: .18em; }
+  a:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; border-radius: 2px; }
+  .nw { white-space: nowrap; }
+
+  /* Avishode: gult toppbanner med logo og slagord, dagens dato og værvarsel, og seksjonslenker */
+  .topbar { background: var(--postit); color: #1c2226; font-family: var(--sans); }
+  .topbar-inner { max-width: 54rem; margin: 0 auto; padding: 1rem max(1.25rem, env(safe-area-inset-right, 0px)) .45rem max(1.25rem, env(safe-area-inset-left, 0px)); display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: .5rem 2rem; }
+  .brand-wrap { padding-bottom: .55rem; }
+  .brand { margin: 0; font-size: 1.875rem; line-height: 1; font-weight: 900; letter-spacing: -0.03em; }
+  .brand a { color: inherit; text-decoration: none; }
+  @media (hover: hover) { .brand a:hover { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; } }
+  .brand-tag { margin: .3rem 0 0; font-size: .875rem; font-weight: 500; color: #3a4247; }
+  .topbar-side { display: grid; justify-items: end; gap: .1rem; min-width: 0; }
+  .today { margin: 0; font-size: .8125rem; line-height: 1.4; color: #3a4247; text-align: right; }
+  .nav ul { display: flex; flex-wrap: wrap; justify-content: flex-end; margin: 0 -.6rem; padding: 0; list-style: none; }
+  .nav a, .nav button { -webkit-appearance: none; white-space: nowrap; appearance: none; position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 .6rem; border: 0; background: none; color: inherit; font: 700 1rem/1 var(--sans); text-decoration: none; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .nav [aria-current="page"]::after { content: ""; position: absolute; left: .6rem; right: .6rem; bottom: .3rem; height: 3px; border-radius: 2px; background: currentColor; }
+  @media (hover: hover) { .nav a:not([aria-current]):hover, .nav button:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .35em; } }
+  .nav a:focus-visible, .nav button:focus-visible, .brand a:focus-visible { outline: 3px solid #1c2226; outline-offset: 1px; border-radius: 4px; }
+  .nav-plus { display: inline-grid; place-items: center; width: 1.15em; height: 1.15em; margin-left: .12em; border-radius: 4px; background: #1c2226; color: #f4d547; font-size: .9em; }
+  .nav-sr { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+  @media (max-width: 40rem) {
+    .topbar-inner { padding-top: .85rem; }
+    .brand-wrap { padding-bottom: 0; }
+    .topbar-side { justify-items: start; }
+    .today { text-align: left; }
+    .today-sep { display: none; }
+    .weather { display: block; }
+    .nav ul { justify-content: flex-start; }
+    /* Mobil: Lunsj+ skjules og menypunktene rykker litt tettere, så menyen får plass på én linje */
+    .nav ul { margin: 0 -.45rem; }
+    .nav a, .nav button { padding: 0 .45rem; }
+    .nav [aria-current="page"]::after { left: .45rem; right: .45rem; }
+    .nav .nav-pluss { display: none; }
+  }
+
+  /* Saken */
+  main { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 0 max(1.25rem, env(safe-area-inset-left, 0px)); }
+  .story { max-width: 42rem; margin: 0 auto; }
+  .kicker { margin: 2.5rem 0 .6rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
+  h1 { margin: 0 0 1.1rem; font-family: var(--sans); font-weight: 800; font-size: clamp(2.25rem, 1.3rem + 4.4vw, 3.75rem); line-height: 1.03; letter-spacing: -0.03em; text-wrap: balance; overflow-wrap: break-word; }
+  .lead { margin: 0 0 1.5rem; font-size: 1.3125rem; line-height: 1.45; font-weight: 500; }
+  .byline { margin: 0 0 2rem; font-family: var(--sans); font-size: .875rem; line-height: 1.5; color: var(--muted); }
+  .byline p { margin: 0; }
+  .author { color: var(--ink); font-weight: 700; }
+  .anonym { margin-top: .35rem !important; font-style: italic; }
+
+  /* Loggvinduet: kvelden til Partypan, hentet ut fra adgangskort, skrivere, trådløst nett og Teams.
+     Leseren viser én logglinje om gangen. Knappene står over vinduet, så de ikke flytter seg når loggen vokser. */
+  .hero { margin: 0 0 2.25rem; }
+  .stage { display: grid; justify-items: center; gap: 1.1rem; padding: clamp(2rem, 6vw, 2.75rem) clamp(.9rem, 5vw, 3rem) clamp(1.4rem, 4vw, 2rem); background: var(--wall); border-radius: 8px; overflow: hidden; }
+  .pp-wrap { position: relative; width: min(100%, 31rem); }
+  .pp-term { border-radius: 8px; background: #15191c; color: #e8ecef; box-shadow: 0 2px 4px -2px var(--drop), 0 20px 28px -18px var(--drop); overflow: hidden; transform: rotate(-.5deg); }
+  .pp-term p { margin: 0; }
+  .pp-bar { display: flex; align-items: center; gap: .4rem; padding: .55rem .8rem; background: #262c30; }
+  .pp-dot { width: .6rem; height: .6rem; border-radius: 50%; background: #4a5257; }
+  .pp-bar-t { margin-left: .45rem; font: 600 .75rem/1.2 var(--sans); letter-spacing: .02em; color: #aab3b9; }
+  .pp-body { padding: .9rem 1rem 2.6rem; font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; font-size: .8125rem; line-height: 1.45; }
+  .pp-term .pp-cmd { margin-bottom: .55rem; color: #f5b342; }
+  .pp-logg { margin: 0; padding: 0; list-style: none; }
+  .pp-logg li { display: grid; grid-template-columns: 3.3em minmax(0, 1fr); column-gap: .85em; padding: .18rem .3rem; border-radius: 3px; }
+  .pp-tid { color: #f5b342; font-weight: 700; }
+  .pp-kilde { display: block; font-size: .875em; color: #8fa3ad; }
+  .pp-txt { display: block; color: #e8ecef; overflow-wrap: anywhere; }
+  .pp-logg li.pp-slutt .pp-txt { color: #ff8a7a; font-weight: 700; }
+  .pp-logg li.pp-skjult { display: none; }
+  .postit { position: absolute; bottom: -1.5rem; right: -.8rem; z-index: 2; width: 5.4rem; min-height: 4.4rem; display: grid; place-items: center; padding: .45rem .4rem; text-align: center; transform: rotate(-6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .9375rem/1.1 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .postit::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.2rem; height: .9rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+  .pp-ctrl { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: .25rem .9rem; }
+  .chip { -webkit-appearance: none; appearance: none; min-height: 44px; padding: .5rem 1.1rem; border: 1px solid var(--ink); border-radius: 999px; background: var(--ink); color: var(--bg); font: 600 .9375rem/1.2 var(--sans); cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+  .chip:disabled { border-color: var(--line); background: var(--bg); color: var(--muted); cursor: default; }
+  .pp-lenke { -webkit-appearance: none; appearance: none; min-height: 44px; padding: 0 .2rem; border: 0; background: none; color: var(--ink); font: 600 .875rem/1.2 var(--sans); text-decoration: underline; text-underline-offset: .2em; cursor: pointer; touch-action: manipulation; }
+  .chip:focus-visible, .pp-lenke:focus-visible { outline: 3px solid var(--link); outline-offset: 2px; }
+  @media (hover: hover) { .chip:not(:disabled):hover { background: var(--muted); border-color: var(--muted); } .pp-lenke:hover { text-decoration-thickness: 2px; } }
+  .pp-status { max-width: 30rem; min-height: 2.9em; margin: -.6rem 0 .2rem; font: 600 .9375rem/1.45 var(--sans); color: var(--ink); text-align: center; text-wrap: balance; }
+  figcaption { margin-top: .9rem; font-family: var(--sans); font-size: .875rem; line-height: 1.45; color: var(--muted); }
+  .credit { white-space: nowrap; }
+  @media (max-width: 26rem) {
+    .pp-body { padding: .8rem .75rem 2.5rem; font-size: .75rem; }
+    .pp-logg li { column-gap: .6em; padding-left: .2rem; padding-right: .2rem; }
+    .postit { right: -.5rem; width: 5rem; min-height: 4rem; font-size: .875rem; }
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .pp-ny { animation: ny .6s ease both; }
+    .postit.ny { animation: vipp .5s ease; }
+  }
+  @keyframes ny {
+    0% { background: rgba(245, 179, 66, .32); }
+    100% { background: transparent; }
+  }
+  @keyframes vipp {
+    0%, 100% { transform: rotate(-6deg); }
+    30% { transform: rotate(3deg) scale(1.06); }
+    60% { transform: rotate(-10deg); }
+  }
+
+  /* Brødtekst */
+  .body p { margin: 0 0 1.05em; font-size: 1.1875rem; line-height: 1.62; }
+  .body blockquote { margin: 2rem 0 2.1rem; padding-left: 1.25rem; border-left: 4px solid var(--postit); }
+  .body blockquote p { margin: 0 0 .5rem; font: 700 1.5rem/1.25 var(--sans); letter-spacing: -0.015em; }
+  .body blockquote cite { font: 500 .9375rem/1.3 var(--sans); font-style: normal; color: var(--muted); }
+  .body h2 { margin: 2rem 0 .6rem; font: 800 1.25rem/1.25 var(--sans); letter-spacing: -0.012em; }
+
+  /* Fakta */
+  .facts { margin: 2.25rem 0; padding: 1.2rem 1.3rem 1.25rem; border-radius: 8px; background: var(--surface); font-family: var(--sans); font-size: 1rem; line-height: 1.5; }
+  .facts h2 { margin: 0 0 .7rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+  .facts dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .45rem 1.1rem; margin: 0; }
+  .facts dt { font-weight: 700; }
+  .facts dd { margin: 0; }
+  @media (max-width: 26rem) { .facts dl { grid-template-columns: minmax(0, 1fr); gap: 0; } .facts dd { margin-bottom: .5rem; } }
+
+  /* Les også */
+  .more { margin: 2.75rem 0 0; font-family: var(--sans); }
+  .more h2 { margin: 0 0 .7rem; font: 800 1.125rem/1.2 var(--sans); letter-spacing: -0.01em; }
+  .more ul { margin: 0; padding: 0; list-style: none; }
+  .more li { margin: 0 0 1rem; font-size: 1.0625rem; font-weight: 700; line-height: 1.35; }
+  .src { display: block; margin-top: .2rem; font-size: .8125rem; font-weight: 500; color: var(--muted); }
+
+  .colophon { padding: 0 max(1.25rem, env(safe-area-inset-right, 0px)) 3rem max(1.25rem, env(safe-area-inset-left, 0px)); font: 500 .875rem/1.5 var(--sans); color: var(--muted); }
+  .colophon p { max-width: 42rem; margin: 3rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand-wrap">
+        <p class="brand"><a href="index.html">Lunsjbordet</a></p>
+        <p class="brand-tag">Lokale nyheter fra kaffemaskinen</p>
+      </div>
+      <div class="topbar-side">
+        <p class="today"><span id="today">Mandag 16. november 2026</span><span class="today-sep" aria-hidden="true"> · </span><span class="weather">Været ved kaffemaskinen: tåkete minner etter fredag, lett skjelving i IT-avdelingen og fare for kort prat kl. 15:00</span></p>
+        <nav class="nav" aria-label="Seksjoner">
+          <ul>
+            <li><a href="index.html">Forside</a></li>
+            <li><a href="index.html#quiz" data-open="quiz">Quiz</a></li>
+            <li><a href="striper.html">Ukas stripe</a></li>
+            <li><a href="index.html#arkiv" data-open="arkiv">Arkiv</a></li>
+            <li><a href="sitater.html">Sitater</a></li>
+            <li><a href="dikt.html">Dikt</a></li>
+            <li><a href="kontakt.html">Tips oss</a></li>
+            <li class="nav-pluss"><a href="index.html#lunsjpluss">Lunsj<span class="nav-plus" aria-hidden="true">+</span><span class="nav-sr">pluss</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<script>
+  // Dagens dato i toppbanneret, lik på alle sider
+  (function () {
+    try {
+      var s = new Intl.DateTimeFormat("nb-NO", { weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(new Date());
+      document.getElementById("today").textContent = s.charAt(0).toUpperCase() + s.slice(1);
+    } catch (e) {
+      // Beholder datoen som står i banneret
+    }
+  })();
+</script>
+
+<main>
+  <article class="story">
+    <p class="kicker">Afterwork</p>
+    <h1>«Partypan» går gjennom loggene for å finne ut hva han gjorde på&nbsp;afterworken</h1>
+
+    <p class="lead">En IT-medarbeider husker ingenting etter halv åtte på fredagens afterwork. Fylleangsten er ekstrem, så han har gjort det eneste han kan: hentet ut loggene.</p>
+
+    <div class="byline">
+      <p class="author">Lunsjbordets teknologiredaksjon</p>
+      <p>Publisert <time datetime="2026-11-16T11:04+01:00">mandag 16. november 2026 kl. 11:04</time></p>
+      <p class="anonym">Journalisten husker hele kvelden og er dermed i mindretall.</p>
+    </div>
+
+    <figure class="hero">
+      <div class="stage">
+        <div class="pp-ctrl">
+          <button type="button" class="chip" id="pp-neste" hidden>Vis neste logglinje</button>
+          <button type="button" class="pp-lenke" id="pp-rull" hidden>Rull tilbake kvelden</button>
+        </div>
+        <p class="pp-status" id="pp-status" aria-live="polite" hidden></p>
+        <div class="pp-wrap" role="group" aria-label="Loggen fra fredag kveld">
+          <div class="pp-term">
+            <p class="pp-bar" aria-hidden="true"><span class="pp-dot"></span><span class="pp-dot"></span><span class="pp-dot"></span><span class="pp-bar-t">logg · fredag 13. november</span></p>
+            <div class="pp-body">
+              <p class="pp-cmd">$ hent-logg --bruker partypan --dato 13.11</p>
+              <ol class="pp-logg" id="pp-logg">
+                <li><span class="pp-tid">16:58</span><span><span class="pp-kilde">Teams</span><span class="pp-txt">Status endret til «Tilgjengelig»</span></span></li>
+                <li><span class="pp-tid">17:02</span><span><span class="pp-kilde">Teams, #afterwork</span><span class="pp-txt">«Gleder meg!»</span></span></li>
+                <li><span class="pp-tid">17:41</span><span><span class="pp-kilde">Adgangskort</span><span class="pp-txt">Kantina, inn</span></span></li>
+                <li><span class="pp-tid">18:36</span><span><span class="pp-kilde">Møteromsskjerm 2</span><span class="pp-txt">Spillelisten «Fredagsfest 2009» startet</span></span></li>
+                <li><span class="pp-tid">19:31</span><span><span class="pp-kilde">Teams, #afterwork</span><span class="pp-txt">«bare én til»</span></span></li>
+                <li><span class="pp-tid">19:40</span><span><span class="pp-kilde">Adgangskort</span><span class="pp-txt">Serverrommet, inn (3 ganger på 10 minutter)</span></span></li>
+                <li><span class="pp-tid">20:14</span><span><span class="pp-kilde">Trådløst nett</span><span class="pp-txt">Gjestenettet har fått nytt navn: «Partypan_5G»</span></span></li>
+                <li><span class="pp-tid">20:15</span><span><span class="pp-kilde">Trådløst nett</span><span class="pp-txt">Administratorpassordet er endret</span></span></li>
+                <li><span class="pp-tid">21:12</span><span><span class="pp-kilde">Skriveren ved kaffemaskinen</span><span class="pp-txt">Partypan.jpg, 40 kopier, farger</span></span></li>
+                <li><span class="pp-tid">22:07</span><span><span class="pp-kilde">E-post</span><span class="pp-txt">Fraværsmelding: «Partypan er på dansegulvet. Henvendelser besvares mandag.»</span></span></li>
+                <li><span class="pp-tid">23:05</span><span><span class="pp-kilde">Teams, kanalen for hele huset</span><span class="pp-txt">«Elsker dere alle»</span></span></li>
+                <li><span class="pp-tid">23:41</span><span><span class="pp-kilde">Adgangskort</span><span class="pp-txt">Hovedinngangen, ut</span></span></li>
+                <li class="pp-slutt"><span class="pp-tid">--:--</span><span><span class="pp-txt">Ingen flere oppføringer.</span></span></li>
+              </ol>
+            </div>
+          </div>
+          <div class="postit" id="postit" aria-hidden="true">IKKE PANIKK.</div>
+        </div>
+      </div>
+      <figcaption>Loggene fra fredag kveld, slik IT-medarbeideren hentet dem ut lørdag formiddag. Gå gjennom dem i ditt eget tempo. Han har ikke klart det. <span class="credit">Illustrasjon: Lunsjbordet</span></figcaption>
+    </figure>
+
+    <div class="body">
+      <p>Afterworken på kontoret fredag var vellykket, ifølge de fleste som husker den. En IT-medarbeider er ikke blant dem.</p>
+
+      <p>Han husker at han kom, og at han sa «bare én til» rundt halv åtte. Etter det husker han ingenting.</p>
+
+      <p>Kvelden er nå kjent på kontoret under navnet «Partypan». Han vet ikke hvor navnet kommer fra.</p>
+
+      <p>«Jeg våknet lørdag med 140 uleste varsler og en følelse av at noe var galt. Den følelsen har ikke gått over», sier han til Lunsjbordet.</p>
+
+      <h2>Loggene</h2>
+
+      <p>Som IT-medarbeider har han tilgang til det meste. Lørdag formiddag hentet han ut loggene fra adgangskortsystemet, skriverne, det trådløse nettet og Teams.</p>
+
+      <p>«Jeg har satt sammen kvelden minutt for minutt. Det var en feil», sier han.</p>
+
+      <p>Loggene viser blant annet at adgangskortet hans ble brukt på serverrommet tre ganger i løpet av ti minutter. Han vet ikke hva han gjorde der.</p>
+
+      <p>«Serverne virker. Foreløpig», sier han.</p>
+
+      <p>Kl.&nbsp;21:12 skrev skriveren ved kaffemaskinen ut 40 eksemplarer av en fil som heter Partypan.jpg, i farger. Ingen av utskriftene er funnet. Ingen har spurt etter dem heller, og det bekymrer ham.</p>
+
+      <p>Hilde har bekreftet at ingen av dem er levert inn som hittegods.</p>
+
+      <h2>Partypan_5G</h2>
+
+      <p>Kl.&nbsp;20:14 fikk kontorets gjestenett nytt navn: «Partypan_5G». Ett minutt senere ble administratorpassordet endret.</p>
+
+      <p>Han er den eneste med administratorrettigheter. Han husker ikke passordet.</p>
+
+      <p>Nettet heter derfor fortsatt «Partypan_5G». Tre klienter har koblet seg til det siden fredag. Én av dem har spurt om Partypan kan være med på neste møte.</p>
+
+      <h2>«Vi tar det på mandag»</h2>
+
+      <p>Kl.&nbsp;23:05 skrev han «Elsker dere alle» i kanalen for hele huset. Meldingen har 58 reaksjoner. Han har ikke turt å se hvilke.</p>
+
+      <p>Lørdag kl.&nbsp;11:20 fulgte han opp med «Beklager hvis jeg sa noe rart». Den har fått tre svar.</p>
+
+      <p>Det første er «Hva mener du?». Det andre er «Takk for sist!». Det tredje er fra en partner: «Vi tar det på mandag.»</p>
+
+      <p>Det er mandag i dag.</p>
+
+      <blockquote>
+        <p>«Jeg har lest den meldingen rundt 400 ganger. Det er ikke noe utropstegn der. Jeg vet ikke om det er bra eller dårlig.»</p>
+        <cite>IT-medarbeideren</cite>
+      </blockquote>
+
+      <p>Lunsjbordet har tidligere omtalt at <a href="utropstegn.html">tre utropstegn avgjorde innleiesaken</a>. Hvor mye det veier at utropstegnene mangler, er ikke avklart.</p>
+
+      <p>Søndag kveld dukket det opp et møte i kalenderen hans. Det er sendt fra partneren, det er satt til kl.&nbsp;15:00 i dag, og det heter «Kort prat». Det har ingen agenda.</p>
+
+      <h2>Hendelsesrapport</h2>
+
+      <p>Han har håndtert fylleangsten slik han håndterer alt annet: Han har opprettet en hendelsesrapport.</p>
+
+      <p>Alvorlighetsgraden er satt til «Kritisk». Under berørte tjenester står det «Alle». Årsaksanalysen pågår. Under tiltak for å hindre gjentakelse står det foreløpig ett ord: «Én».</p>
+
+      <p>Han har også forsøkt å rulle tilbake kvelden. Det lot seg ikke gjøre.</p>
+
+      <p>«Det finnes ingen sikkerhetskopi av fredag kveld. Jeg har sjekket to ganger», sier han.</p>
+
+      <h2>Dansegulvet</h2>
+
+      <p>Kl.&nbsp;22:07 ble det aktivert en fraværsmelding på e-posten hans: «Partypan er på dansegulvet. Henvendelser besvares mandag.» Den sto på til søndag kveld.</p>
+
+      <p>I mellomtiden har brukerstøtten fått sju henvendelser. Alle spør om Partypan kan komme og fikse skriveren. Alle fikk svar om at Partypan var på dansegulvet.</p>
+
+      <p>Skriveren er tom for papir. Det var 40 ark igjen fredag ettermiddag.</p>
+
+      <p>Den siste linjen i loggen lyder «Ingen flere oppføringer». Han har lest den oftere enn partnerens melding.</p>
+
+      <p>«Det er den linjen som plager meg mest», sier han.</p>
+
+      <p>Møtet med partneren er kl.&nbsp;15:00. Han har tatt med seg loggene.</p>
+    </div>
+
+    <aside class="facts" aria-labelledby="facts-title">
+      <h2 id="facts-title">Hendelsesrapport</h2>
+      <dl>
+        <dt>Hendelse</dt><dd>Afterwork på kontoret, fredag 13. november</dd>
+        <dt>Berørt bruker</dt><dd>Partypan</dd>
+        <dt>Siste kjente minne</dt><dd>«Bare én til», rundt halv åtte</dd>
+        <dt>Serverrommet</dt><dd>Tre besøk, ingen forklaring</dd>
+        <dt>Gjestenett</dt><dd>Partypan_5G</dd>
+        <dt>Utskrifter</dt><dd>40, i farger. Ikke funnet</dd>
+        <dt>Svar på unnskyldningen</dt><dd>Tre</dd>
+        <dt>Alvorlighetsgrad</dt><dd>Kritisk</dd>
+        <dt>Sikkerhetskopi</dt><dd>Finnes ikke</dd>
+        <dt>Status</dt><dd>Avventer «Kort prat» kl.&nbsp;15:00</dd>
+      </dl>
+    </aside>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title">Les også</h2>
+      <ul>
+        <li><a href="bordplassering.html">Julebordets bordplassering kunngjort på Doffin: <span class="nw">–&nbsp;Tildelings</span>&shy;kriteriene er&nbsp;uklare</a><span class="src">Julebordet</span></li>
+        <li><a href="utropstegn.html">Tre utropstegn avgjorde innleiesaken</a><span class="src">Innleiesaken</span></li>
+        <li><a href="linkedin.html">Partner felt i Advokatnemnda for «uhemmet og overdreven bruk av LinkedIn»: <span class="nw">–&nbsp;Ydmyk</span> og takknemlig</a><span class="src">Lunsjbordet, teknologi</span></li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer class="colophon">
+  <p>Lunsjbordet er satire. Partypan og kvelden hans er oppdiktet. Serverne virker.</p>
+</footer>
+
+<script>
+  // Loggvinduet: «Vis neste logglinje» viser én linje om gangen, med en kort kommentar under vinduet.
+  // «Rull tilbake kvelden» forsøker en gjenoppretting. Uten skript vises hele loggen.
+  (function () {
+    "use strict";
+
+    var KOMMENTAR = [
+      "Første gang i år. Han husker dette.",
+      "Han husker dette også. Han angrer ikke på det. Ennå.",
+      "Afterworken har begynt. Alt er i orden.",
+      "Ingen har innrømmet at de danset. Spillelisten er hans.",
+      "Dette er det siste han husker.",
+      "Han vet ikke hva han gjorde der. Serverne virker. Foreløpig.",
+      "Nettet heter fortsatt Partypan_5G.",
+      "Han er den eneste med administratorrettigheter. Han husker ikke passordet.",
+      "Ingen av utskriftene er funnet. Ingen har spurt etter dem heller.",
+      "Den sto på til søndag kveld.",
+      "Meldingen har 58 reaksjoner. Han har ikke turt å se hvilke.",
+      "Han kom seg hjem. Han vet ikke hvordan.",
+      "Det er denne linjen som plager ham mest."
+    ];
+    var START = "Han husker de to første linjene. Resten har han ikke turt å lese.";
+    var VIST = 2;
+    var RULL = "Gjenoppretting mislyktes. Det finnes ingen sikkerhetskopi av fredag kveld.";
+
+    var linjer = document.querySelectorAll("#pp-logg li");
+    var neste = document.getElementById("pp-neste");
+    var rull = document.getElementById("pp-rull");
+    var status = document.getElementById("pp-status");
+    var postit = document.getElementById("postit");
+    var n = VIST;
+
+    function lapp(tekst) {
+      postit.textContent = tekst;
+      postit.classList.remove("ny");
+      void postit.offsetWidth;
+      postit.classList.add("ny");
+    }
+
+    function teller() {
+      neste.textContent = n < linjer.length ? "Vis neste logglinje (" + (n + 1) + " av " + linjer.length + ")" : "Loggen er slutt";
+    }
+
+    for (var i = VIST; i < linjer.length; i++) linjer[i].classList.add("pp-skjult");
+
+    neste.addEventListener("click", function () {
+      if (n >= linjer.length) return;
+      var li = linjer[n];
+      li.classList.remove("pp-skjult");
+      li.classList.add("pp-ny");
+      status.textContent = KOMMENTAR[n];
+      n += 1;
+      if (n === linjer.length) {
+        neste.disabled = true;
+        lapp("PANIKK.");
+      }
+      teller();
+    });
+
+    rull.addEventListener("click", function () {
+      status.textContent = RULL;
+    });
+
+    teller();
+    neste.hidden = false;
+    rull.hidden = false;
+    status.hidden = false;
+    status.textContent = START;
+  })();
+</script>
+
+</body>
+</html>

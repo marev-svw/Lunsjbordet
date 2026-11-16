@@ -7,6 +7,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | Fil | Innhold |
 | --- | --- |
 | `index.html` | Forsiden |
+| `partypan.html` | «Partypan» går gjennom loggene for å finne ut hva han gjorde på afterworken, med et loggvindu der leseren går gjennom kvelden linje for linje |
 | `bordplassering.html` | Julebordets bordplassering kunngjort på Doffin: «Tildelingskriteriene er uklare», med meddelelsen om tildeling der leseren kan be om utvidet begrunnelse og begjære midlertidig forføyning |
 | `abstinenser.html` | Markus øver fortsatt på prosedyren: «Bare i tilfelle», med HMS-tavla utenfor cellekontoret der leseren melder nye observasjoner |
 | `karma.html` | Karmaen var på jobb før Markus: «Jeg har vært her siden nå», med kontoutskriften fra Universets karmabank der leseren bokfører postene selv |
