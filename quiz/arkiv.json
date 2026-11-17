@@ -3900,7 +3900,96 @@
      "svar": "Federal Reserve. Den kalles ofte bare «Fed»."
     }
    ]
+  },
+  {
+   "dato": "2026-11-17",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Fløyelsrevolusjonen i Tsjekkoslovakia startet med store demonstrasjoner 17. november 1989, altså for 37 år siden. Hvilken by var sentrum for protestene?",
+     "fasit": "Praha",
+     "svar": "Praha. Regimet falt i løpet av noen uker, nesten uten vold."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hvilken planet ble oppdaget i 1846 etter at astronomer hadde beregnet posisjonen matematisk?",
+     "fasit": "Neptun",
+     "svar": "Neptun. Den bruker rundt 165 år på én runde rundt sola."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilket rike i Sør-Amerika styrte Atahualpa da spanjolen Pizarro kom dit i 1532?",
+     "fasit": "Inkariket",
+     "svar": "Inkariket. Hovedstaden Cusco ligger i dagens Peru."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 20. november 1985 lanserte et amerikansk selskap første versjon av operativsystemet Windows. Hvilket selskap?",
+     "fasit": "Microsoft",
+     "svar": "Microsoft. Windows 1.0 var et grafisk skall som kjørte oppå MS-DOS."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Fluenes herre» om en gruppe skolegutter strandet på en øy?",
+     "fasit": "William Golding",
+     "svar": "William Golding. Forfatteren fikk Nobelprisen i litteratur i 1983."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken fransk komponist skrev «Bolero» i 1928?",
+     "fasit": "Maurice Ravel",
+     "svar": "Maurice Ravel. Verket bygger på samme rytme og melodi som gjentas med stadig flere instrumenter."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hva kalles den delen av en dyrecelle som inneholder det meste av DNA-et?",
+     "fasit": "Cellekjernen",
+     "svar": "Cellekjernen. Bakterier mangler cellekjerne."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles den høyeste rangen i japansk sumobrytning?",
+     "fasit": "Yokozuna",
+     "svar": "Yokozuna. En yokozuna rykker aldri ned, men forventes å gå av hvis prestasjonene uteblir."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 25. november 1952 hadde et teaterstykke av Agatha Christie premiere i London, og det går fortsatt. Hva heter stykket?",
+     "fasit": "Musefellen",
+     "svar": "Musefellen. Det er verdens lengstspilte stykke i originaluppsetning."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva kalles den franske tilberedningsmetoden der maten vakuumpakkes og kokes langsomt i vannbad?",
+     "fasit": "Sous vide",
+     "svar": "Sous vide. Navnet betyr «under vakuum»."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva kalles en blanding av flere metaller, for eksempel bronse?",
+     "fasit": "Legering",
+     "svar": "Legering. Bronse er hovedsakelig kobber og tinn."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hvor mange er 7 ganger 8 minus 6?",
+     "fasit": "50",
+     "svar": "50. 7 ganger 8 er 56, og 56 minus 6 er 50."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken film vant Oscar for beste film for 1997, og handler om et skip som synker?",
+     "fasit": "Titanic",
+     "svar": "Titanic. Filmen fikk elleve Oscar-statuetter."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket verdenshav ligger mellom Afrika, Asia og Australia?",
+     "fasit": "Indiahavet",
+     "svar": "Indiahavet. Det er det tredje største av verdenshavene."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 616
+ "antall_sporsmal": 630
 }
