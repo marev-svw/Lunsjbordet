@@ -3989,7 +3989,96 @@
      "svar": "Indiahavet. Det er det tredje største av verdenshavene."
     }
    ]
+  },
+  {
+   "dato": "2026-11-18",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 20. november 1945 begynte rettssaken mot nazi-Tysklands øverste ledere etter krigen. I hvilken tyske by ble den holdt?",
+     "fasit": "Nürnberg",
+     "svar": "Nürnberg. Rettssaken varte i nesten ett år og ga tolv dødsdommer."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken kanal forbinder Atlanterhavet og Stillehavet gjennom Mellom-Amerika?",
+     "fasit": "Panamakanalen",
+     "svar": "Panamakanalen. Den åpnet i 1914 og sparer skip for turen rundt Kapp Horn."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år brøt den franske revolusjon ut med stormingen av Bastillen?",
+     "fasit": "1789",
+     "svar": "1789. Stormingen skjedde 14. juli."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 19. november 1969 scoret en brasiliansk fotballstjerne sitt tusende mål i karrieren, på straffe i Maracanã. Hvem?",
+     "fasit": "Pelé",
+     "svar": "Pelé. Målet kom for Santos, og stadion var stappfullt."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev «Alice i Eventyrland», utgitt i 1865?",
+     "fasit": "Lewis Carroll",
+     "svar": "Lewis Carroll. Det egentlige navnet hans var Charles Dodgson, og han var matematiker."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket treblåseinstrument spiller tonen orkesteret stemmer etter?",
+     "fasit": "Obo",
+     "svar": "Obo. Tonen er A, og obo-spilleren gir den før konserten."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 18. november 1883 innførte amerikanske jernbaneselskaper standard tidssoner, fordi hver by hadde sin egen soltid. Hvilken bransje sto bak?",
+     "fasit": "Jernbanene",
+     "svar": "Jernbanene. Staten vedtok tidssonene først i 1918."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken idrett kaster en «bowler» ballen mot en «wicket»?",
+     "fasit": "Cricket",
+     "svar": "Cricket. En vanlig testkamp kan vare i fem dager."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken drikk lages ved å gjære druesaft og kalles «bubbles» i Champagne-regionen?",
+     "fasit": "Musserende vin",
+     "svar": "Musserende vin. Champagne er den mest kjente typen."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket dyr gir ullen som kalles kashmir?",
+     "fasit": "Geit",
+     "svar": "Geit. Ullen kommer fra underullen til kashmirgeiter."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva kalles det grunnstoffet som diamant og grafitt begge består av?",
+     "fasit": "Karbon",
+     "svar": "Karbon. Atomnummeret er 6."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvem grunnla nettbutikken Amazon i 1994?",
+     "fasit": "Jeff Bezos",
+     "svar": "Jeff Bezos. Selskapet begynte som en nettbokhandel i en garasje."
+    },
+    {
+     "tema": "Matte",
+     "sporsmal": "Hva er 9 ganger 9 pluss 9?",
+     "fasit": "90",
+     "svar": "90. 9 ganger 9 er 81, og 81 pluss 9 er 90."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken skuespiller spilte Jack Dawson i filmen «Titanic»?",
+     "fasit": "Leonardo DiCaprio",
+     "svar": "Leonardo DiCaprio. Filmen kom i 1997 og var regissert av James Cameron."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 630
+ "antall_sporsmal": 644
 }
