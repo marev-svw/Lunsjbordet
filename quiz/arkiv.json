@@ -4078,7 +4078,96 @@
      "svar": "Leonardo DiCaprio. Filmen kom i 1997 og var regissert av James Cameron."
     }
    ]
+  },
+  {
+   "dato": "2026-11-19",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 19. november 1828 døde en østerriksk komponist i Wien, bare 31 år gammel. Han skrev blant annet «Ave Maria» og «Uferdige symfoni». Hvem?",
+     "fasit": "Franz Schubert",
+     "svar": "Franz Schubert. Han skrev over 600 sanger, og symfonien ble aldri fullført."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva heter Sveriges nest største by?",
+     "fasit": "Göteborg",
+     "svar": "Göteborg. Byen ligger på vestkysten og har Nordens største havn."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 19. november 1977 besøkte en arabisk president Israels nasjonalforsamling Knesset i Jerusalem, som den første av sitt slag. Hvilket land var han president i?",
+     "fasit": "Egypt",
+     "svar": "Egypt. Presidenten var Anwar Sadat, og besøket banet vei for fredsavtalen i 1979."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hva kalles det fenomenet at lys skifter retning når det går fra luft over i vann?",
+     "fasit": "Lysbrytning",
+     "svar": "Lysbrytning. Det er derfor en blyant i et vannglass ser knekt ut."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Moby Dick» om jakten på den hvite hvalen?",
+     "fasit": "Herman Melville",
+     "svar": "Herman Melville. Romanen kom ut i 1851."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken britisk dronning regjerte lengst før Elizabeth II?",
+     "fasit": "Victoria",
+     "svar": "Victoria. Hun satt på tronen i 63 år, fra 1837 til 1901."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 19. november 1493 kom en italiensk oppdagelsesreisende i tjeneste for Spania til øya Puerto Rico, på sin andre reise til Amerika. Hvem?",
+     "fasit": "Christofer Columbus",
+     "svar": "Christofer Columbus. Øya er i dag et amerikansk territorium."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken artist ga ut albumet «Purple Rain» i 1984?",
+     "fasit": "Prince",
+     "svar": "Prince. Filmen med samme navn kom samme år."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken lagidrett finnes spillerposisjonene «libero» og «setter»?",
+     "fasit": "Volleyball",
+     "svar": "Volleyball. Liberoen spiller i annen drakt enn resten av laget."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den japanske drikken som lages av gjæret ris?",
+     "fasit": "Sake",
+     "svar": "Sake. Den serveres både varm og kald."
+    },
+    {
+     "tema": "Tegneserier",
+     "sporsmal": "Hvilken belgisk tegner skapte tegneseriefiguren Tintin?",
+     "fasit": "Hergé",
+     "svar": "Hergé. Det egentlige navnet hans var Georges Remi."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hva heter Apples stemmeassistent?",
+     "fasit": "Siri",
+     "svar": "Siri. Den kom første gang på iPhone 4S i 2011."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken skuespiller spilte Gandalf i Peter Jacksons «Hobbiten»-filmer?",
+     "fasit": "Ian McKellen",
+     "svar": "Ian McKellen. Han spilte også trollmannen i «Ringenes herre»."
+    },
+    {
+     "tema": "Dyr",
+     "sporsmal": "Hvilket landdyr er det raskeste i verden over korte distanser?",
+     "fasit": "Gepard",
+     "svar": "Gepard. Den kan komme opp i rundt 100 kilometer i timen, men bare i korte drag."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 644
+ "antall_sporsmal": 658
 }
