@@ -781,6 +781,25 @@
   .hm-note { position: absolute; bottom: -1.7em; right: -1em; z-index: 1; width: 5.4em; height: 4.6em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(-6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
   .hm-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
+  /* Løpetreningssaken: plakaten fra trappa ned til kjelleren, med løperen foran en rød sol, femårsplanen fra Oslo
+     til Moskva og lapp. Plakaten er lys i begge temaer. Alle mål i em, så illustrasjonen vokser med spalten. */
+  .fig.lt { background: var(--wall); }
+  .lt-scene { position: relative; width: min(100%, 17.5em); margin: 1.6em 0 .6em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .lt-plakat { position: relative; padding: 0 0 1em; border-radius: 3px; background: #efe5cf; color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); overflow: hidden; transform: rotate(-1.2deg); }
+  .lt-plakat p { margin: 0; }
+  .lt-plakat .lt-topp { display: flex; justify-content: center; align-items: center; gap: .6em; padding: .65em 1em; background: #1c2226; color: #efe5cf; font-size: .625em; font-weight: 800; line-height: 1.2; letter-spacing: .14em; text-transform: uppercase; }
+  .lt-stjerne { color: #e0453a; }
+  .lt-motiv { display: block; width: 100%; height: auto; }
+  .lt-plakat .lt-tittel { margin: -.15em .6em .5em; font-size: 1.6em; font-weight: 900; line-height: .95; letter-spacing: -.01em; text-align: center; text-transform: uppercase; color: #b3261e; }
+  .lt-plan { margin: 0 1.1em; }
+  .lt-plakat .lt-by { display: flex; justify-content: space-between; font-size: .625em; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+  .lt-spor { height: .5em; margin: .3em 0 .4em; border-radius: 99px; background: rgba(28, 34, 38, .16); overflow: hidden; }
+  .lt-spor span { display: block; width: 2.5%; min-width: .5em; height: 100%; border-radius: 99px; background: #b3261e; }
+  .lt-plakat .lt-km { font-size: .75em; font-weight: 600; text-align: center; }
+  .lt-km b { font-weight: 900; }
+  .lt-note { position: absolute; top: -1.6em; right: -1em; z-index: 1; width: 5.2em; height: 4.5em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .lt-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1765,6 +1784,40 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Bedriftsidrett</p>
+      <h2 class="hl-xl"><a class="stretch" href="lopetrening.html">Kristian innfører løpetrening i kjelleren: <span class="nw">–&nbsp;Ingen</span> er tvunget. Det er bare&nbsp;obligatorisk</a></h2>
+      <p class="lead">To morgener i uka går kollegene ned i kjelleren for å løpe. Ingen av dem har meldt seg på. Treningsrommet ser ut som et tilfluktsrom fra 80-tallet, og flere av deltakerne sammenligner ordningen med Stalins Sovjetunion. Kristian mener sammenligningen er urimelig.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets sportsredaksjon</p>
+        <p>Talt runde for runde</p>
+      </div>
+    </div>
+    <div class="fig lt" aria-hidden="true">
+      <div class="lt-scene">
+        <div class="lt-plakat">
+          <p class="lt-topp"><span class="lt-stjerne">★</span>Femårsplanen<span class="lt-stjerne">★</span></p>
+          <svg class="lt-motiv" viewBox="0 0 200 118">
+            <circle cx="122" cy="58" r="46" fill="#c8322a"/>
+            <g stroke="#1c2226" stroke-width="3" stroke-linecap="round"><path d="M30 50h24M20 62h30M32 74h20"/></g>
+            <g fill="none" stroke="#1c2226" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"><path d="M110 36 96 66"/><path d="M108 42 124 52 138 42"/><path d="M106 42 90 47 80 37"/><path d="M96 66 114 80 118 104"/><path d="M96 66 82 86 62 88"/></g>
+            <circle cx="114" cy="22" r="10" fill="#1c2226"/>
+            <path d="M24 110h152" stroke="#1c2226" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+          <p class="lt-tittel">Løp for kontoret!</p>
+          <div class="lt-plan">
+            <p class="lt-by"><span>Oslo</span><span>Moskva</span></p>
+            <div class="lt-spor"><span></span></div>
+            <p class="lt-km"><b>41</b> av 1&nbsp;643&nbsp;km</p>
+          </div>
+        </div>
+        <div class="lt-note">305 RUNDER.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Afterwork</p>
       <h2 class="hl-xl"><a class="stretch" href="partypan.html">«Partypan» går gjennom loggene for å finne ut hva han gjorde på&nbsp;afterworken</a></h2>
       <p class="lead">En IT-medarbeider husker ingenting etter halv åtte på fredagens afterwork. Fylleangsten er ekstrem, så han har gjort det eneste han kan: hentet ut loggene.</p>
@@ -1792,7 +1845,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Dikterens hjørne</p>
@@ -1815,33 +1867,6 @@
           <p class="d47-ut d47-skriver"><span></span><span></span><span></span></p>
         </div>
         <div class="d47-note">ALLTIDS.</div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Julebordet</p>
-      <h2 class="hl-xl"><a class="stretch" href="bordplassering.html">Julebordets bordplassering kunngjort på Doffin: <span class="nw">–&nbsp;Tildelings</span>&shy;kriteriene er&nbsp;uklare</a></h2>
-      <p class="lead">Julebordkomiteen har lagt ut bordplasseringen til julebordet på Festningen som en åpen anbudskonkurranse. Meddelelsen om tildeling kom torsdag morgen. Flere tilbydere mener ingen kunne vite hva de konkurrerte om.</p>
-      <div class="meta">
-        <p class="desk">Lunsjbordets anskaffelsesredaksjon</p>
-        <p>Lest i konkurransegrunnlaget</p>
-      </div>
-    </div>
-    <div class="fig bp" aria-hidden="true">
-      <div class="bp-scene">
-        <div class="bp-ark">
-          <p class="bp-topp">Meddelelse om tildeling</p>
-          <p class="bp-tittel">Bordplassering, julebordet</p>
-          <p class="bp-rad"><span>Godt selskap</span><b>40 %</b></p>
-          <p class="bp-rad"><span>Pris, i kanelboller</span><b>30 %</b></p>
-          <p class="bp-rad"><span>Bordmiljø</span><b>30 %</b></p>
-          <p class="bp-tildelt"><span>Tildelt</span><b>Bord 14</b></p>
-          <p class="bp-begr">«Det valgte tilbudet ble vurdert som bedre.»</p>
-          <p class="bp-stempel">Uklart</p>
-        </div>
-        <div class="bp-note">BORD 14.</div>
       </div>
     </div>
   </article>
@@ -1885,54 +1910,54 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Dikterens hjørne</p>
-      <h2 class="hl-xl"><a class="stretch" href="tirsdagens-frykt.html">Tirsdagens frykt</a></h2>
-      <p class="lead">Ukens dikt handler om mandagen, som lenge har hatt rykte på seg for å være ukens tyngste dag. Dikteren har lest kantinas meny og er ikke lenger like sikker.</p>
+      <p class="kicker">Julebordet</p>
+      <h2 class="hl-xl"><a class="stretch" href="bordplassering.html">Julebordets bordplassering kunngjort på Doffin: <span class="nw">–&nbsp;Tildelings</span>&shy;kriteriene er&nbsp;uklare</a></h2>
+      <p class="lead">Julebordkomiteen har lagt ut bordplasseringen til julebordet på Festningen som en åpen anbudskonkurranse. Meddelelsen om tildeling kom torsdag morgen. Flere tilbydere mener ingen kunne vite hva de konkurrerte om.</p>
       <div class="meta">
-        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-        <p>Nytt dikt hver mandag</p>
+        <p class="desk">Lunsjbordets anskaffelsesredaksjon</p>
+        <p>Lest i konkurransegrunnlaget</p>
       </div>
     </div>
-    <div class="fig d46" aria-hidden="true">
-      <div class="d46-scene">
-        <div class="d46-tavle">
-          <p class="d46-topp">Kantina · Uke 46</p>
-          <p class="d46-navn">UKENS MENY</p>
-          <p class="d46-dag"><span>Mandag</span><b>Ukens mørke start<svg class="d46-lykt" viewBox="0 0 20 28"><path d="M6 5a4 4 0 0 1 8 0" fill="none" stroke="#3a4247" stroke-width="1.6"/><rect x="4" y="5" width="12" height="3" rx="1" fill="#3a4247"/><rect x="5" y="8" width="10" height="14" rx="1.5" fill="#f9e27a"/><path d="M10 11.5c2 2.4 2 5 0 6.5-2-1.5-2-4.1 0-6.5z" fill="#e8962a"/><path d="M5 8h10v14H5z" fill="none" stroke="#3a4247" stroke-width="1.4"/><path d="M10 8v14" stroke="#3a4247" stroke-width=".8" opacity=".35"/><rect x="3" y="22" width="14" height="3" rx="1" fill="#3a4247"/></svg></b></p>
-          <p class="d46-dag d46-tir"><span>Tirsdag</span><b>Jordskokk, romanescobuketter og melanzane</b></p>
-          <p class="d46-dag"><span>Onsdag</span><b>Fiskegrateng</b></p>
-          <p class="d46-dag"><span>Torsdag</span><b>Ertesuppe og pannekaker</b></p>
-          <p class="d46-dag"><span>Fredag</span><b>Taco</b></p>
+    <div class="fig bp" aria-hidden="true">
+      <div class="bp-scene">
+        <div class="bp-ark">
+          <p class="bp-topp">Meddelelse om tildeling</p>
+          <p class="bp-tittel">Bordplassering, julebordet</p>
+          <p class="bp-rad"><span>Godt selskap</span><b>40 %</b></p>
+          <p class="bp-rad"><span>Pris, i kanelboller</span><b>30 %</b></p>
+          <p class="bp-rad"><span>Bordmiljø</span><b>30 %</b></p>
+          <p class="bp-tildelt"><span>Tildelt</span><b>Bord 14</b></p>
+          <p class="bp-begr">«Det valgte tilbudet ble vurdert som bedre.»</p>
+          <p class="bp-stempel">Uklart</p>
         </div>
-        <div class="d46-note">HELLER MANDAG.</div>
+        <div class="bp-note">BORD 14.</div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card hms col">
-      <div class="fig hms banner" aria-hidden="true">
-        <div class="hm-scene">
-          <div class="hm-tavle">
-            <p class="hm-topp"><span class="hm-kors">+</span>HMS-tavle · Cellekontoret</p>
-            <div class="hm-rad"><p class="hm-tekst">Dommen fra Borgarting</p><p class="hm-stempel">Avventer</p></div>
-            <div class="hm-rad"><p class="hm-tekst">Dager siden Markus sist øvde på prosedyren</p><p class="hm-null">0</p></div>
-            <div class="hm-logg">
-              <p><span>07:52</span><span>Heisen: «Ærede lagmannsrett»</span></p>
-              <p><span>11:32</span><span>Kantina: Trainee får merknadene</span></p>
-              <p><span>13:05</span><span>Kjelleren: Motorsykkelen går</span></p>
-            </div>
+    <article class="card d46 col">
+      <div class="fig d46 banner" aria-hidden="true">
+        <div class="d46-scene">
+          <div class="d46-tavle">
+            <p class="d46-topp">Kantina · Uke 46</p>
+            <p class="d46-navn">UKENS MENY</p>
+            <p class="d46-dag"><span>Mandag</span><b>Ukens mørke start<svg class="d46-lykt" viewBox="0 0 20 28"><path d="M6 5a4 4 0 0 1 8 0" fill="none" stroke="#3a4247" stroke-width="1.6"/><rect x="4" y="5" width="12" height="3" rx="1" fill="#3a4247"/><rect x="5" y="8" width="10" height="14" rx="1.5" fill="#f9e27a"/><path d="M10 11.5c2 2.4 2 5 0 6.5-2-1.5-2-4.1 0-6.5z" fill="#e8962a"/><path d="M5 8h10v14H5z" fill="none" stroke="#3a4247" stroke-width="1.4"/><path d="M10 8v14" stroke="#3a4247" stroke-width=".8" opacity=".35"/><rect x="3" y="22" width="14" height="3" rx="1" fill="#3a4247"/></svg></b></p>
+            <p class="d46-dag d46-tir"><span>Tirsdag</span><b>Jordskokk, romanescobuketter og melanzane</b></p>
+            <p class="d46-dag"><span>Onsdag</span><b>Fiskegrateng</b></p>
+            <p class="d46-dag"><span>Torsdag</span><b>Ertesuppe og pannekaker</b></p>
+            <p class="d46-dag"><span>Fredag</span><b>Taco</b></p>
           </div>
-          <div class="hm-note">BARE I TILFELLE.</div>
+          <div class="d46-note">HELLER MANDAG.</div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Innleiesaken</p>
-        <h2 class="hl-lg"><a class="stretch" href="abstinenser.html">Markus øver fortsatt på prosedyren: <span class="nw">–&nbsp;Bare</span> i&nbsp;tilfelle</a></h2>
-        <p class="lead-sm">Det er snart tre uker siden prosedyren i Borgarting. Mens alle andre venter på dommen, øver Markus fortsatt, ber nye traineer se over merknadene i manuset og har kjøpt motorsykkel. Kolleger beskriver det som abstinenser.</p>
+        <p class="kicker">Dikterens hjørne</p>
+        <h2 class="hl-lg"><a class="stretch" href="tirsdagens-frykt.html">Tirsdagens frykt</a></h2>
+        <p class="lead-sm">Ukens dikt handler om mandagen, som lenge har hatt rykte på seg for å være ukens tyngste dag. Dikteren har lest kantinas meny og er ikke lenger like sikker.</p>
         <div class="meta">
-          <p class="desk">Lunsjbordets helseredaksjon</p>
-          <p>Hørt gjennom veggen</p>
+          <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+          <p>Nytt dikt hver mandag</p>
         </div>
       </div>
     </article>
@@ -1977,6 +2002,33 @@
   </aside>
 
   <div class="pair">
+    <article class="card hms col">
+      <div class="fig hms banner" aria-hidden="true">
+        <div class="hm-scene">
+          <div class="hm-tavle">
+            <p class="hm-topp"><span class="hm-kors">+</span>HMS-tavle · Cellekontoret</p>
+            <div class="hm-rad"><p class="hm-tekst">Dommen fra Borgarting</p><p class="hm-stempel">Avventer</p></div>
+            <div class="hm-rad"><p class="hm-tekst">Dager siden Markus sist øvde på prosedyren</p><p class="hm-null">0</p></div>
+            <div class="hm-logg">
+              <p><span>07:52</span><span>Heisen: «Ærede lagmannsrett»</span></p>
+              <p><span>11:32</span><span>Kantina: Trainee får merknadene</span></p>
+              <p><span>13:05</span><span>Kjelleren: Motorsykkelen går</span></p>
+            </div>
+          </div>
+          <div class="hm-note">BARE I TILFELLE.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Innleiesaken</p>
+        <h2 class="hl-lg"><a class="stretch" href="abstinenser.html">Markus øver fortsatt på prosedyren: <span class="nw">–&nbsp;Bare</span> i&nbsp;tilfelle</a></h2>
+        <p class="lead-sm">Det er snart tre uker siden prosedyren i Borgarting. Mens alle andre venter på dommen, øver Markus fortsatt, ber nye traineer se over merknadene i manuset og har kjøpt motorsykkel. Kolleger beskriver det som abstinenser.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets helseredaksjon</p>
+          <p>Hørt gjennom veggen</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card d45 col">
       <div class="fig d45 banner" aria-hidden="true">
         <div class="d45-scene">
@@ -1999,35 +2051,6 @@
         <div class="meta">
           <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
           <p>Nytt dikt hver mandag</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card karma col">
-      <div class="fig karma banner" aria-hidden="true">
-        <div class="kb-scene">
-          <div class="kb-ark">
-            <p class="kb-bank">Universets karmabank</p>
-            <p class="kb-type">Kontoutskrift</p>
-            <p class="kb-rad"><span>08:31</span><span>Fullmektig</span><b>−1</b></p>
-            <p class="kb-rad"><span>08:34</span><span>Trainee</span><b>−1</b></p>
-            <p class="kb-rad"><span>08:42</span><span>Barnehagen avvist</span><b>−2</b></p>
-            <p class="kb-rad"><span>08:52</span><span>Partner, sagt lavere</span><b>−1</b></p>
-            <p class="kb-rad"><span>08:58</span><span>Tommel opp på Teams</span><b>−1</b></p>
-            <p class="kb-rad kb-inn"><span>Sent</span><span>Kontohaver forsov seg</span><b>+6</b></p>
-            <p class="kb-saldo"><span>Saldo</span><b>0</b></p>
-            <p class="kb-stempel">I balanse</p>
-          </div>
-          <div class="kb-note">SIDEN NÅ.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Arbeidstid</p>
-        <h2 class="hl-lg"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h2>
-        <p class="lead-sm">Lenge har Markus tatt imot kolleger som kommer etter 08:30 med de samme seks ordene: «Jeg har vært her siden 07:15.» En morgen nylig forsov han seg. Kollegene kaller det en etterlengtet leveranse fra universet.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets arbeidslivsredaksjon</p>
-          <p>Bokført av universet</p>
         </div>
       </div>
     </article>
@@ -2130,6 +2153,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="1. november">
+          <p class="m-desk">Arbeidstid</p>
+          <h3 class="m-hl"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h3>
+          <p class="m-tekst">Lenge har Markus tatt imot kolleger som kommer etter 08:30 med de samme seks ordene. En morgen nylig forsov han seg.</p>
+        </li>
         <li class="mappe" data-fane="27. oktober">
           <p class="m-desk">Kantina</p>
           <h3 class="m-hl"><a class="stretch" href="hekseri.html">Kantina mistenkes for svart magi på tirsdager: <span class="nw">–&nbsp;Intet</span> mindre enn en&nbsp;heksegryte</a></h3>
