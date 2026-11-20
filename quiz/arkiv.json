@@ -4167,7 +4167,96 @@
      "svar": "Gepard. Den kan komme opp i rundt 100 kilometer i timen, men bare i korte drag."
     }
    ]
+  },
+  {
+   "dato": "2026-11-20",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Fra torsdag til søndag stenger nesten hele T-banenettet i Oslo, slik at et nytt system kan testes uten passasjerer. Hva slags system?",
+     "fasit": "Signalsystem",
+     "svar": "Signalsystem. Det nye systemet styrer togene automatisk og kalles CBTC."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Etter at USA og Israel gikk til krig mot Iran i februar, har prisen på en norsk eksportvare steget kraftig. Hvilken råvare er det snakk om?",
+     "fasit": "Olje",
+     "svar": "Olje. Dyrere olje har løftet inflasjonen i mange land."
+    },
+    {
+     "tema": "Romfart",
+     "sporsmal": "Den 20. november 1998 ble den første modulen til en bemannet stasjon i bane rundt jorda skutt opp fra Kasakhstan. Hvilken romstasjon?",
+     "fasit": "Den internasjonale romstasjonen, ISS",
+     "svar": "Den internasjonale romstasjonen, ISS. Første modul het Zarya og er russiskbygd."
+    },
+    {
+     "tema": "Vitenskap",
+     "sporsmal": "Hvilken amerikansk astronom, født 20. november 1889, viste at universet utvider seg?",
+     "fasit": "Edwin Hubble",
+     "svar": "Edwin Hubble. Romteleskopet Hubble er oppkalt etter ham."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Amsterdam er Nederlands hovedstad. Hvilken by er sete for regjeringen og parlamentet?",
+     "fasit": "Den Haag",
+     "svar": "Den Haag. Byen huser også Den internasjonale domstolen."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Les Misérables», som handler om fangen Jean Valjean?",
+     "fasit": "Victor Hugo",
+     "svar": "Victor Hugo. Boka kom ut i 1862, og han skrev også «Klokkeren i Notre Dame»."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hva kalles et musikkstykke skrevet for fire utøvere, for eksempel to fioliner, bratsj og cello?",
+     "fasit": "Kvartett",
+     "svar": "Kvartett. Strykekvartetten regnes som en av klassisk musikks viktigste former."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva er tofu laget av?",
+     "fasit": "Soya",
+     "svar": "Soya. Soyamelk presses sammen til faste blokker, omtrent som ost."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilket land var vertskap for fotball-VM for herrer i 2018?",
+     "fasit": "Russland",
+     "svar": "Russland. Frankrike vant finalen mot Kroatia."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hvilken fisk regnes som en av havets raskeste, med en toppfart på rundt 110 kilometer i timen?",
+     "fasit": "Seilfisk",
+     "svar": "Seilfisk. Den har en stor ryggfinne som minner om et seil."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "Hvilken sosiale medier-app har et hvitt spøkelse på gul bakgrunn som logo?",
+     "fasit": "Snapchat",
+     "svar": "Snapchat. Bildene forsvinner etter at de er sett."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter cowboydukken som er hovedperson i «Toy Story»?",
+     "fasit": "Woody",
+     "svar": "Woody. Han stemmes i originalversjonen av Tom Hanks."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva er det vanligste grunnstoffet i jordskorpen, regnet etter masse?",
+     "fasit": "Oksygen",
+     "svar": "Oksygen. Det utgjør rundt 46 prosent av vekten."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken norrøn oppdagelsesreisende regnes for å ha kommet til Nord-Amerika rundt år 1000?",
+     "fasit": "Leif Eriksson",
+     "svar": "Leif Eriksson. Han kalte stedet Vinland."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 658
+ "antall_sporsmal": 672
 }
