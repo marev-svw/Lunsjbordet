@@ -4256,7 +4256,96 @@
      "svar": "Leif Eriksson. Han kalte stedet Vinland."
     }
    ]
+  },
+  {
+   "dato": "2026-11-21",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 21. november 1783 gjorde to menn verdens første bemannede frie luftferd, over Paris, i en luftballong bygget av to brødre. Hva het brødrene?",
+     "fasit": "Montgolfier",
+     "svar": "Montgolfier. De fløy omtrent ni kilometer på rundt 25 minutter."
+    },
+    {
+     "tema": "Reise",
+     "sporsmal": "Hva heter hovedstaden i Peru?",
+     "fasit": "Lima",
+     "svar": "Lima. Byen ligger ved Stillehavskysten."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 21. november 1969 ble en permanent forbindelse mellom to universitetsmaskiner i California opprettet, i et nettverk som ble forløperen til internett. Hva het nettverket?",
+     "fasit": "ARPANET",
+     "svar": "ARPANET. Det ble finansiert av det amerikanske forsvaret."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev novellen om «Dr. Jekyll og Mr. Hyde», utgitt i 1886?",
+     "fasit": "Robert Louis Stevenson",
+     "svar": "Robert Louis Stevenson. Han skrev også «Skatten på Sjørøverøya»."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvilken japansk kampsport har et navn som betyr «den myke vei»?",
+     "fasit": "Judo",
+     "svar": "Judo. Sporten ble grunnlagt av Jigoro Kano i 1882."
+    },
+    {
+     "tema": "Natur",
+     "sporsmal": "Hva heter fjellet i Nord-Amerika som tidligere ble kalt Mount McKinley, USAs høyeste?",
+     "fasit": "Denali",
+     "svar": "Denali. Fjellet ligger i Alaska og er 6190 meter høyt."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken av USAs grunnleggere er avbildet på tidollarseddelen?",
+     "fasit": "Alexander Hamilton",
+     "svar": "Alexander Hamilton. Han var landets første finansminister."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 21. november 1877 presenterte en amerikansk oppfinner en maskin som kunne ta opp og spille av lyd, kalt fonografen. Hvem?",
+     "fasit": "Thomas Edison",
+     "svar": "Thomas Edison. Første opptak var barnesangen «Mary Had a Little Lamb»."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket irsk rockeband har Bono som vokalist?",
+     "fasit": "U2",
+     "svar": "U2. Bandet ble dannet i Dublin i 1976."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den spanske eggeretten med potet som ofte serveres som tapas?",
+     "fasit": "Tortilla",
+     "svar": "Tortilla. Den kalles også spansk omelett."
+    },
+    {
+     "tema": "Vitenskap",
+     "sporsmal": "Hva måler et barometer?",
+     "fasit": "Lufttrykk",
+     "svar": "Lufttrykk. Fallende trykk varsler ofte dårligere vær."
+    },
+    {
+     "tema": "TV",
+     "sporsmal": "Hva heter byen der familien Simpson bor?",
+     "fasit": "Springfield",
+     "svar": "Springfield. Byens beliggenhet i USA har serien aldri sagt eksakt."
+    },
+    {
+     "tema": "Fugler",
+     "sporsmal": "Hva kalles en person som studerer fugler?",
+     "fasit": "Ornitolog",
+     "svar": "Ornitolog. Å se fugler som hobby kalles birding."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken øygruppe i Stillehavet er kjent for Darwins finker og kjempeskilpadder?",
+     "fasit": "Galápagos",
+     "svar": "Galápagos. Øyene tilhører Ecuador."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 672
+ "antall_sporsmal": 686
 }
