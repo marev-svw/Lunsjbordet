@@ -4345,7 +4345,96 @@
      "svar": "Galápagos. Øyene tilhører Ecuador."
     }
    ]
+  },
+  {
+   "dato": "2026-11-22",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 22. november 1990 meldte en britisk statsminister at hun gikk av etter elleve år i embetet. Hvem?",
+     "fasit": "Margaret Thatcher",
+     "svar": "Margaret Thatcher. Hun var Storbritannias første kvinnelige statsminister."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken norsk by er hjemmet til fotballklubben Rosenborg?",
+     "fasit": "Trondheim",
+     "svar": "Trondheim. Klubben ble stiftet i 1917."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 22. november 1995 hadde verdens første helt datagenererte spillefilm premiere. Hva het den?",
+     "fasit": "Toy Story",
+     "svar": "Toy Story. Filmen er laget av Pixar og Disney."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev «Folk og røvere i Kardemomme by»?",
+     "fasit": "Thorbjørn Egner",
+     "svar": "Thorbjørn Egner. Boken kom ut i 1955."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva er pH-verdien til rent, nøytralt vann?",
+     "fasit": "Sju",
+     "svar": "Sju. Lavere verdier er sure, høyere er basiske."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 22. november 1963 døde forfatteren bak dystopien «Du sköna nya värld», på engelsk «Brave New World». Hvem?",
+     "fasit": "Aldous Huxley",
+     "svar": "Aldous Huxley. Boken kom ut i 1932."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken norsk konge falt i slaget ved Stiklestad i 1030?",
+     "fasit": "Olav Haraldsson",
+     "svar": "Olav Haraldsson. Han ble senere kalt Olav den hellige."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den italienske desserten med kaffebløtte kjeks og krem, som betyr «dra meg opp»?",
+     "fasit": "Tiramisu",
+     "svar": "Tiramisu. Kakao strøs gjerne over toppen."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken tysk sangerinne hadde verdenshiten «99 Luftballons» i 1983?",
+     "fasit": "Nena",
+     "svar": "Nena. Sangen kom også i en engelsk versjon."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hvor mange røde kuler er det på bordet ved start i snooker?",
+     "fasit": "Femten",
+     "svar": "Femten. I tillegg kommer seks kuler i andre farger og en hvit."
+    },
+    {
+     "tema": "Vitenskap",
+     "sporsmal": "Hva kalles læren om jordskjelv?",
+     "fasit": "Seismologi",
+     "svar": "Seismologi. Målingene gjøres med instrumenter kalt seismografer."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter hobbiten som arver ringen i «Ringenes herre»?",
+     "fasit": "Frodo",
+     "svar": "Frodo. Han heter Frodo Lommelun."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hva kalles en ung hest?",
+     "fasit": "Føll",
+     "svar": "Føll. Hunnen kalles merr og hannen hingst."
+    },
+    {
+     "tema": "Arkitektur",
+     "sporsmal": "Hvilket norsk arkitektfirma tegnet Operahuset i Oslo?",
+     "fasit": "Snøhetta",
+     "svar": "Snøhetta. Operahuset åpnet i 2008."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 686
+ "antall_sporsmal": 700
 }
