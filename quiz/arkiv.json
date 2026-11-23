@@ -4434,7 +4434,96 @@
      "svar": "Snøhetta. Operahuset åpnet i 2008."
     }
    ]
+  },
+  {
+   "dato": "2026-11-23",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 23. november 1963 ble første episode av en britisk science fiction-serie om en tidsreisende utenomjordisk viser på BBC. Hva heter serien?",
+     "fasit": "Doctor Who",
+     "svar": "Doctor Who. Serien har gått, med pauser, i over seseksti år."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken by er hovedstad i Chile?",
+     "fasit": "Santiago",
+     "svar": "Santiago. Byen ligger i en dal mellom Andes og kystfjellene."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 23. november 2005 ble en kvinne erklært vinner av presidentvalget i et afrikansk land, som første folkevalgte kvinnelige statsoverhode på kontinentet. Hvilket land?",
+     "fasit": "Liberia",
+     "svar": "Liberia. Kvinnen het Ellen Johnson Sirleaf."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev satiren «Gullivers reiser», utgitt i 1726?",
+     "fasit": "Jonathan Swift",
+     "svar": "Jonathan Swift. Boken handler blant annet om de bittesmå innbyggerne i Lilleput."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hva kalles det når flere enn to toner spilles samtidig og klinger sammen?",
+     "fasit": "Akkord",
+     "svar": "Akkord. En durakkord og en mollakkord skiller seg på tersen."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 23. november 1936 kom første nummer av et amerikansk fotomagasin, med et ord for «liv» som navn. Hva het magasinet?",
+     "fasit": "Life",
+     "svar": "Life. Magasinet ble kjent for sine store reportasjebilder."
+    },
+    {
+     "tema": "Vitenskap",
+     "sporsmal": "Hva kalles det når en væske går over til gass ved kokepunktet?",
+     "fasit": "Fordamping, eller koking",
+     "svar": "Fordamping, eller koking. Når gass går over til væske, kalles det kondensering."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år ble Norge okkupert av Tyskland?",
+     "fasit": "1940",
+     "svar": "1940. Okkupasjonen begynte 9. april og varte til 1945."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles det når en golfspiller slår ballen i hullet på første slag?",
+     "fasit": "Hole-in-one",
+     "svar": "Hole-in-one. På norsk kalles det av og til «ess»."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken fisk lages lutefisk tradisjonelt av?",
+     "fasit": "Tørrfisk, vanligvis av torsk",
+     "svar": "Tørrfisk, vanligvis av torsk. Fisken legges i lut før den kokes eller stekes."
+    },
+    {
+     "tema": "Natur",
+     "sporsmal": "Hva heter Norges høyeste fjell?",
+     "fasit": "Galdhøpiggen",
+     "svar": "Galdhøpiggen. Toppen er 2469 meter over havet."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvem regisserte den første «Stjernekrigen»-filmen fra 1977?",
+     "fasit": "George Lucas",
+     "svar": "George Lucas. Filmen het opprinnelig bare «Star Wars»."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hvilket dyr er symbolet til naturvernorganisasjonen WWF?",
+     "fasit": "Pandaen",
+     "svar": "Pandaen. Logoen har vært i bruk siden 1961."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken amerikansk maler er kjent for dryppmalerier laget ved å helle og sprute maling på lerret?",
+     "fasit": "Jackson Pollock",
+     "svar": "Jackson Pollock. Han la det store lerretet på gulvet og gikk rundt det."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 700
+ "antall_sporsmal": 714
 }
