@@ -803,6 +803,28 @@
   .lt-note { position: absolute; top: -1.6em; right: -1em; z-index: 1; width: 5.2em; height: 4.5em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
   .lt-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
+  /* Mandarinsaken: markedsavgrensningen med mandarinen, partnerens markedsandel, stolpen, stempel og lapp.
+     Arket er lyst i begge temaer. Alle mål i em, så illustrasjonen vokser med spalten. */
+  .fig.md { background: var(--wall); }
+  .md-scene { position: relative; width: min(100%, 18em); margin: 1.6em 0 .6em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .md-ark { position: relative; padding: 0 0 2.9em; border-radius: 4px; background: var(--sheet); color: #1c2226; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); overflow: hidden; transform: rotate(-1.2deg); }
+  .md-ark p { margin: 0; }
+  .md-ark .md-topp { padding: .65em 1.1em; background: #9a4410; color: #ffffff; font-size: .625em; font-weight: 800; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; }
+  .md-ark .md-tittel { margin: .55em 1.1em .2em; padding-bottom: .45em; border-bottom: 1px solid var(--sheet-rule); font-size: 1.05em; font-weight: 800; line-height: 1.15; }
+  .md-hode { display: flex; align-items: center; gap: .6em; margin: .35em 1.1em .1em; }
+  .md-frukt { flex: none; width: 2.8em; height: 2.8em; }
+  .md-ark .md-andel { font-size: 2.4em; font-weight: 900; line-height: 1; letter-spacing: -.03em; white-space: nowrap; }
+  .md-andel small { margin-left: .08em; font-size: .6em; font-weight: 800; }
+  .md-ark .md-marked { margin: 0 1.1em; font-size: .75em; line-height: 1.3; color: var(--sheet-muted); }
+  .md-marked b { color: #1c2226; font-weight: 800; }
+  .md-spor { height: .5em; margin: .45em 1.1em .5em; border-radius: 99px; background: #e5801f; }
+  .md-ark .md-rad { display: flex; justify-content: space-between; gap: .6em; margin: 0 1.1em; padding: .28em 0; border-top: 1px dashed var(--sheet-rule); font-size: .75em; line-height: 1.3; }
+  .md-rad span { font-weight: 600; color: var(--sheet-muted); }
+  .md-rad b { font-weight: 800; }
+  .md-ark .md-stempel { position: absolute; right: .9em; bottom: .7em; padding: .25em .5em .2em; border: 3px solid var(--stamp); border-radius: 5px; color: var(--stamp); font-size: .95em; font-weight: 900; line-height: 1; letter-spacing: .08em; text-transform: uppercase; transform: rotate(-7deg); opacity: .88; }
+  .md-note { position: absolute; top: -2.2em; right: -1.6em; z-index: 1; width: 5.2em; height: 4.5em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .md-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1803,6 +1825,42 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Sosial sone</p>
+      <h2 class="hl-xl"><a class="stretch" href="mandarin.html">Partner på EU/konkurranse mistenkt for mandarintyveri: <span class="nw">–&nbsp;Kurven</span> var&nbsp;full</a></h2>
+      <p class="lead">To ansatte så en partner fra EU/konkurranse gå rett forbi en full fruktkurv i sosial sone tirsdag morgen. Han stanset først ved en kollega som nettopp hadde plukket en mandarin til frokost. Sekundet etter var mandarinen hans.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets krimredaksjon</p>
+        <p>Talt mandarin for mandarin</p>
+      </div>
+    </div>
+    <div class="fig md" aria-hidden="true">
+      <div class="md-scene">
+        <div class="md-ark">
+          <p class="md-topp">Markedsavgrensning</p>
+          <p class="md-tittel">Partnerens markedsandel</p>
+          <div class="md-hode">
+            <svg class="md-frukt" viewBox="0 0 40 40">
+              <ellipse cx="20" cy="23.5" rx="15.5" ry="13.5" fill="#e5801f"/>
+              <ellipse cx="14.5" cy="19" rx="4.5" ry="2.6" fill="#f6b25e" transform="rotate(-25 14.5 19)"/>
+              <g fill="#c4620f" opacity=".45"><circle cx="24" cy="28" r=".9"/><circle cx="28" cy="23" r=".8"/><circle cx="19" cy="31" r=".8"/><circle cx="29.5" cy="29" r=".7"/><circle cx="11" cy="27" r=".7"/></g>
+              <path d="M20 10.5v-3" stroke="#6b4a2e" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M20.5 8.5c3-4 9-4.5 11.5-2.5-3 3.5-8.5 4.2-11.5 2.5z" fill="#3f7d3a"/>
+            </svg>
+            <p class="md-andel">100<small>&nbsp;%</small></p>
+          </div>
+          <p class="md-marked">Relevant marked: <b>Den plukkede mandarinen</b></p>
+          <div class="md-spor"></div>
+          <p class="md-rad"><span>Igjen i kurven</span><b>14 mandariner</b></p>
+          <p class="md-stempel">Dominerende</p>
+        </div>
+        <div class="md-note">KURVEN VAR FULL.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Bedriftsidrett</p>
       <h2 class="hl-xl"><a class="stretch" href="lopetrening.html">Kristian innfører løpetrening i kjelleren: <span class="nw">–&nbsp;Ingen</span> er tvunget. Det er bare&nbsp;obligatorisk</a></h2>
       <p class="lead">To morgener i uka går kollegene ned i kjelleren for å løpe. Ingen av dem har meldt seg på. Treningsrommet ser ut som et tilfluktsrom fra 80-tallet, og flere av deltakerne sammenligner ordningen med Stalins Sovjetunion. Kristian mener sammenligningen er urimelig.</p>
@@ -1834,7 +1892,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Afterwork</p>
@@ -1860,32 +1917,6 @@
           </div>
         </div>
         <div class="pp-note">IKKE PANIKK.</div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Dikterens hjørne</p>
-      <h2 class="hl-xl"><a class="stretch" href="selvsagt-jeg-er-jo-claude.html">Selvsagt, jeg er jo Claude</a></h2>
-      <p class="lead">Ukens dikt handler om en relasjon der den ene parten gir og gir, og alltid har noe mer å utarbeide og sende. Én linje er på svensk, og den beklages allerede i linjen etter.</p>
-      <div class="meta">
-        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-        <p>Nytt dikt hver mandag</p>
-      </div>
-    </div>
-    <div class="fig d47" aria-hidden="true">
-      <div class="d47-scene">
-        <div class="d47-vindu">
-          <p class="d47-topp"><span class="d47-prikk"></span>Ny samtale · Uke 47</p>
-          <p class="d47-inn">Kan du se over utkastet?</p>
-          <p class="d47-ut">Selvsagt.</p>
-          <p class="d47-inn">Og sende en versjon til?</p>
-          <p class="d47-ut">Selvsagt.</p>
-          <p class="d47-inn">Kan du gi meg hjelp med et juridisk råd?</p>
-          <p class="d47-ut d47-skriver"><span></span><span></span><span></span></p>
-        </div>
-        <div class="d47-note">ALLTIDS.</div>
       </div>
     </div>
   </article>
@@ -1929,54 +1960,54 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Julebordet</p>
-      <h2 class="hl-xl"><a class="stretch" href="bordplassering.html">Julebordets bordplassering kunngjort på Doffin: <span class="nw">–&nbsp;Tildelings</span>&shy;kriteriene er&nbsp;uklare</a></h2>
-      <p class="lead">Julebordkomiteen har lagt ut bordplasseringen til julebordet på Festningen som en åpen anbudskonkurranse. Meddelelsen om tildeling kom torsdag morgen. Flere tilbydere mener ingen kunne vite hva de konkurrerte om.</p>
+      <p class="kicker">Dikterens hjørne</p>
+      <h2 class="hl-xl"><a class="stretch" href="selvsagt-jeg-er-jo-claude.html">Selvsagt, jeg er jo Claude</a></h2>
+      <p class="lead">Ukens dikt handler om en relasjon der den ene parten gir og gir, og alltid har noe mer å utarbeide og sende. Én linje er på svensk, og den beklages allerede i linjen etter.</p>
       <div class="meta">
-        <p class="desk">Lunsjbordets anskaffelsesredaksjon</p>
-        <p>Lest i konkurransegrunnlaget</p>
+        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+        <p>Nytt dikt hver mandag</p>
       </div>
     </div>
-    <div class="fig bp" aria-hidden="true">
-      <div class="bp-scene">
-        <div class="bp-ark">
-          <p class="bp-topp">Meddelelse om tildeling</p>
-          <p class="bp-tittel">Bordplassering, julebordet</p>
-          <p class="bp-rad"><span>Godt selskap</span><b>40 %</b></p>
-          <p class="bp-rad"><span>Pris, i kanelboller</span><b>30 %</b></p>
-          <p class="bp-rad"><span>Bordmiljø</span><b>30 %</b></p>
-          <p class="bp-tildelt"><span>Tildelt</span><b>Bord 14</b></p>
-          <p class="bp-begr">«Det valgte tilbudet ble vurdert som bedre.»</p>
-          <p class="bp-stempel">Uklart</p>
+    <div class="fig d47" aria-hidden="true">
+      <div class="d47-scene">
+        <div class="d47-vindu">
+          <p class="d47-topp"><span class="d47-prikk"></span>Ny samtale · Uke 47</p>
+          <p class="d47-inn">Kan du se over utkastet?</p>
+          <p class="d47-ut">Selvsagt.</p>
+          <p class="d47-inn">Og sende en versjon til?</p>
+          <p class="d47-ut">Selvsagt.</p>
+          <p class="d47-inn">Kan du gi meg hjelp med et juridisk råd?</p>
+          <p class="d47-ut d47-skriver"><span></span><span></span><span></span></p>
         </div>
-        <div class="bp-note">BORD 14.</div>
+        <div class="d47-note">ALLTIDS.</div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card d46 col">
-      <div class="fig d46 banner" aria-hidden="true">
-        <div class="d46-scene">
-          <div class="d46-tavle">
-            <p class="d46-topp">Kantina · Uke 46</p>
-            <p class="d46-navn">UKENS MENY</p>
-            <p class="d46-dag"><span>Mandag</span><b>Ukens mørke start<svg class="d46-lykt" viewBox="0 0 20 28"><path d="M6 5a4 4 0 0 1 8 0" fill="none" stroke="#3a4247" stroke-width="1.6"/><rect x="4" y="5" width="12" height="3" rx="1" fill="#3a4247"/><rect x="5" y="8" width="10" height="14" rx="1.5" fill="#f9e27a"/><path d="M10 11.5c2 2.4 2 5 0 6.5-2-1.5-2-4.1 0-6.5z" fill="#e8962a"/><path d="M5 8h10v14H5z" fill="none" stroke="#3a4247" stroke-width="1.4"/><path d="M10 8v14" stroke="#3a4247" stroke-width=".8" opacity=".35"/><rect x="3" y="22" width="14" height="3" rx="1" fill="#3a4247"/></svg></b></p>
-            <p class="d46-dag d46-tir"><span>Tirsdag</span><b>Jordskokk, romanescobuketter og melanzane</b></p>
-            <p class="d46-dag"><span>Onsdag</span><b>Fiskegrateng</b></p>
-            <p class="d46-dag"><span>Torsdag</span><b>Ertesuppe og pannekaker</b></p>
-            <p class="d46-dag"><span>Fredag</span><b>Taco</b></p>
+    <article class="card bp col">
+      <div class="fig bp banner" aria-hidden="true">
+        <div class="bp-scene">
+          <div class="bp-ark">
+            <p class="bp-topp">Meddelelse om tildeling</p>
+            <p class="bp-tittel">Bordplassering, julebordet</p>
+            <p class="bp-rad"><span>Godt selskap</span><b>40 %</b></p>
+            <p class="bp-rad"><span>Pris, i kanelboller</span><b>30 %</b></p>
+            <p class="bp-rad"><span>Bordmiljø</span><b>30 %</b></p>
+            <p class="bp-tildelt"><span>Tildelt</span><b>Bord 14</b></p>
+            <p class="bp-begr">«Det valgte tilbudet ble vurdert som bedre.»</p>
+            <p class="bp-stempel">Uklart</p>
           </div>
-          <div class="d46-note">HELLER MANDAG.</div>
+          <div class="bp-note">BORD 14.</div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Dikterens hjørne</p>
-        <h2 class="hl-lg"><a class="stretch" href="tirsdagens-frykt.html">Tirsdagens frykt</a></h2>
-        <p class="lead-sm">Ukens dikt handler om mandagen, som lenge har hatt rykte på seg for å være ukens tyngste dag. Dikteren har lest kantinas meny og er ikke lenger like sikker.</p>
+        <p class="kicker">Julebordet</p>
+        <h2 class="hl-lg"><a class="stretch" href="bordplassering.html">Julebordets bordplassering kunngjort på Doffin: <span class="nw">–&nbsp;Tildelings</span>&shy;kriteriene er&nbsp;uklare</a></h2>
+        <p class="lead-sm">Julebordkomiteen har lagt ut bordplasseringen til julebordet på Festningen som en åpen anbudskonkurranse. Meddelelsen om tildeling kom torsdag morgen. Flere tilbydere mener ingen kunne vite hva de konkurrerte om.</p>
         <div class="meta">
-          <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-          <p>Nytt dikt hver mandag</p>
+          <p class="desk">Lunsjbordets anskaffelsesredaksjon</p>
+          <p>Lest i konkurransegrunnlaget</p>
         </div>
       </div>
     </article>
@@ -2021,6 +2052,32 @@
   </aside>
 
   <div class="pair">
+    <article class="card d46 col">
+      <div class="fig d46 banner" aria-hidden="true">
+        <div class="d46-scene">
+          <div class="d46-tavle">
+            <p class="d46-topp">Kantina · Uke 46</p>
+            <p class="d46-navn">UKENS MENY</p>
+            <p class="d46-dag"><span>Mandag</span><b>Ukens mørke start<svg class="d46-lykt" viewBox="0 0 20 28"><path d="M6 5a4 4 0 0 1 8 0" fill="none" stroke="#3a4247" stroke-width="1.6"/><rect x="4" y="5" width="12" height="3" rx="1" fill="#3a4247"/><rect x="5" y="8" width="10" height="14" rx="1.5" fill="#f9e27a"/><path d="M10 11.5c2 2.4 2 5 0 6.5-2-1.5-2-4.1 0-6.5z" fill="#e8962a"/><path d="M5 8h10v14H5z" fill="none" stroke="#3a4247" stroke-width="1.4"/><path d="M10 8v14" stroke="#3a4247" stroke-width=".8" opacity=".35"/><rect x="3" y="22" width="14" height="3" rx="1" fill="#3a4247"/></svg></b></p>
+            <p class="d46-dag d46-tir"><span>Tirsdag</span><b>Jordskokk, romanescobuketter og melanzane</b></p>
+            <p class="d46-dag"><span>Onsdag</span><b>Fiskegrateng</b></p>
+            <p class="d46-dag"><span>Torsdag</span><b>Ertesuppe og pannekaker</b></p>
+            <p class="d46-dag"><span>Fredag</span><b>Taco</b></p>
+          </div>
+          <div class="d46-note">HELLER MANDAG.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Dikterens hjørne</p>
+        <h2 class="hl-lg"><a class="stretch" href="tirsdagens-frykt.html">Tirsdagens frykt</a></h2>
+        <p class="lead-sm">Ukens dikt handler om mandagen, som lenge har hatt rykte på seg for å være ukens tyngste dag. Dikteren har lest kantinas meny og er ikke lenger like sikker.</p>
+        <div class="meta">
+          <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+          <p>Nytt dikt hver mandag</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card hms col">
       <div class="fig hms banner" aria-hidden="true">
         <div class="hm-scene">
@@ -2044,32 +2101,6 @@
         <div class="meta">
           <p class="desk">Lunsjbordets helseredaksjon</p>
           <p>Hørt gjennom veggen</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card d45 col">
-      <div class="fig d45 banner" aria-hidden="true">
-        <div class="d45-scene">
-          <div class="d45-skilt">
-            <p class="d45-etg">Fellesareal · 3. etasje</p>
-            <p class="d45-navn"><span class="d45-so">SO<span class="d45-ro">RO</span></span>SIAL SONE</p>
-            <p class="d45-rad"><span>Knekkebrød</span><b>knekker</b></p>
-            <p class="d45-rad"><span>Kaffe</span><b>søtes</b></p>
-            <p class="d45-rad"><span>Varsler</span><b class="d45-nei">når ikke frem</b></p>
-            <p class="d45-rad"><span>Møteinnkallinger</span><b class="d45-nei">når ikke frem</b></p>
-          </div>
-          <div class="d45-kopp"></div>
-          <div class="d45-note">HYSJ.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Dikterens hjørne</p>
-        <h2 class="hl-lg"><a class="stretch" href="ro-sial-sone.html">Ro-sial sone</a></h2>
-        <p class="lead-sm">Ukens dikt handler om fellesarealet der verdener skulle møtes. Dikteren har vært der og funnet noe annet enn det som står på skiltet.</p>
-        <div class="meta">
-          <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-          <p>Nytt dikt hver mandag</p>
         </div>
       </div>
     </article>
@@ -2172,6 +2203,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="2. november">
+          <p class="m-desk">Dikterens hjørne</p>
+          <h3 class="m-hl"><a class="stretch" href="ro-sial-sone.html">Ro-sial sone</a></h3>
+          <p class="m-tekst">Ukens dikt handler om fellesarealet der verdener skulle møtes. Dikteren har vært der og funnet noe annet enn det som står på skiltet.</p>
+        </li>
         <li class="mappe" data-fane="1. november">
           <p class="m-desk">Arbeidstid</p>
           <h3 class="m-hl"><a class="stretch" href="karma.html">Karmaen var på jobb før Markus: <span class="nw">–&nbsp;Jeg</span> har vært her siden&nbsp;nå</a></h3>

@@ -7,6 +7,7 @@ Lokale nyheter fra kaffemaskinen. Intern satire- og kulturavis.
 | Fil | Innhold |
 | --- | --- |
 | `index.html` | Forsiden |
+| `mandarin.html` | Partner på EU/konkurranse mistenkt for mandarintyveri: «Kurven var full», med markedsavgrensningen der leseren velger relevant marked og ser partnerens markedsandel |
 | `lopetrening.html` | Kristian innfører løpetrening i kjelleren: «Ingen er tvunget. Det er bare obligatorisk», med plakaten fra trappa der leseren løper en runde om gangen eller melder forfall |
 | `partypan.html` | «Partypan» går gjennom loggene for å finne ut hva han gjorde på afterworken, med et loggvindu der leseren går gjennom kvelden linje for linje |
 | `bordplassering.html` | Julebordets bordplassering kunngjort på Doffin: «Tildelingskriteriene er uklare», med meddelelsen om tildeling der leseren kan be om utvidet begrunnelse og begjære midlertidig forføyning |
