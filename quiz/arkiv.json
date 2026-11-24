@@ -4523,7 +4523,96 @@
      "svar": "Jackson Pollock. Han la det store lerretet på gulvet og gikk rundt det."
     }
    ]
+  },
+  {
+   "dato": "2026-11-24",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 24. november 1991 døde sangeren i et britisk rockeband, kjent for «Bohemian Rhapsody». Hva het han?",
+     "fasit": "Freddie Mercury",
+     "svar": "Freddie Mercury. Han døde bare ett døgn etter at han offentliggjorde at han hadde aids."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken by er Vietnams hovedstad?",
+     "fasit": "Hanoi",
+     "svar": "Hanoi. Landets største by er Ho Chi Minh-byen, tidligere kalt Saigon."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 24. november 1971 kapret en mann et fly i USA, krevde løsepenger og hoppet i fallskjerm og forsvant. Under hvilket navn er kapreren kjent?",
+     "fasit": "D.B. Cooper",
+     "svar": "D.B. Cooper. Saken er fortsatt ikke oppklart."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev romanen «Den store Gatsby», utgitt i 1925?",
+     "fasit": "F. Scott Fitzgerald",
+     "svar": "F. Scott Fitzgerald. Boken handler om den mystiske millionæren Jay Gatsby."
+    },
+    {
+     "tema": "Kjemi",
+     "sporsmal": "Hva kalles den kjemiske forbindelsen H₂O₂, som blant annet brukes til å bleke hår?",
+     "fasit": "Hydrogenperoksid",
+     "svar": "Hydrogenperoksid. Stoffet brytes ned til vann og oksygen."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 24. november 1974 ble et av verdens mest kjente fossiler etter en tidlig menneskeforfader funnet i Etiopia. Hvilket kallenavn har skjelettet?",
+     "fasit": "Lucy",
+     "svar": "Lucy. Skjelettet er rundt 3,2 millioner år gammelt."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "I hvilket år fant oktoberrevolusjonen sted i Russland?",
+     "fasit": "1917",
+     "svar": "1917. Revolusjonen ble ledet av bolsjevikene under Lenin."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilket britisk band ga ut sangen «Wonderwall» i 1995?",
+     "fasit": "Oasis",
+     "svar": "Oasis. Bandet ble ledet av brødrene Noel og Liam Gallagher."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles tre strike på rad i bowling?",
+     "fasit": "Turkey",
+     "svar": "Turkey. Ordet er engelsk for kalkun."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Fra hvilken italiensk by stammer pizzaen slik vi kjenner den?",
+     "fasit": "Napoli",
+     "svar": "Napoli. Pizza margherita skal være laget til dronning Margherita i 1889."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hva heter Harry Potters snøhvite ugle?",
+     "fasit": "Hedwig",
+     "svar": "Hedwig. Han fikk den i bursdagsgave av Hagrid."
+    },
+    {
+     "tema": "TV",
+     "sporsmal": "Hvilken amerikansk TV-serie handler om kjemilæreren Walter White, som begynner å lage narkotika?",
+     "fasit": "Breaking Bad",
+     "svar": "Breaking Bad. Serien gikk i årene 2008–2013."
+    },
+    {
+     "tema": "Oppfinnelser",
+     "sporsmal": "Hvilken norsk oppfinner står bak aerosolsprayboksen, patentert i 1927?",
+     "fasit": "Erik Rotheim",
+     "svar": "Erik Rotheim. Han var ingeniør og kom fra Oslo."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hva kalles et ord som har motsatt betydning av et annet ord, som «varm» og «kald»?",
+     "fasit": "Antonym",
+     "svar": "Antonym. Ord med lik betydning kalles synonymer."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 714
+ "antall_sporsmal": 728
 }
