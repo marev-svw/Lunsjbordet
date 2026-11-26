@@ -825,6 +825,27 @@
   .md-note { position: absolute; top: -2.2em; right: -1.6em; z-index: 1; width: 5.2em; height: 4.5em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
   .md-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
 
+  /* Innleiesaken, dommen: resultattavla fra Borgarting med stillingen, fire hendelser og lapp.
+     Tavla er mørk og arket lyst i begge temaer. Alle mål i em, så illustrasjonen vokser med spalten. */
+  .fig.rs { background: var(--wall); }
+  .rs-scene { position: relative; width: min(100%, 18em); margin: 1.6em 0 .6em; font-family: var(--sans); font-size: clamp(14px, .6rem + 1.05cqi, 18px); }
+  .rs-tavle { position: relative; border-radius: 4px; background: #1c2226; color: #ffffff; box-shadow: 0 2px 4px -2px var(--drop), 0 16px 22px -16px var(--drop); overflow: hidden; transform: rotate(-1.2deg); }
+  .rs-tavle p { margin: 0; }
+  .rs-tavle .rs-topp { padding: .65em 1.1em; background: #1f6b4f; font-size: .625em; font-weight: 800; line-height: 1.2; letter-spacing: .12em; text-transform: uppercase; }
+  .rs-score { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: end; gap: .4em; padding: .85em 1em .9em; }
+  .rs-lag { display: grid; justify-items: center; gap: .4em; text-align: center; }
+  .rs-tavle .rs-navn { font-size: .5625em; font-weight: 800; line-height: 1.2; letter-spacing: .1em; text-transform: uppercase; color: rgba(255, 255, 255, .72); }
+  .rs-tavle .rs-siffer { display: grid; place-items: center; width: 1.3em; height: 1.6em; border-radius: .1em; background: #2d363b; font-size: 2.2em; font-weight: 800; line-height: 1; box-shadow: inset 0 -.12em 0 rgba(0, 0, 0, .35); }
+  .rs-tavle .rs-strek { padding-bottom: .55em; font-size: 1.4em; font-weight: 800; line-height: 1; color: rgba(255, 255, 255, .55); }
+  .rs-logg { padding: .5em 1em .65em; background: var(--sheet); color: #1c2226; }
+  .rs-tavle .rs-rad { display: flex; align-items: center; gap: .55em; padding: .32em 0; border-top: 1px dashed var(--sheet-rule); font-size: .75em; font-weight: 700; line-height: 1.25; }
+  .rs-tavle .rs-rad:first-child { border-top: 0; }
+  .rs-ikon { flex: none; display: grid; place-items: center; width: 1.4em; height: 1.4em; border-radius: .2em; background: #59646a; color: #ffffff; font-size: .85em; font-weight: 800; line-height: 1; }
+  .rs-nei .rs-ikon { background: var(--stamp); }
+  .rs-ja .rs-ikon { background: #1f6b4f; }
+  .rs-note { position: absolute; top: -2.2em; right: -1.6em; z-index: 1; width: 5.2em; height: 4.5em; display: grid; place-items: center; padding: .2em; text-align: center; transform: rotate(6deg); background: linear-gradient(to bottom, #f9e27a, var(--postit) 30%); color: #1c2226; font: 400 .95em/1.05 var(--marker); box-shadow: 0 8px 12px -7px var(--drop); }
+  .rs-note::before { content: ""; position: absolute; top: -.55rem; left: 50%; width: 2.1rem; height: .85rem; transform: translateX(-50%) rotate(-3deg); background: var(--tape); }
+
   /* Kronikken i toppsaken: serif i tittelen skiller meninger fra nyheter */
   .top .kicker, .card-body .kicker { margin: 0 0 .55rem; font: 700 .9375rem/1.2 var(--sans); color: var(--link); }
   .hl-lg.op { font-family: var(--serif); font-weight: 600; font-size: clamp(1.75rem, 1.2rem + 1.8cqi, 2.5rem); line-height: 1.04; letter-spacing: -0.02em; }
@@ -1825,6 +1846,38 @@
 
   <article class="card top">
     <div class="top-text">
+      <p class="kicker">Innleiesaken</p>
+      <h2 class="hl-xl"><a class="stretch" href="dansk-mor.html">Delvis medhold i innleiesaken: <span class="nw">–&nbsp;Det</span> hjelper å ha en dansk&nbsp;mor</a></h2>
+      <p class="lead">Borgarting lagmannsrett har avsagt dom i innleiesaken. Ett av ti bemanningsforetak fikk medhold, og det har et dansk morselskap. På LinkedIn er det ett av ett.</p>
+      <div class="meta">
+        <p class="desk">Lunsjbordets EØS-redaksjon</p>
+        <p>Lest til og med punkt 2</p>
+      </div>
+    </div>
+    <div class="fig rs" aria-hidden="true">
+      <div class="rs-scene">
+        <div class="rs-tavle">
+          <p class="rs-topp">Borgarting · Sluttresultat</p>
+          <div class="rs-score">
+            <div class="rs-lag"><p class="rs-navn">Staten</p><p class="rs-siffer">9</p></div>
+            <p class="rs-strek">–</p>
+            <div class="rs-lag"><p class="rs-navn">Bemanning</p><p class="rs-siffer">1</p></div>
+          </div>
+          <div class="rs-logg">
+            <p class="rs-rad rs-nei"><span class="rs-ikon">✕</span>EØS art. 28 · Arbeidstakere</p>
+            <p class="rs-rad rs-nei"><span class="rs-ikon">✕</span>EØS art. 36 · Tjenester</p>
+            <p class="rs-rad rs-nei"><span class="rs-ikon">✕</span>Arbeidsmiljøloven § 14-12</p>
+            <p class="rs-rad rs-ja"><span class="rs-ikon">✓</span>EØS art. 31 · Dansk mor</p>
+          </div>
+        </div>
+        <div class="rs-note">1 AV 10.</div>
+      </div>
+    </div>
+  </article>
+
+  <div class="duo">
+  <article class="card top">
+    <div class="top-text">
       <p class="kicker">Sosial sone</p>
       <h2 class="hl-xl"><a class="stretch" href="mandarin.html">Partner på EU/konkurranse mistenkt for mandarintyveri: <span class="nw">–&nbsp;Kurven</span> var&nbsp;full</a></h2>
       <p class="lead">To ansatte så en partner fra EU/konkurranse gå rett forbi en full fruktkurv i sosial sone tirsdag morgen. Han stanset først ved en kollega som nettopp hadde plukket en mandarin til frokost. Sekundet etter var mandarinen hans.</p>
@@ -1858,7 +1911,6 @@
     </div>
   </article>
 
-  <div class="duo">
   <article class="card top">
     <div class="top-text">
       <p class="kicker">Bedriftsidrett</p>
@@ -1888,35 +1940,6 @@
           </div>
         </div>
         <div class="lt-note">305 RUNDER.</div>
-      </div>
-    </div>
-  </article>
-
-  <article class="card top">
-    <div class="top-text">
-      <p class="kicker">Afterwork</p>
-      <h2 class="hl-xl"><a class="stretch" href="partypan.html">«Partypan» går gjennom loggene for å finne ut hva han gjorde på&nbsp;afterworken</a></h2>
-      <p class="lead">En IT-medarbeider husker ingenting etter halv åtte på fredagens afterwork. Fylleangsten er ekstrem, så han har gjort det eneste han kan: hentet ut loggene.</p>
-      <div class="meta">
-        <p class="desk">Lunsjbordets teknologiredaksjon</p>
-        <p>Loggført minutt for minutt</p>
-      </div>
-    </div>
-    <div class="fig pp" aria-hidden="true">
-      <div class="pp-scene">
-        <div class="pp-term">
-          <p class="pp-bar"><span class="pp-dot"></span><span class="pp-dot"></span><span class="pp-dot"></span><span class="pp-bar-t">logg · fredag 13.11</span></p>
-          <div class="pp-body">
-            <p class="pp-cmd">$ hent-logg partypan</p>
-            <p class="pp-l"><b>19:31</b> «bare én til»</p>
-            <p class="pp-l"><b>19:40</b> Serverrommet ×3</p>
-            <p class="pp-l"><b>20:14</b> Wi-Fi: Partypan_5G</p>
-            <p class="pp-l"><b>21:12</b> 40 × Partypan.jpg</p>
-            <p class="pp-l"><b>23:05</b> «Elsker dere alle»</p>
-            <p class="pp-l pp-slutt"><b>--:--</b> Ingen flere oppføringer.</p>
-          </div>
-        </div>
-        <div class="pp-note">IKKE PANIKK.</div>
       </div>
     </div>
   </article>
@@ -1960,54 +1983,56 @@
 
   <article class="card top flip">
     <div class="top-text">
-      <p class="kicker">Dikterens hjørne</p>
-      <h2 class="hl-xl"><a class="stretch" href="selvsagt-jeg-er-jo-claude.html">Selvsagt, jeg er jo Claude</a></h2>
-      <p class="lead">Ukens dikt handler om en relasjon der den ene parten gir og gir, og alltid har noe mer å utarbeide og sende. Én linje er på svensk, og den beklages allerede i linjen etter.</p>
+      <p class="kicker">Afterwork</p>
+      <h2 class="hl-xl"><a class="stretch" href="partypan.html">«Partypan» går gjennom loggene for å finne ut hva han gjorde på&nbsp;afterworken</a></h2>
+      <p class="lead">En IT-medarbeider husker ingenting etter halv åtte på fredagens afterwork. Fylleangsten er ekstrem, så han har gjort det eneste han kan: hentet ut loggene.</p>
       <div class="meta">
-        <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
-        <p>Nytt dikt hver mandag</p>
+        <p class="desk">Lunsjbordets teknologiredaksjon</p>
+        <p>Loggført minutt for minutt</p>
       </div>
     </div>
-    <div class="fig d47" aria-hidden="true">
-      <div class="d47-scene">
-        <div class="d47-vindu">
-          <p class="d47-topp"><span class="d47-prikk"></span>Ny samtale · Uke 47</p>
-          <p class="d47-inn">Kan du se over utkastet?</p>
-          <p class="d47-ut">Selvsagt.</p>
-          <p class="d47-inn">Og sende en versjon til?</p>
-          <p class="d47-ut">Selvsagt.</p>
-          <p class="d47-inn">Kan du gi meg hjelp med et juridisk råd?</p>
-          <p class="d47-ut d47-skriver"><span></span><span></span><span></span></p>
+    <div class="fig pp" aria-hidden="true">
+      <div class="pp-scene">
+        <div class="pp-term">
+          <p class="pp-bar"><span class="pp-dot"></span><span class="pp-dot"></span><span class="pp-dot"></span><span class="pp-bar-t">logg · fredag 13.11</span></p>
+          <div class="pp-body">
+            <p class="pp-cmd">$ hent-logg partypan</p>
+            <p class="pp-l"><b>19:31</b> «bare én til»</p>
+            <p class="pp-l"><b>19:40</b> Serverrommet ×3</p>
+            <p class="pp-l"><b>20:14</b> Wi-Fi: Partypan_5G</p>
+            <p class="pp-l"><b>21:12</b> 40 × Partypan.jpg</p>
+            <p class="pp-l"><b>23:05</b> «Elsker dere alle»</p>
+            <p class="pp-l pp-slutt"><b>--:--</b> Ingen flere oppføringer.</p>
+          </div>
         </div>
-        <div class="d47-note">ALLTIDS.</div>
+        <div class="pp-note">IKKE PANIKK.</div>
       </div>
     </div>
   </article>
 
   <div class="row">
-    <article class="card bp col">
-      <div class="fig bp banner" aria-hidden="true">
-        <div class="bp-scene">
-          <div class="bp-ark">
-            <p class="bp-topp">Meddelelse om tildeling</p>
-            <p class="bp-tittel">Bordplassering, julebordet</p>
-            <p class="bp-rad"><span>Godt selskap</span><b>40 %</b></p>
-            <p class="bp-rad"><span>Pris, i kanelboller</span><b>30 %</b></p>
-            <p class="bp-rad"><span>Bordmiljø</span><b>30 %</b></p>
-            <p class="bp-tildelt"><span>Tildelt</span><b>Bord 14</b></p>
-            <p class="bp-begr">«Det valgte tilbudet ble vurdert som bedre.»</p>
-            <p class="bp-stempel">Uklart</p>
+    <article class="card d47 col">
+      <div class="fig d47 banner" aria-hidden="true">
+        <div class="d47-scene">
+          <div class="d47-vindu">
+            <p class="d47-topp"><span class="d47-prikk"></span>Ny samtale · Uke 47</p>
+            <p class="d47-inn">Kan du se over utkastet?</p>
+            <p class="d47-ut">Selvsagt.</p>
+            <p class="d47-inn">Og sende en versjon til?</p>
+            <p class="d47-ut">Selvsagt.</p>
+            <p class="d47-inn">Kan du gi meg hjelp med et juridisk råd?</p>
+            <p class="d47-ut d47-skriver"><span></span><span></span><span></span></p>
           </div>
-          <div class="bp-note">BORD 14.</div>
+          <div class="d47-note">ALLTIDS.</div>
         </div>
       </div>
       <div class="card-body">
-        <p class="kicker">Julebordet</p>
-        <h2 class="hl-lg"><a class="stretch" href="bordplassering.html">Julebordets bordplassering kunngjort på Doffin: <span class="nw">–&nbsp;Tildelings</span>&shy;kriteriene er&nbsp;uklare</a></h2>
-        <p class="lead-sm">Julebordkomiteen har lagt ut bordplasseringen til julebordet på Festningen som en åpen anbudskonkurranse. Meddelelsen om tildeling kom torsdag morgen. Flere tilbydere mener ingen kunne vite hva de konkurrerte om.</p>
+        <p class="kicker">Dikterens hjørne</p>
+        <h2 class="hl-lg"><a class="stretch" href="selvsagt-jeg-er-jo-claude.html">Selvsagt, jeg er jo Claude</a></h2>
+        <p class="lead-sm">Ukens dikt handler om en relasjon der den ene parten gir og gir, og alltid har noe mer å utarbeide og sende. Én linje er på svensk, og den beklages allerede i linjen etter.</p>
         <div class="meta">
-          <p class="desk">Lunsjbordets anskaffelsesredaksjon</p>
-          <p>Lest i konkurransegrunnlaget</p>
+          <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
+          <p>Nytt dikt hver mandag</p>
         </div>
       </div>
     </article>
@@ -2052,6 +2077,33 @@
   </aside>
 
   <div class="pair">
+    <article class="card bp col">
+      <div class="fig bp banner" aria-hidden="true">
+        <div class="bp-scene">
+          <div class="bp-ark">
+            <p class="bp-topp">Meddelelse om tildeling</p>
+            <p class="bp-tittel">Bordplassering, julebordet</p>
+            <p class="bp-rad"><span>Godt selskap</span><b>40 %</b></p>
+            <p class="bp-rad"><span>Pris, i kanelboller</span><b>30 %</b></p>
+            <p class="bp-rad"><span>Bordmiljø</span><b>30 %</b></p>
+            <p class="bp-tildelt"><span>Tildelt</span><b>Bord 14</b></p>
+            <p class="bp-begr">«Det valgte tilbudet ble vurdert som bedre.»</p>
+            <p class="bp-stempel">Uklart</p>
+          </div>
+          <div class="bp-note">BORD 14.</div>
+        </div>
+      </div>
+      <div class="card-body">
+        <p class="kicker">Julebordet</p>
+        <h2 class="hl-lg"><a class="stretch" href="bordplassering.html">Julebordets bordplassering kunngjort på Doffin: <span class="nw">–&nbsp;Tildelings</span>&shy;kriteriene er&nbsp;uklare</a></h2>
+        <p class="lead-sm">Julebordkomiteen har lagt ut bordplasseringen til julebordet på Festningen som en åpen anbudskonkurranse. Meddelelsen om tildeling kom torsdag morgen. Flere tilbydere mener ingen kunne vite hva de konkurrerte om.</p>
+        <div class="meta">
+          <p class="desk">Lunsjbordets anskaffelsesredaksjon</p>
+          <p>Lest i konkurransegrunnlaget</p>
+        </div>
+      </div>
+    </article>
+
     <article class="card d46 col">
       <div class="fig d46 banner" aria-hidden="true">
         <div class="d46-scene">
@@ -2074,33 +2126,6 @@
         <div class="meta">
           <p class="desk">Dikteren, Lunsjbordets hoffpoet</p>
           <p>Nytt dikt hver mandag</p>
-        </div>
-      </div>
-    </article>
-
-    <article class="card hms col">
-      <div class="fig hms banner" aria-hidden="true">
-        <div class="hm-scene">
-          <div class="hm-tavle">
-            <p class="hm-topp"><span class="hm-kors">+</span>HMS-tavle · Cellekontoret</p>
-            <div class="hm-rad"><p class="hm-tekst">Dommen fra Borgarting</p><p class="hm-stempel">Avventer</p></div>
-            <div class="hm-rad"><p class="hm-tekst">Dager siden Markus sist øvde på prosedyren</p><p class="hm-null">0</p></div>
-            <div class="hm-logg">
-              <p><span>07:52</span><span>Heisen: «Ærede lagmannsrett»</span></p>
-              <p><span>11:32</span><span>Kantina: Trainee får merknadene</span></p>
-              <p><span>13:05</span><span>Kjelleren: Motorsykkelen går</span></p>
-            </div>
-          </div>
-          <div class="hm-note">BARE I TILFELLE.</div>
-        </div>
-      </div>
-      <div class="card-body">
-        <p class="kicker">Innleiesaken</p>
-        <h2 class="hl-lg"><a class="stretch" href="abstinenser.html">Markus øver fortsatt på prosedyren: <span class="nw">–&nbsp;Bare</span> i&nbsp;tilfelle</a></h2>
-        <p class="lead-sm">Det er snart tre uker siden prosedyren i Borgarting. Mens alle andre venter på dommen, øver Markus fortsatt, ber nye traineer se over merknadene i manuset og har kjøpt motorsykkel. Kolleger beskriver det som abstinenser.</p>
-        <div class="meta">
-          <p class="desk">Lunsjbordets helseredaksjon</p>
-          <p>Hørt gjennom veggen</p>
         </div>
       </div>
     </article>
@@ -2203,6 +2228,11 @@
     </button>
     <div class="ark-innhold" id="ark-innhold" hidden>
       <ol class="ark-liste">
+        <li class="mappe" data-fane="4. november">
+          <p class="m-desk">Innleiesaken</p>
+          <h3 class="m-hl"><a class="stretch" href="abstinenser.html">Markus øver fortsatt på prosedyren: <span class="nw">–&nbsp;Bare</span> i&nbsp;tilfelle</a></h3>
+          <p class="m-tekst">Det er snart tre uker siden prosedyren i Borgarting. Mens alle andre venter på dommen, øver Markus fortsatt, ber nye traineer se over merknadene i manuset og har kjøpt motorsykkel. Kolleger beskriver det som abstinenser.</p>
+        </li>
         <li class="mappe" data-fane="2. november">
           <p class="m-desk">Dikterens hjørne</p>
           <h3 class="m-hl"><a class="stretch" href="ro-sial-sone.html">Ro-sial sone</a></h3>
