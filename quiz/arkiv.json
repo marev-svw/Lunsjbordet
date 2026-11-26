@@ -4701,7 +4701,96 @@
      "svar": "Observatorium. Mange ligger høyt til fjells, der luften er klar."
     }
    ]
+  },
+  {
+   "dato": "2026-11-26",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 26. november 1942 hadde en klassisk film premiere i New York, med Humphrey Bogart som kafeeier i Marokko. Hva heter filmen?",
+     "fasit": "«Casablanca»",
+     "svar": "«Casablanca». Ingrid Bergman spilte kvinnen han mistet i Paris."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilken elv renner gjennom den irakiske hovedstaden Bagdad?",
+     "fasit": "Tigris",
+     "svar": "Tigris. Elven følger Eufrat gjennom Mesopotamia."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 26. november 1983 ble et lager ved Heathrow i London tømt i et av Storbritannias største ran. Hvilket edelt metall var det mest av?",
+     "fasit": "Gull",
+     "svar": "Gull. Ranet gikk under navnet Brink’s-Mat og ga rundt tre tonn gullbarrer."
+    },
+    {
+     "tema": "Fysikk",
+     "sporsmal": "Hva heter partikkelen som ble påvist ved CERN i 2012 og som forklarer hvorfor andre partikler har masse?",
+     "fasit": "Higgs-bosonet",
+     "svar": "Higgs-bosonet. Partikkelen er oppkalt etter den britiske fysikeren Peter Higgs."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken russisk komponist skrev balletten «Våroffer», som skapte opprør på urpremieren i 1913?",
+     "fasit": "Igor Stravinskij",
+     "svar": "Igor Stravinskij. Verket hadde premiere i Paris."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 26. november 2008 begynte en rekke terrorangrep mot blant annet hoteller og en jernbanestasjon i en stor indisk by. Hvilken by?",
+     "fasit": "Mumbai",
+     "svar": "Mumbai. Byen het Bombay inntil 1995."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken kvinnelig forsker oppdaget radium og polonium sammen med ektemannen Pierre?",
+     "fasit": "Marie Curie",
+     "svar": "Marie Curie. Hun er den eneste som har fått Nobelpriser i to ulike vitenskaper."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hva heter den franske karamelliserte vaniljekremen med sprø sukkerskorpe på toppen?",
+     "fasit": "Crème brûlée",
+     "svar": "Crème brûlée. Skorpen lages ofte med en liten gassbrenner."
+    },
+    {
+     "tema": "Kunst",
+     "sporsmal": "Hvilken belgisk surrealist malte «Dette er ikke en pipe» i 1929?",
+     "fasit": "René Magritte",
+     "svar": "René Magritte. Maleriet heter egentlig «Bildenes svik»."
+    },
+    {
+     "tema": "Mytologi",
+     "sporsmal": "Hva het krigsguden i gresk mytologi?",
+     "fasit": "Ares",
+     "svar": "Ares. Romerne kalte ham Mars."
+    },
+    {
+     "tema": "Astronomi",
+     "sporsmal": "Hva heter den romsonden som i 1977 ble sendt ut med en gullplate med lyder og bilder fra Jorden, og nå er utenfor solsystemet?",
+     "fasit": "Voyager 1",
+     "svar": "Voyager 1. Den er det menneskeskapte objektet lengst fra Jorden."
+    },
+    {
+     "tema": "Språk",
+     "sporsmal": "Hvilket språk skrives med skriftsystemet hangul?",
+     "fasit": "Koreansk",
+     "svar": "Koreansk. Skriften ble innført på 1400-tallet under kong Sejong."
+    },
+    {
+     "tema": "Økonomi",
+     "sporsmal": "Hvilken skotske økonom skrev «Nasjonenes velstand» i 1776?",
+     "fasit": "Adam Smith",
+     "svar": "Adam Smith. Han er kjent for begrepet «den usynlige hånd»."
+    },
+    {
+     "tema": "Natur",
+     "sporsmal": "Hva heter verdens største korallrev, som ligger utenfor kysten av Queensland i Australia?",
+     "fasit": "Great Barrier Reef",
+     "svar": "Great Barrier Reef. Revet er så stort at det kan ses fra verdensrommet."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 742
+ "antall_sporsmal": 756
 }
