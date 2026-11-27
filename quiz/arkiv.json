@@ -4790,7 +4790,96 @@
      "svar": "Great Barrier Reef. Revet er så stort at det kan ses fra verdensrommet."
     }
    ]
+  },
+  {
+   "dato": "2026-11-27",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 27. november 1942 ble en gitarist født i Seattle som skulle skrive rockehistorie med «Purple Haze». Hva heter han?",
+     "fasit": "Jimi Hendrix",
+     "svar": "Jimi Hendrix. Han døde bare 27 år gammel, i 1970."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hvilket land har byen Lviv som sin største by i vest, nær grensen mot Polen?",
+     "fasit": "Ukraina",
+     "svar": "Ukraina. Byen har en av Europas best bevarte gamle bykjerner."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 27. november 1701 ble en svensk astronom født i Uppsala. Hans navn brukes på en temperaturskala. Hva het han?",
+     "fasit": "Anders Celsius",
+     "svar": "Anders Celsius. Han lot opprinnelig vannets kokepunkt være 0 grader og frysepunktet 100. Skalaen ble snudd etter hans død."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev middelalderkrimmen «Rosens navn» fra 1980?",
+     "fasit": "Umberto Eco",
+     "svar": "Umberto Eco. Han var professor i semiotikk ved universitetet i Bologna."
+    },
+    {
+     "tema": "Biologi",
+     "sporsmal": "Hvor mange kromosomer har en vanlig menneskecelle?",
+     "fasit": "46",
+     "svar": "46. Det er 23 par, ett sett fra hver forelder."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 27. november 1971 var en sonde det første menneskeskapte objektet som nådde overflaten på Mars. Hvilket land sendte den opp?",
+     "fasit": "Sovjetunionen",
+     "svar": "Sovjetunionen. Sonden het Mars 2. Landeren styrtet, men banefartøyet fungerte i månedene etter."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Ved hvilket slag i 1066 vant Vilhelm Erobreren over kong Harald av England og ble hersker over landet?",
+     "fasit": "Slaget ved Hastings",
+     "svar": "Slaget ved Hastings. Seieren er avbildet på Bayeux-teppet."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hva kalles den dypeste mannlige sangstemmen?",
+     "fasit": "Bass",
+     "svar": "Bass. Mellom bass og tenor ligger baryton."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "Hva kalles det i baseball når slagmannen slår ballen ut av banen, over gjerdet, slik at han får løpe hele runden?",
+     "fasit": "Home run",
+     "svar": "Home run. Babe Ruth og Hank Aaron er blant de mest kjente slagmennene i historien."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilken sveitsisk rett består av smeltet ost som man dypper brødbiter i?",
+     "fasit": "Fondue",
+     "svar": "Fondue. Den serveres tradisjonelt i en gryte over en liten flamme."
+    },
+    {
+     "tema": "Dyreliv",
+     "sporsmal": "Hva kalles en flokk løver på engelsk, med et ord som også betyr stolthet?",
+     "fasit": "Pride",
+     "svar": "Pride. Flokken består som regel av hunner, deres unger og noen få hanner."
+    },
+    {
+     "tema": "Teknologi",
+     "sporsmal": "I hvilket land holder verdens største produsent av avanserte mikrobrikker, TSMC, til?",
+     "fasit": "Taiwan",
+     "svar": "Taiwan. Selskapet lager brikker for blant annet Apple og Nvidia."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken norsk regissør står bak filmen «Verdens verste menneske» fra 2021?",
+     "fasit": "Joachim Trier",
+     "svar": "Joachim Trier. Renate Reinsve fikk skuespillerprisen i Cannes for hovedrollen."
+    },
+    {
+     "tema": "Natur",
+     "sporsmal": "Hvilken amerikansk nasjonalpark er kjent for geysiren Old Faithful?",
+     "fasit": "Yellowstone",
+     "svar": "Yellowstone. Parken ble opprettet i 1872 og regnes som verdens eldste."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 756
+ "antall_sporsmal": 770
 }
