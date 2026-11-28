@@ -4879,7 +4879,96 @@
      "svar": "Yellowstone. Parken ble opprettet i 1872 og regnes som verdens eldste."
     }
    ]
+  },
+  {
+   "dato": "2026-11-28",
+   "sporsmal": [
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 28. november 1912 erklærte et land på Balkan seg uavhengig fra Det osmanske riket, under en markering i byen Vlora. Hvilket land?",
+     "fasit": "Albania",
+     "svar": "Albania. Flagget med den svarte, tohodede ørnen ble heist i Vlora. Landet er i dag medlem av NATO."
+    },
+    {
+     "tema": "Geografi",
+     "sporsmal": "Hva er hovedstaden i Sveits?",
+     "fasit": "Bern",
+     "svar": "Bern. Mange tror det er Zürich eller Genève, men det er den lille byen ved elva Aare."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 28. november 1820 ble en tysk filosof født i Barmen. Han skrev «Det kommunistiske manifest» sammen med Karl Marx. Hva het han?",
+     "fasit": "Friedrich Engels",
+     "svar": "Friedrich Engels. Han finansierte i lange perioder Marx' arbeid med penger fra familiens tekstilfabrikk."
+    },
+    {
+     "tema": "Litteratur",
+     "sporsmal": "Hvem skrev den politiske håndboken «Fyrsten» fra 1513?",
+     "fasit": "Niccolò Machiavelli",
+     "svar": "Niccolò Machiavelli. Boken gav opphav til ordet «machiavellisk» om kynisk maktbruk."
+    },
+    {
+     "tema": "Natur",
+     "sporsmal": "Hvilket hav, omtrent 430 meter under havnivå, regnes som det laveste punktet på land?",
+     "fasit": "Dødehavet",
+     "svar": "Dødehavet. Det er så salt at man flyter uten å prøve."
+    },
+    {
+     "tema": "Musikk",
+     "sporsmal": "Hvilken amerikansk by i delstaten Louisiana regnes som jazzens vugge?",
+     "fasit": "New Orleans",
+     "svar": "New Orleans. Her blandet afrikanske rytmer, blues og marsjmusikk seg rundt år 1900."
+    },
+    {
+     "tema": "Film",
+     "sporsmal": "Hvilken italiensk regissør står bak «La Dolce Vita» fra 1960?",
+     "fasit": "Federico Fellini",
+     "svar": "Federico Fellini. Filmen med Anita Ekberg i Trevi-fontenen er en av europeisk films mest kjente scener."
+    },
+    {
+     "tema": "Historie",
+     "sporsmal": "Hvilken romersk hærfører krysset elva Rubicon med troppene sine i år 49 før Kristus og startet en borgerkrig?",
+     "fasit": "Julius Cæsar",
+     "svar": "Julius Cæsar. Ordtaket «terningen er kastet» knyttes til overgangen."
+    },
+    {
+     "tema": "Mat",
+     "sporsmal": "Hvilket nøtteslag er hovedingrediensen i marsipan?",
+     "fasit": "Mandler",
+     "svar": "Mandler. Marsipan lages av malte mandler og sukker."
+    },
+    {
+     "tema": "Sport",
+     "sporsmal": "I hvilken by arrangeres tennisturneringen Australian Open?",
+     "fasit": "Melbourne",
+     "svar": "Melbourne. Turneringen spilles i januar, midt på den australske sommeren."
+    },
+    {
+     "tema": "Romfart",
+     "sporsmal": "Hva het den første kunstige satellitten i bane rundt jorda, sendt opp i 1957?",
+     "fasit": "Sputnik",
+     "svar": "Sputnik. Navnet betyr «reisefølge» på russisk."
+    },
+    {
+     "tema": "Kultur",
+     "sporsmal": "Hva heter den hinduistiske lysfestivalen som feires på høsten, med lamper og fyrverkeri?",
+     "fasit": "Diwali",
+     "svar": "Diwali. Festen markerer lysets seier over mørket."
+    },
+    {
+     "tema": "Nyheter",
+     "sporsmal": "Den 28. november 1929 la den amerikanske polarflygeren Richard Byrd ut på en historisk flytur. Hvilket geografisk punkt fløy han over?",
+     "fasit": "Sydpolen",
+     "svar": "Sydpolen. Turen gikk fra basen Little America og tok ni timer. Roald Amundsen hadde nådd polen til fots i 1911."
+    },
+    {
+     "tema": "Politikk",
+     "sporsmal": "Hvor mange medlemsland har EU etter Brexit?",
+     "fasit": "27",
+     "svar": "27. Storbritannia forlot unionen i 2020."
+    }
+   ]
   }
  ],
- "antall_sporsmal": 770
+ "antall_sporsmal": 784
 }
